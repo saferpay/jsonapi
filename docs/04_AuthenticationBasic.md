@@ -1,0 +1,3 @@
+﻿This is the default authentication method. Technical users for the JSON API can be created by the merchant in the Saferpay Backoffice. The password will not be stored at SIX (only a securely salted hash thereof). There will be no password recovery besides creating a new user / password pair from your Backoffice account.
+
+The password must meet some complexity requirements. We suggest using / generating dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).
