@@ -21,15 +21,15 @@ gulp.task('copy', function () {
 		.pipe(concat('vendors.js'))
 		.pipe(gulp.dest('./_gh_pages/assets/js'));
 
-	gulp.src('./assets/helppage.css')
-		.pipe(gulp.dest('./_gh_pages/assets'));
+	gulp.src('./assets/css/helppage.css')
+		.pipe(gulp.dest('./_gh_pages/assets/css'));
 
 	gulp.src([
 			'./assets/bootstrap/css/bootstrap.min.css',
 			'./assets/highlightJs/github.css'
 		])
 		.pipe(concat('vendors.css'))
-		.pipe(gulp.dest('./_gh_pages/assets/'));
+		.pipe(gulp.dest('./_gh_pages/assets/css'));
 });
 
 gulp.task('parse', function () {
