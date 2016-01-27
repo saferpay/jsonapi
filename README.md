@@ -4,7 +4,12 @@ This project provides the source for [JSON Api documentation](http://saferpay.gi
 
 To learn more about Saferpay please check www.saferpay.com.
 
-## Document Generation
+### Versions
+
+* [Latest spec version](http://saferpay.github.io/jsonapi)
+* [Spec version 1.2](http://saferpay.github.io/jsonapi/1.2)
+
+### Document Generation
 
 Run the following code in node command prompt:
 
