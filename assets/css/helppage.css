@@ -3,13 +3,13 @@
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff2) format('woff2');
+	src: local('Roboto Regular'), local('Roboto-Regular'), url(../fonts/Roboto-Regular.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 700;
-	src: local('Roboto Bold'), local('Roboto-Bold'), url(fonts/Roboto-Bold.woff2) format('woff2');
+	src: local('Roboto Bold'), local('Roboto-Bold'), url(../fonts/Roboto-Bold.woff2) format('woff2');
 }
 h1, h2, h3, h4, h5, p {
 	padding: 0;
