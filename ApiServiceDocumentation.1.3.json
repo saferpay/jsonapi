@@ -2071,7 +2071,7 @@
           }
         },
         {
-          "Description": "Url to which Saferpay will post the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the POST-method.",
+          "Description": "Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.",
           "Example": "https://merchanthost/notify",
           "Mandatory": false,
           "Name": "NotifyUrl",
@@ -2250,6 +2250,12 @@
           }
         },
         {
+          "Attributes": [
+            {
+              "AnnotationAttributeName": "MandateIdAttribute",
+              "Documentation": "Id[1..35]"
+            }
+          ],
           "Description": "Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.",
           "Example": "MandateId",
           "Mandatory": false,
@@ -2432,6 +2438,12 @@
           }
         },
         {
+          "Attributes": [
+            {
+              "AnnotationAttributeName": "MandateIdAttribute",
+              "Documentation": "Id[1..35]"
+            }
+          ],
           "Description": "Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.",
           "Example": "MandateId",
           "Mandatory": false,
@@ -3749,7 +3761,7 @@
           "Attributes": [
             {
               "AnnotationAttributeName": "RestrictedValuesAttribute",
-              "Documentation": "Possible values: PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEEP2, POSTCARDEP2."
+              "Documentation": "Possible values: PAYPAL, POSTCARD, POSTFINANCE."
             }
           ],
           "Description": "Service provider to be used for this payment",
