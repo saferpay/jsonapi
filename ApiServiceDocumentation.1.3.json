@@ -1206,8 +1206,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers first name",
@@ -1221,8 +1221,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers last name",
@@ -1251,8 +1251,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers company",
@@ -1296,8 +1296,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers street",
@@ -1311,8 +1311,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.",
@@ -1326,8 +1326,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers zip code",
@@ -1341,8 +1341,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers city",
@@ -1356,12 +1356,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 3"
-            },
-            {
-              "AnnotationAttributeName": "MinLengthAttribute",
-              "Documentation": "Min length: 1"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Alphabetic[1..3]"
             }
           ],
           "Description": "The payers country subdivision code<br>            ISO 3166-2 country subdivision code",
@@ -1375,12 +1371,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 2"
-            },
-            {
-              "AnnotationAttributeName": "MinLengthAttribute",
-              "Documentation": "Min length: 2"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Alphabetic[2..2]"
             }
           ],
           "Description": "The payers country subdivision code<br>            ISO 3166-1 alpha-2 country code",
@@ -1394,8 +1386,8 @@
         {
           "Attributes": [
             {
-              "AnnotationAttributeName": "MaxLengthAttribute",
-              "Documentation": "Max length: 100"
+              "AnnotationAttributeName": "ApiInputAttribute",
+              "Documentation": "Utf8[1..100]"
             }
           ],
           "Description": "The payers phone number",
@@ -1672,7 +1664,7 @@
               "Documentation": "Utf8[1..50]"
             }
           ],
-          "Description": "Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too. Also note, that 30 characters rarely are supported. It's usually around 10-12.",
+          "Description": "Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br>            Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.",
           "Example": "Payernote",
           "Mandatory": false,
           "Name": "PayerNote",
@@ -2241,7 +2233,7 @@
               "Documentation": "Utf8[1..50]"
             }
           ],
-          "Description": "Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too. Also note, that 30 characters rarely are supported. It's usually around 10-12.",
+          "Description": "Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br>            Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.",
           "Example": "Payernote",
           "Mandatory": false,
           "Name": "PayerNote",
@@ -2429,7 +2421,7 @@
               "Documentation": "Utf8[1..50]"
             }
           ],
-          "Description": "Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too. Also note, that 30 characters rarely are supported. It's usually around 10-12.",
+          "Description": "Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br>            Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.",
           "Example": "Payernote",
           "Mandatory": false,
           "Name": "PayerNote",

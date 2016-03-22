@@ -5434,7 +5434,7 @@ AlphaNumeric[8..11]<br />
 	
 	<div style="padding-bottom: 10px">The payers first name</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: John</span>
 	</i>
 </td>
@@ -5450,7 +5450,7 @@ Max length: 100<br />
 	
 	<div style="padding-bottom: 10px">The payers last name</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: Doe</span>
 	</i>
 </td>
@@ -5482,7 +5482,7 @@ AlphaNumeric[11..11]<br />
 	
 	<div style="padding-bottom: 10px">The payers company</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: ACME Corp.</span>
 	</i>
 </td>
@@ -5530,7 +5530,7 @@ Possible values: AG, GmbH, Misc.<br />
 	
 	<div style="padding-bottom: 10px">The payers street</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: Bakerstreet 32</span>
 	</i>
 </td>
@@ -5546,7 +5546,7 @@ Max length: 100<br />
 	
 	<div style="padding-bottom: 10px">The payers street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: Stewart House</span>
 	</i>
 </td>
@@ -5562,7 +5562,7 @@ Max length: 100<br />
 	
 	<div style="padding-bottom: 10px">The payers zip code</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: 8000</span>
 	</i>
 </td>
@@ -5578,7 +5578,7 @@ Max length: 100<br />
 	
 	<div style="padding-bottom: 10px">The payers city</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: Zurich</span>
 	</i>
 </td>
@@ -5594,8 +5594,7 @@ Max length: 100<br />
 	
 	<div style="padding-bottom: 10px">The payers country subdivision code<br>            ISO 3166-2 country subdivision code</div>
 	<i class="small text-muted">
-Max length: 3<br />
-Min length: 1<br />
+Alphabetic[1..3]<br />
 					<span>Example: ZH</span>
 	</i>
 </td>
@@ -5611,8 +5610,7 @@ Min length: 1<br />
 	
 	<div style="padding-bottom: 10px">The payers country subdivision code<br>            ISO 3166-1 alpha-2 country code</div>
 	<i class="small text-muted">
-Max length: 2<br />
-Min length: 2<br />
+Alphabetic[2..2]<br />
 					<span>Example: CH</span>
 	</i>
 </td>
@@ -5628,7 +5626,7 @@ Min length: 2<br />
 	
 	<div style="padding-bottom: 10px">The payers phone number</div>
 	<i class="small text-muted">
-Max length: 100<br />
+Utf8[1..100]<br />
 					<span>Example: +41 12 345 6789</span>
 	</i>
 </td>
@@ -5985,7 +5983,7 @@ Utf8[1..1000]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too. Also note, that 30 characters rarely are supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br>            Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
@@ -6776,7 +6774,7 @@ Utf8[1..1000]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too. Also note, that 30 characters rarely are supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br>            Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
@@ -7066,7 +7064,7 @@ Utf8[1..1000]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too. Also note, that 30 characters rarely are supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br>            Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
@@ -7848,6 +7846,25 @@ Possible values: AMEX, DIRECTDEBIT, INVOICE, BONUS, DINERS, EPRZELEWY, EPS, GIRO
 	</div>
 
 	<script type="text/javascript">
+		function expandContainers(elem, recursive) {
+			elem.find('a.type-details').each(function () {
+				var $this = $(this);
+				if (!$this.hasClass("out")) {
+					var cTr = $this.closest('tr');
+					var tId = $this.attr('href');
+					var table = $("<table class=\"table\"></table>");
+					var nTr = $("<tr class=\"details\"><td colspan=2></td></tr>");
+					cTr.after(nTr);
+					table.appendTo(nTr.children("td"));
+					var copy = $(tId + " tr").clone();
+					copy.appendTo(table);
+					if (recursive) {
+						expandContainers(copy);
+					}
+				}
+			});
+		}
+
 		$(document).on('scroll', function () {
 			if ($(window).scrollTop() > 100) {
 				$('.scroll-top-wrapper').addClass('show');
@@ -7856,18 +7873,19 @@ Possible values: AMEX, DIRECTDEBIT, INVOICE, BONUS, DINERS, EPRZELEWY, EPS, GIRO
 			}
 		});
 
+		$(document).keypress(function (e) {
+			if (e.charCode === 102 && e.ctrlKey === true) {
+				// ctrl+f to support browser search on container contents
+				expandContainers($("body"), true);
+			}
+		});
+
 		$("#content").on('click', 'a.type-details', function (e) {
 			e.preventDefault();
 			if ($(this).hasClass("out")) {
 				$(this).closest('tr').nextAll('tr.details').remove();
 			} else {
-				var cTr = $(this).closest('tr');
-				var tId = $(this).attr('href');
-				var table = $("<table class=\"table\"></table>");
-				var nTr = $("<tr class=\"details\"><td colspan=2></td></tr>");
-				cTr.after(nTr);
-				table.appendTo(nTr.children("td"));
-				$(tId + " tr").clone().appendTo(table);
+				expandContainers($(this).parent());
 			}
 			$(this).toggleClass("in out");
 		});
