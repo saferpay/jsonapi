@@ -7873,8 +7873,8 @@ Possible values: AMEX, DIRECTDEBIT, INVOICE, BONUS, DINERS, EPRZELEWY, EPS, GIRO
 			}
 		});
 
-		$(document).keypress(function (e) {
-			if (e.charCode === 102 && e.ctrlKey === true) {
+		$(document).keydown(function (e) {
+			if (e.keyCode === 70 && (e.ctrlKey || e.metaKey)) {
 				// ctrl+f to support browser search on container contents
 				expandContainers($("body"), true);
 			}
