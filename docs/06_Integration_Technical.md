@@ -3,6 +3,7 @@
 <div class="samples" role="tabpanel">
 	<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
 		<li class="active"><a aria-expanded="false" href="#csharp" data-toggle="tab">C#</a></li>
+		<li class=""><a aria-expanded="true" href="#java" data-toggle="tab">Java</a></li>
 		<li class=""><a aria-expanded="true" href="#php" data-toggle="tab">PHP</a></li>
 	</ul>
 	<div id="tab-content" class="tab-content">
@@ -29,6 +30,37 @@
 		}
 	}
 }</pre>
+		</div>
+		  <div class="tab-pane active" id="java">
+			<pre class="prettyprint"> public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpLogin, String sfpPassword) throws IOException {
+    //encode credentials
+    String credential = sfpLogin + ":" + sfpPassword;
+    String encodedCredentials = DatatypeConverter.printBase64Binary(credential.getBytes());
+    
+    //create connection
+    HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
+    connection.setRequestProperty("connection", "close");
+    connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+    connection.setRequestProperty("Accept", "application/json");
+    connection.setRequestProperty("Authorization", "Basic " + encodedCredentials);
+    connection.setRequestMethod("POST");
+    connection.setDoOutput(true);
+    connection.setUseCaches(false);
+    
+    //write JSON to output stream
+    JsonWriter writer = Json.createWriter(connection.getOutputStream());
+    writer.writeObject(request);
+    writer.close();
+    
+    //send request
+    int responseCode = connection.getResponseCode();
+    
+    //get correct input stream
+    InputStream readerStream = responseCode == 200 ? connection.getInputStream() : connection.getErrorStream();
+    JsonObject response = Json.createReader(readerStream).readObject();
+    
+    return response;
+  }</pre>
 		</div>
 		<div class="tab-pane" id="php">
 			<pre class="prettyprint">//JSONObj is a multidimensional Array, that assembles the JSON structure
