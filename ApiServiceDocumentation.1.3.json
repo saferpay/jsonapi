@@ -1695,7 +1695,7 @@
           "Attributes": [
             {
               "AnnotationAttributeName": "RestrictedValuesAttribute",
-              "Documentation": "Possible values: AMEX, DIRECTDEBIT, INVOICE, BONUS, DINERS, EPRZELEWY, EPS, GIROPAY, IDEAL, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY."
+              "Documentation": "Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY."
             }
           ],
           "Description": "alphanumeric id of the payment method / brand",
@@ -2045,7 +2045,7 @@
     "Payment_Models_Data_Notification": {
       "Properties": [
         {
-          "Description": "Email address to which a confirmation email will be sent for successful authorizations. This overrides the email address configured in the back office (if any).",
+          "Description": "Email address to which a confirmation email will be sent for successful authorizations.",
           "Example": "merchant@saferpay.com",
           "Mandatory": false,
           "Name": "MerchantEmail",
@@ -2926,7 +2926,7 @@
           "Attributes": [
             {
               "AnnotationAttributeName": "RestrictedValuesAttribute",
-              "Documentation": "Possible values: AMEX, DIRECTDEBIT, INVOICE, BONUS, DINERS, EPRZELEWY, EPS, GIROPAY, IDEAL, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY."
+              "Documentation": "Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY."
             }
           ],
           "Description": "May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.",
@@ -3154,7 +3154,7 @@
           "Attributes": [
             {
               "AnnotationAttributeName": "RestrictedValuesAttribute",
-              "Documentation": "Possible values: AMEX, DIRECTDEBIT, INVOICE, BONUS, DINERS, EPRZELEWY, EPS, GIROPAY, IDEAL, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY."
+              "Documentation": "Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY."
             }
           ],
           "Description": "Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.",
