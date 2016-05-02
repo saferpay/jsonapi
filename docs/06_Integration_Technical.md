@@ -9,7 +9,9 @@
 		<div class="tab-pane active" id="csharp">
 			<pre class="prettyprint">private object SubmitRequest(string sfpUrl, object request, string sfpLogin, string sfpPassword)
 {
-	using (var client = new WebClient())
+	// don't keep your connection alive, it's a simple request/response server call
+	// for details on NoKeepAliveWebClient, see https://github.com/saferpay/jsonapi/blob/master/snippets/NoKeepAliveWebClient.cs
+	using (var client = new NoKeepAliveWebClient())
 	{
 		string authInfo = string.Format("{0}:{1}", sfpLogin, sfpPassword);
 		client.Headers[HttpRequestHeader.Authorization] = "Basic " + Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
