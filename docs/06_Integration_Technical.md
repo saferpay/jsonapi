@@ -33,7 +33,7 @@
 	}
 }</pre>
 		</div>
-		  <div class="tab-pane active" id="java">
+		  <div class="tab-pane" id="java">
 			<pre class="prettyprint"> public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpLogin, String sfpPassword) throws IOException {
     //encode credentials
     String credential = sfpLogin + ":" + sfpPassword;
