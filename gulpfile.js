@@ -1,7 +1,9 @@
 ﻿var gulp = require('gulp'),
 	fileinclude = require('gulp-file-include'),
 	markdown = require('gulp-markdown'),
-	concat = require('gulp-concat');
+	concat = require('gulp-concat'),
+	ghpages = require('gh-pages'),
+	path = require('path');
 
 gulp.task('copy', function () {
 	gulp.src([
@@ -41,6 +43,12 @@ gulp.task('parse', function () {
 			}
 		}))
 		.pipe(gulp.dest('./_gh_pages'));
+});
+
+gulp.task('deploy', function () {
+	ghpages.publish(path.join(__dirname, '_gh_pages'), {
+	  message: 'Updated documentation'
+	})
 });
 
 gulp.task('build', ['copy', 'parse'], function () {
