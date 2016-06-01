@@ -7847,20 +7847,18 @@ Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEA
 
 	<script type="text/javascript">
 		function expandContainers(elem, recursive) {
-			elem.find('a.type-details').each(function () {
+			elem.find('a.type-details.in').each(function () {
 				var $this = $(this);
-				if (!$this.hasClass("out")) {
-					var cTr = $this.closest('tr');
-					var tId = $this.attr('href');
-					var table = $("<table class=\"table\"></table>");
-					var nTr = $("<tr class=\"details\"><td colspan=2></td></tr>");
-					cTr.after(nTr);
-					table.appendTo(nTr.children("td"));
-					var copy = $(tId + " tr").clone();
-					copy.appendTo(table);
-					if (recursive) {
-						expandContainers(copy);
-					}
+				var cTr = $this.closest('tr');
+				var tId = $this.attr('href');
+				var table = $("<table class=\"table\"></table>");
+				var nTr = $("<tr class=\"details\"><td colspan=2></td></tr>");
+				cTr.after(nTr);
+				table.appendTo(nTr.children("td"));
+				var copy = $(tId + " tr").clone();
+				copy.appendTo(table);
+				if (recursive) {
+					expandContainers(copy);
 				}
 			});
 		}
