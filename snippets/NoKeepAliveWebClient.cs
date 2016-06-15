@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 
+[System.ComponentModel.DesignerCategory("Code")]
 public class NoKeepAliveWebClient : WebClient
 {
     protected override WebRequest GetWebRequest(Uri address)
