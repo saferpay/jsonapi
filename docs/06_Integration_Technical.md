@@ -95,7 +95,7 @@ function do_post($username,$password,$url, $JSONObj){
 	//Abort if Status != 200 
 	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 	if ( $status != 200 ) {
-		die("Error: call to URL $url failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl) . "HTTP-Status: " . $status . "&lt;||||&gt; DUMP: URL: ". $url . " &lt;|||&gt; JSON: " . var_dump($JSONObj));
+		die("Error: call to URL $url failed with status $status, response $jsonResponse, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl) . "HTTP-Status: " . $status . "&lt;||||&gt; DUMP: URL: ". $url . " &lt;|||&gt; JSON: " . var_dump($JSONObj));
 	}
 	//IMPORTANT!!!
 	//Close connection!
