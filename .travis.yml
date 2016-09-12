@@ -12,7 +12,7 @@ script: |
     cp -r assets/* _gh_pages/assets
     cd _gh_pages
     ls
-    git add --all .
+    git add . --all
     git -c user.name='SaferpayDev' -c user.email='travis' commit -m "Updated Github pages"
     git push -f -q https://SaferpayDev:${GITHUB_API_KEY}@github.com/saferpay/jsonapi.git gh-pages 
     cd "$TRAVIS_BUILD_DIR"
