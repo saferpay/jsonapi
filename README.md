@@ -1,4 +1,4 @@
-# Saferpay JSON API ![Build Status](https://travis-ci.org/saferpay/sndbx.svg?branch=master "Build Status") 
+# Saferpay JSON API ![Build Status](https://travis-ci.org/saferpay/jsonapi.svg?branch=master "Build Status") 
 
 This project provides the source for [JSON API documentation](http://saferpay.github.io/jsonapi) and describes how to integrate with the newest Saferpay API.
 
