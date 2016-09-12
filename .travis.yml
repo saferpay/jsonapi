@@ -7,6 +7,7 @@ script: |
     cd _gh_pages
     mkdir assets
     git checkout -b gh-pages
+    ls
     cd ..
     mono libs/GitHubPagesGenerator.exe -t "json api v1.3"
     cp -r assets/* _gh_pages/assets
