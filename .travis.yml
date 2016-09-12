@@ -8,10 +8,8 @@ script: |
     mkdir assets
     git checkout -b gh-pages
     ls
-    cd ..
-    mono libs/GitHubPagesGenerator.exe -t "json api v1.3"
-    cp -r assets/* _gh_pages/assets
-    cd _gh_pages
+    mono ../libs/GitHubPagesGenerator.exe -t "json api v1.3"
+    cp -r ../assets/* assets
     ls
     git add . --all
     git -c user.name='SaferpayDev' -c user.email='travis' commit -m "Updated Github pages"
