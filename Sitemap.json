@@ -1,0 +1,169 @@
+﻿[
+  {
+    "Title": "Introduction",
+    "Source": "texts/01_Introduction.md",
+    "Target": "index.html#intro"
+  },
+  {
+    "Title": "Content encoding",
+    "Source": "texts/01_Introduction.md",
+    "Target": "index.html#encoding"
+  },
+  {
+    "Title": "Formats",
+    "Source": "texts/01_Introduction.md",
+    "Target": "index.html#formats"
+  },
+  {
+    "Title": "Authentication",
+    "Source": "texts/01_Introduction.md",
+    "Target": "index.html#authentication"
+  },
+  {
+    "Title": "Integration",
+    "Source": "texts/01_Introduction.md",
+    "Target": "index.html#integration"
+  },
+  {
+    "Title": "Error Handling",
+    "Source": "texts/02_ErrorHandling.md",
+    "Target": "index.html#errorhandling",
+    "Subsites": [
+      {
+        "Source": "texts/ErrorResponse.md",
+        "target": "index.html"
+      }, 
+      {
+        "Source": "texts/02_ErrorHandling_TechnicalDetails.md",
+        "target": "index.html"
+      }
+    ]
+  },
+  {
+    "Title": "Payment Page",
+    "Source": "texts/ChapterPaymentPage.md",
+    "Target": "index.html#ChapterPaymentPage",
+    "Subsites": [
+      {
+        "Title": "PaymentPage Initialize",
+        "Source": "texts/ChapterPaymentPage.md",
+        "Target": "index.html#Payment_v1_PaymentPage_Initialize"
+      },
+      {
+        "Title": "PaymentPage Assert",
+        "Source": "texts/ChapterPaymentPage.md",
+        "Target": "index.html#Payment_v1_PaymentPage_Assert"
+      }
+    ]
+  },
+  {
+    "Title": "Transaction",
+    "Source": "texts/ChapterTransaction.md",
+    "Target": "index.html#ChapterTransaction",
+    "Subsites": [
+      {
+        "Title": "Transaction Initialize",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_Initialize"
+      },
+      {
+        "Title": "Transaction Authorize",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_Authorize"
+      },
+      {
+        "Title": "Transaction QueryPaymentMeans",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_QueryPaymentMeans"
+      },
+      {
+        "Title": "Transaction AdjustAmount",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AdjustAmount"
+      },
+      {
+        "Title": "Transaction AuthorizeDirect",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AuthorizeDirect"
+      },
+      {
+        "Title": "Transaction AuthorizeReferenced",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AuthorizeReferenced"
+      },
+      {
+        "Title": "Transaction Capture",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_Capture"
+      },
+      {
+        "Title": "Transaction Refund",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_Refund"
+      },
+      {
+        "Title": "Transaction RefundDirect",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_RefundDirect"
+      },
+      {
+        "Title": "Transaction Cancel",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_Cancel"
+      },
+      {
+        "Title": "Transaction RedirectPayment",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_RedirectPayment"
+      },
+      {
+        "Title": "Transaction AssertRedirectPayment",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AssertRedirectPayment"
+      }
+    ]
+  },
+  {
+    "Title": "Secure Alias Store",
+    "Source": "texts/ChapterAliasStore.md",
+    "Target": "index.html#ChapterAliasStore",
+    "Subsites": [
+      {
+        "Title": "Alias Insert",
+        "Source": "texts/ChapterAliasStore.md",
+        "Target": "index.html#Payment_v1_Alias_Insert"
+      },
+      {
+        "Title": "Alias AssertInsert",
+        "Source": "texts/ChapterAliasStore.md",
+        "Target": "index.html#Payment_v1_Alias_AssertInsert"
+      },
+      {
+        "Title": "Alias InsertDirect",
+        "Source": "texts/ChapterAliasStore.md",
+        "Target": "index.html#Payment_v1_Alias_InsertDirect"
+      },
+      {
+        "Title": "Alias Delete",
+        "Source": "texts/ChapterAliasStore.md",
+        "Target": "index.html#Payment_v1_Alias_Delete"
+      }
+    ]
+  },
+  {
+    "Title": "Batch",
+    "Source": "texts/ChapterBatch.md",
+    "Target": "index.html#ChapterBatch",
+    "Subsites": [
+      {
+        "Title": "Batch Close",
+        "Source": "texts/ChapterBatch.md",
+        "Target": "index.html#Payment_v1_Batch_Close"
+      }
+    ]
+  },
+  {
+    "Source": "texts/ContainerDictionary.md",
+    "target": "index.html"
+  }
+]
