@@ -9,7 +9,6 @@ script: |
     mkdir assets
     cp -r ../assets/* assets
     ls
-    git init
     git checkout -b gh-pages
     git add . --all
     git -c user.name='SaferpayDev' -c user.email='travis' commit -m "Updated Github pages"
