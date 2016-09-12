@@ -8,7 +8,7 @@ script: |
     mkdir assets
     git checkout -b gh-pages
     ls
-    mono ../libs/GitHubPagesGenerator.exe -t "json api v1.3"
+    mono ../libs/GitHubPagesGenerator.exe -w . -s ../Sitemap.json -t "json api v1.3"
     cp -r ../assets/* assets
     ls
     git add . --all
