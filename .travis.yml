@@ -9,7 +9,7 @@ script: |
     git checkout -b gh-pages
     cd ..
     mono libs/GitHubPagesGenerator.exe -t "json api v1.3"
-    cp -r assets/* _gh-pages/assets
+    cp -r assets/* _gh_pages/assets
     cd _gh_pages
     ls
     git add --all .
