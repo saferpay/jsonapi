@@ -5,16 +5,16 @@ script: |
     #
     # init
     #
-    rm -rf ./_gh_pages || exit 0
-    mkdir ./_gh_pages
-    mkdir ./_gh_pages/assets
+    rm -rf _gh_pages || exit 0
+    mkdir _gh_pages
+    mkdir _gh_pages/assets
     #
     # clone + update
     #
-    git clone -b gh-pages ./_gh_pages
-    cp -r assets/* ./_gh_pages/assets
+    git clone -b gh-pages _gh_pages
+    cp -r assets/* _gh_pages/assets
     mono libs/GitHubPagesGenerator.exe -t "json api v1.3"
-    cd ./_gh_pages
+    cd _gh_pages
     #
     # show result
     #
