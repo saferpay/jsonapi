@@ -130,6 +130,10 @@ Server-to-server calls are a secure way to submit and gather data. Hence, a serv
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.
 
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!
+>
+
 --->>>
 
 Server-to-server communication:
