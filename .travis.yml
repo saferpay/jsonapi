@@ -4,13 +4,12 @@ script: |
     cd "$TRAVIS_BUILD_DIR"
     rm -rf _gh_pages || exit 0
     mkdir _gh_pages
+    mkdir _gh_pages/assets
+    git clone -b gh-pages ./_gh_pages
     mono libs/GitHubPagesGenerator.exe -t "json api v1.3"
     cd _gh_pages
-    mkdir assets
     cp -r ../assets/* assets
     ls
-    git init
-    git checkout -b gh-pages
     git add . --all
     git -c user.name='SaferpayDev' -c user.email='travis' commit -m "Updated Github pages"
     git push -f -q https://SaferpayDev:${GITHUB_API_KEY}@github.com/saferpay/jsonapi.git gh-pages 
