@@ -178,18 +178,19 @@ private object SubmitRequest(string sfpUrl, object request, string sfpLogin, str
       </pre>
     </div>
     <div class="tab-pane" id="java">
-      <pre class="prettyprint"> public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpLogin, String sfpPassword) throws IOException {
+      <pre class="prettyprint">
+public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpLogin, String sfpPassword) throws IOException {
     //encode credentials
-    String credential = sfpLogin + &quot;:&quot; + sfpPassword;
+    String credential = sfpLogin + ":" + sfpPassword;
     String encodedCredentials = DatatypeConverter.printBase64Binary(credential.getBytes());
 
     //create connection
     HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
-    connection.setRequestProperty(&quot;connection&quot;, &quot;close&quot;);
-    connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json; charset=utf-8&quot;);
-    connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
-    connection.setRequestProperty(&quot;Authorization&quot;, &quot;Basic &quot; + encodedCredentials);
-    connection.setRequestMethod(&quot;POST&quot;);
+    connection.setRequestProperty("connection", "close");
+    connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+    connection.setRequestProperty("Accept", "application/json");
+    connection.setRequestProperty("Authorization", "Basic " + encodedCredentials);
+    connection.setRequestMethod("POST");
     connection.setDoOutput(true);
     connection.setUseCaches(false);
 
@@ -206,7 +207,7 @@ private object SubmitRequest(string sfpUrl, object request, string sfpLogin, str
     JsonObject response = Json.createReader(readerStream).readObject();
 
     return response;
-  }</pre>
+}</pre>
     </div>
     <div class="tab-pane" id="php">
       <pre class="prettyprint">
