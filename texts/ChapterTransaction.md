@@ -1758,7 +1758,8 @@ POST /Payment/v1/Transaction/Capture
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Optional partial capture options.</div>
+	<div style="padding-bottom: 10px">Optional partial capture options.
+ Caution: Partial-Captures are only available with PayPal!</div>
 	<i class="small text-muted">
 			</i>
 </td>

@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4.<br />
-					<span>Example: 1.0</span>
+Possible values: 1.0, 1.1, 1.2, 1.3<br />
+					<span>Example: 1.3</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2.<br />
-					<span>Example: 1.0</span>
+Possible values: 1.0, 1.1, 1.2, 1.3<br />
+					<span>Example: 1.3</span>
 	</i>
 </td>
 							</tr>
