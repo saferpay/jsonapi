@@ -814,7 +814,7 @@ Utf8[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Number of days to delay the due date of the invoice / direct debit (see billpay for specifics)</div>
 	<i class="small text-muted">
-					<span>Example: alias35nfd9mkzfw0x57iwx</span>
+					<span>Example: 10</span>
 	</i>
 </td>
 							</tr>

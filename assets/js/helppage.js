@@ -7,6 +7,7 @@ function expandContainers(elem, recursive) {
         var tId = $this.attr('href');
         var table = $("<table class=\"table\"></table>");
         var nTr = $("<tr class=\"details\"><td colspan=2></td></tr>");
+		$this.addClass("out");
         cTr.after(nTr);
         table.appendTo(nTr.children("td"));
         var copy = $(tId + " tr").clone();
@@ -27,11 +28,10 @@ $(document).keydown(function (e) {
 $("#content").on('click', 'a.type-details', function (e) {
     e.preventDefault();
     if ($(this).hasClass("out")) {
-        $(this).closest('tr').nextAll('tr.details').remove();
+        $(this).removeClass("out").closest('tr').nextAll('tr.details').remove();
     } else {
         expandContainers($(this).parent());
     }
-    $(this).toggleClass("in out");
 });
 
 $(document).on('scroll', function () {
