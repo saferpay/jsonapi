@@ -53,7 +53,7 @@ POST /Payment/v1/Transaction/Initialize
 <td class="col-sm-8">
 	
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.
- When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
+When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br />
 					<span>Example: name of your payment page config (case-insensitive)</span>
@@ -108,7 +108,7 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	
 	<div style="padding-bottom: 10px">Means of payment (either card data or a reference to a previously stored card).
- Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
+Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -141,7 +141,9 @@ Numeric[8..8]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!
+The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.
+Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -684,7 +686,7 @@ POST /Payment/v1/Transaction/QueryPaymentMeans
 
 
 This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.
- For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.
+For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.
 
 <table class="table">
 	<thead>
@@ -739,7 +741,9 @@ Id[1..50]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!
+The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.
+Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -914,7 +918,7 @@ POST /Payment/v1/Transaction/AdjustAmount
 
 
 This function allows a change of the authorization amount which was originally set by Initialize.
- For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.
+For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.
 
 <table class="table">
 	<thead>
@@ -1455,7 +1459,7 @@ Numeric[8..8]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Information on the means of payment</div>
+	<div style="padding-bottom: 10px">Information on the means of payment<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1713,7 +1717,7 @@ POST /Payment/v1/Transaction/Capture
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Reference to authorization.</div>
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1759,7 +1763,7 @@ POST /Payment/v1/Transaction/Capture
 <td class="col-sm-8">
 	
 	<div style="padding-bottom: 10px">Optional partial capture options.
- Caution: Partial-Captures are only available with PayPal!</div>
+Caution: Partial-Captures are only available with PayPal!</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2453,7 +2457,7 @@ POST /Payment/v1/Transaction/Cancel
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Reference to transaction to be canceled.</div>
+	<div style="padding-bottom: 10px">Reference to transaction to be canceled.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2711,7 +2715,9 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!
+The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.
+Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
