@@ -155,7 +155,9 @@ Server-to-server communication:
       <pre class="prettyprint">
 private object SubmitRequest(string sfpUrl, object request, string sfpLogin, string sfpPassword)
 {
-    using (var client = new WebClient())
+    // don't keep your connection alive, it's a simple request/response server call
+    // for details on NoKeepAliveWebClient, see https://github.com/saferpay/jsonapi/blob/master/snippets/NoKeepAliveWebClient.cs
+    using (var client = new NoKeepAliveWebClient())
     {
         string authInfo = string.Format("{0}:{1}", sfpLogin, sfpPassword);
         client.Headers[HttpRequestHeader.Authorization] = "Basic " + Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
@@ -183,7 +185,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
     //encode credentials
     String credential = sfpLogin + ":" + sfpPassword;
     String encodedCredentials = DatatypeConverter.printBase64Binary(credential.getBytes());
-
+   
     //create connection
     HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
     connection.setRequestProperty("connection", "close");
@@ -193,19 +195,19 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
     connection.setRequestMethod("POST");
     connection.setDoOutput(true);
     connection.setUseCaches(false);
-
+    
     //write JSON to output stream
     JsonWriter writer = Json.createWriter(connection.getOutputStream());
     writer.writeObject(request);
     writer.close();
-
+    
     //send request
     int responseCode = connection.getResponseCode();
-
+    
     //get correct input stream
     InputStream readerStream = responseCode == 200 ? connection.getInputStream() : connection.getErrorStream();
     JsonObject response = Json.createReader(readerStream).readObject();
-
+    
     return response;
 }</pre>
     </div>
