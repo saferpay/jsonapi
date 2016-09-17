@@ -170,7 +170,9 @@ information about the outcome of e.g. 3D Secure.</p><blockquote>
     <div class="tab-pane active" id="csharp">
       <pre class="prettyprint">private object SubmitRequest(string sfpUrl, object request, string sfpLogin, string sfpPassword)
 {
-    using (var client = new WebClient())
+    // don't keep your connection alive, it's a simple request/response server call
+    // for details on NoKeepAliveWebClient, see https://github.com/saferpay/jsonapi/blob/master/snippets/NoKeepAliveWebClient.cs
+    using (var client = new NoKeepAliveWebClient())
     {
         string authInfo = string.Format(&quot;{0}:{1}&quot;, sfpLogin, sfpPassword);
         client.Headers[HttpRequestHeader.Authorization] = &quot;Basic &quot; + Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
@@ -197,74 +199,74 @@ information about the outcome of e.g. 3D Secure.</p><blockquote>
     //encode credentials
     String credential = sfpLogin + &quot;:&quot; + sfpPassword;
     String encodedCredentials = DatatypeConverter.printBase64Binary(credential.getBytes());
-<pre><code>//create connection
-HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
-connection.setRequestProperty(&quot;connection&quot;, &quot;close&quot;);
-connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json; charset=utf-8&quot;);
-connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
-connection.setRequestProperty(&quot;Authorization&quot;, &quot;Basic &quot; + encodedCredentials);
-connection.setRequestMethod(&quot;POST&quot;);
-connection.setDoOutput(true);
-connection.setUseCaches(false);
-
-//write JSON to output stream
-JsonWriter writer = Json.createWriter(connection.getOutputStream());
-writer.writeObject(request);
-writer.close();
-
-//send request
-int responseCode = connection.getResponseCode();
-
-//get correct input stream
-InputStream readerStream = responseCode == 200 ? connection.getInputStream() : connection.getErrorStream();
-JsonObject response = Json.createReader(readerStream).readObject();
-
-return response;
-</code></pre>
-<p>}</p></pre>
-</div>
-<div class="tab-pane" id="php">
-<pre class="prettyprint">//JSONObj is a multidimensional Array, that assembles the JSON structure
+   
+    //create connection
+    HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
+    connection.setRequestProperty(&quot;connection&quot;, &quot;close&quot;);
+    connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json; charset=utf-8&quot;);
+    connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
+    connection.setRequestProperty(&quot;Authorization&quot;, &quot;Basic &quot; + encodedCredentials);
+    connection.setRequestMethod(&quot;POST&quot;);
+    connection.setDoOutput(true);
+    connection.setUseCaches(false);
+    
+    //write JSON to output stream
+    JsonWriter writer = Json.createWriter(connection.getOutputStream());
+    writer.writeObject(request);
+    writer.close();
+    
+    //send request
+    int responseCode = connection.getResponseCode();
+    
+    //get correct input stream
+    InputStream readerStream = responseCode == 200 ? connection.getInputStream() : connection.getErrorStream();
+    JsonObject response = Json.createReader(readerStream).readObject();
+    
+    return response;
+}</pre>
+    </div>
+    <div class="tab-pane" id="php">
+      <pre class="prettyprint">//JSONObj is a multidimensional Array, that assembles the JSON structure
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
 function do_post($username,$password,$url, $JSONObj){
-//Set Options for CURL
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_HEADER, false);
-//Return Response to Application
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-//Set Content-Headers to JSON
-curl_setopt($curl, CURLOPT_HTTPHEADER,array(&quot;Content-type: application/json&quot;));
-//Execute call via http-POST
-curl_setopt($curl, CURLOPT_POST, true);
-//Set POST-Body
-//convert DATA-Array into a JSON-Object
-curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($JSONObj));
-//WARNING!!!!!
-//This option should NOT be &quot;false&quot;
-//Otherwise the connection is not secured
-//You can turn it of if you're working on the test-system with no vital data
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-//HTTP-Basic Authentication for the Saferpay JSON-API
-curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
-//CURL-Execute &amp; catch response
-$jsonResponse = curl_exec($curl);
-//Get HTTP-Status
-//Abort if Status != 200
-$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-if ( $status != 200 ) {
-die(&quot;Error: call to URL $url failed with status $status, response $json_response, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($JSONObj));
+	//Set Options for CURL
+	$curl = curl_init($url);
+	curl_setopt($curl, CURLOPT_HEADER, false);
+	//Return Response to Application
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	//Set Content-Headers to JSON
+	curl_setopt($curl, CURLOPT_HTTPHEADER,array(&quot;Content-type: application/json&quot;));
+	//Execute call via http-POST
+	curl_setopt($curl, CURLOPT_POST, true);
+	//Set POST-Body
+	//convert DATA-Array into a JSON-Object
+	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($JSONObj));
+	//WARNING!!!!!
+	//This option should NOT be &quot;false&quot;
+	//Otherwise the connection is not secured
+	//You can turn it of if you're working on the test-system with no vital data
+	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+	//HTTP-Basic Authentication for the Saferpay JSON-API
+	curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
+	//CURL-Execute &amp; catch response
+	$jsonResponse = curl_exec($curl);
+	//Get HTTP-Status
+	//Abort if Status != 200
+	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+	if ( $status != 200 ) {
+        die(&quot;Error: call to URL $url failed with status $status, response $json_response, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($JSONObj));
+	}
+	//IMPORTANT!!!
+	//Close connection!
+	curl_close($curl);
+	//Convert response into an Array
+	$response = json_decode($jsonResponse, true);
+	return $response;
 }
-//IMPORTANT!!!
-//Close connection!
-curl_close($curl);
-//Convert response into an Array
-$response = json_decode($jsonResponse, true);
-return $response;
-}
-</pre>
-</div><p></p>
+      </pre>
+    </div>
   </div>
 </div></div></div><div class="row"><div class="col-lg-6"><p>If you include the redirect pages into page using an iframe, you can react on size changes
 of the iframe content by listening to a message event containing the new sizing information.</p><p>Please note: Depending on the bank, issuer, or payment provider, the page can try to break
