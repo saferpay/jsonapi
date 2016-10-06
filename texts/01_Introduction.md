@@ -216,14 +216,19 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 //JSONObj is a multidimensional Array, that assembles the JSON structure
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
-function do_post($username,$password,$url, $JSONObj){
+function do_post($username, $password, $url, array $JSONObj) {
 	//Set Options for CURL
 	$curl = curl_init($url);
 	curl_setopt($curl, CURLOPT_HEADER, false);
 	//Return Response to Application
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	//Set Content-Headers to JSON
-	curl_setopt($curl, CURLOPT_HTTPHEADER,array("Content-type: application/json"));
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+	    "Content-Type: application/json; charset=utf-8",
+	    "Accept: application/json",
+	));
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array());
+	
 	//Execute call via http-POST
 	curl_setopt($curl, CURLOPT_POST, true);
 	//Set POST-Body
@@ -242,14 +247,15 @@ function do_post($username,$password,$url, $JSONObj){
 	//Get HTTP-Status
 	//Abort if Status != 200
 	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-	if ( $status != 200 ) {
-        die("Error: call to URL $url failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl) . "HTTP-Status: " . $status . "&lt;||||&gt; DUMP: URL: ". $url . " &lt;|||&gt; JSON: " . var_dump($JSONObj));
+	if ($status != 200) {
+            die("Error: call to URL $url failed with status $status, response $jsonResponse, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl) . "HTTP-Status: " . $status . "&lt;||||&gt; DUMP: URL: ". $url . " &lt;|||&gt; JSON: " . var_dump($JSONObj));
 	}
 	//IMPORTANT!!!
 	//Close connection!
 	curl_close($curl);
 	//Convert response into an Array
 	$response = json_decode($jsonResponse, true);
+	
 	return $response;
 }
       </pre>
