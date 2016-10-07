@@ -226,22 +226,25 @@ information about the outcome of e.g. 3D Secure.</p><blockquote>
 }</pre>
     </div>
     <div class="tab-pane" id="php">
-      <pre class="prettyprint">//JSONObj is a multidimensional Array, that assembles the JSON structure
-//$username and $password for the http-Basic Authentication
+      <pre class="prettyprint">//$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
-function do_post($username,$password,$url, $JSONObj){
+//$payload is a multidimensional array, that assembles the JSON structure
+function do_post($username, $password, $url, array $payload) {
 	//Set Options for CURL
 	$curl = curl_init($url);
 	curl_setopt($curl, CURLOPT_HEADER, false);
 	//Return Response to Application
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	//Set Content-Headers to JSON
-	curl_setopt($curl, CURLOPT_HTTPHEADER,array(&quot;Content-type: application/json&quot;));
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+	    &quot;Content-type: application/json&quot;,
+	    &quot;Accept: application/json&quot;
+	));
 	//Execute call via http-POST
 	curl_setopt($curl, CURLOPT_POST, true);
 	//Set POST-Body
 	//convert DATA-Array into a JSON-Object
-	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($JSONObj));
+	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
 	//WARNING!!!!!
 	//This option should NOT be &quot;false&quot;
 	//Otherwise the connection is not secured
@@ -255,14 +258,15 @@ function do_post($username,$password,$url, $JSONObj){
 	//Get HTTP-Status
 	//Abort if Status != 200
 	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-	if ( $status != 200 ) {
-        die(&quot;Error: call to URL $url failed with status $status, response $json_response, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($JSONObj));
+	if ($status != 200) {
+            die(&quot;Error: call to URL $url failed with status $status, response $jsonResponse, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($payload));
 	}
 	//IMPORTANT!!!
 	//Close connection!
 	curl_close($curl);
 	//Convert response into an Array
 	$response = json_decode($jsonResponse, true);
+	
 	return $response;
 }
       </pre>
