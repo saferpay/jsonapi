@@ -2891,7 +2891,9 @@ Note: you should not add sensitive data to the query string, as its contents is 
 
 ## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span> 
 
-
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl and/or NotifyUrl.
+>
 
 --->>>
 
