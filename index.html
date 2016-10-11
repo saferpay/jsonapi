@@ -1011,9 +1011,7 @@ Possible values: MASTERPASS.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-lg-6"><p>Call this function to safely check the status of the transaction from your server. Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</p><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</p><blockquote>
-<p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl and/or NotifyUrl.</p>
-</blockquote></div><div class="col-lg-6"><pre><code>POST /Payment/v1/PaymentPage/Assert
+</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-lg-6"><p>Call this function to safely check the status of the transaction from your server. Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</p><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/PaymentPage/Assert
 </code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -3978,7 +3976,9 @@ zh - Chinese</p></div>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/AssertInsert
+</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-lg-6"><blockquote>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl.</p>
+</blockquote></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/AssertInsert
 </code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
