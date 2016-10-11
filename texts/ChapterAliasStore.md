@@ -306,7 +306,9 @@ sv - Swedish
 
 ## <a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert
 
-
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl.
+>
 
 --->>>
 
