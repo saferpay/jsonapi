@@ -3563,7 +3563,9 @@ Note: you should not add sensitive data to the query string, as its contents is 
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
+</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><blockquote>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl and/or NotifyUrl.</p>
+</blockquote></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
 </code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -3976,9 +3978,7 @@ zh - Chinese</p></div>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-lg-6"><blockquote>
-<p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl.</p>
-</blockquote></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/AssertInsert
+</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/AssertInsert
 </code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
