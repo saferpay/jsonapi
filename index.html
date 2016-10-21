@@ -13,8 +13,79 @@
 	<div id="content" class="container-fluid">
 		<div class="row">
 
+			<div class="hidden-print visible-xs-block visible-sm-block visible-md-block" style="padding: 10px">
+				<button class="btn" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+				</button>
+
+				<ul class="nav collapse" id="navbar-collapse">
+							<li class="active">
+									<a href="#intro">Introduction</a>
+							</li>
+							<li>
+									<a href="#encoding">Content encoding</a>
+							</li>
+							<li>
+									<a href="#formats">Formats</a>
+							</li>
+							<li>
+									<a href="#authentication">Authentication</a>
+							</li>
+							<li>
+									<a href="#integration">Integration</a>
+							</li>
+							<li>
+									<a href="#errorhandling">Error Handling</a>
+							</li>
+							<li>
+									<a><h4>Interfaces</h4></a>
+							</li>
+							<li>
+									<a href="#ChapterPaymentPage">Payment Page</a>
+										<ul class="nav">
+												<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+												<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
+										</ul>
+							</li>
+							<li>
+									<a href="#ChapterTransaction">Transaction</a>
+										<ul class="nav">
+												<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+												<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+												<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
+												<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
+												<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
+												<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
+												<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+												<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
+												<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
+												<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+												<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
+												<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+										</ul>
+							</li>
+							<li>
+									<a href="#ChapterAliasStore">Secure Alias Store</a>
+										<ul class="nav">
+												<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
+												<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
+												<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+												<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+										</ul>
+							</li>
+							<li>
+									<a href="#ChapterBatch">Batch</a>
+										<ul class="nav">
+												<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+										</ul>
+							</li>
+
+				</ul>
+			</div>
+
 			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
 				<div data-spy="affix">
+
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
 						<span class="text-primary">json api v1.3</span>
@@ -703,8 +774,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.
- When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
+	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br>
 					<span>Example: name of your payment page config (case-insensitive)</span>
@@ -823,7 +893,7 @@ Possible values: MASTERPASS.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1250,8 +1320,7 @@ Id[1..50]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.
-When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
+	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br>
 					<span>Example: name of your payment page config (case-insensitive)</span>
@@ -1305,8 +1374,7 @@ Numeric[8..8]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Means of payment (either card data or a reference to a previously stored card).
-Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
+	<div style="padding-bottom: 10px">Means of payment (either card data or a reference to a previously stored card).<br> Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1339,9 +1407,7 @@ Important: Only fully PCI certified merchants may directly use the card data. If
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!
-The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.
-Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1574,12 +1640,11 @@ Id[1..50]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.
-<p>If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</p></div>
-<i class="small text-muted">
+	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> <br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
+	<i class="small text-muted">
 Possible values: WITH_LIABILITY_SHIFT.<br>
-<span>Example: WITH_LIABILITY_SHIFT</span>
-</i><p></p>
+					<span>Example: WITH_LIABILITY_SHIFT</span>
+	</i>
 </td>
 				</tr>
 				<tr>
@@ -1786,8 +1851,7 @@ Numeric[3..4]<br>
   }
 }
 </pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/QueryPaymentMeans
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.
-For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
+</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1840,9 +1904,7 @@ Id[1..50]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!
-The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.
-Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1969,8 +2031,7 @@ Note: you should not add sensitive data to the query string, as its contents is 
   }
 }
 </pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AdjustAmount
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.
-For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
+</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2665,8 +2726,7 @@ Numeric[8..8]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Optional partial capture options.
-Note: Partial-Captures are only available with PayPal!</div>
+	<div style="padding-bottom: 10px">Optional partial capture options.<br> Note: Partial-Captures are only available with PayPal!</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3422,9 +3482,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!
-The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.
-Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3564,7 +3622,7 @@ Note: you should not add sensitive data to the query string, as its contents is 
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
 </pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><blockquote>
-<p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl and/or NotifyUrl.</p>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Success-url and/or NotifyUrl.</p>
 </blockquote></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
 </code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
 	<thead>
@@ -3726,7 +3784,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Alias Store</h1><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-lg-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/Insert
+</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-lg-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/Insert
 </code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -3801,7 +3859,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3830,34 +3888,10 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Language used for displaying forms.
-<p>Code-List:
-de - German
-en - English
-fr - French
-da - Danish
-cs - Czech
-es - Spanish
-hr - Croatian
-it - Italian
-hu - Hungarian
-nl - Dutch
-no - Norwegian
-pl - Polish
-pt - Portuguese
-ru - Russian
-ro - Romanian
-sk - Slovak
-sl - Slovenian
-fi - Finnish
-sv - Swedish
-tr - Turkish
-el - Greek
-ja - Japanese
-zh - Chinese</p></div>
-<i class="small text-muted">
-<span>Example: de</span>
-</i><p></p>
+	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> no - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<i class="small text-muted">
+					<span>Example: de</span>
+	</i>
 </td>
 				</tr>
 				<tr>
@@ -4317,7 +4351,7 @@ Id[1..50]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The Alias you want to delete</div>
+	<div style="padding-bottom: 10px">The Alias you want to delete. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br>
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
@@ -4716,8 +4750,7 @@ Utf8[1..100]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The payers date of birth in ISO 8601 extended date notation
- YYYY-MM-DD</div>
+	<div style="padding-bottom: 10px">The payers date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
 AlphaNumeric[11..11]<br>
 					<span>Example: 1990-05-31</span>
@@ -4845,8 +4878,7 @@ Utf8[1..100]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The payers country subdivision code
- ISO 3166-2 country subdivision code</div>
+	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-2 country subdivision code</div>
 	<i class="small text-muted">
 Alphabetic[1..3]<br>
 					<span>Example: ZH</span>
@@ -4862,8 +4894,7 @@ Alphabetic[1..3]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The payers country subdivision code
- ISO 3166-1 alpha-2 country code</div>
+	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-1 alpha-2 country code</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br>
 					<span>Example: CH</span>
@@ -4956,7 +4987,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Id / name of the alias.</div>
+	<div style="padding-bottom: 10px">Id / name of the alias. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br>
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
@@ -5238,8 +5269,7 @@ Utf8[1..1000]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.
- Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 					<span>Example: Payernote</span>
@@ -5865,34 +5895,10 @@ Id[1..80]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.
-<p>Code-List:
-de - German
-en - English
-fr - French
-da - Danish
-cs - Czech
-es - Spanish
-hr - Croatian
-it - Italian
-hu - Hungarian
-nl - Dutch
-no - Norwegian
-pl - Polish
-pt - Portuguese
-ru - Russian
-ro - Romanian
-sk - Slovak
-sl - Slovenian
-fi - Finnish
-sv - Swedish
-tr - Turkish
-el - Greek
-ja - Japanese
-zh - Chinese</p></div>
-<i class="small text-muted">
-<span>Example: de</span>
-</i><p></p>
+	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> no - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<i class="small text-muted">
+					<span>Example: de</span>
+	</i>
 </td>
 							</tr>
 							<tr>
@@ -6054,8 +6060,7 @@ Utf8[1..1000]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.
- Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 					<span>Example: Payernote</span>
@@ -6345,8 +6350,7 @@ Utf8[1..1000]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.
- Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 					<span>Example: Payernote</span>
@@ -6564,7 +6568,7 @@ Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'manual'</div>
+	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'manual'. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br>
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
@@ -6744,8 +6748,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.
- This file must be hosted on a SSL/TLS secured web server (the url must start with https://).</div>
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/merchant.css</span>
 	</i>
@@ -6760,8 +6763,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.
- If you don't want any styling use 'NONE'.</div>
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
 	<i class="small text-muted">
 Possible values: DEFAULT, SIX, NONE.<br>
 					<span>Example: DEFAULT</span>
@@ -6802,8 +6804,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction).
-Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
+	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction). <br> Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -7114,9 +7115,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs.
-If this is set to true, DCC will not be done right away (but may be done later with an additional redirect).
-DON&#8217;T USE THIS IF YOU&#8217;RE NOT SURE &#8211; IT&#8217;S PROBABLY NOT WHAT YOU WANT!</div>
+	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs. <br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect). <br> DON&#8217;T USE THIS IF YOU&#8217;RE NOT SURE &#8211; IT&#8217;S PROBABLY NOT WHAT YOU WANT!</div>
 	<i class="small text-muted">
 			</i>
 </td>

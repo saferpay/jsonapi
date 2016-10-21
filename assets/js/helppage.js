@@ -7,7 +7,7 @@ function expandContainers(elem, recursive) {
         var tId = $this.attr('href');
         var table = $("<table class=\"table\"></table>");
         var nTr = $("<tr class=\"details\"><td colspan=2></td></tr>");
-		$this.addClass("out");
+        $this.addClass("out").removeClass("in");
         cTr.after(nTr);
         table.appendTo(nTr.children("td"));
         var copy = $(tId + " tr").clone();
