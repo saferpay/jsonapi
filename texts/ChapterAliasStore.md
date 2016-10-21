@@ -1,4 +1,4 @@
-# <a name="ChapterAliasStore"></a>Secure Alias Store
+# <a name="ChapterAliasStore"></a>Secure Card Data
 
 
 
@@ -93,7 +93,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.</div>
+	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -122,32 +122,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Language used for displaying forms.
-
-Code-List:
- de - German
- en - English
- fr - French
- da - Danish
- cs - Czech
- es - Spanish
- hr - Croatian
- it - Italian
- hu - Hungarian
- nl - Dutch
- no - Norwegian
- pl - Polish
- pt - Portuguese
- ru - Russian
- ro - Romanian
- sk - Slovak
-sl - Slovenian
- fi - Finnish
-sv - Swedish
- tr - Turkish
- el - Greek
- ja - Japanese
- zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> no - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
 	</i>
@@ -757,7 +732,7 @@ POST /Payment/v1/Alias/Delete
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The Alias you want to delete</div>
+	<div style="padding-bottom: 10px">The Alias you want to delete. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>

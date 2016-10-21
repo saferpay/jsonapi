@@ -268,8 +268,7 @@ Utf8[1..100]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The payers date of birth in ISO 8601 extended date notation
- YYYY-MM-DD</div>
+	<div style="padding-bottom: 10px">The payers date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
 AlphaNumeric[11..11]<br />
 					<span>Example: 1990-05-31</span>
@@ -397,8 +396,7 @@ Utf8[1..100]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The payers country subdivision code
- ISO 3166-2 country subdivision code</div>
+	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-2 country subdivision code</div>
 	<i class="small text-muted">
 Alphabetic[1..3]<br />
 					<span>Example: ZH</span>
@@ -414,8 +412,7 @@ Alphabetic[1..3]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">The payers country subdivision code
- ISO 3166-1 alpha-2 country code</div>
+	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-1 alpha-2 country code</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br />
 					<span>Example: CH</span>
@@ -508,7 +505,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Id / name of the alias.</div>
+	<div style="padding-bottom: 10px">Id / name of the alias. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
@@ -790,8 +787,7 @@ Utf8[1..1000]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.
- Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
@@ -1417,32 +1413,7 @@ Id[1..80]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.
-
-Code-List:
- de - German
- en - English
- fr - French
- da - Danish
- cs - Czech
- es - Spanish
- hr - Croatian
- it - Italian
- hu - Hungarian
- nl - Dutch
- no - Norwegian
- pl - Polish
- pt - Portuguese
- ru - Russian
- ro - Romanian
- sk - Slovak
-sl - Slovenian
- fi - Finnish
-sv - Swedish
- tr - Turkish
- el - Greek
- ja - Japanese
- zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> no - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
 	</i>
@@ -1607,8 +1578,7 @@ Utf8[1..1000]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.
- Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
@@ -1898,8 +1868,7 @@ Utf8[1..1000]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.
- Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
@@ -2117,7 +2086,7 @@ Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'manual'</div>
+	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'manual'. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
@@ -2297,8 +2266,7 @@ Range: inclusive between 1 and 1600<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.
- This file must be hosted on a SSL/TLS secured web server (the url must start with https://).</div>
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/merchant.css</span>
 	</i>
@@ -2313,8 +2281,7 @@ Range: inclusive between 1 and 1600<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.
- If you don't want any styling use 'NONE'.</div>
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
 	<i class="small text-muted">
 Possible values: DEFAULT, SIX, NONE.<br />
 					<span>Example: DEFAULT</span>
@@ -2355,8 +2322,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction).
-Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
+	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction). <br> Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2667,9 +2633,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs.
-If this is set to true, DCC will not be done right away (but may be done later with an additional redirect).
-DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
+	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs. <br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect). <br> DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
 	<i class="small text-muted">
 			</i>
 </td>
