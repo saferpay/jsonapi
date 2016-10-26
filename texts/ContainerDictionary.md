@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3<br />
-					<span>Example: 1.3</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4<br />
+					<span>Example: 1.4</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3<br />
-					<span>Example: 1.3</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4<br />
+					<span>Example: 1.4</span>
 	</i>
 </td>
 							</tr>
@@ -830,7 +830,7 @@ Utf8[1..50]<br />
 	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br />
 			</i>
 </td>
 							</tr>
@@ -2605,7 +2605,7 @@ Possible values: MASTERPASS.<br />
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
