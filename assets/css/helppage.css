@@ -94,11 +94,34 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     display: table;
 }
 
+.menu-btn {
+    background: transparent;
+    border: none;
+    font-size: x-large;
+}
+
+#menu-collapse {
+    position: absolute; 
+    z-index: 40; 
+    width: 100%; 
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 1em;
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    #menu-collapse {
+        -moz-columns: 3 auto; 
+        -ms-columns: 3; 
+        -webkit-columns: 3;
+        columns: 3;
+    }
+}
+
 .h1, .h2, .h3, h1, h2, h3 {
     margin-bottom: 10px;
     margin-top: 20px;
 }
-
 
 #content main section, .path-def {
     margin-top: -21px;
@@ -119,7 +142,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     visibility: visible;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     #content main {
         background: linear-gradient(to right, #fff 0, #fff 50%, #B9B2A8 50%, #B9B2A8 100%);
         min-height: 100vh;

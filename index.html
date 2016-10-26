@@ -12,77 +12,6 @@
 
 	<div id="content" class="container-fluid">
 		<div class="row">
-
-			<div class="hidden-print visible-xs-block visible-sm-block visible-md-block" style="padding: 10px">
-				<button class="btn" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="glyphicon glyphicon-menu-hamburger"></span> Menu
-				</button>
-
-				<ul class="nav collapse" id="navbar-collapse">
-							<li class="active">
-									<a href="#intro">Introduction</a>
-							</li>
-							<li>
-									<a href="#encoding">Content encoding</a>
-							</li>
-							<li>
-									<a href="#formats">Formats</a>
-							</li>
-							<li>
-									<a href="#authentication">Authentication</a>
-							</li>
-							<li>
-									<a href="#integration">Integration</a>
-							</li>
-							<li>
-									<a href="#errorhandling">Error Handling</a>
-							</li>
-							<li>
-									<a><h4>Interfaces</h4></a>
-							</li>
-							<li>
-									<a href="#ChapterPaymentPage">Payment Page</a>
-										<ul class="nav">
-												<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
-												<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-										</ul>
-							</li>
-							<li>
-									<a href="#ChapterTransaction">Transaction</a>
-										<ul class="nav">
-												<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
-												<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
-												<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
-												<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
-												<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
-												<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
-												<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-												<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
-												<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
-												<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
-												<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
-												<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
-										</ul>
-							</li>
-							<li>
-									<a href="#ChapterAliasStore">Secure Alias Store</a>
-										<ul class="nav">
-												<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
-												<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
-												<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
-												<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
-										</ul>
-							</li>
-							<li>
-									<a href="#ChapterBatch">Batch</a>
-										<ul class="nav">
-												<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
-										</ul>
-							</li>
-
-				</ul>
-			</div>
-
 			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
 				<div data-spy="affix">
 
@@ -159,16 +88,88 @@
 
 			<span class="print-page-break"></span>
 
-			<main class="col-lg-10 col-sm-12">
+			<main class="col-lg-10 col-md-12">
+				<div class="hidden-print hidden-lg">
+					<div id="navCollapse">
 
-				<h3 class="hidden-lg">
-					<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-					<span>json api v1.3</span>
-				</h3>
+						<button class="menu-btn" type="button" data-toggle="collapse" data-target="#menu-collapse">
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+							<h3 style="display: inline-block">
+								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+								<span class="text-primary">json api v1.3</span>
+							</h3>
+						</button>
+
+					</div>
+
+					<ul class="nav collapse" id="menu-collapse">
+								<li class="active">
+										<a href="#intro">Introduction</a>
+								</li>
+								<li>
+										<a href="#encoding">Content encoding</a>
+								</li>
+								<li>
+										<a href="#formats">Formats</a>
+								</li>
+								<li>
+										<a href="#authentication">Authentication</a>
+								</li>
+								<li>
+										<a href="#integration">Integration</a>
+								</li>
+								<li>
+										<a href="#errorhandling">Error Handling</a>
+								</li>
+								<li>
+										<a><h4>Interfaces</h4></a>
+								</li>
+								<li>
+										<a href="#ChapterPaymentPage">Payment Page</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+													<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterTransaction">Transaction</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+													<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+													<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
+													<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
+													<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
+													<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
+													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+													<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
+													<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
+													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+													<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
+													<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterAliasStore">Secure Alias Store</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
+													<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
+													<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+													<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterBatch">Batch</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+											</ul>
+								</li>
+
+					</ul>
+				</div>
 
 				
-<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-lg-6"><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-lg-6"><p>Base URL production system:</p><p><code>https://www.saferpay.com/api</code></p><p>Base URL test system:</p><p><code>https://test.saferpay.com/api</code></p><p>Test accounts:</p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br>
-<a target="_blank" href="https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html">View shared test account data</a></p></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-lg-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-lg-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-lg-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
+<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-md-6"><p>Base URL production system:</p><p><code>https://www.saferpay.com/api</code></p><p>Base URL test system:</p><p><code>https://test.saferpay.com/api</code></p><p>Test accounts:</p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br>
+<a target="_blank" href="https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html">View shared test account data</a></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -207,12 +208,12 @@
       </td>
     </tr>
   </tbody>
-</table></div></div></section><section id="authentication"><h1><a name="authentication"></a>Authentication</h1><div class="row"><div class="col-lg-6"><p>Saferpay supports the mechanism of basic authentication for authentication of a
-server (host) system.</p></div></div></section><section id="authentication_basic"><h2><a name="authentication_basic"></a>HTTP basic authentication</h2><div class="row"><div class="col-lg-6"><p>This is the default authentication method. Technical users for the JSON API can be
+</table></div></div></section><section id="authentication"><h1><a name="authentication"></a>Authentication</h1><div class="row"><div class="col-md-6"><p>Saferpay supports the mechanism of basic authentication for authentication of a
+server (host) system.</p></div></div></section><section id="authentication_basic"><h2><a name="authentication_basic"></a>HTTP basic authentication</h2><div class="row"><div class="col-md-6"><p>This is the default authentication method. Technical users for the JSON API can be
 created by the merchant in the Saferpay Backoffice. The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
 besides creating a new user / password pair from your Backoffice account.</p><p>The password must meet some complexity requirements. We suggest using / generating
-dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).</p></div><div class="col-lg-6"><p>HTTP Header:</p><p><code>Authorization: Basic [your base64 encoded user name + password]</code></p></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="integration"><h1><a name="integration"></a>Integration</h1><div class="row"><div class="col-lg-6"><p>The JSON API is a modern and lightweight interface, that can be used with all shop
+dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).</p></div><div class="col-md-6"><p>HTTP Header:</p><p><code>Authorization: Basic [your base64 encoded user name + password]</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="integration"><h1><a name="integration"></a>Integration</h1><div class="row"><div class="col-md-6"><p>The JSON API is a modern and lightweight interface, that can be used with all shop
 systems and all programming languages. Only a few steps are neccessary to integrate
 your only shop with Saferpay. The proceeding is mostly as follows:</p><ol>
 <li>Initialize via secure server-to-server call</li>
@@ -225,7 +226,7 @@ the description of resources below.</p><p>Server-to-server calls are a secure wa
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.</p><blockquote>
 <p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!</p>
-</blockquote></div><div class="col-lg-6"><p>Server-to-server communication:</p><div class="samples" role="tabpanel">
+</blockquote></div><div class="col-md-6"><p>Server-to-server communication:</p><div class="samples" role="tabpanel">
   <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
     <li class="active">
       <a aria-expanded="false" href="#csharp" data-toggle="tab">C#</a>
@@ -343,22 +344,22 @@ function do_post($username, $password, $url, array $payload) {
       </pre>
     </div>
   </div>
-</div></div></div><div class="row"><div class="col-lg-6"><p>If you include the redirect pages into page using an iframe, you can react on size changes
+</div></div></div><div class="row"><div class="col-md-6"><p>If you include the redirect pages into page using an iframe, you can react on size changes
 of the iframe content by listening to a message event containing the new sizing information.</p><p>Please note: Depending on the bank, issuer, or payment provider, the page can try to break
-out of the iframe or lack telling you the actual size of the content.</p></div><div class="col-lg-6"><p>Handle JavaScript events from Saferpay:</p><pre><code class="language-js">$(window).bind('message', function (e) {
+out of the iframe or lack telling you the actual size of the content.</p></div><div class="col-md-6"><p>Handle JavaScript events from Saferpay:</p><pre><code class="language-js">$(window).bind('message', function (e) {
   switch (e.originalEvent.data.message) {
     case 'css':
       $('#iframe').css('height', e.originalEvent.data.height + &quot;px&quot;);
       break;
     }
   });
-</code></pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="errorhandling"><h1><a name="errorhandling"></a>Error Handling</h1><div class="row"><div class="col-lg-6"><p>Successfully completed requests are confirmed with an http status code of <code>200</code> and
+</code></pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="errorhandling"><h1><a name="errorhandling"></a>Error Handling</h1><div class="row"><div class="col-md-6"><p>Successfully completed requests are confirmed with an http status code of <code>200</code> and
 contain the appropriate response message in the body.</p><p>If the request could not be completed successfully, this is indicated by a status code
 of <code>400</code> or higher and &#8211; if possible (some errors are generated by the web server itself,
 or the web application firewall and are thus outside of our control) &#8211; an error message
 stating the reason of the failure is included in the body of the response. The presence
 of an error message as specified in this document can be derived from the content type:
-if it&#8217;s <code>application/json</code>, then there is an error message present.</p></div><div class="col-lg-6"><p>HTTP status codes:</p><table class="table table-striped">
+if it&#8217;s <code>application/json</code>, then there is an error message present.</p></div><div class="col-md-6"><p>HTTP status codes:</p><table class="table table-striped">
 	<tbody><tr>
 		<td class="text-right col-sm-2">200</td>
 		<td class="col-sm-10">OK (No error)</td>
@@ -391,7 +392,7 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 		<td class="text-right">500</td>
 		<td>Internal error</td>
 	</tr>
-</tbody></table></div></div><div class="row"><div class="col-lg-6"><h4>Error Message</h4><table class="table">
+</tbody></table></div></div><div class="row"><div class="col-md-6"><h4>Error Message</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -537,7 +538,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -549,7 +550,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
     &quot;PaymentMeans.BankAccount.IBAN: The field IBAN is invalid.&quot;
   ]
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><p>List of behaviors:</p><table class="table table-striped">
+</pre></div></div><div class="row"><div class="col-md-6"></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
 	<tbody><tr>
 		<td class="text-right col-sm-3">ABORT</td>
 		<td class="col-sm-9">Do not retry this request. It will never succeed.</td>
@@ -740,8 +741,8 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 			The transaction was aborted by the payer.
 		</td>
 	</tr>
-</tbody></table></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_PaymentPage_Initialize"><h2><a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize</h2><div class="row"><div class="col-lg-6"><p>This interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.</p><p>After the payment page processing was finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort). If the payer is returned to the success url provided in the InitializeRequest, an authorization or even a completed transaction will have been done. So even if you don&#8217;t call Verify or Capture, the financial flow may have been triggered (depending on the payment provider &#8211; please consult the provider specific information).</p><p>Important: the payer might modify the return address (e.g. replace failure address with success url). If the payer returns to your success url, be sure to retrieve the outcome of the transaction and more information on it by calling PaymentPage/Verify Assert for the given token.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/PaymentPage/Initialize
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Initialize"><h2><a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize</h2><div class="row"><div class="col-md-6"><p>This interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.</p><p>After the payment page processing was finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort). If the payer is returned to the success url provided in the InitializeRequest, an authorization or even a completed transaction will have been done. So even if you don&#8217;t call Verify or Capture, the financial flow may have been triggered (depending on the payment provider &#8211; please consult the provider specific information).</p><p>Important: the payer might modify the return address (e.g. replace failure address with success url). If the payer returns to your success url, be sure to retrieve the outcome of the transaction and more information on it by calling PaymentPage/Verify Assert for the given token.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/PaymentPage/Initialize
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -829,7 +830,7 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
@@ -973,7 +974,7 @@ Possible values: MASTERPASS.<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -994,7 +995,7 @@ Possible values: MASTERPASS.<br>
     &quot;Fail&quot;: &quot;[your shop payment fail url]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1072,7 +1073,7 @@ Possible values: MASTERPASS.<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;Id of the request&quot;
@@ -1081,8 +1082,8 @@ Possible values: MASTERPASS.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-lg-6"><p>Call this function to safely check the status of the transaction from your server. Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</p><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/PaymentPage/Assert
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-md-6"><p>Call this function to safely check the status of the transaction from your server. Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</p><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/PaymentPage/Assert
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1125,7 +1126,7 @@ Id[1..50]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -1134,7 +1135,7 @@ Id[1..50]<br>
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1254,7 +1255,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -1286,8 +1287,8 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/Initialize
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Initialize
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1442,7 +1443,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -1467,7 +1468,7 @@ Numeric[8..8]<br>
     &quot;CssUrl&quot;: &quot;[your shop css url]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1573,7 +1574,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -1587,8 +1588,8 @@ Numeric[8..8]<br>
     &quot;PaymentMeansRequired&quot;: true
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_Authorize"><h2><a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This function may be called to complete an authorization which was started by a call to Transaction/Initialize.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/Authorize
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Authorize"><h2><a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be called to complete an authorization which was started by a call to Transaction/Initialize.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Authorize
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1678,7 +1679,7 @@ Numeric[3..4]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -1688,7 +1689,7 @@ Numeric[3..4]<br>
   &quot;Token&quot;: &quot;sdu5ymxx210y2dz1ggig2ey0o&quot;,
   &quot;VerificationCode&quot;: &quot;123&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1808,7 +1809,7 @@ Numeric[3..4]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -1850,8 +1851,8 @@ Numeric[3..4]<br>
     &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/QueryPaymentMeans
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/QueryPaymentMeans
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1909,7 +1910,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -1918,7 +1919,7 @@ Id[1..50]<br>
   },
   &quot;Token&quot;: &quot;sdu5ymxx210y2dz1ggig2ey0o&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2006,7 +2007,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -2030,8 +2031,8 @@ Id[1..50]<br>
     &quot;IpLocation&quot;: &quot;DE&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AdjustAmount
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AdjustAmount
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2092,7 +2093,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -2105,7 +2106,7 @@ Id[1..50]<br>
     &quot;CurrencyCode&quot;: &quot;CHF&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2129,14 +2130,14 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AuthorizeDirect
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AuthorizeDirect
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2245,7 +2246,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -2271,7 +2272,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2361,7 +2362,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -2397,8 +2398,8 @@ Numeric[8..8]<br>
     &quot;IpLocation&quot;: &quot;DE&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AuthorizeReferenced
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AuthorizeReferenced
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2491,7 +2492,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -2511,7 +2512,7 @@ Numeric[8..8]<br>
     &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2601,7 +2602,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -2643,8 +2644,8 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/Capture
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture</h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Capture
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2731,7 +2732,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -2742,7 +2743,7 @@ Numeric[8..8]<br>
     &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2835,7 +2836,7 @@ AlphaNumeric[11..11]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -2843,8 +2844,8 @@ AlphaNumeric[11..11]<br>
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/Refund
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Refund
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2904,7 +2905,7 @@ AlphaNumeric[11..11]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -2921,7 +2922,7 @@ AlphaNumeric[11..11]<br>
     &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2996,7 +2997,7 @@ AlphaNumeric[11..11]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -3028,8 +3029,8 @@ AlphaNumeric[11..11]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/RefundDirect
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/RefundDirect
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3108,7 +3109,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -3128,7 +3129,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3203,7 +3204,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -3235,8 +3236,8 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_Cancel"><h2><a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/Cancel
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Cancel"><h2><a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel</h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Cancel
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3278,7 +3279,7 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -3289,7 +3290,7 @@ Numeric[8..8]<br>
     &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3364,7 +3365,7 @@ Numeric[8..8]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -3373,8 +3374,8 @@ Numeric[8..8]<br>
   &quot;OrderId&quot;: &quot;c52ad18472354511ab2c33b59e796901&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/RedirectPayment
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/RedirectPayment
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3517,7 +3518,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -3537,7 +3538,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
     &quot;Fail&quot;: &quot;[your shop payment fail url]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3612,7 +3613,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -3621,10 +3622,10 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-lg-6"><blockquote>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><blockquote>
 <p><i class="glyphicon glyphicon-hand-right"></i> <strong>Caution</strong>: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Success-url and/or NotifyUrl.</p>
-</blockquote></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</blockquote></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3667,7 +3668,7 @@ Id[1..50]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -3676,7 +3677,7 @@ Id[1..50]<br>
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3751,7 +3752,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -3784,8 +3785,8 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-lg-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/Insert
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-md-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Alias/Insert
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3909,7 +3910,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -3925,7 +3926,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
     &quot;Fail&quot;: &quot;[your shop alias registration fail url]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4003,7 +4004,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -4012,8 +4013,8 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/AssertInsert
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Alias/AssertInsert
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4056,7 +4057,7 @@ Id[1..50]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -4065,7 +4066,7 @@ Id[1..50]<br>
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4125,7 +4126,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -4149,8 +4150,8 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/InsertDirect
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Alias/InsertDirect
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4210,7 +4211,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -4230,7 +4231,7 @@ Id[1..50]<br>
     &quot;IdGenerator&quot;: &quot;RANDOM&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4290,7 +4291,7 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
@@ -4314,8 +4315,8 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Alias_Delete"><h2><a name="Payment_v1_Alias_Delete"></a>Alias Delete</h2><div class="row"><div class="col-lg-6"></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Alias/Delete
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Delete"><h2><a name="Payment_v1_Alias_Delete"></a>Alias Delete</h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Alias/Delete
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4358,7 +4359,7 @@ Id[1..40]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -4367,7 +4368,7 @@ Id[1..40]<br>
   },
   &quot;AliasId&quot;: &quot;alias35nfd9mkzfw0x57iwx&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4391,14 +4392,14 @@ Id[1..40]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"></div></div></section><section id="ChapterBatch"><h1><a name="ChapterBatch"></a>Batch</h1><div class="row"><div class="col-lg-6"></div></div></section><section id="Payment_v1_Batch_Close"><h2><a name="Payment_v1_Batch_Close"></a>Batch Close</h2><div class="row"><div class="col-lg-6"><p>No documentation available</p></div><div class="col-lg-6"><pre><code>POST /Payment/v1/Batch/Close
-</code></pre></div></div><div class="row"><div class="col-lg-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterBatch"><h1><a name="ChapterBatch"></a>Batch</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Batch_Close"><h2><a name="Payment_v1_Batch_Close"></a>Batch Close</h2><div class="row"><div class="col-md-6"><p>No documentation available</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Batch/Close
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4441,7 +4442,7 @@ Numeric[8..8]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
@@ -4450,7 +4451,7 @@ Numeric[8..8]<br>
   },
   &quot;TerminalId&quot;: &quot;[your terminal id]&quot;
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><h4>Response</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4474,13 +4475,13 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-lg-6"><p>Example:</p><pre class="prettyprint">{
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.3&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-lg-6"><div class="visible-print-block" id="type-dict">
+</pre></div></div><div class="row"><div class="col-md-6"><div class="visible-print-block" id="type-dict">
 	<h4>Container Dictionary</h4>
 			<h2>Container &quot;Common_RequestHeader&quot;</h2>
 				<table class="table" id="Common_RequestHeader">
@@ -4499,8 +4500,8 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3<br>
-					<span>Example: 1.3</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4<br>
+					<span>Example: 1.4</span>
 	</i>
 </td>
 							</tr>
@@ -4614,8 +4615,8 @@ Id[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3<br>
-					<span>Example: 1.3</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4<br>
+					<span>Example: 1.4</span>
 	</i>
 </td>
 							</tr>
@@ -5312,7 +5313,7 @@ Utf8[1..50]<br>
 	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
 			</i>
 </td>
 							</tr>
@@ -7087,7 +7088,7 @@ Possible values: MASTERPASS.<br>
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
