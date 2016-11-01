@@ -95,7 +95,7 @@ server (host) system.
 -------------------------
 
 This is the default authentication method. Technical users for the JSON API can be
-created by the merchant in the Saferpay Backoffice. The password will not be stored
+created by the merchant in the Saferpay Backoffice under [**Administration > JSON API**](https://test.saferpay.com/BO/Administration/JsonApiLogin). The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
 besides creating a new user / password pair from your Backoffice account.
 
