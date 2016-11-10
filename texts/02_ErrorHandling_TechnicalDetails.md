@@ -26,10 +26,9 @@ List of error names (these names will not change, so you may parse these and att
 
 <table class="table table-striped">
 	<tr>
-		<td class="text-right col-sm-4">AUTHENTICATION_FAILED</td>
-		<td class="col-sm-8">
-			Wrong password, wrong client certificate, invalid token, wrong HMAC.<br />
-			<i>Solution:</i> Use proper credentials, fix HMAC calculation, use valid token
+		<td class="text-right">ACTION_NOT_SUPPORTED</td>
+		<td>
+			The requested action is not supported in the given context or the action can't be executed with the request data.
 		</td>
 	</tr>
 	<tr>
@@ -37,6 +36,19 @@ List of error names (these names will not change, so you may parse these and att
 		<td>
 			The alias is not known or already used (in case of registration).<br />
 			<i>Solution:</i> Use another alias for registration
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">AMOUNT_INVALID</td>
+		<td>
+			The amount does not adhere to the restrictions for this action. E.g. it might be exceeding the allowed capture amount.
+		</td>
+	</tr>	
+	<tr>
+		<td class="text-right col-sm-4">AUTHENTICATION_FAILED</td>
+		<td class="col-sm-8">
+			Wrong password, wrong client certificate, invalid token, wrong HMAC.<br />
+			<i>Solution:</i> Use proper credentials, fix HMAC calculation, use valid token
 		</td>
 	</tr>
 	<tr>
@@ -75,9 +87,35 @@ List of error names (these names will not change, so you may parse these and att
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">PAYMENTMEANS_INVALID</td>
+		<td class="text-right">COMMUNICATION_FAILED</td>
 		<td>
-			Invalid means of payment (e.g. invalid card)
+			The communication to the processor failed.<br />
+			<i>Solution:</i> Try again or use another means of payment
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">COMMUNICATION_TIMEOUT</td>
+		<td>
+			Saferpay did not receive a response from the external system in time. It’s possible that an authorization was created, but Saferpay is not able to know this.<br />
+			<i>Solution:</i> Check with the acquirer if there is an authorization which needs to be canceled.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">CONDITION_NOT_SATISFIED</td>
+		<td>
+			The condition which was defined in the request could not be satisfied.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">CURRENCY_INVALID</td>
+		<td>
+			Currency does not match referenced transaction currency.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">GENERAL_DECLINED</td>
+		<td>
+			Transaction declined by unknown reason
 		</td>
 	</tr>
 	<tr>
@@ -85,13 +123,6 @@ List of error names (these names will not change, so you may parse these and att
 		<td>
 			Internal error in Saferpay<br />
 			<i>Solution:</i> Try again
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">3DS_AUTHENTICATION_FAILED</td>
-		<td>
-			3D-secure authentication failed – the transaction must be aborted.<br />
-			<i>Solution:</i> Use another card or means of payment
 		</td>
 	</tr>
 	<tr>
@@ -109,49 +140,22 @@ List of error names (these names will not change, so you may parse these and att
 		</td>
 	</tr>
 	<tr>
+		<td class="text-right">PAYMENTMEANS_INVALID</td>
+		<td>
+			Invalid means of payment (e.g. invalid card)
+		</td>
+	</tr>
+	<tr>
 		<td class="text-right">PERMISSION_DENIED</td>
 		<td>
 			No permission (e.g. terminal does not belong to the customer)
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">TRANSACTION_DECLINED</td>
+		<td class="text-right">3DS_AUTHENTICATION_FAILED</td>
 		<td>
-			Declined by the processor.<br />
-			<i>Solution:</i> Use another card or check details.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">VALIDATION_FAILED</td>
-		<td>
-			Validation failed.<br />
-			<i>Solution:</i> Fix request
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">AMOUNT_INVALID</td>
-		<td>
-			The amount does not adhere to the restrictions for this action. E.g. it might be exceeding the allowed capture amount.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CURRENCY_INVALID</td>
-		<td>
-			Currency does not match referenced transaction currency.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">COMMUNICATION_FAILED</td>
-		<td>
-			The communication to the processor failed.<br />
-			<i>Solution:</i> Try again or use another means of payment
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">COMMUNICATION_TIMEOUT</td>
-		<td>
-			Saferpay did not receive a response from the external system in time. It’s possible that an authorization was created, but Saferpay is not able to know this.<br />
-			<i>Solution:</i> Check with the acquirer if there is an authorization which needs to be canceled.
+			3D-secure authentication failed – the transaction must be aborted.<br />
+			<i>Solution:</i> Use another card or means of payment
 		</td>
 	</tr>
 	<tr>
@@ -168,22 +172,31 @@ List of error names (these names will not change, so you may parse these and att
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
-		<td></td>
+		<td class="text-right">TRANSACTION_ABORTED</td>
+		<td>
+			The transaction was aborted by the payer.
+		</td>
 	</tr>
 	<tr>
-		<td class="text-right">ACTION_NOT_SUPPORTED</td>
+		<td class="text-right">TRANSACTION_ALREADY_CAPTURED</td>
+		<td>
+			Transaction already captured.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">TRANSACTION_DECLINED</td>
+		<td>
+			Declined by the processor.<br />
+			<i>Solution:</i> Use another card or check details.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td class="text-right">TRANSACTION_NOT_FOUND</td>
 		<td></td>
-	</tr>
-	<tr>
-		<td class="text-right">CONDITION_NOT_SATISFIED</td>
-		<td>
-			The condition which was defined in the request could not be satisfied.
-		</td>
 	</tr>
 	<tr>
 		<td class="text-right">TRANSACTION_NOT_STARTED</td>
@@ -193,9 +206,10 @@ List of error names (these names will not change, so you may parse these and att
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">TRANSACTION_ABORTED</td>
+		<td class="text-right">VALIDATION_FAILED</td>
 		<td>
-			The transaction was aborted by the payer.
+			Validation failed.<br />
+			<i>Solution:</i> Fix request
 		</td>
 	</tr>
 </table>
