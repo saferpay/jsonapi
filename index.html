@@ -210,7 +210,7 @@
   </tbody>
 </table></div></div></section><section id="authentication"><h1><a name="authentication"></a>Authentication</h1><div class="row"><div class="col-md-6"><p>Saferpay supports the mechanism of basic authentication for authentication of a
 server (host) system.</p></div></div></section><section id="authentication_basic"><h2><a name="authentication_basic"></a>HTTP basic authentication</h2><div class="row"><div class="col-md-6"><p>This is the default authentication method. Technical users for the JSON API can be
-created by the merchant in the Saferpay Backoffice under <a href="https://test.saferpay.com/BO/Administration/JsonApiLogin"><strong>Administration &gt; JSON API</strong></a>. The password will not be stored
+created by the merchant in the Saferpay Backoffice. The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
 besides creating a new user / password pair from your Backoffice account.</p><p>The password must meet some complexity requirements. We suggest using / generating
 dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).</p></div><div class="col-md-6"><p>HTTP Header:</p><p><code>Authorization: Basic [your base64 encoded user name + password]</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="integration"><h1><a name="integration"></a>Integration</h1><div class="row"><div class="col-md-6"><p>The JSON API is a modern and lightweight interface, that can be used with all shop
@@ -569,10 +569,9 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</tr>
 </tbody></table><p>List of error names (these names will not change, so you may parse these and attach your logic to the ErrorName):</p><table class="table table-striped">
 	<tbody><tr>
-		<td class="text-right col-sm-4">AUTHENTICATION_FAILED</td>
-		<td class="col-sm-8">
-			Wrong password, wrong client certificate, invalid token, wrong HMAC.<br>
-			<i>Solution:</i> Use proper credentials, fix HMAC calculation, use valid token
+		<td class="text-right">ACTION_NOT_SUPPORTED</td>
+		<td>
+			The requested action is not supported in the given context or the action can't be executed with the request data.
 		</td>
 	</tr>
 	<tr>
@@ -580,6 +579,19 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		<td>
 			The alias is not known or already used (in case of registration).<br>
 			<i>Solution:</i> Use another alias for registration
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">AMOUNT_INVALID</td>
+		<td>
+			The amount does not adhere to the restrictions for this action. E.g. it might be exceeding the allowed capture amount.
+		</td>
+	</tr>	
+	<tr>
+		<td class="text-right col-sm-4">AUTHENTICATION_FAILED</td>
+		<td class="col-sm-8">
+			Wrong password, wrong client certificate, invalid token, wrong HMAC.<br>
+			<i>Solution:</i> Use proper credentials, fix HMAC calculation, use valid token
 		</td>
 	</tr>
 	<tr>
@@ -618,9 +630,35 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">PAYMENTMEANS_INVALID</td>
+		<td class="text-right">COMMUNICATION_FAILED</td>
 		<td>
-			Invalid means of payment (e.g. invalid card)
+			The communication to the processor failed.<br>
+			<i>Solution:</i> Try again or use another means of payment
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">COMMUNICATION_TIMEOUT</td>
+		<td>
+			Saferpay did not receive a response from the external system in time. It&#8217;s possible that an authorization was created, but Saferpay is not able to know this.<br>
+			<i>Solution:</i> Check with the acquirer if there is an authorization which needs to be canceled.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">CONDITION_NOT_SATISFIED</td>
+		<td>
+			The condition which was defined in the request could not be satisfied.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">CURRENCY_INVALID</td>
+		<td>
+			Currency does not match referenced transaction currency.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">GENERAL_DECLINED</td>
+		<td>
+			Transaction declined by unknown reason
 		</td>
 	</tr>
 	<tr>
@@ -628,13 +666,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		<td>
 			Internal error in Saferpay<br>
 			<i>Solution:</i> Try again
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">3DS_AUTHENTICATION_FAILED</td>
-		<td>
-			3D-secure authentication failed &#8211; the transaction must be aborted.<br>
-			<i>Solution:</i> Use another card or means of payment
 		</td>
 	</tr>
 	<tr>
@@ -652,49 +683,22 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		</td>
 	</tr>
 	<tr>
+		<td class="text-right">PAYMENTMEANS_INVALID</td>
+		<td>
+			Invalid means of payment (e.g. invalid card)
+		</td>
+	</tr>
+	<tr>
 		<td class="text-right">PERMISSION_DENIED</td>
 		<td>
 			No permission (e.g. terminal does not belong to the customer)
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">TRANSACTION_DECLINED</td>
+		<td class="text-right">3DS_AUTHENTICATION_FAILED</td>
 		<td>
-			Declined by the processor.<br>
-			<i>Solution:</i> Use another card or check details.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">VALIDATION_FAILED</td>
-		<td>
-			Validation failed.<br>
-			<i>Solution:</i> Fix request
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">AMOUNT_INVALID</td>
-		<td>
-			The amount does not adhere to the restrictions for this action. E.g. it might be exceeding the allowed capture amount.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CURRENCY_INVALID</td>
-		<td>
-			Currency does not match referenced transaction currency.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">COMMUNICATION_FAILED</td>
-		<td>
-			The communication to the processor failed.<br>
-			<i>Solution:</i> Try again or use another means of payment
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">COMMUNICATION_TIMEOUT</td>
-		<td>
-			Saferpay did not receive a response from the external system in time. It&#8217;s possible that an authorization was created, but Saferpay is not able to know this.<br>
-			<i>Solution:</i> Check with the acquirer if there is an authorization which needs to be canceled.
+			3D-secure authentication failed &#8211; the transaction must be aborted.<br>
+			<i>Solution:</i> Use another card or means of payment
 		</td>
 	</tr>
 	<tr>
@@ -711,22 +715,31 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
-		<td></td>
+		<td class="text-right">TRANSACTION_ABORTED</td>
+		<td>
+			The transaction was aborted by the payer.
+		</td>
 	</tr>
 	<tr>
-		<td class="text-right">ACTION_NOT_SUPPORTED</td>
+		<td class="text-right">TRANSACTION_ALREADY_CAPTURED</td>
+		<td>
+			Transaction already captured.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">TRANSACTION_DECLINED</td>
+		<td>
+			Declined by the processor.<br>
+			<i>Solution:</i> Use another card or check details.
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td class="text-right">TRANSACTION_NOT_FOUND</td>
 		<td></td>
-	</tr>
-	<tr>
-		<td class="text-right">CONDITION_NOT_SATISFIED</td>
-		<td>
-			The condition which was defined in the request could not be satisfied.
-		</td>
 	</tr>
 	<tr>
 		<td class="text-right">TRANSACTION_NOT_STARTED</td>
@@ -736,9 +749,10 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		</td>
 	</tr>
 	<tr>
-		<td class="text-right">TRANSACTION_ABORTED</td>
+		<td class="text-right">VALIDATION_FAILED</td>
 		<td>
-			The transaction was aborted by the payer.
+			Validation failed.<br>
+			<i>Solution:</i> Fix request
 		</td>
 	</tr>
 </tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Initialize"><h2><a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize</h2><div class="row"><div class="col-md-6"><p>This interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.</p><p>After the payment page processing was finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort). If the payer is returned to the success url provided in the InitializeRequest, an authorization or even a completed transaction will have been done. So even if you don&#8217;t call Verify or Capture, the financial flow may have been triggered (depending on the payment provider &#8211; please consult the provider specific information).</p><p>Important: the payer might modify the return address (e.g. replace failure address with success url). If the payer returns to your success url, be sure to retrieve the outcome of the transaction and more information on it by calling PaymentPage/Verify Assert for the given token.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/PaymentPage/Initialize
