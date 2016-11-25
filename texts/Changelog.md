@@ -5,7 +5,7 @@ Changes
 Version 1.4 R72 (Changeset 68698)
 
 * new version 1.4
-* added value "1.4" for SpecVersion
+  * added value "1.4" for SpecVersion
   * added option SuppressDcc for Transaction/AuthorizeReferenced
   * added values "BANCONTACT" and "PAYDIREKT" for Brand.PaymentMethod and PaymentMethods in PaymentPage/Initialize
   * added validation for element Payment.MandateId
