@@ -1,5 +1,7 @@
 # Changelog
 
+## History
+
 * [Version 1.4](#v14)
 
 ## <a name='v14'></a> Version 1.4 (Released: 15. Nov 2016)
