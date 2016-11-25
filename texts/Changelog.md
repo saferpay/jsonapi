@@ -1,6 +1,6 @@
 # Changelog
 
-## History
+## Table of Contents
 
 * [Version 1.4](#v14)
 
