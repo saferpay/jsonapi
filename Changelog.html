@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="assets/css/vendors.css" />
+	<link rel="stylesheet" href="assets/css/helppage.css">
+
+	<title>Saferpay documentation | json api v1.4</title>
+</head>
+<body data-spy="scroll" data-target="#navScrollspy">
+
+	<div id="content" class="container-fluid">
+		<div class="row">
+			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
+				<div data-spy="affix">
+
+					<h3>
+						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+						<span class="text-primary">json api v1.4</span>
+					</h3>
+
+					<ul class="nav">
+								<li>
+										<a href="#intro">Introduction</a>
+								</li>
+								<li>
+										<a href="#encoding">Content encoding</a>
+								</li>
+								<li>
+										<a href="#formats">Formats</a>
+								</li>
+								<li>
+										<a href="#authentication">Authentication</a>
+								</li>
+								<li>
+										<a href="#integration">Integration</a>
+								</li>
+								<li>
+										<a href="#errorhandling">Error Handling</a>
+								</li>
+								<li>
+										<a><h4>Interfaces</h4></a>
+								</li>
+								<li>
+										<a href="#ChapterPaymentPage">Payment Page</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+													<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterTransaction">Transaction</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+													<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+													<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
+													<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
+													<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
+													<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
+													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+													<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
+													<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
+													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+													<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
+													<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterAliasStore">Secure Alias Store</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
+													<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
+													<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+													<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterBatch">Batch</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+											</ul>
+								</li>
+								<li class="active">
+										<a href="Changelog.html">Changelog</a>
+								</li>
+
+					</ul>
+				</div>
+			</nav>
+
+			<span class="print-page-break"></span>
+
+			<main class="col-lg-10 col-md-12">
+				<div class="hidden-print hidden-lg">
+					<div id="navCollapse">
+
+						<button class="menu-btn" type="button" data-toggle="collapse" data-target="#menu-collapse">
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+							<h3 style="display: inline-block">
+								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+								<span class="text-primary">json api v1.4</span>
+							</h3>
+						</button>
+
+					</div>
+
+					<ul class="nav collapse" id="menu-collapse">
+								<li>
+										<a href="#intro">Introduction</a>
+								</li>
+								<li>
+										<a href="#encoding">Content encoding</a>
+								</li>
+								<li>
+										<a href="#formats">Formats</a>
+								</li>
+								<li>
+										<a href="#authentication">Authentication</a>
+								</li>
+								<li>
+										<a href="#integration">Integration</a>
+								</li>
+								<li>
+										<a href="#errorhandling">Error Handling</a>
+								</li>
+								<li>
+										<a><h4>Interfaces</h4></a>
+								</li>
+								<li>
+										<a href="#ChapterPaymentPage">Payment Page</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+													<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterTransaction">Transaction</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+													<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+													<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
+													<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
+													<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
+													<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
+													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+													<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
+													<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
+													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+													<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
+													<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterAliasStore">Secure Alias Store</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
+													<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
+													<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+													<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterBatch">Batch</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+											</ul>
+								</li>
+								<li class="active">
+										<a href="Changelog.html">Changelog</a>
+								</li>
+
+					</ul>
+				</div>
+
+				
+<section><h1>Changelog</h1><div class="row"><div class="col-md-6"><p>TODO: format</p><p>Changes
+Version 1.4 R72 (Changeset 68698)
+new version 1.4
+added value &quot;1.4&quot; for SpecVersion
+added option SuppressDcc for Transaction/AuthorizeReferenced
+added values &quot;BANCONTACT&quot; and &quot;PAYDIREKT&quot; for Brand.PaymentMethod and PaymentMethods in PaymentPage/Initialize
+added validation for element Payment.MandateId
+added option ConfigSet for PaymentPage/Initialize
+(non-public) added new container P2PAustria in PaymentPage/Initialize request, PaymentPage/Assert response, Transaction/Initialize request, Transaction/Authorize response, Transaction/QueryPaymentMeans response, Transaction/AuthorizeDirect request and response, Transaction/Refund request and response, Transaction/RefundDirect request and response, Transaction/RedirectPayment request and Transaction/AssertRedirectPayment response
+(non-public) added new container VisaCheckoutLight in PaymentMeans
+added a note that partial captures are currently only supported for PayPal
+added a note that values for AliasID are case-insensitive
+corrected example for Transaction/AuthorizeDirect
+corrected example for Transaction/AuthorizeReferenced
+corrected example for Transaction/Authorize
+corrected example for Transaction/Initialize
+improved description for TransactionReference
+corrected example for BillpayCapture.DelayInDays
+improved description for ReturnUrls</p></div></div></section>
+
+			</main>
+
+		</div>
+	</div>
+
+	<div class="scroll-top-wrapper">
+		<a href="#top" class="scroll-top-inner" onclick="$('html,body').animate({ scrollTop: 0 }, 'slow'); return false;">
+			<span class="glyphicon glyphicon-chevron-up"></span> Back to Top
+		</a>
+	</div>
+
+	<script src="assets/js/vendors.js"></script>
+	<script src="assets/js/helppage.js"></script>
+</body>
+</html>
+
