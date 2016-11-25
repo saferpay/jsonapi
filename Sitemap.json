@@ -168,5 +168,10 @@
   {
     "Source": "texts/ContainerDictionary.md",
     "target": "index.html"
-  }
+  },
+  {
+    "Title": "Changelog",
+    "Source": "texts/Changelog.md",
+    "Target": "Changelog.html"
+  }   
 ]
