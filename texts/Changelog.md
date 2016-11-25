@@ -1,8 +1,6 @@
 # Changelog
 
-Changes
-
-Version 1.4 R72
+## Version 1.4 R72
 
 * new version 1.4
   * added value "1.4" for SpecVersion
