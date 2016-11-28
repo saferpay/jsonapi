@@ -1,11 +1,9 @@
 # Changelog
 
 ## Table of Contents
-
 * [Version 1.4](#v14)
 
-## <a name='v14'></a> Version 1.4 (Released: 15. Nov 2016)
-
+## <a name="v1.4.0.20161015"></a> Version 1.4 (released 2016-10-15)
 * new version 1.4
   * added value "1.4" for _SpecVersion_
   * added option _SuppressDcc_ for [Transaction/AuthorizeReferenced](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced)
