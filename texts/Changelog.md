@@ -1,7 +1,7 @@
 # Changelog
 
 ## Table of Contents
-- [Version 1.4](#v14)
+- [Version 1.4](#v1.4.0.20161015)
 
 ## <a name="v1.4.0.20161015"></a> Version 1.4 (released 2016-10-15)
 - new version 1.4
