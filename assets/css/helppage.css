@@ -29,7 +29,10 @@ section img {
     max-width: 100%;
 }
 section li {
-    margin: 0 0 10px;
+    margin: 0 0 0.4em;
+}
+section li li {
+    margin: 0 0 0.2em;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 0.6em;
