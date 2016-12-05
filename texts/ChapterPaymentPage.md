@@ -402,6 +402,10 @@ Call this function to safely check the status of the transaction from your serve
 
 If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.
 
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Successurl and/or NotifyUrl.
+>
+
 --->>>
 
 ```
