@@ -100,9 +100,19 @@
         "Target": "index.html#Payment_v1_Transaction_Capture"
       },
       {
+        "Title": "Transaction AssertCapture",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AssertCapture"
+      },
+      {
         "Title": "Transaction Refund",
         "Source": "texts/ChapterTransaction.md",
         "Target": "index.html#Payment_v1_Transaction_Refund"
+      },
+      {
+        "Title": "Transaction AssertRefund",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AssertRefund"
       },
       {
         "Title": "Transaction RefundDirect",
