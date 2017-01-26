@@ -220,7 +220,7 @@ Possible values: MASTERPASS.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Used to have the payer enter his address in the payment process. Only one address form is supported at this time!</div>
+	<div style="padding-bottom: 10px">Used to have the payer enter his billing address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -235,7 +235,7 @@ Possible values: MASTERPASS.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Used to have the payer enter his address in the payment process. Only one address form is supported at this time!</div>
+	<div style="padding-bottom: 10px">Used to have the payer enter his delivery address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -516,7 +516,7 @@ Id[1..50]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">

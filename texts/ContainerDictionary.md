@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4<br />
-					<span>Example: 1.4</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5<br />
+					<span>Example: 1.5</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4<br />
-					<span>Example: 1.4</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5<br />
+					<span>Example: 1.5</span>
 	</i>
 </td>
 							</tr>
@@ -398,7 +398,7 @@ Utf8[1..100]<br />
 	
 	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-2 country subdivision code</div>
 	<i class="small text-muted">
-Alphabetic[1..3]<br />
+AlphaNumeric[1..3]<br />
 					<span>Example: ZH</span>
 	</i>
 </td>
@@ -1938,6 +1938,215 @@ Id[1..35]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_PaymentTransaction"</h2>
+				<table class="table" id="Payment_Models_Data_PaymentTransaction">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT'</div>
+	<i class="small text-muted">
+Possible values: PAYMENT.<br />
+					<span>Example: PAYMENT</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED'</div>
+	<i class="small text-muted">
+Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
+					<span>Example: AUTHORIZED</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
+	<i class="small text-muted">
+					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Date</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Date / time of the authorization</div>
+	<i class="small text-muted">
+					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Amount (currency, value, etc.) that has been authorized.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderId given with request</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AcquirerName</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Name of the acquirer</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerName</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AcquirerReference</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DirectDebit</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Invoice</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_PendingNotification"</h2>
+				<table class="table" id="Payment_Models_Data_PendingNotification">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MerchantEmail</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Email which will be notified by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
+	<i class="small text-muted">
+					<span>Example: merchant@saferpay.com</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>NotifyUrl</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
+	<i class="small text-muted">
+					<span>Example: https://merchanthost/pendingnotify</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_RecurringOptions"</h2>
 				<table class="table" id="Payment_Models_Data_RecurringOptions">
 					<tbody>
@@ -2051,6 +2260,180 @@ Id[1..80]<br />
 Utf8[1..1000]<br />
 					<span>Example: Description</span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_RefundTransaction"</h2>
+				<table class="table" id="Payment_Models_Data_RefundTransaction">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Type of transaction. One of 'REFUND'</div>
+	<i class="small text-muted">
+Possible values: REFUND.<br />
+					<span>Example: REFUND</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED'</div>
+	<i class="small text-muted">
+Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
+					<span>Example: AUTHORIZED</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
+	<i class="small text-muted">
+					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Date</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Date / time of the authorization</div>
+	<i class="small text-muted">
+					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Amount (currency, value, etc.) that has been authorized.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderId given with request</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AcquirerName</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Name of the acquirer</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerName</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AcquirerReference</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DirectDebit</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Invoice</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -2274,6 +2657,20 @@ Range: inclusive between 1 and 1600<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br />
+	<span class="text-muted small">
+		boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
 	<strong>Theme</strong><br />
 	<span class="text-muted small">
 		string
@@ -2358,180 +2755,6 @@ Possible values: DEFAULT, SIX, NONE.<br />
 	<i class="small text-muted">
 					<span>Example: AAABBIIFmAAAAAAAAAAAAAAAAAA=</span>
 	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_Transaction"</h2>
-				<table class="table" id="Payment_Models_Data_Transaction">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Type</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT', 'REFUND'</div>
-	<i class="small text-muted">
-Possible values: PAYMENT, REFUND.<br />
-					<span>Example: PAYMENT</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Status</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED'</div>
-	<i class="small text-muted">
-Possible values: AUTHORIZED, CAPTURED.<br />
-					<span>Example: AUTHORIZED</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Id</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
-	<i class="small text-muted">
-					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Date</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		date
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Date / time of the authorization</div>
-	<i class="small text-muted">
-					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Amount</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Amount (currency, value, etc.) that has been authorized.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderId</strong><br />
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">OrderId given with request</div>
-	<i class="small text-muted">
-Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>AcquirerName</strong><br />
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Name of the acquirer</div>
-	<i class="small text-muted">
-					<span>Example: AcquirerName</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>AcquirerReference</strong><br />
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
-	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>DirectDebit</strong><br />
-	<span class="text-muted small">
-		
-			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
-	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Invoice</strong><br />
-	<span class="text-muted small">
-		
-			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
-	<i class="small text-muted">
-			</i>
 </td>
 							</tr>
 					</tbody>

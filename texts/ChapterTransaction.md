@@ -518,7 +518,7 @@ Numeric[3..4]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1248,7 +1248,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1537,7 +1537,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1757,6 +1757,21 @@ POST /Payment/v1/Transaction/Capture
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PendingNotification</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_PendingNotification">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -1846,17 +1861,32 @@ Id[1..80]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>Date</strong><br />
+	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the capture.</div>
+	<i class="small text-muted">
+Possible values: PENDING, CAPTURED.<br />
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Date</strong><br />
+	<span class="text-muted small">
 		date
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Date and time of capture.</div>
+	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
 AlphaNumeric[11..11]<br />
 					<span>Example: 2014-04-25T08:33:44.159Z</span>
@@ -1888,10 +1918,216 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.5",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
+  "Status": "CAPTURED",
+  "Date": "2015-01-30T12:45:22.258+01:00"
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture
+
+This method is only supported for pending capture transactions
+
+--->>>
+
+```
+POST /Payment/v1/Transaction/AssertCapture
+```
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "RequestHeader": {
+    "SpecVersion": "1.5",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request id]",
+    "RetryIndicator": 0
+  },
+  "TransactionReference": {
+    "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+  }
+}
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..64]<br />
+					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the capture.</div>
+	<i class="small text-muted">
+Possible values: PENDING, CAPTURED.<br />
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Date</strong><br />
+	<span class="text-muted small">
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
+	<i class="small text-muted">
+AlphaNumeric[11..11]<br />
+					<span>Example: 2014-04-25T08:33:44.159Z</span>
+	</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ResponseHeader": {
+    "SpecVersion": "1.5",
+    "RequestId": "[your request id]"
+  },
+  "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
+  "Status": "CAPTURED",
   "Date": "2015-01-30T12:45:22.258+01:00"
 }
 </pre>
@@ -1979,6 +2215,21 @@ POST /Payment/v1/Transaction/Refund
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PendingNotification</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_PendingNotification">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -2045,7 +2296,7 @@ POST /Payment/v1/Transaction/Refund
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2127,6 +2378,211 @@ POST /Payment/v1/Transaction/Refund
       "CountryCode": "CH"
     }
   }
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span> 
+
+This method is only supported for pending refund transactions
+
+--->>>
+
+```
+POST /Payment/v1/Transaction/AssertRefund
+```
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "RequestHeader": {
+    "SpecVersion": "1.5",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request id]",
+    "RetryIndicator": 0
+  },
+  "TransactionReference": {
+    "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+  }
+}
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..64]<br />
+					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the capture.</div>
+	<i class="small text-muted">
+Possible values: PENDING, CAPTURED.<br />
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Date</strong><br />
+	<span class="text-muted small">
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
+	<i class="small text-muted">
+AlphaNumeric[11..11]<br />
+					<span>Example: 2014-04-25T08:33:44.159Z</span>
+	</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ResponseHeader": {
+    "SpecVersion": "1.5",
+    "RequestId": "[your request id]"
+  },
+  "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
+  "Status": "CAPTURED",
+  "Date": "2015-01-30T12:45:22.258+01:00"
 }
 </pre>
 
@@ -2301,7 +2757,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2878,9 +3334,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 
 ## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span> 
 
->
->    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use the Assert-Request for polling. You should alweays await the reception of the Success-url and/or NotifyUrl.
->
+
 
 --->>>
 
@@ -2996,7 +3450,7 @@ Id[1..50]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
