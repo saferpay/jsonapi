@@ -281,7 +281,9 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 
 ## <a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert
 
-
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.
+>
 
 --->>>
 
