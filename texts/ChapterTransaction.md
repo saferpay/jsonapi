@@ -1138,7 +1138,7 @@ Numeric[8..8]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Information on the means of payment</div>
+	<div style="padding-bottom: 10px">Information on the means of payment. Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
 </td>
