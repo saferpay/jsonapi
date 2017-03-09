@@ -213,9 +213,52 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
     </div>
     <div class="tab-pane" id="php">
       <pre class="prettyprint">
+      
+//This is an EXAMPLE of the payload-Array.
+$payload = array(
+	'RequestHeader' => array(
+		'SpecVersion' => "1.5",
+		'CustomerId' => "123456",
+		'RequestId' => "aScdFewDSRFrfas2wsad3",
+		'RetryIndicator' => 0,
+		'ClientInfo' => array(
+		    'ShopInfo' => "My Shop",
+		    'OsInfo' => "Windows Server 2013"
+	    )
+    ),
+    'TerminalId' => "17654321",
+    'PaymentMethods' => array("DIRECTDEBIT","VISA"),
+    'Payment' => array(
+        'Amount' => array(
+            'Value' => "21065",
+            'CurrencyCode' => "EUR"
+        ),
+        'OrderId' => "123test",
+        'PayerNote' => "A Note",
+        'Description' => "Test_Order_123test"
+    ),
+    'Payer' => array(
+        'IpAddress' => "192.168.178.1",
+        'LanguageCode' => "en"
+    ),
+    'ReturnUrls' => array(
+        'Success' => "https://myshop.com/success",
+        'Fail' => "https://myshop.com/fail"
+    ),
+    'Notification' => array(
+        'PayerEmail' => "payee@mailcom",
+        'MerchantEmail' => "merchant@mail.com",
+        'NotifyUrl' => "https://myshop/callback"
+    ),
+    'DeliveryAddressForm' => array(
+        'Display' => true,
+        'MandatoryFields' => array("CITY","COMPANY","COUNTRY","EMAIL","FIRSTNAME","LASTNAME","PHONE","SALUTATION","STATE","STREET","ZIP")
+    )
+);
+
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
-//$payload is a multidimensional array, that assembles the JSON structure
+//$payload is a multidimensional array, that assembles the JSON structure. Example see above
 function do_post($username, $password, $url, array $payload) {
 	//Set Options for CURL
 	$curl = curl_init($url);
