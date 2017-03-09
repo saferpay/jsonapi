@@ -308,51 +308,93 @@ information about the outcome of e.g. 3D Secure.</p><blockquote>
 }</pre>
     </div>
     <div class="tab-pane" id="php">
-      <pre class="prettyprint">//$username and $password for the http-Basic Authentication
+      <pre class="prettyprint">      
+//This is an EXAMPLE of the payload-Array.
+$payload = array(
+	'RequestHeader' =&gt; array(
+		'SpecVersion' =&gt; &quot;1.5&quot;,
+		'CustomerId' =&gt; &quot;123456&quot;,
+		'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
+		'RetryIndicator' =&gt; 0,
+		'ClientInfo' =&gt; array(
+		    'ShopInfo' =&gt; &quot;My Shop&quot;,
+		    'OsInfo' =&gt; &quot;Windows Server 2013&quot;
+	    )
+    ),
+    'TerminalId' =&gt; &quot;17654321&quot;,
+    'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
+    'Payment' =&gt; array(
+        'Amount' =&gt; array(
+            'Value' =&gt; &quot;21065&quot;,
+            'CurrencyCode' =&gt; &quot;EUR&quot;
+        ),
+        'OrderId' =&gt; &quot;123test&quot;,
+        'PayerNote' =&gt; &quot;A Note&quot;,
+        'Description' =&gt; &quot;Test_Order_123test&quot;
+    ),
+    'Payer' =&gt; array(
+        'IpAddress' =&gt; &quot;192.168.178.1&quot;,
+        'LanguageCode' =&gt; &quot;en&quot;
+    ),
+    'ReturnUrls' =&gt; array(
+        'Success' =&gt; &quot;https://myshop.com/success&quot;,
+        'Fail' =&gt; &quot;https://myshop.com/fail&quot;
+    ),
+    'Notification' =&gt; array(
+        'PayerEmail' =&gt; &quot;payee@mailcom&quot;,
+        'MerchantEmail' =&gt; &quot;merchant@mail.com&quot;,
+        'NotifyUrl' =&gt; &quot;https://myshop/callback&quot;
+    ),
+    'DeliveryAddressForm' =&gt; array(
+        'Display' =&gt; true,
+        'MandatoryFields' =&gt; array(&quot;CITY&quot;,&quot;COMPANY&quot;,&quot;COUNTRY&quot;,&quot;EMAIL&quot;,&quot;FIRSTNAME&quot;,&quot;LASTNAME&quot;,&quot;PHONE&quot;,&quot;SALUTATION&quot;,&quot;STATE&quot;,&quot;STREET&quot;,&quot;ZIP&quot;)
+    )
+);
+<p>//$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
-//$payload is a multidimensional array, that assembles the JSON structure
+//$payload is a multidimensional array, that assembles the JSON structure. Example see above
 function do_post($username, $password, $url, array $payload) {
-	//Set Options for CURL
-	$curl = curl_init($url);
-	curl_setopt($curl, CURLOPT_HEADER, false);
-	//Return Response to Application
-	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-	//Set Content-Headers to JSON
-	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-	    &quot;Content-type: application/json&quot;,
-	    &quot;Accept: application/json&quot;
-	));
-	//Execute call via http-POST
-	curl_setopt($curl, CURLOPT_POST, true);
-	//Set POST-Body
-	//convert DATA-Array into a JSON-Object
-	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
-	//WARNING!!!!!
-	//This option should NOT be &quot;false&quot;
-	//Otherwise the connection is not secured
-	//You can turn it of if you're working on the test-system with no vital data
-	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-	//HTTP-Basic Authentication for the Saferpay JSON-API
-	curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
-	//CURL-Execute &amp; catch response
-	$jsonResponse = curl_exec($curl);
-	//Get HTTP-Status
-	//Abort if Status != 200
-	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-	if ($status != 200) {
-            die(&quot;Error: call to URL $url failed with status $status, response $jsonResponse, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($payload));
-	}
-	//IMPORTANT!!!
-	//Close connection!
-	curl_close($curl);
-	//Convert response into an Array
-	$response = json_decode($jsonResponse, true);
-	
-	return $response;
+//Set Options for CURL
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_HEADER, false);
+//Return Response to Application
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//Set Content-Headers to JSON
+curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+&quot;Content-type: application/json&quot;,
+&quot;Accept: application/json&quot;
+));
+//Execute call via http-POST
+curl_setopt($curl, CURLOPT_POST, true);
+//Set POST-Body
+//convert DATA-Array into a JSON-Object
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
+//WARNING!!!!!
+//This option should NOT be &quot;false&quot;
+//Otherwise the connection is not secured
+//You can turn it of if you're working on the test-system with no vital data
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+//HTTP-Basic Authentication for the Saferpay JSON-API
+curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
+//CURL-Execute &amp; catch response
+$jsonResponse = curl_exec($curl);
+//Get HTTP-Status
+//Abort if Status != 200
+$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+if ($status != 200) {
+die(&quot;Error: call to URL $url failed with status $status, response $jsonResponse, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($payload));
 }
-      </pre>
-    </div>
+//IMPORTANT!!!
+//Close connection!
+curl_close($curl);
+//Convert response into an Array
+$response = json_decode($jsonResponse, true);</p>
+<pre><code>return $response;
+</code></pre>
+<p>}
+</p></pre>
+</div><p></p>
   </div>
 </div></div></div><div class="row"><div class="col-md-6"><p>If you include the redirect pages into page using an iframe, you can react on size changes
 of the iframe content by listening to a message event containing the new sizing information.</p><p>Please note: Depending on the bank, issuer, or payment provider, the page can try to break
@@ -2235,7 +2277,7 @@ Numeric[8..8]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Information on the means of payment</div>
+	<div style="padding-bottom: 10px">Information on the means of payment. Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
 </td>
