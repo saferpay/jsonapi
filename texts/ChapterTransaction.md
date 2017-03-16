@@ -1918,7 +1918,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.5",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -2002,7 +2002,7 @@ POST /Payment/v1/Transaction/AssertCapture
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.5",
+    "SpecVersion": "1.6",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -2123,7 +2123,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.5",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -2456,7 +2456,7 @@ POST /Payment/v1/Transaction/AssertRefund
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.5",
+    "SpecVersion": "1.6",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -2577,7 +2577,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.5",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
