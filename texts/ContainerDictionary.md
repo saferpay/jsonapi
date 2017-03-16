@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5<br />
-					<span>Example: 1.5</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6<br />
+					<span>Example: 1.6</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5<br />
-					<span>Example: 1.5</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6<br />
+					<span>Example: 1.6</span>
 	</i>
 </td>
 							</tr>
@@ -609,6 +609,47 @@ Possible values: ONLINE.<br />
 	<i class="small text-muted">
 Numeric[8..8]<br />
 					<span>Example: 12341234</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasInsertCheckResult"</h2>
+				<table class="table" id="Payment_Models_Data_AliasInsertCheckResult">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Result</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The result of the online check.</div>
+	<i class="small text-muted">
+Possible values: NoOnlineCheck, OK, NOT_PERFORMED.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Message</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
+	<i class="small text-muted">
+					<span>Example: Online card check was successful.</span>
 	</i>
 </td>
 							</tr>

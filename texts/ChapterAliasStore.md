@@ -153,7 +153,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -264,7 +264,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -351,7 +351,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -427,6 +427,21 @@ Id[1..50]<br />
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -437,7 +452,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -544,6 +559,21 @@ POST /Payment/v1/Alias/InsertDirect
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Check</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -554,7 +584,7 @@ POST /Payment/v1/Alias/InsertDirect
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -641,6 +671,21 @@ POST /Payment/v1/Alias/InsertDirect
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -651,7 +696,7 @@ POST /Payment/v1/Alias/InsertDirect
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -751,7 +796,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -801,7 +846,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.3",
+    "SpecVersion": "1.6",
     "RequestId": "[your request id]"
   }
 }
