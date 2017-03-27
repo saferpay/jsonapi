@@ -1,7 +1,15 @@
 # Changelog
 ## Table of Contents
+- [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.6.0.20170404"></a> Version 1.6 (released 2017-04-04)
+- available on Sandbox: 2017-03-14
+- introduced version 1.6
+- added value `1.6` for _SpecVersion_
+- added container _Check_ for [Alias/InsertDirect](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_InsertDirect) request
+- added container _CheckResult_ for [Alias/AssertInsert](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_AssertInsert) and [Alias/InsertDirect](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_InsertDirect) responses
 
 ## <a name="v1.5.0.20170207"></a> Version 1.5 (released 2017-02-07)
 - introduced version 1.5
