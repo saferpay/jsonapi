@@ -631,7 +631,7 @@ Numeric[8..8]<br />
 	
 	<div style="padding-bottom: 10px">The result of the online check.</div>
 	<i class="small text-muted">
-Possible values: NoOnlineCheck, OK, NOT_PERFORMED.<br />
+Possible values: OK, NOT_PERFORMED.<br />
 			</i>
 </td>
 							</tr>
