@@ -461,8 +461,8 @@ Id[1..50]<br />
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -705,8 +705,8 @@ POST /Payment/v1/Alias/InsertDirect
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
