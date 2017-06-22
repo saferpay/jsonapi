@@ -628,13 +628,13 @@ Numeric[3..4]<br />
       "Value": "100",
       "CurrencyCode": "CHF"
     },
-    "AcquirerName": "AcquirerName",
+    "AcquirerName": "VISA Saferpay Test",
     "AcquirerReference": "Reference"
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "SaferpayTestCard"
+      "PaymentMethod": "VISA",
+      "Name": "VISA"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -868,8 +868,8 @@ Id[1..50]<br />
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "SaferpayTestCard"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -1333,8 +1333,8 @@ Numeric[8..8]<br />
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "SaferpayTestCard"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -1622,8 +1622,8 @@ Numeric[8..8]<br />
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "SaferpayTestCard"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -2366,8 +2366,8 @@ POST /Payment/v1/Transaction/Refund
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -2827,8 +2827,8 @@ Numeric[8..8]<br />
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -3520,8 +3520,8 @@ Id[1..50]<br />
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
