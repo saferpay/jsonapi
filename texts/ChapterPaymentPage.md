@@ -16,7 +16,7 @@ provided in the PaymentPage Initialize Response.
 3. **Capture or Cancelation** <br /> A successful transaction authorization, with the status “AUTHORIZED” needs to be  either:  
 **a.**  <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Captured</a> using the 		Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
 
-or
+**or**
 
 **b.** <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancelled</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
 
