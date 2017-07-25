@@ -23,6 +23,7 @@ provided in the PaymentPage Initialize Response.
 
 
 
+
 ## <a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize
 
 
