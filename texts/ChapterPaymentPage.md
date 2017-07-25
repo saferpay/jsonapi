@@ -2,7 +2,7 @@
 
 The Payment Page Interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.
 
-### Payment Process with the Payment Page
+### <a name="ChapterPaymentPageFlow"></a> Payment Flow with the Payment Page
 
 1. **Transaction Initialization** <br /> A Payment Page URL which can be integrated via redirect, iFrame or light box to perform the payment, is generated with the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a>
 
@@ -15,7 +15,7 @@ provided in the PaymentPage Initialize Response.
 
 3. **Capture or Cancelation** <br /> A successful transaction authorization, with the status “AUTHORIZED” needs to be  either:  
 
-**a.**  <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Captured</a> using the 		Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request.<br /> **or** <br /> **b.** <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancelled</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
+**a.** **Captured** with a <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Capture Request</a> with the Transaction ID provided  in the PaymentPage Assert Response or the unique OrderID defined in the PaymentPage Initialize Request.<br /> **or** Cancelled with a <br /> **b.** <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancel Request</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
 
 4. **Daily Close** <br /> Transactions with the Status **CAPTURED** are considered by the automatic Daily Close (daily at 10 PM CET) to initiate the actual money flow. The auto Daily Close can also be deactivated in the Saferpay Backoffice and instead manually triggered via the API with the function <a target="_self" href="http://saferpay.github.io/jsonapi/index.html#ChapterBatch ">Batch Close</a>
 
