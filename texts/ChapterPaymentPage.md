@@ -8,7 +8,7 @@ The Payment Page Interface provides a simple integration of Saferpay without the
 
 ><i class="glyphicon glyphicon-hand-right"></i> **Important** After the payment page processing is finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort)
 
-2. **Transaction Validation** <br /> To validate the status of the transaction you need to call the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a> by using the Token 
+2. **Transaction Status Validation** <br /> To validate the status of the transaction you need to call the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a> by using the Token 
 provided in the PaymentPage Initialize Response.
 
 ><i class="glyphicon glyphicon-hand-right"></i> **Important** To ensure that the return addresses have not been modified (e.g. swapping the FailUrl for the SuccessUrl), Assert Request should always be used after the payer is returned to the shop's success page. Depending on the provider, the transaction status returned is either AUTHORIZED (reservation), or CAPTURED (booked). Thus even if you do not perform a subsequent Capture Request, the payment might be booked (captured) automatically. Please view the  <a target="_blank" href="http://saferpay.github.io/jsonapi/index.html#ChapterBatch ">Payment Method Feature matrix</a>to check which paymentmethods are captured automatically.
