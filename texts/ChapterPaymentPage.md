@@ -2,7 +2,7 @@
 
 The Payment Page Interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.
 
-### <a name="ChapterPaymentPageFlow"></a> Payment Flow with the Payment Page
+## <a name="ChapterPaymentPageFlow"></a> Payment Flow with the Payment Page
 
 1. **Transaction Initialization** <br /> A Payment Page URL which can be integrated via redirect, iFrame or light box to perform the payment, is generated with the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a>
 
