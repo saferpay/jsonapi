@@ -1,14 +1,29 @@
 # <a name="ChapterPaymentPage"></a>Payment Page
 
+The Payment Page Interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.
 
+### The Payment Process with the Payment Page
+
+1. A Payment Page URL which can be integrated via redirect, iFrame or light box to perform the payment, is generated with the function <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a>
+
+Important: After the payment page processing is finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort). If the payer is returned to the success url provided in the Payment Page Initialize Request, an authorization or even a complete transaction might have been performed. So even if you don’t call PaymentPage Assert or Capture, the financial flow may have been triggered (depending on the payment provider – please consult the provider specific information).
+
+2. To validate the status of the transaction you need to call the function <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a> by using the Token 
+provided in the PaymentPage Initialize Response.
+
+Important: The payer might modify the return address (e.g. replace fail url with success url). If the payer returns to your success url. We therefore recommend to always validate the outcome of the transaction and transaction related information by calling PaymentPage Assert with corresponding token.
+
+3. A successful transaction authorization, with the status “AUTHORIZED” needs to be  either  
+a.  <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Captured</a> using the 		Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
+or
+b. <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancelled</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
+
+4. Transactions with the Status “CAPTURED” are considered by the automatic Daily Close (daily at 10 PM CET) to initiate the actual money flow. The auto Daily Close can also be deactivated in the Saferpay Backoffice and instead manually triggered via the API with the function <a target="_blank" href="http://saferpay.github.io/jsonapi/index.html#ChapterBatch ">Batch Close</a>
 
 ## <a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize
 
-This interface provides a simple integration of Saferpay without the need to implement a user interface for card data entry (the 'eCommerce' Saferpay license). You will get a redirect link to our payment page.
 
-After the payment page processing was finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort). If the payer is returned to the success url provided in the InitializeRequest, an authorization or even a completed transaction will have been done. So even if you don’t call Verify or Capture, the financial flow may have been triggered (depending on the payment provider – please consult the provider specific information).
-
-Important: the payer might modify the return address (e.g. replace failure address with success url). If the payer returns to your success url, be sure to retrieve the outcome of the transaction and more information on it by calling PaymentPage/Verify Assert for the given token.
+This method can be used to start a transaction with the Payment Page which may involve either DCC and / or 3d-secure
 
 --->>>
 
