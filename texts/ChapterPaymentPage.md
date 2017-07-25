@@ -13,7 +13,7 @@ provided in the PaymentPage Initialize Response.
 
 Important: The payer might modify the return address (e.g. replace fail url with success url). If the payer returns to your success url. We therefore recommend to always validate the outcome of the transaction and transaction related information by calling PaymentPage Assert with corresponding token.
 
-3. A successful transaction authorization, with the status “AUTHORIZED” needs to be  either  
+3. A successful transaction authorization, with the status “AUTHORIZED” needs to be  either:  
 a.  <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Captured</a> using the 		Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
 or
 b. <a target="_blank" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancelled</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
