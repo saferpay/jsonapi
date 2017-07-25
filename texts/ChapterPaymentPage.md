@@ -15,7 +15,7 @@ provided in the PaymentPage Initialize Response.
 
 3. **Capture or Cancelation** <br /> A successful transaction authorization, with the status “AUTHORIZED” needs to be  either:  
 
-**a.** **Captured** with a <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Capture Request</a> with the Transaction ID provided  in the PaymentPage Assert Response or the unique OrderID defined in the PaymentPage Initialize Request.<br /> **or** Cancelled with a <br /> **b.** <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancel Request</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
+**a.** **Captured** with a <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture">Capture Request</a> with the Transaction ID provided  in the PaymentPage Assert Response or the unique OrderID defined in the PaymentPage Initialize Request.<br /> **or** <br /> **b.** Cancelled with a <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel">Cancel Request</a> using the Transaction ID provided by the Assert response or the unique OrderID defined in the Transaction Initialize Request. 
 
 4. **Daily Close** <br /> Transactions with the Status **CAPTURED** are considered by the automatic Daily Close (daily at 10 PM CET) to initiate the actual money flow. The auto Daily Close can also be deactivated in the Saferpay Backoffice and instead manually triggered via the API with the function <a target="_self" href="http://saferpay.github.io/jsonapi/index.html#ChapterBatch ">Batch Close</a>
 
