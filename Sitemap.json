@@ -49,9 +49,9 @@
     "Subsites": [
      
         {
-        "Title": "PaymentPage Payment Flow",
+        "Title": "PaymentPage Payment Process",
         "Source": "texts/ChapterPaymentPage.md",
-        "Target": "index.html#ChapterPaymentPageFlow"
+        "Target": "index.html#ChapterPaymentPageProcess"
       },
       {
         "Title": "PaymentPage Initialize",
