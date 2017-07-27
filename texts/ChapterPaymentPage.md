@@ -5,6 +5,8 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 
 ## <a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page
 
+This chapter provides a quick description and overview of the Payment Process when using the Payment Page.  For a more detailed description and information on the Payment Page as well as on the use of the available parameters, please view the more descriptive Saferpay documentation. <br />
+
 1. **Transaction Initialization** <br /> A Payment Page URL which can be integrated via redirect, iFrame or light box to perform the payment, is generated with the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a>
 
 ><i class="glyphicon glyphicon-hand-right"></i> **Important** After the payment page processing is finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort).
