@@ -47,6 +47,12 @@
     "Source": "texts/ChapterPaymentPage.md",
     "Target": "index.html#ChapterPaymentPage",
     "Subsites": [
+     
+        {
+        "Title": "PaymentPage Payment Flow",
+        "Source": "texts/ChapterPaymentPage.md",
+        "Target": "index.html#ChapterPaymentPageFlow"
+      },
       {
         "Title": "PaymentPage Initialize",
         "Source": "texts/ChapterPaymentPage.md",
