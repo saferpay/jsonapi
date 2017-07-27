@@ -9,7 +9,7 @@ This chapter provides a quick description and overview of the Payment Process wh
 
 1. **Transaction Initialization** <br /> A Payment Page URL which can be integrated via redirect, iFrame or light box to perform the payment, is generated with the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a>
 
-><i class="glyphicon glyphicon-hand-right"></i> **Important** After the payment page processing is finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort).
+><i class="glyphicon glyphicon-hand-right"></i> **Note** After the payment page processing is finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort).
 
 2. **Transaction Status Validation** <br /> To validate the status of the transaction you need to call the function <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a> by using the Token 
 provided in the <a target="_self" href="http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize Response</a>.
