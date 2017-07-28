@@ -47,8 +47,7 @@
     "Source": "texts/ChapterPaymentPage.md",
     "Target": "index.html#ChapterPaymentPage",
     "Subsites": [
-     
-        {
+      {
         "Title": "PaymentPage Payment Process",
         "Source": "texts/ChapterPaymentPage.md",
         "Target": "index.html#ChapterPaymentPageProcess"
@@ -70,6 +69,11 @@
     "Source": "texts/ChapterTransaction.md",
     "Target": "index.html#ChapterTransaction",
     "Subsites": [
+      {
+        "Title": "Payment Process with the Transaction Interface",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#ChapterTransactionProcess"
+      },
       {
         "Title": "Transaction Initialize",
         "Source": "texts/ChapterTransaction.md",
