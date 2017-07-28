@@ -815,22 +815,23 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 		</td>
 	</tr>
 </tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"><p>The Payment Page Interface provides a simple and easy integration of Saferpay into your web shop, mobile app or other applications without the need to implement a user interface for card data entry. The Saferpay Payment Page can be used with a Saferpay eCommerce license as well as with a Saferpay Business license. It allows the processing of all <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#paymentmethods">payment methods</a> that are available with Saferpay. Once integrated, more payment methods can be activated at any time and without major adjustments.</p></div></div></section><section id="ChapterPaymentPageProcess"><h2><a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the transaction flow, when using the Payment Page</p><blockquote>
-<p><i class="glyphicon glyphicon-hand-right"></i> <strong>IMPORTANT NOTE</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to (<strong>read our Saferpay Integration guide</strong>)[https://saferpay.github.io/sndbx/Integration_PP.html], which offers an in debth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>IMPORTANT NOTE</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html"><strong>read our Saferpay Integration guide</strong></a>, which offers an in debth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </blockquote></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
-<li>(Payment Page Initialize)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize]</li>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize">Payment Page Initialize</a></li>
 </ol><ul>
 <li>Initializes the Payment and generates the RedirectUrl for the Payment Page.</li>
 </ul><ol start="2">
+<li>Redirect to the RedirectUrl</li>
 <li>Return to Return Url depending on the outcome of the transaction. The ReturnUrls are defined in step 1!</li>
-<li>(Payment Page Assert)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert]</li>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert">Payment Page Assert</a></li>
 </ol><ul>
-<li>Gathers all the information about the payment, like LiabilityShift through 3D Secure and more!</li>
-</ul><ol start="4">
-<li>Depending on the outcome of 3. you may</li>
-</ol><ul>
-<li>(Capture/Finalize the Transaction)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture]</li>
-<li>(Cancel/Abort the Transaction)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel]</li>
+<li>Gathers all the information about the payment, like LiabilityShift through 3D Secure and more, using the Token, gathered in step 1!</li>
 </ul><ol start="5">
+<li>Depending on the outcome of step 3 you may</li>
+</ol><ul>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture">Capture/Finalize the Transaction</a></li>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel">Cancel/Abort the Transaction</a></li>
+</ul><ol start="6">
 <li>Transaction is finished!</li>
 </ol></div></div></section><section id="Payment_v1_PaymentPage_Initialize"><h2><a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize</h2><div class="row"><div class="col-md-6"><p>This method can be used to start a transaction with the Payment Page which may involve either DCC and / or 3d-secure</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/PaymentPage/Initialize
 </code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
