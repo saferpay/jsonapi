@@ -5,24 +5,21 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 
 ## <a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page
 
-This chapter provides a quick description and overview of the Payment Process when using the Payment Page.  For a more detailed description and information on the Payment Page as well as on the use of the available parameters, please view the more descriptive <a target="_blank" href="https://saferpay.github.io/sndbx/Integration_PP.html">Saferpay documentation</a>.<br />
+This chapter will give you a simple overview about the transaction flow, when using the Payment Page
 
-1. **Transaction Initialization** <br /> A Payment Page URL which can be integrated via redirect, iFrame or light box to perform the payment, is generated with the function [PaymentPage Initialize](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize)
+><i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT NOTE** If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to (**read our Saferpay Integration guide**)[https://saferpay.github.io/sndbx/Integration_PP.html], which offers an in debth explanation on how to integrate the Payment Page, optional features, best practices and more.
 
-><i class="glyphicon glyphicon-hand-right"></i> **NOTE** After the payment page processing is finished, the payer is redirected back to the shop. The redirect address is chosen depending on the outcome of the request (success, failure, abort).
+### Transaction-flow
 
-2. **Transaction Status Validation** <br /> To validate the status of the transaction you need to call the function [PaymentPage Assert](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert) by using the Token 
-provided in the [PaymentPage Initialize Response](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize)
-
-<i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT** To ensure that the return addresses have not been modified (e.g. swapping the FailUrl for the SuccessUrl), the Assert Request should always be performed after the payer is redirected to the shop's success page. <br /> Depending on the provider, the transaction status returned is either AUTHORIZED (reservation), or CAPTURED (booked). Thus even if you do not perform a subsequent Capture Request, the payment might be booked (captured) automatically. Please view the  <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#pm-functions">Payment Method Feature matrix</a> to check which payment methods are captured automatically.
-
-3. **Capture or Cancelation** <br /> A successful transaction authorization, with the status ***AUTHORIZED*** needs to be  either: <br /> **a.** **Captured** with a [Capture Request](http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Capture) by using the Transaction ID provided  in the [PaymentPage Assert Response](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert) or the unique OrderID defined in the [PaymentPage Initialize Request ](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize).<br /> **or** <br /> **b.** **Cancelled** with a [Cancel Request](http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Cancel) by using the Transaction ID provided in the [PaymentPage Assert Response](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Assert) or the unique OrderID defined in the [PaymentPage Initialize ](http://saferpay.github.io/jsonapi/#Payment_v1_PaymentPage_Initialize).
-<br /> 
-4. **Daily Close** <br /> Transactions with the Status ***CAPTURED*** are considered by the automatic Daily Close (daily at 10 PM CET) to initiate the actual money flow. The auto Daily Close can also be deactivated in the Saferpay Backoffice and instead  triggered manually via the API with the function <a target="_self" href="http://saferpay.github.io/jsonapi/index.html#ChapterBatch ">Batch Close</a>
-
-
-
-
+1. (Payment Page Initialize)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize]
+  * Initializes the Payment and generates the RedirectUrl for the Payment Page.
+2. Return to Return Url depending on the outcome of the transaction. The ReturnUrls are defined in step 1!
+3. (Payment Page Assert)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert]
+  * Gathers all the information about the payment, like LiabilityShift through 3D Secure and more!
+4. Depending on the outcome of 3. you may
+  * (Capture/Finalize the Transaction)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture]
+  * (Cancel/Abort the Transaction)[https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel]
+5. Transaction is finished!
 
 
 
