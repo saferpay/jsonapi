@@ -1379,7 +1379,26 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Initialize
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransactionProcess"><h2><a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface</p><blockquote>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>IMPORTANT NOTE</strong> The Transaction Interface offers all sorts of options to do transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html"><strong>read our Saferpay Integration guide</strong></a>, which offers an in debth explanation on how to integrate the Transaction interface, optional features, best practices and more.</p>
+</blockquote></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+</ol><ul>
+<li>Initializes the Payment and generates the RedirectUrl for the <a href="https://saferpay.github.io/sndbx/CssiFrame.html">iFrame Integration</a>.</li>
+</ul><ol start="2">
+<li>Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!</li>
+<li>Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!</li>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+</ol><ul>
+<li>Authorizes the card, which has been gathered in step 2. Up until now, <em>no transaction has been made</em>!</li>
+</ul><ol start="5">
+<li>Depending on the outcome of step 4 you may</li>
+</ol><ul>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture">Capture/Finalize the Transaction</a></li>
+<li><a href="https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel">Cancel/Abort the Transaction</a></li>
+</ul><ol start="6">
+<li>Transaction is finished!</li>
+</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Initialize
 </code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
