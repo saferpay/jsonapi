@@ -1,5 +1,24 @@
 # <a name="ChapterTransaction"></a>Transaction
 
+## <a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface
+
+This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface
+
+><i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT NOTE** The Transaction Interface offers all sorts of options to do transactions. This flow only describes the general flow. Furthermore, you may want to [**read our Saferpay Integration guide**](https://saferpay.github.io/sndbx/Integration_trx.html), which offers an in debth explanation on how to integrate the Transaction interface, optional features, best practices and more.
+
+### Transaction-flow
+
+1. [Transaction Initialize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize)
+  * Initializes the Payment and generates the RedirectUrl for the [iFrame Integration](https://saferpay.github.io/sndbx/CssiFrame.html).
+2. Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!
+3. Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!
+4. [Transaction Authorize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Authorize)
+  * Authorizes the card, which has been gathered in step 2. Up until now, *no transaction has been made*!
+5. Depending on the outcome of step 4 you may
+  * [Capture/Finalize the Transaction](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture)
+  * [Cancel/Abort the Transaction](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel)
+6. Transaction is finished!
+
 
 
 ## <a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span> 
