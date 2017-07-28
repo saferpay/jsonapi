@@ -2,9 +2,9 @@
 
 ## <a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface
 
-This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface
+This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.
 
-><i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT NOTE** The Transaction Interface offers all sorts of options to do transactions. This flow only describes the general flow. Furthermore, you may want to [**read our Saferpay Integration guide**](https://saferpay.github.io/sndbx/Integration_trx.html), which offers an in debth explanation on how to integrate the Transaction interface, optional features, best practices and more.
+><i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT NOTE** The Transaction Interface offers all sorts of options to do transactions. This flow only describes the general flow. Furthermore, you may want to [**read our Saferpay Integration guide**](https://saferpay.github.io/sndbx/Integration_trx.html), which offers an in debth explanation on how to integrate the Transaction Interface, optional features, best practices and more.
 
 ### Transaction-flow
 
