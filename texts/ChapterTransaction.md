@@ -191,7 +191,23 @@ Numeric[8..8]<br />
 	<div style="padding-bottom: 10px">Wallet system to be used for the transaction (this cannot be combined with PaymentMeans above).</div>
 	<i class="small text-muted">
 			</i>
+</td>;
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br />
+	<span class="text-muted small">
+		string[]
+	</span>
 </td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
+	<i class="small text-muted">
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br />
+					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+	</i>
+</td>;
 				</tr>
 
 </table>
@@ -2408,7 +2424,7 @@ POST /Payment/v1/Transaction/Refund
 
 ## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span> 
 
-This method is only supported for pending refund transactions
+This method is only supported for pending refund transactions (only used for paydirekt at the moment)
 
 --->>>
 
@@ -2564,7 +2580,7 @@ Id[1..80]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the capture.</div>
+	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 			</i>

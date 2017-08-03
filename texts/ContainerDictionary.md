@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6<br />
-					<span>Example: 1.6</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7<br />
+					<span>Example: 1.7</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6<br />
-					<span>Example: 1.6</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7<br />
+					<span>Example: 1.7</span>
 	</i>
 </td>
 							</tr>
@@ -2118,7 +2118,22 @@ Id[1..80]<br />
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApprovalCode</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
 </td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">approval id of the acquirer(if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>;
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -2339,7 +2354,7 @@ Possible values: REFUND.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED'</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
 					<span>Example: AUTHORIZED</span>
@@ -2441,6 +2456,21 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApprovalCode</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">approval id of the acquirer(if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
@@ -2869,7 +2899,7 @@ Possible values: MASTERPASS.<br />
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>

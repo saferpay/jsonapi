@@ -141,7 +141,23 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.</div>
 	<i class="small text-muted">
 			</i>
+</td>;
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br />
+	<span class="text-muted small">
+		string[]
+	</span>
 </td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
+	<i class="small text-muted">
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br />
+					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+	</i>
+</td>;
 				</tr>
 
 </table>
