@@ -925,7 +925,7 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, VISA, VPAY.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, VISA, VPAY.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
@@ -1555,8 +1555,22 @@ Numeric[8..8]<br>
 	<div style="padding-bottom: 10px">Wallet system to be used for the transaction (this cannot be combined with PaymentMeans above).</div>
 	<i class="small text-muted">
 			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br>
+	<span class="text-muted small">
+		string[]
+	</span>
 </td>
-				</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
+	<i class="small text-muted">
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br>
+					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+	</i>
+</td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.6&quot;,
@@ -3345,7 +3359,7 @@ AlphaNumeric[11..11]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending refund transactions</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRefund
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending refund transactions (only used for paydirekt at the moment)</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRefund
 </code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -3470,7 +3484,7 @@ Id[1..80]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the capture.</div>
+	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 			</i>
@@ -4378,8 +4392,22 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.</div>
 	<i class="small text-muted">
 			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br>
+	<span class="text-muted small">
+		string[]
+	</span>
 </td>
-				</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
+	<i class="small text-muted">
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br>
+					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+	</i>
+</td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.6&quot;,
@@ -5017,8 +5045,8 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6<br>
-					<span>Example: 1.6</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7<br>
+					<span>Example: 1.7</span>
 	</i>
 </td>
 							</tr>
@@ -5132,8 +5160,8 @@ Id[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6<br>
-					<span>Example: 1.6</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7<br>
+					<span>Example: 1.7</span>
 	</i>
 </td>
 							</tr>
@@ -6980,7 +7008,9 @@ Id[1..35]<br>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_PaymentTransaction&quot;</h2>
-				<table class="table" id="Payment_Models_Data_PaymentTransaction">
+				;
+							;
+							<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -7118,8 +7148,21 @@ Id[1..80]<br>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApprovalCode</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
 </td>
-							</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">approval id of the acquirer(if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td></tr>
 							<tr>
 								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br>
@@ -7306,7 +7349,8 @@ Utf8[1..1000]<br>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_RefundTransaction&quot;</h2>
-				<table class="table" id="Payment_Models_Data_RefundTransaction">
+				;
+							<table class="table" id="Payment_Models_Data_RefundTransaction">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -7339,7 +7383,7 @@ Possible values: REFUND.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED'</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 					<span>Example: AUTHORIZED</span>
@@ -7441,6 +7485,20 @@ Id[1..80]<br>
 <td class="col-sm-8">
 	
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApprovalCode</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">approval id of the acquirer(if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
@@ -7869,7 +7927,7 @@ Possible values: MASTERPASS.<br>
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
