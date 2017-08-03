@@ -1,8 +1,19 @@
 # Changelog
 ## Table of Contents
+- [Version 1.7](#v1.7.0.20170822)
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.7.0.20170822"></a> Version 1.7 (released 2017-08-22)
+- available on Sandbox: 2017-08-03
+- introduced version 1.7
+- added value `1.7` for _SpecVersion_
+- added value `"TWINT"` for _Brand.PaymentMethod_
+- added `ApprovalCode` to _PaymentPage/Assert_, _Transaction/AuthorizeDirect_, _Transaction/AuthorizeReferenced_, _Transaction/RefundDirect_ and _Transaction/Refund_ responses
+- added `PaymentMethods` to _Transaction/Initialize_ and _Alias/Insert_ requests
+- number of concurrent Basic Authentication credentials increased to 10
+- improved description for pending statuses
 
 ## <a name="v1.6.0.20170404"></a> Version 1.6 (released 2017-04-04)
 - available on Sandbox: 2017-03-14
