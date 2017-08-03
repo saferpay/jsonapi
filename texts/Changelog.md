@@ -9,10 +9,10 @@
 - available on Sandbox: 2017-08-03
 - introduced version 1.7
 - added value `1.7` for _SpecVersion_
-- added value `"TWINT"` for _Brand.PaymentMethod_
-- added `ApprovalCode` to _PaymentPage/Assert_, _Transaction/AuthorizeDirect_, _Transaction/AuthorizeReferenced_, _Transaction/RefundDirect_ and _Transaction/Refund_ responses
-- added `PaymentMethods` to _Transaction/Initialize_ and _Alias/Insert_ requests
-- number of concurrent Basic Authentication credentials increased to 10
+- added value `TWINT` for _Brand.PaymentMethod_
+- added _ApprovalCode_ to [PaymentPage/Assert](http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert), [Transaction/AuthorizeDirect](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/RefundDirect](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_RefundDirect) and [Transaction/Refund](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Refund) responses
+- added _PaymentMethods_ to [Transaction/Initialize](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize) and [Alias/Insert](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_Insert) requests
+- increased number of concurrent Basic Authentication credentials to 10
 - improved description for pending statuses
 
 ## <a name="v1.6.0.20170404"></a> Version 1.6 (released 2017-04-04)
