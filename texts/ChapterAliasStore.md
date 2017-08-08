@@ -169,7 +169,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -280,7 +280,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -367,7 +367,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -468,7 +468,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -600,7 +600,7 @@ POST /Payment/v1/Alias/InsertDirect
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -712,7 +712,7 @@ POST /Payment/v1/Alias/InsertDirect
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -812,7 +812,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -862,7 +862,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.6",
+    "SpecVersion": "1.7",
     "RequestId": "[your request id]"
   }
 }
