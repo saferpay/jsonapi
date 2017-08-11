@@ -399,11 +399,9 @@ die(&quot;Error: call to URL $url failed with status $status, response $jsonResp
 //Close connection!
 curl_close($curl);
 //Convert response into a multidimensional Array (see above example!)
-$response = json_decode($jsonResponse, true);</p>
-<pre><code>return $response;
-</code></pre>
-<p>}
-</p></pre>
+$response = json_decode($jsonResponse, true);
+return $response;
+}</p></pre>
 </div><p></p>
   </div>
 </div></div></div><div class="row"><div class="col-md-6"><p>If you include the redirect pages into page using an iframe, you can react on size changes
