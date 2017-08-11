@@ -318,7 +318,7 @@ information about the outcome of e.g. 3D Secure.</p><blockquote>
 }</pre>
     </div>
     <div class="tab-pane" id="php">
-      <pre class="prettyprint">      
+      <pre class="prettyprint"> 
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
 	'RequestHeader' =&gt; array(
@@ -393,16 +393,15 @@ $jsonResponse = curl_exec($curl);
 //Abort if Status != 200
 $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if ($status != 200) {
-die(&quot;Error: call to URL $url failed with status $status, response $jsonResponse, curl_error &quot; . curl_error($curl) . &quot;, curl_errno &quot; . curl_errno($curl) . &quot;HTTP-Status: &quot; . $status . &quot;&lt;||||&gt; DUMP: URL: &quot;. $url . &quot; &lt;|||&gt; JSON: &quot; . var_dump($payload));
+die(&quot;Error: call to URL $url failed with status $status, response $jsonResponse, curl_error: &quot; . curl_error($curl) . &quot;, curl_errno &quot;.curl_errno($curl).&quot;HTTP-Status: &quot;.$status.&quot;&lt;||||&gt; DUMP: URL: &quot;.$url.&quot; &lt;|||&gt; JSON: &quot;.var_dump($payload));
 }
 //IMPORTANT!!!
 //Close connection!
 curl_close($curl);
-//Convert response into an Array
+//Convert response into a multidimensional Array (see above example!)
 $response = json_decode($jsonResponse, true);</p>
-<pre><code>return $response;
-</code></pre>
-<p>}
+<p>return $response;
+}
 </p></pre>
 </div><p></p>
   </div>
