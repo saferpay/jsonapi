@@ -327,10 +327,8 @@ function do_post($username, $password, $url, array $payload) {
     curl_close($curl);
     //Convert response into a multidimensional Array (see above example!)
     $response = json_decode($jsonResponse, true);
-
     return $response;
-}
-</pre>
+}</pre>
     </div>
   </div>
 </div>
