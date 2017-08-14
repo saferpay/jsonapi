@@ -61,6 +61,14 @@
         "Title": "PaymentPage Assert",
         "Source": "texts/ChapterPaymentPage.md",
         "Target": "index.html#Payment_v1_PaymentPage_Assert"
+      },
+      {
+        "Title": "Transaction Capture",
+        "Target": "index.html#Payment_v1_Transaction_Capture"
+      },
+      {
+        "Title": "Transaction Capture",
+        "Target": "index.html#Payment_v1_Transaction_Cancel"
       }
     ]
   },
