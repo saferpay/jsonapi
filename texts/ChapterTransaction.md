@@ -1238,7 +1238,7 @@ Numeric[8..8]<br />
       "ExpYear": 2015,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "VerifivationCode": "123"
+      "VerificationCode": "123"
     }
   }
 }
