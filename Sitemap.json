@@ -67,7 +67,7 @@
         "Target": "index.html#Payment_v1_Transaction_Capture"
       },
       {
-        "Title": "Transaction Capture",
+        "Title": "Transaction Cancel",
         "Target": "index.html#Payment_v1_Transaction_Cancel"
       }
     ]
