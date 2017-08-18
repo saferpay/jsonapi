@@ -172,7 +172,7 @@ AlphaNumeric[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Name of the account holder</div>
 	<i class="small text-muted">
-Iso885915[1..50]<br />
+[1..50] <b>NOTE:</b> Only UTF8 coded characters following Iso885915 are allowed!<br />
 					<span>Example: John Doe</span>
 	</i>
 </td>
@@ -729,7 +729,7 @@ AlphaNumeric[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Name of the account holder</div>
 	<i class="small text-muted">
-Iso885915[1..50]<br />
+[1..50] <b>NOTE:</b> Only UTF8 coded characters following Iso885915 are allowed!<br />
 					<span>Example: John Doe</span>
 	</i>
 </td>
