@@ -1180,7 +1180,7 @@ Possible values: NONE, MANDATORY.<br />
 	
 	<div style="padding-bottom: 10px">Name and version of the shop software</div>
 	<i class="small text-muted">
-Iso885915[1..100]<br />
+[1..100] <b>NOTE:</b> Only UTF8 encoded characters following Iso885915 are allowed!<br />
 					<span>Example: My Shop</span>
 	</i>
 </td>
@@ -1196,7 +1196,7 @@ Iso885915[1..100]<br />
 	
 	<div style="padding-bottom: 10px">Information on the operating system</div>
 	<i class="small text-muted">
-Iso885915[1..100]<br />
+[1..100] <b>NOTE:</b> Only UTF8 encoded characters following Iso885915 are allowed!<br /><br />
 					<span>Example: Windows Server 2013</span>
 	</i>
 </td>
