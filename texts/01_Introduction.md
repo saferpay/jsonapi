@@ -95,7 +95,7 @@ server (host) system.
 -------------------------
 
 This is the default authentication method. Technical users for the JSON API can be
-created by the merchant in the Saferpay Backoffice under [**Administration > JSON API**](https://test.saferpay.com/BO/Administration/JsonApiLogin). The password will not be stored
+created by the merchant in the Saferpay Backoffice under [**Settings > JSON API**](https://test.saferpay.com/BO/Settings/JsonApiLogin). The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
 besides creating a new user / password pair from your Backoffice account.
 
@@ -124,7 +124,7 @@ Alternatively, Saferpay also supports authentication via a client certificate.
 A client certificate for the JSON-API can be ordered in the Saferpay Backoffice. In order to get to the “JSON API Client Certificate Authentication” heading in the back office click on:
 
 >
-> **My Saferpay => Administration => JSON API**
+> **My Saferpay => Settings => JSON API**
 >
 
 If you have a Saferpay Business licence, you will find the HTTPS Client Certificate Authentication section under the form for HTTPS Basic Authentication.
