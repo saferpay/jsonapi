@@ -3072,6 +3072,10 @@ POST /Payment/v1/Transaction/Cancel
 
 ## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span> 
 
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **WARNING**: This feature is deprecated and replaced by the [**Payment Page**](https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage). Please use the parameter "PaymentMethods" to directly select the desired 3rd party provider!
+>
+
 
 
 --->>>
@@ -3369,7 +3373,9 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 
 ## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span> 
 
-
+>
+>    <i class="glyphicon glyphicon-hand-right"></i> **WARNING**: This feature is deprecated and replaced by the [**Payment Page**](https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage). Please use the parameter "PaymentMethods" to directly select the desired 3rd party provider!
+>
 
 --->>>
 
