@@ -324,7 +324,7 @@ information about the outcome of e.g. 3D Secure.</p><blockquote>
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
 	'RequestHeader' =&gt; array(
-		'SpecVersion' =&gt; &quot;1.5&quot;,
+		'SpecVersion' =&gt; &quot;1.7&quot;,
 		'CustomerId' =&gt; &quot;123456&quot;,
 		'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
 		'RetryIndicator' =&gt; 0,
@@ -363,7 +363,7 @@ $payload = array(
     )
 );
 <p>//$username and $password for the http-Basic Authentication
-//$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
+//$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
 //$payload is a multidimensional array, that assembles the JSON structure. Example see above
 function do_post($username, $password, $url, array $payload) {
 //Set Options for CURL
@@ -3860,7 +3860,9 @@ Numeric[8..8]<br>
   &quot;OrderId&quot;: &quot;c52ad18472354511ab2c33b59e796901&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/RedirectPayment
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><blockquote>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>WARNING</strong>: This feature is deprecated and replaced by the <a href="https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter &quot;PaymentMethods&quot; to directly select the desired 3rd party provider!</p>
+</blockquote></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/RedirectPayment
 </code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -4108,7 +4110,9 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><blockquote>
+<p><i class="glyphicon glyphicon-hand-right"></i> <strong>WARNING</strong>: This feature is deprecated and replaced by the <a href="https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter &quot;PaymentMethods&quot; to directly select the desired 3rd party provider!</p>
+</blockquote></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRedirectPayment
 </code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
