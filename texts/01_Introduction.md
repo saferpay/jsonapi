@@ -244,7 +244,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
 	'RequestHeader' => array(
-		'SpecVersion' => "1.5",
+		'SpecVersion' => "1.7",
 		'CustomerId' => "123456",
 		'RequestId' => "aScdFewDSRFrfas2wsad3",
 		'RetryIndicator' => 0,
@@ -284,7 +284,7 @@ $payload = array(
 );
 
 //$username and $password for the http-Basic Authentication
-//$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/Transaction/Initialize
+//$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
 //$payload is a multidimensional array, that assembles the JSON structure. Example see above
 function do_post($username, $password, $url, array $payload) {
     //Set Options for CURL
