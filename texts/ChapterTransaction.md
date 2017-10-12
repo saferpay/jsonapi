@@ -1970,7 +1970,6 @@ AlphaNumeric[11..11]<br />
 
 ## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture
 
-This method is only supported for pending capture transactions
 
 <div class="warning">
   <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
