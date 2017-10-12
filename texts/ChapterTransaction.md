@@ -1972,6 +1972,10 @@ AlphaNumeric[11..11]<br />
 
 This method is only supported for pending capture transactions
 
+<div class="warning">
+  <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
+</div>
+
 --->>>
 
 ```
@@ -2424,7 +2428,9 @@ POST /Payment/v1/Transaction/Refund
 
 ## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span> 
 
-This method is only supported for pending refund transactions (only used for paydirekt at the moment)
+<div class="warning">
+  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
+</div>
 
 --->>>
 
