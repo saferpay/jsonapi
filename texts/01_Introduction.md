@@ -117,9 +117,9 @@ HTTP Header:
 
 Alternatively, Saferpay also supports authentication via a client certificate.
 
->
->    <i class="glyphicon glyphicon-hand-right"></i> **Important**: This feature is only available for Saferpay Business merchants!
->
+<div class="info">
+	<p><strong>Important:</strong> This feature is only available for Saferpay Business merchants!</p>
+</div>
 
 A client certificate for the JSON-API can be ordered in the Saferpay Backoffice under [**Settings > JSON API client certificate**](https://test.saferpay.com/BO/Settings/JsonApiClientCertificate). In order to get to the “JSON API Client Certificate 
 
@@ -158,9 +158,9 @@ Server-to-server calls are a secure way to submit and gather data. Hence, a serv
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.
 
->
->    <i class="glyphicon glyphicon-hand-right"></i> **Caution**: Please DO NOT use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!
->
+<div class="danger">
+	<p><strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!</p>
+</div>
 
 --->>>
 
@@ -352,3 +352,11 @@ $(window).bind('message', function (e) {
 ````
 
 <<<---
+
+### Granting IP-permission
+
+As an additional security feature, you can also grant permissions to specific IPs. This way you can control the API access even further in connection with the authentication credentials.
+To do so, you need to log into the Saferpay Backoffice, for either [production](https://www.saferpay.com/BO/Login/) or [test](https://test.saferpay.com/BO/Login/), then go under <strong>Settings > IP permissions</strong> and enter the IP, or IP range of your network/server!
+<div class="info">
+  <p><strong>Note:</strong> This feature is entirely optional and only supports IPv4 addresses only!</p>
+</div>
