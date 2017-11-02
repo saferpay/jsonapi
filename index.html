@@ -88,6 +88,13 @@
 											</ul>
 								</li>
 								<li>
+										<a href="index.html#ChapterOmniChannel">OmniChannel</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
+													<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
+											</ul>
+								</li>
+								<li>
 										<a href="Changelog.html">Changelog</a>
 								</li>
 
@@ -176,6 +183,13 @@
 										<a href="#ChapterBatch">Batch</a>
 											<ul class="nav">
 													<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+											</ul>
+								</li>
+								<li>
+										<a href="#ChapterOmniChannel">OmniChannel</a>
+											<ul class="nav">
+													<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
+													<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
 											</ul>
 								</li>
 								<li>
@@ -5075,6 +5089,348 @@ Numeric[8..8]<br>
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterOmniChannel"><h1><a name="ChapterOmniChannel"></a>OmniChannel</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_OmniChannel_InsertAlias"><h2><a name="Payment_v1_OmniChannel_InsertAlias"></a>OmniChannel InsertAlias</h2><div class="row"><div class="col-md-6"><p>This function may be used to create an alias by providing a SixTransactionReference.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/OmniChannel/InsertAlias
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>RegisterAlias</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Registration parameters</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>SixTransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">SIX Tranasaction Reference</div>
+	<i class="small text-muted">
+					<span>Example: 1:100002:199970683910</span>
+	</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;SixTransactionReference&quot;: &quot;1:100002:1:87768996410&quot;,
+  &quot;RegisterAlias&quot;: {
+    &quot;IdGenerator&quot;: &quot;RANDOM&quot;
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the registered alias.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Alias&quot;: {
+    &quot;Id&quot;: &quot;alias35nfd9mkzfw0x57iwx&quot;,
+    &quot;Lifetime&quot;: 1000
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;SAFERPAYTEST&quot;,
+      &quot;Name&quot;: &quot;Saferpay Test Card&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_OmniChannel_AcquireTransaction"><h2><a name="Payment_v1_OmniChannel_AcquireTransaction"></a>OmniChannel AcquireTransaction</h2><div class="row"><div class="col-md-6"><p>This function may be used to acquire an authorized transaction by providing a SixTransactionReference. This transaction can then be captured or canceled.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/OmniChannel/AcquireTransaction
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This request allows to acquire an OmniChannel transaction.</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Saferpay terminal id</div>
+	<i class="small text-muted">
+Numeric[8..8]<br>
+					<span>Example: 12345678</span>
+	</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>SixTransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">SIX Tranasaction Reference</div>
+	<i class="small text-muted">
+					<span>Example: 1:100002:199970683910</span>
+	</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;TerminalId&quot;: &quot;17791723&quot;,
+  &quot;SixTransactionReference&quot;: &quot;1:100002:1:87768996410&quot;,
+  &quot;OrderId&quot;: &quot;Id of the order&quot;
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><p>This response returns an acquired OmniChannel transaction.</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Transaction</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Transaction&quot;: {
+    &quot;Type&quot;: &quot;PAYMENT&quot;,
+    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    },
+    &quot;AcquirerName&quot;: &quot;Saferpay Test&quot;,
+    &quot;AcquirerReference&quot;: &quot;8EZRQVT0ODW4ME525&quot;,
+    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;SAFERPAYTEST&quot;,
+      &quot;Name&quot;: &quot;Saferpay Test Card&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;Number&quot;: &quot;912345678901234&quot;,
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><div class="visible-print-block" id="type-dict">
