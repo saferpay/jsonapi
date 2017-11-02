@@ -7,7 +7,7 @@ script: |
     #
     git clone -b gh-pages "https://github.com/saferpay/jsonapi.git" _gh_pages
     cp -r assets/* _gh_pages/assets
-    mono libs/GitHubPagesGenerator.exe -t "json api v1.7"
+    mono libs/GitHubPagesGenerator.exe -t "json api v1.8"
     cd _gh_pages
     #
     # show result
