@@ -194,6 +194,23 @@
     ]
   },
   {
+    "Title": "OmniChannel",
+    "Source": "texts/ChapterOmniChannel.md",
+    "Target": "index.html#ChapterOmniChannel",
+    "Subsites": [
+      {
+        "Title": "OmniChannel InsertAlias",
+        "Source": "texts/ChapterOmniChannel.md",
+        "Target": "index.html#Payment_v1_OmniChannel_InsertAlias"
+      },
+      {
+        "Title": "OmniChannel AcquireTransaction",
+        "Source": "texts/ChapterOmniChannel.md",
+        "Target": "index.html#Payment_v1_OmniChannel_AcquireTransaction"
+      }
+    ]
+  },
+  {
     "Source": "texts/ContainerDictionary.md",
     "target": "index.html"
   },
