@@ -680,7 +680,7 @@ Numeric[3..4]<br />
     },
     "AcquirerName": "VISA Saferpay Test",
     "AcquirerReference": "Reference",
-	"SixTransactionReference": "0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
+    "SixTransactionReference": "0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
     "ApprovalCode": "012345"
   },
   "PaymentMeans": {
@@ -1382,7 +1382,7 @@ Numeric[8..8]<br />
     },
     "AcquirerName": "AcquirerName",
     "AcquirerReference": "Reference",
-	"SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
     "ApprovalCode": "012345"
   },
   "PaymentMeans": {
@@ -1673,7 +1673,7 @@ Numeric[8..8]<br />
     },
     "AcquirerName": "AcquirerName",
     "AcquirerReference": "Reference",
-	"SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
     "ApprovalCode": "012345"
   },
   "PaymentMeans": {
@@ -2422,7 +2422,7 @@ POST /Payment/v1/Transaction/Refund
     },
     "AcquirerName": "Saferpay Test",
     "AcquirerReference": "000000",
-	"SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
     "ApprovalCode": "012345"
   },
   "PaymentMeans": {
@@ -2887,7 +2887,7 @@ Numeric[8..8]<br />
     },
     "AcquirerName": "Saferpay Test",
     "AcquirerReference": "000000",
-	"SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
     "ApprovalCode": "012345"
   },
   "PaymentMeans": {
@@ -3588,7 +3588,7 @@ Id[1..50]<br />
     },
     "AcquirerName": "Saferpay Test",
     "AcquirerReference": "8EZRQVT0ODW4ME525",
-	"SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
     "ApprovalCode": "012345"
   },
   "PaymentMeans": {
