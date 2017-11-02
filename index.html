@@ -1074,7 +1074,7 @@ Possible values: MASTERPASS.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1173,7 +1173,7 @@ Possible values: MASTERPASS.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;Id of the request&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e1234&quot;,
@@ -1226,7 +1226,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1355,7 +1355,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -1574,9 +1574,23 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CardForm</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1707,7 +1721,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -1812,7 +1826,7 @@ Numeric[3..4]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1942,7 +1956,7 @@ Numeric[3..4]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -1955,7 +1969,9 @@ Numeric[3..4]<br>
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
     &quot;AcquirerName&quot;: &quot;VISA Saferpay Test&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;
+    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+	&quot;SixTransactionReference&quot;: &quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
@@ -2043,7 +2059,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2140,7 +2156,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;PaymentMeans&quot;: {
@@ -2226,7 +2242,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2263,7 +2279,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -2379,7 +2395,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2495,7 +2511,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2508,7 +2524,9 @@ Numeric[8..8]<br>
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
     &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;
+    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+	&quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
@@ -2625,7 +2643,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2735,7 +2753,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2748,7 +2766,9 @@ Numeric[8..8]<br>
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
     &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;
+    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+	&quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
@@ -2880,7 +2900,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2960,7 +2980,7 @@ Id[1..80]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the capture.</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 			</i>
@@ -2999,7 +3019,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -3053,365 +3073,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
-    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
-    &quot;RequestId&quot;: &quot;[unique request id]&quot;,
-    &quot;RetryIndicator&quot;: 0
-  },
-  &quot;TransactionReference&quot;: {
-    &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
-  }
-}
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
-				<tbody><tr>
-					<td class="col-sm-4 text-right">
-	<strong>ResponseHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>TransactionId</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
-	<i class="small text-muted">
-AlphaNumeric[1..64]<br>
-					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
-	</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>OrderId</strong><br>
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
-	<i class="small text-muted">
-Id[1..80]<br>
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
-	</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>Status</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Current status of the capture.</div>
-	<i class="small text-muted">
-Possible values: PENDING, CAPTURED.<br>
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>Date</strong><br>
-	<span class="text-muted small">
-		date
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
-	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
-	</i>
-</td>
-				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-  &quot;Status&quot;: &quot;CAPTURED&quot;,
-  &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
-}
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Refund
-</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
-				<tbody><tr>
-					<td class="col-sm-4 text-right">
-	<strong>RequestHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">General information about the request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>Refund</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Payment_Models_Data_Refund">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Information about the refund (amount, currency, ...)</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>TransactionReference</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Payment_Models_Data_CaptureTransactionReference">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Reference to the transaction you want to refund. Note, that not all processors support refunds.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>PendingNotification</strong><br>
-	<span class="text-muted small">
-		
-			<a class="type-details in" href="#Payment_Models_Data_PendingNotification">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
-    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;,
-    &quot;RetryIndicator&quot;: 0
-  },
-  &quot;Refund&quot;: {
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    }
-  },
-  &quot;TransactionReference&quot;: {
-    &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
-  }
-}
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
-				<tbody><tr>
-					<td class="col-sm-4 text-right">
-	<strong>ResponseHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>Transaction</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Information about the transaction</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>PaymentMeans</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Information about the means of payment</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>Dcc</strong><br>
-	<span class="text-muted small">
-		
-			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;REFUND&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;Saferpay Test&quot;,
-    &quot;AcquirerReference&quot;: &quot;000000&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 9,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  }
-}
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="warning">
-  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
-</div></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRefund
-</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
-				<tbody><tr>
-					<td class="col-sm-4 text-right">
-	<strong>RequestHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">General information about the request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>TransactionReference</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		
-			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3515,7 +3177,367 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+  &quot;Status&quot;: &quot;CAPTURED&quot;,
+  &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/Refund
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Refund</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_Refund">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the refund (amount, currency, ...)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_CaptureTransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference to the transaction you want to refund. Note, that not all processors support refunds.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PendingNotification</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_PendingNotification">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;Refund&quot;: {
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    }
+  },
+  &quot;TransactionReference&quot;: {
+    &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Transaction</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Transaction&quot;: {
+    &quot;Type&quot;: &quot;REFUND&quot;,
+    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    },
+    &quot;AcquirerName&quot;: &quot;Saferpay Test&quot;,
+    &quot;AcquirerReference&quot;: &quot;000000&quot;,
+	&quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="warning">
+  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
+</div></div><div class="col-md-6"><pre><code>POST /Payment/v1/Transaction/AssertRefund
+</code></pre></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[unique request id]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;TransactionReference&quot;: {
+    &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..64]<br>
+					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Status</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
+	<i class="small text-muted">
+Possible values: PENDING, CAPTURED.<br>
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Date</strong><br>
+	<span class="text-muted small">
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
+	<i class="small text-muted">
+AlphaNumeric[11..11]<br>
+					<span>Example: 2014-04-25T08:33:44.159Z</span>
+	</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -3604,7 +3626,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3699,7 +3721,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -3712,7 +3734,9 @@ Numeric[8..8]<br>
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
     &quot;AcquirerName&quot;: &quot;Saferpay Test&quot;,
-    &quot;AcquirerReference&quot;: &quot;000000&quot;
+    &quot;AcquirerReference&quot;: &quot;000000&quot;,
+	&quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
@@ -3774,7 +3798,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3860,7 +3884,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -4015,7 +4039,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4110,7 +4134,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -4165,7 +4189,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4249,7 +4273,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -4262,7 +4286,9 @@ Id[1..50]<br>
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
     &quot;AcquirerName&quot;: &quot;Saferpay Test&quot;,
-    &quot;AcquirerReference&quot;: &quot;8EZRQVT0ODW4ME525&quot;
+    &quot;AcquirerReference&quot;: &quot;8EZRQVT0ODW4ME525&quot;,
+	&quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
@@ -4419,9 +4445,23 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CardForm</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>			
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4515,7 +4555,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -4570,7 +4610,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4654,7 +4694,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -4754,7 +4794,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4849,7 +4889,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -4917,7 +4957,7 @@ Id[1..40]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4950,7 +4990,7 @@ Id[1..40]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -5000,7 +5040,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5033,7 +5073,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.7&quot;,
+    &quot;SpecVersion&quot;: &quot;1.8&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -5056,7 +5096,7 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7<br>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7,1.8,1.8<br>
 					<span>Example: 1.7</span>
 	</i>
 </td>
@@ -5171,7 +5211,7 @@ Id[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7<br>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7,1.8<br>
 					<span>Example: 1.7</span>
 	</i>
 </td>
@@ -5910,7 +5950,7 @@ Utf8[1..50]<br>
 	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, VISA, VPAY.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br>
 			</i>
 </td>
 							</tr>
@@ -7021,6 +7061,7 @@ Id[1..35]<br>
 			<h2>Container &quot;Payment_Models_Data_PaymentTransaction&quot;</h2>
 				;
 							;
+							;
 							<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
 							<tr>
@@ -7054,7 +7095,7 @@ Possible values: PAYMENT.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED'</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 					<span>Example: AUTHORIZED</span>
@@ -7162,6 +7203,23 @@ Id[1..80]<br>
 </td></tr>
 							<tr>
 								<td class="col-sm-4 text-right">
+	<strong>SixTransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
+	<i class="small text-muted">
+					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br>
 	<span class="text-muted small">
 		string
@@ -7169,7 +7227,7 @@ Id[1..80]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">approval id of the acquirer(if available)</div>
+	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
@@ -7361,6 +7419,7 @@ Utf8[1..1000]<br>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_RefundTransaction&quot;</h2>
 				;
+							;
 							<table class="table" id="Payment_Models_Data_RefundTransaction">
 					<tbody>
 							<tr>
@@ -7498,6 +7557,23 @@ Id[1..80]<br>
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
+	</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SixTransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
+	<i class="small text-muted">
+					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
 	</i>
 </td></tr>
 							<tr>
