@@ -7,15 +7,8 @@ Our API is designed to have predictable, resource-oriented URLs and to use HTTP 
 
 --->>>
 
-Base URL production system:
 
-`https://www.saferpay.com/api`
-
-Base URL test system:
-
-`https://test.saferpay.com/api`
-
-Test accounts:
+<strong>Test accounts:</strong>
 
 <a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br />
 <a target="_blank" href="https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html">View shared test account data</a>
@@ -360,3 +353,33 @@ To do so, you need to log into the Saferpay Backoffice, for either [production](
 <div class="info">
   <p><strong>Note:</strong> This feature is entirely optional and only supports IPv4 addresses only!</p>
 </div>
+
+### Building the correct API URL
+
+Every request is differentiated by its own unique request URL.
+In order to call the correct -complete- API URL, you must first build it out of the base URL for either the test-, or production-environment and then add the respective request URL.
+
+Base URL production system:
+
+`https://www.saferpay.com/api`
+
+Base URL test system:
+
+`https://test.saferpay.com/api`
+
+Now you need to take the correct request URL and add it to the base URL.
+You can find it on the right side of the request-specification.
+
+For instance, if you want to call [PaymentPage Initialize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize), the request URL is:
+
+`/Payment/v1/PaymentPage/Initialize`
+
+Add this to the base URL, you get the full API URL:
+
+Full API URL production system:
+
+`https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize`
+
+Full API URL test system:
+
+`https://test.saferpay.com/api/Payment/v1/PaymentPage/Initialize`
