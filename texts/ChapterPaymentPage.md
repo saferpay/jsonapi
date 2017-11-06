@@ -7,7 +7,9 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 
 This chapter will give you a simple overview about the transaction flow, when using the Payment Page
 
-><i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT NOTE** If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to [**read our Saferpay Integration guide**](https://saferpay.github.io/sndbx/Integration_PP.html), which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.
+<div class="info">
+	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
+</div>
 
 ### Transaction-flow
 
@@ -32,9 +34,10 @@ This method can be used to start a transaction with the Payment Page which may i
 
 --->>>
 
-```
-POST /Payment/v1/PaymentPage/Initialize
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/PaymentPage/Initialize</p>
+</div>
 
 <<<---
 
@@ -424,9 +427,10 @@ If the transaction failed (the payer was redirected to the Fail url or he manipu
 
 --->>>
 
-```
-POST /Payment/v1/PaymentPage/Assert
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p>
+</div>
 
 <<<---
 
