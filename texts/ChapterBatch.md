@@ -8,9 +8,10 @@ No documentation available
 
 --->>>
 
-```
-POST /Payment/v1/Batch/Close
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Batch/Close</p>
+</div>
 
 <<<---
 
