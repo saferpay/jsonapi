@@ -8,9 +8,10 @@ This function may be used to insert an alias without knowledge about the card de
 
 --->>>
 
-```
-POST /Payment/v1/Alias/Insert
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Alias/Insert</p>
+</div>
 
 <<<---
 
@@ -318,9 +319,10 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 
 --->>>
 
-```
-POST /Payment/v1/Alias/AssertInsert
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p>
+</div>
 
 <<<---
 
@@ -519,9 +521,10 @@ Id[1..50]<br />
 
 --->>>
 
-```
-POST /Payment/v1/Alias/InsertDirect
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p>
+</div>
 
 <<<---
 
@@ -763,9 +766,10 @@ POST /Payment/v1/Alias/InsertDirect
 
 --->>>
 
-```
-POST /Payment/v1/Alias/Delete
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Alias/Delete</p>
+</div>
 
 <<<---
 
