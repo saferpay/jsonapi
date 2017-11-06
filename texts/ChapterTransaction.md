@@ -4,7 +4,9 @@
 
 This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.
 
-><i class="glyphicon glyphicon-hand-right"></i> **IMPORTANT NOTE** The Transaction Interface offers all sorts of options to do transactions. This flow only describes the general flow. Furthermore, you may want to [**read our Saferpay Integration guide**](https://saferpay.github.io/sndbx/Integration_trx.html), which offers an in debth explanation on how to integrate the Transaction Interface, optional features, best practices and more.
+<div class="warning">
+	<p><strong>Important Note:</strong> The Transaction Interface offers all sorts of options to do transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html">read our Saferpay Integration guide</a>, which offers an in debth explanation on how to integrate the Transaction Interface, optional features, best practices and more.</p>
+</div>
 
 ### Transaction-flow
 
@@ -27,9 +29,10 @@ This method may be used to start a transaction which may involve either DCC and 
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/Initialize
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p>
+</div>
 
 <<<---
 
@@ -408,9 +411,10 @@ This function may be called to complete an authorization which was started by a 
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/Authorize
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p>
+</div>
 
 <<<---
 
@@ -722,9 +726,10 @@ This method may be used to query the payment means and payer data (address) afte
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/QueryPaymentMeans
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p>
+</div>
 
 <<<---
 
@@ -951,9 +956,10 @@ This method may be used to adjust the amount after query payment means.
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/AdjustAmount
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p>
+</div>
 
 <<<---
 
@@ -1105,9 +1111,10 @@ This function may be used to directly authorize transactions which do not requir
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/AuthorizeDirect
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p>
+</div>
 
 <<<---
 
@@ -1418,9 +1425,10 @@ This method may be used to perform follow-up authorizations to an earlier transa
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/AuthorizeReferenced
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p>
+</div>
 
 <<<---
 
@@ -1715,9 +1723,10 @@ Numeric[8..8]<br />
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/Capture
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p>
+</div>
 
 <<<---
 
@@ -1998,9 +2007,10 @@ AlphaNumeric[11..11]<br />
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/AssertCapture
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p>
+</div>
 
 <<<---
 
@@ -2203,9 +2213,10 @@ This method may be called to refund a previous transaction.
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/Refund
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p>
+</div>
 
 <<<---
 
@@ -2456,9 +2467,10 @@ POST /Payment/v1/Transaction/Refund
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/AssertRefund
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p>
+</div>
 
 <<<---
 
@@ -2661,9 +2673,10 @@ This method may be called to refund an amount to the given means of payment (not
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/RefundDirect
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p>
+</div>
 
 <<<---
 
@@ -2919,9 +2932,10 @@ Numeric[8..8]<br />
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/Cancel
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p>
+</div>
 
 <<<---
 
@@ -3110,9 +3124,10 @@ POST /Payment/v1/Transaction/Cancel
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/RedirectPayment
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p>
+</div>
 
 <<<---
 
@@ -3409,9 +3424,10 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 
 --->>>
 
-```
-POST /Payment/v1/Transaction/AssertRedirectPayment
-```
+<div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p>
+</div>
 
 <<<---
 
