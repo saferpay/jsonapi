@@ -356,8 +356,9 @@ To do so, you need to log into the Saferpay Backoffice, for either [production](
 
 ### Building the correct API URL
 
-Every request is differentiated by its own unique request URL.
-In order to call the correct -complete- API URL, you must first build it out of the base URL for either the test-, or production-environment and then add the respective request URL.
+Every request is differentiated by its own unique request URL. This way Saferpay knows which API-function you want to access.
+Combined with the base URL for either the production- or test-environment, you will get the complete API-URL.
+Here is an example of how to build this URL correctly:
 
 Base URL production system:
 
@@ -367,14 +368,14 @@ Base URL test system:
 
 `https://test.saferpay.com/api`
 
-Now you need to take the correct request URL and add it to the base URL.
+Take the correct request URL and add it to the base URL.
 You can find it on the right side of the request-specification.
 
 For instance, if you want to call [PaymentPage Initialize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize), the request URL is:
 
 `/Payment/v1/PaymentPage/Initialize`
 
-Add this to the base URL, you get the full API URL:
+Add this to the base URL and you will get the full API URL:
 
 Full API URL production system:
 
