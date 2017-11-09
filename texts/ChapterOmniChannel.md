@@ -74,7 +74,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">SIX Tranasaction Reference</div>
+	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
 	<i class="small text-muted">
 					<span>Example: 1:100002:199970683910</span>
 	</i>
