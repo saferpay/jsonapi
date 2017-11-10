@@ -201,10 +201,19 @@
 
 				
 <section><h1>Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.8.0.20171114">Version 1.8</a></li>
 <li><a href="#v1.7.0.20170822">Version 1.7</a></li>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.8.0.20171114"><h2><a name="v1.8.0.20171114"></a> Version 1.8 (released 2017-11-14)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2017-11-02</li>
+<li>introduced version 1.8</li>
+<li>added value <code>1.8</code> for <em>SpecVersion</em></li>
+<li>added <em>SixTransactionReference</em> to <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> responses for Omni Channel use cases</li>
+<li>added method <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a> for retrieving a previously authorized transaction from another channel</li>
+<li>added method <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> for retrieving an alias for a card used in a previously authorized transaction from another channel</li>
+<li>added container <em>CardForm</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_Insert">Alias/Insert</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests for adjusting the card form's mandatory fields</li>
 </ul></div></div></section><section id="v1.7.0.20170822"><h2><a name="v1.7.0.20170822"></a> Version 1.7 (released 2017-08-22)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2017-08-03</li>
 <li>introduced version 1.7</li>
