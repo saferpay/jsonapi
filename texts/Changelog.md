@@ -1,9 +1,19 @@
 # Changelog
 ## Table of Contents
+- [Version 1.8](#v1.8.0.20171114)
 - [Version 1.7](#v1.7.0.20170822)
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.8.0.20171114"></a> Version 1.8 (released 2017-11-14)
+- available on Sandbox: 2017-11-02
+- introduced version 1.8
+- added value `1.8` for _SpecVersion_
+- added _SixTransactionReference_ to [PaymentPage/Assert](http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert), [Transaction/AuthorizeDirect](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/RefundDirect](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_RefundDirect) and [Transaction/Refund](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Refund) responses for Omni Channel use cases
+- added method [OmniChannel/AcquireTransaction](http://saferpay.github.io/jsonapi/index.html#Payment_v1_OmniChannel_AcquireTransaction) for retrieving a previously authorized transaction from another channel
+- added method [OmniChannel/InsertAlias](http://saferpay.github.io/jsonapi/index.html#Payment_v1_OmniChannel_InsertAlias) for retrieving an alias for a card used in a previously authorized transaction from another channel
+- added container _CardForm_ for [Alias/Insert](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_Insert) and [Transaction/Initialize](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize) requests for adjusting the card form's mandatory fields 
 
 ## <a name="v1.7.0.20170822"></a> Version 1.7 (released 2017-08-22)
 - available on Sandbox: 2017-08-03
