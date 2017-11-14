@@ -3116,10 +3116,9 @@ Numeric[8..8]<br />
 
 ## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span> 
 
->
->    <i class="glyphicon glyphicon-hand-right"></i> **WARNING**: This feature is deprecated and replaced by the [**Payment Page**](https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage). Please use the parameter "PaymentMethods" to directly select the desired 3rd party provider!
->
-
+<div class="danger">
+	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
+</div>
 
 
 --->>>
@@ -3418,9 +3417,9 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 
 ## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span> 
 
->
->    <i class="glyphicon glyphicon-hand-right"></i> **WARNING**: This feature is deprecated and replaced by the [**Payment Page**](https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage). Please use the parameter "PaymentMethods" to directly select the desired 3rd party provider!
->
+<div class="danger">
+	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
+</div>
 
 --->>>
 
