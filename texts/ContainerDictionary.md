@@ -791,6 +791,9 @@ AlphaNumeric[8..11]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
 		string
 	</span>
 </td>
@@ -1372,6 +1375,9 @@ Possible values: NONE, MANDATORY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br />
 	<span class="text-muted small">
+		<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
 		string
 	</span>
 </td>
@@ -1582,6 +1588,9 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
+		<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
 		string
 	</span>
 </td>
@@ -1869,6 +1878,9 @@ Id[1..35]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
+		<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
 		string
 	</span>
 </td>
@@ -2208,6 +2220,9 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br />
 	<span class="text-muted small">
+		<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
 		string
 	</span>
 </td>
@@ -2308,6 +2323,9 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
+		<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
 		string
 	</span>
 </td>
