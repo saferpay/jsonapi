@@ -874,7 +874,7 @@ Utf8[1..50]<br />
 	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA.<br />
 			</i>
 </td>
 							</tr>
@@ -2953,7 +2953,7 @@ Possible values: MASTERPASS.<br />
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA, VPAY.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, VISA.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
