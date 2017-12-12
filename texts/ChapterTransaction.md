@@ -38,7 +38,9 @@ This method may be used to start a transaction which may involve either DCC and 
 
 #### Request
 
-
+<div class="danger">
+	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div>
 
 
 <table class="table">
@@ -1120,8 +1122,9 @@ This function may be used to directly authorize transactions which do not requir
 
 #### Request
 
-
-
+<div class="danger">
+	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div>
 
 <table class="table">
 	<thead>
@@ -2682,7 +2685,9 @@ This method may be called to refund an amount to the given means of payment (not
 
 #### Request
 
-
+<div class="danger">
+	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div>
 
 
 <table class="table">
