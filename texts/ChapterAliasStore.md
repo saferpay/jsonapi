@@ -530,7 +530,9 @@ Id[1..50]<br />
 
 #### Request
 
-
+<div class="danger">
+	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div>
 
 
 <table class="table">
