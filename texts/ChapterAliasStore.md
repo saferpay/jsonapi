@@ -155,7 +155,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYONE, POSTCARD, VISA, VPAY.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYONE, POSTCARD, VISA.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>;
