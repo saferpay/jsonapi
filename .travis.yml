@@ -1,6 +1,5 @@
 language: csharp
 script: |
-  if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
     #
     # clone + update
@@ -20,4 +19,3 @@ script: |
     git -c user.name='SaferpayDev' -c user.email='travis' commit -m "Updated Github pages"
     git push -f -q https://SaferpayDev:${GITHUB_API_KEY}@github.com/saferpay/jsonapi.git gh-pages || travis_terminate 1
     cd "$TRAVIS_BUILD_DIR"
-  fi
