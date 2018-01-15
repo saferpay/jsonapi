@@ -4,7 +4,11 @@
 
 ## <a name="Payment_v1_Batch_Close"></a>Batch Close
 
-No documentation available
+This chapter covers the Batch Close via API
+
+<div class="info">
+  <p><strong>Note:</strong> If you want to trigger the batch-close via API, make sure, to turn the automatic batch off. Please log into the Saferpay Backoffice. Go to <strong>Settings => Terminals</strong> and select the desired terminal out of the list. Turn off the Automatic closure!</p>
+</div>
 
 --->>>
 
