@@ -299,7 +299,7 @@ Possible values: MASTERPASS.<br />
       "Value": "100",
       "CurrencyCode": "CHF"
     },
-    "OrderId": "Id of the order",
+    "OrderId": "Id_of_the_order",
     "Description": "Description of payment"
   },
   "ReturnUrls": {
