@@ -84,6 +84,10 @@ The Saferpay JSON Api uses unified and standardized formats. The following abbre
 Saferpay supports the mechanism of basic authentication or a client certificate for authentication of a
 server (host) system.
 
+<div class="danger">
+	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status!</p>
+</div>
+
 <a name="authentication_basic"></a>HTTP basic authentication
 -------------------------
 
