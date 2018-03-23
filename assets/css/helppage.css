@@ -238,9 +238,3 @@ a[target='_blank'] {
         page-break-after: always;
     }
 }
-
-@media (min-width: 1200px) {
-    .col-lg-10 {
-		margin-left: 320px;
-    }
-}
