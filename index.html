@@ -11,9 +11,9 @@
 <body data-spy="scroll" data-target="#navScrollspy">
 
 	<div id="content" class="container-fluid">
-		<div>
-			<nav class="hidden-xs hidden-sm hidden-md" id="navScrollspy">
-				<div data-spy="affix" class="affix">
+		<div class="row">
+			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
+				<div data-spy="affix">
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
@@ -104,7 +104,7 @@
 
 			<span class="print-page-break"></span>
 
-			<main>
+			<main class="col-lg-10 col-md-12">
 				<div class="hidden-print hidden-lg">
 					<div id="navCollapse">
 
@@ -6168,7 +6168,7 @@ Possible values: OK, NOT_PERFORMED.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &#8658; Value=100)</div>
+	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &#8658; Value=100). <strong>Only Integer values will be accepted!</strong></div>
 	<i class="small text-muted">
 					<span>Example: 100</span>
 	</i>
