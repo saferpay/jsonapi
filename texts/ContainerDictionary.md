@@ -670,7 +670,7 @@ Possible values: OK, NOT_PERFORMED.<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <strong>Only Integer values will be accepted!</strong></div>
+	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
 	<i class="small text-muted">
 					<span>Example: 100</span>
 	</i>
