@@ -75,6 +75,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 #navScrollspy .affix {
+	width: 300px;
     height: 100vh;
     overflow-y: auto;
 	z-index: 100;
@@ -226,5 +227,11 @@ a[target='_blank'] {
     }
     .print-page-break {
         page-break-after: always;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-10 {
+		margin-left: 320px;
     }
 }
