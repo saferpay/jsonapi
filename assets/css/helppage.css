@@ -74,9 +74,19 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: black;
 }
 
+
+@media (min-width: 1200px) {
+    main {
+		margin-left: 270px;
+    }
+}
+
 #navScrollspy .affix {
+	width: 250px;
     height: 100vh;
     overflow-y: auto;
+	z-index: 100;
+	top: 0;
 }
 
 #navScrollspy .affix > ul {
@@ -135,10 +145,11 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     background: #fff;
     position: fixed;
     z-index: 99999999;
-    left: 10px;
-    bottom: 10px;
+    left: 0;
+    bottom: 0;
     padding: 20px;
     visibility: hidden;
+	width: 240px;
 }
 .scroll-top-wrapper.show {
     visibility: visible;
