@@ -11,9 +11,9 @@
 <body data-spy="scroll" data-target="#navScrollspy">
 
 	<div id="content" class="container-fluid">
-		<div class="row">
-			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
-				<div data-spy="affix">
+		<div>
+			<nav class="hidden-xs hidden-sm hidden-md" id="navScrollspy">
+				<div data-spy="affix" class="affix">
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
@@ -21,82 +21,82 @@
 					</h3>
 
 					<ul class="nav">
-								<li class="active">
-										<a href="#intro">Introduction</a>
-								</li>
-								<li>
-										<a href="#encoding">Content encoding</a>
-								</li>
-								<li>
-										<a href="#formats">Formats</a>
-								</li>
-								<li>
-										<a href="#authentication">Authentication</a>
-								</li>
-								<li>
-										<a href="#integration">Integration</a>
-								</li>
-								<li>
-										<a href="#errorhandling">Error Handling</a>
-								</li>
-								<li>
-										<a><h4>Interfaces</h4></a>
-								</li>
-								<li>
-										<a href="#ChapterPaymentPage">Payment Page</a>
-											<ul class="nav">
-													<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
-													<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
-													<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterTransaction">Transaction</a>
-											<ul class="nav">
-													<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
-													<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
-													<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
-													<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
-													<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
-													<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
-													<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
-													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-													<li><a href="#Payment_v1_Transaction_AssertCapture">Transaction AssertCapture</a></li>
-													<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
-													<li><a href="#Payment_v1_Transaction_AssertRefund">Transaction AssertRefund</a></li>
-													<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
-													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
-													<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
-													<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterAliasStore">Secure Alias Store</a>
-											<ul class="nav">
-													<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
-													<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
-													<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
-													<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterBatch">Batch</a>
-											<ul class="nav">
-													<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterOmniChannel">OmniChannel</a>
-											<ul class="nav">
-													<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
-													<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="Changelog.html">Changelog</a>
-								</li>
+							<li class="active">
+							<a href="#intro">Introduction</a>
+							</li>
+							<li>
+							<a href="#encoding">Content encoding</a>
+							</li>
+							<li>
+							<a href="#formats">Formats</a>
+							</li>
+							<li>
+							<a href="#authentication">Authentication</a>
+							</li>
+							<li>
+							<a href="#integration">Integration</a>
+							</li>
+							<li>
+							<a href="#errorhandling">Error Handling</a>
+							</li>
+							<li>
+								<a><h4>Interfaces</h4></a>
+							</li>
+							<li>
+							<a href="#ChapterPaymentPage">Payment Page</a>
+							<ul class="nav">
+								<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
+								<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+								<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
+								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterTransaction">Transaction</a>
+							<ul class="nav">
+								<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
+								<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+								<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+								<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
+								<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
+								<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
+								<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
+								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+								<li><a href="#Payment_v1_Transaction_AssertCapture">Transaction AssertCapture</a></li>
+								<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
+								<li><a href="#Payment_v1_Transaction_AssertRefund">Transaction AssertRefund</a></li>
+								<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
+								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+								<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
+								<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterAliasStore">Secure Alias Store</a>
+							<ul class="nav">
+								<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
+								<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
+								<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+								<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterBatch">Batch</a>
+							<ul class="nav">
+								<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterOmniChannel">OmniChannel</a>
+							<ul class="nav">
+								<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
+								<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="Changelog.html">Changelog</a>
+							</li>
 
 					</ul>
 				</div>
@@ -104,7 +104,7 @@
 
 			<span class="print-page-break"></span>
 
-			<main class="col-lg-10 col-md-12">
+			<main>
 				<div class="hidden-print hidden-lg">
 					<div id="navCollapse">
 
@@ -119,82 +119,82 @@
 					</div>
 
 					<ul class="nav collapse" id="menu-collapse">
-								<li class="active">
-										<a href="#intro">Introduction</a>
-								</li>
-								<li>
-										<a href="#encoding">Content encoding</a>
-								</li>
-								<li>
-										<a href="#formats">Formats</a>
-								</li>
-								<li>
-										<a href="#authentication">Authentication</a>
-								</li>
-								<li>
-										<a href="#integration">Integration</a>
-								</li>
-								<li>
-										<a href="#errorhandling">Error Handling</a>
-								</li>
-								<li>
-										<a><h4>Interfaces</h4></a>
-								</li>
-								<li>
-										<a href="#ChapterPaymentPage">Payment Page</a>
-											<ul class="nav">
-													<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
-													<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
-													<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterTransaction">Transaction</a>
-											<ul class="nav">
-													<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
-													<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
-													<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
-													<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
-													<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
-													<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
-													<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
-													<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-													<li><a href="#Payment_v1_Transaction_AssertCapture">Transaction AssertCapture</a></li>
-													<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
-													<li><a href="#Payment_v1_Transaction_AssertRefund">Transaction AssertRefund</a></li>
-													<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
-													<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
-													<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
-													<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterAliasStore">Secure Alias Store</a>
-											<ul class="nav">
-													<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
-													<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
-													<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
-													<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterBatch">Batch</a>
-											<ul class="nav">
-													<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="#ChapterOmniChannel">OmniChannel</a>
-											<ul class="nav">
-													<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
-													<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
-											</ul>
-								</li>
-								<li>
-										<a href="Changelog.html">Changelog</a>
-								</li>
+							<li class="active">
+							<a href="#intro">Introduction</a>
+							</li>
+							<li>
+							<a href="#encoding">Content encoding</a>
+							</li>
+							<li>
+							<a href="#formats">Formats</a>
+							</li>
+							<li>
+							<a href="#authentication">Authentication</a>
+							</li>
+							<li>
+							<a href="#integration">Integration</a>
+							</li>
+							<li>
+							<a href="#errorhandling">Error Handling</a>
+							</li>
+							<li>
+								<a><h4>Interfaces</h4></a>
+							</li>
+							<li>
+							<a href="#ChapterPaymentPage">Payment Page</a>
+							<ul class="nav">
+								<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
+								<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+								<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
+								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterTransaction">Transaction</a>
+							<ul class="nav">
+								<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
+								<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
+								<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+								<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
+								<li><a href="#Payment_v1_Transaction_AdjustAmount">Transaction AdjustAmount</a></li>
+								<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
+								<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
+								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+								<li><a href="#Payment_v1_Transaction_AssertCapture">Transaction AssertCapture</a></li>
+								<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
+								<li><a href="#Payment_v1_Transaction_AssertRefund">Transaction AssertRefund</a></li>
+								<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
+								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
+								<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
+								<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterAliasStore">Secure Alias Store</a>
+							<ul class="nav">
+								<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
+								<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
+								<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+								<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterBatch">Batch</a>
+							<ul class="nav">
+								<li><a href="#Payment_v1_Batch_Close">Batch Close</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="#ChapterOmniChannel">OmniChannel</a>
+							<ul class="nav">
+								<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
+								<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
+							</ul>
+							</li>
+							<li>
+							<a href="Changelog.html">Changelog</a>
+							</li>
 
 					</ul>
 				</div>
