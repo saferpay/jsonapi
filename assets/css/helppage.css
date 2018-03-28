@@ -149,7 +149,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     bottom: 0;
     padding: 20px;
     visibility: hidden;
-	width: 240px;
+	width: 245px;
 }
 .scroll-top-wrapper.show {
     visibility: visible;
