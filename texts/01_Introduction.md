@@ -11,7 +11,7 @@ Our API is designed to have predictable, resource-oriented URLs and to use HTTP 
 <strong>Test accounts:</strong>
 
 <a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br />
-<a target="_blank" href="https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html">View shared test account data</a>
+<a target="_blank" href="https://www.six-payment-services.com/en/site/e-commerce/support/testaccount.html#test-account">View shared test account data</a>
 
 <<<---
 
