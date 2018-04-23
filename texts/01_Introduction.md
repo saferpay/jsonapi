@@ -333,7 +333,6 @@ function do_curl($username,$password,$url, $payload){
             "status" => $status,
             "body" => $body
         );
-        return $response;
     }
     //IMPORTANT!!!
     //Close connection!
