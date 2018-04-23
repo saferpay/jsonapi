@@ -283,45 +283,66 @@ $payload = array(
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
 //$payload is a multidimensional array, that assembles the JSON structure. Example see above
-function do_post($username, $password, $url, array $payload) {
-    //Set Options for CURL
-    $curl = curl_init($url);
-    curl_setopt($curl, CURLOPT_HEADER, false);
-    //Return Response to Application
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    //Set Content-Headers to JSON
-    curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-        "Content-type: application/json",
-        "Accept: application/json"
-    ));
-    //Execute call via http-POST
-    curl_setopt($curl, CURLOPT_POST, true);
-    //Set POST-Body
-        //convert DATA-Array into a JSON-Object
-    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
-    //WARNING!!!!!
-    //This option should NOT be "false"
-    //Otherwise the connection is not secured
-    //You can turn it of if you're working on the test-system with no vital data
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-    //HTTP-Basic Authentication for the Saferpay JSON-API
-    curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
-    //CURL-Execute &amp; catch response
-    $jsonResponse = curl_exec($curl);
-    //Get HTTP-Status
-    //Abort if Status != 200
-    $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-    if ($status != 200) {
-        die("Error: call to URL $url failed with status $status, response $jsonResponse, curl_error: " . curl_error($curl) . ", curl_errno ".curl_errno($curl)."HTTP-Status: ".$status."&lt;||||&gt; DUMP: URL: ".$url." &lt;|||&gt; JSON: ".var_dump($payload));
-    }
-    //IMPORTANT!!!
-    //Close connection!
-    curl_close($curl);
-    //Convert response into a multidimensional Array (see above example!)
-    $response = json_decode($jsonResponse, true);
-    return $response;
-}</pre>
+function do_curl($username,$password,$url, $payload){
+		//Set Options for CURL
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_HEADER, false);
+		//Return Response to Application
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		//Set Content-Headers to JSON
+		curl_setopt($curl, CURLOPT_HTTPHEADER,array("Content-type: application/json","Accept: application/json; charset=utf-8"));
+		//Execute call via http-POST
+		curl_setopt($curl, CURLOPT_POST, true);
+		//Set POST-Body
+			//convert DATA-Array into a JSON-Object
+		curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
+		//WARNING!!!!!
+		//This option should NOT be "false"
+		//Otherwise the connection is not secured
+		//You can turn it of if you're working on the test-system with no vital data
+		//PLEASE NOTE:
+		//Under Windows (using WAMP or XAMP) it is necessary to manually download and save the necessary SSL-Root certificates!
+		//To do so, please visit: http://curl.haxx.se/docs/caextract.html and Download the .pem-file
+		//Then save it to a folder where PHP has write privileges (e.g. the WAMP/XAMP-Folder itself)
+		//and then put the following line into your php.ini:
+		//curl.cainfo=c:\path\to\file\cacert.pem
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+		//HTTP-Basic Authentication for the Saferpay JSON-API
+		//curl_setopt($curl, CURLOPT_USERPWD, base64_encode($username . ":" . $password));
+		curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
+		//CURL-Execute & catch response
+		$jsonResponse = curl_exec($curl);
+		//Get HTTP-Status
+		//Abort if Status != 200 
+		$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+		if ( $status != 200 ) {
+			//IF ERROR
+			//Get http-Body (if aplicable) from CURL-response
+	    	$body = json_decode(curl_multi_getcontent($curl),true);		
+			//Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
+			$response = array(
+				"status" => $status,
+				"body"	=> $body
+			);
+			//IMPORTANT!!!
+			//Close connection!
+			curl_close($curl);
+			return $response;
+		}else{
+			//IF OK
+			//Convert response into an Array
+			$body = json_decode($jsonResponse, true);
+			//Build array, containing the body (Response-data) and the http-status-code
+			$response = array(
+				"status" => $status,
+				"body" => $body
+			);
+			return $response;
+		}
+		//$response, again, is a multi-dimensional Array, containing the status-code ($response["status"]) and the API-response (if available) itself ($response["body"])
+	}
+</pre>
     </div>
   </div>
 </div>
