@@ -324,10 +324,6 @@ function do_curl($username,$password,$url, $payload){
             "status" => $status,
             "body" => $body
         );
-        //IMPORTANT!!!
-	//Close connection!
-	curl_close($curl);
-	return $response;
     }else{
         //IF OK
         //Convert response into an Array
@@ -339,7 +335,11 @@ function do_curl($username,$password,$url, $payload){
         );
         return $response;
     }
+    //IMPORTANT!!!
+    //Close connection!
+    curl_close($curl);
     //$response, again, is a multi-dimensional Array, containing the status-code ($response["status"]) and the API-response (if available) itself ($response["body"])
+    return $response;
 }
 </pre>
     </div>
