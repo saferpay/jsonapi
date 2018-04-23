@@ -307,8 +307,8 @@ function do_curl($username,$password,$url, $payload){
     //curl.cainfo=c:\path\to\file\cacert.pem
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
-    //HTTP-Basic Authentication for the Saferpay JSON-API
-    //curl_setopt($curl, CURLOPT_USERPWD, base64_encode($username . ":" . $password));
+    //HTTP-Basic Authentication for the Saferpay JSON-API. 
+    //This will set the authentication header and encode the password & username in Base64 for you
     curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
     //CURL-Execute & catch response
     $jsonResponse = curl_exec($curl);
