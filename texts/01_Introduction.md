@@ -160,7 +160,7 @@ information about the outcome of e.g. 3D Secure.
 </div>
 
 <div class="danger">
-	<p><strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary requests, at the correct time (E.g. doing the assert only, if the Successurl, or NotifyUrl are called!). Saferpay reserves the right to otherwise deactivate/block your Account!</p>
+	<p><strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary request, at the correct time (E.g. doing the assert only, if the SuccessUrl, or NotifyUrl are called!). Saferpay reserves the right to otherwise deactivate, or block your account!</p>
 </div>
 
 --->>>
