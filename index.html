@@ -264,6 +264,8 @@ the description of resources below.</p><p>Server-to-server calls are a secure wa
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.</p><div class="danger">
 	<p><strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!</p>
+</div><div class="danger">
+	<p><strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary requests, at the correct time (E.g. doing the assert only, if the Successurl, or NotifyUrl are called!). Saferpay reserves the right to otherwise deactivate/block your Account!</p>
 </div></div><div class="col-md-6"><p>Server-to-server communication:</p><div class="samples" role="tabpanel">
   <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
     <li class="active">
