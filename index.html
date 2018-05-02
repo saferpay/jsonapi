@@ -242,7 +242,7 @@
   </tbody>
 </table></div></div></section><section id="authentication"><h1><a name="authentication"></a>Authentication</h1><div class="row"><div class="col-md-6"><p>Saferpay supports the mechanism of basic authentication or a client certificate for authentication of a
 server (host) system.</p><div class="danger">
-	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status!</p>
+	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status! Furthermore, please note, that some environments do this by default. So even if you didn't implement it, the environment may do it as a default! It may be necessary to check your configuration!</p>
 </div></div></div></section><section id="authentication_basic"><h2><a name="authentication_basic"></a>HTTP basic authentication</h2><div class="row"><div class="col-md-6"><p>This is the default authentication method. Technical users for the JSON API can be
 created by the merchant in the Saferpay Backoffice under <a href="https://test.saferpay.com/BO/Settings/JsonApiLogin"><strong>Settings &gt; JSON API basic authentication</strong></a>. The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
