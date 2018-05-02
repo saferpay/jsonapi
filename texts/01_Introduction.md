@@ -155,6 +155,9 @@ Server-to-server calls are a secure way to submit and gather data. Hence, a serv
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.
 
+<div class="info">
+	<p><strong>Important:</strong> Saferpay only supports TLS 1.2 and up, for secure connections. Please make sure, that your system is configured accordingly! <a href="https://www.six-payment-services.com/en/site/e-commerce/support/tls-faq.html">More information in our TLS-FAQ!</a></p>
+</div>
 <div class="danger">
 	<p><strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!</p>
 </div>
