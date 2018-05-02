@@ -85,7 +85,7 @@ Saferpay supports the mechanism of basic authentication or a client certificate 
 server (host) system.
 
 <div class="danger">
-	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status!</p>
+	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status! Furthermore, please note, that some environments do this by default. So even if you didn't implement it, the environment may do it as a default! It may be necessary to check your configuration!</p>
 </div>
 
 <a name="authentication_basic"></a>HTTP basic authentication
