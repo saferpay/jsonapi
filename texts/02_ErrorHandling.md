@@ -50,6 +50,10 @@ HTTP status codes:
 	</tr>
 </table>
 
+<div class="info">
+	<p><strong>Info:</strong> The API-Timeout for request should be 100 seconds! After that, a connection should be closed!</p>
+</div>
+
 <<<---
 
 #### Error Message
