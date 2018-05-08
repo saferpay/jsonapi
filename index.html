@@ -650,7 +650,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Behavior&quot;: &quot;ABORT&quot;,
@@ -975,7 +975,7 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
@@ -1121,7 +1121,7 @@ Possible values: MASTERPASS.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1132,7 +1132,7 @@ Possible values: MASTERPASS.<br>
       &quot;Value&quot;: &quot;100&quot;,
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
-    &quot;OrderId&quot;: &quot;Id_of_the_order&quot;,
+    &quot;OrderId&quot;: &quot;Id of the order&quot;,
     &quot;Description&quot;: &quot;Description of payment&quot;
   },
   &quot;ReturnUrls&quot;: {
@@ -1220,7 +1220,7 @@ Possible values: MASTERPASS.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;Id of the request&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e1234&quot;,
@@ -1275,7 +1275,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1374,15 +1374,15 @@ Id[1..50]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ThreeDs</strong><br>
+	<strong>Liability</strong><br>
 	<span class="text-muted small">
 		
-			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">3d-secure information if applicable</div>
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1404,7 +1404,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -1645,7 +1645,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 </td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1776,7 +1776,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -1883,7 +1883,7 @@ Numeric[3..4]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1983,15 +1983,15 @@ Numeric[3..4]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ThreeDs</strong><br>
+	<strong>Liability</strong><br>
 	<span class="text-muted small">
 		
-			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">3d-secure information if applicable</div>
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2013,7 +2013,7 @@ Numeric[3..4]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2118,7 +2118,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2215,7 +2215,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;PaymentMeans&quot;: {
@@ -2303,7 +2303,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2340,7 +2340,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -2460,7 +2460,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2576,7 +2576,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2710,7 +2710,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2820,7 +2820,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2969,7 +2969,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3088,7 +3088,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -3144,7 +3144,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3248,7 +3248,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -3335,7 +3335,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3427,7 +3427,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -3508,7 +3508,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3612,7 +3612,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -3705,7 +3705,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3800,7 +3800,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -3879,7 +3879,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3965,7 +3965,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -4122,7 +4122,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4217,7 +4217,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -4274,7 +4274,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4358,7 +4358,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -4528,7 +4528,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYONE, POSTCARD, VISA.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td></tr>
@@ -4548,7 +4548,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 </td></tr>			
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4642,7 +4642,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -4699,7 +4699,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4783,7 +4783,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -4887,7 +4887,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4982,7 +4982,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -5052,7 +5052,7 @@ Id[1..40]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5085,7 +5085,7 @@ Id[1..40]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -5139,7 +5139,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5172,7 +5172,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -5238,7 +5238,7 @@ Numeric[8..8]<br>
 </td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5321,7 +5321,7 @@ Numeric[8..8]<br>
 </td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -5421,7 +5421,7 @@ Id[1..80]<br>
 </td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5489,7 +5489,7 @@ Id[1..80]<br>
 </td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.8&quot;,
+    &quot;SpecVersion&quot;: &quot;1.9&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -5541,8 +5541,8 @@ Id[1..80]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7,1.8,1.8<br>
-					<span>Example: 1.8</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br>
+					<span>Example: 1.9</span>
 	</i>
 </td>
 							</tr>
@@ -5656,8 +5656,8 @@ Id[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7,1.8<br>
-					<span>Example: 1.8</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br>
+					<span>Example: 1.9</span>
 	</i>
 </td>
 							</tr>
@@ -6398,7 +6398,7 @@ Utf8[1..50]<br>
 	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br>
 			</i>
 </td>
 							</tr>
@@ -6754,7 +6754,8 @@ Possible values: NONE, MANDATORY.<br>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_DirectDebitInfo&quot;</h2>
-				<table class="table" id="Payment_Models_Data_DirectDebitInfo">
+				;
+							<table class="table" id="Payment_Models_Data_DirectDebitInfo">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -6788,8 +6789,91 @@ Possible values: NONE, MANDATORY.<br>
 	<div style="padding-bottom: 10px">Creditor id, required for german direct debit payments.</div>
 	<i class="small text-muted">
 			</i>
+</td></tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_FraudFreeInfo&quot;</h2>
+				;
+							;
+							;
+							;
+							;
+							<table class="table" id="Payment_Models_Data_FraudFreeInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
 </td>
-							</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id to identify the fraud free request.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LiabilityShift</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Indicates whether liability shift to Fraugster is possible or not. True, if liability shift to issuer is possible, false if not (only SSL transaction).</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Score</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		decimal number
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Fraud score, indicates the risk of a transaction being fraudulent.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Investigationpoints</strong><br>
+	<span class="text-muted small">
+		string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Indicate the issues with the transaction.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ErrorMessage</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Error message which indicates why FraudFree could not process the request.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_InstallmentOptions&quot;</h2>
@@ -6815,7 +6899,8 @@ Possible values: NONE, MANDATORY.<br>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_InvoiceInfo&quot;</h2>
-				<table class="table" id="Payment_Models_Data_InvoiceInfo">
+				;
+							<table class="table" id="Payment_Models_Data_InvoiceInfo">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -6858,8 +6943,76 @@ Possible values: NONE, MANDATORY.<br>
 	<div style="padding-bottom: 10px">The date by which the invoice needs to be settled</div>
 	<i class="small text-muted">
 			</i>
+</td></tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_LiabilityInfo&quot;</h2>
+				;
+							;
+							;
+							;
+							<table class="table" id="Payment_Models_Data_LiabilityInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LiabilityShift</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		boolean
+	</span>
 </td>
-							</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Is liability shifted for this transaction</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LiableEntity</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Indicates who takes the liability for the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDs</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Details about ThreeDs if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FraudFree</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_FraudFreeInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Details about FraudFree if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_Notification&quot;</h2>
@@ -6984,7 +7137,7 @@ Id[1..80]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
 	</i>
@@ -8477,7 +8630,7 @@ Possible values: MASTERPASS.<br>
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
