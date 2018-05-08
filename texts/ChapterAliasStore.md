@@ -142,7 +142,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts! </div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -158,7 +158,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -173,7 +173,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>			
 
 </table>

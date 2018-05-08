@@ -196,7 +196,7 @@ Numeric[8..8]<br />
 	<div style="padding-bottom: 10px">Wallet system to be used for the transaction (this cannot be combined with PaymentMeans above).</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -212,7 +212,7 @@ Numeric[8..8]<br />
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYONE, POSTCARD, UNIONPAY, VISA.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -227,7 +227,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 
 </table>
