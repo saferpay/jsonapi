@@ -1264,7 +1264,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Creditor id, required for german direct debit payments.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 					</tbody>
 				</table>
@@ -1286,7 +1286,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Id to identify the fraud free request.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1303,7 +1303,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Indicates whether liability shift to Fraugster is possible or not. True, if liability shift to issuer is possible, false if not (only SSL transaction).</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1320,7 +1320,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Fraud score, indicates the risk of a transaction being fraudulent.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1334,7 +1334,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Indicate the issues with the transaction.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1348,7 +1348,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Error message which indicates why FraudFree could not process the request.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 					</tbody>
 				</table>
@@ -1418,7 +1418,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">The date by which the invoice needs to be settled</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 					</tbody>
 				</table>
@@ -1440,7 +1440,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Is liability shifted for this transaction</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1457,7 +1457,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Indicates who takes the liability for the transaction</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1472,7 +1472,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Details about ThreeDs if applicable</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -1487,7 +1487,7 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Details about FraudFree if applicable</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 							</tr>
 					</tbody>
 				</table>
@@ -2283,7 +2283,7 @@ Id[1..80]<br />
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -2301,7 +2301,7 @@ Id[1..80]<br />
 	<i class="small text-muted">
 					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
 	</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -2316,7 +2316,7 @@ Id[1..80]<br />
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -2648,7 +2648,7 @@ Id[1..80]<br />
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
 	</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -2666,7 +2666,7 @@ Id[1..80]<br />
 	<i class="small text-muted">
 					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
 	</i>
-</td>;
+</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
