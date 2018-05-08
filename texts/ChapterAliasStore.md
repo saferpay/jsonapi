@@ -155,7 +155,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYONE, POSTCARD, VISA.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>;
@@ -185,7 +185,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -296,7 +296,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -384,7 +384,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -485,7 +485,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -620,7 +620,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -732,7 +732,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -833,7 +833,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -883,7 +883,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   }
 }

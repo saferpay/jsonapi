@@ -239,7 +239,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -387,7 +387,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -525,7 +525,7 @@ Numeric[3..4]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -634,15 +634,15 @@ Numeric[3..4]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ThreeDs</strong><br />
+	<strong>Liability</strong><br />
 	<span class="text-muted small">
 		
-			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">3d-secure information if applicable</div>
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -672,7 +672,7 @@ Numeric[3..4]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -808,7 +808,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -922,7 +922,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "PaymentMeans": {
@@ -1041,7 +1041,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1095,7 +1095,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   }
 }
@@ -1245,7 +1245,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1378,7 +1378,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -1543,7 +1543,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1670,7 +1670,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -1850,7 +1850,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1986,7 +1986,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -2074,7 +2074,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -2195,7 +2195,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -2313,7 +2313,7 @@ This method may be called to refund a previous transaction.
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -2422,7 +2422,7 @@ This method may be called to refund a previous transaction.
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -2534,7 +2534,7 @@ This method may be called to refund a previous transaction.
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -2655,7 +2655,7 @@ AlphaNumeric[11..11]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -2779,7 +2779,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -2891,7 +2891,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -3001,7 +3001,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -3104,7 +3104,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -3293,7 +3293,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -3405,7 +3405,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -3493,7 +3493,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -3594,7 +3594,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {

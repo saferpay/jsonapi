@@ -77,7 +77,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -127,7 +127,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   }
 }

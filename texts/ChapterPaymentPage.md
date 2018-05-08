@@ -134,7 +134,7 @@ Numeric[8..8]<br />
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
@@ -288,7 +288,7 @@ Possible values: MASTERPASS.<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -299,7 +299,7 @@ Possible values: MASTERPASS.<br />
       "Value": "100",
       "CurrencyCode": "CHF"
     },
-    "OrderId": "Id_of_the_order",
+    "OrderId": "Id of the order",
     "Description": "Description of payment"
   },
   "ReturnUrls": {
@@ -404,7 +404,7 @@ Possible values: MASTERPASS.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "Id of the request"
   },
   "Token": "234uhfh78234hlasdfh8234e1234",
@@ -492,7 +492,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -600,15 +600,15 @@ Id[1..50]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ThreeDs</strong><br />
+	<strong>Liability</strong><br />
 	<span class="text-muted small">
 		
-			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">3d-secure information if applicable</div>
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -638,7 +638,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {

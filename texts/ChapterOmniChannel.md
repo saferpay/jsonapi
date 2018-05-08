@@ -90,7 +90,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -194,7 +194,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -329,7 +329,7 @@ Id[1..80]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -417,7 +417,7 @@ This response returns an acquired OmniChannel transaction.
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.8",
+    "SpecVersion": "1.9",
     "RequestId": "[your request id]"
   },
   "Transaction": {

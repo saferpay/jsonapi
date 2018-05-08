@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7,1.8,1.8<br />
-					<span>Example: 1.8</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br />
+					<span>Example: 1.9</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7,1.8<br />
-					<span>Example: 1.8</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br />
+					<span>Example: 1.9</span>
 	</i>
 </td>
 							</tr>
@@ -874,7 +874,7 @@ Utf8[1..50]<br />
 	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
 			</i>
 </td>
 							</tr>
@@ -1264,7 +1264,91 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Creditor id, required for german direct debit payments.</div>
 	<i class="small text-muted">
 			</i>
+</td>;
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_FraudFreeInfo"</h2>
+				<table class="table" id="Payment_Models_Data_FraudFreeInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
 </td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id to identify the fraud free request.</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LiabilityShift</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Indicates whether liability shift to Fraugster is possible or not. True, if liability shift to issuer is possible, false if not (only SSL transaction).</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Score</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		decimal number
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Fraud score, indicates the risk of a transaction being fraudulent.</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Investigationpoints</strong><br />
+	<span class="text-muted small">
+		string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Indicate the issues with the transaction.</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ErrorMessage</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Error message which indicates why FraudFree could not process the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>;
 							</tr>
 					</tbody>
 				</table>
@@ -1334,7 +1418,76 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">The date by which the invoice needs to be settled</div>
 	<i class="small text-muted">
 			</i>
+</td>;
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_LiabilityInfo"</h2>
+				<table class="table" id="Payment_Models_Data_LiabilityInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LiabilityShift</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		boolean
+	</span>
 </td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Is liability shifted for this transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LiableEntity</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Indicates who takes the liability for the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDs</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Details about ThreeDs if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>;
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FraudFree</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_FraudFreeInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Details about FraudFree if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>;
 							</tr>
 					</tbody>
 				</table>
@@ -1460,7 +1613,7 @@ Id[1..80]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
 	</i>
@@ -2953,7 +3106,7 @@ Possible values: MASTERPASS.<br />
 	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
