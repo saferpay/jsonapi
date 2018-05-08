@@ -201,7 +201,7 @@
 
 				
 <section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-md-6"><p><strong>Test accounts:</strong></p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br>
-<a target="_blank" href="https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html">View shared test account data</a></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
+<a target="_blank" href="https://www.six-payment-services.com/en/site/e-commerce/support/testaccount.html#test-account">View shared test account data</a></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -242,7 +242,7 @@
   </tbody>
 </table></div></div></section><section id="authentication"><h1><a name="authentication"></a>Authentication</h1><div class="row"><div class="col-md-6"><p>Saferpay supports the mechanism of basic authentication or a client certificate for authentication of a
 server (host) system.</p><div class="danger">
-	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status!</p>
+	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status! Furthermore, please note, that some environments do this by default. So even if you didn't implement it, the environment may do it as a default! It may be necessary to check your configuration!</p>
 </div></div></div></section><section id="authentication_basic"><h2><a name="authentication_basic"></a>HTTP basic authentication</h2><div class="row"><div class="col-md-6"><p>This is the default authentication method. Technical users for the JSON API can be
 created by the merchant in the Saferpay Backoffice under <a href="https://test.saferpay.com/BO/Settings/JsonApiLogin"><strong>Settings &gt; JSON API basic authentication</strong></a>. The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
@@ -262,8 +262,12 @@ you processing instructions to the defined URLs. The URL and the JSON structure
 varies depening on the action/resource you want to call. For further details check
 the description of resources below.</p><p>Server-to-server calls are a secure way to submit and gather data. Hence, a server-to-server
 call should always follow after the customer returns back to the shop, to gather
-information about the outcome of e.g. 3D Secure.</p><div class="danger">
+information about the outcome of e.g. 3D Secure.</p><div class="info">
+	<p><strong>Important:</strong> Saferpay only supports TLS 1.2 and up, for secure connections. Please make sure, that your system is configured accordingly! <a href="https://www.six-payment-services.com/en/site/e-commerce/support/tls-faq.html">More information in our TLS-FAQ!</a></p>
+</div><div class="danger">
 	<p><strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server!</p>
+</div><div class="danger">
+	<p><strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary request, at the correct time (E.g. doing the assert only, if the SuccessUrl, or NotifyUrl are called!). Saferpay reserves the right to otherwise deactivate, or block your account!</p>
 </div></div><div class="col-md-6"><p>Server-to-server communication:</p><div class="samples" role="tabpanel">
   <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
     <li class="active">
@@ -339,15 +343,15 @@ information about the outcome of e.g. 3D Secure.</p><div class="danger">
       <pre class="prettyprint"> 
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
-	'RequestHeader' =&gt; array(
-		'SpecVersion' =&gt; &quot;1.7&quot;,
-		'CustomerId' =&gt; &quot;123456&quot;,
-		'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
-		'RetryIndicator' =&gt; 0,
-		'ClientInfo' =&gt; array(
-		    'ShopInfo' =&gt; &quot;My Shop&quot;,
-		    'OsInfo' =&gt; &quot;Windows Server 2013&quot;
-	    )
+    'RequestHeader' =&gt; array(
+        'SpecVersion' =&gt; &quot;1.7&quot;,
+        'CustomerId' =&gt; &quot;123456&quot;,
+        'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
+        'RetryIndicator' =&gt; 0,
+        'ClientInfo' =&gt; array(
+            'ShopInfo' =&gt; &quot;My Shop&quot;,
+            'OsInfo' =&gt; &quot;Windows Server 2013&quot;
+        )
     ),
     'TerminalId' =&gt; &quot;17654321&quot;,
     'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
@@ -378,49 +382,69 @@ $payload = array(
         'MandatoryFields' =&gt; array(&quot;CITY&quot;,&quot;COMPANY&quot;,&quot;COUNTRY&quot;,&quot;EMAIL&quot;,&quot;FIRSTNAME&quot;,&quot;LASTNAME&quot;,&quot;PHONE&quot;,&quot;SALUTATION&quot;,&quot;STATE&quot;,&quot;STREET&quot;,&quot;ZIP&quot;)
     )
 );
-<p>//$username and $password for the http-Basic Authentication
+//$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
 //$payload is a multidimensional array, that assembles the JSON structure. Example see above
-function do_post($username, $password, $url, array $payload) {
-//Set Options for CURL
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_HEADER, false);
-//Return Response to Application
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-//Set Content-Headers to JSON
-curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-&quot;Content-type: application/json&quot;,
-&quot;Accept: application/json&quot;
-));
-//Execute call via http-POST
-curl_setopt($curl, CURLOPT_POST, true);
-//Set POST-Body
-//convert DATA-Array into a JSON-Object
-curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
-//WARNING!!!!!
-//This option should NOT be &quot;false&quot;
-//Otherwise the connection is not secured
-//You can turn it of if you're working on the test-system with no vital data
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-//HTTP-Basic Authentication for the Saferpay JSON-API
-curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
-//CURL-Execute &amp; catch response
-$jsonResponse = curl_exec($curl);
-//Get HTTP-Status
-//Abort if Status != 200
-$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-if ($status != 200) {
-die(&quot;Error: call to URL $url failed with status $status, response $jsonResponse, curl_error: &quot; . curl_error($curl) . &quot;, curl_errno &quot;.curl_errno($curl).&quot;HTTP-Status: &quot;.$status.&quot;&lt;||||&gt; DUMP: URL: &quot;.$url.&quot; &lt;|||&gt; JSON: &quot;.var_dump($payload));
+function do_curl($username,$password,$url, $payload){
+    //Set Options for CURL
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_HEADER, false);
+    //Return Response to Application
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    //Set Content-Headers to JSON
+    curl_setopt($curl, CURLOPT_HTTPHEADER,array(&quot;Content-type: application/json&quot;,&quot;Accept: application/json; charset=utf-8&quot;));
+    //Execute call via http-POST
+    curl_setopt($curl, CURLOPT_POST, true);
+    //Set POST-Body
+        //convert DATA-Array into a JSON-Object
+    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
+    //WARNING!!!!!
+    //This option should NOT be &quot;false&quot;
+    //Otherwise the connection is not secured
+    //You can turn it of if you're working on the test-system with no vital data
+    //PLEASE NOTE:
+    //Under Windows (using WAMP or XAMP) it is necessary to manually download and save the necessary SSL-Root certificates!
+    //To do so, please visit: http://curl.haxx.se/docs/caextract.html and Download the .pem-file
+    //Then save it to a folder where PHP has write privileges (e.g. the WAMP/XAMP-Folder itself)
+    //and then put the following line into your php.ini:
+    //curl.cainfo=c:\path\to\file\cacert.pem
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+    //HTTP-Basic Authentication for the Saferpay JSON-API. 
+    //This will set the authentication header and encode the password &amp; username in Base64 for you
+    curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
+    //CURL-Execute &amp; catch response
+    $jsonResponse = curl_exec($curl);
+    //Get HTTP-Status
+    //Abort if Status != 200 
+    $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+    if ( $status != 200 ) {
+        //IF ERROR
+        //Get http-Body (if aplicable) from CURL-response
+	$body = json_decode(curl_multi_getcontent($curl),true);		
+        //Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
+        $response = array(
+            &quot;status&quot; =&gt; $status,
+            &quot;body&quot; =&gt; $body
+        );
+    }else{
+        //IF OK
+        //Convert response into an Array
+        $body = json_decode($jsonResponse, true);
+        //Build array, containing the body (Response-data) and the http-status-code
+        $response = array(
+            &quot;status&quot; =&gt; $status,
+            &quot;body&quot; =&gt; $body
+        );
+    }
+    //IMPORTANT!!!
+    //Close connection!
+    curl_close($curl);
+    //$response, again, is a multi-dimensional Array, containing the status-code ($response[&quot;status&quot;]) and the API-response (if available) itself ($response[&quot;body&quot;])
+    return $response;
 }
-//IMPORTANT!!!
-//Close connection!
-curl_close($curl);
-//Convert response into a multidimensional Array (see above example!)
-$response = json_decode($jsonResponse, true);
-return $response;
-}</p></pre>
-</div><p></p>
+</pre>
+    </div>
   </div>
 </div></div></div><div class="row"><div class="col-md-6"><p>If you include the redirect pages into your web-page using an iframe, you can react on size changes
 of the iframe content by listening to a message event containing the new sizing information.</p><p>Please note: Depending on the bank, issuer, or payment provider, the page can try to break
@@ -476,7 +500,9 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 		<td class="text-right">500</td>
 		<td>Internal error</td>
 	</tr>
-</tbody></table></div></div><div class="row"><div class="col-md-6"><h4>Error Message</h4><table class="table">
+</tbody></table><div class="info">
+	<p><strong>Info:</strong> The API-Timeout for request should be 100 seconds! After that, a connection should be closed!</p>
+</div></div></div><div class="row"><div class="col-md-6"><h4>Error Message</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
