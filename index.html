@@ -95,7 +95,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="Changelog.html">Changelog</a>
+							<a href="#Changelog">Changelog</a>
 							</li>
 
 					</ul>
@@ -193,7 +193,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="Changelog.html">Changelog</a>
+							<a href="#Changelog">Changelog</a>
 							</li>
 
 					</ul>
@@ -8685,7 +8685,72 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 							</tr>
 					</tbody>
 				</table>
-</div></div></div></section>
+</div></div></div></section><section><h1>Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.9.0.20180515">Version 1.9</a></li>
+<li><a href="#v1.8.0.20171114">Version 1.8</a></li>
+<li><a href="#v1.7.0.20170822">Version 1.7</a></li>
+<li><a href="#v1.6.0.20170404">Version 1.6</a></li>
+<li><a href="#v1.5.0.20170207">Version 1.5</a></li>
+<li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.9.0.20180515"><h2><a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2018-04-26</li>
+<li>introduced version 1.9</li>
+<li>replaced container <em>ThreeDs</em> from previous versions with <em>Liability</em> in <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> responses</li>
+</ul></div></div></section><section id="v1.8.0.20171114"><h2><a name="v1.8.0.20171114"></a> Version 1.8 (released 2017-11-14)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2017-11-02</li>
+<li>introduced version 1.8</li>
+<li>added value <code>1.8</code> for <em>SpecVersion</em></li>
+<li>added <em>SixTransactionReference</em> to <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> responses for Omni Channel use cases</li>
+<li>added method <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a> for retrieving a previously authorized transaction from another channel</li>
+<li>added method <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> for retrieving an alias for a card used in a previously authorized transaction from another channel</li>
+<li>added container <em>CardForm</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_Insert">Alias/Insert</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests for adjusting the card form's mandatory fields</li>
+</ul></div></div></section><section id="v1.7.0.20170822"><h2><a name="v1.7.0.20170822"></a> Version 1.7 (released 2017-08-22)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2017-08-03</li>
+<li>introduced version 1.7</li>
+<li>added value <code>1.7</code> for <em>SpecVersion</em></li>
+<li>added value <code>TWINT</code> for <em>Brand.PaymentMethod</em></li>
+<li>added <em>ApprovalCode</em> to <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> responses</li>
+<li>added <em>PaymentMethods</em> to <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_Insert">Alias/Insert</a> requests</li>
+<li>increased number of concurrent Basic Authentication credentials to 10</li>
+<li>improved description for pending statuses</li>
+</ul></div></div></section><section id="v1.6.0.20170404"><h2><a name="v1.6.0.20170404"></a> Version 1.6 (released 2017-04-04)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2017-03-14</li>
+<li>introduced version 1.6</li>
+<li>added value <code>1.6</code> for <em>SpecVersion</em></li>
+<li>added container <em>Check</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> request</li>
+<li>added container <em>CheckResult</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a> and <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> responses</li>
+</ul></div></div></section><section id="v1.5.0.20170207"><h2><a name="v1.5.0.20170207"></a> Version 1.5 (released 2017-02-07)</h2><div class="row"><div class="col-md-6"><ul>
+<li>introduced version 1.5</li>
+<li>added value <code>1.5</code> for <em>SpecVersion</em></li>
+<li>added method <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AssertCapture">Transaction/AssertCapture</a> for checking the status of a pending capture (currently needed for paydirekt)</li>
+<li>added method <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AssertRefund">Transaction/AssertRefund</a> for checking the status of a pending refund (currently needed for paydirekt)</li>
+<li>added container <em>PendingNotification</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> requests for notification settings on pending captures (currently needed for paydirekt)</li>
+<li>added container <em>PendingNotification</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> requests for notification settings on pending captures (currently needed for paydirekt)</li>
+<li>added <em>Status</em> in  <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> responses to indicate the status of a capture</li>
+<li>changed <em>Date</em> in  <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> responses to optional, e.g. for pending captures</li>
+<li>changed <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> request to allow <em>BillingAddressForm.Display</em> and <em>DeliveryAddressForm.Display</em> both set to <code>true</code> at the same time</li>
+<li>added <em>ContentSecurityEnabled</em> to <em>Styling</em> container to control Content Security Policy</li>
+<li>corrected type documentation for <em>CountrySubdivisionCode</em> to &quot;<em>AlphaNumeric</em>&quot; in the address containers</li>
+</ul></div></div></section><section id="v1.4.0.20161015"><h2><a name="v1.4.0.20161015"></a> Version 1.4 (released 2016-10-15)</h2><div class="row"><div class="col-md-6"><ul>
+<li>new version 1.4
+<ul>
+<li>added value <code>1.4</code> for <em>SpecVersion</em></li>
+<li>added option <em>SuppressDcc</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
+<li>added values <code>BANCONTACT</code> and <code>PAYDIREKT</code> for <em>Brand.PaymentMethod</em> and <em>PaymentMethods</em> in <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
+<li>added validation for element <em>Payment.MandateId</em></li>
+<li>added option <em>ConfigSet</em> for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
+</ul>
+</li>
+<li>added a note that partial captures are currently only supported for PayPal</li>
+<li>added a note that values for AliasID are case-insensitive</li>
+<li>corrected example for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li>corrected example for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
+<li>corrected example for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
+<li>corrected example for <a href="http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
+<li>improved description for <em>TransactionReference</em></li>
+<li>corrected example for <em>BillpayCapture.DelayInDays</em></li>
+<li>improved description for <em>ReturnUrls</em></li>
+</ul></div></div></section>
 
 			</main>
 
