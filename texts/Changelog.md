@@ -1,4 +1,4 @@
-# Changelog
+# <a name="Changelog"></a> Changelog
 ## Table of Contents
 - [Version 1.9](#v1.9.0.20180515)
 - [Version 1.8](#v1.8.0.20171114)
