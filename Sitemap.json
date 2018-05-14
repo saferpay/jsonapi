@@ -217,6 +217,6 @@
   {
     "Title": "Changelog",
     "Source": "texts/Changelog.md",
-    "Target": "Changelog.html"
+    "Target": "index.html#Changelog"
   }   
 ]
