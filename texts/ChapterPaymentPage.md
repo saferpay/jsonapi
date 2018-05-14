@@ -13,15 +13,15 @@ This chapter will give you a simple overview about the transaction flow, when us
 
 ### Transaction-flow
 
-1. [Payment Page Initialize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize)
+1. [Payment Page Initialize](index.html#Payment_v1_PaymentPage_Initialize)
   * Initializes the Payment and generates the RedirectUrl for the Payment Page.
 2. Redirect to the RedirectUrl
 3. Return to Return Url depending on the outcome of the transaction. The ReturnUrls are defined in step 1!
-4. [Payment Page Assert](https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert)
+4. [Payment Page Assert](index.html#Payment_v1_PaymentPage_Assert)
   * Gathers all the information about the payment, like LiabilityShift through 3D Secure and more, using the Token, gathered in step 1!
 5. Depending on the outcome of step 4 you may
-  * [Capture/Finalize the Transaction](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture)
-  * [Cancel/Abort the Transaction](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel)
+  * [Capture/Finalize the Transaction](index.html#Payment_v1_Transaction_Capture)
+  * [Cancel/Abort the Transaction](index.html#Payment_v1_Transaction_Cancel)
 6. Transaction is finished!
 
 

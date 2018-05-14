@@ -401,7 +401,7 @@ Base URL test system:
 Take the correct request URL and add it to the base URL.
 You can find it on the right side of the request-specification.
 
-For instance, if you want to call [PaymentPage Initialize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Initialize), the request URL is:
+For instance, if you want to call [PaymentPage Initialize](index.html#Payment_v1_PaymentPage_Initialize), the request URL is:
 
 `/Payment/v1/PaymentPage/Initialize`
 

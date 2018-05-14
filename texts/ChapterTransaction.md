@@ -10,15 +10,15 @@ This chapter will give you a simple overview about the general transaction flow,
 
 ### Transaction-flow
 
-1. [Transaction Initialize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize)
+1. [Transaction Initialize](index.html#Payment_v1_Transaction_Initialize)
   * Initializes the Payment and generates the RedirectUrl for the [iFrame Integration](https://saferpay.github.io/sndbx/CssiFrame.html).
 2. Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!
 3. Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!
-4. [Transaction Authorize](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Authorize)
+4. [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
   * Authorizes the card, which has been gathered in step 2. Up until now, *no transaction has been made*!
 5. Depending on the outcome of step 4 you may
-  * [Capture/Finalize the Transaction](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Capture)
-  * [Cancel/Abort the Transaction](https://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Cancel)
+  * [Capture/Finalize the Transaction](index.html#Payment_v1_Transaction_Capture)
+  * [Cancel/Abort the Transaction](index.html#Payment_v1_Transaction_Cancel)
 6. Transaction is finished!
 
 
@@ -3122,7 +3122,7 @@ Numeric[8..8]<br />
 ## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span> 
 
 <div class="danger">
-	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
+	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
 </div>
 
 
@@ -3423,7 +3423,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 ## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span> 
 
 <div class="danger">
-	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="https://saferpay.github.io/jsonapi/index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
+	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
 </div>
 
 --->>>
