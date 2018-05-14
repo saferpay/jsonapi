@@ -8,7 +8,7 @@
 - [Version 1.4](#v1.4.0.20161015)
 
 ## <a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)
-- available on Sandboy: 2018-04-26
+- available on Sandbox: 2018-04-26
 - introduced version 1.9
 - Container Liability replaces ThreeDs from api version 1.8 in [PaymentPage/Assert](http://saferpay.github.io/jsonapi/index.html#Payment_v1_PaymentPage_Assert) and [Transaction/Initialize](http://saferpay.github.io/jsonapi/index.html#Payment_v1_Transaction_Initialize)
 
