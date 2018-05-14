@@ -1,10 +1,16 @@
 # Changelog
 ## Table of Contents
+- [Version 1.9](#v1.9.0.20180515)
 - [Version 1.8](#v1.8.0.20171114)
 - [Version 1.7](#v1.7.0.20170822)
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)
+- available on Sandboy: 2018-04-26
+- introduced version 1.9
+- Container Liability replaces ThreeDs from api version 1.8 in [PaymentPage/Assert] and [Transaction/Initialize]
 
 ## <a name="v1.8.0.20171114"></a> Version 1.8 (released 2017-11-14)
 - available on Sandbox: 2017-11-02
