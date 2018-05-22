@@ -519,7 +519,7 @@ Id[1..50]<br />
 
 ## <a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect
 
-
+This method may be used to insert an alias directly with card-data collected by using your own HTML form. 
 
 --->>>
 
