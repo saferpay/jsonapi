@@ -409,7 +409,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 
 ## <a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory">Business license</span> 
 
-This function may be called to complete an authorization which was started by a call to Transaction/Initialize.
+This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.
 
 --->>>
 
