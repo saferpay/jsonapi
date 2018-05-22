@@ -2464,9 +2464,8 @@ This method may be called to refund a previous transaction.
 
 ## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span> 
 
-<div class="warning">
-  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
-</div>
+This method may be used to inquire the status and further information of pending refunds.
+
 
 --->>>
 
@@ -2479,7 +2478,9 @@ This method may be called to refund a previous transaction.
 
 #### Request
 
-
+<div class="warning">
+  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
+</div>
 
 
 <table class="table">
