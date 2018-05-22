@@ -2933,7 +2933,7 @@ Numeric[8..8]<br />
 
 ## <a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel
 
-This method may be used to cancel previously authorized transactions or refunds.
+This method may be used to cancel previously authorized transactions and refunds.
 
 
 --->>>
