@@ -1722,7 +1722,7 @@ Numeric[8..8]<br />
 
 ## <a name="Payment_v1_Transaction_Capture"></a>Transaction Capture
 
-
+This method may be used to finalize previously authorized transactions and refunds.
 
 --->>>
 
