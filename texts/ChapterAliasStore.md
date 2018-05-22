@@ -313,6 +313,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 
 ## <a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert
 
+This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.
+
 <div class="danger">
 	<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
 </div>
