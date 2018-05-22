@@ -766,7 +766,7 @@ This method may be used to insert an alias directly with card-data collected by 
 
 ## <a name="Payment_v1_Alias_Delete"></a>Alias Delete
 
-
+This method may be used to delete previously inserted aliases.
 
 --->>>
 
