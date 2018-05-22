@@ -2003,10 +2003,8 @@ AlphaNumeric[11..11]<br />
 
 ## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture
 
+This method may be used to inquire the status and further information of pending captures.
 
-<div class="warning">
-  <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
-</div>
 
 --->>>
 
@@ -2019,7 +2017,9 @@ AlphaNumeric[11..11]<br />
 
 #### Request
 
-
+<div class="warning">
+  <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
+</div>
 
 
 <table class="table">
