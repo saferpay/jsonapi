@@ -105,7 +105,7 @@ dedicated passwords with a length of 16 alphanumeric characters (up to 32 charac
 
 HTTP Header:
 
-`Authorization: Basic [your base64 encoded user name + password]`
+`Authorization: Basic [your base64 encoded "user_name:password"]`
 
 <<<---
 
