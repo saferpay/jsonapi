@@ -63,7 +63,9 @@
 								<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
 								<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
 								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+								<li><a href="#Payment_v1_Transaction_MultipartCapture">Transaction MultipartCapture</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertCapture">Transaction AssertCapture</a></li>
+								<li><a href="#Payment_v1_Transaction_MultipartFinalize">Transaction MultipartFinalize</a></li>
 								<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertRefund">Transaction AssertRefund</a></li>
 								<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
@@ -73,7 +75,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="#ChapterAliasStore">Secure Alias Store</a>
+							<a href="#ChapterAliasStore">Secure Card Data</a>
 							<ul class="nav">
 								<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
 								<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
@@ -161,7 +163,9 @@
 								<li><a href="#Payment_v1_Transaction_AuthorizeDirect">Transaction AuthorizeDirect</a></li>
 								<li><a href="#Payment_v1_Transaction_AuthorizeReferenced">Transaction AuthorizeReferenced</a></li>
 								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
+								<li><a href="#Payment_v1_Transaction_MultipartCapture">Transaction MultipartCapture</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertCapture">Transaction AssertCapture</a></li>
+								<li><a href="#Payment_v1_Transaction_MultipartFinalize">Transaction MultipartFinalize</a></li>
 								<li><a href="#Payment_v1_Transaction_Refund">Transaction Refund</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertRefund">Transaction AssertRefund</a></li>
 								<li><a href="#Payment_v1_Transaction_RefundDirect">Transaction RefundDirect</a></li>
@@ -171,7 +175,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="#ChapterAliasStore">Secure Alias Store</a>
+							<a href="#ChapterAliasStore">Secure Card Data</a>
 							<ul class="nav">
 								<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
 								<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
@@ -650,7 +654,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Behavior&quot;: &quot;ABORT&quot;,
@@ -1121,7 +1125,7 @@ Possible values: MASTERPASS.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1220,7 +1224,7 @@ Possible values: MASTERPASS.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;Id of the request&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e1234&quot;,
@@ -1275,7 +1279,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1404,7 +1408,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -1459,7 +1463,7 @@ Id[1..50]<br>
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p>
 </div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
 		<tr>
@@ -1626,7 +1630,7 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYONE, POSTCARD, UNIONPAY, VISA.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br>
 					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
 	</i>
 </td>
@@ -1648,7 +1652,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -1779,7 +1783,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, JCB, MAESTRO, MASTERCARD, MYON
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -1886,7 +1890,7 @@ Numeric[3..4]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2016,7 +2020,7 @@ Numeric[3..4]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2121,7 +2125,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2218,7 +2222,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;PaymentMeans&quot;: {
@@ -2306,7 +2310,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2343,7 +2347,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -2351,7 +2355,7 @@ Id[1..50]<br>
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p>
 </div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
 		<tr>
@@ -2463,7 +2467,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2579,7 +2583,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2713,7 +2717,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -2823,7 +2827,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -2942,21 +2946,6 @@ Numeric[8..8]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>Partial</strong><br>
-	<span class="text-muted small">
-		
-			<a class="type-details in" href="#Payment_Models_Data_PartialCapture">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Optional partial capture options.<br> Note: Partial-Captures are only available with PayPal!</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br>
 	<span class="text-muted small">
 		
@@ -2968,11 +2957,24 @@ Numeric[8..8]<br>
 	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
 	<i class="small text-muted">
 			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Marketplace</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">container</a>
+	</span>
 </td>
-				</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3007,39 +3009,19 @@ Numeric[8..8]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>TransactionId</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
-	<i class="small text-muted">
-AlphaNumeric[1..64]<br>
-					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
-	</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>OrderId</strong><br>
+	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
 		string
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
+	<div style="padding-bottom: 10px">CaptureId of the created capture. Must be stored for later reference (eg refund).</div>
 	<i class="small text-muted">
-Id[1..80]<br>
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+Id[1..64]<br>
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA_c</span>
 	</i>
-</td>
-				</tr>
+</td></tr>
 				<tr>
 					<td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
@@ -3091,19 +3073,21 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending captures.</p></div><div class="col-md-6"><div class="info">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><p>Please bear in mind that:</p><ul>
+<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+<li>The sum of multipart captures must not exceed the authorized amount.</li>
+<li>A unique OrderPartId must be used for each request.</li>
+</ul></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="warning">
-  <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
-</div><table class="table">
+	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p>
+</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3143,11 +3127,191 @@ AlphaNumeric[11..11]<br>
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
 </td>
-				</tr>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Currency must match the original transaction currency (request will be declined if currency does not match)</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Type</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">'PARTIAL' if more captures should be possible later on, 'FINAL' if no more captures will be done on this authorization.</div>
+	<i class="small text-muted">
+Possible values: PARTIAL, FINAL.<br>
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderPartId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Must be unique. It identifies each individual step and is especially important for follow-up actions such as refund.</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+					<span>Example: kh9ngajrfe6wfu3d0c</span>
+	</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Marketplace</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">CaptureId of the created capture. Must be stored for later reference (eg refund).</div>
+	<i class="small text-muted">
+Id[1..64]<br>
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA_c</span>
+	</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Status</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
+	<i class="small text-muted">
+Possible values: PENDING, CAPTURED.<br>
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Date</strong><br>
+	<span class="text-muted small">
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
+	<i class="small text-muted">
+AlphaNumeric[11..11]<br>
+					<span>Example: 2014-04-25T08:33:44.159Z</span>
+	</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending capture transactions (only used for paydirekt at the moment)</p></div><div class="col-md-6"><div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p>
+</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3251,13 +3415,81 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartFinalize"><h2><a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize an authorized transaction (i.e. marks the end of partial captures).</p></div><div class="col-md-6"><div class="info">
+	<p><strong>Request URL:</strong></p>
+	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p>
+</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td></tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p>
@@ -3283,8 +3515,7 @@ AlphaNumeric[11..11]<br>
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
-</td>
-				</tr>
+</td></tr>
 				<tr>
 					<td class="col-sm-4 text-right">
 	<strong>Refund</strong><br>
@@ -3305,22 +3536,21 @@ AlphaNumeric[11..11]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>TransactionReference</strong><br>
+	<strong>CaptureReference</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_CaptureTransactionReference">container</a>
+			<a class="type-details in" href="#Payment_Models_CaptureReference">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Reference to the transaction you want to refund. Note, that not all processors support refunds.</div>
+	<div style="padding-bottom: 10px">Reference to the capture you want to refund.</div>
 	<i class="small text-muted">
 			</i>
-</td>
-				</tr>
+</td></tr>
 				<tr>
 					<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br>
@@ -3338,7 +3568,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3349,8 +3579,8 @@ AlphaNumeric[11..11]<br>
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     }
   },
-  &quot;TransactionReference&quot;: {
-    &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
+  &quot;CaptureReference&quot;: {
+    &quot;CaptureId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb_c&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -3430,7 +3660,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -3511,7 +3741,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3615,7 +3845,7 @@ AlphaNumeric[11..11]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -3626,7 +3856,7 @@ AlphaNumeric[11..11]<br>
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p>
 </div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
 		<tr>
@@ -3708,7 +3938,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3803,7 +4033,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -3882,7 +4112,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -3968,7 +4198,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
@@ -4125,7 +4355,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4220,7 +4450,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -4277,7 +4507,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4361,7 +4591,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -4554,7 +4784,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				</tr>			
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4648,7 +4878,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
@@ -4705,7 +4935,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4789,7 +5019,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -4893,7 +5123,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -4988,7 +5218,7 @@ Id[1..50]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -5058,7 +5288,7 @@ Id[1..40]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5091,7 +5321,7 @@ Id[1..40]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -5145,7 +5375,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5178,7 +5408,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
@@ -5247,7 +5477,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5334,7 +5564,7 @@ Numeric[8..8]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Alias&quot;: {
@@ -5430,7 +5660,7 @@ Id[1..80]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">SIX Tranasaction Reference</div>
+	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
 	<i class="small text-muted">
 					<span>Example: 1:100002:199970683910</span>
 	</i>
@@ -5438,7 +5668,7 @@ Id[1..80]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;,
     &quot;RetryIndicator&quot;: 0
@@ -5509,7 +5739,7 @@ Id[1..80]<br>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.9&quot;,
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
   &quot;Transaction&quot;: {
@@ -5561,8 +5791,8 @@ Id[1..80]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br>
-					<span>Example: 1.9</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
+					<span>Example: 1.10</span>
 	</i>
 </td>
 							</tr>
@@ -5676,8 +5906,8 @@ Id[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br>
-					<span>Example: 1.9</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
+					<span>Example: 1.10</span>
 	</i>
 </td>
 							</tr>
@@ -5763,6 +5993,75 @@ AlphaNumeric[8..11]<br>
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the Iban origin (if available)</div>
 	<i class="small text-muted">
 					<span>Example: CH</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_CaptureReference&quot;</h2>
+				<table class="table" id="Payment_Models_CaptureReference">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced capture.</div>
+	<i class="small text-muted">
+Id[1..64]<br>
+					<span>Example: jCUC8IAQ1OCptA5I8jpzAMxC5nWA_c</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced transaction. This should only be used if you don't have the CaptureId of the referenced Capture (probably, because it was performed with an older SpecVersion)</div>
+	<i class="small text-muted">
+AlphaNumeric[1..64]<br>
+					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderPartId</strong><br>
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderPartId of the reference capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+					<span>Example: kh9ngajrfe6wfu3d0c</span>
 	</i>
 </td>
 							</tr>
@@ -6442,59 +6741,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Payment_Models_Data_CaptureTransactionReference&quot;</h2>
-				<table class="table" id="Payment_Models_Data_CaptureTransactionReference">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>TransactionId</strong><br>
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
-	<i class="small text-muted">
-AlphaNumeric[1..64]<br>
-					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderId</strong><br>
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
-	<i class="small text-muted">
-Id[1..80]<br>
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderPartId</strong><br>
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">OrderPartId of the reference transaction if a partial capture should be referenced and the TransactionId of the partial capture is not available.</div>
-	<i class="small text-muted">
-Id[1..80]<br>
-					<span>Example: kh9ngajrfe6wfu3d0c</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Payment_Models_Data_Card&quot;</h2>
 				<table class="table" id="Payment_Models_Data_Card">
 					<tbody>
@@ -7035,6 +7281,59 @@ Possible values: NONE, MANDATORY.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_MarketplaceCapture&quot;</h2>
+				<table class="table" id="Payment_Models_Data_MarketplaceCapture">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SubmerchantId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf the capture or refund capture is being made.</div>
+	<i class="small text-muted">
+Id[1..15]<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Fee</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The marketplace fee that will be charged from the marketplace to the submerchant. <br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FeeRefund</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The fee amount that will be refunded from the marketplace to the submerchant.<br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_Notification&quot;</h2>
 				<table class="table" id="Payment_Models_Data_Notification">
 					<tbody>
@@ -7083,48 +7382,6 @@ Possible values: NONE, MANDATORY.<br>
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/notify</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container &quot;Payment_Models_Data_PartialCapture&quot;</h2>
-				<table class="table" id="Payment_Models_Data_PartialCapture">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Type</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">'PARTIAL' if more captures should be possible later on, 'FINAL' if no more captures will be done on this authorization.</div>
-	<i class="small text-muted">
-Possible values: PARTIAL, FINAL.<br>
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderPartId</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Must be unique. It identifies each individual step and is especially important for follow-up actions such as refund.</div>
-	<i class="small text-muted">
-Id[1..80]<br>
-					<span>Example: kh9ngajrfe6wfu3d0c</span>
 	</i>
 </td>
 							</tr>
