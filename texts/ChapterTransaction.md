@@ -1986,10 +1986,15 @@ AlphaNumeric[11..11]<br />
 
 This method may be used to capture multiple parts of an authorized transaction.
 
-Please bear in mind that:
-* No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).
-* The sum of multipart captures must not exceed the authorized amount.
-* A unique OrderPartId must be used for each request.
+<div class="info">
+	<p><strong>Important:</strong></p>
+	<ul>
+		<li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
+		<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+		<li>The sum of multipart captures must not exceed the authorized amount.</li>
+		<li>A unique OrderPartId must be used for each request.</li>
+	</ul>
+</div>
 
 --->>>
 
