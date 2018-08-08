@@ -7,6 +7,10 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.10.0.0"></a> Version 1.10 (released tbd)
+- available on Sandbox: 2018-08-14
+- introduced version 1.10
+
 ## <a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)
 - available on Sandbox: 2018-04-26
 - introduced version 1.9
