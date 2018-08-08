@@ -1,5 +1,6 @@
 # <a name="Changelog"></a> Changelog
 ## Table of Contents
+- [Version 1.10](#v1.10.0.0)
 - [Version 1.9](#v1.9.0.20180515)
 - [Version 1.8](#v1.8.0.20171114)
 - [Version 1.7](#v1.7.0.20170822)
