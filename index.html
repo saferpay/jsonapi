@@ -3080,11 +3080,15 @@ AlphaNumeric[11..11]<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><p>Please bear in mind that:</p><ul>
-<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
-<li>The sum of multipart captures must not exceed the authorized amount.</li>
-<li>A unique OrderPartId must be used for each request.</li>
-</ul></div><div class="col-md-6"><div class="info">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><div class="info">
+	<p><strong>Important:</strong></p>
+	<ul>
+		<li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
+		<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+		<li>The sum of multipart captures must not exceed the authorized amount.</li>
+		<li>A unique OrderPartId must be used for each request.</li>
+	</ul>
+</div></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p>
 </div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
