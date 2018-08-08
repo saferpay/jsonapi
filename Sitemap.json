@@ -118,9 +118,19 @@
         "Target": "index.html#Payment_v1_Transaction_Capture"
       },
       {
+        "Title": "Transaction MultipartCapture",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_MultipartCapture"
+      },
+      {
         "Title": "Transaction AssertCapture",
         "Source": "texts/ChapterTransaction.md",
         "Target": "index.html#Payment_v1_Transaction_AssertCapture"
+      },
+      {
+        "Title": "Transaction MultipartFinalize",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_MultipartFinalize"
       },
       {
         "Title": "Transaction Refund",
@@ -155,7 +165,7 @@
     ]
   },
   {
-    "Title": "Secure Alias Store",
+    "Title": "Secure Card Data",
     "Source": "texts/ChapterAliasStore.md",
     "Target": "index.html#ChapterAliasStore",
     "Subsites": [

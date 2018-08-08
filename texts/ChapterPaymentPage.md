@@ -288,7 +288,7 @@ Possible values: MASTERPASS.<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.9",
+    "SpecVersion": "1.10",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -404,7 +404,7 @@ Possible values: MASTERPASS.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.9",
+    "SpecVersion": "1.10",
     "RequestId": "Id of the request"
   },
   "Token": "234uhfh78234hlasdfh8234e1234",
@@ -492,7 +492,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.9",
+    "SpecVersion": "1.10",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -638,7 +638,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.9",
+    "SpecVersion": "1.10",
     "RequestId": "[your request id]"
   },
   "Transaction": {

@@ -17,8 +17,8 @@
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br />
-					<span>Example: 1.9</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br />
+					<span>Example: 1.10</span>
 	</i>
 </td>
 							</tr>
@@ -132,8 +132,8 @@ Id[1..50]<br />
 	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9<br />
-					<span>Example: 1.9</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br />
+					<span>Example: 1.10</span>
 	</i>
 </td>
 							</tr>
@@ -219,6 +219,75 @@ AlphaNumeric[8..11]<br />
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the Iban origin (if available)</div>
 	<i class="small text-muted">
 					<span>Example: CH</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_CaptureReference"</h2>
+				<table class="table" id="Payment_Models_CaptureReference">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced capture.</div>
+	<i class="small text-muted">
+Id[1..64]<br />
+					<span>Example: jCUC8IAQ1OCptA5I8jpzAMxC5nWA_c</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Id of the referenced transaction. This should only be used if you don't have the CaptureId of the referenced Capture (probably, because it was performed with an older SpecVersion)</div>
+	<i class="small text-muted">
+AlphaNumeric[1..64]<br />
+					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderPartId</strong><br />
+	<span class="text-muted small">
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">OrderPartId of the reference capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: kh9ngajrfe6wfu3d0c</span>
 	</i>
 </td>
 							</tr>
@@ -898,59 +967,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_CaptureTransactionReference"</h2>
-				<table class="table" id="Payment_Models_Data_CaptureTransactionReference">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>TransactionId</strong><br />
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
-	<i class="small text-muted">
-AlphaNumeric[1..64]<br />
-					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderId</strong><br />
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
-	<i class="small text-muted">
-Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderPartId</strong><br />
-	<span class="text-muted small">
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">OrderPartId of the reference transaction if a partial capture should be referenced and the TransactionId of the partial capture is not available.</div>
-	<i class="small text-muted">
-Id[1..80]<br />
-					<span>Example: kh9ngajrfe6wfu3d0c</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_Card"</h2>
 				<table class="table" id="Payment_Models_Data_Card">
 					<tbody>
@@ -1491,6 +1507,59 @@ Possible values: NONE, MANDATORY.<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_MarketplaceCapture"</h2>
+				<table class="table" id="Payment_Models_Data_MarketplaceCapture">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SubmerchantId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf the capture or refund capture is being made.</div>
+	<i class="small text-muted">
+Id[1..15]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Fee</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The marketplace fee that will be charged from the marketplace to the submerchant. <br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FeeRefund</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">The fee amount that will be refunded from the marketplace to the submerchant.<br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_Notification"</h2>
 				<table class="table" id="Payment_Models_Data_Notification">
 					<tbody>
@@ -1539,48 +1608,6 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/notify</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_PartialCapture"</h2>
-				<table class="table" id="Payment_Models_Data_PartialCapture">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Type</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">'PARTIAL' if more captures should be possible later on, 'FINAL' if no more captures will be done on this authorization.</div>
-	<i class="small text-muted">
-Possible values: PARTIAL, FINAL.<br />
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>OrderPartId</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		string
-	</span>
-</td>
-<td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Must be unique. It identifies each individual step and is especially important for follow-up actions such as refund.</div>
-	<i class="small text-muted">
-Id[1..80]<br />
-					<span>Example: kh9ngajrfe6wfu3d0c</span>
 	</i>
 </td>
 							</tr>
