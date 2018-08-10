@@ -1970,7 +1970,7 @@ AlphaNumeric[11..11]<br />
     "SpecVersion": "1.10",
     "RequestId": "[your request id]"
   },
-  "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
+  "CaptureId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
   "Status": "CAPTURED",
   "Date": "2015-01-30T12:45:22.258+01:00"
 }
