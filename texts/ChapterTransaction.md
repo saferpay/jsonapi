@@ -1823,7 +1823,7 @@ This method may be used to finalize previously authorized transactions and refun
 	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -1838,7 +1838,7 @@ This method may be used to finalize previously authorized transactions and refun
 	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 
 </table>
@@ -1906,7 +1906,7 @@ This method may be used to finalize previously authorized transactions and refun
 Id[1..64]<br />
 					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA_c</span>
 	</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2051,7 +2051,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2069,7 +2069,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 	<div style="padding-bottom: 10px">Currency must match the original transaction currency (request will be declined if currency does not match)</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2087,7 +2087,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 	<i class="small text-muted">
 Possible values: PARTIAL, FINAL.<br />
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2106,7 +2106,7 @@ Possible values: PARTIAL, FINAL.<br />
 Id[1..80]<br />
 					<span>Example: kh9ngajrfe6wfu3d0c</span>
 	</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2121,7 +2121,7 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 
 </table>
@@ -2163,7 +2163,7 @@ No example available
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2179,7 +2179,7 @@ No example available
 Id[1..64]<br />
 					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA_c</span>
 	</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2197,7 +2197,7 @@ Id[1..64]<br />
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2213,7 +2213,7 @@ Possible values: PENDING, CAPTURED.<br />
 AlphaNumeric[11..11]<br />
 					<span>Example: 2014-04-25T08:33:44.159Z</span>
 	</i>
-</td>;
+</td>
 				</tr>
 
 </table>
@@ -2272,17 +2272,17 @@ This method is only supported for pending capture transactions (only used for pa
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>TransactionReference</strong><br />
+	<strong>CaptureReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 		
-			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+			<a class="type-details in" href="#Payment_Models_CaptureReference">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2290,7 +2290,7 @@ This method is only supported for pending capture transactions (only used for pa
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 
 </table>
@@ -2478,7 +2478,7 @@ This method may be used to finalize an authorized transaction (i.e. marks the en
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2496,7 +2496,7 @@ This method may be used to finalize an authorized transaction (i.e. marks the en
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 
 </table>
@@ -2512,6 +2512,9 @@ No example available
 <<<---
 
 #### Response
+
+
+
 
 <table class="table">
 	<thead>
@@ -2594,7 +2597,7 @@ This method may be called to refund a previous transaction.
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
@@ -2630,7 +2633,7 @@ This method may be called to refund a previous transaction.
 	<div style="padding-bottom: 10px">Reference to the capture you want to refund.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
