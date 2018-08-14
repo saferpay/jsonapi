@@ -22,6 +22,7 @@
 ## <a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)
 - available on Sandbox: 2018-04-26
 - introduced version 1.9
+- added value `1.9` for _SpecVersion_
 - replaced container _ThreeDs_ from previous versions with _Liability_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) responses
 
 ## <a name="v1.8.0.20171114"></a> Version 1.8 (released 2017-11-14)
