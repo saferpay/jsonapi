@@ -1,6 +1,6 @@
 # <a name="Changelog"></a> Changelog
 ## Table of Contents
-- [Version 1.10](#v1.10.0.0)
+- [Version 1.10](#v1.10.0.0.tbd)
 - [Version 1.9](#v1.9.0.20180515)
 - [Version 1.8](#v1.8.0.20171114)
 - [Version 1.7](#v1.7.0.20170822)
@@ -8,9 +8,16 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
-## <a name="v1.10.0.0"></a> Version 1.10 (released tbd)
+## <a name="v1.10.0.0.tbd"></a> Version 1.10 (release date to be defined)
 - available on Sandbox: 2018-08-14
 - introduced version 1.10
+- added value `1.10` for _SpecVersion_
+- added method [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture) for capturing multiple parts of a transaction also supporting enhanced clearing for market places
+- added method [Transaction/MultipartFinalize](index.html#Payment_v1_Transaction_MultipartFinalize) to finalize a transaction that is still open for capturing additional parts
+- added container _MarketPlace_ to [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) request to support enhanced clearing for market places
+- removed container _Partial_ from [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) request - see method [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture) for details
+- replaced _TransactionId_ and _OrderId_ with _CaptureId_ in [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) response to uniquely identify captures
+- replaced container _TransactionReference_ with _CaptureReference_ in [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) and [Transaction/AssertCapture](index.html#Payment_v1_Transaction_AssertCapture) request to uniquely identify captures
 
 ## <a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)
 - available on Sandbox: 2018-04-26
