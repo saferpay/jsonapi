@@ -8966,16 +8966,23 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 					</tbody>
 				</table>
 </div></div></div></section><section id="Changelog"><h1><a name="Changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
-<li><a href="#v1.10.0.0">Version 1.10</a></li>
+<li><a href="#v1.10.0.0.tbd">Version 1.10</a></li>
 <li><a href="#v1.9.0.20180515">Version 1.9</a></li>
 <li><a href="#v1.8.0.20171114">Version 1.8</a></li>
 <li><a href="#v1.7.0.20170822">Version 1.7</a></li>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
-</ul></div></div></section><section id="v1.10.0.0"><h2><a name="v1.10.0.0"></a> Version 1.10 (released tbd)</h2><div class="row"><div class="col-md-6"><ul>
+</ul></div></div></section><section id="v1.10.0.0.tbd"><h2><a name="v1.10.0.0.tbd"></a> Version 1.10 (release date to be defined)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2018-08-14</li>
 <li>introduced version 1.10</li>
+<li>added value <code>1.10</code> for <em>SpecVersion</em></li>
+<li>added method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for capturing multiple parts of a transaction also supporting enhanced clearing for market places</li>
+<li>added method <a href="index.html#Payment_v1_Transaction_MultipartFinalize">Transaction/MultipartFinalize</a> to finalize a transaction that is still open for capturing additional parts</li>
+<li>added container <em>MarketPlace</em> to <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request to support enhanced clearing for market places</li>
+<li>removed container <em>Partial</em> from <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request - see method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for details</li>
+<li>replaced <em>TransactionId</em> and <em>OrderId</em> with <em>CaptureId</em> in <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> response to uniquely identify captures</li>
+<li>replaced container <em>TransactionReference</em> with <em>CaptureReference</em> in <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> and <a href="index.html#Payment_v1_Transaction_AssertCapture">Transaction/AssertCapture</a> request to uniquely identify captures</li>
 </ul></div></div></section><section id="v1.9.0.20180515"><h2><a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2018-04-26</li>
 <li>introduced version 1.9</li>
