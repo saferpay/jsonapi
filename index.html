@@ -3207,7 +3207,30 @@ Id[1..80]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+    &quot;RequestHeader&quot;: {
+      &quot;SpecVersion&quot;: &quot;1.10&quot;,
+      &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+      &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
+      &quot;RetryIndicator&quot;: 0
+    },
+    &quot;TransactionReference&quot;: {
+        &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
+    },
+    &quot;Amount&quot;: {
+        &quot;Value&quot;: &quot;1000&quot;,
+        &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    },
+    &quot;Type&quot;: &quot;PARTIAL&quot;,
+    &quot;OderPartId&quot;: &quot;123456789&quot;,
+    &quot;Marketplace&quot;: {
+        &quot;SubmerchantId&quot;: &quot;17312345&quot;,
+        &quot;Fee&quot;: {
+            &quot;Value&quot;: &quot;500&quot;,
+            &quot;CurrencyCode&quot;: &quot;CHF&quot;
+        }
+    }
+}
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
@@ -3282,7 +3305,15 @@ AlphaNumeric[11..11]<br>
 	</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;RequestId&quot;: &quot;[unique request identifier]&quot;
+  },
+  &quot;CaptureId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb_c&quot;,
+  &quot;Status&quot;: &quot;CAPTURED&quot;,
+  &quot;Date&quot;: &quot;2018-08-08T12:45:22.258+01:00&quot;
+}
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending capture transactions (only used for paydirekt at the moment)</p></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p>
@@ -3486,7 +3517,17 @@ AlphaNumeric[11..11]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+    &quot;RequestHeader&quot;: {
+      &quot;SpecVersion&quot;: &quot;1.10&quot;,
+      &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+      &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
+      &quot;RetryIndicator&quot;: 0
+    },
+    &quot;TransactionReference&quot;: {
+        &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
+    }
+}
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
@@ -3510,7 +3551,12 @@ AlphaNumeric[11..11]<br>
 	<i class="small text-muted">
 			</i>
 </td></tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+    &quot;ResponseHeader&quot;: {
+        &quot;SpecVersion&quot;: &quot;1.10&quot;,
+        &quot;RequestId&quot;: &quot;[unique request identifier]&quot;
+    }
+}
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p>
