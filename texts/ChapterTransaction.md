@@ -2131,7 +2131,30 @@ Id[1..80]<br />
 
 <p>Example:</p>
 <pre class="prettyprint">
-No example available
+{
+    "RequestHeader": {
+      "SpecVersion": "1.10",
+      "CustomerId": "[your customer id]",
+      "RequestId": "[unique request identifier]",
+      "RetryIndicator": 0
+    },
+    "TransactionReference": {
+        "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+    },
+    "Amount": {
+        "Value": "1000",
+        "CurrencyCode": "CHF"
+    },
+    "Type": "PARTIAL",
+    "OderPartId": "123456789",
+    "Marketplace": {
+        "SubmerchantId": "17312345",
+        "Fee": {
+            "Value": "500",
+            "CurrencyCode": "CHF"
+        }
+    }
+}
 </pre>
 
 <<<---
@@ -2223,7 +2246,15 @@ AlphaNumeric[11..11]<br />
 
 <p>Example:</p>
 <pre class="prettyprint">
-No example available
+{
+  "ResponseHeader": {
+    "SpecVersion": "1.10",
+    "RequestId": "[unique request identifier]"
+  },
+  "CaptureId": "723n4MAjMdhjSAhAKEUdA8jtl9jb_c",
+  "Status": "CAPTURED",
+  "Date": "2018-08-08T12:45:22.258+01:00"
+}
 </pre>
 
 <<<---
@@ -2506,7 +2537,17 @@ This method may be used to finalize an authorized transaction (i.e. marks the en
 
 <p>Example:</p>
 <pre class="prettyprint">
-No example available
+{
+    "RequestHeader": {
+      "SpecVersion": "1.10",
+      "CustomerId": "[your customer id]",
+      "RequestId": "[unique request identifier]",
+      "RetryIndicator": 0
+    },
+    "TransactionReference": {
+        "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+    }
+}
 </pre>
 
 <<<---
@@ -2548,7 +2589,12 @@ No example available
 
 <p>Example:</p>
 <pre class="prettyprint">
-No example available
+{
+    "ResponseHeader": {
+        "SpecVersion": "1.10",
+        "RequestId": "[unique request identifier]"
+    }
+}
 </pre>
 
 <<<---
