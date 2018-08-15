@@ -136,6 +136,8 @@ The signed client certificate will then be downloaded through your browser.
 While these Documents are meant as a quick reference and technical specification of the Saferpay JSON-API, [the Saferpay Integration Guide](https://saferpay.github.io/sndbx/index.html) contains an in debth explanation about payment-flows, tips and tricks, aswell as best practices for those, who want to integrate the JSON-API and its features for the first time.
 It will also help to understand certain characteristics about the different payment methods we offer, as well as the rules you must follow, when processing vital credit card data and more.
 
+The sequential steps of the general integration process are described in our [Step-by-step Integration-Manual](https://www.six-payment-services.com/en/site/e-commerce/support/integration.html).
+
 ### Server-to-Server code Samples
 
 The JSON API is a modern and lightweight interface, that can be used with all shop
