@@ -428,7 +428,7 @@ function do_curl($username,$password,$url, $payload){
 	$body = json_decode(curl_multi_getcontent($curl),true);		
         //Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
         $response = array(
-            &quot;status&quot; =&gt; $status,
+            &quot;status&quot; =&gt; $status.&quot; &lt;|&gt; &quot;.curl_error($curl),
             &quot;body&quot; =&gt; $body
         );
     }else{
