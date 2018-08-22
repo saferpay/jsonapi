@@ -193,7 +193,7 @@ private object SubmitRequest(string sfpUrl, object request, string sfpLogin, str
     // for details on NoKeepAliveWebClient, see https://github.com/saferpay/jsonapi/blob/master/snippets/NoKeepAliveWebClient.cs
     using (var client = new NoKeepAliveWebClient())
     {
-        string authInfo = string.Format("{0}:{1}", sfpLogin, sfpPassword);
+        string authInfo = $"{sfpLogin}:{sfpPassword}";
         client.Headers[HttpRequestHeader.Authorization] = "Basic " + Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
         client.Headers[HttpRequestHeader.Accept] = "application/json";
         client.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
@@ -203,10 +203,24 @@ private object SubmitRequest(string sfpUrl, object request, string sfpLogin, str
             var responseData = client.UploadString(sfpUrl, JsonConvert.SerializeObject(request));
             return JsonConvert.DeserializeObject(responseData);
         }
-        catch (WebException)
+        catch (WebException we)
         {
-            Trace.WriteLine("Web exception occured");
-            // handle error response here
+            if (we.Response is HttpWebResponse response)
+            {
+                Trace.WriteLine($"Web exception occured: {response.StatusCode} {response.StatusDescription}");
+                if (response.ContentLength > 0)
+                {
+                    using (var rs = we.Response.GetResponseStream())
+                    using (var sr = new StreamReader(rs))
+                    {
+                        Trace.WriteLine($"{sr.ReadToEnd()}");
+                    }
+                }
+            }
+            else
+            {
+                Trace.WriteLine($"Web exception occured: {we.Message} ({we.Status}");
+            }
             throw;
         }
     }
@@ -246,7 +260,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 }</pre>
     </div>
     <div class="tab-pane" id="php">
-      <pre class="prettyprint"> 
+      <pre class="prettyprint">
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
     'RequestHeader' => array(
@@ -302,11 +316,10 @@ function do_curl($username,$password,$url, $payload){
     //Execute call via http-POST
     curl_setopt($curl, CURLOPT_POST, true);
     //Set POST-Body
-        //convert DATA-Array into a JSON-Object
+    //convert DATA-Array into a JSON-Object
     curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
     //WARNING!!!!!
-    //This option should NOT be "false"
-    //Otherwise the connection is not secured
+    //This option should NOT be "false", otherwise the connection is not secured
     //You can turn it of if you're working on the test-system with no vital data
     //PLEASE NOTE:
     //Under Windows (using WAMP or XAMP) it is necessary to manually download and save the necessary SSL-Root certificates!
@@ -316,24 +329,24 @@ function do_curl($username,$password,$url, $payload){
     //curl.cainfo=c:\path\to\file\cacert.pem
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
-    //HTTP-Basic Authentication for the Saferpay JSON-API. 
+    //HTTP-Basic Authentication for the Saferpay JSON-API.
     //This will set the authentication header and encode the password & username in Base64 for you
     curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
     //CURL-Execute & catch response
     $jsonResponse = curl_exec($curl);
     //Get HTTP-Status
-    //Abort if Status != 200 
+    //Abort if Status != 200
     $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-    if ( $status != 200 ) {
+    if ($status != 200) {
         //IF ERROR
         //Get http-Body (if aplicable) from CURL-response
-	$body = json_decode(curl_multi_getcontent($curl),true);		
+        $body = json_decode(curl_multi_getcontent($curl), true);
         //Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
         $response = array(
-            "status" => $status." <|> ".curl_error($curl),
+            "status" => $status . " <|> " . curl_error($curl),
             "body" => $body
         );
-    }else{
+    } else {
         //IF OK
         //Convert response into an Array
         $body = json_decode($jsonResponse, true);
