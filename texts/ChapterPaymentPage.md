@@ -681,7 +681,7 @@ Id[1..50]<br />
                 "FraudFree": {
                   "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
                   "LiabilityShift": false,
-                  "Score": 0.6
+                  "Score": 0.6,
                   "InvestigationPoints": ["susp_bill_ad", "susp_machine"],
                 }
               }
