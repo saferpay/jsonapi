@@ -1419,39 +1419,55 @@ Id[1..50]<br>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;PAYMENT&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;VISA Saferpay Test&quot;,
-    &quot;AcquirerReference&quot;: &quot;000000&quot;,
-    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;ApprovalCode&quot;: &quot;012345&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 9,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  }
-}
+              &quot;ResponseHeader&quot;: {
+                &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                &quot;RequestId&quot;: &quot;[your request id]&quot;
+              },
+              &quot;Transaction&quot;: {
+                &quot;Type&quot;: &quot;PAYMENT&quot;,
+                &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+                &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+                &quot;Date&quot;: &quot;2015-01-30T13:45:22.258+02:00&quot;,
+                &quot;Amount&quot;: {
+                  &quot;Value&quot;: &quot;100&quot;,
+                  &quot;CurrencyCode&quot;: &quot;CHF&quot;
+                },
+                &quot;AcquirerName&quot;: &quot;Saferpay Test Card&quot;,
+                &quot;AcquirerReference&quot;: &quot;000000&quot;,
+                &quot;SixTransactionReference&quot;:&quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+                &quot;ApprovalCode&quot;:&quot;012345&quot;
+              },
+              &quot;PaymentMeans&quot;: {
+                &quot;Brand&quot;: {
+                  &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                  &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+                },
+               &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+                &quot;Card&quot;: {
+                  &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                  &quot;ExpYear&quot;: 2015,
+                  &quot;ExpMonth&quot;: 9,
+                  &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                  &quot;CountryCode&quot;: &quot;CH&quot;
+                },
+              },
+              &quot;Liability&quot;:{
+                &quot;LiabilityShift&quot;: true,
+                &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+                &quot;ThreeDs&quot;: {
+                  &quot;Authenticated&quot;: true,
+                  &quot;LiabilityShift&quot;: true,
+                  &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+                  &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+                },
+                &quot;FraudFree&quot;: {
+                  &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+                  &quot;LiabilityShift&quot;: false,
+                  &quot;Score&quot;: 0.6
+                  &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
+                }
+              }
+            }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransactionProcess"><h2><a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.</p><div class="warning">
 	<p><strong>Important Note:</strong> The Transaction Interface offers all sorts of options to perform transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html">read our Saferpay Integration guide</a>, which offers an in debth explanation on how to integrate the Transaction Interface, optional features, best practices and more.</p>
 </div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
@@ -2031,49 +2047,58 @@ Numeric[3..4]<br>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;PAYMENT&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-    &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;VISA Saferpay Test&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
-    &quot;SixTransactionReference&quot;: &quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-    &quot;ApprovalCode&quot;: &quot;012345&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 9,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  },
-  &quot;ThreeDs&quot;: {
-    &quot;Authenticated&quot;: true,
-    &quot;LiabilityShift&quot;: true,
-    &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-    &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-  }
-}
+               &quot;ResponseHeader&quot;: {
+                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                 &quot;RequestId&quot;: &quot;[your request id]&quot;,
+               },
+               &quot;Transaction&quot;: {
+                 &quot;Type&quot;: &quot;PAYMENT&quot;,
+                 &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+                 &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+                 &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
+                 &quot;Amount&quot;: {
+                   &quot;Value&quot;: &quot;100&quot;,
+                   &quot;CurrencyCode&quot;: &quot;CHF&quot;
+                 },
+                 &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
+                 &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+                 &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+                 &quot;ApprovalCode&quot;:&quot;012345&quot;
+               },
+               &quot;PaymentMeans&quot;: {
+                 &quot;Brand&quot;: {
+                   &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                   &quot;Name&quot;: &quot;SaferpayTestCard&quot;
+               },
+               &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+               &quot;Card&quot;: {
+                 &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                 &quot;ExpYear&quot;: 2015,
+                 &quot;ExpMonth&quot;: 9,
+                 &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                 &quot;CountryCode&quot;: &quot;CH&quot;
+               },
+               &quot;Payer&quot;: {
+                 &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+                 &quot;IpLocation&quot;: &quot;DE&quot;
+               },
+               &quot;Liability&quot;:{
+                 &quot;LiabilityShift&quot;: true,
+                 &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+                 &quot;ThreeDs&quot;: {
+                   &quot;Authenticated&quot;: true,
+                   &quot;LiabilityShift&quot;: true,
+                   &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+                   &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+                 },
+                 &quot;FraudFree&quot;: {
+                   &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+                   &quot;LiabilityShift&quot;: false,
+                   &quot;Score&quot;: 0.6
+                   &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
+                 }
+               }
+             }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p>
@@ -3059,6 +3084,9 @@ Possible values: PENDING, CAPTURED.<br>
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -3066,8 +3094,7 @@ Possible values: PENDING, CAPTURED.<br>
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -3305,6 +3332,9 @@ Possible values: PENDING, CAPTURED.<br>
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -3312,8 +3342,7 @@ Possible values: PENDING, CAPTURED.<br>
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2018-08-08T12:45:22.258+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -3378,7 +3407,7 @@ AlphaNumeric[11..11]<br>
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
   },
-  &quot;TransactionReference&quot;: {
+  &quot;CaptureReference&quot;: {
     &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
   }
 }
@@ -3463,6 +3492,9 @@ Possible values: PENDING, CAPTURED.<br>
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -3470,8 +3502,7 @@ Possible values: PENDING, CAPTURED.<br>
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -3530,15 +3561,15 @@ AlphaNumeric[11..11]<br>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-    &quot;RequestHeader&quot;: {
-      &quot;SpecVersion&quot;: &quot;1.10&quot;,
-      &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
-      &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
-      &quot;RetryIndicator&quot;: 0
-    },
-    &quot;TransactionReference&quot;: {
-        &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
-    }
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;TransactionReference&quot;: {
+    &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
+  }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
@@ -3562,12 +3593,13 @@ AlphaNumeric[11..11]<br>
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
-</td></tr>
+</td>
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-    &quot;ResponseHeader&quot;: {
-        &quot;SpecVersion&quot;: &quot;1.10&quot;,
-        &quot;RequestId&quot;: &quot;[unique request identifier]&quot;
-    }
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;RequestId&quot;: &quot;[unique request identifier]&quot;
+  }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
@@ -3912,6 +3944,9 @@ Possible values: PENDING, CAPTURED.<br>
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -3919,8 +3954,7 @@ Possible values: PENDING, CAPTURED.<br>
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -4273,7 +4307,7 @@ Numeric[8..8]<br>
 	
 	<div style="padding-bottom: 10px">Date and time of cancel.</div>
 	<i class="small text-muted">
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -4862,7 +4896,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>			
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.10&quot;,
@@ -5654,8 +5688,8 @@ Numeric[8..8]<br>
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;SAFERPAYTEST&quot;,
-      &quot;Name&quot;: &quot;Saferpay Test Card&quot;
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
     },
     &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
     &quot;Card&quot;: {
@@ -5839,8 +5873,8 @@ Id[1..80]<br>
   },
   &quot;PaymentMeans&quot;: {
     &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;SAFERPAYTEST&quot;,
-      &quot;Name&quot;: &quot;Saferpay Test Card&quot;
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
     },
     &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
     &quot;Card&quot;: {
