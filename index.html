@@ -9035,9 +9035,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 <li>available on Sandbox: 2018-08-14</li>
 <li>introduced version 1.10</li>
 <li>added value <code>1.10</code> for <em>SpecVersion</em></li>
-<li>added method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for capturing multiple parts of a transaction also supporting enhanced clearing for market places</li>
+<li>added method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for capturing multiple parts of a transaction also supporting enhanced clearing for marketplaces</li>
 <li>added method <a href="index.html#Payment_v1_Transaction_MultipartFinalize">Transaction/MultipartFinalize</a> to finalize a transaction that is still open for capturing additional parts</li>
-<li>added container <em>MarketPlace</em> to <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request to support enhanced clearing for market places</li>
+<li>added container <em>MarketPlace</em> to <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request to support enhanced clearing for marketplaces</li>
 <li>removed container <em>Partial</em> from <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request - see method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for details</li>
 <li>replaced <em>TransactionId</em> and <em>OrderId</em> with <em>CaptureId</em> in <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> response to uniquely identify captures</li>
 <li>replaced container <em>TransactionReference</em> with <em>CaptureReference</em> in <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> and <a href="index.html#Payment_v1_Transaction_AssertCapture">Transaction/AssertCapture</a> request to uniquely identify captures</li>
