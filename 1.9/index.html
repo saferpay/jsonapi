@@ -1433,6 +1433,22 @@ Id[1..50]<br>
       &quot;ExpMonth&quot;: 9,
       &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
       &quot;CountryCode&quot;: &quot;CH&quot;
+    },
+    &quot;Liability&quot;:{
+      &quot;LiabilityShift&quot;: true,
+      &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+      &quot;ThreeDs&quot;: {
+        &quot;Authenticated&quot;: true,
+        &quot;LiabilityShift&quot;: true,
+        &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+        &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+      },
+      &quot;FraudFree&quot;: {
+        &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+        &quot;LiabilityShift&quot;: false,
+        &quot;Score&quot;: 0.6,
+        &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
+      }
     }
   }
 }
@@ -2051,11 +2067,21 @@ Numeric[3..4]<br>
     &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
     &quot;IpLocation&quot;: &quot;DE&quot;
   },
-  &quot;ThreeDs&quot;: {
-    &quot;Authenticated&quot;: true,
+  &quot;Liability&quot;:{
     &quot;LiabilityShift&quot;: true,
-    &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-    &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+    &quot;ThreeDs&quot;: {
+      &quot;Authenticated&quot;: true,
+      &quot;LiabilityShift&quot;: true,
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+    },
+    &quot;FraudFree&quot;: {
+      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+      &quot;LiabilityShift&quot;: false,
+      &quot;Score&quot;: 0.6,
+      &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
+    }
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info">
