@@ -671,49 +671,58 @@ Numeric[3..4]<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-  "ResponseHeader": {
-    "SpecVersion": "1.10",
-    "RequestId": "[your request id]"
-  },
-  "Transaction": {
-    "Type": "PAYMENT",
-    "Status": "AUTHORIZED",
-    "Id": "MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
-    "Date": "2015-09-18T09:19:27.078Z",
-    "Amount": {
-      "Value": "100",
-      "CurrencyCode": "CHF"
-    },
-    "AcquirerName": "VISA Saferpay Test",
-    "AcquirerReference": "Reference",
-    "SixTransactionReference": "0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
-    "ApprovalCode": "012345"
-  },
-  "PaymentMeans": {
-    "Brand": {
-      "PaymentMethod": "VISA",
-      "Name": "VISA"
-    },
-    "DisplayText": "9123 45xx xxxx 1234",
-    "Card": {
-      "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
-      "ExpMonth": 9,
-      "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
-    }
-  },
-  "Payer": {
-    "IpAddress": "1.2.3.4",
-    "IpLocation": "DE"
-  },
-  "ThreeDs": {
-    "Authenticated": true,
-    "LiabilityShift": true,
-    "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
-    "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
-  }
-}
+               "ResponseHeader": {
+                 "SpecVersion": "1.10",
+                 "RequestId": "[your request id]",
+               },
+               "Transaction": {
+                 "Type": "PAYMENT",
+                 "Status": "AUTHORIZED",
+                 "Id": "MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
+                 "Date": "2015-09-18T09:19:27.078Z",
+                 "Amount": {
+                   "Value": "100",
+                   "CurrencyCode": "CHF"
+                 },
+                 "AcquirerName": "AcquirerName",
+                 "AcquirerReference": "Reference",
+                 "SixTransactionReference":"0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
+                 "ApprovalCode":"012345"
+               },
+               "PaymentMeans": {
+                 "Brand": {
+                   "PaymentMethod": "VISA",
+                   "Name": "SaferpayTestCard"
+               },
+               "DisplayText": "9123 45xx xxxx 1234",
+               "Card": {
+                 "MaskedNumber": "912345xxxxxx1234",
+                 "ExpYear": 2015,
+                 "ExpMonth": 9,
+                 "HolderName": "Max Mustermann",
+                 "CountryCode": "CH"
+               },
+               "Payer": {
+                 "IpAddress": "1.2.3.4",
+                 "IpLocation": "DE"
+               },
+               "Liability":{
+                 "LiabilityShift": true,
+                 "LiableEntity": "ThreeDs",
+                 "ThreeDs": {
+                   "Authenticated": true,
+                   "LiabilityShift": true,
+                   "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
+                   "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
+                 },
+                 "FraudFree": {
+                   "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
+                   "LiabilityShift": false,
+                   "Score": 0.6
+                   "InvestigationPoints": ["susp_bill_ad", "susp_machine"],
+                 }
+               }
+             }
 </pre>
 
 <<<---
@@ -1930,6 +1939,9 @@ Possible values: PENDING, CAPTURED.<br />
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -1937,8 +1949,7 @@ Possible values: PENDING, CAPTURED.<br />
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -2226,6 +2237,9 @@ Possible values: PENDING, CAPTURED.<br />
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -2233,8 +2247,7 @@ Possible values: PENDING, CAPTURED.<br />
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2018-08-08T12:45:22.258+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -2338,7 +2351,7 @@ This method is only supported for pending capture transactions (only used for pa
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
   },
-  "TransactionReference": {
+  "CaptureReference": {
     "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
   }
 }
@@ -2432,6 +2445,9 @@ Possible values: PENDING, CAPTURED.<br />
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -2439,8 +2455,7 @@ Possible values: PENDING, CAPTURED.<br />
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -2538,15 +2553,15 @@ This method may be used to finalize an authorized transaction (i.e. marks the en
 <p>Example:</p>
 <pre class="prettyprint">
 {
-    "RequestHeader": {
-      "SpecVersion": "1.10",
-      "CustomerId": "[your customer id]",
-      "RequestId": "[unique request identifier]",
-      "RetryIndicator": 0
-    },
-    "TransactionReference": {
-        "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
-    }
+  "RequestHeader": {
+    "SpecVersion": "1.10",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request identifier]",
+    "RetryIndicator": 0
+  },
+  "TransactionReference": {
+    "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+  }
 }
 </pre>
 
@@ -2579,7 +2594,7 @@ This method may be used to finalize an authorized transaction (i.e. marks the en
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
-</td>;
+</td>
 				</tr>
 
 </table>
@@ -2590,10 +2605,10 @@ This method may be used to finalize an authorized transaction (i.e. marks the en
 <p>Example:</p>
 <pre class="prettyprint">
 {
-    "ResponseHeader": {
-        "SpecVersion": "1.10",
-        "RequestId": "[unique request identifier]"
-    }
+  "ResponseHeader": {
+    "SpecVersion": "1.10",
+    "RequestId": "[unique request identifier]"
+  }
 }
 </pre>
 
@@ -3026,6 +3041,9 @@ Possible values: PENDING, CAPTURED.<br />
 					<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		date
 	</span>
 </td>
@@ -3033,8 +3051,7 @@ Possible values: PENDING, CAPTURED.<br />
 	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>
@@ -3484,7 +3501,7 @@ This method may be used to cancel previously authorized transactions and refunds
 	
 	<div style="padding-bottom: 10px">Date and time of cancel.</div>
 	<i class="small text-muted">
-					<span>Example: 2014-04-25T08:33:44.159Z</span>
+					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
 	</i>
 </td>
 				</tr>

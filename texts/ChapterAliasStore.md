@@ -174,7 +174,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>			
+				</tr>
 
 </table>
 

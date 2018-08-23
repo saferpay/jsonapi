@@ -203,8 +203,8 @@ This function may be used to create an alias by providing a SixTransactionRefere
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
@@ -436,8 +436,8 @@ This response returns an acquired OmniChannel transaction.
   },
   "PaymentMeans": {
     "Brand": {
-      "PaymentMethod": "SAFERPAYTEST",
-      "Name": "Saferpay Test Card"
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
     },
     "DisplayText": "9123 45xx xxxx 1234",
     "Card": {
