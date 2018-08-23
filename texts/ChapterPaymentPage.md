@@ -669,7 +669,7 @@ Id[1..50]<br />
                   "CountryCode": "CH"
                 },
               },
-              "Liability":{
+              "Liability": {
                 "LiabilityShift": true,
                 "LiableEntity": "ThreeDs",
                 "ThreeDs": {

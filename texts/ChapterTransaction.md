@@ -706,7 +706,7 @@ Numeric[3..4]<br />
                  "IpAddress": "1.2.3.4",
                  "IpLocation": "DE"
                },
-               "Liability":{
+               "Liability": {
                  "LiabilityShift": true,
                  "LiableEntity": "ThreeDs",
                  "ThreeDs": {
