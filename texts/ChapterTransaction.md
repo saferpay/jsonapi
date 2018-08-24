@@ -2352,7 +2352,7 @@ This method is only supported for pending capture transactions (only used for pa
     "RetryIndicator": 0
   },
   "CaptureReference": {
-    "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+    "CaptureId": "24218eabae254caea6f898e413fe_c"
   }
 }
 </pre>
