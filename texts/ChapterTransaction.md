@@ -2203,7 +2203,7 @@ Id[1..64]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 			</i>
@@ -2304,7 +2304,7 @@ This method is only supported for pending capture transactions (only used for pa
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<div style="padding-bottom: 10px">Reference to the capture.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2408,7 +2408,7 @@ Id[1..80]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 			</i>
@@ -2995,7 +2995,7 @@ Id[1..80]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Current status of the capture (PENDING is only used for paydirekt at the moment).</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 			</i>
@@ -3135,7 +3135,7 @@ Numeric[8..8]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Information on the means of payment</div>
+	<div style="padding-bottom: 10px">Information on the means of payment. Important: Only fully PCI certified merchants may directly use the card data.<br> If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead.<br> If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
 </td>

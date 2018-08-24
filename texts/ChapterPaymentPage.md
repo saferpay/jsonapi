@@ -28,16 +28,11 @@ This chapter will give you a simple overview about the transaction flow, when us
 
 ## <a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize
 
-
 This method can be used to start a transaction with the Payment Page which may involve either DCC and / or 3d-secure
-
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/PaymentPage/Initialize</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Initialize</p></div>
 
 <<<---
 
@@ -427,10 +422,7 @@ If the transaction failed (the payer was redirected to the Fail url or he manipu
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p></div>
 
 <<<---
 
@@ -682,7 +674,10 @@ Id[1..50]<br />
       "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
       "LiabilityShift": false,
       "Score": 0.6,
-      "InvestigationPoints": ["susp_bill_ad", "susp_machine"]
+      "InvestigationPoints": [
+        "susp_bill_ad",
+        "susp_machine"
+      ]
     }
   }
 }

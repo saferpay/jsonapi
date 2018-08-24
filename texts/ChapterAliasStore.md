@@ -513,7 +513,7 @@ Id[1..50]<br />
 
 ## <a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect
 
-This method may be used to insert an alias directly with card-data collected by using your own HTML form. 
+This method may be used to insert an alias directly with card-data collected by using your own HTML form.
 
 --->>>
 
@@ -598,7 +598,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.</div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
 			</i>
 </td>
