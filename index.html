@@ -2050,58 +2050,58 @@ Numeric[3..4]<br>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-               &quot;ResponseHeader&quot;: {
-                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
-                 &quot;RequestId&quot;: &quot;[your request id]&quot;,
-               },
-               &quot;Transaction&quot;: {
-                 &quot;Type&quot;: &quot;PAYMENT&quot;,
-                 &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-                 &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-                 &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
-                 &quot;Amount&quot;: {
-                   &quot;Value&quot;: &quot;100&quot;,
-                   &quot;CurrencyCode&quot;: &quot;CHF&quot;
-                 },
-                 &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-                 &quot;AcquirerReference&quot;: &quot;Reference&quot;,
-                 &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-                 &quot;ApprovalCode&quot;:&quot;012345&quot;
-               },
-               &quot;PaymentMeans&quot;: {
-                 &quot;Brand&quot;: {
-                   &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-                   &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-               },
-               &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-               &quot;Card&quot;: {
-                 &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-                 &quot;ExpYear&quot;: 2015,
-                 &quot;ExpMonth&quot;: 9,
-                 &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-                 &quot;CountryCode&quot;: &quot;CH&quot;
-               },
-               &quot;Payer&quot;: {
-                 &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-                 &quot;IpLocation&quot;: &quot;DE&quot;
-               },
-               &quot;Liability&quot;: {
-                 &quot;LiabilityShift&quot;: true,
-                 &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
-                 &quot;ThreeDs&quot;: {
-                   &quot;Authenticated&quot;: true,
-                   &quot;LiabilityShift&quot;: true,
-                   &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-                   &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-                 },
-                 &quot;FraudFree&quot;: {
-                   &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
-                   &quot;LiabilityShift&quot;: false,
-                   &quot;Score&quot;: 0.6,
-                   &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
-                 }
-               }
-             }
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;,
+  },
+  &quot;Transaction&quot;: {
+    &quot;Type&quot;: &quot;PAYMENT&quot;,
+    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+    &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+    &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    },
+    &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
+    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+    &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+    &quot;ApprovalCode&quot;:&quot;012345&quot;
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+  },
+  &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+  &quot;Card&quot;: {
+    &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+    &quot;ExpYear&quot;: 2015,
+    &quot;ExpMonth&quot;: 9,
+    &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+    &quot;CountryCode&quot;: &quot;CH&quot;
+  },
+  &quot;Payer&quot;: {
+    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+    &quot;IpLocation&quot;: &quot;DE&quot;
+  },
+  &quot;Liability&quot;: {
+    &quot;LiabilityShift&quot;: true,
+    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+    &quot;ThreeDs&quot;: {
+      &quot;Authenticated&quot;: true,
+      &quot;LiabilityShift&quot;: true,
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+    },
+    &quot;FraudFree&quot;: {
+      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+      &quot;LiabilityShift&quot;: false,
+      &quot;Score&quot;: 0.6,
+      &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
+    }
+  }
+}
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info">
 	<p><strong>Request URL:</strong></p>
 	<p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p>
