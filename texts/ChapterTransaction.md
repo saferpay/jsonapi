@@ -671,58 +671,58 @@ Numeric[3..4]<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-               "ResponseHeader": {
-                 "SpecVersion": "1.10",
-                 "RequestId": "[your request id]",
-               },
-               "Transaction": {
-                 "Type": "PAYMENT",
-                 "Status": "AUTHORIZED",
-                 "Id": "MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
-                 "Date": "2015-09-18T09:19:27.078Z",
-                 "Amount": {
-                   "Value": "100",
-                   "CurrencyCode": "CHF"
-                 },
-                 "AcquirerName": "AcquirerName",
-                 "AcquirerReference": "Reference",
-                 "SixTransactionReference":"0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
-                 "ApprovalCode":"012345"
-               },
-               "PaymentMeans": {
-                 "Brand": {
-                   "PaymentMethod": "VISA",
-                   "Name": "VISA Saferpay Test"
-               },
-               "DisplayText": "9123 45xx xxxx 1234",
-               "Card": {
-                 "MaskedNumber": "912345xxxxxx1234",
-                 "ExpYear": 2015,
-                 "ExpMonth": 9,
-                 "HolderName": "Max Mustermann",
-                 "CountryCode": "CH"
-               },
-               "Payer": {
-                 "IpAddress": "1.2.3.4",
-                 "IpLocation": "DE"
-               },
-               "Liability": {
-                 "LiabilityShift": true,
-                 "LiableEntity": "ThreeDs",
-                 "ThreeDs": {
-                   "Authenticated": true,
-                   "LiabilityShift": true,
-                   "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
-                   "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
-                 },
-                 "FraudFree": {
-                   "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
-                   "LiabilityShift": false,
-                   "Score": 0.6,
-                   "InvestigationPoints": ["susp_bill_ad", "susp_machine"],
-                 }
-               }
-             }
+  "ResponseHeader": {
+    "SpecVersion": "1.10",
+    "RequestId": "[your request id]",
+  },
+  "Transaction": {
+    "Type": "PAYMENT",
+    "Status": "AUTHORIZED",
+    "Id": "MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
+    "Date": "2015-09-18T09:19:27.078Z",
+    "Amount": {
+      "Value": "100",
+      "CurrencyCode": "CHF"
+    },
+    "AcquirerName": "AcquirerName",
+    "AcquirerReference": "Reference",
+    "SixTransactionReference":"0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA",
+    "ApprovalCode":"012345"
+  },
+  "PaymentMeans": {
+    "Brand": {
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
+  },
+  "DisplayText": "9123 45xx xxxx 1234",
+  "Card": {
+    "MaskedNumber": "912345xxxxxx1234",
+    "ExpYear": 2015,
+    "ExpMonth": 9,
+    "HolderName": "Max Mustermann",
+    "CountryCode": "CH"
+  },
+  "Payer": {
+    "IpAddress": "1.2.3.4",
+    "IpLocation": "DE"
+  },
+  "Liability": {
+    "LiabilityShift": true,
+    "LiableEntity": "ThreeDs",
+    "ThreeDs": {
+      "Authenticated": true,
+      "LiabilityShift": true,
+      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
+      "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
+    },
+    "FraudFree": {
+      "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
+      "LiabilityShift": false,
+      "Score": 0.6,
+      "InvestigationPoints": ["susp_bill_ad", "susp_machine"],
+    }
+  }
+}
 </pre>
 
 <<<---
