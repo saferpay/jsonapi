@@ -1419,55 +1419,58 @@ Id[1..50]<br>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-              &quot;ResponseHeader&quot;: {
-                &quot;SpecVersion&quot;: &quot;1.10&quot;,
-                &quot;RequestId&quot;: &quot;[your request id]&quot;
-              },
-              &quot;Transaction&quot;: {
-                &quot;Type&quot;: &quot;PAYMENT&quot;,
-                &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-                &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-                &quot;Date&quot;: &quot;2015-01-30T13:45:22.258+02:00&quot;,
-                &quot;Amount&quot;: {
-                  &quot;Value&quot;: &quot;100&quot;,
-                  &quot;CurrencyCode&quot;: &quot;CHF&quot;
-                },
-                &quot;AcquirerName&quot;: &quot;Saferpay Test Card&quot;,
-                &quot;AcquirerReference&quot;: &quot;000000&quot;,
-                &quot;SixTransactionReference&quot;:&quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-                &quot;ApprovalCode&quot;:&quot;012345&quot;
-              },
-              &quot;PaymentMeans&quot;: {
-                &quot;Brand&quot;: {
-                  &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-                  &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-                },
-               &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-                &quot;Card&quot;: {
-                  &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-                  &quot;ExpYear&quot;: 2015,
-                  &quot;ExpMonth&quot;: 9,
-                  &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-                  &quot;CountryCode&quot;: &quot;CH&quot;
-                },
-              },
-              &quot;Liability&quot;: {
-                &quot;LiabilityShift&quot;: true,
-                &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
-                &quot;ThreeDs&quot;: {
-                  &quot;Authenticated&quot;: true,
-                  &quot;LiabilityShift&quot;: true,
-                  &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-                  &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-                },
-                &quot;FraudFree&quot;: {
-                  &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
-                  &quot;LiabilityShift&quot;: false,
-                  &quot;Score&quot;: 0.6,
-                  &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;],
-                }
-              }
-            }
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Transaction&quot;: {
+    &quot;Type&quot;: &quot;PAYMENT&quot;,
+    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    },
+    &quot;AcquirerName&quot;: &quot;Saferpay Test Card&quot;,
+    &quot;AcquirerReference&quot;: &quot;000000&quot;,
+    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
+  },
+  &quot;Liability&quot;: {
+    &quot;LiabilityShift&quot;: true,
+    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+    &quot;ThreeDs&quot;: {
+      &quot;Authenticated&quot;: true,
+      &quot;LiabilityShift&quot;: true,
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+    },
+    &quot;FraudFree&quot;: {
+      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+      &quot;LiabilityShift&quot;: false,
+      &quot;Score&quot;: 0.6,
+      &quot;InvestigationPoints&quot;: [
+        &quot;susp_bill_ad&quot;,
+        &quot;susp_machine&quot;
+      ]
+    }
+  }
+}
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransactionProcess"><h2><a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.</p><div class="warning">
 	<p><strong>Important Note:</strong> The Transaction Interface offers all sorts of options to perform transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html">read our Saferpay Integration guide</a>, which offers an in debth explanation on how to integrate the Transaction Interface, optional features, best practices and more.</p>
 </div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
@@ -2068,7 +2071,7 @@ Numeric[3..4]<br>
                &quot;PaymentMeans&quot;: {
                  &quot;Brand&quot;: {
                    &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-                   &quot;Name&quot;: &quot;SaferpayTestCard&quot;
+                   &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
                },
                &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
                &quot;Card&quot;: {
