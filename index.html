@@ -1487,10 +1487,7 @@ Id[1..50]<br>
 <li><a href="index.html#Payment_v1_Transaction_Cancel">Cancel/Abort the Transaction</a></li>
 </ul><ol start="6">
 <li>Transaction is finished!</li>
-</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
+</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
 	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
@@ -1823,10 +1820,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
     &quot;PaymentMeansRequired&quot;: true
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Authorize"><h2><a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Authorize"><h2><a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2099,10 +2093,7 @@ Numeric[3..4]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2281,10 +2272,7 @@ Id[1..50]<br>
     &quot;IpLocation&quot;: &quot;DE&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2388,10 +2376,7 @@ Id[1..50]<br>
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
 	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
@@ -2656,10 +2641,7 @@ Numeric[8..8]<br>
     &quot;IpLocation&quot;: &quot;DE&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2906,10 +2888,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3131,10 +3110,7 @@ Possible values: PENDING, CAPTURED.<br>
 		<li>The sum of multipart captures must not exceed the authorized amount.</li>
 		<li>A unique OrderPartId must be used for each request.</li>
 	</ul>
-</div></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3355,10 +3331,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2018-08-08T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending capture transactions (only used for paydirekt at the moment)</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending capture transactions (only used for paydirekt at the moment)</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3515,10 +3488,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartFinalize"><h2><a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartFinalize"><h2><a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3601,10 +3571,7 @@ Possible values: PENDING, CAPTURED.<br>
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3805,10 +3772,7 @@ Possible values: PENDING, CAPTURED.<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="warning">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="warning">
   <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
 </div><table class="table">
 	<thead>
@@ -3967,10 +3931,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
 	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
@@ -4180,10 +4141,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Cancel"><h2><a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel</h2><div class="row"><div class="col-md-6"><p>This method may be used to cancel previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Cancel"><h2><a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel</h2><div class="row"><div class="col-md-6"><p>This method may be used to cancel previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4322,10 +4280,7 @@ Numeric[8..8]<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="danger">
 	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
-</div></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4574,10 +4529,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="danger">
 	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
-</div></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4739,10 +4691,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-md-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/Insert</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-md-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Insert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5002,10 +4951,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.</p><div class="danger">
 	<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
-</div></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5156,10 +5102,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
 	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div><table class="table">
 	<thead>
@@ -5355,10 +5298,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Delete"><h2><a name="Payment_v1_Alias_Delete"></a>Alias Delete</h2><div class="row"><div class="col-md-6"><p>This method may be used to delete previously inserted aliases.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/Delete</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Delete"><h2><a name="Payment_v1_Alias_Delete"></a>Alias Delete</h2><div class="row"><div class="col-md-6"><p>This method may be used to delete previously inserted aliases.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Delete</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5442,10 +5382,7 @@ Id[1..40]<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterBatch"><h1><a name="ChapterBatch"></a>Batch</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Batch_Close"><h2><a name="Payment_v1_Batch_Close"></a>Batch Close</h2><div class="row"><div class="col-md-6"><p>This chapter covers the Batch Close via API</p><div class="info">
   <p><strong>Note:</strong> If you want to trigger the batch-close via API, make sure, to turn the automatic batch off. Please log into the Saferpay Backoffice. Go to <strong>Settings =&gt; Terminals</strong> and select the desired terminal out of the list. Turn off the Automatic closure!</p>
-</div></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Batch/Close</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Batch/Close</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5527,10 +5464,7 @@ Numeric[8..8]<br>
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterOmniChannel"><h1><a name="ChapterOmniChannel"></a>OmniChannel</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_OmniChannel_InsertAlias"><h2><a name="Payment_v1_OmniChannel_InsertAlias"></a>OmniChannel InsertAlias</h2><div class="row"><div class="col-md-6"><p>This function may be used to create an alias by providing a SixTransactionReference.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/OmniChannel/InsertAlias</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterOmniChannel"><h1><a name="ChapterOmniChannel"></a>OmniChannel</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_OmniChannel_InsertAlias"><h2><a name="Payment_v1_OmniChannel_InsertAlias"></a>OmniChannel InsertAlias</h2><div class="row"><div class="col-md-6"><p>This function may be used to create an alias by providing a SixTransactionReference.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/OmniChannel/InsertAlias</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5701,10 +5635,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_OmniChannel_AcquireTransaction"><h2><a name="Payment_v1_OmniChannel_AcquireTransaction"></a>OmniChannel AcquireTransaction</h2><div class="row"><div class="col-md-6"><p>This function may be used to acquire an authorized transaction by providing a SixTransactionReference. This transaction can then be captured or canceled.</p></div><div class="col-md-6"><div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/OmniChannel/AcquireTransaction</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This request allows to acquire an OmniChannel transaction.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_OmniChannel_AcquireTransaction"><h2><a name="Payment_v1_OmniChannel_AcquireTransaction"></a>OmniChannel AcquireTransaction</h2><div class="row"><div class="col-md-6"><p>This function may be used to acquire an authorized transaction by providing a SixTransactionReference. This transaction can then be captured or canceled.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/OmniChannel/AcquireTransaction</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This request allows to acquire an OmniChannel transaction.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
