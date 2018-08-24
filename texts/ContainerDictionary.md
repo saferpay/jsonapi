@@ -284,7 +284,7 @@ Id[1..80]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">OrderPartId of the reference capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
+	<div style="padding-bottom: 10px">OrderPartId of the referenced capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
 					<span>Example: kh9ngajrfe6wfu3d0c</span>

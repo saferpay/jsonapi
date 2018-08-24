@@ -2486,7 +2486,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 ## <a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize
 
-This method may be used to finalize an authorized transaction (i.e. marks the end of partial captures).
+This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).
 
 --->>>
 
