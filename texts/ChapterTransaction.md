@@ -692,7 +692,7 @@ Numeric[3..4]<br />
                "PaymentMeans": {
                  "Brand": {
                    "PaymentMethod": "VISA",
-                   "Name": "SaferpayTestCard"
+                   "Name": "VISA Saferpay Test"
                },
                "DisplayText": "9123 45xx xxxx 1234",
                "Card": {
