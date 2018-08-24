@@ -719,7 +719,7 @@ Numeric[3..4]<br />
       "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
       "LiabilityShift": false,
       "Score": 0.6,
-      "InvestigationPoints": ["susp_bill_ad", "susp_machine"],
+      "InvestigationPoints": ["susp_bill_ad", "susp_machine"]
     }
   }
 }
