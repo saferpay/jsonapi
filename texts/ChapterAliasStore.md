@@ -8,10 +8,7 @@ This function may be used to insert an alias without knowledge about the card de
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/Insert</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Insert</p></div>
 
 <<<---
 
@@ -321,10 +318,7 @@ This method may be used to inquire the Alias Id and further information after a 
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div>
 
 <<<---
 
@@ -523,10 +517,7 @@ This method may be used to insert an alias directly with card-data collected by 
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div>
 
 <<<---
 
@@ -770,10 +761,7 @@ This method may be used to delete previously inserted aliases.
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Alias/Delete</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Delete</p></div>
 
 <<<---
 

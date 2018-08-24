@@ -12,10 +12,7 @@ This chapter covers the Batch Close via API
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Batch/Close</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Batch/Close</p></div>
 
 <<<---
 

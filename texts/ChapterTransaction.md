@@ -29,10 +29,7 @@ This method may be used to start a transaction which may involve either DCC and 
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div>
 
 <<<---
 
@@ -413,10 +410,7 @@ This function may be called to authorize a transaction which was started by a ca
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p></div>
 
 <<<---
 
@@ -737,10 +731,7 @@ This method may be used to query the payment means and payer data (address) afte
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div>
 
 <<<---
 
@@ -967,10 +958,7 @@ This method may be used to adjust the amount after query payment means.
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p></div>
 
 <<<---
 
@@ -1122,10 +1110,7 @@ This function may be used to directly authorize transactions which do not requir
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p></div>
 
 <<<---
 
@@ -1437,10 +1422,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p></div>
 
 <<<---
 
@@ -1735,10 +1717,7 @@ This method may be used to finalize previously authorized transactions and refun
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p></div>
 
 <<<---
 
@@ -2010,10 +1989,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p></div>
 
 <<<---
 
@@ -2282,10 +2258,7 @@ This method is only supported for pending capture transactions (only used for pa
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p></div>
 
 <<<---
 
@@ -2490,10 +2463,7 @@ This method may be used to finalize a transaction having one or more partial cap
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p></div>
 
 <<<---
 
@@ -2624,10 +2594,7 @@ This method may be called to refund a previous transaction.
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p></div>
 
 <<<---
 
@@ -2876,10 +2843,7 @@ This method may be used to inquire the status and further information of pending
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div>
 
 <<<---
 
@@ -3086,10 +3050,7 @@ This method may be called to refund an amount to the given means of payment (not
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div>
 
 <<<---
 
@@ -3348,10 +3309,7 @@ This method may be used to cancel previously authorized transactions and refunds
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p></div>
 
 <<<---
 
@@ -3539,10 +3497,7 @@ This method may be used to cancel previously authorized transactions and refunds
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p></div>
 
 <<<---
 
@@ -3839,10 +3794,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p></div>
 
 <<<---
 

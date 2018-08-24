@@ -8,10 +8,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/OmniChannel/InsertAlias</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/OmniChannel/InsertAlias</p></div>
 
 <<<---
 
@@ -230,10 +227,7 @@ This function may be used to acquire an authorized transaction by providing a Si
 
 --->>>
 
-<div class="info">
-	<p><strong>Request URL:</strong></p>
-	<p><strong>POST:</strong> /Payment/v1/OmniChannel/AcquireTransaction</p>
-</div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/OmniChannel/AcquireTransaction</p></div>
 
 <<<---
 
