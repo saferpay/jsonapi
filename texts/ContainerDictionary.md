@@ -1572,7 +1572,7 @@ Id[1..15]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent for successful authorizations.</div>
+	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the merchant for successful authorizations.</div>
 	<i class="small text-muted">
 					<span>Example: merchant@saferpay.com</span>
 	</i>
@@ -1587,9 +1587,9 @@ Id[1..15]<br />
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent for successful authorizations.</div>
+	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
 	<i class="small text-muted">
-					<span>Example: merchant@saferpay.com</span>
+					<span>Example: payer@saferpay.com</span>
 	</i>
 </td>
 							</tr>
