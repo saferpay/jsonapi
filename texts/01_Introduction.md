@@ -265,7 +265,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 $payload = array(
     'RequestHeader' => array(
         'SpecVersion' => "1.7",
-        'CustomerId' => "123456",
+        'CustomerId' => "[YOUR CUSTOMERID]",
         'RequestId' => "aScdFewDSRFrfas2wsad3",
         'RetryIndicator' => 0,
         'ClientInfo' => array(
@@ -273,7 +273,7 @@ $payload = array(
             'OsInfo' => "Windows Server 2013"
         )
     ),
-    'TerminalId' => "17654321",
+    'TerminalId' => "[YOUR TERMINALID]",
     'PaymentMethods' => array("DIRECTDEBIT","VISA"),
     'Payment' => array(
         'Amount' => array(
