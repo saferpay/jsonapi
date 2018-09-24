@@ -11,14 +11,14 @@ This chapter will give you a simple overview about the general transaction flow,
 ### Transaction-flow
 
 1. [Transaction Initialize](index.html#Payment_v1_Transaction_Initialize)
-  * Initializes the Payment and generates the RedirectUrl for the [iFrame Integration](https://saferpay.github.io/sndbx/CssiFrame.html).
+  	* Initializes the Payment and generates the RedirectUrl for the [iFrame Integration](https://saferpay.github.io/sndbx/CssiFrame.html).
 2. Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!
 3. Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!
 4. [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
-  * Authorizes the card, which has been gathered in step 2. Up until now, *no transaction has been made*!
+  	* Authorizes the card, which has been gathered in step 2. Up until now, *no transaction has been made*!
 5. Depending on the outcome of step 4 you may
-  * [Capture/Finalize the Transaction](index.html#Payment_v1_Transaction_Capture)
-  * [Cancel/Abort the Transaction](index.html#Payment_v1_Transaction_Cancel)
+  	* [Capture/Finalize the Transaction](index.html#Payment_v1_Transaction_Capture)
+  	* [Cancel/Abort the Transaction](index.html#Payment_v1_Transaction_Cancel)
 6. Transaction is finished!
 
 
