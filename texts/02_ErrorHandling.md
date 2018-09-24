@@ -51,7 +51,7 @@ HTTP status codes:
 </table>
 
 <div class="info">
-	<p><strong>Info:</strong> The API-Timeout for request should be 100 seconds! After that, a connection should be closed!</p>
+	<p><strong>Info:</strong> The API-Timeout for requests should be 100 seconds! After that, a connection should be closed! Also, no further actions should be taken, until the request is answered, or runs into a timeout, to prevent unwanted behavior!</p>
 </div>
 
 <<<---
