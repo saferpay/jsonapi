@@ -22,40 +22,21 @@
 
 					<ul class="nav">
 							<li class="active">
-							<a href="#intro">Introduction</a>
+							<a href="index.html">Introduction</a>
 							</li>
-							<li>
-							<a href="#encoding">Content encoding</a>
-							</li>
-							<li>
-							<a href="#formats">Formats</a>
-							</li>
-							<li>
-							<a href="#authentication">Authentication</a>
-							</li>
-							<li>
-							<a href="#integration">Integration</a>
-							</li>
-							<li>
-							<a href="#errorhandling">Error Handling</a>
-							</li>
-							<li>
-								<a><h4>Interfaces</h4></a>
+							<li class="active">
+							<a href="index.html">Error Handling</a>
 							</li>
 							<li>
 							<a href="#ChapterPaymentPage">Payment Page</a>
 							<ul class="nav">
-								<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
 							</ul>
 							</li>
 							<li>
 							<a href="#ChapterTransaction">Transaction</a>
 							<ul class="nav">
-								<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
 								<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
 								<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
 								<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
@@ -95,9 +76,6 @@
 								<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
 								<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
 							</ul>
-							</li>
-							<li>
-							<a href="#Changelog">Changelog</a>
 							</li>
 
 					</ul>
@@ -122,40 +100,21 @@
 
 					<ul class="nav collapse" id="menu-collapse">
 							<li class="active">
-							<a href="#intro">Introduction</a>
+							<a href="index.html">Introduction</a>
 							</li>
-							<li>
-							<a href="#encoding">Content encoding</a>
-							</li>
-							<li>
-							<a href="#formats">Formats</a>
-							</li>
-							<li>
-							<a href="#authentication">Authentication</a>
-							</li>
-							<li>
-							<a href="#integration">Integration</a>
-							</li>
-							<li>
-							<a href="#errorhandling">Error Handling</a>
-							</li>
-							<li>
-								<a><h4>Interfaces</h4></a>
+							<li class="active">
+							<a href="index.html">Error Handling</a>
 							</li>
 							<li>
 							<a href="#ChapterPaymentPage">Payment Page</a>
 							<ul class="nav">
-								<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
 							</ul>
 							</li>
 							<li>
 							<a href="#ChapterTransaction">Transaction</a>
 							<ul class="nav">
-								<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
 								<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
 								<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
 								<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
@@ -195,9 +154,6 @@
 								<li><a href="#Payment_v1_OmniChannel_InsertAlias">OmniChannel InsertAlias</a></li>
 								<li><a href="#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel AcquireTransaction</a></li>
 							</ul>
-							</li>
-							<li>
-							<a href="#Changelog">Changelog</a>
 							</li>
 
 					</ul>
@@ -362,7 +318,7 @@ information about the outcome of e.g. 3D Secure.</p><div class="info">
 $payload = array(
     'RequestHeader' =&gt; array(
         'SpecVersion' =&gt; &quot;1.7&quot;,
-        'CustomerId' =&gt; &quot;[YOUR CUSTOMERID]&quot;,
+        'CustomerId' =&gt; &quot;123456&quot;,
         'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
         'RetryIndicator' =&gt; 0,
         'ClientInfo' =&gt; array(
@@ -370,7 +326,7 @@ $payload = array(
             'OsInfo' =&gt; &quot;Windows Server 2013&quot;
         )
     ),
-    'TerminalId' =&gt; &quot;[YOUR TERMINALID]&quot;,
+    'TerminalId' =&gt; &quot;17654321&quot;,
     'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
     'Payment' =&gt; array(
         'Amount' =&gt; array(
@@ -517,7 +473,7 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 		<td>Internal error</td>
 	</tr>
 </tbody></table><div class="info">
-	<p><strong>Info:</strong> The API-Timeout for requests should be 100 seconds! After that, a connection should be closed! Also, no further actions should be taken, until the request is answered, or runs into a timeout, to prevent unwanted behavior!</p>
+	<p><strong>Info:</strong> The API-Timeout for request should be 100 seconds! After that, a connection should be closed!</p>
 </div></div></div><div class="row"><div class="col-md-6"><h4>Error Message</h4><table class="table">
 	<thead>
 		<tr>
@@ -881,29 +837,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 			<i>Solution:</i> Fix request
 		</td>
 	</tr>
-</tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"><p>The Payment Page Interface provides a simple and easy integration of Saferpay into your web shop, mobile app or other applications without the need to implement a user interface for card data entry. The Saferpay Payment Page can be used with a Saferpay eCommerce license as well as with a Saferpay Business license. It allows the processing of all <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#paymentmethods">payment methods</a> that are available with Saferpay. Once integrated, more payment methods can be activated at any time and without major adjustments.</p></div></div></section><section id="ChapterPaymentPageProcess"><h2><a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the transaction flow, when using the Payment Page</p><div class="info">
-	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
-</div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
-<li><a href="index.html#Payment_v1_PaymentPage_Initialize">Payment Page Initialize</a>
-<ul>
-<li>Initializes the Payment and generates the RedirectUrl for the Payment Page.</li>
-</ul>
-</li>
-<li>Redirect to the RedirectUrl</li>
-<li>Return to ReturnUrl depending on the outcome of the transaction. The ReturnUrls are defined in step 1!</li>
-<li><a href="index.html#Payment_v1_PaymentPage_Assert">Payment Page Assert</a>
-<ul>
-<li>Gathers all the information about the payment, like LiabilityShift through 3D Secure and more, using the Token, gathered in step 1!</li>
-</ul>
-</li>
-<li>Depending on the outcome of step 4 you may
-<ul>
-<li><a href="index.html#Payment_v1_Transaction_Capture">Capture/Finalize the Transaction</a></li>
-<li><a href="index.html#Payment_v1_Transaction_Cancel">Cancel/Abort the Transaction</a></li>
-</ul>
-</li>
-<li>Transaction is finished!</li>
-</ol></div></div></section><section id="Payment_v1_PaymentPage_Initialize"><h2><a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize</h2><div class="row"><div class="col-md-6"><p>This method can be used to start a transaction with the Payment Page which may involve either DCC and / or 3d-secure</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Initialize"><h2><a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize</h2><div class="row"><div class="col-md-6"><p>This method can be used to start a transaction with the Payment Page which may involve either DCC and / or 3d-secure</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1468,31 +1402,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransactionProcess"><h2><a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.</p><div class="warning">
-	<p><strong>Important Note:</strong> The Transaction Interface offers all sorts of options to perform transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html">read our Saferpay Integration guide</a>, which offers an in debth explanation on how to integrate the Transaction Interface, optional features, best practices and more.</p>
-</div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
-<li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction Initialize</a>
-<ul>
-<li>Initializes the Payment and generates the RedirectUrl for the <a href="https://saferpay.github.io/sndbx/CssiFrame.html">iFrame Integration</a>.</li>
-</ul>
-</li>
-<li>Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!</li>
-<li>Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!</li>
-<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a>
-<ul>
-<li>Authorizes the card, which has been gathered in step 2. Up until now, <em>no transaction has been made</em>!</li>
-</ul>
-</li>
-<li>Depending on the outcome of step 4 you may
-<ul>
-<li><a href="index.html#Payment_v1_Transaction_Capture">Capture/Finalize the Transaction</a></li>
-<li><a href="index.html#Payment_v1_Transaction_Cancel">Cancel/Abort the Transaction</a></li>
-</ul>
-</li>
-<li>Transaction is finished!</li>
-</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2044,58 +1954,58 @@ Numeric[3..4]<br>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;,
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;PAYMENT&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-    &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
-    &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-    &quot;ApprovalCode&quot;:&quot;012345&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-  },
-  &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-  &quot;Card&quot;: {
-    &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-    &quot;ExpYear&quot;: 2015,
-    &quot;ExpMonth&quot;: 9,
-    &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-    &quot;CountryCode&quot;: &quot;CH&quot;
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  },
-  &quot;Liability&quot;: {
-    &quot;LiabilityShift&quot;: true,
-    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
-    &quot;ThreeDs&quot;: {
-      &quot;Authenticated&quot;: true,
-      &quot;LiabilityShift&quot;: true,
-      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-    },
-    &quot;FraudFree&quot;: {
-      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
-      &quot;LiabilityShift&quot;: false,
-      &quot;Score&quot;: 0.6,
-      &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;]
-    }
-  }
-}
+               &quot;ResponseHeader&quot;: {
+                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                 &quot;RequestId&quot;: &quot;[your request id]&quot;,
+               },
+               &quot;Transaction&quot;: {
+                 &quot;Type&quot;: &quot;PAYMENT&quot;,
+                 &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+                 &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+                 &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
+                 &quot;Amount&quot;: {
+                   &quot;Value&quot;: &quot;100&quot;,
+                   &quot;CurrencyCode&quot;: &quot;CHF&quot;
+                 },
+                 &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
+                 &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+                 &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+                 &quot;ApprovalCode&quot;:&quot;012345&quot;
+               },
+               &quot;PaymentMeans&quot;: {
+                 &quot;Brand&quot;: {
+                   &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                   &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+               },
+               &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+               &quot;Card&quot;: {
+                 &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                 &quot;ExpYear&quot;: 2015,
+                 &quot;ExpMonth&quot;: 9,
+                 &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                 &quot;CountryCode&quot;: &quot;CH&quot;
+               },
+               &quot;Payer&quot;: {
+                 &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+                 &quot;IpLocation&quot;: &quot;DE&quot;
+               },
+               &quot;Liability&quot;: {
+                 &quot;LiabilityShift&quot;: true,
+                 &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+                 &quot;ThreeDs&quot;: {
+                   &quot;Authenticated&quot;: true,
+                   &quot;LiabilityShift&quot;: true,
+                   &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+                   &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+                 },
+                 &quot;FraudFree&quot;: {
+                   &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+                   &quot;LiabilityShift&quot;: false,
+                   &quot;Score&quot;: 0.6,
+                   &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;]
+                 }
+               }
+             }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
 	<thead>
 		<tr>
@@ -2379,9 +2289,7 @@ Id[1..50]<br>
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3104,16 +3012,11 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><div class="info">
-	<p><strong>Important:</strong></p>
-	<ul>
-		<li>MultipartCapture is available for SIX Acquiring contracts <strong>only!</strong></li>
-		<li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
-		<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
-		<li>The sum of multipart captures must not exceed the authorized amount.</li>
-		<li>A unique OrderPartId must be used for each request.</li>
-	</ul>
-</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><p>Please bear in mind that:</p><ul>
+<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+<li>The sum of multipart captures must not exceed the authorized amount.</li>
+<li>A unique OrderPartId must be used for each request.</li>
+</ul></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3225,30 +3128,7 @@ Id[1..80]<br>
 			</i>
 </td>
 				</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-    &quot;RequestHeader&quot;: {
-      &quot;SpecVersion&quot;: &quot;1.10&quot;,
-      &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
-      &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
-      &quot;RetryIndicator&quot;: 0
-    },
-    &quot;TransactionReference&quot;: {
-        &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
-    },
-    &quot;Amount&quot;: {
-        &quot;Value&quot;: &quot;1000&quot;,
-        &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;Type&quot;: &quot;PARTIAL&quot;,
-    &quot;OderPartId&quot;: &quot;123456789&quot;,
-    &quot;Marketplace&quot;: {
-        &quot;SubmerchantId&quot;: &quot;17312345&quot;,
-        &quot;Fee&quot;: {
-            &quot;Value&quot;: &quot;500&quot;,
-            &quot;CurrencyCode&quot;: &quot;CHF&quot;
-        }
-    }
-}
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
@@ -3332,7 +3212,7 @@ Possible values: PENDING, CAPTURED.<br>
   },
   &quot;CaptureId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb_c&quot;,
   &quot;Status&quot;: &quot;CAPTURED&quot;,
-  &quot;Date&quot;: &quot;2018-08-08T12:45:22.258+01:00&quot;
+  &quot;Date&quot;: &quot;2018-08-08T13:45:22.258+02:00&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><p>This method is only supported for pending capture transactions (only used for paydirekt at the moment)</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
@@ -3775,9 +3655,7 @@ Possible values: PENDING, CAPTURED.<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="warning">
-  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3934,9 +3812,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4281,9 +4157,7 @@ Numeric[8..8]<br>
   &quot;OrderId&quot;: &quot;c52ad18472354511ab2c33b59e796901&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="danger">
-	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
-</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4530,9 +4404,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="danger">
-	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
-</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4750,7 +4622,7 @@ Id[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
-Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
+Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 					<span>Example: CARD</span>
 	</i>
 </td>
@@ -4813,7 +4685,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts! </div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4952,9 +4824,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.</p><div class="danger">
-	<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
-</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5105,9 +4975,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5383,9 +5251,7 @@ Id[1..40]<br>
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterBatch"><h1><a name="ChapterBatch"></a>Batch</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Batch_Close"><h2><a name="Payment_v1_Batch_Close"></a>Batch Close</h2><div class="row"><div class="col-md-6"><p>This chapter covers the Batch Close via API</p><div class="info">
-  <p><strong>Note:</strong> If you want to trigger the batch-close via API, make sure, to turn the automatic batch off. Please log into the Saferpay Backoffice. Go to <strong>Settings =&gt; Terminals</strong> and select the desired terminal out of the list. Turn off the Automatic closure!</p>
-</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Batch/Close</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterBatch"><h1><a name="ChapterBatch"></a>Batch</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Batch_Close"><h2><a name="Payment_v1_Batch_Close"></a>Batch Close</h2><div class="row"><div class="col-md-6"><p>No documentation available</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Batch/Close</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5995,7 +5861,7 @@ AlphaNumeric[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Name of the account holder</div>
 	<i class="small text-muted">
-[1..50] <b>NOTE:</b> Only UTF8 coded characters following Iso885915 are allowed!<br>
+Iso885915[1..50]<br>
 					<span>Example: John Doe</span>
 	</i>
 </td>
@@ -6621,7 +6487,7 @@ AlphaNumeric[1..50]<br>
 	
 	<div style="padding-bottom: 10px">Name of the account holder</div>
 	<i class="small text-muted">
-[1..50] <b>NOTE:</b> Only UTF8 coded characters following Iso885915 are allowed!<br>
+Iso885915[1..50]<br>
 					<span>Example: John Doe</span>
 	</i>
 </td>
@@ -6683,9 +6549,6 @@ AlphaNumeric[8..11]<br>
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
@@ -6807,7 +6670,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	
 	<div style="padding-bottom: 10px">Card number without separators</div>
 	<i class="small text-muted">
-Numeric[1..50]<br>
 					<span>Example: 1234123412341234</span>
 	</i>
 </td>
@@ -7022,7 +6884,7 @@ Possible values: NONE, MANDATORY.<br>
 	
 	<div style="padding-bottom: 10px">Name and version of the shop software</div>
 	<i class="small text-muted">
-[1..100] <b>NOTE:</b> Only UTF8 encoded characters following Iso885915 are allowed!<br>
+Iso885915[1..100]<br>
 					<span>Example: My Shop</span>
 	</i>
 </td>
@@ -7038,7 +6900,7 @@ Possible values: NONE, MANDATORY.<br>
 	
 	<div style="padding-bottom: 10px">Information on the operating system</div>
 	<i class="small text-muted">
-[1..100] <b>NOTE:</b> Only UTF8 encoded characters following Iso885915 are allowed!<br>
+Iso885915[1..100]<br>
 					<span>Example: Windows Server 2013</span>
 	</i>
 </td>
@@ -7395,7 +7257,7 @@ Id[1..15]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the merchant for successful authorizations.</div>
+	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent for successful authorizations.</div>
 	<i class="small text-muted">
 					<span>Example: merchant@saferpay.com</span>
 	</i>
@@ -7410,9 +7272,9 @@ Id[1..15]<br>
 </td>
 <td class="col-sm-8">
 	
-	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
+	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent for successful authorizations.</div>
 	<i class="small text-muted">
-					<span>Example: payer@saferpay.com</span>
+					<span>Example: merchant@saferpay.com</span>
 	</i>
 </td>
 							</tr>
@@ -7420,9 +7282,6 @@ Id[1..15]<br>
 								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br>
 	<span class="text-muted small">
-		<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
@@ -7591,9 +7450,6 @@ Id[1..15]<br>
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
-		<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
@@ -7835,6 +7691,21 @@ Id[1..35]<br>
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Twint</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_TwintInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Twint data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_PaymentOptions&quot;</h2>
@@ -7881,9 +7752,6 @@ Id[1..35]<br>
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
-		<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
@@ -8223,9 +8091,6 @@ Id[1..80]<br>
 								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br>
 	<span class="text-muted small">
-		<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
@@ -8326,9 +8191,6 @@ Id[1..80]<br>
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
-		<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
@@ -8924,6 +8786,29 @@ Id[1..80]<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_TwintInfo&quot;</h2>
+				<table class="table" id="Payment_Models_Data_TwintInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CertificateExpirationDate</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	
+	<div style="padding-bottom: 10px">Twint token expiry date</div>
+	<i class="small text-muted">
+					<span>Example: 2019-11-08T12:29:37.000+01:00</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_Wallet&quot;</h2>
 				<table class="table" id="Payment_Models_Data_Wallet">
 					<tbody>
@@ -8991,84 +8876,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 							</tr>
 					</tbody>
 				</table>
-</div></div></div></section><section id="Changelog"><h1><a name="Changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
-<li><a href="#v1.10.0.0.tbd">Version 1.10</a></li>
-<li><a href="#v1.9.0.20180515">Version 1.9</a></li>
-<li><a href="#v1.8.0.20171114">Version 1.8</a></li>
-<li><a href="#v1.7.0.20170822">Version 1.7</a></li>
-<li><a href="#v1.6.0.20170404">Version 1.6</a></li>
-<li><a href="#v1.5.0.20170207">Version 1.5</a></li>
-<li><a href="#v1.4.0.20161015">Version 1.4</a></li>
-</ul></div></div></section><section id="v1.10.0.0.tbd"><h2><a name="v1.10.0.0.tbd"></a> Version 1.10 (release date to be defined)</h2><div class="row"><div class="col-md-6"><ul>
-<li>available on Sandbox: 2018-08-14</li>
-<li>introduced version 1.10</li>
-<li>added value <code>1.10</code> for <em>SpecVersion</em></li>
-<li>added method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for capturing multiple parts of a transaction also supporting enhanced clearing for marketplaces</li>
-<li>added method <a href="index.html#Payment_v1_Transaction_MultipartFinalize">Transaction/MultipartFinalize</a> to finalize a transaction that is still open for capturing additional parts</li>
-<li>added container <em>MarketPlace</em> to <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request to support enhanced clearing for marketplaces</li>
-<li>removed container <em>Partial</em> from <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request - see method <a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a> for details</li>
-<li>replaced <em>TransactionId</em> and <em>OrderId</em> with <em>CaptureId</em> in <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> response to uniquely identify captures</li>
-<li>replaced container <em>TransactionReference</em> with <em>CaptureReference</em> in <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> and <a href="index.html#Payment_v1_Transaction_AssertCapture">Transaction/AssertCapture</a> request to uniquely identify captures</li>
-</ul></div></div></section><section id="v1.9.0.20180515"><h2><a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)</h2><div class="row"><div class="col-md-6"><ul>
-<li>available on Sandbox: 2018-04-26</li>
-<li>introduced version 1.9</li>
-<li>added value <code>1.9</code> for <em>SpecVersion</em></li>
-<li>replaced container <em>ThreeDs</em> from previous versions with <em>Liability</em> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> and <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> responses</li>
-</ul></div></div></section><section id="v1.8.0.20171114"><h2><a name="v1.8.0.20171114"></a> Version 1.8 (released 2017-11-14)</h2><div class="row"><div class="col-md-6"><ul>
-<li>available on Sandbox: 2017-11-02</li>
-<li>introduced version 1.8</li>
-<li>added value <code>1.8</code> for <em>SpecVersion</em></li>
-<li>added <em>SixTransactionReference</em> to <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> responses for Omni Channel use cases</li>
-<li>added method <a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a> for retrieving a previously authorized transaction from another channel</li>
-<li>added method <a href="index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> for retrieving an alias for a card used in a previously authorized transaction from another channel</li>
-<li>added container <em>CardForm</em> for <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> and <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests for adjusting the card form's mandatory fields</li>
-</ul></div></div></section><section id="v1.7.0.20170822"><h2><a name="v1.7.0.20170822"></a> Version 1.7 (released 2017-08-22)</h2><div class="row"><div class="col-md-6"><ul>
-<li>available on Sandbox: 2017-08-03</li>
-<li>introduced version 1.7</li>
-<li>added value <code>1.7</code> for <em>SpecVersion</em></li>
-<li>added value <code>TWINT</code> for <em>Brand.PaymentMethod</em></li>
-<li>added <em>ApprovalCode</em> to <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> responses</li>
-<li>added <em>PaymentMethods</em> to <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> and <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> requests</li>
-<li>increased number of concurrent Basic Authentication credentials to 10</li>
-<li>improved description for pending statuses</li>
-</ul></div></div></section><section id="v1.6.0.20170404"><h2><a name="v1.6.0.20170404"></a> Version 1.6 (released 2017-04-04)</h2><div class="row"><div class="col-md-6"><ul>
-<li>available on Sandbox: 2017-03-14</li>
-<li>introduced version 1.6</li>
-<li>added value <code>1.6</code> for <em>SpecVersion</em></li>
-<li>added container <em>Check</em> for <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> request</li>
-<li>added container <em>CheckResult</em> for <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a> and <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> responses</li>
-</ul></div></div></section><section id="v1.5.0.20170207"><h2><a name="v1.5.0.20170207"></a> Version 1.5 (released 2017-02-07)</h2><div class="row"><div class="col-md-6"><ul>
-<li>introduced version 1.5</li>
-<li>added value <code>1.5</code> for <em>SpecVersion</em></li>
-<li>added method <a href="index.html#Payment_v1_Transaction_AssertCapture">Transaction/AssertCapture</a> for checking the status of a pending capture (currently needed for paydirekt)</li>
-<li>added method <a href="index.html#Payment_v1_Transaction_AssertRefund">Transaction/AssertRefund</a> for checking the status of a pending refund (currently needed for paydirekt)</li>
-<li>added container <em>PendingNotification</em> for <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> requests for notification settings on pending captures (currently needed for paydirekt)</li>
-<li>added container <em>PendingNotification</em> for <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> requests for notification settings on pending captures (currently needed for paydirekt)</li>
-<li>added <em>Status</em> in  <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> responses to indicate the status of a capture</li>
-<li>changed <em>Date</em> in  <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> responses to optional, e.g. for pending captures</li>
-<li>changed <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> request to allow <em>BillingAddressForm.Display</em> and <em>DeliveryAddressForm.Display</em> both set to <code>true</code> at the same time</li>
-<li>added <em>ContentSecurityEnabled</em> to <em>Styling</em> container to control Content Security Policy</li>
-<li>corrected type documentation for <em>CountrySubdivisionCode</em> to &quot;<em>AlphaNumeric</em>&quot; in the address containers</li>
-</ul></div></div></section><section id="v1.4.0.20161015"><h2><a name="v1.4.0.20161015"></a> Version 1.4 (released 2016-10-15)</h2><div class="row"><div class="col-md-6"><ul>
-<li>new version 1.4
-<ul>
-<li>added value <code>1.4</code> for <em>SpecVersion</em></li>
-<li>added option <em>SuppressDcc</em> for <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
-<li>added values <code>BANCONTACT</code> and <code>PAYDIREKT</code> for <em>Brand.PaymentMethod</em> and <em>PaymentMethods</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
-<li>added validation for element <em>Payment.MandateId</em></li>
-<li>added option <em>ConfigSet</em> for <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
-</ul>
-</li>
-<li>added a note that partial captures are currently only supported for PayPal</li>
-<li>added a note that values for AliasID are case-insensitive</li>
-<li>corrected example for <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
-<li>corrected example for <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
-<li>corrected example for <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
-<li>corrected example for <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
-<li>improved description for <em>TransactionReference</em></li>
-<li>corrected example for <em>BillpayCapture.DelayInDays</em></li>
-<li>improved description for <em>ReturnUrls</em></li>
-</ul></div></div></section>
+</div></div></div></section>
 
 			</main>
 
