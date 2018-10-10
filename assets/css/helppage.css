@@ -77,16 +77,16 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 @media (min-width: 1200px) {
     main {
-		margin-left: 270px;
+        margin-left: 270px;
     }
 }
 
 #navScrollspy .affix {
-	width: 250px;
+    width: 250px;
     height: 100vh;
     overflow-y: auto;
-	z-index: 100;
-	top: 0;
+    z-index: 100;
+    top: 0;
 }
 
 #navScrollspy .affix > ul {
@@ -114,18 +114,18 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 #menu-collapse {
-    position: absolute; 
-    z-index: 40; 
-    width: 100%; 
-    background: rgba(255, 255, 255, 0.9); 
+    position: absolute;
+    z-index: 40;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
     padding: 1em;
     left: 0;
 }
 
 @media (min-width: 768px) {
     #menu-collapse {
-        -moz-columns: 3 auto; 
-        -ms-columns: 3; 
+        -moz-columns: 3 auto;
+        -ms-columns: 3;
         -webkit-columns: 3;
         columns: 3;
     }
@@ -149,7 +149,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     bottom: 0;
     padding: 20px;
     visibility: hidden;
-	width: 245px;
+    width: 240px;
 }
 .scroll-top-wrapper.show {
     visibility: visible;
@@ -214,7 +214,7 @@ td {
     word-break: break-word;
 }
 
-.anchor-link span { 
+.anchor-link span {
     display: none;
     margin: 0 0 0 0.5em;
     color: #ccc;
