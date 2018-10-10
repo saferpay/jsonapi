@@ -127,3 +127,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-chunk {
   color: #aaa;
 }
+
+.danger {
+    background-color: #f5f5f5;
+    border-left: 6px solid #E07A69;
+    padding: 2px 0px 2px 5px;
+}
+
+.success {
+    background-color: #f5f5f5;
+    border-left: 5px solid #4CBE81;
+    padding: 2px 0px 2px 5px;
+}
+
+.info {
+    background-color: #f5f5f5;
+    border-left: 5px solid #6EC7D7;
+    padding: 2px 0px 2px 5px;
+}
+
+.warning {
+    background-color: #f5f5f5;
+    border-left: 5px solid #F0A92B;
+    padding: 2px 0px 2px 5px;
+}
