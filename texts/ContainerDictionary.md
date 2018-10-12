@@ -1891,8 +1891,21 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Bank account data for direct debit transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Twint</strong><br />
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_TwintInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Twint data</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2920,6 +2933,28 @@ AlphaNumeric[1..64]<br />
 	<i class="small text-muted">
 Id[1..80]<br />
 					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_TwintInfo"</h2>
+				<table class="table" id="Payment_Models_Data_TwintInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CertificateExpirationDate</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Twint token expiry date</div>
+	<i class="small text-muted">
+					<span>Example: 2019-11-08T12:29:37.000+01:00</span>
 	</i>
 </td>
 							</tr>

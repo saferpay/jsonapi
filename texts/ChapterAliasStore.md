@@ -68,10 +68,9 @@ This function may be used to insert an alias without knowledge about the card de
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
-Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
+Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 					<span>Example: CARD</span>
 	</i>
 </td>
