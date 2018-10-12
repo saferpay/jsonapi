@@ -97,7 +97,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="#Changelog">Changelog</a>
+							<a href="#changelog">Changelog</a>
 							</li>
 
 					</ul>
@@ -197,7 +197,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="#Changelog">Changelog</a>
+							<a href="#changelog">Changelog</a>
 							</li>
 
 					</ul>
@@ -246,32 +246,42 @@
   </tbody>
 </table></div></div></section><section id="authentication"><h1><a name="authentication"></a>Authentication</h1><div class="row"><div class="col-md-6"><p>Saferpay supports the mechanism of basic authentication or a client certificate for authentication of a
 server (host) system.</p><div class="danger">
-	<p><strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty, or old certificates, or authentication/accept-headers! Otherwise our corporate Firewall will reject the call with a 403-Forbidden status! Furthermore, please note, that some environments do this by default. So even if you didn't implement it, the environment may do it as a default! It may be necessary to check your configuration!</p>
+  <p>
+    <strong>Important:</strong> You must use either the Basic Authentication, <strong>OR</strong> the Client Certificate, but not both! Also make sure, that you do not send any faulty or old certificates, or authentication/accept headers. Otherwise our corporate Firewall will reject the call with a 403-Forbidden status! Furthermore, please note, that some environments do this by default. So even if you didn't implement it, the environment may do it as a default! It may be necessary to check your configuration.
+  </p>
 </div></div></div></section><section id="authentication_basic"><h2><a name="authentication_basic"></a>HTTP basic authentication</h2><div class="row"><div class="col-md-6"><p>This is the default authentication method. Technical users for the JSON API can be
 created by the merchant in the Saferpay Backoffice under <a href="https://test.saferpay.com/BO/Settings/JsonApiLogin"><strong>Settings &gt; JSON API basic authentication</strong></a>. The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
 besides creating a new user / password pair from your Backoffice account.</p><p>The password must meet some complexity requirements. We suggest using / generating
 dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).</p><img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/API_Basic_Auth.PNG" alt="Basic Authentication"></div><div class="col-md-6"><p>HTTP Header:</p><p><code>Authorization: Basic [your base64 encoded &quot;user_name:password&quot;]</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="authentication_cert"><h2><a name="authentication_cert"></a> HTTPS Client Certificate Authentication</h2><div class="row"><div class="col-md-6"><p>Alternatively, Saferpay also supports authentication via a client certificate.</p><div class="info">
-	<p><strong>Important:</strong> This feature is only available for Saferpay Business merchants!</p>
-</div><p>A client certificate for the JSON-API can be ordered in the Saferpay Backoffice under <a href="https://test.saferpay.com/BO/Settings/JsonApiClientCertificate"><strong>Settings &gt; JSON API client certificate</strong></a>. In order to get to the &#8220;JSON API Client Certificate</p><p>If you have a Saferpay Business licence, you will find the HTTPS Client Certificate Authentication section under the form for HTTPS Basic Authentication.</p><img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/BO_Client_certificate_1.png" alt="Basic Aiuthentication"><p>Generate the CSR as described on the page and import it using the upload button.
-The signed client certificate will then be downloaded through your browser.</p></div></div></section><section id="integration"><h1><a name="integration"></a>Integration</h1><div class="row"><div class="col-md-6"></div></div></section><section><h3>Integration Guide</h3><div class="row"><div class="col-md-6"><p>While these Documents are meant as a quick reference and technical specification of the Saferpay JSON-API, <a href="https://saferpay.github.io/sndbx/index.html">the Saferpay Integration Guide</a> contains an in debth explanation about payment-flows, tips and tricks, aswell as best practices for those, who want to integrate the JSON-API and its features for the first time.
-It will also help to understand certain characteristics about the different payment methods we offer, as well as the rules you must follow, when processing vital credit card data and more.</p><p>The sequential steps of the general integration process are described in our <a href="https://www.six-payment-services.com/en/site/e-commerce/support/integration.html">Step-by-step Integration-Manual</a>.</p></div></div></section><section><h3>Server-to-Server code Samples</h3><div class="row"><div class="col-md-6"><p>The JSON API is a modern and lightweight interface, that can be used with all shop
-systems and all programming languages. Only a few steps are neccessary to integrate
-your only shop with Saferpay. The proceeding is mostly as follows:</p><ol>
+  <p>
+    <strong>Important:</strong> This feature is only available for Saferpay Business merchants!
+  </p>
+</div><p>A client certificate for the JSON-API can be ordered in the Saferpay Backoffice under <a href="https://test.saferpay.com/BO/Settings/JsonApiClientCertificate"><strong>Settings &gt; JSON API client certificate</strong></a>.</p><p>If you have a Saferpay Business licence, you will find the HTTPS Client Certificate Authentication section under the form for HTTPS Basic Authentication.</p><img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/BO_Client_certificate_1.png" alt="Basic Aiuthentication"><p>Generate the CSR as described on the page and import it using the upload button.
+The signed client certificate will then be downloaded through your browser.</p></div></div></section><section id="integration"><h1><a name="integration"></a>Integration</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Integration Guide</h2><div class="row"><div class="col-md-6"><p>While these Documents are meant as a quick reference and technical specification of the Saferpay JSON-API, <a href="https://saferpay.github.io/sndbx/index.html">the Saferpay Integration Guide</a> contains an in depth explanation about payment-flows, tips and tricks, as well as best practices for those, who want to integrate the JSON-API and its features for the first time.
+It will also help to understand certain characteristics about the different payment methods we offer, as well as the rules you must follow, when processing vital credit card data and more.</p><p>The sequential steps of the general integration process are described in our <a href="https://www.six-payment-services.com/en/site/e-commerce/support/integration.html">Step-by-step Integration-Manual</a>.</p></div></div></section><section><h2>Server-to-Server code Samples</h2><div class="row"><div class="col-md-6"><p>The JSON API is a modern and lightweight interface, that can be used with all shop
+systems and all programming languages. Only a few steps are necessary to integrate
+your online shop with Saferpay. The proceeding is mostly as follows:</p><ol>
 <li>Initialize via secure server-to-server call</li>
 <li>Integrate iframe to redirect your customer</li>
 <li>Authorize/ assert customer interaction via secure server-to-server call</li>
 </ol><p>In secure server-to-server calls you have to submit a JSON request containing
 you processing instructions to the defined URLs. The URL and the JSON structure
-varies depening on the action/resource you want to call. For further details check
+varies depending on the action/resource you want to call. For further details check
 the description of resources below.</p><p>Server-to-server calls are a secure way to submit and gather data. Hence, a server-to-server
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.</p><div class="info">
-	<p><strong>Important:</strong> Saferpay only supports TLS 1.2 and up, for secure connections. Please make sure, that your system is configured accordingly! <a href="https://www.six-payment-services.com/en/site/e-commerce/support/tls-faq.html">More information in our TLS-FAQ!</a></p>
+  <p>
+    <strong>Important:</strong> Saferpay only supports TLS 1.2 and up, for secure connections. Please make sure, that your system is configured accordingly! <a href="https://www.six-payment-services.com/en/site/e-commerce/support/tls-faq.html">More information in our TLS-FAQ.</a>
+  </p>
 </div><div class="danger">
-	<p><strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server, maybe by using AJAX.</p>
+  <p>
+    <strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server, maybe by using AJAX.
+  </p>
 </div><div class="danger">
-	<p><strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary request, at the correct time (E.g. doing the assert only, if the SuccessUrl, or NotifyUrl are called!). Saferpay reserves the right to otherwise deactivate, or block your account!</p>
+  <p>
+    <strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary request, at the correct time (e.g. doing the assert only, if the SuccessUrl, or NotifyUrl are called). Saferpay reserves the right to otherwise deactivate, or block your account!
+  </p>
 </div></div><div class="col-md-6"><p>Server-to-server communication:</p><div class="samples" role="tabpanel">
   <ul class="nav nav-tabs" id="tabs" data-tabs="tabs">
     <li class="active">
@@ -331,150 +341,150 @@ information about the outcome of e.g. 3D Secure.</p><div class="info">
     //encode credentials
     String credential = sfpLogin + &quot;:&quot; + sfpPassword;
     String encodedCredentials = DatatypeConverter.printBase64Binary(credential.getBytes());
-   
-    //create connection
-    HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
-    connection.setRequestProperty(&quot;connection&quot;, &quot;close&quot;);
-    connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json; charset=utf-8&quot;);
-    connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
-    connection.setRequestProperty(&quot;Authorization&quot;, &quot;Basic &quot; + encodedCredentials);
-    connection.setRequestMethod(&quot;POST&quot;);
-    connection.setDoOutput(true);
-    connection.setUseCaches(false);
-    
-    //write JSON to output stream
-    JsonWriter writer = Json.createWriter(connection.getOutputStream());
-    writer.writeObject(request);
-    writer.close();
-    
-    //send request
-    int responseCode = connection.getResponseCode();
-    
-    //get correct input stream
-    InputStream readerStream = responseCode == 200 ? connection.getInputStream() : connection.getErrorStream();
-    JsonObject response = Json.createReader(readerStream).readObject();
-    
-    return response;
-}</pre>
-    </div>
-    <div class="tab-pane" id="php">
-      <pre class="prettyprint">//This is an EXAMPLE of the payload-Array.
+<pre><code>//create connection
+HttpURLConnection connection = (HttpURLConnection) sfpUrl.openConnection();
+connection.setRequestProperty(&quot;connection&quot;, &quot;close&quot;);
+connection.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json; charset=utf-8&quot;);
+connection.setRequestProperty(&quot;Accept&quot;, &quot;application/json&quot;);
+connection.setRequestProperty(&quot;Authorization&quot;, &quot;Basic &quot; + encodedCredentials);
+connection.setRequestMethod(&quot;POST&quot;);
+connection.setDoOutput(true);
+connection.setUseCaches(false);
+
+//write JSON to output stream
+JsonWriter writer = Json.createWriter(connection.getOutputStream());
+writer.writeObject(request);
+writer.close();
+
+//send request
+int responseCode = connection.getResponseCode();
+
+//get correct input stream
+InputStream readerStream = responseCode == 200 ? connection.getInputStream() : connection.getErrorStream();
+JsonObject response = Json.createReader(readerStream).readObject();
+
+return response;
+</code></pre>
+<p>}</p></pre>
+</div>
+<div class="tab-pane" id="php">
+<pre class="prettyprint">//This is an EXAMPLE of the payload-Array.
 $payload = array(
-    'RequestHeader' =&gt; array(
-        'SpecVersion' =&gt; &quot;1.7&quot;,
-        'CustomerId' =&gt; &quot;[YOUR CUSTOMERID]&quot;,
-        'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
-        'RetryIndicator' =&gt; 0,
-        'ClientInfo' =&gt; array(
-            'ShopInfo' =&gt; &quot;My Shop&quot;,
-            'OsInfo' =&gt; &quot;Windows Server 2013&quot;
-        )
-    ),
-    'TerminalId' =&gt; &quot;[YOUR TERMINALID]&quot;,
-    'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
-    'Payment' =&gt; array(
-        'Amount' =&gt; array(
-            'Value' =&gt; &quot;21065&quot;,
-            'CurrencyCode' =&gt; &quot;EUR&quot;
-        ),
-        'OrderId' =&gt; &quot;123test&quot;,
-        'PayerNote' =&gt; &quot;A Note&quot;,
-        'Description' =&gt; &quot;Test_Order_123test&quot;
-    ),
-    'Payer' =&gt; array(
-        'IpAddress' =&gt; &quot;192.168.178.1&quot;,
-        'LanguageCode' =&gt; &quot;en&quot;
-    ),
-    'ReturnUrls' =&gt; array(
-        'Success' =&gt; &quot;https://myshop.com/success&quot;,
-        'Fail' =&gt; &quot;https://myshop.com/fail&quot;
-    ),
-    'Notification' =&gt; array(
-        'PayerEmail' =&gt; &quot;payee@mailcom&quot;,
-        'MerchantEmail' =&gt; &quot;merchant@mail.com&quot;,
-        'NotifyUrl' =&gt; &quot;https://myshop/callback&quot;
-    ),
-    'DeliveryAddressForm' =&gt; array(
-        'Display' =&gt; true,
-        'MandatoryFields' =&gt; array(&quot;CITY&quot;,&quot;COMPANY&quot;,&quot;COUNTRY&quot;,&quot;EMAIL&quot;,&quot;FIRSTNAME&quot;,&quot;LASTNAME&quot;,&quot;PHONE&quot;,&quot;SALUTATION&quot;,&quot;STATE&quot;,&quot;STREET&quot;,&quot;ZIP&quot;)
-    )
+'RequestHeader' =&gt; array(
+'SpecVersion' =&gt; &quot;1.7&quot;,
+'CustomerId' =&gt; &quot;[YOUR CUSTOMERID]&quot;,
+'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
+'RetryIndicator' =&gt; 0,
+'ClientInfo' =&gt; array(
+'ShopInfo' =&gt; &quot;My Shop&quot;,
+'OsInfo' =&gt; &quot;Windows Server 2013&quot;
+)
+),
+'TerminalId' =&gt; &quot;[YOUR TERMINALID]&quot;,
+'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
+'Payment' =&gt; array(
+'Amount' =&gt; array(
+'Value' =&gt; &quot;21065&quot;,
+'CurrencyCode' =&gt; &quot;EUR&quot;
+),
+'OrderId' =&gt; &quot;123test&quot;,
+'PayerNote' =&gt; &quot;A Note&quot;,
+'Description' =&gt; &quot;Test_Order_123test&quot;
+),
+'Payer' =&gt; array(
+'IpAddress' =&gt; &quot;192.168.178.1&quot;,
+'LanguageCode' =&gt; &quot;en&quot;
+),
+'ReturnUrls' =&gt; array(
+'Success' =&gt; &quot;https://myshop.com/success&quot;,
+'Fail' =&gt; &quot;https://myshop.com/fail&quot;
+),
+'Notification' =&gt; array(
+'PayerEmail' =&gt; &quot;payee@mailcom&quot;,
+'MerchantEmail' =&gt; &quot;merchant@mail.com&quot;,
+'NotifyUrl' =&gt; &quot;https://myshop/callback&quot;
+),
+'DeliveryAddressForm' =&gt; array(
+'Display' =&gt; true,
+'MandatoryFields' =&gt; array(&quot;CITY&quot;,&quot;COMPANY&quot;,&quot;COUNTRY&quot;,&quot;EMAIL&quot;,&quot;FIRSTNAME&quot;,&quot;LASTNAME&quot;,&quot;PHONE&quot;,&quot;SALUTATION&quot;,&quot;STATE&quot;,&quot;STREET&quot;,&quot;ZIP&quot;)
+)
 );
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
 //$payload is a multidimensional array, that assembles the JSON structure. Example see above
 function do_curl($username,$password,$url, $payload){
-    //Set Options for CURL
-    $curl = curl_init($url);
-    curl_setopt($curl, CURLOPT_HEADER, false);
-    //Return Response to Application
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    //Set Content-Headers to JSON
-    curl_setopt($curl, CURLOPT_HTTPHEADER,array(&quot;Content-type: application/json&quot;,&quot;Accept: application/json; charset=utf-8&quot;));
-    //Execute call via http-POST
-    curl_setopt($curl, CURLOPT_POST, true);
-    //Set POST-Body
-    //convert DATA-Array into a JSON-Object
-    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
-    //WARNING!!!!!
-    //This option should NOT be &quot;false&quot;, otherwise the connection is not secured
-    //You can turn it of if you're working on the test-system with no vital data
-    //PLEASE NOTE:
-    //Under Windows (using WAMP or XAMP) it is necessary to manually download and save the necessary SSL-Root certificates!
-    //To do so, please visit: http://curl.haxx.se/docs/caextract.html and Download the .pem-file
-    //Then save it to a folder where PHP has write privileges (e.g. the WAMP/XAMP-Folder itself)
-    //and then put the following line into your php.ini:
-    //curl.cainfo=c:\path\to\file\cacert.pem
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
-    //HTTP-Basic Authentication for the Saferpay JSON-API.
-    //This will set the authentication header and encode the password &amp; username in Base64 for you
-    curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
-    //CURL-Execute &amp; catch response
-    $jsonResponse = curl_exec($curl);
-    //Get HTTP-Status
-    //Abort if Status != 200
-    $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-    if ($status != 200) {
-        //IF ERROR
-        //Get http-Body (if aplicable) from CURL-response
-        $body = json_decode(curl_multi_getcontent($curl), true);
-        //Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
-        $response = array(
-            &quot;status&quot; =&gt; $status . &quot; &lt;|&gt; &quot; . curl_error($curl),
-            &quot;body&quot; =&gt; $body
-        );
-    } else {
-        //IF OK
-        //Convert response into an Array
-        $body = json_decode($jsonResponse, true);
-        //Build array, containing the body (Response-data) and the http-status-code
-        $response = array(
-            &quot;status&quot; =&gt; $status,
-            &quot;body&quot; =&gt; $body
-        );
-    }
-    //IMPORTANT!!!
-    //Close connection!
-    curl_close($curl);
-    //$response, again, is a multi-dimensional Array, containing the status-code ($response[&quot;status&quot;]) and the API-response (if available) itself ($response[&quot;body&quot;])
-    return $response;
+//Set Options for CURL
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_HEADER, false);
+//Return Response to Application
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//Set Content-Headers to JSON
+curl_setopt($curl, CURLOPT_HTTPHEADER,array(&quot;Content-type: application/json&quot;,&quot;Accept: application/json; charset=utf-8&quot;));
+//Execute call via http-POST
+curl_setopt($curl, CURLOPT_POST, true);
+//Set POST-Body
+//convert DATA-Array into a JSON-Object
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
+//WARNING!!!!!
+//This option should NOT be &quot;false&quot;, otherwise the connection is not secured
+//You can turn it of if you're working on the test-system with no vital data
+//PLEASE NOTE:
+//Under Windows (using WAMP or XAMP) it is necessary to manually download and save the necessary SSL-Root certificates!
+//To do so, please visit: http://curl.haxx.se/docs/caextract.html and Download the .pem-file
+//Then save it to a folder where PHP has write privileges (e.g. the WAMP/XAMP-Folder itself)
+//and then put the following line into your php.ini:
+//curl.cainfo=c:\path\to\file\cacert.pem
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+//HTTP-Basic Authentication for the Saferpay JSON-API.
+//This will set the authentication header and encode the password &amp; username in Base64 for you
+curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
+//CURL-Execute &amp; catch response
+$jsonResponse = curl_exec($curl);
+//Get HTTP-Status
+//Abort if Status != 200
+$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+if ($status != 200) {
+//IF ERROR
+//Get http-Body (if aplicable) from CURL-response
+$body = json_decode(curl_multi_getcontent($curl), true);
+//Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
+$response = array(
+&quot;status&quot; =&gt; $status . &quot; &lt;|&gt; &quot; . curl_error($curl),
+&quot;body&quot; =&gt; $body
+);
+} else {
+//IF OK
+//Convert response into an Array
+$body = json_decode($jsonResponse, true);
+//Build array, containing the body (Response-data) and the http-status-code
+$response = array(
+&quot;status&quot; =&gt; $status,
+&quot;body&quot; =&gt; $body
+);
+}
+//IMPORTANT!!!
+//Close connection!
+curl_close($curl);
+//$response, again, is a multi-dimensional Array, containing the status-code ($response[&quot;status&quot;]) and the API-response (if available) itself ($response[&quot;body&quot;])
+return $response;
 }
 </pre>
-    </div>
+</div><p></p>
   </div>
 </div></div></div><div class="row"><div class="col-md-6"><p>If you include the redirect pages into your web-page using an iframe, you can react on size changes
 of the iframe content by listening to a message event containing the new sizing information.</p><p>Please note: Depending on the bank, issuer, or payment provider, the page can try to break
-out of the iframe or lack telling you the actual size of the content.</p></div><div class="col-md-6"><p>Handle JavaScript events from Saferpay (For JQuery 1.9 and higher!):</p><pre><code class="language-js">$(window).bind('message', function (e) {
+out of the iframe or lack telling you the actual size of the content.</p></div><div class="col-md-6"><p>Handle JavaScript events from Saferpay (for JQuery 1.9 and higher):</p><pre><code class="language-js">$(window).bind('message', function (e) {
   switch (e.originalEvent.data.message) {
     case 'css':
       $('#iframe').css('height', e.originalEvent.data.height + &quot;px&quot;);
       break;
-    }
-  });
-</code></pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section><h3>Granting IP-permission</h3><div class="row"><div class="col-md-6"><p>As an additional security feature, you can also grant permissions to specific IPs. This way you can control the API access even further in connection with the authentication credentials.
+  }
+});
+</code></pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section><h2>Granting IP-permission</h2><div class="row"><div class="col-md-6"><p>As an additional security feature, you can also grant permissions to specific IPs. This way you can control the API access even further in connection with the authentication credentials.
 To do so, you need to log into the Saferpay Backoffice, for either <a href="https://www.saferpay.com/BO/Login/">production</a> or <a href="https://test.saferpay.com/BO/Login/">test</a>, then go under <strong>Settings &gt; IP permissions</strong> and enter the IP, or IP range of your network/server!</p><div class="info">
   <p><strong>Note:</strong> This feature is entirely optional and only supports IPv4 addresses only!</p>
-</div></div></div></section><section><h3>Building the correct API URL</h3><div class="row"><div class="col-md-6"><p>Every request is differentiated by its own unique request URL. This way Saferpay knows which API-function you want to access.
+</div></div></div></section><section><h2>Building the correct API URL</h2><div class="row"><div class="col-md-6"><p>Every request is differentiated by its own unique request URL. This way Saferpay knows which API-function you want to access.
 Combined with the base URL for either the production- or test-environment, you will get the complete API-URL.
 Here is an example of how to build this URL correctly:</p><p>Base URL production system:</p><p><code>https://www.saferpay.com/api</code></p><p>Base URL test system:</p><p><code>https://test.saferpay.com/api</code></p><p>Take the correct request URL and add it to the base URL.
 You can find it on the right side of the request-specification.</p><p>For instance, if you want to call <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a>, the request URL is:</p><p><code>/Payment/v1/PaymentPage/Initialize</code></p><p>Add this to the base URL and you will get the full API URL:</p><p>Full API URL production system:</p><p><code>https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize</code></p><p>Full API URL test system:</p><p><code>https://test.saferpay.com/api/Payment/v1/PaymentPage/Initialize</code></p></div></div></section><section id="errorhandling"><h1><a name="errorhandling"></a>Error Handling</h1><div class="row"><div class="col-md-6"><p>Successfully completed requests are confirmed with an http status code of <code>200</code> and
@@ -484,41 +494,43 @@ or the web application firewall and are thus outside of our control) &#8211; an 
 stating the reason of the failure is included in the body of the response. The presence
 of an error message as specified in this document can be derived from the content type:
 if it&#8217;s <code>application/json</code>, then there is an error message present.</p></div><div class="col-md-6"><p>HTTP status codes:</p><table class="table table-striped">
-	<tbody><tr>
-		<td class="text-right col-sm-2">200</td>
-		<td class="col-sm-10">OK (No error)</td>
-	</tr>
-	<tr>
-		<td class="text-right">400</td>
-		<td>Validation error</td>
-	</tr>
-	<tr>
-		<td class="text-right">401</td>
-		<td>Authentication of the request failed</td>
-	</tr>
-	<tr>
-		<td class="text-right">402</td>
-		<td>Requested action failed</td>
-	</tr>
-	<tr>
-		<td class="text-right">403</td>
-		<td>Access denied</td>
-	</tr>
-	<tr>
-		<td class="text-right">406</td>
-		<td>Not acceptable (wrong accept header)</td>
-	</tr>
-	<tr>
-		<td class="text-right">415</td>
-		<td>Unsupported media type (wrong content-type header)</td>
-	</tr>
-	<tr>
-		<td class="text-right">500</td>
-		<td>Internal error</td>
-	</tr>
+  <tbody><tr>
+    <td class="text-right col-sm-2">200</td>
+    <td class="col-sm-10">OK (No error)</td>
+  </tr>
+  <tr>
+    <td class="text-right">400</td>
+    <td>Validation error</td>
+  </tr>
+  <tr>
+    <td class="text-right">401</td>
+    <td>Authentication of the request failed</td>
+  </tr>
+  <tr>
+    <td class="text-right">402</td>
+    <td>Requested action failed</td>
+  </tr>
+  <tr>
+    <td class="text-right">403</td>
+    <td>Access denied</td>
+  </tr>
+  <tr>
+    <td class="text-right">406</td>
+    <td>Not acceptable (wrong accept header)</td>
+  </tr>
+  <tr>
+    <td class="text-right">415</td>
+    <td>Unsupported media type (wrong content-type header)</td>
+  </tr>
+  <tr>
+    <td class="text-right">500</td>
+    <td>Internal error</td>
+  </tr>
 </tbody></table><div class="info">
-	<p><strong>Info:</strong> The API-Timeout for requests should be 100 seconds! After that, a connection should be closed! Also, no further actions should be taken, until the request is answered, or runs into a timeout, to prevent unwanted behavior!</p>
-</div></div></div><div class="row"><div class="col-md-6"><h4>Error Message</h4><table class="table">
+  <p>
+    <strong>Info:</strong> The API timeout for requests should be 100 seconds! After that, a connection should be closed. Also, no further actions should be taken, until the request is answered or runs into a timeout, to prevent unwanted behavior.
+  </p>
+</div></div></div><div class="row"><div class="col-md-6"></div></div></section><section><h2>Error Message</h2><div class="row"><div class="col-md-6"><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -536,7 +548,6 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -553,7 +564,6 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">What can be done to resolve the error?</div>
 	<i class="small text-muted">
 Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
@@ -571,7 +581,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name / id of the error. These names will not change, so you may parse these and attach your logic to the ErrorName.</div>
 	<i class="small text-muted">
 			</i>
@@ -588,7 +597,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Description of the error. The contents of this element might change without notice, so do not parse it.</div>
 	<i class="small text-muted">
 			</i>
@@ -602,7 +610,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the failed transaction, if available</div>
 	<i class="small text-muted">
 			</i>
@@ -616,7 +623,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don&#8217;t parse it.</div>
 	<i class="small text-muted">
 			</i>
@@ -630,7 +636,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of acquirer (if declined by acquirer) or processor</div>
 	<i class="small text-muted">
 			</i>
@@ -644,7 +649,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result code returned by acquirer or processor</div>
 	<i class="small text-muted">
 			</i>
@@ -658,7 +662,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Message returned by acquirer or processor</div>
 	<i class="small text-muted">
 			</i>
@@ -677,210 +680,210 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
   ]
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
-	<tbody><tr>
-		<td class="text-right col-sm-3">ABORT</td>
-		<td class="col-sm-9">Do not retry this request. It will never succeed.</td>
-	</tr>
-	<tr>
-		<td class="text-right">RETRY</td>
-		<td>Request is valid and understood, but can't be processed at this time. This request can be retried.</td>
-	</tr>
-	<tr>
-		<td class="text-right">RETRY_LATER</td>
-		<td>This request can be retried later after certain state/ error condition has been changed.</td>
-	</tr>
-	<tr>
-		<td class="text-right">OTHER_MEANS</td>
-		<td>Special case of retry. Please provide another means of payment.</td>
-	</tr>
+  <tbody><tr>
+    <td class="text-right col-sm-3">ABORT</td>
+    <td class="col-sm-9">Do not retry this request. It will never succeed.</td>
+  </tr>
+  <tr>
+    <td class="text-right">RETRY</td>
+    <td>Request is valid and understood, but can't be processed at this time. This request can be retried.</td>
+  </tr>
+  <tr>
+    <td class="text-right">RETRY_LATER</td>
+    <td>This request can be retried later after certain state/ error condition has been changed.</td>
+  </tr>
+  <tr>
+    <td class="text-right">OTHER_MEANS</td>
+    <td>Special case of retry. Please provide another means of payment.</td>
+  </tr>
 </tbody></table><p>List of error names (these names will not change, so you may parse these and attach your logic to the ErrorName):</p><table class="table table-striped">
-	<tbody><tr>
-		<td class="text-right">ACTION_NOT_SUPPORTED</td>
-		<td>
-			The requested action is not supported in the given context or the action can't be executed with the request data.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">ALIAS_INVALID</td>
-		<td>
-			The alias is not known or already used (in case of registration).<br>
-			<i>Solution:</i> Use another alias for registration
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">AMOUNT_INVALID</td>
-		<td>
-			The amount does not adhere to the restrictions for this action. E.g. it might be exceeding the allowed capture amount.
-		</td>
-	</tr>	
-	<tr>
-		<td class="text-right col-sm-4">AUTHENTICATION_FAILED</td>
-		<td class="col-sm-8">
-			Wrong password, wrong client certificate, invalid token, wrong HMAC.<br>
-			<i>Solution:</i> Use proper credentials, fix HMAC calculation, use valid token
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">BLOCKED_BY_RISK_MANAGEMENT</td>
-		<td>
-			Action blocked by risk management<br>
-			<i>Solution:</i> Unblock in Saferpay Risk Management (Backoffice)
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CARD_CHECK_FAILED</td>
-		<td>
-			Invalid card number or cvc (this is only returned for the SIX-internal chard check feature for Alias/InsertDirect).<br>
-			<i>Solution:</i> Let the card holder correct the entered data
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CARD_CVC_INVALID</td>
-		<td>
-			Wrong cvc entered<br>
-			<i>Solution:</i> Retry with correct cvc
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CARD_CVC_REQUIRED</td>
-		<td>
-			Cvc not entered but required<br>
-			<i>Solution:</i> Retry with cvc entered
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CARD_EXPIRED</td>
-		<td>
-			Card expired<br>
-			<i>Solution:</i> Use another card or correct expiry date
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">COMMUNICATION_FAILED</td>
-		<td>
-			The communication to the processor failed.<br>
-			<i>Solution:</i> Try again or use another means of payment
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">COMMUNICATION_TIMEOUT</td>
-		<td>
-			Saferpay did not receive a response from the external system in time. It&#8217;s possible that an authorization was created, but Saferpay is not able to know this.<br>
-			<i>Solution:</i> Check with the acquirer if there is an authorization which needs to be canceled.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CONDITION_NOT_SATISFIED</td>
-		<td>
-			The condition which was defined in the request could not be satisfied.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">CURRENCY_INVALID</td>
-		<td>
-			Currency does not match referenced transaction currency.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">GENERAL_DECLINED</td>
-		<td>
-			Transaction declined by unknown reason
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">INTERNAL_ERROR</td>
-		<td>
-			Internal error in Saferpay<br>
-			<i>Solution:</i> Try again
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">NO_CONTRACT</td>
-		<td>
-			No contract available for the brand / currency combination.<br>
-			<i>Solution:</i> Use another card or change the currency to match an existing contract or have the currency activated for the contract.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">NO_CREDITS_AVAILABLE</td>
-		<td>
-			No more credits available for this account.<br>
-			<i>Solution:</i> Buy more transaction credits
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">PAYMENTMEANS_INVALID</td>
-		<td>
-			Invalid means of payment (e.g. invalid card)
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">PERMISSION_DENIED</td>
-		<td>
-			No permission (e.g. terminal does not belong to the customer)
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">3DS_AUTHENTICATION_FAILED</td>
-		<td>
-			3D-secure authentication failed &#8211; the transaction must be aborted.<br>
-			<i>Solution:</i> Use another card or means of payment
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">TOKEN_EXPIRED</td>
-		<td>
-			The token is expired.<br>
-			<i>Solution:</i> Create a new token.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">TOKEN_INVALID</td>
-		<td>
-			The token either does not exist for this customer or was already used
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">TRANSACTION_ABORTED</td>
-		<td>
-			The transaction was aborted by the payer.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">TRANSACTION_ALREADY_CAPTURED</td>
-		<td>
-			Transaction already captured.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">TRANSACTION_DECLINED</td>
-		<td>
-			Declined by the processor.<br>
-			<i>Solution:</i> Use another card or check details.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td class="text-right">TRANSACTION_NOT_FOUND</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td class="text-right">TRANSACTION_NOT_STARTED</td>
-		<td>
-			The transaction was not started by the payer. Therefore, no final result for the transaction is available.<br>
-			<i>Solution:</i> Try again later.
-		</td>
-	</tr>
-	<tr>
-		<td class="text-right">VALIDATION_FAILED</td>
-		<td>
-			Validation failed.<br>
-			<i>Solution:</i> Fix request
-		</td>
-	</tr>
+  <tbody><tr>
+      <td class="text-right">ACTION_NOT_SUPPORTED</td>
+      <td>
+          The requested action is not supported in the given context or the action can't be executed with the request data.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">ALIAS_INVALID</td>
+      <td>
+          The alias is not known or already used (in case of registration).<br>
+          <i>Solution:</i> Use another alias for registration
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">AMOUNT_INVALID</td>
+      <td>
+          The amount does not adhere to the restrictions for this action. E.g. it might be exceeding the allowed capture amount.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right col-sm-4">AUTHENTICATION_FAILED</td>
+      <td class="col-sm-8">
+          Wrong password, wrong client certificate, invalid token, wrong HMAC.<br>
+          <i>Solution:</i> Use proper credentials, fix HMAC calculation, use valid token
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">BLOCKED_BY_RISK_MANAGEMENT</td>
+      <td>
+          Action blocked by risk management<br>
+          <i>Solution:</i> Unblock in Saferpay Risk Management (Backoffice)
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">CARD_CHECK_FAILED</td>
+      <td>
+          Invalid card number or cvc (this is only returned for the SIX-internal chard check feature for Alias/InsertDirect).<br>
+          <i>Solution:</i> Let the card holder correct the entered data
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">CARD_CVC_INVALID</td>
+      <td>
+          Wrong cvc entered<br>
+          <i>Solution:</i> Retry with correct cvc
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">CARD_CVC_REQUIRED</td>
+      <td>
+          Cvc not entered but required<br>
+          <i>Solution:</i> Retry with cvc entered
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">CARD_EXPIRED</td>
+      <td>
+          Card expired<br>
+          <i>Solution:</i> Use another card or correct expiry date
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">COMMUNICATION_FAILED</td>
+      <td>
+          The communication to the processor failed.<br>
+          <i>Solution:</i> Try again or use another means of payment
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">COMMUNICATION_TIMEOUT</td>
+      <td>
+          Saferpay did not receive a response from the external system in time. It&#8217;s possible that an authorization was created, but Saferpay is not able to know this.<br>
+          <i>Solution:</i> Check with the acquirer if there is an authorization which needs to be canceled.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">CONDITION_NOT_SATISFIED</td>
+      <td>
+          The condition which was defined in the request could not be satisfied.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">CURRENCY_INVALID</td>
+      <td>
+          Currency does not match referenced transaction currency.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">GENERAL_DECLINED</td>
+      <td>
+          Transaction declined by unknown reason
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">INTERNAL_ERROR</td>
+      <td>
+          Internal error in Saferpay<br>
+          <i>Solution:</i> Try again
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">NO_CONTRACT</td>
+      <td>
+          No contract available for the brand / currency combination.<br>
+          <i>Solution:</i> Use another card or change the currency to match an existing contract or have the currency activated for the contract.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">NO_CREDITS_AVAILABLE</td>
+      <td>
+          No more credits available for this account.<br>
+          <i>Solution:</i> Buy more transaction credits
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">PAYMENTMEANS_INVALID</td>
+      <td>
+          Invalid means of payment (e.g. invalid card)
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">PERMISSION_DENIED</td>
+      <td>
+          No permission (e.g. terminal does not belong to the customer)
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">3DS_AUTHENTICATION_FAILED</td>
+      <td>
+          3D-secure authentication failed &#8211; the transaction must be aborted.<br>
+          <i>Solution:</i> Use another card or means of payment
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">TOKEN_EXPIRED</td>
+      <td>
+          The token is expired.<br>
+          <i>Solution:</i> Create a new token.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">TOKEN_INVALID</td>
+      <td>
+          The token either does not exist for this customer or was already used
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">TRANSACTION_ABORTED</td>
+      <td>
+          The transaction was aborted by the payer.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">TRANSACTION_ALREADY_CAPTURED</td>
+      <td>
+          Transaction already captured.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">TRANSACTION_DECLINED</td>
+      <td>
+          Declined by the processor.<br>
+          <i>Solution:</i> Use another card or check details.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td class="text-right">TRANSACTION_NOT_FOUND</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td class="text-right">TRANSACTION_NOT_STARTED</td>
+      <td>
+          The transaction was not started by the payer. Therefore, no final result for the transaction is available.<br>
+          <i>Solution:</i> Try again later.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">VALIDATION_FAILED</td>
+      <td>
+          Validation failed.<br>
+          <i>Solution:</i> Fix request
+      </td>
+  </tr>
 </tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"><p>The Payment Page Interface provides a simple and easy integration of Saferpay into your web shop, mobile app or other applications without the need to implement a user interface for card data entry. The Saferpay Payment Page can be used with a Saferpay eCommerce license as well as with a Saferpay Business license. It allows the processing of all <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#paymentmethods">payment methods</a> that are available with Saferpay. Once integrated, more payment methods can be activated at any time and without major adjustments.</p></div></div></section><section id="ChapterPaymentPageProcess"><h2><a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the transaction flow, when using the Payment Page</p><div class="info">
 	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
@@ -921,7 +924,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -935,7 +937,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br>
@@ -954,7 +955,6 @@ Id[1..20]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -974,7 +974,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -988,7 +987,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br>
@@ -1004,7 +1002,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page and to go directly to the given wallet (if exactly one wallet is filled and PaymentMethods is not set).</div>
 	<i class="small text-muted">
 Possible values: MASTERPASS.<br>
@@ -1021,7 +1018,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer</div>
 	<i class="small text-muted">
 			</i>
@@ -1036,7 +1032,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">If the given means of payment should be stored in Saferpay Secure Card Data storage (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -1054,7 +1049,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -1069,7 +1063,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Notification options</div>
 	<i class="small text-muted">
 			</i>
@@ -1084,7 +1077,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Styling options</div>
 	<i class="small text-muted">
 			</i>
@@ -1099,7 +1091,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to have the payer enter his billing address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
@@ -1114,7 +1105,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to have the payer enter his delivery address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
@@ -1129,7 +1119,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -1174,7 +1163,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -1191,7 +1179,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token for later referencing</div>
 	<i class="small text-muted">
 					<span>Example: 234uhfh78234hlasdfh8234e1234</span>
@@ -1209,7 +1196,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
 	<i class="small text-muted">
 					<span>Example: 2011-07-14T19:43:37+01:00</span>
@@ -1227,7 +1213,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Redirecturl for the payment page transaction. Simply add this to a &quot;Pay Now&quot;-button or do an automatic redirect.</div>
 	<i class="small text-muted">
 					<span>Example: https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/z2p7a0plpgsd41m97wjvm5jza</span>
@@ -1261,7 +1246,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -1278,7 +1262,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -1313,7 +1296,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -1331,7 +1313,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -1349,7 +1330,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -1364,7 +1344,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -1379,7 +1358,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the SCD registration outcome</div>
 	<i class="small text-muted">
 			</i>
@@ -1394,7 +1372,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
@@ -1409,7 +1386,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -1490,9 +1466,9 @@ Id[1..50]<br>
 </ul>
 </li>
 <li>Transaction is finished!</li>
-</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p><div class="danger">
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -1510,7 +1486,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -1524,7 +1499,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br>
@@ -1543,7 +1517,6 @@ Id[1..20]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -1563,7 +1536,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -1578,7 +1550,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Means of payment (either card data or a reference to a previously stored card).<br> Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
@@ -1593,7 +1564,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the payer (IP-address)</div>
 	<i class="small text-muted">
 			</i>
@@ -1611,7 +1581,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -1626,7 +1595,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Styling options</div>
 	<i class="small text-muted">
 			</i>
@@ -1641,7 +1609,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Wallet system to be used for the transaction (this cannot be combined with PaymentMeans above).</div>
 	<i class="small text-muted">
 			</i>
@@ -1655,7 +1622,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br>
@@ -1672,7 +1638,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -1721,7 +1686,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -1738,7 +1702,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id for referencing later</div>
 	<i class="small text-muted">
 					<span>Example: 234uhfh78234hlasdfh8234e</span>
@@ -1756,7 +1719,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
@@ -1771,7 +1733,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Indicates if liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in InitializeTransaction request. True, if liability shift to issuer is possible, false if not.</div>
 	<i class="small text-muted">
 			</i>
@@ -1788,7 +1749,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">True if a redirect must be performed to continue, false otherwise</div>
 	<i class="small text-muted">
 			</i>
@@ -1803,7 +1763,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Mandatory if RedirectRequired is true. Contains the URL for the redirect to use for example the Saferpay hosted register form.</div>
 	<i class="small text-muted">
 			</i>
@@ -1841,7 +1800,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -1858,7 +1816,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by Initialize</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -1874,7 +1831,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> <br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
 	<i class="small text-muted">
 Possible values: WITH_LIABILITY_SHIFT.<br>
@@ -1890,7 +1846,6 @@ Possible values: WITH_LIABILITY_SHIFT.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Card verification code if available</div>
 	<i class="small text-muted">
 Numeric[3..4]<br>
@@ -1907,7 +1862,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Controls whether the given means of payment should be stored inside the saferpay Secure Card Data storage.</div>
 	<i class="small text-muted">
 			</i>
@@ -1941,7 +1895,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -1959,7 +1912,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -1977,7 +1929,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -1992,7 +1943,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -2007,7 +1957,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the Secure Card Data registration outcome.</div>
 	<i class="small text-muted">
 			</i>
@@ -2022,7 +1971,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
@@ -2037,65 +1985,64 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;,
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;PAYMENT&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-    &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
-    &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
-    &quot;ApprovalCode&quot;:&quot;012345&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-  },
-  &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-  &quot;Card&quot;: {
-    &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-    &quot;ExpYear&quot;: 2015,
-    &quot;ExpMonth&quot;: 9,
-    &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-    &quot;CountryCode&quot;: &quot;CH&quot;
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  },
-  &quot;Liability&quot;: {
-    &quot;LiabilityShift&quot;: true,
-    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
-    &quot;ThreeDs&quot;: {
-      &quot;Authenticated&quot;: true,
-      &quot;LiabilityShift&quot;: true,
-      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-    },
-    &quot;FraudFree&quot;: {
-      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
-      &quot;LiabilityShift&quot;: false,
-      &quot;Score&quot;: 0.6,
-      &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;]
-    }
-  }
-}
+               &quot;ResponseHeader&quot;: {
+                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                 &quot;RequestId&quot;: &quot;[your request id]&quot;,
+               },
+               &quot;Transaction&quot;: {
+                 &quot;Type&quot;: &quot;PAYMENT&quot;,
+                 &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+                 &quot;Id&quot;: &quot;MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+                 &quot;Date&quot;: &quot;2015-09-18T09:19:27.078Z&quot;,
+                 &quot;Amount&quot;: {
+                   &quot;Value&quot;: &quot;100&quot;,
+                   &quot;CurrencyCode&quot;: &quot;CHF&quot;
+                 },
+                 &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
+                 &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+                 &quot;SixTransactionReference&quot;:&quot;0:0:3:MUOGAWA9pKr6rAv5dUKIbAjrCGYA&quot;,
+                 &quot;ApprovalCode&quot;:&quot;012345&quot;
+               },
+               &quot;PaymentMeans&quot;: {
+                 &quot;Brand&quot;: {
+                   &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                   &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+               },
+               &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+               &quot;Card&quot;: {
+                 &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                 &quot;ExpYear&quot;: 2015,
+                 &quot;ExpMonth&quot;: 9,
+                 &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                 &quot;CountryCode&quot;: &quot;CH&quot;
+               },
+               &quot;Payer&quot;: {
+                 &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+                 &quot;IpLocation&quot;: &quot;DE&quot;
+               },
+               &quot;Liability&quot;: {
+                 &quot;LiabilityShift&quot;: true,
+                 &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+                 &quot;ThreeDs&quot;: {
+                   &quot;Authenticated&quot;: true,
+                   &quot;LiabilityShift&quot;: true,
+                   &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+                   &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+                 },
+                 &quot;FraudFree&quot;: {
+                   &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
+                   &quot;LiabilityShift&quot;: false,
+                   &quot;Score&quot;: 0.6,
+                   &quot;InvestigationPoints&quot;: [&quot;susp_bill_ad&quot;, &quot;susp_machine&quot;]
+                 }
+               }
+             }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
 	<thead>
 		<tr>
@@ -2114,7 +2061,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -2131,7 +2077,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by Initialize</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -2148,7 +2093,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -2181,7 +2125,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -2199,7 +2142,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -2214,7 +2156,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -2231,7 +2172,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px"></div>
 	<i class="small text-muted">
 			</i>
@@ -2245,36 +2185,35 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Available if DCC may be performed.</div>
 	<i class="small text-muted">
 			</i>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 9,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  }
-}
+              &quot;ResponseHeader&quot;: {
+                &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                &quot;RequestId&quot;: &quot;[your request id]&quot;,
+              },
+              &quot;PaymentMeans&quot;: {
+                &quot;Brand&quot;: {
+                  &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                  &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+                },
+                DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+                &quot;Card&quot;:{
+                  &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                  &quot;ExpYear&quot;: 2015,
+                  &quot;ExpMonth&quot;: 9,
+                  &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                  &quot;CountryCode&quot;: &quot;CH&quot;
+                }
+              },
+              &quot;Payer&quot;: {
+                &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+                &quot;IpLocation&quot;: &quot;DE&quot;
+              }
+            }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
 	<thead>
 		<tr>
@@ -2293,7 +2232,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -2310,7 +2248,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by Initialize</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -2330,7 +2267,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The new amount</div>
 	<i class="small text-muted">
 			</i>
@@ -2367,7 +2303,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -2379,9 +2314,9 @@ Id[1..50]<br>
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p><div class="danger">
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2399,7 +2334,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -2416,7 +2350,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -2436,7 +2369,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -2454,7 +2386,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the means of payment. Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
@@ -2469,7 +2400,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Controls whether the given means of payment should be stored inside the saferpay Secure Card Data storage.</div>
 	<i class="small text-muted">
 			</i>
@@ -2484,7 +2414,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the payer (IP-address)</div>
 	<i class="small text-muted">
 			</i>
@@ -2534,7 +2463,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -2552,7 +2480,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -2570,7 +2497,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -2585,7 +2511,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -2600,50 +2525,49 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the Secure Card Data registration outcome.</div>
 	<i class="small text-muted">
 			</i>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;PAYMENT&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
-    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;ApprovalCode&quot;: &quot;012345&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 7,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  }
-}
+               &quot;ResponseHeader&quot;: {
+                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                 &quot;RequestId&quot;: &quot;[your request id]&quot;,
+               },
+               &quot;Transaction&quot;: {
+                 &quot;Type&quot;: &quot;PAYMENT&quot;,
+                 &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+                 &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+                 &quot;Date&quot;: &quot;2015-01-30T13:45:22.258+02:00&quot;,
+                 &quot;Amount&quot;: {
+                   &quot;Value&quot;: &quot;100&quot;,
+                   &quot;CurrencyCode&quot;: &quot;CHF&quot;
+                 },
+                 &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
+                 &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+                 &quot;SixTransactionReference&quot;:&quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+                 &quot;ApprovalCode&quot;:&quot;012345&quot;
+               },
+               &quot;PaymentMeans&quot;: {
+                 &quot;Brand&quot;: {
+                   &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                   &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+                 },
+                 DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+                 &quot;Card&quot;:{
+                   &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                   &quot;ExpYear&quot;: 2015,
+                   &quot;ExpMonth&quot;: 7,
+                   &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                   &quot;CountryCode&quot;: &quot;CH&quot;
+                 }
+               },
+               &quot;Payer&quot;: {
+                 &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+                 &quot;IpLocation&quot;: &quot;DE&quot;
+               }
+             }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -2662,7 +2586,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -2679,7 +2602,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -2699,7 +2621,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -2717,7 +2638,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to previous transaction.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
@@ -2731,7 +2651,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to suppress direct currency conversion</div>
 	<i class="small text-muted">
 			</i>
@@ -2775,7 +2694,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -2793,7 +2711,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -2811,7 +2728,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -2826,7 +2742,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -2841,56 +2756,54 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;1.10&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Transaction&quot;: {
-    &quot;Type&quot;: &quot;PAYMENT&quot;,
-    &quot;Status&quot;: &quot;AUTHORIZED&quot;,
-    &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
-    &quot;Amount&quot;: {
-      &quot;Value&quot;: &quot;100&quot;,
-      &quot;CurrencyCode&quot;: &quot;CHF&quot;
-    },
-    &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
-    &quot;AcquirerReference&quot;: &quot;Reference&quot;,
-    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
-    &quot;ApprovalCode&quot;: &quot;012345&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 7,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  },
-  &quot;Dcc&quot;: {
-    &quot;PayerAmount&quot;: {
-      &quot;Value&quot;: &quot;109&quot;,
-      &quot;CurrencyCode&quot;: &quot;USD&quot;
-    }
-  }
-}
+               &quot;ResponseHeader&quot;: {
+                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                 &quot;RequestId&quot;: &quot;[your request id]&quot;,
+               },
+               &quot;Transaction&quot;: {
+                 &quot;Type&quot;: &quot;PAYMENT&quot;,
+                 &quot;Status&quot;: &quot;AUTHORIZED&quot;,
+                 &quot;Id&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+                 &quot;Date&quot;: &quot;2015-01-30T13:45:22.258+02:00&quot;,
+                 &quot;Amount&quot;: {
+                   &quot;Value&quot;: &quot;100&quot;,
+                   &quot;CurrencyCode&quot;: &quot;CHF&quot;
+                 },
+                 &quot;AcquirerName&quot;: &quot;AcquirerName&quot;,
+                 &quot;AcquirerReference&quot;: &quot;Reference&quot;,
+                 &quot;SixTransactionReference&quot;:&quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+                 &quot;ApprovalCode&quot;:&quot;012345&quot;
+               },
+               &quot;PaymentMeans&quot;: {
+                 &quot;Brand&quot;: {
+                   &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+                   &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+                 },
+                 DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+                 &quot;Card&quot;:{
+                   &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+                   &quot;ExpYear&quot;: 2015,
+                   &quot;ExpMonth&quot;: 7,
+                   &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+                   &quot;CountryCode&quot;: &quot;CH&quot;
+                 }
+               },
+               &quot;Payer&quot;: {
+                 &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
+                 &quot;IpLocation&quot;: &quot;DE&quot;
+               },
+               &quot;Dcc&quot;:{
+                 &quot;PayerAmount&quot;:{
+                 &quot;Value&quot;:&quot;109&quot;,
+                 &quot;CurrencyCode&quot;:&quot;USD&quot;
+               }
+             }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -2909,7 +2822,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -2927,7 +2839,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
@@ -2942,7 +2853,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Currency must match the original transaction currency (request will be declined if currency does not match)</div>
 	<i class="small text-muted">
 			</i>
@@ -2957,7 +2867,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Optional Billpay specific options.</div>
 	<i class="small text-muted">
 			</i>
@@ -2972,7 +2881,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
 	<i class="small text-muted">
 			</i>
@@ -2987,7 +2895,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
 	<i class="small text-muted">
 			</i>
@@ -3022,7 +2929,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -3036,7 +2942,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">CaptureId of the created capture. Must be stored for later reference (eg refund).</div>
 	<i class="small text-muted">
 Id[1..64]<br>
@@ -3055,7 +2960,6 @@ Id[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
@@ -3073,7 +2977,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
 					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
@@ -3089,7 +2992,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Optional infos for invoice based payments.</div>
 	<i class="small text-muted">
 			</i>
@@ -3105,14 +3007,14 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><div class="info">
-	<p><strong>Important:</strong></p>
-	<ul>
-		<li>MultipartCapture is available for SIX Acquiring contracts <strong>only!</strong></li>
-		<li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
-		<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
-		<li>The sum of multipart captures must not exceed the authorized amount.</li>
-		<li>A unique OrderPartId must be used for each request.</li>
-	</ul>
+<p><strong>Important:</strong></p>
+<ul>
+<li>MultipartCapture is available for SIX Acquiring contracts <strong>only!</strong></li>
+<li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
+<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+<li>The sum of multipart captures must not exceed the authorized amount.</li>
+<li>A unique OrderPartId must be used for each request.</li>
+</ul>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -3131,7 +3033,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -3149,7 +3050,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
@@ -3167,7 +3067,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Currency must match the original transaction currency (request will be declined if currency does not match)</div>
 	<i class="small text-muted">
 			</i>
@@ -3184,7 +3083,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">'PARTIAL' if more captures should be possible later on, 'FINAL' if no more captures will be done on this authorization.</div>
 	<i class="small text-muted">
 Possible values: PARTIAL, FINAL.<br>
@@ -3202,7 +3100,6 @@ Possible values: PARTIAL, FINAL.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Must be unique. It identifies each individual step and is especially important for follow-up actions such as refund.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -3219,7 +3116,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
 	<i class="small text-muted">
 			</i>
@@ -3267,7 +3163,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -3281,7 +3176,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">CaptureId of the created capture. Must be stored for later reference (eg refund).</div>
 	<i class="small text-muted">
 Id[1..64]<br>
@@ -3300,7 +3194,6 @@ Id[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
@@ -3318,7 +3211,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
 					<span>Example: 2018-08-08T12:45:22.258+01:00</span>
@@ -3352,7 +3244,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -3370,7 +3261,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to the capture.</div>
 	<i class="small text-muted">
 			</i>
@@ -3405,7 +3295,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -3422,7 +3311,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
 	<i class="small text-muted">
 AlphaNumeric[1..64]<br>
@@ -3438,7 +3326,6 @@ AlphaNumeric[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -3457,7 +3344,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
@@ -3475,7 +3361,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
 					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
@@ -3509,7 +3394,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -3527,7 +3411,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
@@ -3562,7 +3445,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -3592,7 +3474,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -3610,7 +3491,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the refund (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -3628,7 +3508,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to the capture you want to refund.</div>
 	<i class="small text-muted">
 			</i>
@@ -3643,7 +3522,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
 	<i class="small text-muted">
 			</i>
@@ -3684,7 +3562,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -3702,7 +3579,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -3720,7 +3596,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -3735,7 +3610,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -3775,9 +3649,9 @@ Possible values: PENDING, CAPTURED.<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="warning">
-  <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p><div class="warning">
+<p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3795,7 +3669,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -3813,7 +3686,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
@@ -3848,7 +3720,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -3865,7 +3736,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
 	<i class="small text-muted">
 AlphaNumeric[1..64]<br>
@@ -3881,7 +3751,6 @@ AlphaNumeric[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -3900,7 +3769,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
@@ -3918,7 +3786,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
 	<i class="small text-muted">
 					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
@@ -3934,9 +3801,9 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p><div class="danger">
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3954,7 +3821,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -3971,7 +3837,6 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -3991,7 +3856,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the refund (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -4009,7 +3873,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the means of payment. Important: Only fully PCI certified merchants may directly use the card data.<br> If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead.<br> If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 			</i>
@@ -4053,7 +3916,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -4071,7 +3933,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -4089,7 +3950,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -4104,7 +3964,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -4162,7 +4021,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -4180,7 +4038,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference to transaction to be canceled.<br><br>Exactly one element must be set.</div>
 	<i class="small text-muted">
 			</i>
@@ -4215,7 +4072,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -4265,7 +4121,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date and time of cancel.</div>
 	<i class="small text-muted">
 					<span>Example: 2014-04-25T08:33:44.159+01:00</span>
@@ -4282,7 +4137,7 @@ Numeric[8..8]<br>
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="danger">
-	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
+<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -4301,7 +4156,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -4318,7 +4172,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -4338,7 +4191,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -4355,7 +4207,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
 	<i class="small text-muted">
 Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
@@ -4372,7 +4223,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the payer (IP-address)</div>
 	<i class="small text-muted">
 			</i>
@@ -4390,7 +4240,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -4405,7 +4254,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Custom styling resource</div>
 	<i class="small text-muted">
 			</i>
@@ -4420,7 +4268,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Notification options</div>
 	<i class="small text-muted">
 			</i>
@@ -4464,7 +4311,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -4481,7 +4327,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id for referencing later</div>
 	<i class="small text-muted">
 					<span>Example: 234uhfh78234hlasdfh8234e</span>
@@ -4499,7 +4344,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
@@ -4514,7 +4358,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Url to redirect the browser to for payment processing</div>
 	<i class="small text-muted">
 					<span>Example: https://www.saferpay.com/VT2/api/...</span>
@@ -4531,7 +4374,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><div class="danger">
-	<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
+<p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -4550,7 +4393,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -4567,7 +4409,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -4602,7 +4443,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -4620,7 +4460,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -4638,7 +4477,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -4653,7 +4491,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -4712,7 +4549,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -4730,7 +4566,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
 			</i>
@@ -4747,10 +4582,9 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
-Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
+Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 					<span>Example: CARD</span>
 	</i>
 </td>
@@ -4767,7 +4601,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -4782,7 +4615,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Custom styling resource for the Hosted Register form.</div>
 	<i class="small text-muted">
 			</i>
@@ -4796,7 +4628,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
@@ -4812,8 +4643,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts! </div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4826,7 +4656,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br>
@@ -4843,7 +4672,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -4883,7 +4711,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -4900,7 +4727,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id for referencing later</div>
 	<i class="small text-muted">
 					<span>Example: 234uhfh78234hlasdfh8234e</span>
@@ -4918,7 +4744,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
@@ -4936,7 +4761,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay-Url to post the form data to.</div>
 	<i class="small text-muted">
 					<span>Example: https://www.saferpay.com/VT2/api/...</span>
@@ -4953,7 +4777,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.</p><div class="danger">
-	<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
+<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -4972,7 +4796,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -4989,7 +4812,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -5024,7 +4846,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -5042,7 +4863,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
 			</i>
@@ -5060,7 +4880,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -5075,7 +4894,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
 			</i>
@@ -5105,9 +4923,9 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><div class="danger">
-	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p><div class="danger">
+<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -5125,7 +4943,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -5143,7 +4960,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
 			</i>
@@ -5161,7 +4977,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Means of payment to register</div>
 	<i class="small text-muted">
 			</i>
@@ -5176,7 +4991,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
 			</i>
@@ -5220,7 +5034,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -5238,7 +5051,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
 			</i>
@@ -5256,7 +5068,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -5271,7 +5082,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
 			</i>
@@ -5319,7 +5129,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -5336,7 +5145,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The Alias you want to delete. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br>
@@ -5371,7 +5179,6 @@ Id[1..40]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -5403,7 +5210,6 @@ Id[1..40]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -5420,7 +5226,6 @@ Id[1..40]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -5455,7 +5260,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -5485,7 +5289,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -5503,7 +5306,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
 			</i>
@@ -5520,7 +5322,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
 	<i class="small text-muted">
 					<span>Example: 1:100002:199970683910</span>
@@ -5557,7 +5358,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -5575,7 +5375,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
 			</i>
@@ -5593,7 +5392,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -5608,7 +5406,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
 			</i>
@@ -5656,7 +5453,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -5673,7 +5469,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
@@ -5689,7 +5484,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -5708,7 +5502,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
 	<i class="small text-muted">
 					<span>Example: 1:100002:199970683910</span>
@@ -5744,7 +5537,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -5762,7 +5554,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -5780,7 +5571,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -5837,7 +5627,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
 Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
@@ -5856,7 +5645,6 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay customer id. Part of the Saferpay AccountID, which has the following format: 123123-12345678. The first Value is your CustomerID.</div>
 	<i class="small text-muted">
 Numeric[1..8]<br>
@@ -5875,7 +5663,6 @@ Numeric[1..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unique id generated by merchant. Must not change for subsequently resent requests.</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -5894,7 +5681,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">0 if the request is sent for the first time, &gt;=1 if it is a repetition.</div>
 	<i class="small text-muted">
 Range: inclusive between 0 and 9<br>
@@ -5911,7 +5697,6 @@ Range: inclusive between 0 and 9<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the caller (merchant host)</div>
 	<i class="small text-muted">
 			</i>
@@ -5933,7 +5718,6 @@ Range: inclusive between 0 and 9<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">RequestId of the original request header</div>
 	<i class="small text-muted">
 Id[1..50]<br>
@@ -5952,7 +5736,6 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
 Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
@@ -5976,7 +5759,6 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">International Bank Account Number in electronical format (without spaces).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..50]<br>
@@ -5992,10 +5774,9 @@ AlphaNumeric[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Name of the account holder</div>
+	<div style="padding-bottom: 10px">Name of the account holder.</div>
 	<i class="small text-muted">
-[1..50] <b>NOTE:</b> Only UTF8 coded characters following Iso885915 are allowed!<br>
+Iso885915[1..50]<br>
 					<span>Example: John Doe</span>
 	</i>
 </td>
@@ -6008,7 +5789,6 @@ AlphaNumeric[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Bank Identifier Code without spaces.</div>
 	<i class="small text-muted">
 AlphaNumeric[8..11]<br>
@@ -6024,8 +5804,7 @@ AlphaNumeric[8..11]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Name of the Bank</div>
+	<div style="padding-bottom: 10px">Name of the Bank.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6038,8 +5817,7 @@ AlphaNumeric[8..11]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">ISO 2-letter country code of the Iban origin (if available)</div>
+	<div style="padding-bottom: 10px">ISO 2-letter country code of the IBAN origin (if available)</div>
 	<i class="small text-muted">
 					<span>Example: CH</span>
 	</i>
@@ -6058,7 +5836,6 @@ AlphaNumeric[8..11]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the referenced capture.</div>
 	<i class="small text-muted">
 Id[1..64]<br>
@@ -6074,7 +5851,6 @@ Id[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the referenced transaction. This should only be used if you don't have the CaptureId of the referenced Capture (probably, because it was performed with an older SpecVersion)</div>
 	<i class="small text-muted">
 AlphaNumeric[1..64]<br>
@@ -6090,7 +5866,6 @@ AlphaNumeric[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -6106,7 +5881,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">OrderPartId of the referenced capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -6127,8 +5901,7 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers first name</div>
+	<div style="padding-bottom: 10px">The payer's first name</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: John</span>
@@ -6143,8 +5916,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers last name</div>
+	<div style="padding-bottom: 10px">The payer's last name</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: Doe</span>
@@ -6159,8 +5931,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
+	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
 AlphaNumeric[11..11]<br>
 					<span>Example: 1990-05-31</span>
@@ -6175,8 +5946,7 @@ AlphaNumeric[11..11]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers company</div>
+	<div style="padding-bottom: 10px">The payer's company</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: ACME Corp.</span>
@@ -6191,8 +5961,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers gender</div>
+	<div style="padding-bottom: 10px">The payer's gender</div>
 	<i class="small text-muted">
 Possible values: MALE, FEMALE, COMPANY.<br>
 					<span>Example: COMPANY</span>
@@ -6207,8 +5976,7 @@ Possible values: MALE, FEMALE, COMPANY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers legal form</div>
+	<div style="padding-bottom: 10px">The payer's legal form</div>
 	<i class="small text-muted">
 Possible values: AG, GmbH, Misc.<br>
 					<span>Example: AG</span>
@@ -6223,8 +5991,7 @@ Possible values: AG, GmbH, Misc.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers street</div>
+	<div style="padding-bottom: 10px">The payer's street</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: Bakerstreet 32</span>
@@ -6239,8 +6006,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
+	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: Stewart House</span>
@@ -6255,8 +6021,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers zip code</div>
+	<div style="padding-bottom: 10px">The payer's zip code</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: 8000</span>
@@ -6271,8 +6036,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers city</div>
+	<div style="padding-bottom: 10px">The payer's city</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: Zurich</span>
@@ -6287,8 +6051,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-2 country subdivision code</div>
+	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-2 country subdivision code</div>
 	<i class="small text-muted">
 AlphaNumeric[1..3]<br>
 					<span>Example: ZH</span>
@@ -6303,8 +6066,7 @@ AlphaNumeric[1..3]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers country subdivision code<br> ISO 3166-1 alpha-2 country code</div>
+	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-1 alpha-2 country code</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br>
 					<span>Example: CH</span>
@@ -6319,8 +6081,7 @@ Alphabetic[2..2]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers phone number</div>
+	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
 					<span>Example: +41 12 345 6789</span>
@@ -6335,8 +6096,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The payers email</div>
+	<div style="padding-bottom: 10px">The payer's email address</div>
 	<i class="small text-muted">
 					<span>Example: payer@provider.com</span>
 	</i>
@@ -6358,8 +6118,7 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Specifes whether to show address form or not.</div>
+	<div style="padding-bottom: 10px">Specifies whether to show the address form or not.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6372,7 +6131,6 @@ Utf8[1..100]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.</div>
 	<i class="small text-muted">
 Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br>
@@ -6396,7 +6154,6 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id / name of the alias. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br>
@@ -6412,8 +6169,7 @@ Id[1..40]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable (ie the alias referenced is a card).</div>
+	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable (if the alias referenced is a card).</div>
 	<i class="small text-muted">
 Numeric[3..4]<br>
 					<span>Example: 123</span>
@@ -6436,8 +6192,7 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Id / name of alias</div>
+	<div style="padding-bottom: 10px">Id / name of the alias</div>
 	<i class="small text-muted">
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
 	</i>
@@ -6454,7 +6209,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days.</div>
 	<i class="small text-muted">
 					<span>Example: 1000</span>
@@ -6477,7 +6231,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Type of check to perform.</div>
 	<i class="small text-muted">
 Possible values: ONLINE.<br>
@@ -6496,8 +6249,7 @@ Possible values: ONLINE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Saferpay Terminal-Id to be user for checking.</div>
+	<div style="padding-bottom: 10px">Saferpay Terminal-Id to be used for checking.</div>
 	<i class="small text-muted">
 Numeric[8..8]<br>
 					<span>Example: 12341234</span>
@@ -6520,7 +6272,6 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The result of the online check.</div>
 	<i class="small text-muted">
 Possible values: OK, NOT_PERFORMED.<br>
@@ -6538,7 +6289,6 @@ Possible values: OK, NOT_PERFORMED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don&#8217;t parse it.</div>
 	<i class="small text-muted">
 					<span>Example: Online card check was successful.</span>
@@ -6561,7 +6311,6 @@ Possible values: OK, NOT_PERFORMED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &#8658; Value=100). <b>Only Integer values will be accepted!</b></div>
 	<i class="small text-muted">
 					<span>Example: 100</span>
@@ -6579,7 +6328,6 @@ Possible values: OK, NOT_PERFORMED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
 	<i class="small text-muted">
 					<span>Example: CHF</span>
@@ -6602,7 +6350,6 @@ Possible values: OK, NOT_PERFORMED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">International Bank Account Number in electronical format (without spaces).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..50]<br>
@@ -6618,10 +6365,9 @@ AlphaNumeric[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Name of the account holder</div>
+	<div style="padding-bottom: 10px">Name of the account holder.</div>
 	<i class="small text-muted">
-[1..50] <b>NOTE:</b> Only UTF8 coded characters following Iso885915 are allowed!<br>
+Iso885915[1..50]<br>
 					<span>Example: John Doe</span>
 	</i>
 </td>
@@ -6634,7 +6380,6 @@ AlphaNumeric[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Bank Identifier Code without spaces.</div>
 	<i class="small text-muted">
 AlphaNumeric[8..11]<br>
@@ -6650,8 +6395,7 @@ AlphaNumeric[8..11]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Name of the Bank</div>
+	<div style="padding-bottom: 10px">Name of the Bank.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6673,7 +6417,6 @@ AlphaNumeric[8..11]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
 	<i class="small text-muted">
 			</i>
@@ -6683,15 +6426,11 @@ AlphaNumeric[8..11]<br>
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-recommended">recommended</span>,
-			</span>
 		string
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
 					<span>Example: c52ad18472354511ab2c33b59e796901</span>
@@ -6706,7 +6445,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br>
@@ -6722,8 +6460,7 @@ Utf8[1..1000]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 					<span>Example: Payernote</span>
@@ -6743,7 +6480,6 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Number of days to delay the due date of the invoice / direct debit (see billpay for specifics)</div>
 	<i class="small text-muted">
 					<span>Example: 10</span>
@@ -6763,7 +6499,6 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br>
@@ -6781,7 +6516,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on &#8211; might change over time, only use for display, never for parsing). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
 	<i class="small text-muted">
 					<span>Example: SaferpayTestCard</span>
@@ -6804,10 +6538,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Card number without separators</div>
 	<i class="small text-muted">
-Numeric[1..50]<br>
 					<span>Example: 1234123412341234</span>
 	</i>
 </td>
@@ -6823,7 +6555,6 @@ Numeric[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Year of expiration</div>
 	<i class="small text-muted">
 Range: inclusive between 2000 and 9999<br>
@@ -6842,7 +6573,6 @@ Range: inclusive between 2000 and 9999<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 12<br>
@@ -6858,7 +6588,6 @@ Range: inclusive between 1 and 12<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of the card holder</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
@@ -6874,7 +6603,6 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable</div>
 	<i class="small text-muted">
 Numeric[3..4]<br>
@@ -6895,7 +6623,6 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">This parameter let you customize the holder name field on the card entry form. Per default, a mandatory holder name field is shown.</div>
 	<i class="small text-muted">
 Possible values: NONE, MANDATORY.<br>
@@ -6919,7 +6646,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Masked card number</div>
 	<i class="small text-muted">
 					<span>Example: 912345xxxxxx1234</span>
@@ -6937,7 +6663,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Year of expiration</div>
 	<i class="small text-muted">
 					<span>Example: 2015</span>
@@ -6955,7 +6680,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
 	<i class="small text-muted">
 					<span>Example: 9</span>
@@ -6970,7 +6694,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of the card holder (if known)</div>
 	<i class="small text-muted">
 					<span>Example: John Doe</span>
@@ -6985,7 +6708,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the card origin (if available)</div>
 	<i class="small text-muted">
 					<span>Example: CH</span>
@@ -7000,7 +6722,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The HashValue, if the hash generation is configured for the customer.</div>
 	<i class="small text-muted">
 			</i>
@@ -7019,10 +6740,9 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name and version of the shop software</div>
 	<i class="small text-muted">
-[1..100] <b>NOTE:</b> Only UTF8 encoded characters following Iso885915 are allowed!<br>
+Iso885915[1..100]<br>
 					<span>Example: My Shop</span>
 	</i>
 </td>
@@ -7035,10 +6755,9 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the operating system</div>
 	<i class="small text-muted">
-[1..100] <b>NOTE:</b> Only UTF8 encoded characters following Iso885915 are allowed!<br>
+Iso885915[1..100]<br>
 					<span>Example: Windows Server 2013</span>
 	</i>
 </td>
@@ -7060,7 +6779,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount in payer&#8217;s currency</div>
 	<i class="small text-muted">
 			</i>
@@ -7082,7 +6800,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The unique Mandate reference, required for german direct debit payments.</div>
 	<i class="small text-muted">
 			</i>
@@ -7099,7 +6816,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Creditor id, required for german direct debit payments.</div>
 	<i class="small text-muted">
 			</i>
@@ -7121,7 +6837,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id to identify the fraud free request.</div>
 	<i class="small text-muted">
 			</i>
@@ -7138,7 +6853,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Indicates whether liability shift to Fraugster is possible or not. True, if liability shift to issuer is possible, false if not (only SSL transaction).</div>
 	<i class="small text-muted">
 			</i>
@@ -7155,7 +6869,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Fraud score, indicates the risk of a transaction being fraudulent.</div>
 	<i class="small text-muted">
 			</i>
@@ -7169,7 +6882,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Indicate the issues with the transaction.</div>
 	<i class="small text-muted">
 			</i>
@@ -7183,7 +6895,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Error message which indicates why FraudFree could not process the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -7205,7 +6916,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">If set to true, the authorization may later be referenced for installment followup transactions.</div>
 	<i class="small text-muted">
 			</i>
@@ -7225,7 +6935,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payee, eg billpay, who is responsible for collecting the bill</div>
 	<i class="small text-muted">
 			</i>
@@ -7239,7 +6948,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The reason for transfer to be stated when paying the invoice (transfer of funds)</div>
 	<i class="small text-muted">
 			</i>
@@ -7253,7 +6961,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The date by which the invoice needs to be settled</div>
 	<i class="small text-muted">
 			</i>
@@ -7275,7 +6982,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Is liability shifted for this transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -7292,7 +6998,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Indicates who takes the liability for the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -7307,7 +7012,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Details about ThreeDs if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -7322,7 +7026,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Details about FraudFree if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -7344,7 +7047,6 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf the capture or refund capture is being made.</div>
 	<i class="small text-muted">
 Id[1..15]<br>
@@ -7360,8 +7062,7 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">The marketplace fee that will be charged from the marketplace to the submerchant. <br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
+	<div style="padding-bottom: 10px">The marketplace fee that will be charged from the marketplace to the submerchant.<br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -7375,7 +7076,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The fee amount that will be refunded from the marketplace to the submerchant.<br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
 	<i class="small text-muted">
 			</i>
@@ -7394,8 +7094,7 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the merchant for successful authorizations.</div>
+	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the merchant after successful authorizations.</div>
 	<i class="small text-muted">
 					<span>Example: merchant@saferpay.com</span>
 	</i>
@@ -7409,7 +7108,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
 	<i class="small text-muted">
 					<span>Example: payer@saferpay.com</span>
@@ -7447,7 +7145,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
 	<i class="small text-muted">
 					<span>Example: 111.111.111.111</span>
@@ -7462,7 +7159,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Language to be used if Saferpay displays something to the payer.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
@@ -7478,7 +7174,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
 	<i class="small text-muted">
 			</i>
@@ -7493,7 +7188,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information on the payers billing address</div>
 	<i class="small text-muted">
 			</i>
@@ -7512,7 +7206,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
 	<i class="small text-muted">
 					<span>Example: 111.111.111.111</span>
@@ -7527,7 +7220,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The location the IpAddress, if available. This might be a valid country code or a special value for 'non-country' locations (anonymous proxy, satellite phone, ...).</div>
 	<i class="small text-muted">
 					<span>Example: NZ</span>
@@ -7543,7 +7235,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px"></div>
 	<i class="small text-muted">
 			</i>
@@ -7558,7 +7249,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px"></div>
 	<i class="small text-muted">
 			</i>
@@ -7581,7 +7271,6 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
 	<i class="small text-muted">
 			</i>
@@ -7598,8 +7287,7 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
 					<span>Example: c52ad18472354511ab2c33b59e796901</span>
@@ -7614,7 +7302,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br>
@@ -7630,8 +7317,7 @@ Utf8[1..1000]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 					<span>Example: Payernote</span>
@@ -7646,7 +7332,6 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
 	<i class="small text-muted">
 Id[1..35]<br>
@@ -7663,7 +7348,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Specific payment options</div>
 	<i class="small text-muted">
 			</i>
@@ -7678,7 +7362,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Recurring options &#8211; cannot be combined with Installment.</div>
 	<i class="small text-muted">
 			</i>
@@ -7693,7 +7376,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Installment options &#8211; cannot be combined with Recurring.</div>
 	<i class="small text-muted">
 			</i>
@@ -7713,7 +7395,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Card data</div>
 	<i class="small text-muted">
 			</i>
@@ -7728,7 +7409,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -7743,7 +7423,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
 	<i class="small text-muted">
 			</i>
@@ -7766,7 +7445,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Brand information</div>
 	<i class="small text-muted">
 			</i>
@@ -7783,7 +7461,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
 	<i class="small text-muted">
 					<span>Example: DisplayText</span>
@@ -7798,7 +7475,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
 	<i class="small text-muted">
 					<span>Example: MasterPass</span>
@@ -7814,7 +7490,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Card data</div>
 	<i class="small text-muted">
 			</i>
@@ -7829,8 +7504,21 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Bank account data for direct debit transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Twint</strong><br>
+	<span class="text-muted small">
+		
+			<a class="type-details in" href="#Payment_Models_Data_TwintInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Twint data</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -7848,7 +7536,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to flag the transaction as a Pre-Athorization. This type of transaction is only supported with the following Acquiring: SIX Payment Services, B+S Card Service, ConCardis, Airplus and -after an agreement- with American Express.</div>
 	<i class="small text-muted">
 			</i>
@@ -7871,7 +7558,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
 	<i class="small text-muted">
 			</i>
@@ -7888,8 +7574,7 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
 					<span>Example: c52ad18472354511ab2c33b59e796901</span>
@@ -7907,7 +7592,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br>
@@ -7923,8 +7607,7 @@ Utf8[1..1000]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Text which will be printed on payere's debit note. Supported by SIX Acquiring. No guarantee, that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note, that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 					<span>Example: Payernote</span>
@@ -7939,7 +7622,6 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
 	<i class="small text-muted">
 Id[1..35]<br>
@@ -7956,7 +7638,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Specific payment options</div>
 	<i class="small text-muted">
 			</i>
@@ -7971,7 +7652,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Recurring options &#8211; cannot be combined with Installment.</div>
 	<i class="small text-muted">
 			</i>
@@ -7986,7 +7666,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Installment options &#8211; cannot be combined with Recurring.</div>
 	<i class="small text-muted">
 			</i>
@@ -8008,7 +7687,6 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT'</div>
 	<i class="small text-muted">
 Possible values: PAYMENT.<br>
@@ -8027,7 +7705,6 @@ Possible values: PAYMENT.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
@@ -8046,7 +7723,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
 					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
@@ -8064,7 +7740,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
 	<i class="small text-muted">
 					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
@@ -8083,7 +7758,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount (currency, value, etc.) that has been authorized.</div>
 	<i class="small text-muted">
 			</i>
@@ -8097,7 +7771,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">OrderId given with request</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -8113,7 +7786,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerName</span>
@@ -8128,7 +7800,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
@@ -8146,7 +7817,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
 	<i class="small text-muted">
 					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
@@ -8161,7 +7831,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
@@ -8177,7 +7846,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
@@ -8193,7 +7861,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -8212,7 +7879,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Email which will be notified by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
 	<i class="small text-muted">
 					<span>Example: merchant@saferpay.com</span>
@@ -8230,7 +7896,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/pendingnotify</span>
@@ -8253,7 +7918,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">If set to true, the authorization may later be referenced for recurring followup transactions.</div>
 	<i class="small text-muted">
 			</i>
@@ -8275,7 +7939,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Redirect-URL. Used to either redirect the payer or let him enter his means of payment.</div>
 	<i class="small text-muted">
 					<span>Example: https://www.saferpay.com/VT2/api/...</span>
@@ -8293,7 +7956,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">True, if the given URL must be used as the target of a form containing card data entered by the card holder. If &#8216;false&#8217;, either a GET or POST redirect without additional data may be performed.</div>
 	<i class="small text-muted">
 			</i>
@@ -8316,7 +7978,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount data</div>
 	<i class="small text-muted">
 			</i>
@@ -8333,7 +7994,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference defined by the merchant.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -8349,7 +8009,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Description provided by merchant</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br>
@@ -8373,7 +8032,6 @@ Utf8[1..1000]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Type of transaction. One of 'REFUND'</div>
 	<i class="small text-muted">
 Possible values: REFUND.<br>
@@ -8392,7 +8050,6 @@ Possible values: REFUND.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
@@ -8411,7 +8068,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
 					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
@@ -8429,7 +8085,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
 	<i class="small text-muted">
 					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
@@ -8448,7 +8103,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Amount (currency, value, etc.) that has been authorized.</div>
 	<i class="small text-muted">
 			</i>
@@ -8462,7 +8116,6 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">OrderId given with request</div>
 	<i class="small text-muted">
 Id[1..80]<br>
@@ -8478,7 +8131,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerName</span>
@@ -8493,7 +8145,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
@@ -8511,7 +8162,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
 	<i class="small text-muted">
 					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
@@ -8526,7 +8176,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
@@ -8542,7 +8191,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
 	<i class="small text-muted">
 					<span>Example: AcquirerReference</span>
@@ -8558,7 +8206,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
 	<i class="small text-muted">
 			</i>
@@ -8580,11 +8227,10 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Id generator to be used by Saferpay. 'circle' only if configured for this merchant.</div>
+	<div style="padding-bottom: 10px">Id generator to be used by Saferpay.</div>
 	<i class="small text-muted">
 Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br>
-					<span>Example: manual</span>
+					<span>Example: MANUAL</span>
 	</i>
 </td>
 							</tr>
@@ -8596,8 +8242,7 @@ Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'manual'. This value is case-insensitive.</div>
+	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'MANUAL'. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br>
 					<span>Example: alias35nfd9mkzfw0x57iwx</span>
@@ -8612,7 +8257,6 @@ Id[1..40]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the standard lifetime will be used.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br>
@@ -8633,7 +8277,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name / id of the error.</div>
 	<i class="small text-muted">
 					<span>Example: ErrorName</span>
@@ -8648,7 +8291,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Description of the error.</div>
 	<i class="small text-muted">
 					<span>Example: ErrorMessage</span>
@@ -8671,7 +8313,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of registration</div>
 	<i class="small text-muted">
 			</i>
@@ -8686,7 +8327,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">If Success is 'true', information about the alias</div>
 	<i class="small text-muted">
 			</i>
@@ -8701,7 +8341,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">If Success is 'false', information on why the registration failed</div>
 	<i class="small text-muted">
 			</i>
@@ -8723,7 +8362,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Return url for successful transaction</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/success</span>
@@ -8741,7 +8379,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Return url for failed transaction</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/fail</span>
@@ -8756,7 +8393,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Return url for transaction aborted by the payer.</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/abort</span>
@@ -8776,7 +8412,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).</div>
 	<i class="small text-muted">
 					<span>Example: https://merchanthost/merchant.css</span>
@@ -8791,7 +8426,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
 	<i class="small text-muted">
 			</i>
@@ -8805,7 +8439,6 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
 	<i class="small text-muted">
 Possible values: DEFAULT, SIX, NONE.<br>
@@ -8829,7 +8462,6 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Indicates, whether the payer has successfuly authenticated him/herself or not.</div>
 	<i class="small text-muted">
 			</i>
@@ -8846,7 +8478,6 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction). <br> Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
 	<i class="small text-muted">
 			</i>
@@ -8863,7 +8494,6 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">BASE64 encoded value, given by the MPI. References the 3D Secure process.</div>
 	<i class="small text-muted">
 					<span>Example: ARkvCgk5Y1t/BDFFXkUPGX9DUgs=</span>
@@ -8878,7 +8508,6 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Mandatory if Authenticated is true</div>
 	<i class="small text-muted">
 					<span>Example: AAABBIIFmAAAAAAAAAAAAAAAAAA=</span>
@@ -8898,7 +8527,6 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
 	<i class="small text-muted">
 AlphaNumeric[1..64]<br>
@@ -8914,11 +8542,32 @@ AlphaNumeric[1..64]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
 	<i class="small text-muted">
 Id[1..80]<br>
 					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_TwintInfo&quot;</h2>
+				<table class="table" id="Payment_Models_Data_TwintInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CertificateExpirationDate</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Twint token expiry date</div>
+	<i class="small text-muted">
+					<span>Example: 2019-11-08T12:29:37.000+01:00</span>
 	</i>
 </td>
 							</tr>
@@ -8938,7 +8587,6 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The type of the wallet.</div>
 	<i class="small text-muted">
 Possible values: MASTERPASS.<br>
@@ -8953,7 +8601,6 @@ Possible values: MASTERPASS.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br>
@@ -8969,7 +8616,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Have the payer select a delivery address in his wallet. If not sent, no address is obtained from wallet.</div>
 	<i class="small text-muted">
 			</i>
@@ -8983,7 +8629,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs. <br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect). <br> DON&#8217;T USE THIS IF YOU&#8217;RE NOT SURE &#8211; IT&#8217;S PROBABLY NOT WHAT YOU WANT!</div>
 	<i class="small text-muted">
 			</i>
@@ -8991,7 +8636,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 							</tr>
 					</tbody>
 				</table>
-</div></div></div></section><section id="Changelog"><h1><a name="Changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+</div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
 <li><a href="#v1.10.0.0.tbd">Version 1.10</a></li>
 <li><a href="#v1.9.0.20180515">Version 1.9</a></li>
 <li><a href="#v1.8.0.20171114">Version 1.8</a></li>
