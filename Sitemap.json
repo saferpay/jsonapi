@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "Title": "Introduction",
     "Source": "texts/01_Introduction.md",
@@ -6,36 +6,36 @@
   },
   {
     "Title": "Content encoding",
-    "Source": "texts/01_Introduction.md",
+    "Source": "texts/02_ContentEncoding.md",
     "Target": "index.html#encoding"
   },
   {
     "Title": "Formats",
-    "Source": "texts/01_Introduction.md",
+    "Source": "texts/03_Formats.md",
     "Target": "index.html#formats"
   },
   {
     "Title": "Authentication",
-    "Source": "texts/01_Introduction.md",
+    "Source": "texts/04_Authentication.md",
     "Target": "index.html#authentication"
   },
   {
     "Title": "Integration",
-    "Source": "texts/01_Introduction.md",
+    "Source": "texts/05_Integration.md",
     "Target": "index.html#integration"
   },
   {
     "Title": "Error Handling",
-    "Source": "texts/02_ErrorHandling.md",
+    "Source": "texts/06_ErrorHandling.md",
     "Target": "index.html#errorhandling",
     "Subsites": [
       {
         "Source": "texts/ErrorResponse.md",
-        "target": "index.html"
-      }, 
+        "Target": "index.html"
+      },
       {
-        "Source": "texts/02_ErrorHandling_TechnicalDetails.md",
-        "target": "index.html"
+        "Source": "texts/06_ErrorHandling_TechnicalDetails.md",
+        "Target": "index.html"
       }
     ]
   },
@@ -222,11 +222,11 @@
   },
   {
     "Source": "texts/ContainerDictionary.md",
-    "target": "index.html"
+    "Target": "index.html"
   },
   {
     "Title": "Changelog",
     "Source": "texts/Changelog.md",
-    "Target": "index.html#Changelog"
-  }   
+    "Target": "index.html#changelog"
+  }
 ]
