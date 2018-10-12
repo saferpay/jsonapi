@@ -19,7 +19,6 @@
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -36,7 +35,6 @@
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">What can be done to resolve the error?</div>
 	<i class="small text-muted">
 Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
@@ -54,7 +52,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name / id of the error. These names will not change, so you may parse these and attach your logic to the ErrorName.</div>
 	<i class="small text-muted">
 			</i>
@@ -71,7 +68,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Description of the error. The contents of this element might change without notice, so do not parse it.</div>
 	<i class="small text-muted">
 			</i>
@@ -85,7 +81,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the failed transaction, if available</div>
 	<i class="small text-muted">
 			</i>
@@ -99,7 +94,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
 	<i class="small text-muted">
 			</i>
@@ -113,7 +107,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Name of acquirer (if declined by acquirer) or processor</div>
 	<i class="small text-muted">
 			</i>
@@ -127,7 +120,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result code returned by acquirer or processor</div>
 	<i class="small text-muted">
 			</i>
@@ -141,7 +133,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Message returned by acquirer or processor</div>
 	<i class="small text-muted">
 			</i>

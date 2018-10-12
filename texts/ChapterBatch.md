@@ -39,7 +39,6 @@ This chapter covers the Batch Close via API
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -56,7 +55,6 @@ This chapter covers the Batch Close via API
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br />
@@ -108,7 +106,6 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>

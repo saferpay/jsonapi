@@ -35,7 +35,6 @@ This function may be used to insert an alias without knowledge about the card de
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -53,7 +52,6 @@ This function may be used to insert an alias without knowledge about the card de
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
 			</i>
@@ -90,7 +88,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -105,7 +102,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Custom styling resource for the Hosted Register form.</div>
 	<i class="small text-muted">
 			</i>
@@ -119,7 +115,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
@@ -135,8 +130,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts! </div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -149,7 +143,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br />
@@ -166,7 +159,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -223,7 +215,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -240,7 +231,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id for referencing later</div>
 	<i class="small text-muted">
 					<span>Example: 234uhfh78234hlasdfh8234e</span>
@@ -258,7 +248,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
@@ -276,7 +265,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay-Url to post the form data to.</div>
 	<i class="small text-muted">
 					<span>Example: https://www.saferpay.com/VT2/api/...</span>
@@ -313,7 +301,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.
 
 <div class="danger">
-	<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
+<p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
 </div>
 
 --->>>
@@ -345,7 +333,6 @@ This method may be used to inquire the Alias Id and further information after a 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -362,7 +349,6 @@ This method may be used to inquire the Alias Id and further information after a 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br />
@@ -414,7 +400,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -432,7 +417,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
 			</i>
@@ -450,7 +434,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -465,7 +448,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
 			</i>
@@ -515,6 +497,10 @@ Id[1..50]<br />
 
 This method may be used to insert an alias directly with card-data collected by using your own HTML form.
 
+<div class="danger">
+<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div>
+
 --->>>
 
 <div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div>
@@ -523,9 +509,7 @@ This method may be used to insert an alias directly with card-data collected by 
 
 #### Request
 
-<div class="danger">
-	<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
-</div>
+
 
 
 <table class="table">
@@ -546,7 +530,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -564,7 +547,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
 			</i>
@@ -582,7 +564,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Means of payment to register</div>
 	<i class="small text-muted">
 			</i>
@@ -597,7 +578,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
 			</i>
@@ -658,7 +638,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -676,7 +655,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
 			</i>
@@ -694,7 +672,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -709,7 +686,6 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
 			</i>
@@ -788,7 +764,6 @@ This method may be used to delete previously inserted aliases.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -805,7 +780,6 @@ This method may be used to delete previously inserted aliases.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">The Alias you want to delete. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
@@ -857,7 +831,6 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>

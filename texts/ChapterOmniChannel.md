@@ -35,7 +35,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -53,7 +52,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
 			</i>
@@ -70,7 +68,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
 	<i class="small text-muted">
 					<span>Example: 1:100002:199970683910</span>
@@ -124,7 +121,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -142,7 +138,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
 			</i>
@@ -160,7 +155,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -175,7 +169,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
 			</i>
@@ -254,7 +247,6 @@ This request allows to acquire an OmniChannel transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -271,7 +263,6 @@ This request allows to acquire an OmniChannel transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br />
@@ -287,7 +278,6 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
@@ -306,7 +296,6 @@ Id[1..80]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
 	<i class="small text-muted">
 					<span>Example: 1:100002:199970683910</span>
@@ -359,7 +348,6 @@ This response returns an acquired OmniChannel transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -377,7 +365,6 @@ This response returns an acquired OmniChannel transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -395,7 +382,6 @@ This response returns an acquired OmniChannel transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>

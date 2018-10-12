@@ -59,7 +59,6 @@ This method can be used to start a transaction with the Payment Page which may i
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -73,7 +72,6 @@ This method can be used to start a transaction with the Payment Page which may i
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br />
@@ -92,7 +90,6 @@ Id[1..20]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br />
@@ -112,7 +109,6 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
@@ -126,7 +122,6 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
@@ -142,7 +137,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, G
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page and to go directly to the given wallet (if exactly one wallet is filled and PaymentMethods is not set).</div>
 	<i class="small text-muted">
 Possible values: MASTERPASS.<br />
@@ -159,7 +153,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer</div>
 	<i class="small text-muted">
 			</i>
@@ -174,7 +167,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">If the given means of payment should be stored in Saferpay Secure Card Data storage (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -192,7 +184,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
@@ -207,7 +198,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Notification options</div>
 	<i class="small text-muted">
 			</i>
@@ -222,7 +212,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Styling options</div>
 	<i class="small text-muted">
 			</i>
@@ -237,7 +226,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to have the payer enter his billing address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
@@ -252,7 +240,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Used to have the payer enter his delivery address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
@@ -267,7 +254,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
 			</i>
@@ -329,7 +315,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -346,7 +331,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token for later referencing</div>
 	<i class="small text-muted">
 					<span>Example: 234uhfh78234hlasdfh8234e1234</span>
@@ -364,7 +348,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
 	<i class="small text-muted">
 					<span>Example: 2011-07-14T19:43:37+01:00</span>
@@ -382,7 +365,6 @@ Possible values: MASTERPASS.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Redirecturl for the payment page transaction. Simply add this to a "Pay Now"-button or do an automatic redirect.</div>
 	<i class="small text-muted">
 					<span>Example: https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/z2p7a0plpgsd41m97wjvm5jza</span>
@@ -449,7 +431,6 @@ If the transaction failed (the payer was redirected to the Fail url or he manipu
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
@@ -466,7 +447,6 @@ If the transaction failed (the payer was redirected to the Fail url or he manipu
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br />
@@ -518,7 +498,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
 	<i class="small text-muted">
 			</i>
@@ -536,7 +515,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
 			</i>
@@ -554,7 +532,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
@@ -569,7 +546,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
 			</i>
@@ -584,7 +560,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Information about the SCD registration outcome</div>
 	<i class="small text-muted">
 			</i>
@@ -599,7 +574,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
 			</i>
@@ -614,7 +588,6 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
 			</i>
