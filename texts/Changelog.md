@@ -20,6 +20,7 @@
 - replaced _TransactionId_ and _OrderId_ with _CaptureId_ in [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) response to uniquely identify captures
 - replaced container _TransactionReference_ with _CaptureReference_ in [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) and [Transaction/AssertCapture](index.html#Payment_v1_Transaction_AssertCapture) request to uniquely identify captures
 - added value `TWINT` for field `Type` in [Alias/Insert](index.html#Payment_v1_Alias_Insert) requests (only available in the Sandbox environment until further notice)
+- added subcontainer `Twint` to container `PaymentMeans`
 
 ## <a name="v1.9.0.20180515"></a> Version 1.9 (released 2018-05-15)
 - available on Sandbox: 2018-04-26
