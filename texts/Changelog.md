@@ -1,7 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
-- [Version 1.10](#v1.10.0.0.tbd)
+- [Version 1.10](#v1.10.0.0.20181113)
 - [Version 1.9](#v1.9.0.20180515)
 - [Version 1.8](#v1.8.0.20171114)
 - [Version 1.7](#v1.7.0.20170822)
@@ -9,7 +9,7 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
-## <a name="v1.10.0.0.tbd"></a> Version 1.10 (release date to be defined)
+## <a name="v1.10.0.0.20181113"></a> Version 1.10 (released 2018-11-13)
 - available on Sandbox: 2018-08-14
 - introduced version 1.10
 - added value `1.10` for _SpecVersion_
