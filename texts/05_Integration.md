@@ -34,7 +34,7 @@ information about the outcome of e.g. 3D Secure.
 
 <div class="warning">
   <p>
-    <strong>Important:</strong> The redirect towards the redirectUrl via http-POST <strong>IS NOT</strong> supported. You should always use http-GET!
+    <strong>Important:</strong> The redirect towards the redirectUrl via http-POST <strong>IS NOT</strong> supported. You should always use http-GET, unless specifically stated otherwise!
   </p>
 </div>
 
