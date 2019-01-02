@@ -11,10 +11,7 @@ server (host) system.
 
 ## <a name="authentication_basic"></a>HTTP basic authentication
 
-This is the default authentication method. Technical users for the JSON API can be
-created by the merchant in the Saferpay Backoffice under [**Settings > JSON API basic authentication**](https://test.saferpay.com/BO/Settings/JsonApiLogin). The password will not be stored
-at SIX (only a securely salted hash thereof). There will be no password recovery
-besides creating a new user / password pair from your Backoffice account.
+This is the default authentication method. Technical users for the JSON API can be created by the merchant in the Saferpay Backoffice under **Settings > JSON API basic authentication**. The password will not be stored at SIX (only a securely salted hash thereof). There will be no password recovery besides creating a new user / password pair from your Backoffice account.
 
 The password must meet some complexity requirements. We suggest using / generating
 dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).
