@@ -1,4 +1,11 @@
 ﻿# <a name="integration"></a>Integration
+ 
+## Test System
+
+For the integration-phase, you should [visit our test-environment](https://test.saferpay.com)!
+There you can register your personal test account, which you then can use for testing, to try out different functions and for general evaluation.
+
+You can find a list of test-cards and other payment means for testing [over here](https://saferpay.github.io/sndbx/paymentmeans.html)!
 
 ## Integration Guide
 
