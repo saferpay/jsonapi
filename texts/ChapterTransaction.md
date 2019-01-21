@@ -453,9 +453,9 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> <br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
+	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible <br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
 	<i class="small text-muted">
-Possible values: WITH_LIABILITY_SHIFT.<br />
+Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 					<span>Example: WITH_LIABILITY_SHIFT</span>
 	</i>
 </td>
@@ -1927,7 +1927,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 #### Request
 
 
-
+{<br> "RequestHeader": {<br> "SpecVersion": "1.10",<br> "CustomerId": "[your customer id]",<br> "RequestId": "[unique request identifier]",<br> "RetryIndicator": 0<br> },<br> "TransactionReference": {<br> "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"<br> },<br> "Amount": {<br> "Value": "1000",<br> "CurrencyCode": "CHF"<br> },<br> "Type": "PARTIAL",<br> "OderPartId": "123456789",<br> "Marketplace": {<br> "SubmerchantId": "17312345",<br> "Fee": {<br> "Value": "500",<br> "CurrencyCode": "CHF"<br> }<br> }<br> }
 
 <table class="table">
 	<thead>
@@ -2163,7 +2163,7 @@ Possible values: PENDING, CAPTURED.<br />
   },
   "CaptureId": "723n4MAjMdhjSAhAKEUdA8jtl9jb_c",
   "Status": "CAPTURED",
-  "Date": "2018-08-08T12:45:22.258+01:00"
+  "Date": "2018-08-08T13:45:22.258+02:00"
 }
 </pre>
 
@@ -3311,7 +3311,6 @@ This method may be used to cancel previously authorized transactions and refunds
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
 	<i class="small text-muted">
 					<span>Example: qiuwerhfi23h4189asdhflk23489</span>
@@ -3326,7 +3325,6 @@ This method may be used to cancel previously authorized transactions and refunds
 	</span>
 </td>
 <td class="col-sm-8">
-	
 	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
 	<i class="small text-muted">
 					<span>Example: c52ad18472354511ab2c33b59e796901</span>

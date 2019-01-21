@@ -114,7 +114,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
 					<span>Example: de</span>
 	</i>
