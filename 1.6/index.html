@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" href="assets/css/vendors.css" />
-	<link rel="stylesheet" href="assets/css/helppage.css">
+	<link rel="stylesheet" href="../assets/css/vendors.css" />
+	<link rel="stylesheet" href="../assets/css/helppage.css">
 
 	<title>Saferpay documentation | json api v1.6</title>
 </head>
@@ -182,7 +182,7 @@
 				</div>
 
 				
-<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6">							<div class="warning">
+<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6">							<div class="warning" style="position:fixed;top:20px;z-index:1;">
 								<p><strong>THIS API-VERSION IS OUTDATED!</strong> You can always find the current version under <a href="http://saferpay.github.io/jsonapi">http://saferpay.github.io/jsonapi</a>!</p>
 							</div><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-md-6"><p>Base URL production system:</p><p><code>https://www.saferpay.com/api</code></p><p>Base URL test system:</p><p><code>https://test.saferpay.com/api</code></p><p>Test accounts:</p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br>
 <a target="_blank" href="https://www.six-payment-services.com/en/site/saferpay-support/testaccount.html">View shared test account data</a></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
