@@ -48,13 +48,13 @@ This method can be used to start a transaction with the Payment Page which may i
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -65,10 +65,10 @@ This method can be used to start a transaction with the Payment Page which may i
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -80,13 +80,13 @@ Id[1..20]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -98,13 +98,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentPagePayment">container</a>
 	</span>
 </td>
@@ -115,10 +115,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-		string[]
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
@@ -130,10 +130,10 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-		string[]
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
@@ -145,10 +145,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
 	</span>
 </td>
@@ -159,10 +159,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
 	</span>
 </td>
@@ -173,13 +173,13 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
 	</span>
 </td>
@@ -190,10 +190,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Notification">container</a>
 	</span>
 </td>
@@ -204,10 +204,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Styling">container</a>
 	</span>
 </td>
@@ -218,10 +218,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AddressForm">container</a>
 	</span>
 </td>
@@ -232,10 +232,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AddressForm">container</a>
 	</span>
 </td>
@@ -246,10 +246,10 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
 	</span>
 </td>
@@ -304,13 +304,13 @@ Possible values: MASTERPASS.<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -321,13 +321,13 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -338,13 +338,13 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -355,13 +355,13 @@ Possible values: MASTERPASS.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -423,13 +423,13 @@ or higher containing an error message will be returned providing some informatio
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -440,13 +440,13 @@ or higher containing an error message will be returned providing some informatio
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -490,13 +490,13 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -507,13 +507,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
@@ -524,13 +524,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -541,10 +541,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
 	</span>
 </td>
@@ -555,10 +555,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">container</a>
 	</span>
 </td>
@@ -569,10 +569,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
 	</span>
 </td>
@@ -583,10 +583,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
 	</span>
 </td>

@@ -1,13 +1,12 @@
 # <a name="ChapterBatch"></a>Batch
 
 
-
 ## <a name="Payment_v1_Batch_Close"></a>Batch Close
 
 This chapter covers the Batch Close via API
 
 <div class="info">
-  <p><strong>Note:</strong> If you want to trigger the batch-close via API, make sure, to turn the automatic batch off. Please log into the Saferpay Backoffice. Go to <strong>Settings => Terminals</strong> and select the desired terminal out of the list. Turn off the Automatic closure!</p>
+<p><strong>Note:</strong> If you want to trigger the batch-close via API, make sure, to turn the automatic batch off. Please log into the Saferpay Backoffice. Go to <strong>Settings => Terminals</strong> and select the desired terminal out of the list. Turn off the Automatic closure.</p>
 </div>
 
 --->>>
@@ -28,13 +27,13 @@ This chapter covers the Batch Close via API
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -45,13 +44,13 @@ This chapter covers the Batch Close via API
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -95,13 +94,13 @@ Numeric[8..8]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>

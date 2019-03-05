@@ -49,13 +49,13 @@ This method may be used to start a transaction which may involve either DCC and 
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -66,10 +66,10 @@ This method may be used to start a transaction which may involve either DCC and 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -81,13 +81,13 @@ Id[1..20]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -99,13 +99,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payment">container</a>
 	</span>
 </td>
@@ -116,10 +116,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">container</a>
 	</span>
 </td>
@@ -130,10 +130,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
 	</span>
 </td>
@@ -144,13 +144,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
 	</span>
 </td>
@@ -161,10 +161,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Styling">container</a>
 	</span>
 </td>
@@ -175,10 +175,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Wallet">container</a>
 	</span>
 </td>
@@ -189,10 +189,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-		string[]
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
@@ -204,10 +204,10 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
 	</span>
 </td>
@@ -266,13 +266,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -283,13 +283,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -300,13 +300,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -317,10 +317,10 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br />
 	<span class="text-muted small">
-		boolean
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
@@ -330,13 +330,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		boolean
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
@@ -346,10 +346,10 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Redirect">container</a>
 	</span>
 </td>
@@ -411,13 +411,13 @@ This function may be called to authorize a transaction which was started by a ca
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -428,13 +428,13 @@ This function may be called to authorize a transaction which was started by a ca
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -446,10 +446,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -461,10 +461,10 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -476,10 +476,10 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
 	</span>
 </td>
@@ -523,13 +523,13 @@ Numeric[3..4]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -540,13 +540,13 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
@@ -557,13 +557,13 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -574,10 +574,10 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
 	</span>
 </td>
@@ -588,10 +588,10 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">container</a>
 	</span>
 </td>
@@ -602,10 +602,10 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
 	</span>
 </td>
@@ -616,10 +616,10 @@ Numeric[3..4]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
 	</span>
 </td>
@@ -720,13 +720,13 @@ This function may be called to retrieve information on the means of payment whic
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -737,13 +737,13 @@ This function may be called to retrieve information on the means of payment whic
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -755,10 +755,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
 	</span>
 </td>
@@ -801,13 +801,13 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -818,13 +818,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -835,10 +835,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
 	</span>
 </td>
@@ -849,13 +849,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		boolean
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
@@ -865,10 +865,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -939,13 +939,13 @@ This function allows a change of the authorization amount which was originally s
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -956,13 +956,13 @@ This function allows a change of the authorization amount which was originally s
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -974,13 +974,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
 	</span>
 </td>
@@ -1027,13 +1027,13 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -1091,13 +1091,13 @@ This function may be used to directly authorize transactions which do not requir
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -1108,13 +1108,13 @@ This function may be used to directly authorize transactions which do not requir
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1126,13 +1126,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payment">container</a>
 	</span>
 </td>
@@ -1143,13 +1143,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">container</a>
 	</span>
 </td>
@@ -1160,10 +1160,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
 	</span>
 </td>
@@ -1174,10 +1174,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
 	</span>
 </td>
@@ -1237,13 +1237,13 @@ Numeric[8..8]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -1254,13 +1254,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
@@ -1271,13 +1271,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -1288,10 +1288,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
 	</span>
 </td>
@@ -1302,10 +1302,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">container</a>
 	</span>
 </td>
@@ -1391,13 +1391,13 @@ This method may be used to perform follow-up authorizations to an earlier transa
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -1408,13 +1408,13 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1426,13 +1426,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_BasicPayment">container</a>
 	</span>
 </td>
@@ -1443,13 +1443,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
 	</span>
 </td>
@@ -1460,10 +1460,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>SuppressDcc</strong><br />
 	<span class="text-muted small">
-		boolean
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1516,13 +1516,13 @@ Numeric[8..8]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -1533,13 +1533,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
@@ -1550,13 +1550,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -1567,10 +1567,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
 	</span>
 </td>
@@ -1581,10 +1581,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
 	</span>
 </td>
@@ -1675,13 +1675,13 @@ This method may be used to finalize previously authorized transactions and refun
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -1692,13 +1692,13 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
 	</span>
 </td>
@@ -1709,10 +1709,10 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
 	</span>
 </td>
@@ -1723,10 +1723,10 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Billpay</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_BillpayCapture">container</a>
 	</span>
 </td>
@@ -1737,10 +1737,10 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PendingNotification">container</a>
 	</span>
 </td>
@@ -1751,10 +1751,10 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">container</a>
 	</span>
 </td>
@@ -1799,13 +1799,13 @@ This method may be used to finalize previously authorized transactions and refun
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -1816,10 +1816,10 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1831,13 +1831,13 @@ Id[1..64]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1848,13 +1848,13 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1865,10 +1865,10 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Invoice</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
 	</span>
 </td>
@@ -1927,7 +1927,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 #### Request
 
 
-{<br> "RequestHeader": {<br> "SpecVersion": "1.10",<br> "CustomerId": "[your customer id]",<br> "RequestId": "[unique request identifier]",<br> "RetryIndicator": 0<br> },<br> "TransactionReference": {<br> "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"<br> },<br> "Amount": {<br> "Value": "1000",<br> "CurrencyCode": "CHF"<br> },<br> "Type": "PARTIAL",<br> "OderPartId": "123456789",<br> "Marketplace": {<br> "SubmerchantId": "17312345",<br> "Fee": {<br> "Value": "500",<br> "CurrencyCode": "CHF"<br> }<br> }<br> }
+
 
 <table class="table">
 	<thead>
@@ -1936,13 +1936,13 @@ This method may be used to capture multiple parts of an authorized transaction.
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -1953,13 +1953,13 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
 	</span>
 </td>
@@ -1970,13 +1970,13 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
 	</span>
 </td>
@@ -1987,13 +1987,13 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2004,13 +2004,13 @@ Possible values: PARTIAL, FINAL.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>OrderPartId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2022,10 +2022,10 @@ Id[1..80]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">container</a>
 	</span>
 </td>
@@ -2044,28 +2044,28 @@ Id[1..80]<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-    "RequestHeader": {
-      "SpecVersion": "1.10",
-      "CustomerId": "[your customer id]",
-      "RequestId": "[unique request identifier]",
-      "RetryIndicator": 0
-    },
-    "TransactionReference": {
-        "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
-    },
-    "Amount": {
-        "Value": "1000",
-        "CurrencyCode": "CHF"
-    },
-    "Type": "PARTIAL",
-    "OderPartId": "123456789",
-    "Marketplace": {
-        "SubmerchantId": "17312345",
-        "Fee": {
-            "Value": "500",
-            "CurrencyCode": "CHF"
-        }
+  "RequestHeader": {
+    "SpecVersion": "1.10",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request identifier]",
+    "RetryIndicator": 0
+  },
+  "TransactionReference": {
+    "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+  },
+  "Amount": {
+    "Value": "1000",
+    "CurrencyCode": "CHF"
+  },
+  "Type": "PARTIAL",
+  "OderPartId": "123456789",
+  "Marketplace": {
+    "SubmerchantId": "17312345",
+    "Fee": {
+      "Value": "500",
+      "CurrencyCode": "CHF"
     }
+  }
 }
 </pre>
 
@@ -2083,13 +2083,13 @@ Id[1..80]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -2100,10 +2100,10 @@ Id[1..80]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2115,13 +2115,13 @@ Id[1..64]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2132,13 +2132,13 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2195,13 +2195,13 @@ This method is only supported for pending capture transactions (only used for pa
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -2212,13 +2212,13 @@ This method is only supported for pending capture transactions (only used for pa
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CaptureReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_CaptureReference">container</a>
 	</span>
 </td>
@@ -2263,13 +2263,13 @@ This method is only supported for pending capture transactions (only used for pa
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -2280,13 +2280,13 @@ This method is only supported for pending capture transactions (only used for pa
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2298,10 +2298,10 @@ AlphaNumeric[1..64]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2313,13 +2313,13 @@ Id[1..80]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2330,13 +2330,13 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2393,13 +2393,13 @@ This method may be used to finalize a transaction having one or more partial cap
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -2410,13 +2410,13 @@ This method may be used to finalize a transaction having one or more partial cap
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
 	</span>
 </td>
@@ -2461,13 +2461,13 @@ This method may be used to finalize a transaction having one or more partial cap
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -2521,13 +2521,13 @@ This method may be called to refund a previous transaction.
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -2538,13 +2538,13 @@ This method may be called to refund a previous transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Refund</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Refund">container</a>
 	</span>
 </td>
@@ -2555,13 +2555,13 @@ This method may be called to refund a previous transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CaptureReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_CaptureReference">container</a>
 	</span>
 </td>
@@ -2572,10 +2572,10 @@ This method may be called to refund a previous transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PendingNotification">container</a>
 	</span>
 </td>
@@ -2626,13 +2626,13 @@ This method may be called to refund a previous transaction.
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -2643,13 +2643,13 @@ This method may be called to refund a previous transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">container</a>
 	</span>
 </td>
@@ -2660,13 +2660,13 @@ This method may be called to refund a previous transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -2677,10 +2677,10 @@ This method may be called to refund a previous transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
 	</span>
 </td>
@@ -2766,13 +2766,13 @@ This method may be used to inquire the status and further information of pending
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -2783,13 +2783,13 @@ This method may be used to inquire the status and further information of pending
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
 	</span>
 </td>
@@ -2834,13 +2834,13 @@ This method may be used to inquire the status and further information of pending
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -2851,13 +2851,13 @@ This method may be used to inquire the status and further information of pending
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2869,10 +2869,10 @@ AlphaNumeric[1..64]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2884,13 +2884,13 @@ Id[1..80]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2901,13 +2901,13 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2968,13 +2968,13 @@ This method may be called to refund an amount to the given means of payment (not
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -2985,13 +2985,13 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3003,13 +3003,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Refund</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Refund">container</a>
 	</span>
 </td>
@@ -3020,13 +3020,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">container</a>
 	</span>
 </td>
@@ -3080,13 +3080,13 @@ Numeric[8..8]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -3097,13 +3097,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">container</a>
 	</span>
 </td>
@@ -3114,13 +3114,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -3131,10 +3131,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
 	</span>
 </td>
@@ -3216,13 +3216,13 @@ This method may be used to cancel previously authorized transactions and refunds
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -3233,13 +3233,13 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
 	</span>
 </td>
@@ -3284,13 +3284,13 @@ This method may be used to cancel previously authorized transactions and refunds
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -3301,13 +3301,13 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3318,10 +3318,10 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3332,13 +3332,13 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3397,13 +3397,13 @@ This method may be used to cancel previously authorized transactions and refunds
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -3414,13 +3414,13 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3432,13 +3432,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payment">container</a>
 	</span>
 </td>
@@ -3449,13 +3449,13 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ServiceProvider</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3467,10 +3467,10 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
 	</span>
 </td>
@@ -3481,13 +3481,13 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
 	</span>
 </td>
@@ -3498,10 +3498,10 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Styling">container</a>
 	</span>
 </td>
@@ -3512,10 +3512,10 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Notification">container</a>
 	</span>
 </td>
@@ -3569,13 +3569,13 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -3586,13 +3586,13 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3603,13 +3603,13 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3620,10 +3620,10 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3682,13 +3682,13 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -3699,13 +3699,13 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3749,13 +3749,13 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -3766,13 +3766,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
@@ -3783,13 +3783,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -3800,10 +3800,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
 	</span>
 </td>

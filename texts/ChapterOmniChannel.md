@@ -1,7 +1,6 @@
 # <a name="ChapterOmniChannel"></a>OmniChannel
 
 
-
 ## <a name="Payment_v1_OmniChannel_InsertAlias"></a>OmniChannel InsertAlias
 
 This function may be used to create an alias by providing a SixTransactionReference.
@@ -24,13 +23,13 @@ This function may be used to create an alias by providing a SixTransactionRefere
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -41,13 +40,13 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
 	</span>
 </td>
@@ -58,13 +57,13 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -110,13 +109,13 @@ This function may be used to create an alias by providing a SixTransactionRefere
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -127,13 +126,13 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
 	</span>
 </td>
@@ -144,13 +143,13 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -161,10 +160,10 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
 	</span>
 </td>
@@ -236,13 +235,13 @@ This request allows to acquire an OmniChannel transaction.
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -253,13 +252,13 @@ This request allows to acquire an OmniChannel transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -271,10 +270,10 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -286,13 +285,13 @@ Id[1..80]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -337,13 +336,13 @@ This response returns an acquired OmniChannel transaction.
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -354,13 +353,13 @@ This response returns an acquired OmniChannel transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
 	</span>
 </td>
@@ -371,13 +370,13 @@ This response returns an acquired OmniChannel transaction.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>

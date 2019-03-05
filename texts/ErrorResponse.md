@@ -8,13 +8,13 @@
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -25,13 +25,13 @@
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Behavior</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -42,13 +42,13 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ErrorName</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -58,13 +58,13 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -74,10 +74,10 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -87,10 +87,10 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ErrorDetail</strong><br />
 	<span class="text-muted small">
-		string[]
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
@@ -100,10 +100,10 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ProcessorName</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -113,10 +113,10 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ProcessorResult</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -126,10 +126,10 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ProcessorMessage</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">

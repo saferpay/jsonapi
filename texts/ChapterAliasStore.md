@@ -1,7 +1,6 @@
 # <a name="ChapterAliasStore"></a>Secure Card Data
 
 
-
 ## <a name="Payment_v1_Alias_Insert"></a>Alias Insert
 
 This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.
@@ -24,13 +23,13 @@ This function may be used to insert an alias without knowledge about the card de
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -41,13 +40,13 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
 	</span>
 </td>
@@ -58,13 +57,13 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -76,13 +75,13 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
 	</span>
 </td>
@@ -93,10 +92,10 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_Styling">container</a>
 	</span>
 </td>
@@ -107,10 +106,10 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -121,10 +120,10 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">container</a>
 	</span>
 </td>
@@ -135,10 +134,10 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-		string[]
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
@@ -150,10 +149,10 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
 	</span>
 </td>
@@ -203,13 +202,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -220,13 +219,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -237,13 +236,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		date
+				date
 	</span>
 </td>
 <td class="col-sm-8">
@@ -254,13 +253,13 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -321,13 +320,13 @@ This method may be used to inquire the Alias Id and further information after a 
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -338,13 +337,13 @@ This method may be used to inquire the Alias Id and further information after a 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -388,13 +387,13 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -405,13 +404,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
 	</span>
 </td>
@@ -422,13 +421,13 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -439,10 +438,10 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
 	</span>
 </td>
@@ -518,13 +517,13 @@ This method may be used to insert an alias directly with card-data collected by 
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -535,13 +534,13 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
 	</span>
 </td>
@@ -552,13 +551,13 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">container</a>
 	</span>
 </td>
@@ -569,10 +568,10 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">container</a>
 	</span>
 </td>
@@ -626,13 +625,13 @@ This method may be used to insert an alias directly with card-data collected by 
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
@@ -643,13 +642,13 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
 	</span>
 </td>
@@ -660,13 +659,13 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
 	</span>
 </td>
@@ -677,10 +676,10 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
-		
+				
 			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
 	</span>
 </td>
@@ -752,13 +751,13 @@ This method may be used to delete previously inserted aliases.
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_RequestHeader">container</a>
 	</span>
 </td>
@@ -769,13 +768,13 @@ This method may be used to delete previously inserted aliases.
 </td>
 				</tr>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		string
+				string
 	</span>
 </td>
 <td class="col-sm-8">
@@ -819,13 +818,13 @@ Id[1..40]<br />
 		</tr>
 	</thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+						<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		
+				
 			<a class="type-details in" href="#Common_ResponseHeader">container</a>
 	</span>
 </td>
