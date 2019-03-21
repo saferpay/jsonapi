@@ -159,7 +159,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
     'RequestHeader' => array(
-        'SpecVersion' => "1.7",
+        'SpecVersion' => [CURRENT_SPEC_VERSION],
         'CustomerId' => "[YOUR CUSTOMERID]",
         'RequestId' => "aScdFewDSRFrfas2wsad3",
         'RetryIndicator' => 0,
