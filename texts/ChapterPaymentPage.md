@@ -138,7 +138,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional. May be used to set specific options for some payment methods.<br><br>Optional. May be used to set specific options for some payment methods.</div>
+	<div style="padding-bottom: 10px">Optional. May be used to set specific options for some payment methods.</div>
 	<i class="small text-muted">
 			</i>
 </td>

@@ -3105,7 +3105,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional. Options which only apply to Alipay.<br><br>Optional. Options which only apply to Alipay.</div>
+	<div style="padding-bottom: 10px">Optional. Options which only apply to Alipay.</div>
 	<i class="small text-muted">
 			</i>
 </td>

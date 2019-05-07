@@ -3931,7 +3931,17 @@ This method can be used to get the details of a transaction that has been author
 
 <p>Example:</p>
 <pre class="prettyprint">
-No example available
+{
+  "RequestHeader": {
+    "SpecVersion": "1.11",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request id]",
+    "RetryIndicator": 0
+  },
+  "TransactionReference": {
+    "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
+  }
+}
 </pre>
 
 <<<---
