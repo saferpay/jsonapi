@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.10</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.11</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.10</span>
+						<span class="text-primary">JSON API Spec-Version 1.11</span>
 					</h3>
 
 					<ul class="nav">
@@ -72,6 +72,7 @@
 								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
 								<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+								<li><a href="#Payment_v1_Transaction_Inquire">Transaction Inquire</a></li>
 							</ul>
 							</li>
 							<li>
@@ -114,7 +115,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.10</span>
+								<span class="text-primary">JSON API Spec-Version 1.11</span>
 							</h3>
 						</button>
 
@@ -172,6 +173,7 @@
 								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
 								<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
+								<li><a href="#Payment_v1_Transaction_Inquire">Transaction Inquire</a></li>
 							</ul>
 							</li>
 							<li>
@@ -279,10 +281,6 @@ information about the outcome of e.g. 3D Secure.</p><div class="info">
   <p>
     <strong>Important:</strong> The redirect towards the redirectUrl via http-POST <strong>IS NOT</strong> supported. You should always use http-GET, unless specifically stated otherwise!
   </p>
-</div><div class="warning">
-  <p>
-    <strong>Important:</strong> The Saferpay-Integration via Pop-Up is not supported, be it for the Payment Page, or the Hosted Forms! However an integration via Lightbox, or similar, is supported!
-  </p>
 </div><div class="danger">
   <p>
     <strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server, maybe by using AJAX.
@@ -380,7 +378,7 @@ return response;
 <pre class="prettyprint">//This is an EXAMPLE of the payload-Array.
 $payload = array(
 'RequestHeader' =&gt; array(
-'SpecVersion' =&gt; [CURRENT_SPEC_VERSION],
+'SpecVersion' =&gt; &quot;1.7&quot;,
 'CustomerId' =&gt; &quot;[YOUR CUSTOMERID]&quot;,
 'RequestId' =&gt; &quot;aScdFewDSRFrfas2wsad3&quot;,
 'RetryIndicator' =&gt; 0,
@@ -1005,6 +1003,20 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 				</tr>
 				<tr>
 						<td class="col-sm-4 text-right">
+	<strong>PaymentMethodsOptions</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. May be used to set specific options for some payment methods.<br><br>Optional. May be used to set specific options for some payment methods.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
 				string[]
@@ -1133,6 +1145,20 @@ Possible values: MASTERPASS.<br>
 			</i>
 </td>
 				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Condition</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2)<br> Default: IF_ALLOWED_BY_SCHEME (empty)</div>
+	<i class="small text-muted">
+Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br>
+			</i>
+</td>
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.10&quot;,
@@ -1237,9 +1263,10 @@ Possible values: MASTERPASS.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-md-6"></div></div></section><section><h2>Call this function to safely check the status of the transaction from your server. Depending on the payment provider, the resulting transaction may
-either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the
-transaction container returned in the response.</h2><div class="row"><div class="col-md-6"><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-md-6"></div></div></section><section><h2>Call this function to safely check the status of the transaction from your server.
+Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered).
+This will be visible in the status of the transaction container returned in the response.
+This function can be called up to 24 hours after the transaction was initialized.</h2><div class="row"><div class="col-md-6"><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400
 or higher containing an error message will be returned providing some information on the transaction failure.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -1731,7 +1758,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
+	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
 	</i>
@@ -3023,7 +3050,7 @@ Possible values: PENDING, CAPTURED.<br>
 <ul>
 <li>MultipartCapture is available for SIX Acquiring contracts <strong>only!</strong></li>
 <li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
-<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+<li>No MultipartCapture request should be sent before receiving the response of a preceding request (i.e. no parallel calls are allowed).</li>
 <li>The sum of multipart captures must not exceed the authorized amount.</li>
 <li>A unique OrderPartId must be used for each request.</li>
 </ul>
@@ -4534,10 +4561,197 @@ Id[1..50]<br>
     &quot;Card&quot;: {
       &quot;Number&quot;: &quot;912345678901234&quot;,
       &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
+      &quot;ExpYear&quot;: 2022,
       &quot;ExpMonth&quot;: 9,
       &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
       &quot;CountryCode&quot;: &quot;CH&quot;
+    }
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Inquire"><h2><a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire</h2><div class="row"><div class="col-md-6"><p>This method can be used to get the details of a transaction that has been authorized successfully.</p><div class="info">
+<p><strong>Fair use:</strong></p>
+<p>This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Inquire</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Transaction</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Liability</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.11&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Transaction&quot;: {
+    &quot;Type&quot;: &quot;PAYMENT&quot;,
+    &quot;Status&quot;: &quot;CAPTURED&quot;,
+    &quot;Id&quot;: &quot;UlKpE6A2UxlttAOQtnYIbCj1CpIA&quot;,
+    &quot;Date&quot;: &quot;2019-04-05T10:49:55.76+02:00&quot;,
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;1200&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    },
+    &quot;AcquirerName&quot;: &quot;Saferpay Test Card&quot;,
+    &quot;AcquirerReference&quot;: &quot;32436794662&quot;,
+    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;012345&quot;
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA&quot;
+    },
+    &quot;DisplayText&quot;: &quot;xxxx xxxx xxxx 0004&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;901050xxxxxx0004&quot;,
+      &quot;ExpYear&quot;: 2022,
+      &quot;ExpMonth&quot;: 6,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
+  },
+  &quot;Liability&quot;: {
+    &quot;LiabilityShift&quot;: true,
+    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+    &quot;ThreeDs&quot;: {
+      &quot;Authenticated&quot;: true,
+      &quot;LiabilityShift&quot;: true,
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
     }
   }
 }
@@ -4754,7 +4968,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
+	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
 	</i>
@@ -4786,7 +5000,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.</p><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.
+This function can be called up to 24 hours after the transaction was initialized.</p><div class="danger">
 <p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
@@ -5639,8 +5854,8 @@ Id[1..80]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
-					<span>Example: 1.10</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11<br>
+					<span>Example: 1.11</span>
 	</i>
 </td>
 							</tr>
@@ -5748,8 +5963,31 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br>
-					<span>Example: 1.10</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11<br>
+					<span>Example: 1.11</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_AlipayOptions&quot;</h2>
+				<table class="table" id="Payment_Models_AlipayOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>LocalWallet</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Preselect the Alipay local wallet. May only be used in conjunction with special Alipay integrations.</div>
+	<i class="small text-muted">
+Iso885915[1..64]<br>
+					<span>Example: &quot;TNG&quot;</span>
 	</i>
 </td>
 							</tr>
@@ -6710,6 +6948,21 @@ Possible values: NONE, MANDATORY.<br>
 	<div style="padding-bottom: 10px">Name of the card holder (if known)</div>
 	<i class="small text-muted">
 					<span>Example: John Doe</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>HolderSegment</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Segment of card holder (if known)</div>
+	<i class="small text-muted">
+Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br>
+					<span>Example: CORPORATE</span>
 	</i>
 </td>
 							</tr>
@@ -7743,6 +7996,21 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 							</tr>
 							<tr>
 									<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
+	<i class="small text-muted">
+Id[1..64]<br>
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
 			<span>
@@ -8083,6 +8351,21 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
 					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
+	<i class="small text-muted">
+Id[1..64]<br>
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
 	</i>
 </td>
 							</tr>
@@ -8642,6 +8925,25 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs. <br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect). <br> DON&#8217;T USE THIS IF YOU&#8217;RE NOT SURE &#8211; IT&#8217;S PROBABLY NOT WHAT YOU WANT!</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_PaymentMethodsOptions&quot;</h2>
+				<table class="table" id="Payment_Models_PaymentMethodsOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Alipay</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_AlipayOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. Options which only apply to Alipay.<br><br>Optional. Options which only apply to Alipay.</div>
 	<i class="small text-muted">
 			</i>
 </td>
