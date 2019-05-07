@@ -131,6 +131,20 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 				</tr>
 				<tr>
 						<td class="col-sm-4 text-right">
+	<strong>PaymentMethodsOptions</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. May be used to set specific options for some payment methods.<br><br>Optional. May be used to set specific options for some payment methods.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 				string[]
@@ -256,6 +270,20 @@ Possible values: MASTERPASS.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Condition</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2)<br> Default: IF_ALLOWED_BY_SCHEME (empty)</div>
+	<i class="small text-muted">
+Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 			</i>
 </td>
 				</tr>
@@ -398,9 +426,10 @@ Possible values: MASTERPASS.<br />
 
 ## <a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert
 
-Call this function to safely check the status of the transaction from your server. Depending on the payment provider, the resulting transaction may
-either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the
-transaction container returned in the response.
+Call this function to safely check the status of the transaction from your server.
+Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered).
+This will be visible in the status of the transaction container returned in the response.
+This function can be called up to 24 hours after the transaction was initialized.
 ---
 If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400
 or higher containing an error message will be returned providing some information on the transaction failure.

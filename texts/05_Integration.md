@@ -45,12 +45,6 @@ information about the outcome of e.g. 3D Secure.
   </p>
 </div>
 
-<div class="warning">
-  <p>
-    <strong>Important:</strong> The Saferpay-Integration via Pop-Up is not supported, be it for the Payment Page, or the Hosted Forms! However an integration via Lightbox, or similar, is supported!
-  </p>
-</div>
-
 <div class="danger">
   <p>
     <strong>Caution:</strong> Please <strong>DO NOT</strong> use client side scripting languages like JavaScript to execute the server-to-server (JSON) calls directly. Clients could manipulate the code, or even try to extract the credentials, to execute refunds or other requests with malicious intentions. Always execute the requests and keep your credentials on your server, maybe by using AJAX.
@@ -159,7 +153,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
     'RequestHeader' => array(
-        'SpecVersion' => [CURRENT_SPEC_VERSION],
+        'SpecVersion' => "1.7",
         'CustomerId' => "[YOUR CUSTOMERID]",
         'RequestId' => "aScdFewDSRFrfas2wsad3",
         'RetryIndicator' => 0,

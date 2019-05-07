@@ -310,7 +310,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
+	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
 	<i class="small text-muted">
 					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
 	</i>
@@ -1912,7 +1912,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 <ul>
 <li>MultipartCapture is available for SIX Acquiring contracts <strong>only!</strong></li>
 <li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
-<li>No MultipartCapture request should be sent before receiving the response of a preceeding request (i.e. no parallel calls are allowed).</li>
+<li>No MultipartCapture request should be sent before receiving the response of a preceding request (i.e. no parallel calls are allowed).</li>
 <li>The sum of multipart captures must not exceed the authorized amount.</li>
 <li>A unique OrderPartId must be used for each request.</li>
 </ul>
@@ -3849,10 +3849,246 @@ Id[1..50]<br />
     "Card": {
       "Number": "912345678901234",
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2022,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
       "CountryCode": "CH"
+    }
+  }
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire
+
+This method can be used to get the details of a transaction that has been authorized successfully.
+<div class="info">
+<p><strong>Fair use:</strong></p>
+<p>This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
+</div>
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Inquire</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>TransactionReference</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_TransactionReference">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference to authorization.<br><br>Exactly one element must be set.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Transaction</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Liability</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ResponseHeader": {
+    "SpecVersion": "1.11",
+    "RequestId": "[your request id]"
+  },
+  "Transaction": {
+    "Type": "PAYMENT",
+    "Status": "CAPTURED",
+    "Id": "UlKpE6A2UxlttAOQtnYIbCj1CpIA",
+    "Date": "2019-04-05T10:49:55.76+02:00",
+    "Amount": {
+      "Value": "1200",
+      "CurrencyCode": "CHF"
+    },
+    "AcquirerName": "Saferpay Test Card",
+    "AcquirerReference": "32436794662",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "ApprovalCode": "012345"
+  },
+  "PaymentMeans": {
+    "Brand": {
+      "PaymentMethod": "VISA",
+      "Name": "VISA"
+    },
+    "DisplayText": "xxxx xxxx xxxx 0004",
+    "Card": {
+      "MaskedNumber": "901050xxxxxx0004",
+      "ExpYear": 2022,
+      "ExpMonth": 6,
+      "HolderName": "Max Mustermann",
+      "CountryCode": "CH"
+    }
+  },
+  "Liability": {
+    "LiabilityShift": true,
+    "LiableEntity": "ThreeDs",
+    "ThreeDs": {
+      "Authenticated": true,
+      "LiabilityShift": true,
+      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
+      "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
     }
   }
 }

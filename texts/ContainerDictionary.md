@@ -16,8 +16,8 @@
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br />
-					<span>Example: 1.10</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11<br />
+					<span>Example: 1.11</span>
 	</i>
 </td>
 							</tr>
@@ -125,8 +125,31 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10<br />
-					<span>Example: 1.10</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11<br />
+					<span>Example: 1.11</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_AlipayOptions"</h2>
+				<table class="table" id="Payment_Models_AlipayOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>LocalWallet</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Preselect the Alipay local wallet. May only be used in conjunction with special Alipay integrations.</div>
+	<i class="small text-muted">
+Iso885915[1..64]<br />
+					<span>Example: &quot;TNG&quot;</span>
 	</i>
 </td>
 							</tr>
@@ -1087,6 +1110,21 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">Name of the card holder (if known)</div>
 	<i class="small text-muted">
 					<span>Example: John Doe</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>HolderSegment</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Segment of card holder (if known)</div>
+	<i class="small text-muted">
+Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
+					<span>Example: CORPORATE</span>
 	</i>
 </td>
 							</tr>
@@ -2120,6 +2158,21 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
 							</tr>
 							<tr>
 									<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
+	<i class="small text-muted">
+Id[1..64]<br />
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2460,6 +2513,21 @@ Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
 					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
+	<i class="small text-muted">
+Id[1..64]<br />
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
 	</i>
 </td>
 							</tr>
@@ -3019,6 +3087,25 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs. <br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect). <br> DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_PaymentMethodsOptions"</h2>
+				<table class="table" id="Payment_Models_PaymentMethodsOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Alipay</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_AlipayOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. Options which only apply to Alipay.<br><br>Optional. Options which only apply to Alipay.</div>
 	<i class="small text-muted">
 			</i>
 </td>
