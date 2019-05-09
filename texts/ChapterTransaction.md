@@ -374,7 +374,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   },
   "Token": "234uhfh78234hlasdfh8234e",
   "Expiration": "2015-01-30T12:45:22.258+01:00",
-  "LiabilityShift": false,
+  "LiabilityShift": true,
   "RedirectRequired": true,
   "Redirect": {
     "RedirectUrl": "https://www.saferpay.com/vt2/Api/...",
