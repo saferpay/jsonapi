@@ -8961,6 +8961,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.11.0.0.20190507">Version 1.11</a></li>
 <li><a href="#v1.10.0.0.20181113">Version 1.10</a></li>
 <li><a href="#v1.9.0.20180515">Version 1.9</a></li>
 <li><a href="#v1.8.0.20171114">Version 1.8</a></li>
@@ -8968,6 +8969,17 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.11.0.0.20190507"><h2><a name="v1.11.0.0.20190507"></a> Version 1.11 (released 2019-05-21)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2019-05-07</li>
+<li>introduced version 1.11</li>
+<li>added value <code>1.11</code> for <em>SpecVersion</em></li>
+<li>added method <a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a> for inquiring the details of previous transaction</li>
+<li>added container <em>PaymentMethodOptions</em> to <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> to allow for setting payment method specific options</li>
+<li>added <em>Condition</em> to <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> request to control the minimum authentication level</li>
+<li>added <em>HolderSegment</em> to <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a> and <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> responses to indicate the segment (e.g. Corporate) of the card holder</li>
+<li>added <em>CaptureId</em> to <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a>, <a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a> responses to identify a (partial) capture for refunding</li>
+<li>added value <code>IF_ALLOWED_BY_SCHEME</code> for field <code>Condition</code> in <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a> request</li>
+<li>added value <code>ALIPAY</code> for <em>Brand.PaymentMethod</em>, <em>PaymentMethods</em> and <em>Wallet.PaymentMethods</em></li>
 </ul></div></div></section><section id="v1.10.0.0.20181113"><h2><a name="v1.10.0.0.20181113"></a> Version 1.10 (released 2018-11-13)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2018-08-14</li>
 <li>introduced version 1.10</li>
