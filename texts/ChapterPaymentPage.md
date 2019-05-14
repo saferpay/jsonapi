@@ -427,12 +427,15 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 ## <a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert
 
 Call this function to safely check the status of the transaction from your server.
-Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered).
-This will be visible in the status of the transaction container returned in the response.
-This function can be called up to 24 hours after the transaction was initialized.
----
-If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400
-or higher containing an error message will be returned providing some information on the transaction failure.
+
+<div class="info">
+<p><strong>Important:</strong></p>
+<ul>
+<li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
+<li>This function can be called up to 24 hours after the transaction was initialized.</li>
+<li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>
+</ul>
+</div>
 
 --->>>
 
