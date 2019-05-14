@@ -1263,11 +1263,14 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-md-6"></div></div></section><section><h2>Call this function to safely check the status of the transaction from your server.
-Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered).
-This will be visible in the status of the transaction container returned in the response.
-This function can be called up to 24 hours after the transaction was initialized.</h2><div class="row"><div class="col-md-6"><p>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400
-or higher containing an error message will be returned providing some information on the transaction failure.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-md-6"><p>Call this function to safely check the status of the transaction from your server.</p><div class="info">
+<p><strong>Important:</strong></p>
+<ul>
+<li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
+<li>This function can be called up to 24 hours after the transaction was initialized.</li>
+<li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>
+</ul>
+</div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
