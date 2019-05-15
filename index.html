@@ -5014,7 +5014,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.
-This function can be called up to 24 hours after the transaction was initialized.</p><div class="danger">
+This function can be called up to 24 hours after the transaction was initialized.</p><div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Caution:</strong> Please DO NOT use the AssertInsert request for polling. You should always await the reception of the SuccessUrl.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
@@ -5161,7 +5161,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p><div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
