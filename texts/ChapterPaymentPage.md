@@ -8,6 +8,7 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 This chapter will give you a simple overview about the transaction flow, when using the Payment Page
 
 <div class="info">
+	<span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </div>
 
@@ -429,12 +430,15 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 Call this function to safely check the status of the transaction from your server.
 
 <div class="info">
+<span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
+<div>
 <p><strong>Important:</strong></p>
 <ul>
 <li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
 <li>This function can be called up to 24 hours after the transaction was initialized.</li>
 <li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>
 </ul>
+</div>
 </div>
 
 --->>>
