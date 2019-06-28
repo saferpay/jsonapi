@@ -73,6 +73,8 @@
 								<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
 								<li><a href="#Payment_v1_Transaction_Inquire">Transaction Inquire</a></li>
+								<li><a href="#Payment_v1_Transaction_AlternativePayment">Transaction AlternativePayment</a></li>
+								<li><a href="#Payment_v1_Transaction_QueryAlternativePayment">Transaction QueryAlternativePayment</a></li>
 							</ul>
 							</li>
 							<li>
@@ -81,6 +83,7 @@
 								<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
 								<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
 								<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+								<li><a href="#Payment_v1_Alias_Update">Alias Update</a></li>
 								<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
 							</ul>
 							</li>
@@ -174,6 +177,8 @@
 								<li><a href="#Payment_v1_Transaction_RedirectPayment">Transaction RedirectPayment</a></li>
 								<li><a href="#Payment_v1_Transaction_AssertRedirectPayment">Transaction AssertRedirectPayment</a></li>
 								<li><a href="#Payment_v1_Transaction_Inquire">Transaction Inquire</a></li>
+								<li><a href="#Payment_v1_Transaction_AlternativePayment">Transaction AlternativePayment</a></li>
+								<li><a href="#Payment_v1_Transaction_QueryAlternativePayment">Transaction QueryAlternativePayment</a></li>
 							</ul>
 							</li>
 							<li>
@@ -182,6 +187,7 @@
 								<li><a href="#Payment_v1_Alias_Insert">Alias Insert</a></li>
 								<li><a href="#Payment_v1_Alias_AssertInsert">Alias AssertInsert</a></li>
 								<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
+								<li><a href="#Payment_v1_Alias_Update">Alias Update</a></li>
 								<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
 							</ul>
 							</li>
@@ -4789,6 +4795,392 @@ Id[1..50]<br>
     }
   }
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AlternativePayment"><h2><a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>This method can be used to authorize the payments that do not have a payment-page or
+for the payments that before authorization some additional steps such as authentication should be done.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AlternativePayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
+	<i class="small text-muted">
+Numeric[8..8]<br>
+					<span>Example: 12341234</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payment</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_Payment">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMethod</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
+	<i class="small text-muted">
+Possible values: BANCONTACT.<br>
+					<span>Example: BANCONTACT</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payer (IP-address)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Notification</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_AlternativePaymentNotification">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Notification options</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.12&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;TerminalId&quot;: &quot;[your terminal id]&quot;,
+  &quot;Payment&quot;: {
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;CHF&quot;
+    }
+  },
+  &quot;PaymentMethod&quot;: &quot;BANCONTACT&quot;
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Token</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id for referencing later</div>
+	<i class="small text-muted">
+					<span>Example: 234uhfh78234hlasdfh8234e</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Expiration</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
+	<i class="small text-muted">
+					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>ProcessingData</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_AlternativePaymentProcessingData">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">data required by the merchant system to process the payment (e.g. QR-code data, intent URL, ...)<br><br>Payment method specific data required to process an alternative payment.<br> Only one container (matching the PaymentMethod of the AlternativePaymentRequest message) will be present</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+               &quot;ResponseHeader&quot;: {
+                 &quot;SpecVersion&quot;: &quot;1.10&quot;,
+                 &quot;RequestId&quot;: &quot;[your request id]&quot;
+               },
+               &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
+               &quot;Expiration&quot;: &quot;2015-01-30T13:45:22.258+02:00&quot;,
+               &quot;ProcessingData&quot;: {
+                 &quot;Bancontact&quot;: {
+                   &quot;QrCodeData&quot;: &quot;someQRcodeData&quot;,
+                   &quot;IntentUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
+               }
+             }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryAlternativePayment"><h2><a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory">Business license</span></h2><div class="row"><div class="col-md-6"><p>Call this method to get information about a previously initialized alternative payment transaction</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryAlternativePayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Token</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Token returned by initial call.</div>
+	<i class="small text-muted">
+Id[1..50]<br>
+					<span>Example: 234uhfh78234hlasdfh8234e</span>
+	</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Transaction</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Liability</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.12&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Transaction&quot;: {
+    &quot;Type&quot;: &quot;PAYMENT&quot;,
+    &quot;Status&quot;: &quot;CAPTURED&quot;,
+    &quot;Id&quot;: &quot;ChAChMA5hx89vAAzEh52AUYvxWCb&quot;,
+    &quot;CaptureId&quot;: &quot;ChAChMA5hx89vAAzEh52AUYvxWCb&quot;,
+    &quot;Date&quot;: &quot;2019-06-19T15:04:48.733+02:00&quot;,
+    &quot;Amount&quot;: {
+      &quot;Value&quot;: &quot;100&quot;,
+      &quot;CurrencyCode&quot;: &quot;EUR&quot;
+    },
+    &quot;AcquirerName&quot;: &quot;Bancontact Saferpay Test&quot;,
+    &quot;AcquirerReference&quot;: &quot;32332251189&quot;,
+    &quot;SixTransactionReference&quot;: &quot;0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+    &quot;ApprovalCode&quot;: &quot;945011&quot;
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;BANCONTACT&quot;,
+      &quot;Name&quot;: &quot;Bancontact&quot;
+    },
+    &quot;DisplayText&quot;: &quot;xxxx xxxx xxxx x000 5&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;xxxxxxxxxxxxx0005&quot;,
+      &quot;ExpYear&quot;: 2020,
+      &quot;ExpMonth&quot;: 6,
+      &quot;CountryCode&quot;: &quot;BE&quot;
+    }
+  },
+  &quot;Liability&quot;: {
+    &quot;LiabilityShift&quot;: true,
+    &quot;LiableEntity&quot;: &quot;ThreeDs&quot;,
+    &quot;ThreeDs&quot;: {
+      &quot;Authenticated&quot;: true,
+      &quot;LiabilityShift&quot;: true,
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;
+    }
+  }
+}
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-md-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Insert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -5275,6 +5667,169 @@ Id[1..50]<br>
     &quot;IdGenerator&quot;: &quot;RANDOM&quot;
   }
 }
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered alias.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;1.10&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Alias&quot;: {
+    &quot;Id&quot;: &quot;alias35nfd9mkzfw0x57iwx&quot;,
+    &quot;Lifetime&quot;: 1000
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Update"><h2><a name="Payment_v1_Alias_Update"></a>Alias Update</h2><div class="row"><div class="col-md-6"><p>This method may be used to update an alias' lifetime and / or its creditcard expiry date</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Update</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>UpdateAlias</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_UpdateAlias">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Update parameters</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>UpdatePaymentMeans</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Means of payment to update</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+              &quot;RequestHeader&quot;: {
+                &quot;SpecVersion&quot;: &quot;1.12&quot;,
+                &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+                &quot;RequestId&quot;: &quot;[your request id]&quot;,
+                &quot;RetryIndicator&quot;: 0
+              },
+              &quot;AliasUpdate&quot;:{
+                 &quot;Id&quot;:&quot;[your alias id]&quot;,
+                 &quot;LifeTime&quot;:&quot;[your lifetime]&quot;
+              },
+              &quot;UpdatePaymentMeans&quot;:{
+                &quot;Card&quot;:{
+                  &quot;ExpMonth&quot;:&quot;[your expiry month]&quot;,
+                  &quot;ExpYear&quot;:&quot;[your expiry year]&quot;
+              }
+            }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 	<thead>
 		<tr>
@@ -5888,8 +6443,8 @@ Id[1..80]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11<br>
-					<span>Example: 1.11</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12<br>
+					<span>Example: 1.12</span>
 	</i>
 </td>
 							</tr>
@@ -5997,8 +6552,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11<br>
-					<span>Example: 1.11</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12<br>
+					<span>Example: 1.12</span>
 	</i>
 </td>
 							</tr>
@@ -6499,6 +7054,75 @@ Possible values: OK, NOT_PERFORMED.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_AlternativePaymentNotification&quot;</h2>
+				<table class="table" id="Payment_Models_Data_AlternativePaymentNotification">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>MerchantEmails</strong><br>
+	<span class="text-muted small">
+				string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
+	<i class="small text-muted">
+					<span>Example: [&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>PayerEmail</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
+	<i class="small text-muted">
+					<span>Example: payer@saferpay.com</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>StateNotificationUrl</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				URI
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
+	<i class="small text-muted">
+					<span>Example: https://merchanthost/notify</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_AlternativePaymentProcessingData&quot;</h2>
+				<table class="table" id="Payment_Models_Data_AlternativePaymentProcessingData">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Bancontact</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_BancontactProcessingData">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Bancontact specific data for processing payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_Amount&quot;</h2>
 				<table class="table" id="Payment_Models_Data_Amount">
 					<tbody>
@@ -6534,6 +7158,37 @@ Possible values: OK, NOT_PERFORMED.<br>
 	<i class="small text-muted">
 					<span>Example: CHF</span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_BancontactProcessingData&quot;</h2>
+				<table class="table" id="Payment_Models_Data_BancontactProcessingData">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>QrCodeData</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Data which should be integrated into a QR code</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>IntentUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Url to be used for payment on the same device (web-to-app or app-to-app switch)</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -7388,15 +8043,15 @@ Id[1..15]<br>
 					<tbody>
 							<tr>
 									<td class="col-sm-4 text-right">
-	<strong>MerchantEmail</strong><br>
+	<strong>MerchantEmails</strong><br>
 	<span class="text-muted small">
-				string
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the merchant after successful authorizations.</div>
+	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
-					<span>Example: merchant@saferpay.com</span>
+					<span>Example: [&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</span>
 	</i>
 </td>
 							</tr>
@@ -8187,15 +8842,15 @@ Id[1..80]<br>
 					<tbody>
 							<tr>
 									<td class="col-sm-4 text-right">
-	<strong>MerchantEmail</strong><br>
+	<strong>MerchantEmails</strong><br>
 	<span class="text-muted small">
-				string
+				string[]
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Email which will be notified by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
+	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
-					<span>Example: merchant@saferpay.com</span>
+					<span>Example: [&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</span>
 	</i>
 </td>
 							</tr>
@@ -8845,6 +9500,216 @@ Possible values: DEFAULT, SIX, NONE.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_Transaction&quot;</h2>
+				<table class="table" id="Payment_Models_Data_Transaction">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Type</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT', 'REFUND'</div>
+	<i class="small text-muted">
+Possible values: PAYMENT, REFUND.<br>
+					<span>Example: PAYMENT</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Status</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<i class="small text-muted">
+Possible values: AUTHORIZED, CAPTURED, PENDING.<br>
+					<span>Example: AUTHORIZED</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
+	<i class="small text-muted">
+					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>CaptureId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
+	<i class="small text-muted">
+Id[1..64]<br>
+					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Date</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date / time of the authorization</div>
+	<i class="small text-muted">
+					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount (currency, value, etc.) that has been authorized.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">OrderId given with request</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>AcquirerName</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of the acquirer</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerName</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>AcquirerReference</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>SixTransactionReference</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
+	<i class="small text-muted">
+					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>ApprovalCode</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>DirectDebit</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
+	<i class="small text-muted">
+					<span>Example: AcquirerReference</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Invoice</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_TransactionReference&quot;</h2>
 				<table class="table" id="Payment_Models_Data_TransactionReference">
 					<tbody>
@@ -8898,6 +9763,103 @@ Id[1..80]<br>
 	<i class="small text-muted">
 					<span>Example: 2019-11-08T12:29:37.000+01:00</span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_UpdateAlias&quot;</h2>
+				<table class="table" id="Payment_Models_Data_UpdateAlias">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The id of the alias that should be updated.. This value is case-insensitive.</div>
+	<i class="small text-muted">
+Id[1..40]<br>
+					<span>Example: alias35nfd9mkzfw0x57iwx</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Lifetime</strong><br>
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay.</div>
+	<i class="small text-muted">
+Range: inclusive between 1 and 1600<br>
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_UpdateCreditCard&quot;</h2>
+				<table class="table" id="Payment_Models_Data_UpdateCreditCard">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Year of expiration</div>
+	<i class="small text-muted">
+Range: inclusive between 2000 and 9999<br>
+					<span>Example: 2015</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
+	<i class="small text-muted">
+Range: inclusive between 1 and 12<br>
+					<span>Example: 9</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_UpdatePaymentMeans&quot;</h2>
+				<table class="table" id="Payment_Models_Data_UpdatePaymentMeans">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Card</strong><br>
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_UpdateCreditCard">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -8985,6 +9947,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.12.0.0.20190716">Version 1.12</a></li>
 <li><a href="#v1.11.0.0.20190521">Version 1.11</a></li>
 <li><a href="#v1.10.0.0.20181113">Version 1.10</a></li>
 <li><a href="#v1.9.0.20180515">Version 1.9</a></li>
@@ -8993,6 +9956,10 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.12.0.0.20190716"><h2><a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2019-07-16</li>
+<li>introduced version 1.12</li>
+<li>[coming soon]</li>
 </ul></div></div></section><section id="v1.11.0.0.20190521"><h2><a name="v1.11.0.0.20190521"></a> Version 1.11 (released 2019-05-21)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2019-05-07</li>
 <li>introduced version 1.11</li>
