@@ -730,6 +730,217 @@ This method may be used to insert an alias directly with card-data collected by 
 
 
 
+## <a name="Payment_v1_Alias_Update"></a>Alias Update
+
+This method may be used to update an alias' lifetime and / or its creditcard expiry date
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Update</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>UpdateAlias</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_UpdateAlias">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Update parameters</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>UpdatePaymentMeans</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Means of payment to update</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+              "RequestHeader": {
+                "SpecVersion": "1.12",
+                "CustomerId": "[your customer id]",
+                "RequestId": "[your request id]",
+                "RetryIndicator": 0
+              },
+              "AliasUpdate":{
+                 "Id":"[your alias id]",
+                 "LifeTime":"[your lifetime]"
+              },
+              "UpdatePaymentMeans":{
+                "Card":{
+                  "ExpMonth":"[your expiry month]",
+                  "ExpYear":"[your expiry year]"
+              }
+            }
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered alias.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ResponseHeader": {
+    "SpecVersion": "1.10",
+    "RequestId": "[your request id]"
+  },
+  "Alias": {
+    "Id": "alias35nfd9mkzfw0x57iwx",
+    "Lifetime": 1000
+  },
+  "PaymentMeans": {
+    "Brand": {
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
+    },
+    "DisplayText": "9123 45xx xxxx 1234",
+    "Card": {
+      "MaskedNumber": "912345xxxxxx1234",
+      "ExpYear": 2015,
+      "ExpMonth": 9,
+      "HolderName": "Max Mustermann",
+      "CountryCode": "CH"
+    }
+  }
+}
+</pre>
+
+<<<---
+
+
+
+
+
 ## <a name="Payment_v1_Alias_Delete"></a>Alias Delete
 
 This method may be used to delete previously inserted aliases.

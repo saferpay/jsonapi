@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.12](#v1.12.0.0.20190716)
 - [Version 1.11](#v1.11.0.0.20190521)
 - [Version 1.10](#v1.10.0.0.20181113)
 - [Version 1.9](#v1.9.0.20180515)
@@ -9,6 +10,11 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)
+- available on Sandbox: 2019-07-16
+- introduced version 1.12
+- [coming soon]
 
 ## <a name="v1.11.0.0.20190521"></a> Version 1.11 (released 2019-05-21)
 - available on Sandbox: 2019-05-07

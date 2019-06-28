@@ -2185,6 +2185,7 @@ Possible values: PENDING, CAPTURED.<br />
 	<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
 </div>
+This method is only supported for pending capture transactions (only used for paydirekt at the moment)
 
 --->>>
 
@@ -4112,6 +4113,488 @@ This method can be used to get the details of a transaction that has been author
       "LiabilityShift": true,
       "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
       "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
+    }
+  }
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory">Business license</span> 
+
+This method can be used to authorize the payments that do not have a payment-page or
+for the payments that before authorization some additional steps such as authentication should be done.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AlternativePayment</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
+	<i class="small text-muted">
+Numeric[8..8]<br />
+					<span>Example: 12341234</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payment</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_Payment">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMethod</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
+	<i class="small text-muted">
+Possible values: BANCONTACT.<br />
+					<span>Example: BANCONTACT</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payer (IP-address)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Notification</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_AlternativePaymentNotification">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Notification options</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "RequestHeader": {
+    "SpecVersion": "1.12",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[your request id]",
+    "RetryIndicator": 0
+  },
+  "TerminalId": "[your terminal id]",
+  "Payment": {
+    "Amount": {
+      "Value": "100",
+      "CurrencyCode": "CHF"
+    }
+  },
+  "PaymentMethod": "BANCONTACT"
+}
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Token</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id for referencing later</div>
+	<i class="small text-muted">
+					<span>Example: 234uhfh78234hlasdfh8234e</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Expiration</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
+	<i class="small text-muted">
+					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
+	</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>ProcessingData</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_AlternativePaymentProcessingData">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">data required by the merchant system to process the payment (e.g. QR-code data, intent URL, ...)<br><br>Payment method specific data required to process an alternative payment.<br> Only one container (matching the PaymentMethod of the AlternativePaymentRequest message) will be present</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+               "ResponseHeader": {
+                 "SpecVersion": "1.10",
+                 "RequestId": "[your request id]"
+               },
+               "Token": "234uhfh78234hlasdfh8234e",
+               "Expiration": "2015-01-30T13:45:22.258+02:00",
+               "ProcessingData": {
+                 "Bancontact": {
+                   "QrCodeData": "someQRcodeData",
+                   "IntentUrl": "https://www.saferpay.com/vt2/Api/..."
+               }
+             }
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory">Business license</span> 
+
+Call this method to get information about a previously initialized alternative payment transaction
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryAlternativePayment</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_RequestHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Token</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Token returned by initial call.</div>
+	<i class="small text-muted">
+Id[1..50]<br />
+					<span>Example: 234uhfh78234hlasdfh8234e</span>
+	</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "RequestHeader": {
+    "SpecVersion": "1.10",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request identifier]",
+    "RetryIndicator": 0
+  },
+  "Token": "234uhfh78234hlasdfh8234e"
+}
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Transaction</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
+	<strong>Liability</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ResponseHeader": {
+    "SpecVersion": "1.12",
+    "RequestId": "[your request id]"
+  },
+  "Transaction": {
+    "Type": "PAYMENT",
+    "Status": "CAPTURED",
+    "Id": "ChAChMA5hx89vAAzEh52AUYvxWCb",
+    "CaptureId": "ChAChMA5hx89vAAzEh52AUYvxWCb",
+    "Date": "2019-06-19T15:04:48.733+02:00",
+    "Amount": {
+      "Value": "100",
+      "CurrencyCode": "EUR"
+    },
+    "AcquirerName": "Bancontact Saferpay Test",
+    "AcquirerReference": "32332251189",
+    "SixTransactionReference": "0:0:3:723n4MAjMdhjSAhAKEUdA8jtl9jb",
+    "ApprovalCode": "945011"
+  },
+  "PaymentMeans": {
+    "Brand": {
+      "PaymentMethod": "BANCONTACT",
+      "Name": "Bancontact"
+    },
+    "DisplayText": "xxxx xxxx xxxx x000 5",
+    "Card": {
+      "MaskedNumber": "xxxxxxxxxxxxx0005",
+      "ExpYear": 2020,
+      "ExpMonth": 6,
+      "CountryCode": "BE"
+    }
+  },
+  "Liability": {
+    "LiabilityShift": true,
+    "LiableEntity": "ThreeDs",
+    "ThreeDs": {
+      "Authenticated": true,
+      "LiabilityShift": true,
+      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs="
     }
   }
 }

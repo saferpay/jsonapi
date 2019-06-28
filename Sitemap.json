@@ -166,6 +166,16 @@
         "Title": "Transaction Inquire",
         "Source": "texts/ChapterTransaction.md",
         "Target": "index.html#Payment_v1_Transaction_Inquire"
+      },
+      {
+        "Title": "Transaction AlternativePayment",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_AlternativePayment"
+      },
+      {
+        "Title": "Transaction QueryAlternativePayment",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_QueryAlternativePayment"
       }
     ]
   },
@@ -188,6 +198,11 @@
         "Title": "Alias InsertDirect",
         "Source": "texts/ChapterAliasStore.md",
         "Target": "index.html#Payment_v1_Alias_InsertDirect"
+      },
+      {
+        "Title": "Alias Update",
+        "Source": "texts/ChapterAliasStore.md",
+        "Target": "index.html#Payment_v1_Alias_Update"
       },
       {
         "Title": "Alias Delete",
