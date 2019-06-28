@@ -12,7 +12,7 @@
 - [Version 1.4](#v1.4.0.20161015)
 
 ## <a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)
-- available on Sandbox: 2019-07-16
+- available on Sandbox: 2019-07-02
 - introduced version 1.12
 - [coming soon]
 
