@@ -14,7 +14,10 @@
 ## <a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)
 - available on Sandbox: 2019-07-02
 - introduced version 1.12
-- [coming soon]
+- added value `1.12` for _SpecVersion_
+- added method [Alias/Update](index.html#Payment_v1_Alias_Update) for updating the details of an alias
+- added methods [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) which enable the implementation of customized checkout processes (i.e. in mobile shopping apps) - at the moment only available for Bancontact
+- replaced _MerchantEmail_ with _MerchantEmails_ that can be filled with up to 10 email addresses to which the payment notification is sent
 
 ## <a name="v1.11.0.0.20190521"></a> Version 1.11 (released 2019-05-21)
 - available on Sandbox: 2019-05-07
