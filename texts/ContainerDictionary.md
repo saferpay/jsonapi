@@ -1221,7 +1221,7 @@ Possible values: NONE, MANDATORY.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect and Alias/Update calls if available.</div>
+	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert and Alias/InsertDirect calls if available.</div>
 	<i class="small text-muted">
 Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 					<span>Example: CORPORATE</span>

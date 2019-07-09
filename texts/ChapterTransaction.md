@@ -3996,7 +3996,7 @@ This method can be used to get the details of a transaction that has been author
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+			<a class="type-details in" href="#Payment_Models_Data_Transaction">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
