@@ -172,7 +172,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current spec version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -279,7 +279,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -365,7 +365,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -462,7 +462,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -592,7 +592,7 @@ This method may be used to insert an alias directly with card-data collected by 
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -700,7 +700,7 @@ This method may be used to insert an alias directly with card-data collected by 
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -806,7 +806,7 @@ This method may be used to update an alias' lifetime and / or its creditcard exp
 <pre class="prettyprint">
 {
               "RequestHeader": {
-                "SpecVersion": "1.12",
+                "SpecVersion": "[current Spec-Version]",
                 "CustomerId": "[your customer id]",
                 "RequestId": "[your request id]",
                 "RetryIndicator": 0
@@ -897,7 +897,7 @@ This method may be used to update an alias' lifetime and / or its creditcard exp
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Alias": {
@@ -993,7 +993,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1042,7 +1042,7 @@ Id[1..40]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   }
 }
