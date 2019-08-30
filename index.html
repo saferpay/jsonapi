@@ -9947,10 +9947,10 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 <li>available on Sandbox: 2019-08-10</li>
 <li>introduced version 1.13</li>
 <li>added value <code>1.13</code> for <em>SpecVersion</em></li>
-<li>added container PaymentMethodOptions to Transaction/AlternativePayment to allow the setting of payment method specific options. Currently used for Bancontact specific settings</li>
-<li>added new country code value XK (Kosovo) to field CountryCode</li>
-<li>added new value DIVERSE in field Gender</li>
-<li>added new error code PAYMENTMEANS_NOT_SUPPORTED with corresponding error message &quot;Unsupported means of payment (e.g. non SEPA IBAN)&quot;</li>
+<li>added container <em>PaymentMethodOptions</em> to  <a href="index.html#Payment_v1_Transaction_AlternativePayment">Transaction/AlternativePayment</a> to allow the setting of payment method specific options. Currently used for Bancontact specific settings</li>
+<li>added new country code value <em>XK</em> (Kosovo) to field CountryCode</li>
+<li>added new value <em>DIVERSE</em> in field Gender</li>
+<li>added new error code <em>PAYMENTMEANS_NOT_SUPPORTED</em> with corresponding error message &quot;Unsupported means of payment (e.g. non SEPA IBAN)&quot;</li>
 </ul></div></div></section><section id="v1.12.0.0.20190716"><h2><a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2019-07-02</li>
 <li>introduced version 1.12</li>
@@ -9963,7 +9963,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 <li>introduced version 1.11</li>
 <li>added value <code>1.11</code> for <em>SpecVersion</em></li>
 <li>added method <a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a> for inquiring the details of previous transaction</li>
-<li>added container <em>PaymentMethodOptions</em> to <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> to allow for setting payment method specific options</li>
+<li>added container <em>PaymentMethodsOptions</em> to <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> to allow for setting payment method specific options</li>
 <li>added <em>Condition</em> to <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> request to control the minimum authentication level</li>
 <li>added <em>HolderSegment</em> to <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a> and <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> responses to indicate the segment (e.g. Corporate) of the card holder</li>
 <li>added <em>CaptureId</em> to <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a>, <a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a> and <a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a> responses to identify a (partial) capture for refunding</li>
