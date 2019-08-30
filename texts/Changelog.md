@@ -16,10 +16,10 @@
 - available on Sandbox: 2019-08-10
 - introduced version 1.13
 - added value `1.13` for _SpecVersion_
-- added container PaymentMethodOptions to Transaction/AlternativePayment to allow the setting of payment method specific options. Currently used for Bancontact specific settings
-- added new country code value XK (Kosovo) to field CountryCode
-- added new value DIVERSE in field Gender
-- added new error code PAYMENTMEANS_NOT_SUPPORTED with corresponding error message "Unsupported means of payment (e.g. non SEPA IBAN)"
+- added container _PaymentMethodOptions_ to  [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) to allow the setting of payment method specific options. Currently used for Bancontact specific settings
+- added new country code value _XK_ (Kosovo) to field CountryCode
+- added new value _DIVERSE_ in field Gender
+- added new error code _PAYMENTMEANS_NOT_SUPPORTED_ with corresponding error message "Unsupported means of payment (e.g. non SEPA IBAN)"
 
 
 ## <a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)
@@ -35,7 +35,7 @@
 - introduced version 1.11
 - added value `1.11` for _SpecVersion_
 - added method [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) for inquiring the details of previous transaction
-- added container _PaymentMethodOptions_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) to allow for setting payment method specific options
+- added container _PaymentMethodsOptions_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) to allow for setting payment method specific options
 - added _Condition_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to control the minimum authentication level 
 - added _HolderSegment_ to [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) responses to indicate the segment (e.g. Corporate) of the card holder
 - added _CaptureId_ to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) and [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction) responses to identify a (partial) capture for refunding
