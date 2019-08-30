@@ -16,7 +16,7 @@
 - available on Sandbox: 2019-08-10
 - introduced version 1.13
 - added value `1.13` for _SpecVersion_
-- added container _PaymentMethodOptions_ to  [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) to allow the setting of payment method specific options. Currently used for Bancontact specific settings
+- added container _PaymentMethodsOptions_ to  [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) to allow the setting of payment method specific options. Currently used for Bancontact specific settings
 - added new country code value _XK_ (Kosovo) to field CountryCode
 - added new value _DIVERSE_ in field Gender
 - added new error code _PAYMENTMEANS_NOT_SUPPORTED_ with corresponding error message "Unsupported means of payment (e.g. non SEPA IBAN)"
