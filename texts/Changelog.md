@@ -13,7 +13,7 @@
 - [Version 1.4](#v1.4.0.20161015)
 
 ## <a name="v1.13.0.0.20190917"></a> Version 1.13 (released 2019-09-17)
-- available on Sandbox: 2019-08-10
+- available on Sandbox: 2019-09-10
 - introduced version 1.13
 - added value `1.13` for _SpecVersion_
 - added container _PaymentMethodsOptions_ to  [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) to allow the setting of payment method specific options. Currently used for Bancontact specific settings
