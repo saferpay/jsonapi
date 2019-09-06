@@ -4218,6 +4218,20 @@ Possible values: BANCONTACT.<br />
 				</tr>
 				<tr>
 						<td class="col-sm-4 text-right">
+	<strong>PaymentMethodOptions</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_AlternativePayment_PaymentMethodOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. May be used to set specific options for the payment method.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+						<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				

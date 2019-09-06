@@ -16,8 +16,8 @@
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12<br />
-					<span>Example: 1.12</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13<br />
+					<span>Example: 1.13</span>
 	</i>
 </td>
 							</tr>
@@ -125,8 +125,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12<br />
-					<span>Example: 1.12</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13<br />
+					<span>Example: 1.13</span>
 	</i>
 </td>
 							</tr>
@@ -151,6 +151,56 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 Iso885915[1..64]<br />
 					<span>Example: &quot;TNG&quot;</span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_AlternativePayment_BancontactPaymentMethodOptions"</h2>
+				<table class="table" id="Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>AppDefaultRedirectUrl</strong><br />
+	<span class="text-muted small">
+				URI
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This URL is called by the bancontact payment app when the payer cancels the payment.<br> The maximum allowed length for this URL is 256 characters.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>AppCompletionRedirectUrl</strong><br />
+	<span class="text-muted small">
+				URI
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This URL is called by the bancontact payment app once the payment is authorized successfully. <br> The maximum allowed length for this URL is 256 characters.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_AlternativePayment_PaymentMethodOptions"</h2>
+				<table class="table" id="Payment_Models_AlternativePayment_PaymentMethodOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Bancontact</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">bancontact-specific options for this payment</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -293,7 +343,7 @@ Utf8[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's gender</div>
 	<i class="small text-muted">
-Possible values: MALE, FEMALE, COMPANY.<br />
+Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 					<span>Example: COMPANY</span>
 	</i>
 </td>
@@ -396,7 +446,7 @@ AlphaNumeric[1..3]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-1 alpha-2 country code</div>
+	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br />
 					<span>Example: CH</span>

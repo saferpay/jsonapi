@@ -146,6 +146,12 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
+      <td class="text-right">PAYMENTMEANS_NOT_SUPPORTED</td>
+      <td>
+          Unsupported means of payment (e.g. non SEPA IBAN)
+      </td>
+  </tr>
+  <tr>
       <td class="text-right">PERMISSION_DENIED</td>
       <td>
           No permission (e.g. terminal does not belong to the customer)
@@ -203,6 +209,13 @@ List of error names (these names will not change, so you may parse these and att
       <td>
           The transaction was not started by the payer. Therefore, no final result for the transaction is available.<br />
           <i>Solution:</i> Try again later.
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">UNEXPECTED_ERROR_BY_ACQUIRER</td>
+      <td>
+          The acquirer returned an unexpected error code.<br />
+          <i>Solution:</i> Try again
       </td>
   </tr>
   <tr>
