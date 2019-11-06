@@ -53,13 +53,13 @@ HTTP Headers example:
 <<<---
 
 
-## <a name="rest_customers_{customerId}_terminals_{terminalId}_spg-offers"></a>SecurePayGateOffer CreateOffer
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGateOffer CreateOffer
 
 This function may be used to create a SecurePayGateOffer
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/{customerId}/terminals/{terminalId}/spg-offers</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div>
 
 <<<---
 

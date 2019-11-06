@@ -248,7 +248,7 @@
       {
         "Title": "SecurePayGateOffer CreateOffer",
         "Source": "texts/ChapterRestApi.md",
-        "Target": "index.html"
+        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers"
       }
     ]
   },
