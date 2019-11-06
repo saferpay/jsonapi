@@ -148,7 +148,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Behavior": "ABORT",

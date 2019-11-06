@@ -164,7 +164,7 @@ Possible values: MASTERPASS.<br />
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -237,7 +237,7 @@ Possible values: MASTERPASS.<br />
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AddressForm">container</a>
+			<a class="type-details in" href="#Common_Models_Data_AddressForm">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -251,7 +251,7 @@ Possible values: MASTERPASS.<br />
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AddressForm">container</a>
+			<a class="type-details in" href="#Common_Models_Data_AddressForm">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -298,7 +298,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -410,7 +410,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "Id of the request"
   },
   "Token": "234uhfh78234hlasdfh8234e1234",
@@ -503,7 +503,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -642,7 +642,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Transaction": {

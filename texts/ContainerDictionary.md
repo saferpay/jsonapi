@@ -1,5 +1,373 @@
 <div class="visible-print-block" id="type-dict">
 	<h4>Container Dictionary</h4>
+			<h2>Container "Common_Models_Data_Address"</h2>
+				<table class="table" id="Common_Models_Data_Address">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>FirstName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's first name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: John</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>LastName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's last name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: Doe</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Company</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's company</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: ACME Corp.</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Gender</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's gender</div>
+	<i class="small text-muted">
+Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
+					<span>Example: COMPANY</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Street</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's street</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: Bakerstreet 32</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Zip</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's zip code</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: 8000</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>City</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's city</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: Zurich</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>CountryCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
+	<i class="small text-muted">
+Alphabetic[2..2]<br />
+					<span>Example: CH</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Email</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's email address</div>
+	<i class="small text-muted">
+					<span>Example: payer@provider.com</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>DateOfBirth</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
+	<i class="small text-muted">
+AlphaNumeric[11..11]<br />
+					<span>Example: 1990-05-31</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>LegalForm</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's legal form</div>
+	<i class="small text-muted">
+Possible values: AG, GmbH, Misc.<br />
+					<span>Example: AG</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Street2</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: Stewart House</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>CountrySubdivisionCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-2 country subdivision code</div>
+	<i class="small text-muted">
+AlphaNumeric[1..3]<br />
+					<span>Example: ZH</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Phone</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's phone number</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+					<span>Example: +41 12 345 6789</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Common_Models_Data_AddressForm"</h2>
+				<table class="table" id="Common_Models_Data_AddressForm">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Display</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specifies whether to show the address form or not.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>MandatoryFields</strong><br />
+	<span class="text-muted small">
+				string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.</div>
+	<i class="small text-muted">
+Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br />
+					<span>Example: [&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Common_Models_Data_Amount"</h2>
+				<table class="table" id="Common_Models_Data_Amount">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Value</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
+	<i class="small text-muted">
+					<span>Example: 100</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>CurrencyCode</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
+	<i class="small text-muted">
+					<span>Example: CHF</span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Common_Models_Data_Payer"</h2>
+				<table class="table" id="Common_Models_Data_Payer">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>IpAddress</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
+	<i class="small text-muted">
+					<span>Example: 111.111.111.111</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>LanguageCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<i class="small text-muted">
+					<span>Example: de</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>DeliveryAddress</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>BillingAddress</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payers billing address</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Common_Models_Data_PaymentOptions"</h2>
+				<table class="table" id="Common_Models_Data_PaymentOptions">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>PreAuth</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates the desired transaction type. When set to true the transaction is processed as a pre-authorization otherwise as a final authorization. Please note that not all payment methods support both options and the effective transaction type is determined by Saferpay.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Common_RequestHeader"</h2>
 				<table class="table" id="Common_RequestHeader">
 					<tbody>
@@ -16,8 +384,8 @@
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13<br />
-					<span>Example: 1.13</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14<br />
+					<span>Example: 1.14</span>
 	</i>
 </td>
 							</tr>
@@ -50,7 +418,7 @@ Numeric[1..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Id generated by merchant-system, for debugging-purposes. Should be unique for each individual request made, however it must not change, if a specific request is retried, due to an error. In this case, the <strong>RetryIndicator</strong> should be increased instead, to indicate a subsequent attempt.</div>
+	<div style="padding-bottom: 10px">Id generated by merchant system, for debugging purposes. Should be unique for each new request. If a request is retried due to an error, use the same request id. In this case, the <strong>RetryIndicator</strong> should be increased instead, to indicate a subsequent attempt.</div>
 	<i class="small text-muted">
 Id[1..50]<br />
 					<span>Example: 33e8af17-35c1-4165-a343-c1c86a320f3b</span>
@@ -125,8 +493,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13<br />
-					<span>Example: 1.13</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14<br />
+					<span>Example: 1.14</span>
 	</i>
 </td>
 							</tr>
@@ -265,256 +633,6 @@ Id[1..80]<br />
 	<i class="small text-muted">
 Id[1..80]<br />
 					<span>Example: kh9ngajrfe6wfu3d0c</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_Address"</h2>
-				<table class="table" id="Payment_Models_Data_Address">
-					<tbody>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>FirstName</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's first name</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: John</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>LastName</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's last name</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: Doe</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>DateOfBirth</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
-	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
-					<span>Example: 1990-05-31</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Company</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's company</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: ACME Corp.</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Gender</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's gender</div>
-	<i class="small text-muted">
-Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
-					<span>Example: COMPANY</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br />
-					<span>Example: AG</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Street</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's street</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: Bakerstreet 32</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Street2</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: Stewart House</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Zip</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's zip code</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: 8000</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>City</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's city</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: Zurich</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>CountrySubdivisionCode</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-2 country subdivision code</div>
-	<i class="small text-muted">
-AlphaNumeric[1..3]<br />
-					<span>Example: ZH</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>CountryCode</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
-	<i class="small text-muted">
-Alphabetic[2..2]<br />
-					<span>Example: CH</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Phone</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's phone number</div>
-	<i class="small text-muted">
-Utf8[1..100]<br />
-					<span>Example: +41 12 345 6789</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Email</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's email address</div>
-	<i class="small text-muted">
-					<span>Example: payer@provider.com</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_AddressForm"</h2>
-				<table class="table" id="Payment_Models_Data_AddressForm">
-					<tbody>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Display</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Specifies whether to show the address form or not.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>MandatoryFields</strong><br />
-	<span class="text-muted small">
-				string[]
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.</div>
-	<i class="small text-muted">
-Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br />
-					<span>Example: [&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</span>
 	</i>
 </td>
 							</tr>
@@ -746,45 +864,6 @@ Possible values: OK, NOT_PERFORMED.<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_Amount"</h2>
-				<table class="table" id="Payment_Models_Data_Amount">
-					<tbody>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Value</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
-	<i class="small text-muted">
-					<span>Example: 100</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>CurrencyCode</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
-	<i class="small text-muted">
-					<span>Example: CHF</span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_BancontactProcessingData"</h2>
 				<table class="table" id="Payment_Models_Data_BancontactProcessingData">
 					<tbody>
@@ -973,7 +1052,7 @@ AlphaNumeric[8..11]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1002,21 +1081,6 @@ Id[1..80]<br />
 							</tr>
 							<tr>
 									<td class="col-sm-4 text-right">
-	<strong>Description</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
-	<i class="small text-muted">
-Utf8[1..1000]<br />
-					<span>Example: Description</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
 				string
@@ -1027,6 +1091,21 @@ Utf8[1..1000]<br />
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
+	<i class="small text-muted">
+Utf8[1..1000]<br />
+					<span>Example: Description</span>
 	</i>
 </td>
 							</tr>
@@ -1353,7 +1432,7 @@ Iso885915[1..100]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1636,7 +1715,7 @@ Id[1..15]<br />
 	<strong>Fee</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1650,7 +1729,7 @@ Id[1..15]<br />
 	<strong>FeeRefund</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1711,67 +1790,6 @@ Id[1..15]<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_Payer"</h2>
-				<table class="table" id="Payment_Models_Data_Payer">
-					<tbody>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>IpAddress</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
-	<i class="small text-muted">
-					<span>Example: 111.111.111.111</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>LanguageCode</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> de-ch - Swiss German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak <br> sl - Slovenian<br> fi - Finnish <br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
-	<i class="small text-muted">
-					<span>Example: de</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>DeliveryAddress</strong><br />
-	<span class="text-muted small">
-				
-			<a class="type-details in" href="#Payment_Models_Data_Address">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>BillingAddress</strong><br />
-	<span class="text-muted small">
-				
-			<a class="type-details in" href="#Payment_Models_Data_Address">container</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information on the payers billing address</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_PayerInfo"</h2>
 				<table class="table" id="Payment_Models_Data_PayerInfo">
 					<tbody>
@@ -1808,7 +1826,7 @@ Id[1..15]<br />
 	<strong>DeliveryAddress</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Address">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1822,7 +1840,7 @@ Id[1..15]<br />
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Address">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1844,7 +1862,7 @@ Id[1..15]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1873,21 +1891,6 @@ Id[1..80]<br />
 							</tr>
 							<tr>
 									<td class="col-sm-4 text-right">
-	<strong>Description</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
-	<i class="small text-muted">
-Utf8[1..1000]<br />
-					<span>Example: Description</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
 				string
@@ -1898,6 +1901,21 @@ Utf8[1..1000]<br />
 	<i class="small text-muted">
 Utf8[1..50]<br />
 					<span>Example: Payernote</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
+	<i class="small text-muted">
+Utf8[1..1000]<br />
+					<span>Example: Description</span>
 	</i>
 </td>
 							</tr>
@@ -1921,7 +1939,7 @@ Id[1..35]<br />
 	<strong>Options</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentOptions">container</a>
+			<a class="type-details in" href="#Common_Models_Data_PaymentOptions">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2001,6 +2019,20 @@ Id[1..35]<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2102,24 +2134,6 @@ Id[1..35]<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_PaymentOptions"</h2>
-				<table class="table" id="Payment_Models_Data_PaymentOptions">
-					<tbody>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>PreAuth</strong><br />
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Used to flag the transaction as a Pre-Athorization. This type of transaction is only supported with the following Acquiring: SIX Payment Services, B+S Card Service, ConCardis, Airplus and -after an agreement- with American Express.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_PaymentPagePayment"</h2>
 				<table class="table" id="Payment_Models_Data_PaymentPagePayment">
 					<tbody>
@@ -2131,7 +2145,7 @@ Id[1..35]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2160,6 +2174,21 @@ Id[1..80]<br />
 							</tr>
 							<tr>
 									<td class="col-sm-4 text-right">
+	<strong>PayerNote</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<i class="small text-muted">
+Utf8[1..50]<br />
+					<span>Example: Payernote</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2173,21 +2202,6 @@ Id[1..80]<br />
 	<i class="small text-muted">
 Utf8[1..1000]<br />
 					<span>Example: Description of payment</span>
-	</i>
-</td>
-							</tr>
-							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>PayerNote</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
-	<i class="small text-muted">
-Utf8[1..50]<br />
-					<span>Example: Payernote</span>
 	</i>
 </td>
 							</tr>
@@ -2211,7 +2225,7 @@ Id[1..35]<br />
 	<strong>Options</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentOptions">container</a>
+			<a class="type-details in" href="#Common_Models_Data_PaymentOptions">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2282,9 +2296,9 @@ Possible values: PAYMENT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
-Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
+Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 					<span>Example: AUTHORIZED</span>
 	</i>
 </td>
@@ -2346,7 +2360,7 @@ Id[1..64]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2566,7 +2580,7 @@ Id[1..80]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2642,9 +2656,9 @@ Possible values: REFUND.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
-Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
+Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 					<span>Example: AUTHORIZED</span>
 	</i>
 </td>
@@ -2706,7 +2720,7 @@ Id[1..64]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3008,6 +3022,27 @@ Range: inclusive between 1 and 1600<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_SaferpayFields"</h2>
+				<table class="table" id="Payment_Models_Data_SaferpayFields">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Token</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Saferpay Fields token</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_Styling"</h2>
 				<table class="table" id="Payment_Models_Data_Styling">
 					<tbody>
@@ -3155,9 +3190,9 @@ Possible values: PAYMENT, REFUND.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
-Possible values: AUTHORIZED, CAPTURED, PENDING.<br />
+Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 					<span>Example: AUTHORIZED</span>
 	</i>
 </td>
@@ -3219,7 +3254,7 @@ Id[1..64]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3475,6 +3510,9 @@ Range: inclusive between 1 and 12<br />
 									<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 				
 			<a class="type-details in" href="#Payment_Models_Data_UpdateCreditCard">container</a>
 	</span>
@@ -3563,6 +3601,60 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional. Options which only apply to Alipay.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_Data_Payment"</h2>
+				<table class="table" id="RestApi_Models_Data_Payment">
+					<tbody>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+	</i>
+</td>
+							</tr>
+							<tr>
+									<td class="col-sm-4 text-right">
+	<strong>Options</strong><br />
+	<span class="text-muted small">
+				
+			<a class="type-details in" href="#Common_Models_Data_PaymentOptions">container</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specific payment options</div>
 	<i class="small text-muted">
 			</i>
 </td>

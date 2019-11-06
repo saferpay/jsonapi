@@ -29,7 +29,7 @@ This chapter will give you a simple overview about the general transaction flow,
 This method may be used to start a transaction which may involve either DCC and / or 3d-secure.
 
 <div class="danger">
-	<span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
+<span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
 </div>
 
@@ -136,7 +136,7 @@ Numeric[8..8]<br />
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -229,7 +229,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -371,7 +371,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -501,7 +501,7 @@ Numeric[3..4]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -641,7 +641,7 @@ Numeric[3..4]<br />
 <pre class="prettyprint">
 {
                "ResponseHeader": {
-                 "SpecVersion": "1.10",
+                 "SpecVersion": "[current Spec-Version]",
                  "RequestId": "[your request id]",
                },
                "Transaction": {
@@ -780,7 +780,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -889,7 +889,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
               "ResponseHeader": {
-                "SpecVersion": "1.10",
+                "SpecVersion": "[current Spec-Version]",
                 "RequestId": "[your request id]",
               },
               "PaymentMeans": {
@@ -983,7 +983,7 @@ Id[1..50]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1002,7 +1002,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1055,7 +1055,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   }
 }
@@ -1185,7 +1185,7 @@ Numeric[8..8]<br />
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1204,7 +1204,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1332,7 +1332,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
                "ResponseHeader": {
-                 "SpecVersion": "1.10",
+                 "SpecVersion": "[current Spec-Version]",
                  "RequestId": "[your request id]",
                },
                "Transaction": {
@@ -1489,7 +1489,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1611,7 +1611,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
                "ResponseHeader": {
-                 "SpecVersion": "1.10",
+                 "SpecVersion": "[current Spec-Version]",
                  "RequestId": "[your request id]",
                },
                "Transaction": {
@@ -1720,7 +1720,7 @@ This method may be used to finalize previously authorized transactions and refun
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1781,7 +1781,7 @@ This method may be used to finalize previously authorized transactions and refun
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -1895,7 +1895,7 @@ Possible values: PENDING, CAPTURED.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "CaptureId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -1984,7 +1984,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Amount">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2052,7 +2052,7 @@ Id[1..80]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -2165,7 +2165,7 @@ Possible values: PENDING, CAPTURED.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[unique request identifier]"
   },
   "CaptureId": "723n4MAjMdhjSAhAKEUdA8jtl9jb_c",
@@ -2181,8 +2181,9 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 ## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture
+
 <div class="warning">
-	<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
+<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
 </div>
 This method is only supported for pending capture transactions (only used for paydirekt at the moment)
@@ -2248,7 +2249,7 @@ This method is only supported for pending capture transactions (only used for pa
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -2366,7 +2367,7 @@ Possible values: PENDING, CAPTURED.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -2446,7 +2447,7 @@ This method may be used to finalize a transaction having one or more partial cap
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -2497,7 +2498,7 @@ This method may be used to finalize a transaction having one or more partial cap
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[unique request identifier]"
   }
 }
@@ -2605,7 +2606,7 @@ This method may be called to refund a previous transaction.
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -2710,7 +2711,7 @@ This method may be called to refund a previous transaction.
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -2755,7 +2756,7 @@ This method may be called to refund a previous transaction.
 This method may be used to inquire the status and further information of pending refunds.
 
 <div class="warning">
-	<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
+<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
 </div>
 
@@ -2820,7 +2821,7 @@ This method may be used to inquire the status and further information of pending
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -2938,7 +2939,7 @@ Possible values: PENDING, CAPTURED.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -3058,7 +3059,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -3166,7 +3167,7 @@ Numeric[8..8]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -3271,7 +3272,7 @@ This method may be used to cancel previously authorized transactions and refunds
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
@@ -3370,7 +3371,7 @@ This method may be used to cancel previously authorized transactions and refunds
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
@@ -3484,7 +3485,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3548,7 +3549,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -3656,7 +3657,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Token": "234uhfh78234hlasdfh8234e",
@@ -3740,7 +3741,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0
@@ -3837,7 +3838,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "ResponseHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
   "Transaction": {
@@ -3882,8 +3883,8 @@ Id[1..50]<br />
 
 This method can be used to get the details of a transaction that has been authorized successfully.
 <div class="info">
-	<span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Fair use:</strong> This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
+<span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
+<p><strong>Fair use:</strong></p><p>This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
 </div>
 
 --->>>
@@ -4235,7 +4236,7 @@ Possible values: BANCONTACT.<br />
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Payer">container</a>
+			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4375,7 +4376,7 @@ Possible values: BANCONTACT.<br />
 <pre class="prettyprint">
 {
                "ResponseHeader": {
-                 "SpecVersion": "1.10",
+                 "SpecVersion": "[current Spec-Version]",
                  "RequestId": "[your request id]"
                },
                "Token": "234uhfh78234hlasdfh8234e",
@@ -4460,7 +4461,7 @@ Id[1..50]<br />
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "1.10",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[unique request identifier]",
     "RetryIndicator": 0

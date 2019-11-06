@@ -172,7 +172,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <pre class="prettyprint">
 {
   "RequestHeader": {
-    "SpecVersion": "[current spec version]",
+    "SpecVersion": "[current Spec-Version]",
     "CustomerId": "[your customer id]",
     "RequestId": "[your request id]",
     "RetryIndicator": 0
@@ -732,7 +732,7 @@ This method may be used to insert an alias directly with card-data collected by 
 
 ## <a name="Payment_v1_Alias_Update"></a>Alias Update
 
-This method may be used to update an alias' lifetime and / or its creditcard expiry date
+This method may be used to update an alias' lifetime and / or its credit card expiry date
 
 --->>>
 
@@ -772,6 +772,9 @@ This method may be used to update an alias' lifetime and / or its creditcard exp
 						<td class="col-sm-4 text-right">
 	<strong>UpdateAlias</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 				
 			<a class="type-details in" href="#Payment_Models_Data_UpdateAlias">container</a>
 	</span>
@@ -786,6 +789,9 @@ This method may be used to update an alias' lifetime and / or its creditcard exp
 						<td class="col-sm-4 text-right">
 	<strong>UpdatePaymentMeans</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 				
 			<a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">container</a>
 	</span>
@@ -805,22 +811,23 @@ This method may be used to update an alias' lifetime and / or its creditcard exp
 <p>Example:</p>
 <pre class="prettyprint">
 {
-              "RequestHeader": {
-                "SpecVersion": "[current Spec-Version]",
-                "CustomerId": "[your customer id]",
-                "RequestId": "[your request id]",
-                "RetryIndicator": 0
-              },
-              "AliasUpdate":{
-                 "Id":"[your alias id]",
-                 "LifeTime":"[your lifetime]"
-              },
-              "UpdatePaymentMeans":{
-                "Card":{
-                  "ExpMonth":"[your expiry month]",
-                  "ExpYear":"[your expiry year]"
-              }
-            }
+  "RequestHeader": {
+    "SpecVersion": "[current Spec-Version]",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[your request id]",
+    "RetryIndicator": 0
+  },
+  "AliasUpdate": {
+    "Id": "[your alias id]",
+    "LifeTime": "[your lifetime]"
+  },
+  "UpdatePaymentMeans": {
+    "Card": {
+      "ExpMonth": "[your expiry month]",
+      "ExpYear": "[your expiry year]"
+    }
+  }
+}
 </pre>
 
 <<<---
