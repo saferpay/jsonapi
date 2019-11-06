@@ -31,11 +31,11 @@
     "Subsites": [
       {
         "Source": "texts/ErrorResponse.md",
-        "Target": "index.html"
+        "target": "index.html"
       },
       {
         "Source": "texts/06_ErrorHandling_TechnicalDetails.md",
-        "Target": "index.html"
+        "target": "index.html"
       }
     ]
   },
@@ -241,8 +241,20 @@
     ]
   },
   {
+    "Title": "Secure PayGate API",
+    "Source": "texts/ChapterRestApi.md",
+    "Target": "index.html#ChapterRestApi",
+    "Subsites": [
+      {
+        "Title": "SecurePayGateOffer CreateOffer",
+        "Source": "texts/ChapterRestApi.md",
+        "Target": "index.html#rest_customers_{customerId}_terminals_{terminalId}_spg-offers"
+      }
+    ]
+  },
+  {
     "Source": "texts/ContainerDictionary.md",
-    "Target": "index.html"
+    "target": "index.html"
   },
   {
     "Title": "Changelog",
