@@ -16,6 +16,6 @@ script: |
     # commit + push changes
     #
     git add -v --all .
-    git -c user.name='Saferpay-DevOps' -c user.email='travis' commit -m "Updated Github pages"
-    git push -f -q https://Saferpay-DevOps:${GITHUB_API_KEY}@github.com/saferpay/jsonapi.git gh-pages || travis_terminate 1
+    git -c user.name='saferpaybot' -c user.email='saferpaybot@six-group.com' commit -m 'Update Github Pages'
+    git push -f -q "https://saferpaybot:${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/saferpay/jsonapi.git" gh-pages || travis_terminate 1
     cd "$TRAVIS_BUILD_DIR"
