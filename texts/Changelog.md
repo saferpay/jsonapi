@@ -18,7 +18,7 @@
 - introduced version 1.14
 - added value `1.14` for _SpecVersion_
 - added new [Saferpay Secure PayGate API](index.html#ChapterRestApi) for automated creation of Saferpay Secure PayGate offers
-- added container _SaferpayFields_ to container _PaymentMeans_ in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
+- added container _SaferpayFields_ to container _PaymentMeans_ in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) requests
 
 
 ## <a name="v1.13.0.0.20190917"></a> Version 1.13 (released 2019-09-17)
