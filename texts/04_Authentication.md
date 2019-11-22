@@ -19,7 +19,7 @@ besides creating a new user / password pair from your Backoffice account.
 The password must meet some complexity requirements. We suggest using / generating
 dedicated passwords with a length of 16 alphanumeric characters (up to 32 characters).
 
-<img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/API_Basic_Auth.PNG" alt="Basic Authentication">
+<img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/BasicAuthScreen.PNG" alt="Basic Authentication">
 
 --->>>
 
