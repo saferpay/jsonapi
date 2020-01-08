@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.15](#v1.15.0.0.20200121)
 - [Version 1.14](#v1.14.0.0.20191119)
 - [Version 1.13](#v1.13.0.0.20190917)
 - [Version 1.12](#v1.12.0.0.20190716)
@@ -12,6 +13,14 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.15.0.0.20200121"></a> Version 1.15 (released 2020-01-21)
+- available on Sandbox: 2020-01-07
+- introduced version 1.15
+- added value `1.15` for _SpecVersion_
+- added container _Ideal_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of an iDEAL issuer
+- added value `APPLEPAY` for _Wallets_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of Apple Pay
+
 
 ## <a name="v1.14.0.0.20191119"></a> Version 1.14 (released 2019-11-19)
 - available on Sandbox: 2019-11-05
