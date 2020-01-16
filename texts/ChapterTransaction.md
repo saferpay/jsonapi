@@ -897,7 +897,7 @@ Id[1..50]<br />
                   "PaymentMethod": "VISA",
                   "Name": "VISA Saferpay Test"
                 },
-                DisplayText": "9123 45xx xxxx 1234",
+                "DisplayText": "9123 45xx xxxx 1234",
                 "Card":{
                   "MaskedNumber": "912345xxxxxx1234",
                   "ExpYear": 2015,
@@ -1354,7 +1354,7 @@ Numeric[8..8]<br />
                    "PaymentMethod": "VISA",
                    "Name": "VISA Saferpay Test"
                  },
-                 DisplayText": "9123 45xx xxxx 1234",
+                 "DisplayText": "9123 45xx xxxx 1234",
                  "Card":{
                    "MaskedNumber": "912345xxxxxx1234",
                    "ExpYear": 2015,
@@ -1633,7 +1633,7 @@ Numeric[8..8]<br />
                    "PaymentMethod": "VISA",
                    "Name": "VISA Saferpay Test"
                  },
-                 DisplayText": "9123 45xx xxxx 1234",
+                 "DisplayText": "9123 45xx xxxx 1234",
                  "Card":{
                    "MaskedNumber": "912345xxxxxx1234",
                    "ExpYear": 2015,
