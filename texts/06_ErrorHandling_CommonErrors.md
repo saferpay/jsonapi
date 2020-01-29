@@ -1,7 +1,7 @@
 ## Common Error Messages
 
 + **AUTHENTICATION_FAILED - "Invalid credentials"**: In this case either the CustomerId, JSON API Password, JSON API User, or a combination of all three is not correct! You have to make sure, that all three things belong to the same Saferpay account!
---->>>
+
 <p>Example:</p>
 <pre class="prettyprint">
 {
@@ -17,10 +17,10 @@
   ]
 }
 </pre>
-<<<---
 
+<hr />
 + **NO_CONTRACT**: In this case, you are either asking for a payment method, that is not activated on your account, or the requested currency is not set up for you. 
---->>>
+
 <p>Example:</p>
 <pre class="prettyprint">
 {
@@ -36,8 +36,8 @@
   "ProcessorMessage": ""
 }
 </pre>
-<<<---
 
+<hr />
 + **PERMISSION_DENIED - "Invalid License"**: Should you get this error, you are trying to acces Saferpay Business functions, without the corresponding contract. <a href="https://saferpay.github.io/sndbx/Interfaces.html">More on that here</a>.
 --->>>
 <p>Example:</p>
@@ -55,9 +55,8 @@
  ]
 }
 </pre>
-<<<---
 
-
+<hr />
 + **TRANSACTION_IN_WRONG_STATE**: This means, that there are steps in the transaction flow you have to execute, before the currently executed one, for example missing a redirect, or initializing and then authorizing the transaction, without providing the necessary means of payment. Please see our <a href="https://saferpay.github.io/sndbx/index.html">Integration Guide</a> for more information about the available flows.
 <p>Example:</p>
 <pre class="prettyprint">
@@ -71,4 +70,3 @@
   "ErrorMessage": "Invalid action"
 }
 </pre>
-<<<---
