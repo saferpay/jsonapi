@@ -34,6 +34,10 @@
         "target": "index.html"
       },
       {
+        "Source": "texts/06_ErrorHandling_CommonErrors.md",
+        "target": "index.html"
+      },
+      {
         "Source": "texts/06_ErrorHandling_TechnicalDetails.md",
         "target": "index.html"
       }
