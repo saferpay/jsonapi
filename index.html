@@ -708,7 +708,63 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
     &quot;PaymentMeans.BankAccount.IBAN: The field IBAN is invalid.&quot;
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section><h2>Common Error Messages</h2><div class="row"><div class="col-md-6"><ul>
+<li><strong>AUTHENTICATION_FAILED - &quot;Invalid credentials&quot;</strong>: In this case either the CustomerId, JSON API Password, JSON API User, or a combination of all three is not correct! You have to make sure, that all three things belong to the same Saferpay account!
+---&gt;&gt;&gt;</li>
+</ul><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Behavior&quot;: &quot;ABORT&quot;,
+  &quot;ErrorName&quot;: &quot;AUTHENTICATION_FAILED&quot;,
+  &quot;ErrorMessage&quot;: &quot;Unable to authenticate request&quot;,
+  &quot;ErrorDetail&quot;: [
+    &quot;Invalid credentials&quot;
+  ]
+}
+</pre><ul>
+<li><strong>NO_CONTRACT</strong>: In this case, you are either asking for a payment method, that is not activated on your account, or the requested currency is not set up for you.
+---&gt;&gt;&gt;</li>
+</ul><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Behavior&quot;: &quot;ABORT&quot;,
+  &quot;ErrorName&quot;: &quot;NO_CONTRACT&quot;,
+  &quot;ErrorMessage&quot;: &quot;No contract for the combination of terminal, means of payment/service provider and currency&quot;,
+  &quot;TransactionId&quot;: &quot;bAvfOzbpIlI5rAzG74IEA0x3j47b&quot;,
+  &quot;ProcessorResult&quot;: &quot;&quot;,
+  &quot;ProcessorMessage&quot;: &quot;&quot;
+}
+</pre><ul>
+<li><strong>PERMISSION_DENIED - &quot;Invalid License&quot;</strong>: Should you get this error, you are trying to acces Saferpay Business functions, without the corresponding contract. <a href="https://saferpay.github.io/sndbx/Interfaces.html">More on that here</a>.
+---&gt;&gt;&gt;</li>
+</ul><p>Example:</p><pre class="prettyprint">{
+ &quot;ResponseHeader&quot;: {
+   &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+   &quot;RequestId&quot;: &quot;[your request id]&quot;
+ },
+ &quot;Behavior&quot;: &quot;ABORT&quot;,
+ &quot;ErrorName&quot;: &quot;PERMISSION_DENIED&quot;,
+ &quot;ErrorMessage&quot;: &quot;Permission denied&quot;,
+ &quot;ErrorDetail&quot;: [
+   &quot;Invalid license&quot;
+ ]
+}
+</pre><ul>
+<li><strong>TRANSACTION_IN_WRONG_STATE</strong>: This means, that there are steps in the transaction flow you have to execute, before the currently executed one, for example missing a redirect, or initializing and then authorizing the transaction, without providing the necessary means of payment. Please see our <a href="https://saferpay.github.io/sndbx/index.html">Integration Guide</a> for more information about the available flows.</li>
+</ul><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Behavior&quot;: &quot;ABORT&quot;,
+  &quot;ErrorName&quot;: &quot;TRANSACTION_IN_WRONG_STATE&quot;,
+  &quot;ErrorMessage&quot;: &quot;Invalid action&quot;
+}
+</pre></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
   <tbody><tr>
     <td class="text-right col-sm-3">ABORT</td>
     <td class="col-sm-9">Do not retry this request. It will never succeed.</td>
