@@ -49,14 +49,14 @@ This method can be used to start a transaction with the Payment Page which may i
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -66,7 +66,7 @@ This method can be used to start a transaction with the Payment Page which may i
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
 				string
@@ -76,12 +76,12 @@ This method can be used to start a transaction with the Payment Page which may i
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br />
-					<span>Example: name of your payment page config (case-insensitive)</span>
+				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -94,19 +94,19 @@ Id[1..20]<br />
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br />
-					<span>Example: 12345678</span>
+				    <span>Example: <code>12345678</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentPagePayment">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentPagePayment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -116,26 +116,26 @@ Numeric[8..8]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
 Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
-					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -145,26 +145,40 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
+	<strong>Authentication</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationInteractive">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Strong Customer Authentication (exemptions, ...)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page and to go directly to the given wallet (if exactly one wallet is filled and PaymentMethods is not set).</div>
 	<i class="small text-muted">
-Possible values: MASTERPASS, APPLEPAY<br />
-					<span>Example: [&quot;MASTERPASS&quot;]</span>
+Possible values: MASTERPASS, APPLEPAY.<br />
+				    <span>Example: <code>[&quot;MASTERPASS&quot;]</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -174,11 +188,11 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -188,14 +202,14 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -205,11 +219,11 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Notification">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_Notification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -219,11 +233,11 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Styling">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -233,11 +247,11 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_AddressForm">container</a>
+				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -247,11 +261,11 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_AddressForm">container</a>
+				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -261,11 +275,11 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -275,14 +289,14 @@ Possible values: MASTERPASS, APPLEPAY<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
 				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</trong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>ThreeDs</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: IF_ALLOWED_BY_SCHEME (empty)</div>
+	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>ThreeDs</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: IF_ALLOWED_BY_SCHEME (empty)</div>
 	<i class="small text-muted">
 Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 			</i>
@@ -333,14 +347,14 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -350,7 +364,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -362,12 +376,12 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token for later referencing</div>
 	<i class="small text-muted">
-					<span>Example: 234uhfh78234hlasdfh8234e1234</span>
+				    <span>Example: <code>234uhfh78234hlasdfh8234e1234</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -379,12 +393,12 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
 	<i class="small text-muted">
-					<span>Example: 2011-07-14T19:43:37+01:00</span>
+				    <span>Example: <code>2011-07-14T19:43:37+01:00</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -396,7 +410,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Redirecturl for the payment page transaction. Simply add this to a "Pay Now"-button or do an automatic redirect.</div>
 	<i class="small text-muted">
-					<span>Example: https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/z2p7a0plpgsd41m97wjvm5jza</span>
+				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/z2p7a0plpgsd41m97wjvm5jza</code></span>
 	</i>
 </td>
 				</tr>
@@ -459,14 +473,14 @@ Call this function to safely check the status of the transaction from your serve
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -476,7 +490,7 @@ Call this function to safely check the status of the transaction from your serve
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -489,7 +503,7 @@ Call this function to safely check the status of the transaction from your serve
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br />
-					<span>Example: 234uhfh78234hlasdfh8234e</span>
+				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
 				</tr>
@@ -526,14 +540,14 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -543,14 +557,14 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -560,14 +574,14 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -577,11 +591,11 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_PayerInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -591,11 +605,11 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -605,11 +619,11 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -619,15 +633,29 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_DccInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>MciInstallments</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_MciInstallmentsOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">MCI Installment options, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>

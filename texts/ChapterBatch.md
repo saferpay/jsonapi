@@ -27,14 +27,14 @@ This chapter covers the Batch Close via API
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -44,7 +44,7 @@ This chapter covers the Batch Close via API
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -57,7 +57,7 @@ This chapter covers the Batch Close via API
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
 	<i class="small text-muted">
 Numeric[8..8]<br />
-					<span>Example: 12341234</span>
+				    <span>Example: <code>12341234</code></span>
 	</i>
 </td>
 				</tr>
@@ -94,14 +94,14 @@ Numeric[8..8]<br />
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

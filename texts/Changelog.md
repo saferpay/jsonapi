@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.16](#v1.16.0.0.20200317)
 - [Version 1.15](#v1.15.0.0.20200121)
 - [Version 1.14](#v1.14.0.0.20191119)
 - [Version 1.13](#v1.13.0.0.20190917)
@@ -13,6 +14,11 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)
+- available on Sandbox: 2020-03-02
+- introduced version 1.16
+- Coming soon
 
 ## <a name="v1.15.0.0.20200121"></a> Version 1.15 (released 2020-01-21)
 - available on Sandbox: 2020-01-07

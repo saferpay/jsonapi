@@ -4,7 +4,7 @@
 				<table class="table" id="Common_Models_Data_Address">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br />
 	<span class="text-muted small">
 				string
@@ -14,12 +14,12 @@
 	<div style="padding-bottom: 10px">The payer's first name</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: John</span>
+				    <span>Example: <code>John</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LastName</strong><br />
 	<span class="text-muted small">
 				string
@@ -29,12 +29,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's last name</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: Doe</span>
+				    <span>Example: <code>Doe</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Company</strong><br />
 	<span class="text-muted small">
 				string
@@ -44,12 +44,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's company</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: ACME Corp.</span>
+				    <span>Example: <code>ACME Corp.</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Gender</strong><br />
 	<span class="text-muted small">
 				string
@@ -59,12 +59,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's gender</div>
 	<i class="small text-muted">
 Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
-					<span>Example: COMPANY</span>
+				    <span>Example: <code>COMPANY</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Street</strong><br />
 	<span class="text-muted small">
 				string
@@ -74,12 +74,12 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 	<div style="padding-bottom: 10px">The payer's street</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: Bakerstreet 32</span>
+				    <span>Example: <code>Bakerstreet 32</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Zip</strong><br />
 	<span class="text-muted small">
 				string
@@ -89,12 +89,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's zip code</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: 8000</span>
+				    <span>Example: <code>8000</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>City</strong><br />
 	<span class="text-muted small">
 				string
@@ -104,12 +104,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's city</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: Zurich</span>
+				    <span>Example: <code>Zurich</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -119,12 +119,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br />
-					<span>Example: CH</span>
+				    <span>Example: <code>CH</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
 				string
@@ -133,12 +133,12 @@ Alphabetic[2..2]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's email address</div>
 	<i class="small text-muted">
-					<span>Example: payer@provider.com</span>
+				    <span>Example: <code>payer@provider.com</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br />
 	<span class="text-muted small">
 				string
@@ -148,12 +148,12 @@ Alphabetic[2..2]<br />
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
 AlphaNumeric[11..11]<br />
-					<span>Example: 1990-05-31</span>
+				    <span>Example: <code>1990-05-31</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LegalForm</strong><br />
 	<span class="text-muted small">
 				string
@@ -163,12 +163,12 @@ AlphaNumeric[11..11]<br />
 	<div style="padding-bottom: 10px">The payer's legal form</div>
 	<i class="small text-muted">
 Possible values: AG, GmbH, Misc.<br />
-					<span>Example: AG</span>
+				    <span>Example: <code>AG</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
 				string
@@ -178,12 +178,12 @@ Possible values: AG, GmbH, Misc.<br />
 	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: Stewart House</span>
+				    <span>Example: <code>Stewart House</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -193,12 +193,12 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-2 country subdivision code</div>
 	<i class="small text-muted">
 AlphaNumeric[1..3]<br />
-					<span>Example: ZH</span>
+				    <span>Example: <code>ZH</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Phone</strong><br />
 	<span class="text-muted small">
 				string
@@ -208,7 +208,7 @@ AlphaNumeric[1..3]<br />
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-					<span>Example: +41 12 345 6789</span>
+				    <span>Example: <code>+41 12 345 6789</code></span>
 	</i>
 </td>
 							</tr>
@@ -218,7 +218,7 @@ Utf8[1..100]<br />
 				<table class="table" id="Common_Models_Data_AddressForm">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Display</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -234,17 +234,17 @@ Utf8[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.</div>
 	<i class="small text-muted">
 Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br />
-					<span>Example: [&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</span>
+				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
 	</i>
 </td>
 							</tr>
@@ -254,7 +254,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 				<table class="table" id="Common_Models_Data_Amount">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Value</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -266,12 +266,12 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
 	<i class="small text-muted">
-					<span>Example: 100</span>
+				    <span>Example: <code>100</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CurrencyCode</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -283,7 +283,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
 	<i class="small text-muted">
-					<span>Example: CHF</span>
+				    <span>Example: <code>CHF</code></span>
 	</i>
 </td>
 							</tr>
@@ -293,7 +293,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 				<table class="table" id="Common_Models_Data_Payer">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
 	<span class="text-muted small">
 				string
@@ -302,30 +302,30 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
 	<i class="small text-muted">
-					<span>Example: 111.111.111.111</span>
+				    <span>Example: <code>111.111.111.111</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
 				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> de-CH - Swiss German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> de-ch - Swiss German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
-					<span>Example: de</span>
+				    <span>Example: <code>de</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -335,11 +335,11 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -354,7 +354,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 				<table class="table" id="Common_Models_Data_PaymentOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PreAuth</strong><br />
 	<span class="text-muted small">
 				boolean
@@ -372,7 +372,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 				<table class="table" id="Common_RequestHeader">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SpecVersion</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -384,13 +384,13 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15<br />
-					<span>Example: 1.15</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16<br />
+				    <span>Example: <code>1.16</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CustomerId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -403,12 +403,12 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 	<div style="padding-bottom: 10px">Saferpay customer id. Part of the Saferpay AccountID, which has the following format: 123123-12345678. The first Value is your CustomerID.</div>
 	<i class="small text-muted">
 Numeric[1..8]<br />
-					<span>Example: 123123</span>
+				    <span>Example: <code>123123</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>RequestId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -421,12 +421,12 @@ Numeric[1..8]<br />
 	<div style="padding-bottom: 10px">Id generated by merchant system, for debugging purposes. Should be unique for each new request. If a request is retried due to an error, use the same request id. In this case, the <strong>RetryIndicator</strong> should be increased instead, to indicate a subsequent attempt.</div>
 	<i class="small text-muted">
 Id[1..50]<br />
-					<span>Example: 33e8af17-35c1-4165-a343-c1c86a320f3b</span>
+				    <span>Example: <code>33e8af17-35c1-4165-a343-c1c86a320f3b</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>RetryIndicator</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -439,16 +439,16 @@ Id[1..50]<br />
 	<div style="padding-bottom: 10px">0 if this specific request is attempted for the first time, >=1 if it is a retry.</div>
 	<i class="small text-muted">
 Range: inclusive between 0 and 9<br />
-					<span>Example: 0</span>
+				    <span>Example: <code>0</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ClientInfo</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_ClientInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_ClientInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -463,7 +463,7 @@ Range: inclusive between 0 and 9<br />
 				<table class="table" id="Common_ResponseHeader">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>RequestId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -476,12 +476,12 @@ Range: inclusive between 0 and 9<br />
 	<div style="padding-bottom: 10px">RequestId of the original request header</div>
 	<i class="small text-muted">
 Id[1..50]<br />
-					<span>Example: 33e8af17-35c1-4165-a343-c1c86a320f3b</span>
+				    <span>Example: <code>33e8af17-35c1-4165-a343-c1c86a320f3b</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SpecVersion</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -493,8 +493,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15<br />
-					<span>Example: 1.15</span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16<br />
+				    <span>Example: <code>1.16</code></span>
 	</i>
 </td>
 							</tr>
@@ -504,7 +504,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 				<table class="table" id="Payment_Models_AlipayOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LocalWallet</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -517,7 +517,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 	<div style="padding-bottom: 10px">Preselect the Alipay local wallet. May only be used in conjunction with special Alipay integrations.</div>
 	<i class="small text-muted">
 Iso885915[1..64]<br />
-					<span>Example: &quot;TNG&quot;</span>
+				    <span>Example: <code>&quot;TNG&quot;</code></span>
 	</i>
 </td>
 							</tr>
@@ -527,7 +527,7 @@ Iso885915[1..64]<br />
 				<table class="table" id="Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AppDefaultRedirectUrl</strong><br />
 	<span class="text-muted small">
 				URI
@@ -540,7 +540,7 @@ Iso885915[1..64]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AppCompletionRedirectUrl</strong><br />
 	<span class="text-muted small">
 				URI
@@ -558,11 +558,11 @@ Iso885915[1..64]<br />
 				<table class="table" id="Payment_Models_AlternativePayment_PaymentMethodOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Bancontact</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -577,7 +577,7 @@ Iso885915[1..64]<br />
 				<table class="table" id="Payment_Models_CaptureReference">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
 				string
@@ -587,12 +587,12 @@ Iso885915[1..64]<br />
 	<div style="padding-bottom: 10px">Id of the referenced capture.</div>
 	<i class="small text-muted">
 Id[1..64]<br />
-					<span>Example: jCUC8IAQ1OCptA5I8jpzAMxC5nWA_c</span>
+				    <span>Example: <code>jCUC8IAQ1OCptA5I8jpzAMxC5nWA_c</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 				string
@@ -602,12 +602,12 @@ Id[1..64]<br />
 	<div style="padding-bottom: 10px">Id of the referenced transaction. This should only be used if you don't have the CaptureId of the referenced Capture (probably, because it was performed with an older SpecVersion)</div>
 	<i class="small text-muted">
 AlphaNumeric[1..64]<br />
-					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+				    <span>Example: <code>723n4MAjMdhjSAhAKEUdA8jtl9jb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -617,12 +617,12 @@ AlphaNumeric[1..64]<br />
 	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderPartId</strong><br />
 	<span class="text-muted small">
 				string
@@ -632,7 +632,7 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">OrderPartId of the referenced capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: kh9ngajrfe6wfu3d0c</span>
+				    <span>Example: <code>kh9ngajrfe6wfu3d0c</code></span>
 	</i>
 </td>
 							</tr>
@@ -642,7 +642,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_Alias">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -655,12 +655,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Id / name of the alias. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
-					<span>Example: alias35nfd9mkzfw0x57iwx</span>
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -670,18 +670,18 @@ Id[1..40]<br />
 	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable (if the alias referenced is a card).</div>
 	<i class="small text-muted">
 Numeric[3..4]<br />
-					<span>Example: 123</span>
+				    <span>Example: <code>123</code></span>
 	</i>
 </td>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_AliasInfo"</h2>
-				<table class="table" id="Payment_Models_Data_AliasInfo">
+			<h2>Container "Payment_Models_Data_AliasAuthenticationResult"</h2>
+				<table class="table" id="Payment_Models_Data_AliasAuthenticationResult">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Id</strong><br />
+								<td class="col-sm-4 text-right">
+	<strong>Result</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
@@ -690,36 +690,89 @@ Numeric[3..4]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Id / name of the alias</div>
+	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
 	<i class="small text-muted">
-					<span>Example: alias35nfd9mkzfw0x57iwx</span>
-	</i>
+Possible values: OK, NOT_SUPPORTED.<br />
+			</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
-	<strong>Lifetime</strong><br />
+								<td class="col-sm-4 text-right">
+	<strong>Message</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
+				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days.</div>
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
 	<i class="small text-muted">
-					<span>Example: 1000</span>
+				    <span>Example: <code>Card holder authentication with 3DSv2 successful.</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Xid</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Transaction Id, given by the MPI. References the 3D Secure version 2 process.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>1ef5b3db-3b97-47df-8272-320d0bd18ab5</code></span>
 	</i>
 </td>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_AliasInsertCheck"</h2>
-				<table class="table" id="Payment_Models_Data_AliasInsertCheck">
+			<h2>Container "Payment_Models_Data_AliasAuthenticationResultBase"</h2>
+				<table class="table" id="Payment_Models_Data_AliasAuthenticationResultBase">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
+	<strong>Result</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
+	<i class="small text-muted">
+Possible values: OK, NOT_SUPPORTED.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Message</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>Card holder authentication with 3DSv2 successful.</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasDirectInsertCheck"</h2>
+				<table class="table" id="Payment_Models_Data_AliasDirectInsertCheck">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -732,12 +785,12 @@ Numeric[3..4]<br />
 	<div style="padding-bottom: 10px">Type of check to perform.</div>
 	<i class="small text-muted">
 Possible values: ONLINE.<br />
-					<span>Example: ONLINE</span>
+				    <span>Example: <code>ONLINE</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -750,7 +803,87 @@ Possible values: ONLINE.<br />
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id to be used for checking.</div>
 	<i class="small text-muted">
 Numeric[8..8]<br />
-					<span>Example: 12341234</span>
+				    <span>Example: <code>12341234</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasInfo"</h2>
+				<table class="table" id="Payment_Models_Data_AliasInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id / name of the alias</div>
+	<i class="small text-muted">
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Lifetime</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>1000</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasInsertCheck"</h2>
+				<table class="table" id="Payment_Models_Data_AliasInsertCheck">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of check to perform.</div>
+	<i class="small text-muted">
+Possible values: ONLINE, ONLINE_STRONG.<br />
+				    <span>Example: <code>ONLINE</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Saferpay Terminal-Id to be used for checking.</div>
+	<i class="small text-muted">
+Numeric[8..8]<br />
+				    <span>Example: <code>12341234</code></span>
 	</i>
 </td>
 							</tr>
@@ -760,7 +893,7 @@ Numeric[8..8]<br />
 				<table class="table" id="Payment_Models_Data_AliasInsertCheckResult">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Result</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -770,14 +903,14 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The result of the online check.</div>
+	<div style="padding-bottom: 10px">The result of the card check.</div>
 	<i class="small text-muted">
-Possible values: OK, NOT_PERFORMED.<br />
+Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 			</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Message</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -789,8 +922,22 @@ Possible values: OK, NOT_PERFORMED.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
 	<i class="small text-muted">
-					<span>Example: Online card check was successful.</span>
+				    <span>Example: <code>Online card check was successful.</code></span>
 	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Authentication</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasAuthenticationResult">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">More details about the card holder authentication.</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -799,21 +946,21 @@ Possible values: OK, NOT_PERFORMED.<br />
 				<table class="table" id="Payment_Models_Data_AlternativePaymentNotification">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
-					<span>Example: [&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</span>
+				    <span>Example: <code>[&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PayerEmail</strong><br />
 	<span class="text-muted small">
 				string
@@ -822,12 +969,12 @@ Possible values: OK, NOT_PERFORMED.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
 	<i class="small text-muted">
-					<span>Example: payer@saferpay.com</span>
+				    <span>Example: <code>payer@saferpay.com</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>StateNotificationUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -839,7 +986,7 @@ Possible values: OK, NOT_PERFORMED.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/notify</span>
+				    <span>Example: <code>https://merchanthost/notify</code></span>
 	</i>
 </td>
 							</tr>
@@ -849,11 +996,11 @@ Possible values: OK, NOT_PERFORMED.<br />
 				<table class="table" id="Payment_Models_Data_AlternativePaymentProcessingData">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Bancontact</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_BancontactProcessingData">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_BancontactProcessingData">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -868,20 +1015,20 @@ Possible values: OK, NOT_PERFORMED.<br />
 				<table class="table" id="Payment_Models_Data_BancontactProcessingData">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>QrCodeData</strong><br />
 	<span class="text-muted small">
 				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Data which should be integrated into a QR code</div>
+	<div style="padding-bottom: 10px">Data which should be integrated into a QR code. In order to make the scanning as easy as possible,<br> the recommended format of QR code encoding is version 3, with lower error rate correction level<br> in character mode, resulting with a 29 x 29 pixels image maximum.</div>
 	<i class="small text-muted">
 			</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IntentUrl</strong><br />
 	<span class="text-muted small">
 				string
@@ -899,7 +1046,7 @@ Possible values: OK, NOT_PERFORMED.<br />
 				<table class="table" id="Payment_Models_Data_BankAccount">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IBAN</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -912,12 +1059,12 @@ Possible values: OK, NOT_PERFORMED.<br />
 	<div style="padding-bottom: 10px">International Bank Account Number in electronical format (without spaces).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..50]<br />
-					<span>Example: DE12500105170648489890</span>
+				    <span>Example: <code>DE12500105170648489890</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
 				string
@@ -927,12 +1074,12 @@ AlphaNumeric[1..50]<br />
 	<div style="padding-bottom: 10px">Name of the account holder.</div>
 	<i class="small text-muted">
 Iso885915[1..50]<br />
-					<span>Example: John Doe</span>
+				    <span>Example: <code>John Doe</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BIC</strong><br />
 	<span class="text-muted small">
 				string
@@ -942,12 +1089,12 @@ Iso885915[1..50]<br />
 	<div style="padding-bottom: 10px">Bank Identifier Code without spaces.</div>
 	<i class="small text-muted">
 AlphaNumeric[8..11]<br />
-					<span>Example: INGDDEFFXXX</span>
+				    <span>Example: <code>INGDDEFFXXX</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BankName</strong><br />
 	<span class="text-muted small">
 				string
@@ -965,7 +1112,7 @@ AlphaNumeric[8..11]<br />
 				<table class="table" id="Payment_Models_Data_BankAccountInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IBAN</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -978,12 +1125,12 @@ AlphaNumeric[8..11]<br />
 	<div style="padding-bottom: 10px">International Bank Account Number in electronical format (without spaces).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..50]<br />
-					<span>Example: DE12500105170648489890</span>
+				    <span>Example: <code>DE12500105170648489890</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
 				string
@@ -993,12 +1140,12 @@ AlphaNumeric[1..50]<br />
 	<div style="padding-bottom: 10px">Name of the account holder.</div>
 	<i class="small text-muted">
 Iso885915[1..50]<br />
-					<span>Example: John Doe</span>
+				    <span>Example: <code>John Doe</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BIC</strong><br />
 	<span class="text-muted small">
 				string
@@ -1008,12 +1155,12 @@ Iso885915[1..50]<br />
 	<div style="padding-bottom: 10px">Bank Identifier Code without spaces.</div>
 	<i class="small text-muted">
 AlphaNumeric[8..11]<br />
-					<span>Example: INGDDEFFXXX</span>
+				    <span>Example: <code>INGDDEFFXXX</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BankName</strong><br />
 	<span class="text-muted small">
 				string
@@ -1026,7 +1173,7 @@ AlphaNumeric[8..11]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -1035,7 +1182,7 @@ AlphaNumeric[8..11]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the IBAN origin (if available)</div>
 	<i class="small text-muted">
-					<span>Example: CH</span>
+				    <span>Example: <code>CH</code></span>
 	</i>
 </td>
 							</tr>
@@ -1045,14 +1192,14 @@ AlphaNumeric[8..11]<br />
 				<table class="table" id="Payment_Models_Data_BasicPayment">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1062,7 +1209,7 @@ AlphaNumeric[8..11]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 					<span>
@@ -1075,12 +1222,12 @@ AlphaNumeric[8..11]<br />
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
 				string
@@ -1090,12 +1237,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-					<span>Example: Payernote</span>
+				    <span>Example: <code>Payernote</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 				string
@@ -1105,7 +1252,7 @@ Utf8[1..50]<br />
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br />
-					<span>Example: Description</span>
+				    <span>Example: <code>Description</code></span>
 	</i>
 </td>
 							</tr>
@@ -1115,7 +1262,7 @@ Utf8[1..1000]<br />
 				<table class="table" id="Payment_Models_Data_BillpayCapture">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DelayInDays</strong><br />
 	<span class="text-muted small">
 				integer
@@ -1124,7 +1271,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Number of days to delay the due date of the invoice / direct debit (see billpay for specifics)</div>
 	<i class="small text-muted">
-					<span>Example: 10</span>
+				    <span>Example: <code>10</code></span>
 	</i>
 </td>
 							</tr>
@@ -1134,7 +1281,7 @@ Utf8[1..1000]<br />
 				<table class="table" id="Payment_Models_Data_Brand">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br />
 	<span class="text-muted small">
 				string
@@ -1148,7 +1295,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Name</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1160,7 +1307,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on – might change over time, only use for display, never for parsing). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
 	<i class="small text-muted">
-					<span>Example: SaferpayTestCard</span>
+				    <span>Example: <code>SaferpayTestCard</code></span>
 	</i>
 </td>
 							</tr>
@@ -1170,7 +1317,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 				<table class="table" id="Payment_Models_Data_Card">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Number</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1182,12 +1329,12 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Card number without separators</div>
 	<i class="small text-muted">
-					<span>Example: 1234123412341234</span>
+				    <span>Example: <code>1234123412341234</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1200,12 +1347,12 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 	<div style="padding-bottom: 10px">Year of expiration</div>
 	<i class="small text-muted">
 Range: inclusive between 2000 and 9999<br />
-					<span>Example: 2015</span>
+				    <span>Example: <code>2015</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1218,12 +1365,12 @@ Range: inclusive between 2000 and 9999<br />
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 12<br />
-					<span>Example: 9</span>
+				    <span>Example: <code>9</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
 				string
@@ -1233,12 +1380,12 @@ Range: inclusive between 1 and 12<br />
 	<div style="padding-bottom: 10px">Name of the card holder</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-					<span>Example: John Doe</span>
+				    <span>Example: <code>John Doe</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -1248,7 +1395,7 @@ Utf8[1..50]<br />
 	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable</div>
 	<i class="small text-muted">
 Numeric[3..4]<br />
-					<span>Example: 123</span>
+				    <span>Example: <code>123</code></span>
 	</i>
 </td>
 							</tr>
@@ -1258,7 +1405,7 @@ Numeric[3..4]<br />
 				<table class="table" id="Payment_Models_Data_CardForm">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
 				string
@@ -1268,7 +1415,7 @@ Numeric[3..4]<br />
 	<div style="padding-bottom: 10px">This parameter let you customize the holder name field on the card entry form. Per default, a mandatory holder name field is shown.</div>
 	<i class="small text-muted">
 Possible values: NONE, MANDATORY.<br />
-					<span>Example: MANDATORY</span>
+				    <span>Example: <code>MANDATORY</code></span>
 	</i>
 </td>
 							</tr>
@@ -1278,7 +1425,7 @@ Possible values: NONE, MANDATORY.<br />
 				<table class="table" id="Payment_Models_Data_CardInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MaskedNumber</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1290,12 +1437,12 @@ Possible values: NONE, MANDATORY.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Masked card number</div>
 	<i class="small text-muted">
-					<span>Example: 912345xxxxxx1234</span>
+				    <span>Example: <code>912345xxxxxx1234</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1307,12 +1454,12 @@ Possible values: NONE, MANDATORY.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Year of expiration</div>
 	<i class="small text-muted">
-					<span>Example: 2015</span>
+				    <span>Example: <code>2015</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1324,12 +1471,12 @@ Possible values: NONE, MANDATORY.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
 	<i class="small text-muted">
-					<span>Example: 9</span>
+				    <span>Example: <code>9</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
 				string
@@ -1338,12 +1485,12 @@ Possible values: NONE, MANDATORY.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the card holder (if known)</div>
 	<i class="small text-muted">
-					<span>Example: John Doe</span>
+				    <span>Example: <code>John Doe</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HolderSegment</strong><br />
 	<span class="text-muted small">
 				string
@@ -1353,12 +1500,12 @@ Possible values: NONE, MANDATORY.<br />
 	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect and Alias/Update calls if available.</div>
 	<i class="small text-muted">
 Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
-					<span>Example: CORPORATE</span>
+				    <span>Example: <code>CORPORATE</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -1367,12 +1514,12 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the card origin (if available)</div>
 	<i class="small text-muted">
-					<span>Example: CH</span>
+				    <span>Example: <code>CH</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>HashValue</strong><br />
 	<span class="text-muted small">
 				string
@@ -1390,7 +1537,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 				<table class="table" id="Payment_Models_Data_ClientInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ShopInfo</strong><br />
 	<span class="text-muted small">
 				string
@@ -1400,12 +1547,12 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 	<div style="padding-bottom: 10px">Name and version of the shop software</div>
 	<i class="small text-muted">
 Iso885915[1..100]<br />
-					<span>Example: My Shop</span>
+				    <span>Example: <code>My Shop</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OsInfo</strong><br />
 	<span class="text-muted small">
 				string
@@ -1415,8 +1562,99 @@ Iso885915[1..100]<br />
 	<div style="padding-bottom: 10px">Information on the operating system</div>
 	<i class="small text-muted">
 Iso885915[1..100]<br />
-					<span>Example: Windows Server 2013</span>
+				    <span>Example: <code>Windows Server 2013</code></span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_CustomPlan"</h2>
+				<table class="table" id="Payment_Models_Data_CustomPlan">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MinimumNumberOfInstallments</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Maximum Number of Installments. Valid values are 2–99 and<br> MaximumNumberOfInstallments must be bigger or equal MinimumNumberOfInstallments.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MaximumNumberOfInstallments</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Minimum Number of Installments. Valid values are 2–99 and<br> MinimumNumberOfInstallments must be smaller or equal MaximumNumberOfInstallments.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>InterestRate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Interest rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>InstallmentFee</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Installment Fee</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AnnualPercentageRate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Annual percentage rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TotalAmountDue</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total Amount Due</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -1425,14 +1663,14 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_DccInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PayerAmount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1447,7 +1685,7 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_DirectDebitInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1463,7 +1701,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CreditorId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1484,7 +1722,7 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_FraudFreeInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1500,7 +1738,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1516,7 +1754,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Score</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1532,7 +1770,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Investigationpoints</strong><br />
 	<span class="text-muted small">
 				string[]
@@ -1545,7 +1783,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br />
 	<span class="text-muted small">
 				string
@@ -1563,7 +1801,7 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_IdealOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IssuerId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1584,7 +1822,7 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_InstallmentOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Initial</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1601,15 +1839,119 @@ Iso885915[1..100]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_InstallmentPlan"</h2>
+				<table class="table" id="Payment_Models_Data_InstallmentPlan">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>NumberOfInstallments</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of Installments. Valid values are 2–99.</div>
+	<i class="small text-muted">
+Range: inclusive between 2 and 99<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>InterestRate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Interest rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>InstallmentFee</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Installment Fee</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AnnualPercentageRate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Annual percentage rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FirstInstallmentAmount</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">First Installment Amount</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SubsequentInstallmentAmount</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Subsequent Installment Amount</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TotalAmountDue</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total Amount Due</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_InvoiceInfo"</h2>
 				<table class="table" id="Payment_Models_Data_InvoiceInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Payee</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_BankAccount">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1619,7 +1961,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ReasonForTransfer</strong><br />
 	<span class="text-muted small">
 				string
@@ -1632,7 +1974,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DueDate</strong><br />
 	<span class="text-muted small">
 				date
@@ -1650,7 +1992,7 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_LiabilityInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1666,7 +2008,7 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LiableEntity</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1682,11 +2024,11 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ThreeDs</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1696,11 +2038,11 @@ Iso885915[1..100]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>FraudFree</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_FraudFreeInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_FraudFreeInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1715,7 +2057,7 @@ Iso885915[1..100]<br />
 				<table class="table" id="Payment_Models_Data_MarketplaceCapture">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SubmerchantId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1732,11 +2074,11 @@ Id[1..15]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Fee</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1746,11 +2088,11 @@ Id[1..15]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>FeeRefund</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1761,25 +2103,90 @@ Id[1..15]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_MciInstallmentsOptions"</h2>
+				<table class="table" id="Payment_Models_Data_MciInstallmentsOptions">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>InstallmentPlans</strong><br />
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#Payment_Models_Data_InstallmentPlan">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A maximum number of 12 fixed installment plans<br> If InstallmentPlans is present, CustomPlan must not be present</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CustomPlan</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_CustomPlan">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">An installment plan with customizable numbers of installments<br> If CustomPlan is present, InstallmentPlans must not be present<br><br>An installment plan with customizable numbers of installments</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ReceiptFreeText</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Receipt Free Text</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_MciInstallmentsSelection"</h2>
+				<table class="table" id="Payment_Models_Data_MciInstallmentsSelection">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ChosenPlan</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_InstallmentPlan">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Installment Payment Data, if applicable<br><br>A single, fixed installment plan</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_Notification"</h2>
 				<table class="table" id="Payment_Models_Data_Notification">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
-					<span>Example: [&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</span>
+				    <span>Example: <code>[&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PayerEmail</strong><br />
 	<span class="text-muted small">
 				string
@@ -1788,12 +2195,12 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
 	<i class="small text-muted">
-					<span>Example: payer@saferpay.com</span>
+				    <span>Example: <code>payer@saferpay.com</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br />
 	<span class="text-muted small">
 					<span>
@@ -1805,7 +2212,7 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/notify</span>
+				    <span>Example: <code>https://merchanthost/notify</code></span>
 	</i>
 </td>
 							</tr>
@@ -1815,7 +2222,7 @@ Id[1..15]<br />
 				<table class="table" id="Payment_Models_Data_PayerInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
 	<span class="text-muted small">
 				string
@@ -1824,12 +2231,12 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
 	<i class="small text-muted">
-					<span>Example: 111.111.111.111</span>
+				    <span>Example: <code>111.111.111.111</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IpLocation</strong><br />
 	<span class="text-muted small">
 				string
@@ -1838,16 +2245,16 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The location the IpAddress, if available. This might be a valid country code or a special value for 'non-country' locations (anonymous proxy, satellite phone, ...).</div>
 	<i class="small text-muted">
-					<span>Example: NZ</span>
+				    <span>Example: <code>NZ</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1857,11 +2264,11 @@ Id[1..15]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_Address">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1876,14 +2283,14 @@ Id[1..15]<br />
 				<table class="table" id="Payment_Models_Data_Payment">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1893,7 +2300,7 @@ Id[1..15]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 					<span>
@@ -1906,12 +2313,12 @@ Id[1..15]<br />
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
 				string
@@ -1921,12 +2328,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-					<span>Example: Payernote</span>
+				    <span>Example: <code>Payernote</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 				string
@@ -1936,12 +2343,12 @@ Utf8[1..50]<br />
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br />
-					<span>Example: Description</span>
+				    <span>Example: <code>Description</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br />
 	<span class="text-muted small">
 				string
@@ -1951,16 +2358,16 @@ Utf8[1..1000]<br />
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
 	<i class="small text-muted">
 Id[1..35]<br />
-					<span>Example: MandateId</span>
+				    <span>Example: <code>MandateId</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_PaymentOptions">container</a>
+				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1970,11 +2377,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1984,11 +2391,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Installment</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2003,11 +2410,11 @@ Id[1..35]<br />
 				<table class="table" id="Payment_Models_Data_PaymentMeans">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Card">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2017,11 +2424,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_BankAccount">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2031,11 +2438,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Alias">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2045,11 +2452,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2064,14 +2471,14 @@ Id[1..35]<br />
 				<table class="table" id="Payment_Models_Data_PaymentMeansInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Brand</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_Brand">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2081,7 +2488,7 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DisplayText</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2093,12 +2500,12 @@ Id[1..35]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
 	<i class="small text-muted">
-					<span>Example: DisplayText</span>
+				    <span>Example: <code>DisplayText</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br />
 	<span class="text-muted small">
 				string
@@ -2107,16 +2514,16 @@ Id[1..35]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
 	<i class="small text-muted">
-					<span>Example: MasterPass</span>
+				    <span>Example: <code>MasterPass</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_CardInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2126,11 +2533,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2140,11 +2547,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Twint</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_TwintInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_TwintInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2159,14 +2566,14 @@ Id[1..35]<br />
 				<table class="table" id="Payment_Models_Data_PaymentPagePayment">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2176,7 +2583,7 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 					<span>
@@ -2189,12 +2596,12 @@ Id[1..35]<br />
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
 				string
@@ -2204,12 +2611,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-					<span>Example: Payernote</span>
+				    <span>Example: <code>Payernote</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2222,12 +2629,12 @@ Utf8[1..50]<br />
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br />
-					<span>Example: Description of payment</span>
+				    <span>Example: <code>Description of payment</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br />
 	<span class="text-muted small">
 				string
@@ -2237,16 +2644,16 @@ Utf8[1..1000]<br />
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
 	<i class="small text-muted">
 Id[1..35]<br />
-					<span>Example: MandateId</span>
+				    <span>Example: <code>MandateId</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_PaymentOptions">container</a>
+				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2256,11 +2663,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2270,11 +2677,11 @@ Id[1..35]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Installment</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2289,7 +2696,7 @@ Id[1..35]<br />
 				<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2302,12 +2709,12 @@ Id[1..35]<br />
 	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT'</div>
 	<i class="small text-muted">
 Possible values: PAYMENT.<br />
-					<span>Example: PAYMENT</span>
+				    <span>Example: <code>PAYMENT</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2320,12 +2727,12 @@ Possible values: PAYMENT.<br />
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
-					<span>Example: AUTHORIZED</span>
+				    <span>Example: <code>AUTHORIZED</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2337,12 +2744,12 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
-					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+				    <span>Example: <code>K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
 				string
@@ -2352,12 +2759,12 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
 	<i class="small text-muted">
 Id[1..64]<br />
-					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
+				    <span>Example: <code>ECthWpbv1SI6SAIdU2p6AIC1bppA</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2369,19 +2776,19 @@ Id[1..64]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
 	<i class="small text-muted">
-					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
+				    <span>Example: <code>2011-09-23T14:57:23.023+02.00</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2391,7 +2798,7 @@ Id[1..64]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -2401,12 +2808,12 @@ Id[1..64]<br />
 	<div style="padding-bottom: 10px">OrderId given with request</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br />
 	<span class="text-muted small">
 				string
@@ -2415,12 +2822,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerName</span>
+				    <span>Example: <code>AcquirerName</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br />
 	<span class="text-muted small">
 				string
@@ -2429,12 +2836,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2446,12 +2853,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
 	<i class="small text-muted">
-					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+				    <span>Example: <code>0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -2460,31 +2867,31 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Invoice</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2499,21 +2906,21 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_PendingNotification">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
-					<span>Example: [&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</span>
+				    <span>Example: <code>[&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br />
 	<span class="text-muted small">
 					<span>
@@ -2525,7 +2932,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/pendingnotify</span>
+				    <span>Example: <code>https://merchanthost/pendingnotify</code></span>
 	</i>
 </td>
 							</tr>
@@ -2535,7 +2942,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_RecurringOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Initial</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2556,7 +2963,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_Redirect">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2568,12 +2975,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Redirect-URL. Used to either redirect the payer or let him enter his means of payment.</div>
 	<i class="small text-muted">
-					<span>Example: https://www.saferpay.com/VT2/api/...</span>
+				    <span>Example: <code>https://www.saferpay.com/VT2/api/...</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PaymentMeansRequired</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2594,14 +3001,14 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_Refund">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2611,7 +3018,7 @@ Id[1..80]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 					<span>
@@ -2624,12 +3031,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Reference defined by the merchant.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 				string
@@ -2639,7 +3046,7 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Description provided by merchant</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br />
-					<span>Example: Description</span>
+				    <span>Example: <code>Description</code></span>
 	</i>
 </td>
 							</tr>
@@ -2649,7 +3056,7 @@ Utf8[1..1000]<br />
 				<table class="table" id="Payment_Models_Data_RefundTransaction">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2662,12 +3069,12 @@ Utf8[1..1000]<br />
 	<div style="padding-bottom: 10px">Type of transaction. One of 'REFUND'</div>
 	<i class="small text-muted">
 Possible values: REFUND.<br />
-					<span>Example: REFUND</span>
+				    <span>Example: <code>REFUND</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2680,12 +3087,12 @@ Possible values: REFUND.<br />
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
-					<span>Example: AUTHORIZED</span>
+				    <span>Example: <code>AUTHORIZED</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2697,12 +3104,12 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
-					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+				    <span>Example: <code>K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
 				string
@@ -2712,12 +3119,12 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
 	<i class="small text-muted">
 Id[1..64]<br />
-					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
+				    <span>Example: <code>ECthWpbv1SI6SAIdU2p6AIC1bppA</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2729,19 +3136,19 @@ Id[1..64]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
 	<i class="small text-muted">
-					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
+				    <span>Example: <code>2011-09-23T14:57:23.023+02.00</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2751,7 +3158,7 @@ Id[1..64]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -2761,12 +3168,12 @@ Id[1..64]<br />
 	<div style="padding-bottom: 10px">OrderId given with request</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br />
 	<span class="text-muted small">
 				string
@@ -2775,12 +3182,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerName</span>
+				    <span>Example: <code>AcquirerName</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br />
 	<span class="text-muted small">
 				string
@@ -2789,12 +3196,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2806,12 +3213,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
 	<i class="small text-muted">
-					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+				    <span>Example: <code>0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -2820,31 +3227,31 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Invoice</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2859,7 +3266,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_RegisterAlias">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>IdGenerator</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2872,12 +3279,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Id generator to be used by Saferpay.</div>
 	<i class="small text-muted">
 Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br />
-					<span>Example: MANUAL</span>
+				    <span>Example: <code>MANUAL</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 				string
@@ -2887,12 +3294,12 @@ Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br />
 	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'MANUAL'. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
-					<span>Example: alias35nfd9mkzfw0x57iwx</span>
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br />
 	<span class="text-muted small">
 				integer
@@ -2902,7 +3309,7 @@ Id[1..40]<br />
 	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the standard lifetime will be used.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br />
-					<span>Example: 1000</span>
+				    <span>Example: <code>1000</code></span>
 	</i>
 </td>
 							</tr>
@@ -2912,7 +3319,7 @@ Range: inclusive between 1 and 1600<br />
 				<table class="table" id="Payment_Models_Data_RegistrationErrorInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ErrorName</strong><br />
 	<span class="text-muted small">
 				string
@@ -2921,12 +3328,12 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name / id of the error.</div>
 	<i class="small text-muted">
-					<span>Example: ErrorName</span>
+				    <span>Example: <code>ErrorName</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br />
 	<span class="text-muted small">
 				string
@@ -2935,7 +3342,7 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description of the error.</div>
 	<i class="small text-muted">
-					<span>Example: ErrorMessage</span>
+				    <span>Example: <code>ErrorMessage</code></span>
 	</i>
 </td>
 							</tr>
@@ -2945,7 +3352,7 @@ Range: inclusive between 1 and 1600<br />
 				<table class="table" id="Payment_Models_Data_RegistrationResult">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Success</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -2961,11 +3368,11 @@ Range: inclusive between 1 and 1600<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2975,15 +3382,29 @@ Range: inclusive between 1 and 1600<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Error</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_RegistrationErrorInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RegistrationErrorInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If Success is 'false', information on why the registration failed</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationResult</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasAuthenticationResultBase">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">contains information whether the alias is saved with the strong authentication details or not.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2994,7 +3415,7 @@ Range: inclusive between 1 and 1600<br />
 				<table class="table" id="Payment_Models_Data_ReturnUrls">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Success</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3006,12 +3427,12 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Return url for successful transaction</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/success</span>
+				    <span>Example: <code>https://merchanthost/success</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Fail</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3023,12 +3444,12 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Return url for failed transaction</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/fail</span>
+				    <span>Example: <code>https://merchanthost/fail</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Abort</strong><br />
 	<span class="text-muted small">
 				string
@@ -3037,7 +3458,7 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Return url for transaction aborted by the payer.</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/abort</span>
+				    <span>Example: <code>https://merchanthost/abort</code></span>
 	</i>
 </td>
 							</tr>
@@ -3047,7 +3468,7 @@ Range: inclusive between 1 and 1600<br />
 				<table class="table" id="Payment_Models_Data_SaferpayFields">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3064,25 +3485,96 @@ Range: inclusive between 1 and 1600<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_StrongCustomerAuthenticationDirect"</h2>
+				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationDirect">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Exemption</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of Exemption</div>
+	<i class="small text-muted">
+Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br />
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_StrongCustomerAuthenticationInteractive"</h2>
+				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationInteractive">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Exemption</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of Exemption</div>
+	<i class="small text-muted">
+Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDsChallenge</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">3DS Secure challenge options</div>
+	<i class="small text-muted">
+Possible values: AVOID, FORCE.<br />
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_StrongCustomerAuthenticationReferenced"</h2>
+				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationReferenced">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Exemption</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of Exemption</div>
+	<i class="small text-muted">
+Possible values: RECURRING.<br />
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_Styling"</h2>
 				<table class="table" id="Payment_Models_Data_Styling">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CssUrl</strong><br />
 	<span class="text-muted small">
 				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).</div>
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
-					<span>Example: https://merchanthost/merchant.css</span>
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ContentSecurityEnabled</strong><br />
 	<span class="text-muted small">
 				boolean
@@ -3095,7 +3587,7 @@ Range: inclusive between 1 and 1600<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Theme</strong><br />
 	<span class="text-muted small">
 				string
@@ -3105,7 +3597,7 @@ Range: inclusive between 1 and 1600<br />
 	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
 	<i class="small text-muted">
 Possible values: DEFAULT, SIX, NONE.<br />
-					<span>Example: DEFAULT</span>
+				    <span>Example: <code>DEFAULT</code></span>
 	</i>
 </td>
 							</tr>
@@ -3115,7 +3607,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 				<table class="table" id="Payment_Models_Data_ThreeDsInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Authenticated</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3131,7 +3623,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3147,7 +3639,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Xid</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3159,12 +3651,13 @@ Possible values: DEFAULT, SIX, NONE.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Transaction Id, given by the MPI. References the 3D Secure process.</div>
 	<i class="small text-muted">
-					<span>Example: ARkvCgk5Y1t/BDFFXkUPGX9DUgs= for 3D Secure version 1 / 1ef5b3db-3b97-47df-8272-320d0bd18ab5 for 3D Secure version 2</span>
+				    <span>Example: <code>ARkvCgk5Y1t/BDFFXkUPGX9DUgs= for 3D Secure version 1 /
+            1ef5b3db-3b97-47df-8272-320d0bd18ab5 for 3D Secure version 2</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>VerificationValue</strong><br />
 	<span class="text-muted small">
 				string
@@ -3173,7 +3666,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Authentication Value generated by the card issuer's 3D Secure Access Control Server. Available only for 3D Secure 1.</div>
 	<i class="small text-muted">
-					<span>Example: AAABBIIFmAAAAAAAAAAAAAAAAAA=</span>
+				    <span>Example: <code>AAABBIIFmAAAAAAAAAAAAAAAAAA=</code></span>
 	</i>
 </td>
 							</tr>
@@ -3183,7 +3676,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 				<table class="table" id="Payment_Models_Data_Transaction">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3196,12 +3689,12 @@ Possible values: DEFAULT, SIX, NONE.<br />
 	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT', 'REFUND'</div>
 	<i class="small text-muted">
 Possible values: PAYMENT, REFUND.<br />
-					<span>Example: PAYMENT</span>
+				    <span>Example: <code>PAYMENT</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3214,12 +3707,12 @@ Possible values: PAYMENT, REFUND.<br />
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
-					<span>Example: AUTHORIZED</span>
+				    <span>Example: <code>AUTHORIZED</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3231,12 +3724,12 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
 	<i class="small text-muted">
-					<span>Example: K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+				    <span>Example: <code>K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
 				string
@@ -3246,12 +3739,12 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
 	<i class="small text-muted">
 Id[1..64]<br />
-					<span>Example: ECthWpbv1SI6SAIdU2p6AIC1bppA</span>
+				    <span>Example: <code>ECthWpbv1SI6SAIdU2p6AIC1bppA</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3263,19 +3756,19 @@ Id[1..64]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
 	<i class="small text-muted">
-					<span>Example: 2011-09-23T14:57:23.023+02.00</span>
+				    <span>Example: <code>2011-09-23T14:57:23.023+02.00</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3285,7 +3778,7 @@ Id[1..64]<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -3295,12 +3788,12 @@ Id[1..64]<br />
 	<div style="padding-bottom: 10px">OrderId given with request</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br />
 	<span class="text-muted small">
 				string
@@ -3309,12 +3802,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerName</span>
+				    <span>Example: <code>AcquirerName</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br />
 	<span class="text-muted small">
 				string
@@ -3323,12 +3816,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3340,12 +3833,12 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
 	<i class="small text-muted">
-					<span>Example: 0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</span>
+				    <span>Example: <code>0:0:3:K5OYS9Ad6Ex4rASU1IM1b3CEU8bb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -3354,31 +3847,31 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Direct Debit information, if applicable</div>
 	<i class="small text-muted">
-					<span>Example: AcquirerReference</span>
+				    <span>Example: <code>AcquirerReference</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Invoice</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3393,7 +3886,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_TransactionReference">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 				string
@@ -3403,12 +3896,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
 	<i class="small text-muted">
 AlphaNumeric[1..64]<br />
-					<span>Example: 723n4MAjMdhjSAhAKEUdA8jtl9jb</span>
+				    <span>Example: <code>723n4MAjMdhjSAhAKEUdA8jtl9jb</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -3418,7 +3911,7 @@ AlphaNumeric[1..64]<br />
 	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
@@ -3428,7 +3921,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_TwintInfo">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>CertificateExpirationDate</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3440,7 +3933,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Twint token expiry date</div>
 	<i class="small text-muted">
-					<span>Example: 2019-11-08T12:29:37.000+01:00</span>
+				    <span>Example: <code>2019-11-08T12:29:37.000+01:00</code></span>
 	</i>
 </td>
 							</tr>
@@ -3450,7 +3943,7 @@ Id[1..80]<br />
 				<table class="table" id="Payment_Models_Data_UpdateAlias">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3463,12 +3956,12 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">The id of the alias that should be updated.. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
-					<span>Example: alias35nfd9mkzfw0x57iwx</span>
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br />
 	<span class="text-muted small">
 				integer
@@ -3487,7 +3980,7 @@ Range: inclusive between 1 and 1600<br />
 				<table class="table" id="Payment_Models_Data_UpdateCreditCard">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3500,12 +3993,12 @@ Range: inclusive between 1 and 1600<br />
 	<div style="padding-bottom: 10px">Year of expiration</div>
 	<i class="small text-muted">
 Range: inclusive between 2000 and 9999<br />
-					<span>Example: 2015</span>
+				    <span>Example: <code>2015</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3518,7 +4011,7 @@ Range: inclusive between 2000 and 9999<br />
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 12<br />
-					<span>Example: 9</span>
+				    <span>Example: <code>9</code></span>
 	</i>
 </td>
 							</tr>
@@ -3528,14 +4021,14 @@ Range: inclusive between 1 and 12<br />
 				<table class="table" id="Payment_Models_Data_UpdatePaymentMeans">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_UpdateCreditCard">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_UpdateCreditCard">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3550,7 +4043,7 @@ Range: inclusive between 1 and 12<br />
 				<table class="table" id="Payment_Models_Data_Wallet">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3567,22 +4060,22 @@ Possible values: MASTERPASS.<br />
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
 Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
-					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>RequestDeliveryAddress</strong><br />
 	<span class="text-muted small">
 				boolean
@@ -3595,7 +4088,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>EnableAmountAdjustment</strong><br />
 	<span class="text-muted small">
 				boolean
@@ -3613,11 +4106,11 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 				<table class="table" id="Payment_Models_PaymentMethodsOptions">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Alipay</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_AlipayOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_AlipayOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3627,11 +4120,11 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Ideal</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_IdealOptions">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_IdealOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3646,14 +4139,14 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 				<table class="table" id="RestApi_Models_Data_Payment">
 					<tbody>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Amount">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3663,7 +4156,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -3676,16 +4169,16 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
-					<span>Example: c52ad18472354511ab2c33b59e796901</span>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
 							</tr>
 							<tr>
-									<td class="col-sm-4 text-right">
+								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_PaymentOptions">container</a>
+				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

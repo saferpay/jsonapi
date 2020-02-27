@@ -75,14 +75,14 @@ This function may be used to create a SecurePayGateOffer
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#RestApi_Models_Data_Payment">container</a>
+				<a class="type-details in" href="#RestApi_Models_Data_Payment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -92,7 +92,7 @@ This function may be used to create a SecurePayGateOffer
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -105,12 +105,12 @@ This function may be used to create a SecurePayGateOffer
 	<div style="padding-bottom: 10px">The date until the offer should be valid in ISO 8601.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
 	<i class="small text-muted">
 AlphaNumeric[11..11]<br />
-					<span>Example: 2019-10-20</span>
+				    <span>Example: <code>2019-10-20</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
 				string
@@ -120,19 +120,19 @@ AlphaNumeric[11..11]<br />
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br />
-					<span>Example: name of your payment page config (case-insensitive)</span>
+				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_Models_Data_Payer">container</a>
+				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -142,11 +142,11 @@ Id[1..20]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Common_Models_Data_AddressForm">container</a>
+				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -209,7 +209,7 @@ Id[1..20]<br />
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -221,12 +221,12 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
-					<span>Example: 503a3d7b-072b-400f-9e7e-8ec15191c737</span>
+				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -238,7 +238,7 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
-					<span>Example: https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</span>
+				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
 </td>
 				</tr>

@@ -23,14 +23,14 @@ This function may be used to insert an alias without knowledge about the card de
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -40,14 +40,14 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -57,7 +57,7 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -70,19 +70,19 @@ This function may be used to insert an alias without knowledge about the card de
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
 Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
-					<span>Example: CARD</span>
+				    <span>Example: <code>CARD</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ReturnUrls</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -92,11 +92,11 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_Styling">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -106,7 +106,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -115,16 +115,16 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Language used for displaying forms.<br> <br> Code-List:<br> de - German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
 	<i class="small text-muted">
-					<span>Example: de</span>
+				    <span>Example: <code>de</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -134,26 +134,26 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				string[]
+				array of strings
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
 Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br />
-					<span>Example: [&quot;VISA&quot;, &quot;MASTERCARD&quot;]</span>
+				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_CardForm">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -202,14 +202,14 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -219,7 +219,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -231,12 +231,12 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id for referencing later</div>
 	<i class="small text-muted">
-					<span>Example: 234uhfh78234hlasdfh8234e</span>
+				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -248,12 +248,12 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
 	<i class="small text-muted">
-					<span>Example: 2015-01-30T13:45:22.258+02:00</span>
+				    <span>Example: <code>2015-01-30T13:45:22.258+02:00</code></span>
 	</i>
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -265,7 +265,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay-Url to post the form data to.</div>
 	<i class="small text-muted">
-					<span>Example: https://www.saferpay.com/VT2/api/...</span>
+				    <span>Example: <code>https://www.saferpay.com/VT2/api/...</code></span>
 	</i>
 </td>
 				</tr>
@@ -321,14 +321,14 @@ This function can be called up to 24 hours after the transaction was initialized
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -338,7 +338,7 @@ This function can be called up to 24 hours after the transaction was initialized
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -351,7 +351,7 @@ This function can be called up to 24 hours after the transaction was initialized
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
 	<i class="small text-muted">
 Id[1..50]<br />
-					<span>Example: 234uhfh78234hlasdfh8234e</span>
+				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
 				</tr>
@@ -388,14 +388,14 @@ Id[1..50]<br />
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -405,14 +405,14 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -422,14 +422,14 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -439,11 +439,11 @@ Id[1..50]<br />
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -518,14 +518,14 @@ This method may be used to insert an alias directly with card-data collected by 
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -535,14 +535,14 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -552,14 +552,14 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -569,11 +569,11 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasDirectInsertCheck">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -626,14 +626,14 @@ This method may be used to insert an alias directly with card-data collected by 
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -643,14 +643,14 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -660,14 +660,14 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -677,11 +677,11 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -752,14 +752,14 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -769,14 +769,14 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>UpdateAlias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_UpdateAlias">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_UpdateAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -786,14 +786,14 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>UpdatePaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -844,14 +844,14 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -861,14 +861,14 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_AliasInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -878,14 +878,14 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">container</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -956,14 +956,14 @@ This method may be used to delete previously inserted aliases.
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_RequestHeader">container</a>
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -973,7 +973,7 @@ This method may be used to delete previously inserted aliases.
 </td>
 				</tr>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -986,7 +986,7 @@ This method may be used to delete previously inserted aliases.
 	<div style="padding-bottom: 10px">The Alias you want to delete. This value is case-insensitive.</div>
 	<i class="small text-muted">
 Id[1..40]<br />
-					<span>Example: alias35nfd9mkzfw0x57iwx</span>
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
 	</i>
 </td>
 				</tr>
@@ -1023,14 +1023,14 @@ Id[1..40]<br />
 		</tr>
 	</thead>
 				<tr>
-						<td class="col-sm-4 text-right">
+					<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-			<a class="type-details in" href="#Common_ResponseHeader">container</a>
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

@@ -140,6 +140,12 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
+      <td class="text-right">PAYER_AUTHENTICATION_REQUIRED</td>
+      <td>
+          Payer authentication required to proceed (soft decline).
+      </td>
+  </tr>
+  <tr>
       <td class="text-right">PAYMENTMEANS_INVALID</td>
       <td>
           Invalid means of payment (e.g. invalid card)
