@@ -11033,7 +11033,14 @@ Id[1..80]<br>
 </ul></div></div></section><section id="v1.16.0.0.20200317"><h2><a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2020-03-02</li>
 <li>introduced version 1.16</li>
-<li>Coming soon</li>
+<li>added value <code>1.16</code> for <em>SpecVersion</em></li>
+<li>added value <code>ONLINE_STRONG</code> for <em>Check.Type</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> request</li>
+<li>added value <code>OK_AUTHENTICATED</code> for <em>CheckResult.Result</em> in <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a> response</li>
+<li>added container <em>Authentication</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a>, <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a> requests</li>
+<li>added container <em>Authentication</em> to container <em>CheckResult</em> in <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a>, <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> and <a href="index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> responses</li>
+<li>added container <em>AuthenticationResult</em> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a> and <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a> responses</li>
+<li>added container <em>MastercardIssuerInstallments</em> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a> and <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a> responses</li>
+<li>added container <em>MastercardIssuerInstallments</em> in <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request</li>
 </ul></div></div></section><section id="v1.15.0.0.20200121"><h2><a name="v1.15.0.0.20200121"></a> Version 1.15 (released 2020-01-21)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2020-01-07</li>
 <li>introduced version 1.15</li>
