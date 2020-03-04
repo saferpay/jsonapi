@@ -18,7 +18,14 @@
 ## <a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)
 - available on Sandbox: 2020-03-02
 - introduced version 1.16
-- Coming soon
+- added value `1.16` for _SpecVersion_
+- added value `ONLINE_STRONG` for _Check.Type_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) request
+- added value `OK_AUTHENTICATED` for _CheckResult.Result_ in [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert) response
+- added container _Authentication_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced) requests
+- added container _Authentication_ to container _CheckResult_ in [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert), [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) and [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias) responses
+- added container _AuthenticationResult_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) responses
+- added container _MastercardIssuerInstallments_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) responses
+- added container _MastercardIssuerInstallments_ in [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) request
 
 ## <a name="v1.15.0.0.20200121"></a> Version 1.15 (released 2020-01-21)
 - available on Sandbox: 2020-01-07
