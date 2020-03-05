@@ -16,7 +16,7 @@
 - [Version 1.4](#v1.4.0.20161015)
 
 ## <a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)
-- available on Sandbox: 2020-03-02
+- available on Sandbox: 2020-03-03
 - introduced version 1.16
 - added value `1.16` for _SpecVersion_
 - added value `ONLINE_STRONG` for _Check.Type_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) request

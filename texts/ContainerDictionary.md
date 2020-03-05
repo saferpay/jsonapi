@@ -2103,8 +2103,8 @@ Id[1..15]<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_MciInstallmentsOptions"</h2>
-				<table class="table" id="Payment_Models_Data_MciInstallmentsOptions">
+			<h2>Container "Payment_Models_Data_MastercardIssuerInstallmentsOptions"</h2>
+				<table class="table" id="Payment_Models_Data_MastercardIssuerInstallmentsOptions">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -2149,8 +2149,8 @@ Id[1..15]<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_MciInstallmentsSelection"</h2>
-				<table class="table" id="Payment_Models_Data_MciInstallmentsSelection">
+			<h2>Container "Payment_Models_Data_MastercardIssuerInstallmentsSelection"</h2>
+				<table class="table" id="Payment_Models_Data_MastercardIssuerInstallmentsSelection">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">

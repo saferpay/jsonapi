@@ -619,14 +619,14 @@ Numeric[3..4]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>MciInstallments</strong><br />
+	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_MciInstallmentsOptions">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">MCI Installment options, if applicable</div>
+	<div style="padding-bottom: 10px">Mastercard card issuer installment payment options, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1373,14 +1373,14 @@ Numeric[8..8]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>MciInstallments</strong><br />
+	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_MciInstallmentsOptions">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">MCI Installment options, if applicable</div>
+	<div style="padding-bottom: 10px">Mastercard card issuer installment payment options, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1854,14 +1854,14 @@ This method may be used to finalize previously authorized transactions and refun
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>MciInstallments</strong><br />
+	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_MciInstallmentsSelection">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsSelection">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">MCI Installment options, if applicable</div>
+	<div style="padding-bottom: 10px">Selected Mastercard card issuer installment payment option, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>

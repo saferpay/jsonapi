@@ -648,14 +648,14 @@ Id[1..50]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>MciInstallments</strong><br />
+	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_MciInstallmentsOptions">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">MCI Installment options, if applicable</div>
+	<div style="padding-bottom: 10px">Mastercard card issuer installment payment options, if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>
