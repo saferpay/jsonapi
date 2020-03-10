@@ -1,7 +1,7 @@
 'use strict';
 
 function expandContainers(elem, recursive) {
-    elem.find('a.type-details.in:not(#type-dict a:not(#type-dict a))').each(function () {
+    elem.find('a.type-details.in:not(#type-dict a)').each(function () {
         var $this = $(this);
         var cTr = $this.closest('tr');
         var tId = $this.attr('href');
