@@ -157,7 +157,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
     'RequestHeader' => array(
-        'SpecVersion' => "1.7",
+        'SpecVersion' => "[CURRENT SPEC-VERSION]",
         'CustomerId' => "[YOUR CUSTOMERID]",
         'RequestId' => "aScdFewDSRFrfas2wsad3",
         'RetryIndicator' => 0,
@@ -192,12 +192,25 @@ $payload = array(
     ),
     'DeliveryAddressForm' => array(
         'Display' => true,
-        'MandatoryFields' => array("CITY","COMPANY","COUNTRY","EMAIL","FIRSTNAME","LASTNAME","PHONE","SALUTATION","STATE","STREET","ZIP")
+        'MandatoryFields' => array(
+		"CITY",
+		"COMPANY",
+		"COUNTRY",
+		"EMAIL",
+		"FIRSTNAME",
+		"LASTNAME",
+		"PHONE",
+		"SALUTATION",
+		"STATE",
+		"STREET",
+		"ZIP"
+	)
     )
 );
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
-//$payload is a multidimensional array, that assembles the JSON structure. Example see above
+//$payload is a multidimensional array, that assembles the JSON structure. Example see above!
+
 function do_curl($username,$password,$url, $payload){
     //Set Options for CURL
     $curl = curl_init($url);
@@ -226,7 +239,7 @@ function do_curl($username,$password,$url, $payload){
     //This code has to be used, if you want to use a HTTP-Basic Authentication,
     //instead of the Client Certificate!
     //This will set the authentication header and encode the password & username in Base64 for you
-    //DEFAULT
+    //THIS IS THE DEFAULT!
     curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
     
     //This code has to be used, if you want to use a Client Certificate,
@@ -237,7 +250,7 @@ function do_curl($username,$password,$url, $payload){
     //as they're only necessary for the BASIC Authentication!
     //The Client Certificate is only available with Saferpay Business. See: https://saferpay.github.io/sndbx/Interfaces.html
     //curl_setopt($curl, CURLOPT_SSLCERT, "PATH/TO/certificate.pem");
-		//curl_setopt($curl, CURLOPT_SSLKEY, "PATH/TO/certificate_key.pem");
+    //curl_setopt($curl, CURLOPT_SSLKEY, "PATH/TO/certificate_key.pem");
     
     //CURL-Execute & catch response
     $jsonResponse = curl_exec($curl);
