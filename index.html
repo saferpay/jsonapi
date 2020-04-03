@@ -397,63 +397,65 @@ return response;
 <p>}</p></pre>
 </div>
 <div class="tab-pane" id="php">
-<pre class="prettyprint">//This is an EXAMPLE of the payload-Array.
+<pre class="prettyprint"><p></p>
+<pre><code>//This is an EXAMPLE of the payload-Array.
 $payload = array(
-'RequestHeader' =&gt; array(
-'SpecVersion' =&gt; &quot;[CURRENT SPEC-VERSION]&quot;,
-'CustomerId' =&gt; &quot;[YOUR CUSTOMERID]&quot;,
-'RequestId' =&gt; &quot;[REQUESTID]&quot;,
-'RetryIndicator' =&gt; 0,
-'ClientInfo' =&gt; array(
-'ShopInfo' =&gt; &quot;My Shop&quot;,
-'OsInfo' =&gt; &quot;Windows Server 2013&quot;
-)
-),
-'TerminalId' =&gt; &quot;[YOUR TERMINALID]&quot;,
-'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
-'Payment' =&gt; array(
-'Amount' =&gt; array(
-'Value' =&gt; &quot;21065&quot;,
-'CurrencyCode' =&gt; &quot;EUR&quot;
-),
-'OrderId' =&gt; &quot;123test&quot;,
-'PayerNote' =&gt; &quot;A Note&quot;,
-'Description' =&gt; &quot;Test_Order_123test&quot;
-),
-'Payer' =&gt; array(
-'IpAddress' =&gt; &quot;192.168.178.1&quot;,
-'LanguageCode' =&gt; &quot;en&quot;
-),
-'ReturnUrls' =&gt; array(
-'Success' =&gt; &quot;https://myshop.com/success&quot;,
-'Fail' =&gt; &quot;https://myshop.com/fail&quot;
-),
-'Notification' =&gt; array(
-'PayerEmail' =&gt; &quot;payee@mailcom&quot;,
-'MerchantEmail' =&gt; &quot;merchant@mail.com&quot;,
-'NotifyUrl' =&gt; &quot;https://myshop/callback&quot;
-),
-'DeliveryAddressForm' =&gt; array(
-'Display' =&gt; true,
-'MandatoryFields' =&gt; array(
-&quot;CITY&quot;,
-&quot;COMPANY&quot;,
-&quot;COUNTRY&quot;,
-&quot;EMAIL&quot;,
-&quot;FIRSTNAME&quot;,
-&quot;LASTNAME&quot;,
-&quot;PHONE&quot;,
-&quot;SALUTATION&quot;,
-&quot;STATE&quot;,
-&quot;STREET&quot;,
-&quot;ZIP&quot;
-)
-)
+    'RequestHeader' =&gt; array(
+        'SpecVersion' =&gt; &quot;[CURRENT SPEC-VERSION]&quot;,
+        'CustomerId' =&gt; &quot;[YOUR CUSTOMERID]&quot;,
+        'RequestId' =&gt; &quot;[REQUESTID]&quot;,
+        'RetryIndicator' =&gt; 0,
+        'ClientInfo' =&gt; array(
+            'ShopInfo' =&gt; &quot;My Shop&quot;,
+            'OsInfo' =&gt; &quot;Windows Server 2013&quot;
+        )
+    ),
+    'TerminalId' =&gt; &quot;[YOUR TERMINALID]&quot;,
+    'PaymentMethods' =&gt; array(&quot;DIRECTDEBIT&quot;,&quot;VISA&quot;),
+    'Payment' =&gt; array(
+        'Amount' =&gt; array(
+            'Value' =&gt; &quot;21065&quot;,
+            'CurrencyCode' =&gt; &quot;EUR&quot;
+        ),
+        'OrderId' =&gt; &quot;123test&quot;,
+        'PayerNote' =&gt; &quot;A Note&quot;,
+        'Description' =&gt; &quot;Test_Order_123test&quot;
+    ),
+    'Payer' =&gt; array(
+        'IpAddress' =&gt; &quot;192.168.178.1&quot;,
+        'LanguageCode' =&gt; &quot;en&quot;
+    ),
+    'ReturnUrls' =&gt; array(
+        'Success' =&gt; &quot;https://myshop.com/success&quot;,
+        'Fail' =&gt; &quot;https://myshop.com/fail&quot;
+    ),
+    'Notification' =&gt; array(
+        'PayerEmail' =&gt; &quot;payee@mailcom&quot;,
+        'MerchantEmail' =&gt; &quot;merchant@mail.com&quot;,
+        'NotifyUrl' =&gt; &quot;https://myshop/callback&quot;
+    ),
+    'DeliveryAddressForm' =&gt; array(
+        'Display' =&gt; true,
+        'MandatoryFields' =&gt; array(
+	&quot;CITY&quot;,
+	&quot;COMPANY&quot;,
+	&quot;COUNTRY&quot;,
+	&quot;EMAIL&quot;,
+	&quot;FIRSTNAME&quot;,
+	&quot;LASTNAME&quot;,
+	&quot;PHONE&quot;,
+	&quot;SALUTATION&quot;,
+	&quot;STATE&quot;,
+	&quot;STREET&quot;,
+	&quot;ZIP&quot;
+    )
+    )
 );
 //$username and $password for the http-Basic Authentication
 //$url is the SaferpayURL eg. https://www.saferpay.com/api/Payment/v1/PaymentPage/Initialize
-//$payload is a multidimensional array, that assembles the JSON structure. Example see above!<p></p>
-<pre><code>function do_curl($username,$password,$url, $payload){
+//$payload is a multidimensional array, that assembles the JSON structure. Example see above!
+
+function do_curl($username,$password,$url, $payload){
     //Set Options for CURL
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_HEADER, false);
