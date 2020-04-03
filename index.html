@@ -464,41 +464,55 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
 //and then put the following line into your php.ini:
 //curl.cainfo=c:\path\to\file\cacert.pem
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
-//HTTP-Basic Authentication for the Saferpay JSON-API.
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);<p></p>
+<pre><code>//This code has to be used, if you want to use a HTTP-Basic Authentication,
+//instead of the Client Certificate!
 //This will set the authentication header and encode the password &amp; username in Base64 for you
+//DEFAULT
 curl_setopt($curl, CURLOPT_USERPWD, $username . &quot;:&quot; . $password);
+
+//This code has to be used, if you want to use a Client Certificate,
+//instead of HTTP-Basic Authentication.
+//!!!!!!!!!ATTENTION!!!!!!!!
+//You either use the basic authentication OR the Client Certificate, but not both!
+//If you use the certificate, the $username, $password parameters for this function, become irrelevant,
+//as they're only necessary for the BASIC Authentication!
+//The Client Certificate is only available with Saferpay Business. See: https://saferpay.github.io/sndbx/Interfaces.html
+//curl_setopt($curl, CURLOPT_SSLCERT, &quot;PATH/TO/certificate.pem&quot;);
+	//curl_setopt($curl, CURLOPT_SSLKEY, &quot;PATH/TO/certificate_key.pem&quot;);
+
 //CURL-Execute &amp; catch response
 $jsonResponse = curl_exec($curl);
 //Get HTTP-Status
 //Abort if Status != 200
 $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if ($status != 200) {
-//IF ERROR
-//Get http-Body (if aplicable) from CURL-response
-$body = json_decode(curl_multi_getcontent($curl), true);
-//Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
-$response = array(
-&quot;status&quot; =&gt; $status . &quot; &lt;|&gt; &quot; . curl_error($curl),
-&quot;body&quot; =&gt; $body
-);
+    //IF ERROR
+    //Get http-Body (if aplicable) from CURL-response
+    $body = json_decode(curl_multi_getcontent($curl), true);
+    //Build array, containing the body (Response data, like Error-messages etc.) and the http-status-code
+    $response = array(
+        &quot;status&quot; =&gt; $status . &quot; &lt;|&gt; &quot; . curl_error($curl),
+        &quot;body&quot; =&gt; $body
+    );
 } else {
-//IF OK
-//Convert response into an Array
-$body = json_decode($jsonResponse, true);
-//Build array, containing the body (Response-data) and the http-status-code
-$response = array(
-&quot;status&quot; =&gt; $status,
-&quot;body&quot; =&gt; $body
-);
+    //IF OK
+    //Convert response into an Array
+    $body = json_decode($jsonResponse, true);
+    //Build array, containing the body (Response-data) and the http-status-code
+    $response = array(
+        &quot;status&quot; =&gt; $status,
+        &quot;body&quot; =&gt; $body
+    );
 }
 //IMPORTANT!!!
 //Close connection!
 curl_close($curl);
 //$response, again, is a multi-dimensional Array, containing the status-code ($response[&quot;status&quot;]) and the API-response (if available) itself ($response[&quot;body&quot;])
 return $response;
-}
-</pre>
+</code></pre>
+<p>}
+</p></pre>
 </div><p></p>
   </div>
 </div></div></div><div class="row"><div class="col-md-6"><p>If you include the redirect pages into your web-page using an iframe, you can react on size changes
