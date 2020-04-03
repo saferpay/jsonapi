@@ -222,9 +222,23 @@ function do_curl($username,$password,$url, $payload){
     //curl.cainfo=c:\path\to\file\cacert.pem
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
-    //HTTP-Basic Authentication for the Saferpay JSON-API.
+    
+    //This code has to be used, if you want to use a HTTP-Basic Authentication,
+    //instead of the Client Certificate!
     //This will set the authentication header and encode the password & username in Base64 for you
+    //DEFAULT
     curl_setopt($curl, CURLOPT_USERPWD, $username . ":" . $password);
+    
+    //This code has to be used, if you want to use a Client Certificate,
+    //instead of HTTP-Basic Authentication.
+    //!!!!!!!!!ATTENTION!!!!!!!!
+    //You either use the basic authentication OR the Client Certificate, but not both!
+    //If you use the certificate, the $username, $password parameters for this function, become irrelevant,
+    //as they're only necessary for the BASIC Authentication!
+    //The Client Certificate is only available with Saferpay Business. See: https://saferpay.github.io/sndbx/Interfaces.html
+    //curl_setopt($curl, CURLOPT_SSLCERT, "PATH/TO/certificate.pem");
+		//curl_setopt($curl, CURLOPT_SSLKEY, "PATH/TO/certificate_key.pem");
+    
     //CURL-Execute & catch response
     $jsonResponse = curl_exec($curl);
     //Get HTTP-Status
