@@ -154,6 +154,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
     </div>
     <div class="tab-pane" id="php">
       <pre class="prettyprint">
+      
     //This is an EXAMPLE of the payload-Array.
     $payload = array(
         'RequestHeader' => array(
