@@ -226,8 +226,8 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
         //convert DATA-Array into a JSON-Object
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
         //WARNING!!!!!
-        //This option should NOT be "false", otherwise the connection is not secured
-        //You can turn it of if you're working on the test-system with no vital data
+        //This option should NOT be "false", otherwise the connection is not secured!
+        //You can turn it off, if you're working on the test-system with no vital data!
         //PLEASE NOTE:
         //Under Windows (using WAMP or XAMP) it is necessary to manually download and save the necessary SSL-Root certificates!
         //To do so, please visit: http://curl.haxx.se/docs/caextract.html and Download the .pem-file
