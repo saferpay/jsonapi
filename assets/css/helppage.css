@@ -160,6 +160,9 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
         background: linear-gradient(to right, #fff 0, #fff 50%, #B9B2A8 50%, #B9B2A8 100%);
         min-height: 100vh;
     }
+    #content.full-width main {
+        background: none;
+    }
 }
 
 .text-primary {
@@ -228,6 +231,10 @@ a[target='_blank'] {
     background-position: right center;
     background-repeat: no-repeat;
     padding-right: 13px;
+}
+
+code {
+    white-space: pre-line;
 }
 
 @media print {

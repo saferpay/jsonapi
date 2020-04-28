@@ -1007,7 +1007,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       </td>
   </tr>
 </tbody></table></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterPaymentPage"><h1><a name="ChapterPaymentPage"></a>Payment Page</h1><div class="row"><div class="col-md-6"><p>The Payment Page Interface provides a simple and easy integration of Saferpay into your web shop, mobile app or other applications without the need to implement a user interface for card data entry. The Saferpay Payment Page can be used with a Saferpay eCommerce license as well as with a Saferpay Business license. It allows the processing of all <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#paymentmethods">payment methods</a> that are available with Saferpay. Once integrated, more payment methods can be activated at any time and without major adjustments.</p></div></div></section><section id="ChapterPaymentPageProcess"><h2><a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the transaction flow, when using the Payment Page</p><div class="info">
-	<span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
 <li><a href="index.html#Payment_v1_PaymentPage_Initialize">Payment Page Initialize</a>
@@ -1621,20 +1620,10 @@ Id[1..50]<br>
       &quot;LiabilityShift&quot;: true,
       &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
       &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-    },
-    &quot;FraudFree&quot;: {
-      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
-      &quot;LiabilityShift&quot;: false,
-      &quot;Score&quot;: 0.6,
-      &quot;InvestigationPoints&quot;: [
-        &quot;susp_bill_ad&quot;,
-        &quot;susp_machine&quot;
-      ]
     }
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransaction"><h1><a name="ChapterTransaction"></a>Transaction</h1><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterTransactionProcess"><h2><a name="ChapterTransactionProcess"></a> Payment Process with the Transaction Interface</h2><div class="row"><div class="col-md-6"><p>This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.</p><div class="warning">
-	<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 	<p><strong>Important Note:</strong> The Transaction Interface offers all sorts of options to perform transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Transaction Interface, optional features, best practices and more.</p>
 </div></div></div></section><section><h3>Transaction-flow</h3><div class="row"><div class="col-md-6"><ol>
 <li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction Initialize</a>
@@ -1839,7 +1828,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<strong>CardForm</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_CardFormInTransactionInitialize">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2254,15 +2243,6 @@ Numeric[3..4]<br>
       &quot;LiabilityShift&quot;: true,
       &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
       &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
-    },
-    &quot;FraudFree&quot;: {
-      &quot;Id&quot;: &quot;deab90a0458bdc9d9946f5ed1b36f6e8&quot;,
-      &quot;LiabilityShift&quot;: false,
-      &quot;Score&quot;: 0.6,
-      &quot;InvestigationPoints&quot;: [
-        &quot;susp_bill_ad&quot;,
-        &quot;susp_machine&quot;
-      ]
     }
   }
 }
@@ -3426,7 +3406,7 @@ Id[1..80]<br>
     &quot;CurrencyCode&quot;: &quot;CHF&quot;
   },
   &quot;Type&quot;: &quot;PARTIAL&quot;,
-  &quot;OderPartId&quot;: &quot;123456789&quot;,
+  &quot;OrderPartId&quot;: &quot;123456789&quot;,
   &quot;Marketplace&quot;: {
     &quot;SubmerchantId&quot;: &quot;17312345&quot;,
     &quot;Fee&quot;: {
@@ -5570,6 +5550,20 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeans">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Means of payment to register</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -5645,19 +5639,32 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>RedirectUrl</strong><br>
+	<strong>RedirectRequired</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Saferpay-Url to post the form data to.</div>
+	<div style="padding-bottom: 10px">True if a redirect must be performed to continue, false otherwise</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/VT2/api/...</code></span>
-	</i>
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Redirect</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mandatory if RedirectRequired is true. Contains the URL for the redirect to use for example the Saferpay hosted register form.</div>
+	<i class="small text-muted">
+			</i>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
@@ -5667,7 +5674,11 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   },
   &quot;Token&quot;: &quot;234uhfh78234hlasdfh8234e&quot;,
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
-  &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
+  &quot;RedirectRequired&quot;: true,
+  &quot;Redirect&quot;: {
+    &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/VT2/api/...&quot;,
+    &quot;PaymentMeansRequired&quot;: false
+  }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_AssertInsert"><h2><a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert</h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.
 This function can be called up to 24 hours after the transaction was initialized.</p><div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
@@ -7240,8 +7251,8 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16<br>
-				    <span>Example: <code>1.16</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17<br>
+				    <span>Example: <code>1.17</code></span>
 	</i>
 </td>
 							</tr>
@@ -7349,8 +7360,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16<br>
-				    <span>Example: <code>1.16</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17<br>
+				    <span>Example: <code>1.17</code></span>
 	</i>
 </td>
 							</tr>
@@ -7792,6 +7803,25 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">More details about the card holder authentication.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_AliasPaymentMeans&quot;</h2>
+				<table class="table" id="Payment_Models_Data_AliasPaymentMeans">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -8268,7 +8298,42 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you customize the holder name field on the card entry form. Per default, a mandatory holder name field is shown.</div>
+	<div style="padding-bottom: 10px">This parameter lets you customize the holder name field on the card entry form. Per default, a mandatory holder name field is shown.</div>
+	<i class="small text-muted">
+Possible values: NONE, MANDATORY.<br>
+				    <span>Example: <code>MANDATORY</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_CardFormInTransactionInitialize&quot;</h2>
+				<table class="table" id="Payment_Models_Data_CardFormInTransactionInitialize">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>HolderName</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter lets you customize the holder name field on the card entry form. Per default, a mandatory holder name field is shown.</div>
+	<i class="small text-muted">
+Possible values: NONE, MANDATORY.<br>
+				    <span>Example: <code>MANDATORY</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>VerificationCode</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter can be used to display an entry form to request Verification Code (CVV, CVC) in case that an alias is used as PaymentMeans. Note that not all brands support Verification Code.</div>
 	<i class="small text-muted">
 Possible values: NONE, MANDATORY.<br>
 				    <span>Example: <code>MANDATORY</code></span>
@@ -8574,85 +8639,6 @@ Iso885915[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Payment_Models_Data_FraudFreeInfo&quot;</h2>
-				<table class="table" id="Payment_Models_Data_FraudFreeInfo">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Id</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Id to identify the fraud free request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>LiabilityShift</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Indicates whether liability shift to Fraugster is possible or not. True, if liability shift to issuer is possible, false if not (only SSL transaction).</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Score</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				decimal number
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Fraud score, indicates the risk of a transaction being fraudulent.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Investigationpoints</strong><br>
-	<span class="text-muted small">
-				string[]
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Indicate the issues with the transaction.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ErrorMessage</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Error message which indicates why FraudFree could not process the request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Payment_Models_Data_IdealOptions&quot;</h2>
 				<table class="table" id="Payment_Models_Data_IdealOptions">
 					<tbody>
@@ -8889,20 +8875,6 @@ Range: inclusive between 2 and 99<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Details about ThreeDs if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>FraudFree</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_FraudFreeInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Details about FraudFree if applicable</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -9267,6 +9239,20 @@ Id[1..35]<br>
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
 				
@@ -9303,20 +9289,6 @@ Id[1..35]<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SaferpayFields</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px"></div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -10423,7 +10395,7 @@ Possible values: RECURRING.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
 	</i>
