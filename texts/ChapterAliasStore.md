@@ -162,6 +162,20 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeans">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Means of payment to register</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -254,19 +268,32 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>RedirectUrl</strong><br />
+	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Saferpay-Url to post the form data to.</div>
+	<div style="padding-bottom: 10px">True if a redirect must be performed to continue, false otherwise</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/VT2/api/...</code></span>
-	</i>
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Redirect</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mandatory if RedirectRequired is true. Contains the URL for the redirect to use for example the Saferpay hosted register form.</div>
+	<i class="small text-muted">
+			</i>
 </td>
 				</tr>
 
@@ -284,7 +311,11 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   },
   "Token": "234uhfh78234hlasdfh8234e",
   "Expiration": "2015-01-30T12:45:22.258+01:00",
-  "RedirectUrl": "https://www.saferpay.com/vt2/api/..."
+  "RedirectRequired": true,
+  "Redirect": {
+    "RedirectUrl": "https://www.saferpay.com/VT2/api/...",
+    "PaymentMeansRequired": false
+  }
 }
 </pre>
 

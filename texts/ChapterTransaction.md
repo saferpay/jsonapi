@@ -5,7 +5,6 @@
 This chapter will give you a simple overview about the general transaction flow, when using the Transaction Interface.
 
 <div class="warning">
-	<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 	<p><strong>Important Note:</strong> The Transaction Interface offers all sorts of options to perform transactions. This flow only describes the general flow. Furthermore, you may want to <a href="https://saferpay.github.io/sndbx/Integration_trx.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Transaction Interface, optional features, best practices and more.</p>
 </div>
 
@@ -224,7 +223,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_CardFormInTransactionInitialize">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -712,15 +711,6 @@ Numeric[3..4]<br />
       "LiabilityShift": true,
       "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
       "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
-    },
-    "FraudFree": {
-      "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
-      "LiabilityShift": false,
-      "Score": 0.6,
-      "InvestigationPoints": [
-        "susp_bill_ad",
-        "susp_machine"
-      ]
     }
   }
 }
@@ -2160,7 +2150,7 @@ Id[1..80]<br />
     "CurrencyCode": "CHF"
   },
   "Type": "PARTIAL",
-  "OderPartId": "123456789",
+  "OrderPartId": "123456789",
   "Marketplace": {
     "SubmerchantId": "17312345",
     "Fee": {

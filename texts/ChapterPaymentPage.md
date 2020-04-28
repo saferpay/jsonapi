@@ -8,7 +8,6 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 This chapter will give you a simple overview about the transaction flow, when using the Payment Page
 
 <div class="info">
-	<span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </div>
 
@@ -709,15 +708,6 @@ Id[1..50]<br />
       "LiabilityShift": true,
       "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
       "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
-    },
-    "FraudFree": {
-      "Id": "deab90a0458bdc9d9946f5ed1b36f6e8",
-      "LiabilityShift": false,
-      "Score": 0.6,
-      "InvestigationPoints": [
-        "susp_bill_ad",
-        "susp_machine"
-      ]
     }
   }
 }
