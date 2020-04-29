@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.17](#v1.17.0.0.20200512)
 - [Version 1.16](#v1.16.0.0.20200317)
 - [Version 1.15](#v1.15.0.0.20200121)
 - [Version 1.14](#v1.14.0.0.20191119)
@@ -14,6 +15,17 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.17.0.0.20200512"></a> Version 1.17 (released 2020-05-12)
+- available on Sandbox: 2020-04-28
+- introduced version 1.17
+- added value `1.17` for _SpecVersion_
+- added parameter _VerificationCode_ to container _CardForm_ in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) request
+- added container _SaferpayFields_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
+- removed parameter _RedirectUrl_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
+- added parameter _RedirectRequired_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
+- added container _Redirect_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
+- marked parameter _CssUrl_ as _**deprecated**_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment) and [Alias/Insert](index.html#Payment_v1_Alias_Insert) requests
 
 ## <a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)
 - available on Sandbox: 2020-03-03
