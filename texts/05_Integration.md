@@ -187,8 +187,6 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
             'Fail' => "https://myshop.com/fail"
         ),
         'Notification' => array(
-            'PayerEmail' => "payee@mailcom",
-            'MerchantEmail' => "merchant@mail.com",
             'NotifyUrl' => "https://myshop/callback"
         ),
         'DeliveryAddressForm' => array(
