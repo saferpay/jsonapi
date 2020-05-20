@@ -8,7 +8,7 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 This chapter will give you a simple overview about the transaction flow, when using the Payment Page
 
 <div class="info">
-	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
+	<p><strong>Important Note:</strong> This is just a short summary, of the payment flow. Please also <a href="https://saferpay.github.io/sndbx/">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </div>
 
 ### Transaction-flow
