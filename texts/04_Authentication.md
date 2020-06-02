@@ -12,7 +12,7 @@ server (host) system.
 ## <a name="authentication_basic"></a>HTTP basic authentication
 
 This is the default authentication method. Technical users for the JSON API can be
-created by the merchant in the Saferpay Backoffice under [**Settings > JSON API basic authentication**](https://test.saferpay.com/BO/Settings/JsonApiLogin). The password will not be stored
+created by the merchant in the Saferpay Backoffice -Be it [Test](https://test.saferpay.com/BO/Login) or [Live](https://www.saferpay.com/BO/Login)- under **Settings > JSON API basic authentication**. The password will not be stored
 at SIX (only a securely salted hash thereof). There will be no password recovery
 besides creating a new user / password pair from your Backoffice account.
 
@@ -39,11 +39,9 @@ Alternatively, Saferpay also supports authentication via a client certificate.
   </p>
 </div>
 
-A client certificate for the JSON-API can be ordered in the Saferpay Backoffice under [**Settings > JSON API client certificate**](https://test.saferpay.com/BO/Settings/JsonApiClientCertificate).
-
-If you have a Saferpay Business licence, you will find the HTTPS Client Certificate Authentication section under the form for HTTPS Basic Authentication.
+A client certificate for the JSON-API can be ordered in the Saferpay Backoffice -Be it [Test](https://test.saferpay.com/BO/Login) or [Live](https://www.saferpay.com/BO/Login)- under **Settings > JSON API client certificate**.
 
 <img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/BO_Client_certificate_1.png" alt="Basic Aiuthentication">
 
 Generate the CSR as described on the page and import it using the upload button.
-The signed client certificate will then be downloaded through your browser.
+The signed client certificate will then be downloaded through your browser. 
