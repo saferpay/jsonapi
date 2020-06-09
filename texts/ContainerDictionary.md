@@ -368,6 +368,67 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Common_Models_Data_SpgPayer"</h2>
+				<table class="table" id="Common_Models_Data_SpgPayer">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpAddress</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>111.111.111.111</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LanguageCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> de-ch - Swiss German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<i class="small text-muted">
+				    <span>Example: <code>de</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DeliveryAddress</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BillingAddress</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payers billing address</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Common_RequestHeader"</h2>
 				<table class="table" id="Common_RequestHeader">
 					<tbody>
@@ -1309,7 +1370,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, KLARNA.<br />
 			</i>
 </td>
 							</tr>
@@ -1665,7 +1726,7 @@ Iso885915[1..100]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Interest rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<div style="padding-bottom: 10px">Interest rate in hundredth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1842,7 +1903,7 @@ Range: inclusive between 2 and 99<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Interest rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<div style="padding-bottom: 10px">Interest rate in hundredth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1869,7 +1930,7 @@ Range: inclusive between 2 and 99<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Annual percentage rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
+	<div style="padding-bottom: 10px">Annual percentage rate in hundredth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2174,6 +2235,164 @@ Id[1..15]<br />
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/notify</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_Order"</h2>
+				<table class="table" id="Payment_Models_Data_Order">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Items</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<span>array of <a class="type-details in" href="#Payment_Models_Data_OrderItem">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Order items</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_OrderItem"</h2>
+				<table class="table" id="Payment_Models_Data_OrderItem">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Order item type</div>
+	<i class="small text-muted">
+Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SALESTAX, SURCHARGE.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product id</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>C123192</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>VariantId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product variant id</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>C123192-red</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Name</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product name</div>
+	<i class="small text-muted">
+Utf8[1..200]<br />
+				    <span>Example: <code>red swiss army knife</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CategoryName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Category name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>knifes</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product description</div>
+	<i class="small text-muted">
+Utf8[1..200]<br />
+				    <span>Example: <code>The well known swiss army knife</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Quantity</strong><br />
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The quantity of the order item</div>
+	<i class="small text-muted">
+				    <span>Example: <code>3</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>UnitPrice</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 2.00 &rArr; Value=200). <b>Only Integer values will be accepted!</b></div>
+	<i class="small text-muted">
+				    <span>Example: <code>200</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IsPreOrder</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Flag, which indicates that the order item is a pre order. Per default, it is not a pre order.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>true</code></span>
 	</i>
 </td>
 							</tr>
@@ -3267,7 +3486,7 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the standard lifetime will be used.</div>
+	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime will be used.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br />
 				    <span>Example: <code>1000</code></span>
@@ -3420,6 +3639,55 @@ Range: inclusive between 1 and 1600<br />
 	<div style="padding-bottom: 10px">Return url for transaction aborted by the payer.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/abort</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_RiskFactors"</h2>
+				<table class="table" id="Payment_Models_Data_RiskFactors">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DeliveryType</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Delivery method</div>
+	<i class="small text-muted">
+Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AccountCreationDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when user account was created</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2018-05-25T18:12:43Z
+            2018-05-25T19:12:43+01:00</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PasswordLastChangeDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when the account password was changed last time</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2018-05-25T18:12:43Z
+            2018-05-25T19:12:43+01:00</code></span>
 	</i>
 </td>
 							</tr>
@@ -4030,7 +4298,7 @@ Possible values: MASTERPASS.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, KLARNA.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>

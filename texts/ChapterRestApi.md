@@ -132,7 +132,7 @@ Id[1..20]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
+				<a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
