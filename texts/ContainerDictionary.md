@@ -348,6 +348,20 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. Use a unique id for your customer (a UUID is highly recommended).<br> For GDPR reasons, we don't recommend using an id which contains personal data (eg. no name).</div>
+	<i class="small text-muted">
+Id[1..50]<br />
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Common_Models_Data_PaymentOptions"</h2>
@@ -445,8 +459,8 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17<br />
-				    <span>Example: <code>1.17</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18<br />
+				    <span>Example: <code>1.18</code></span>
 	</i>
 </td>
 							</tr>
@@ -554,8 +568,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17<br />
-				    <span>Example: <code>1.17</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18<br />
+				    <span>Example: <code>1.18</code></span>
 	</i>
 </td>
 							</tr>
@@ -2396,11 +2410,67 @@ Utf8[1..200]<br />
 	</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TaxRate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 125 means 1.25%<br> Valid values are 0-99999</div>
+	<i class="small text-muted">
+Range: inclusive between 0 and 99999<br />
+				    <span>Example: <code>2100</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TaxAmount</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Tax amount which is included in the item price</div>
+	<i class="small text-muted">
+				    <span>Example: <code>42</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DiscountAmount</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Discount amount including tax</div>
+	<i class="small text-muted">
+				    <span>Example: <code>10</code></span>
+	</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_PayerInfo"</h2>
 				<table class="table" id="Payment_Models_Data_PayerInfo">
 					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
@@ -4414,6 +4484,29 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Specific payment options</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_Data_RegisterAlias"</h2>
+				<table class="table" id="RestApi_Models_Data_RegisterAlias">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IdGenerator</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id generator to be used by Saferpay.</div>
+	<i class="small text-muted">
+Possible values: RANDOM.<br />
+				    <span>Example: <code>RANDOM</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>

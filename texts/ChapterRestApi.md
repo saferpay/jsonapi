@@ -155,6 +155,20 @@ Id[1..20]<br />
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>RegisterAlias</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Controls whether the means of payment used for paying the offer should be stored inside the Saferpay Secure Card Data storage.<br> If the offer is paid using a payment means that does not support being stored in the Secure Card Data storage, this parameter has no effect.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
