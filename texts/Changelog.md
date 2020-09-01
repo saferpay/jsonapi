@@ -1,6 +1,9 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.18](#v1.17.0.0.20200714)
+- [Version 1.17](#v1.17.0.0.20200512)
+- [Version 1.16](#v1.16.0.0.20200317)
 - [Version 1.15](#v1.15.0.0.20200121)
 - [Version 1.14](#v1.14.0.0.20191119)
 - [Version 1.13](#v1.13.0.0.20190917)
@@ -13,6 +16,38 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.18.0.0.20200714"></a> Version 1.18 (released 2020-07-14)
+- available on Sandbox: 2020-07-01
+- introduced version 1.18
+- added value `1.18` for _SpecVersion_
+- added parameter _Id_ to container _Payer_ in  [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment), [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire), [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
+- added container _Order_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
+- added container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
+- added container _RegisterAlias_ in [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+
+## <a name="v1.17.0.0.20200512"></a> Version 1.17 (released 2020-05-12)
+- available on Sandbox: 2020-04-28
+- introduced version 1.17
+- added value `1.17` for _SpecVersion_
+- added parameter _VerificationCode_ to container _CardForm_ in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) request
+- added container _SaferpayFields_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
+- removed parameter _RedirectUrl_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
+- added parameter _RedirectRequired_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
+- added container _Redirect_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
+- marked parameter _CssUrl_ as _**deprecated**_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment) and [Alias/Insert](index.html#Payment_v1_Alias_Insert) requests
+
+## <a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)
+- available on Sandbox: 2020-03-03
+- introduced version 1.16
+- added value `1.16` for _SpecVersion_
+- added value `ONLINE_STRONG` for _Check.Type_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) request
+- added value `OK_AUTHENTICATED` for _CheckResult.Result_ in [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert) response
+- added container _Authentication_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced) requests
+- added container _Authentication_ to container _CheckResult_ in [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert), [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) and [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias) responses
+- added container _AuthenticationResult_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) responses
+- added container _MastercardIssuerInstallments_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) responses
+- added container _MastercardIssuerInstallments_ in [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) request
 
 ## <a name="v1.15.0.0.20200121"></a> Version 1.15 (released 2020-01-21)
 - available on Sandbox: 2020-01-07
