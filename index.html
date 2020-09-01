@@ -23317,6 +23317,9 @@ Possible values: RANDOM.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.17.0.0.20200714">Version 1.18</a></li>
+<li><a href="#v1.17.0.0.20200512">Version 1.17</a></li>
+<li><a href="#v1.16.0.0.20200317">Version 1.16</a></li>
 <li><a href="#v1.15.0.0.20200121">Version 1.15</a></li>
 <li><a href="#v1.14.0.0.20191119">Version 1.14</a></li>
 <li><a href="#v1.13.0.0.20190917">Version 1.13</a></li>
@@ -23329,6 +23332,35 @@ Possible values: RANDOM.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.18.0.0.20200714"><h2><a name="v1.18.0.0.20200714"></a> Version 1.18 (released 2020-07-14)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2020-07-01</li>
+<li>introduced version 1.18</li>
+<li>added value <code>1.18</code> for <em>SpecVersion</em></li>
+<li>added parameter <em>Id</em> to container <em>Payer</em> in  <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a>, <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a>, <a href="index.html#Payment_v1_Transaction_AlternativePayment">Transaction/AlternativePayment</a> requests and <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a>, <a href="index.html#Payment_v1_Transaction_QueryPaymentMeans">Transaction/QueryPaymentMeans</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a>, <a href="index.html#Payment_v1_Transaction_AssertRedirectPayment">Transaction/AssertRedirectPayment</a>, <a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a>, <a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a> responses</li>
+<li>added container <em>Order</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> and <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests</li>
+<li>added container <em>RiskFactors</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> and <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests</li>
+<li>added container <em>RegisterAlias</em> in <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">Secure PayGate API SecurePayGateOffer CreateOffer</a></li>
+</ul></div></div></section><section id="v1.17.0.0.20200512"><h2><a name="v1.17.0.0.20200512"></a> Version 1.17 (released 2020-05-12)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2020-04-28</li>
+<li>introduced version 1.17</li>
+<li>added value <code>1.17</code> for <em>SpecVersion</em></li>
+<li>added parameter <em>VerificationCode</em> to container <em>CardForm</em> in <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> request</li>
+<li>added container <em>SaferpayFields</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> and <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> requests</li>
+<li>removed parameter <em>RedirectUrl</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> response</li>
+<li>added parameter <em>RedirectRequired</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> response</li>
+<li>added container <em>Redirect</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> response</li>
+<li>marked parameter <em>CssUrl</em> as <em><strong>deprecated</strong></em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a>, <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a>, <a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a> and <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> requests</li>
+</ul></div></div></section><section id="v1.16.0.0.20200317"><h2><a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2020-03-03</li>
+<li>introduced version 1.16</li>
+<li>added value <code>1.16</code> for <em>SpecVersion</em></li>
+<li>added value <code>ONLINE_STRONG</code> for <em>Check.Type</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> request</li>
+<li>added value <code>OK_AUTHENTICATED</code> for <em>CheckResult.Result</em> in <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a> response</li>
+<li>added container <em>Authentication</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a>, <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a> requests</li>
+<li>added container <em>Authentication</em> to container <em>CheckResult</em> in <a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a>, <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a> and <a href="index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> responses</li>
+<li>added container <em>AuthenticationResult</em> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a> and <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a> responses</li>
+<li>added container <em>MastercardIssuerInstallments</em> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a>, <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a> and <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a> responses</li>
+<li>added container <em>MastercardIssuerInstallments</em> in <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> request</li>
 </ul></div></div></section><section id="v1.15.0.0.20200121"><h2><a name="v1.15.0.0.20200121"></a> Version 1.15 (released 2020-01-21)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2020-01-07</li>
 <li>introduced version 1.15</li>
