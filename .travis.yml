@@ -6,7 +6,7 @@ script: |
     #
     git clone -b gh-pages "https://github.com/saferpay/jsonapi.git" _gh_pages
     cp -r assets/* _gh_pages/assets
-    mono libs/GitHubPagesGenerator.exe -i "$TRAVIS_BUILD_DIR" -s "$TRAVIS_BUILD_DIR/Sitemap.json" -c "$TRAVIS_BUILD_DIR" -o _gh_pages -t "JSON API Spec-Version 1.18"  || travis_terminate 1
+    mono libs/GitHubPagesGenerator.exe -i "$TRAVIS_BUILD_DIR" -s "$TRAVIS_BUILD_DIR/Sitemap.json" -c "$TRAVIS_BUILD_DIR" -o _gh_pages -t "JSON API Spec-Version 1.19"  || travis_terminate 1
     cd _gh_pages
     #
     # show result

@@ -459,8 +459,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18<br />
-				    <span>Example: <code>1.18</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19<br />
+				    <span>Example: <code>1.19</code></span>
 	</i>
 </td>
 							</tr>
@@ -568,8 +568,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18<br />
-				    <span>Example: <code>1.18</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19<br />
+				    <span>Example: <code>1.19</code></span>
 	</i>
 </td>
 							</tr>
@@ -2349,7 +2349,7 @@ Utf8[1..200]<br />
 	<div style="padding-bottom: 10px">Category name</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>knifes</code></span>
+				    <span>Example: <code>knives</code></span>
 	</i>
 </td>
 							</tr>
@@ -2523,6 +2523,209 @@ Range: inclusive between 0 and 99999<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_PayerProfile"</h2>
+				<table class="table" id="Payment_Models_Data_PayerProfile">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>HasAccount</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Does the payer have an account?</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>HasPassword</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Does the payer have a password?</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PasswordForgotten</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Was the password forgotten by the payer in the current session?</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FirstName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's first name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LastName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's last name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Company</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's company</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DateOfBirth</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's date of birth (ISO 8601)<br> YYYY-MM-DD</div>
+	<i class="small text-muted">
+AlphaNumeric[11..11]<br />
+				    <span>Example: <code>1990-05-31</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LastLoginDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's last login (ISO 8601)</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2018-05-25T18:12:43Z
+            2018-05-25T19:12:43+01:00</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Gender</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's gender</div>
+	<i class="small text-muted">
+Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
+				    <span>Example: <code>COMPANY</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CreationDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when user account was created</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2018-05-25T18:12:43Z
+            2018-05-25T19:12:43+01:00</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PasswordLastChangeDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when the account password was changed last time</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2018-05-25T18:12:43Z
+            2018-05-25T19:12:43+01:00</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Email</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's email address</div>
+	<i class="small text-muted">
+				    <span>Example: <code>payer@provider.com</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SecondaryEmail</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's secondary email address</div>
+	<i class="small text-muted">
+				    <span>Example: <code>payer_secondary@provider.com</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Phone</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Phone">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's phone numbers</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3188,6 +3391,56 @@ Id[1..80]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_Phone"</h2>
+				<table class="table" id="Payment_Models_Data_Phone">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Main</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's main phone number</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>+41 12 345 6789</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Mobile</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's mobile number</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>+41 79 345 6789</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Work</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's work phone number</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>+41 12 345 6789</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_RecurringOptions"</h2>
 				<table class="table" id="Payment_Models_Data_RecurringOptions">
 					<tbody>
@@ -3733,32 +3986,29 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>AccountCreationDate</strong><br />
+	<strong>PayerProfile</strong><br />
 	<span class="text-muted small">
-				date
+				
+				<a class="type-details in" href="#Payment_Models_Data_PayerProfile">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when user account was created</div>
+	<div style="padding-bottom: 10px">Payer relevant information</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2018-05-25T18:12:43Z
-            2018-05-25T19:12:43+01:00</code></span>
-	</i>
+			</i>
 </td>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>PasswordLastChangeDate</strong><br />
+	<strong>IsB2B</strong><br />
 	<span class="text-muted small">
-				date
+				boolean
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when the account password was changed last time</div>
+	<div style="padding-bottom: 10px">Is the transaction B2B?</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2018-05-25T18:12:43Z
-            2018-05-25T19:12:43+01:00</code></span>
-	</i>
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -4401,6 +4651,26 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_FraudPrevention"</h2>
+				<table class="table" id="Payment_Models_FraudPrevention">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Result</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The result of the performed fraud prevention check</div>
+	<i class="small text-muted">
+Possible values: APPROVED, MANUAL_REVIEW.<br />
+				    <span>Example: <code>APPROVED</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_PaymentMethodsOptions"</h2>
 				<table class="table" id="Payment_Models_PaymentMethodsOptions">
 					<tbody>
@@ -4469,6 +4739,24 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 	<i class="small text-muted">
 Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>Description of payment</code></span>
 	</i>
 </td>
 							</tr>

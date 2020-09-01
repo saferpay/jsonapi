@@ -7,8 +7,7 @@ The Payment Page Interface provides a simple and easy integration of Saferpay in
 
 This chapter will give you a simple overview about the transaction flow, when using the Payment Page
 
-<div class="warning" style="min-height: 75px;">
-	<span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;float: left;height: 75px;margin-right: 15px;margin-top: 0px;"></span>
+<div class="info">
 	<p><strong>Important Note:</strong> If you have trouble understanding the transaction flow with the Payment Page in its detail, you may want to <a href="https://saferpay.github.io/sndbx/Integration_PP.html">read our Saferpay Integration guide</a>, which offers an in depth explanation on how to integrate the Payment Page, optional features, best practices and more.</p>
 </div>
 
@@ -684,6 +683,20 @@ Id[1..50]<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mastercard card issuer installment payment options, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
 	<i class="small text-muted">
 			</i>
 </td>
