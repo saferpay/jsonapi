@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.19](#v1.18.0.0.20200714)
 - [Version 1.18](#v1.18.0.0.20200714)
 - [Version 1.17](#v1.17.0.0.20200512)
 - [Version 1.16](#v1.16.0.0.20200317)
@@ -16,6 +17,16 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.19.0.0.20200915"></a> Version 1.19 (released 2020-09-15)
+- available on Sandbox: 2020-09-01
+- introduced version 1.19
+- added value `1.19` for _SpecVersion_
+- added container _PayerProfile_ to container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
+- added container _FraudPrevention_ in [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) responses
+- removed parameters _AccountCreationDate_ and _PasswordLastChangeDate_ from container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests (moved to container _PayerProfile_)
+- added parameter _Description_ to container _Payment_ in [Saferpay Secure PayGate API CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) request
+
 
 ## <a name="v1.18.0.0.20200714"></a> Version 1.18 (released 2020-07-14)
 - available on Sandbox: 2020-07-01
