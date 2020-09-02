@@ -1,7 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
-- [Version 1.18](#v1.17.0.0.20200714)
+- [Version 1.18](#v1.18.0.0.20200714)
 - [Version 1.17](#v1.17.0.0.20200512)
 - [Version 1.16](#v1.16.0.0.20200317)
 - [Version 1.15](#v1.15.0.0.20200121)
