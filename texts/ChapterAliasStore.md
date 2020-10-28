@@ -227,7 +227,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -427,7 +427,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -665,7 +665,7 @@ This method may be used to insert an alias directly with card-data collected by 
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -883,7 +883,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1062,7 +1062,7 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>

@@ -104,7 +104,7 @@ This function may be used to create a SecurePayGateOffer
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The date until the offer should be valid in ISO 8601.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
+AlphaNumeric[10..10]<br />
 				    <span>Example: <code>2019-10-20</code></span>
 	</i>
 </td>

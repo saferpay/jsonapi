@@ -320,7 +320,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -577,7 +577,7 @@ Numeric[3..4]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -878,7 +878,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1104,7 +1104,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1336,7 +1336,7 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1646,7 +1646,7 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1944,7 +1944,7 @@ This method may be used to finalize previously authorized transactions and refun
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2228,7 +2228,7 @@ Id[1..80]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2412,7 +2412,7 @@ This method is only supported for pending capture transactions (only used for pa
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2610,7 +2610,7 @@ This method may be used to finalize a transaction having one or more partial cap
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2775,7 +2775,7 @@ This method may be called to refund a previous transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2984,7 +2984,7 @@ This method may be used to inquire the status and further information of pending
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3231,7 +3231,7 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3435,7 +3435,7 @@ This method may be used to cancel previously authorized transactions and refunds
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3721,7 +3721,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3902,7 +3902,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4111,7 +4111,7 @@ This method can be used to get the details of a transaction that has been author
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4468,7 +4468,7 @@ Possible values: BANCONTACT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4651,7 +4651,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>

@@ -19,7 +19,7 @@
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
