@@ -380,6 +380,19 @@ Id[1..50]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AllowPartialAuthorization</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When set to true, a transaction might be authorized with an amount less the requested authorization amount. Not all the payment methods support this option. This option is currently supported only in AuthorizeDirect.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Common_Models_Data_SpgPayer"</h2>
