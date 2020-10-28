@@ -577,7 +577,7 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1326,7 +1326,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1469,7 +1469,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1921,7 +1921,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2130,7 +2130,7 @@ Numeric[3..4]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2213,6 +2213,20 @@ Numeric[3..4]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br>
 	<span class="text-muted small">
 				
@@ -2235,20 +2249,6 @@ Numeric[3..4]<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>FraudPrevention</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2383,7 +2383,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2561,7 +2561,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2695,6 +2695,34 @@ Numeric[8..8]<br>
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Order</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Order">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional order information</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>RiskFactors</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional risk factors</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;RequestHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -2742,7 +2770,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2819,6 +2847,20 @@ Numeric[8..8]<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mastercard card issuer installment payment options, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3004,7 +3046,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3254,7 +3296,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3488,7 +3530,7 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3623,7 +3665,7 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3773,7 +3815,7 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3890,7 +3932,7 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4049,7 +4091,7 @@ Possible values: PENDING, CAPTURED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4246,7 +4288,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4402,7 +4444,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4640,7 +4682,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4773,7 +4815,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4933,7 +4975,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5242,7 +5284,7 @@ Possible values: BANCONTACT.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5377,7 +5419,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5695,7 +5737,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5845,7 +5887,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6033,7 +6075,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6203,7 +6245,7 @@ Id[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6334,7 +6376,7 @@ Id[1..40]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6415,7 +6457,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6513,7 +6555,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6692,7 +6734,7 @@ Id[1..80]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general informations about the response.</div>
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6834,7 +6876,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The date until the offer should be valid in ISO 8601.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
+AlphaNumeric[10..10]<br>
 				    <span>Example: <code>2019-10-20</code></span>
 	</i>
 </td>
@@ -7122,7 +7164,7 @@ Alphabetic[2..2]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
+AlphaNumeric[10..10]<br>
 				    <span>Example: <code>1990-05-31</code></span>
 	</i>
 </td>
@@ -7355,6 +7397,19 @@ Id[1..50]<br>
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AllowPartialAuthorization</strong><br>
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When set to true, a transaction might be authorized with an amount less the requested authorization amount. Not all the payment methods support this option. This option is currently supported only in AuthorizeDirect.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Common_Models_Data_SpgPayer&quot;</h2>
@@ -7434,8 +7489,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19<br>
-				    <span>Example: <code>1.19</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20<br>
+				    <span>Example: <code>1.20</code></span>
 	</i>
 </td>
 							</tr>
@@ -7543,8 +7598,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19<br>
-				    <span>Example: <code>1.19</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20<br>
+				    <span>Example: <code>1.20</code></span>
 	</i>
 </td>
 							</tr>
@@ -7912,7 +7967,7 @@ Numeric[8..8]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Type of check to perform.</div>
+	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> ONLINE performs an online account check (one transaction point will be billed for such a check)<br> ONLINE_STRONG performs a strong customer authentication (SCA) which involves a 3DS v2 authentication and an online account check (for which one transaction point will be billed)</div>
 	<i class="small text-muted">
 Possible values: ONLINE, ONLINE_STRONG.<br>
 				    <span>Example: <code>ONLINE</code></span>
@@ -9515,7 +9570,7 @@ Range: inclusive between 0 and 99999<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Does the payer have an account?</div>
+	<div style="padding-bottom: 10px">Does the payer have an account in the shop?</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -9541,7 +9596,7 @@ Range: inclusive between 0 and 99999<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Was the password forgotten by the payer in the current session?</div>
+	<div style="padding-bottom: 10px">Was the password reset by the payer using the &quot;forgot my password&quot; feature in the current session?</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -9598,7 +9653,7 @@ Utf8[1..100]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth (ISO 8601)<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br>
+AlphaNumeric[10..10]<br>
 				    <span>Example: <code>1990-05-31</code></span>
 	</i>
 </td>
@@ -10968,7 +11023,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payer relevant information</div>
+	<div style="padding-bottom: 10px">Information on the payer executing the transaction, generally referring to his/her customer profile in the shop (if any).</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -11775,6 +11830,7 @@ Possible values: RANDOM.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.20.0.0.20201110">Version 1.20</a></li>
 <li><a href="#v1.19.0.0.20200915">Version 1.19</a></li>
 <li><a href="#v1.18.0.0.20200714">Version 1.18</a></li>
 <li><a href="#v1.17.0.0.20200512">Version 1.17</a></li>
@@ -11791,6 +11847,13 @@ Possible values: RANDOM.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.20.0.0.20201110"><h2><a name="v1.20.0.0.20201110"></a> Version 1.20 (released 2020-11-10)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2020-10-27</li>
+<li>introduced version 1.20</li>
+<li>added value <code>1.20</code> for <em>SpecVersion</em></li>
+<li>added container Order and RiskFactors to <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a> and <a href="index.html#Payment_v1_Transaction_AlternativePayment">Transaction/AlternativePayment</a> requests</li>
+<li>added AllowPartialAuthorization flag in Options container under Payments in <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li>added container FraudPrevention <a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a>, <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a> and <a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a> responses</li>
 </ul></div></div></section><section id="v1.19.0.0.20200915"><h2><a name="v1.19.0.0.20200915"></a> Version 1.19 (released 2020-09-15)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2020-09-01</li>
 <li>introduced version 1.19</li>
