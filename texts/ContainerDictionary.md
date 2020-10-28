@@ -147,7 +147,7 @@ Alphabetic[2..2]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
+AlphaNumeric[10..10]<br />
 				    <span>Example: <code>1990-05-31</code></span>
 	</i>
 </td>
@@ -2540,7 +2540,7 @@ Range: inclusive between 0 and 99999<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Does the payer have an account?</div>
+	<div style="padding-bottom: 10px">Does the payer have an account in the shop?</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2566,7 +2566,7 @@ Range: inclusive between 0 and 99999<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Was the password forgotten by the payer in the current session?</div>
+	<div style="padding-bottom: 10px">Was the password reset by the payer using the "forgot my password" feature in the current session?</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2623,7 +2623,7 @@ Utf8[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth (ISO 8601)<br> YYYY-MM-DD</div>
 	<i class="small text-muted">
-AlphaNumeric[11..11]<br />
+AlphaNumeric[10..10]<br />
 				    <span>Example: <code>1990-05-31</code></span>
 	</i>
 </td>
@@ -3993,7 +3993,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payer relevant information</div>
+	<div style="padding-bottom: 10px">Information on the payer executing the transaction, generally referring to his/her customer profile in the shop (if any).</div>
 	<i class="small text-muted">
 			</i>
 </td>
