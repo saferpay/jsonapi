@@ -23,9 +23,9 @@
 - available on Sandbox: 2020-10-27
 - introduced version 1.20
 - added value `1.20` for _SpecVersion_
-- added container _Order_ and _RiskFactors_ to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests
+- added containers _Order_ and _RiskFactors_ to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests
 - added _AllowPartialAuthorization_ flag in _Options_ container under _Payments_ in [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-- added container _FraudPrevention_ [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
+- added container _FraudPrevention_ to [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 
 ## <a name="v1.19.0.0.20200915"></a> Version 1.19 (released 2020-09-15)
 - available on Sandbox: 2020-09-01
