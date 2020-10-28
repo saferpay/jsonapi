@@ -660,6 +660,20 @@ Numeric[3..4]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
 				
@@ -682,20 +696,6 @@ Numeric[3..4]<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>FraudPrevention</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
 	<i class="small text-muted">
 			</i>
 </td>
