@@ -128,7 +128,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.<br> <b>IMPORTANT NOTE:</b> The Check function is only available for certain brands / acquirers! For more information, see <a href="https://saferpay.github.io/sndbx/scd.html#scd-check">Saferpay Integration Guide for Secure Card Data</a></p></div>
 	<i class="small text-muted">
 			</i>
 </td>

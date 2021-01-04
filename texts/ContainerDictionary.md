@@ -3506,7 +3506,7 @@ Utf8[1..100]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">True, if the given URL must be used as the target of a form containing card data entered by the card holder. If ‘false’, either a GET or POST redirect without additional data may be performed.</div>
+	<div style="padding-bottom: 10px">If 'true', the given URL must either be used as the target of a form (POST) containing card data entered by the card holder or to redirect the browser to (GET). If ‘false’, a GET redirect without additional data must be performed.</div>
 	<i class="small text-muted">
 			</i>
 </td>
