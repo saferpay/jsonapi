@@ -24,10 +24,7 @@
 - available on Sandbox: 2021-03-09
 - introduced version 1.21
 - added value `1.21` for _SpecVersion_
-- ApiKey for Saferpay fields can be generated through the RestApi
-- Set initiator (merchant or payer) in Transaction/AuthorizeDirect
-- Additional data in error response is returned by risk management
-- IssuerReference can be set in AuthorizeDirect and is retuned with various responses
+- Coming soon
 
 ## <a name="v1.20.0.0.20201110"></a> Version 1.20 (released 2020-11-10)
 - available on Sandbox: 2020-10-27
