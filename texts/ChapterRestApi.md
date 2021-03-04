@@ -1,4 +1,4 @@
-# <a name="ChapterRestApi"></a>Secure PayGate API
+# <a name="ChapterRestApi"></a>Management API
 
 This interface offers REST based access to various Secure PayGate features.
 This enables customers to integrate those features into their systems on a technical level.
@@ -53,9 +53,130 @@ HTTP Headers example:
 <<<---
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGateOffer CreateOffer
+## <a name="rest_customers_terminals_fields-api-keys"></a>SaferpayFields ApiKeys
 
-This function may be used to create a SecurePayGateOffer
+Create an ApiKey that can be used for Saferpay Fields and is restricted to the given customerId, terminalId and the given shop url(s).
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-api-keys</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>SourceUrls</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The url of the shop (the page where fields are hosted). We recommend that urls end with a trailing slash.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://yourshop.com/</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description. Will be shown in Backoffice later on.</div>
+	<i class="small text-muted">
+Utf8[1..128]<br />
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "SourceUrls": [
+    "https://a.yourshop.com/",
+    "https://b.yourshop.com/"
+  ],
+  "Description": "SaferpayFields API Key for YourShop"
+}
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>ApiKey</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The ApiKey for the Saferpay Fields JavaScript library</div>
+	<i class="small text-muted">
+				    <span>Example: <code>67f47961-2912-4338-8039-22ac2b8486f3</code></span>
+	</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ApiKey": "67f47961-2912-4338-8039-22ac2b8486f3"
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="rest_customers_terminals_spg-offers"></a>SecurePayGate Offers
+
+This function may be used to create a SecurePayGate (SPG) offer
 
 --->>>
 

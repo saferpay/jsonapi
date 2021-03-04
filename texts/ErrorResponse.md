@@ -26,6 +26,20 @@
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
+	<strong>Risk</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#MobilePayment_Models_RiskDetails">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains additional risk related information for the transaction that is blocked by risk.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
 	<strong>Behavior</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -134,6 +148,19 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Message returned by acquirer or processor</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PayerMessage</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Message for the payer</div>
 	<i class="small text-muted">
 			</i>
 </td>

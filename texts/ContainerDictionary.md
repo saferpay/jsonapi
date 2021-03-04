@@ -472,8 +472,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20<br />
-				    <span>Example: <code>1.20</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21<br />
+				    <span>Example: <code>1.21</code></span>
 	</i>
 </td>
 							</tr>
@@ -581,8 +581,42 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20<br />
-				    <span>Example: <code>1.20</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21<br />
+				    <span>Example: <code>1.21</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "MobilePayment_Models_RiskDetails"</h2>
+				<table class="table" id="MobilePayment_Models_RiskDetails">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BlockReason</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates the blocking reason of the transaction.</div>
+	<i class="small text-muted">
+Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLACKLIST_PAYMENT_MEANS_ORIGIN.<br />
+				    <span>Example: <code>BLACKLIST_IP_ORIGIN</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpLocation</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>CH</code></span>
 	</i>
 </td>
 							</tr>
@@ -635,7 +669,7 @@ Iso885915[1..64]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This URL is called by the bancontact payment app once the payment is authorized successfully. <br> The maximum allowed length for this URL is 256 characters.</div>
+	<div style="padding-bottom: 10px">This URL is called by the bancontact payment app once the payment is authorized successfully.<br> The maximum allowed length for this URL is 256 characters.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1397,7 +1431,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, KLARNA.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, WLCRYPTOPAYMENTS.<br />
 			</i>
 </td>
 							</tr>
@@ -2045,6 +2079,75 @@ Range: inclusive between 2 and 99<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The date by which the invoice needs to be settled</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_IssuerReference"</h2>
+				<table class="table" id="Payment_Models_Data_IssuerReference">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransactionStamp</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">TransactionStamp</div>
+	<i class="small text-muted">
+Max length: 50<br />
+				    <span>Example: <code>9406957728464714731817</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SettlementDate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">SettlementDate with the format MMYY</div>
+	<i class="small text-muted">
+String length: inclusive between 4 and 4<br />
+				    <span>Example: <code>0122</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_IssuerReferenceInfo"</h2>
+				<table class="table" id="Payment_Models_Data_IssuerReferenceInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransactionStamp</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">SCA transaction stamp, created by the card issuer</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SettlementDate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">SCA transaction settlement date, created by the card issuer. For MasterCard schemes only.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3366,6 +3469,20 @@ Id[1..80]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Issuer reference information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_PendingNotification"</h2>
@@ -3776,6 +3893,20 @@ Id[1..80]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Issuer reference information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_RegisterAlias"</h2>
@@ -4064,6 +4195,20 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains data that is received from the issuer in the response of a successful payment by other payment providers and will be forwarded to scheme for only this payment.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_StrongCustomerAuthenticationInteractive"</h2>
@@ -4195,7 +4340,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction). <br> Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
+	<div style="padding-bottom: 10px">Indicates whether liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in Initialize request. True, if liability shift to issuer is possible, false if not (only SSL transaction).<br> Please note, that the authentification can be true, but the liabilityshift is false. The issuer has the right to deny the liabiliy shift during the authorization. You can continue to capture the payment here, but we recommend to cancel unsecure payments.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4442,6 +4587,20 @@ Id[1..80]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Issuer reference information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_TransactionReference"</h2>
@@ -4631,7 +4790,7 @@ Possible values: MASTERPASS.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, KLARNA.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, WLCRYPTOPAYMENTS.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -4657,7 +4816,7 @@ Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs. <br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect). <br> DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
+	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs.<br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect).<br> DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
 	<i class="small text-muted">
 			</i>
 </td>

@@ -496,7 +496,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible <br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
+	<div style="padding-bottom: 10px">WITH_LIABILITY_SHIFT: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
 	<i class="small text-muted">
 Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 				    <span>Example: <code>WITH_LIABILITY_SHIFT</code></span>
@@ -1297,6 +1297,20 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional risk factors</div>
 	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Initiator</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specify if the transaction was initiated by the merchant (default behavior if not specified) or by the payer.<br> This is relevant for most credit and debit cards managed by Mastercard, Visa and American Express card schemes (in card scheme jargon: MERCHANT means MIT, PAYER means CIT).<br> For these schemes, transactions initiated by the payer usually require authentication of the card holder, which is not possible if you use Transaction/AuthorizeDirect (use Transaction/Initialize or PaymentPage/Initialize if you're not sure).<br> Saferpay will flag the transaction accordingly (also taking the optional Exemption in the Authentication container into account) on the protocols which support this and card issuers might approve or decline transactions depending on this flagging.</div>
+	<i class="small text-muted">
+Possible values: MERCHANT, PAYER.<br />
 			</i>
 </td>
 				</tr>

@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.21](#v1.21.0.0.20210323)
 - [Version 1.20](#v1.20.0.0.20201110)
 - [Version 1.19](#v1.19.0.0.20200915)
 - [Version 1.18](#v1.18.0.0.20200714)
@@ -18,6 +19,12 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.21.0.0.20210323"></a> Version 1.21 (released 2021-03-23)
+- available on Sandbox: 2021-03-09
+- introduced version 1.21
+- added value `1.21` for _SpecVersion_
+- Further details coming soon
 
 ## <a name="v1.20.0.0.20201110"></a> Version 1.20 (released 2020-11-10)
 - available on Sandbox: 2020-10-27

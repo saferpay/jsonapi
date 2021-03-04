@@ -245,14 +245,24 @@
     ]
   },
   {
-    "Title": "Secure PayGate API",
+    "Title": "Management API",
     "Source": "texts/ChapterRestApi.md",
     "Target": "index.html#ChapterRestApi",
     "Subsites": [
       {
+        "Title": "SaferpayFields ApiKeys",
+        "Source": "texts/ChapterRestApi.md",
+        "Target": "index.html#rest_customers_terminals_fields-api-keys"
+      },
+	  {
         "Title": "SecurePayGateOffer CreateOffer",
         "Source": "texts/ChapterRestApi.md",
         "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers"
+      },
+      {
+        "Title": "SecurePayGate Offers",
+        "Source": "texts/ChapterRestApi.md",
+        "Target": "index.html#rest_customers_terminals_spg-offers"
       }
     ]
   },
