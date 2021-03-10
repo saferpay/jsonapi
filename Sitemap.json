@@ -250,12 +250,12 @@
     "Target": "index.html#ChapterRestApi",
     "Subsites": [
       {
-        "Title": "SaferpayFields ApiKeys",
+        "Title": "HostedFieldsAccessToken CreateAccessToken",
         "Source": "texts/ChapterRestApi.md",
-        "Target": "index.html#rest_customers_terminals_fields-api-keys"
+        "Target": "index.html#rest_customers_terminals_fields-access-tokens"
       },
-	  {
-        "Title": "SecurePayGateOffer CreateOffer",
+      {
+        "Title": "SecurePayGate Offers",
         "Source": "texts/ChapterRestApi.md",
         "Target": "index.html#rest_customers_terminals_spg-offers"
       }
@@ -263,7 +263,7 @@
   },
   {
     "Source": "texts/ContainerDictionary.md",
-    "target": "index.html"
+    "Target": "index.html"
   },
   {
     "Title": "Changelog",

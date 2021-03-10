@@ -53,13 +53,13 @@ HTTP Headers example:
 <<<---
 
 
-## <a name="rest_customers_terminals_fields-api-keys"></a>SaferpayFields ApiKeys
+## <a name="rest_customers_terminals_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken
 
-Create an ApiKey that can be used for Saferpay Fields and is restricted to the given customerId, terminalId and the given shop url(s).
+Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-api-keys</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
 
 <<<---
 
@@ -85,7 +85,7 @@ Create an ApiKey that can be used for Saferpay Fields and is restricted to the g
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The url of the shop (the page where fields are hosted). We recommend that urls end with a trailing slash.</div>
+	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://yourshop.com/</code></span>
 	</i>
@@ -102,7 +102,7 @@ Create an ApiKey that can be used for Saferpay Fields and is restricted to the g
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">A human readable description. Will be shown in Backoffice later on.</div>
+	<div style="padding-bottom: 10px">A human readable description that will be shown in the Saferpay Backoffice to easily identify the Access Token.</div>
 	<i class="small text-muted">
 Utf8[1..128]<br />
 			</i>
@@ -121,7 +121,7 @@ Utf8[1..128]<br />
     "https://a.yourshop.com/",
     "https://b.yourshop.com/"
   ],
-  "Description": "SaferpayFields API Key for YourShop"
+  "Description": "Saferpay Fields Access Token for YourShop"
 }
 </pre>
 
@@ -140,7 +140,7 @@ Utf8[1..128]<br />
 	</thead>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ApiKey</strong><br />
+	<strong>AccessToken</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
@@ -149,7 +149,7 @@ Utf8[1..128]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The ApiKey for the Saferpay Fields JavaScript library</div>
+	<div style="padding-bottom: 10px">The AccessToken for the Saferpay Fields JavaScript library</div>
 	<i class="small text-muted">
 				    <span>Example: <code>67f47961-2912-4338-8039-22ac2b8486f3</code></span>
 	</i>
@@ -164,7 +164,7 @@ Utf8[1..128]<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-  "ApiKey": "67f47961-2912-4338-8039-22ac2b8486f3"
+  "AccessToken": "67f47961-2912-4338-8039-22ac2b8486f3"
 }
 </pre>
 
