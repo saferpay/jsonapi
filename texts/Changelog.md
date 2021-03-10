@@ -24,7 +24,11 @@
 - available on Sandbox: 2021-03-09
 - introduced version 1.21
 - added value `1.21` for _SpecVersion_
-- Coming soon
+- added new function to [Saferpay Management API](index.html#ChapterRestApi) for automated creation of Saferpay Fields Access Tokens
+- added parameter _Initiator_ to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) request
+- added container _IssuerReference_ to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) request and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect), [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire), [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) and [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction) responses
+- added container _Risk_ to the [Error Message](index.html#errorhandling)
+- added parameter _PayerMessage_ to the [Error Message](index.html#errorhandling)
 
 ## <a name="v1.20.0.0.20201110"></a> Version 1.20 (released 2020-11-10)
 - available on Sandbox: 2020-10-27
