@@ -160,7 +160,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Message for the payer</div>
+	<div style="padding-bottom: 10px">A text message provided by the card issuer detailing the reason for a declined authorization. It is safe to display it to the payer.</div>
 	<i class="small text-muted">
 			</i>
 </td>

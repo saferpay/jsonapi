@@ -295,7 +295,7 @@ Possible values: MASTERPASS, APPLEPAY.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>ThreeDs</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: IF_ALLOWED_BY_SCHEME (empty)</div>
+	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>Liability</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: IF_ALLOWED_BY_SCHEME (empty)</div>
 	<i class="small text-muted">
 Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 			</i>
