@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.22](#v1.22.0.0.20210518)
 - [Version 1.21](#v1.21.0.0.20210323)
 - [Version 1.20](#v1.20.0.0.20201110)
 - [Version 1.19](#v1.19.0.0.20200915)
@@ -19,6 +20,13 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.22.0.0.20210518"></a> Version 1.22 (released 2021-05-18)
+- available on Sandbox: 2021-05-04
+- introduced version 1.22
+- added value `1.22` for _SpecVersion_
+- changed values of parameter _LiableEntity_ to ALL_CAPS instead of PascalCase in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert),  [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
+- added parameters _InPsd2Scope_, _Version_ and _AuthenticationType_ to container _ThreeDs_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert),  [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 
 ## <a name="v1.21.0.0.20210323"></a> Version 1.21 (released 2021-03-23)
 - available on Sandbox: 2021-03-09
