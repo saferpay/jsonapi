@@ -744,7 +744,7 @@ Id[1..50]<br />
   },
   "Liability": {
     "LiabilityShift": true,
-    "LiableEntity": "ThreeDs",
+    "LiableEntity": "THREEDS",
     "ThreeDs": {
       "Authenticated": true,
       "LiabilityShift": true,
