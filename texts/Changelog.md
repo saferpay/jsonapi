@@ -26,7 +26,8 @@
 - introduced version 1.22
 - added value `1.22` for _SpecVersion_
 - changed values of parameter _LiableEntity_ to ALL_CAPS instead of PascalCase in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert),  [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
-- added parameters _InPsd2Scope_, _Version_ and _AuthenticationType_ to container _ThreeDs_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert),  [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
+- added parameter _InPsd2Scope_ to container _Liability_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert),  [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
+- added parameters _Version_ and _AuthenticationType_ to container _ThreeDs_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert),  [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 
 ## <a name="v1.21.0.0.20210323"></a> Version 1.21 (released 2021-03-23)
 - available on Sandbox: 2021-03-09
