@@ -747,7 +747,7 @@ Numeric[3..4]<br />
   },
   "Liability": {
     "LiabilityShift": true,
-    "LiableEntity": "ThreeDs",
+    "LiableEntity": "THREEDS",
     "ThreeDs": {
       "Authenticated": true,
       "LiabilityShift": true,
@@ -4291,7 +4291,7 @@ This method can be used to get the details of a transaction that has been author
   },
   "Liability": {
     "LiabilityShift": true,
-    "LiableEntity": "ThreeDs",
+    "LiableEntity": "THREEDS",
     "ThreeDs": {
       "Authenticated": true,
       "LiabilityShift": true,
@@ -4831,7 +4831,7 @@ Id[1..50]<br />
   },
   "Liability": {
     "LiabilityShift": true,
-    "LiableEntity": "ThreeDs",
+    "LiableEntity": "THREEDS",
     "ThreeDs": {
       "Authenticated": true,
       "LiabilityShift": true,
