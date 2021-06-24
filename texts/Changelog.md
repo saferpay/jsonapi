@@ -134,6 +134,7 @@
 - added _CaptureId_ to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) and [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction) responses to identify a (partial) capture for refunding
 - added value `IF_ALLOWED_BY_SCHEME` for field `Condition` in [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) request
 - added value `ALIPAY` for _Brand.PaymentMethod_, _PaymentMethods_ and _Wallet.PaymentMethods_
+- removed `VerificationValue` from `ThreeDs` container
 
 ## <a name="v1.10.0.0.20181113"></a> Version 1.10 (released 2018-11-13)
 - available on Sandbox: 2018-08-14
