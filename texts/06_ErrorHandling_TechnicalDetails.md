@@ -26,10 +26,6 @@ List of error names (these names will not change, so you may parse these and att
 
 <table class="table table-striped">
   <tr>
-      <td class="text-right">ACTION_DECLINED</td>
-      <td>The requested action was declined by processor.</td>
-  </tr>
-  <tr>
       <td class="text-right">ACTION_NOT_SUPPORTED</td>
       <td>
           The requested action is not supported in the given context or the action can't be executed with the request data.
@@ -84,6 +80,13 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
+      <td class="text-right">CARD_EXPIRED</td>
+      <td>
+          Card expired<br />
+          <i>Solution:</i> Use another card or correct expiry date
+      </td>
+  </tr>
+  <tr>
       <td class="text-right">COMMUNICATION_FAILED</td>
       <td>
           The communication to the processor failed.<br />
@@ -123,12 +126,6 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
-      <td class="text-right">LOOKUP_FAILED</td>
-      <td>
-          The transaction look up failed
-      </td>
-  </tr>
-  <tr>
       <td class="text-right">NO_CONTRACT</td>
       <td>
           No contract available for the brand / currency combination.<br />
@@ -140,12 +137,6 @@ List of error names (these names will not change, so you may parse these and att
       <td>
           No more credits available for this account.<br />
           <i>Solution:</i> Buy more transaction credits
-      </td>
-  </tr>
-  <tr>
-      <td class="text-right">NOT_FOUND</td>
-      <td>
-          Requested resource not found
       </td>
   </tr>
   <tr>
@@ -205,12 +196,6 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
-      <td class="text-right">TRANSACTION_ALREADY_FINALIZED</td>
-      <td>
-          Transaction already finalized.
-      </td>
-  </tr>
-  <tr>
       <td class="text-right">TRANSACTION_DECLINED</td>
       <td>
           Declined by the processor.<br />
@@ -218,18 +203,12 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
-      <td class="text-right">TRANSACTION_EXPIRED</td>
-      <td>
-          Transaction expired.
-      </td>
-  </tr>
-  <tr>
       <td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
-      <td>The transaction referenced is not in an expected state.</td>
+      <td></td>
   </tr>
   <tr>
       <td class="text-right">TRANSACTION_NOT_FOUND</td>
-      <td>The transaction referenced does not exist or can't be accessed by this customer.</td>
+      <td></td>
   </tr>
   <tr>
       <td class="text-right">TRANSACTION_NOT_STARTED</td>

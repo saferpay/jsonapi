@@ -236,7 +236,7 @@ Possible values: MASTERPASS, APPLEPAY.<br />
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentPageStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -748,8 +748,7 @@ Id[1..50]<br />
     "ThreeDs": {
       "Authenticated": true,
       "LiabilityShift": true,
-      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
-      "VerificationValue": "AAABBIIFmAAAAAAAAAAAAAAAAAA="
+      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs="
     }
   }
 }

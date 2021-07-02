@@ -96,7 +96,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -606,6 +606,20 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains that is received from the issuer in the response of a successful payment by other payment providers. This data will be used for authorizations based on this alias.</div>
 	<i class="small text-muted">
 			</i>
 </td>
