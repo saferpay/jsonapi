@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.22</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.23</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.22</span>
+						<span class="text-primary">JSON API Spec-Version 1.23</span>
 					</h3>
 
 					<ul class="nav">
@@ -45,17 +45,13 @@
 							<li>
 							<a href="#ChapterPaymentPage">Payment Page</a>
 							<ul class="nav">
-								<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
 							</ul>
 							</li>
 							<li>
 							<a href="#ChapterTransaction">Transaction</a>
 							<ul class="nav">
-								<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
 								<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
 								<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
 								<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
@@ -105,6 +101,7 @@
 							<ul class="nav">
 								<li><a href="#rest_customers_terminals_fields-access-tokens">HostedFieldsAccessToken CreateAccessToken</a></li>
 								<li><a href="#rest_customers_terminals_spg-offers">SecurePayGate Offers</a></li>
+								<li><a href="#rest_customers_terminals_payment-methods">TerminalInfo PaymentMethods</a></li>
 							</ul>
 							</li>
 							<li>
@@ -125,7 +122,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.22</span>
+								<span class="text-primary">JSON API Spec-Version 1.23</span>
 							</h3>
 						</button>
 
@@ -156,17 +153,13 @@
 							<li>
 							<a href="#ChapterPaymentPage">Payment Page</a>
 							<ul class="nav">
-								<li><a href="#ChapterPaymentPageProcess">PaymentPage Payment Process</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
 								<li><a href="#Payment_v1_PaymentPage_Assert">PaymentPage Assert</a></li>
-								<li><a href="#Payment_v1_Transaction_Capture">Transaction Capture</a></li>
-								<li><a href="#Payment_v1_Transaction_Cancel">Transaction Cancel</a></li>
 							</ul>
 							</li>
 							<li>
 							<a href="#ChapterTransaction">Transaction</a>
 							<ul class="nav">
-								<li><a href="#ChapterTransactionProcess">Payment Process with the Transaction Interface</a></li>
 								<li><a href="#Payment_v1_Transaction_Initialize">Transaction Initialize</a></li>
 								<li><a href="#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
 								<li><a href="#Payment_v1_Transaction_QueryPaymentMeans">Transaction QueryPaymentMeans</a></li>
@@ -216,6 +209,7 @@
 							<ul class="nav">
 								<li><a href="#rest_customers_terminals_fields-access-tokens">HostedFieldsAccessToken CreateAccessToken</a></li>
 								<li><a href="#rest_customers_terminals_spg-offers">SecurePayGate Offers</a></li>
+								<li><a href="#rest_customers_terminals_payment-methods">TerminalInfo PaymentMethods</a></li>
 							</ul>
 							</li>
 							<li>
@@ -737,52 +731,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
     &quot;PaymentMeans.BankAccount.IBAN: The field IBAN is invalid.&quot;
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section><h2>Common Error Messages</h2><div class="row"><div class="col-md-6"><p><strong>AUTHENTICATION_FAILED - &quot;Invalid credentials&quot;:</strong> In this case either the CustomerId, JSON API Password, JSON API User, or a combination of all three is not correct! You have to make sure, that all three things belong to the same Saferpay account! Furthermore, it can also happen, if you are trying to access the wrong environment. For example, if you are trying to use your test-account on the production-environment, you'll also recieve this error, as your account is unknown there. So please make also sure, that you are on the correct environment, based on the <strong>Base Url</strong>, see Chapter <strong><a href="index.html#integration">Integration - Building the correct API URL</a></strong>. If you have a pre-built module, you can usually find a switch, to select the test-, or live-mode, inside your admin-backend.</p><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Behavior&quot;: &quot;ABORT&quot;,
-  &quot;ErrorName&quot;: &quot;AUTHENTICATION_FAILED&quot;,
-  &quot;ErrorMessage&quot;: &quot;Unable to authenticate request&quot;,
-  &quot;ErrorDetail&quot;: [
-    &quot;Invalid credentials&quot;
-  ]
-}
-</pre><hr><p><strong>NO_CONTRACT:</strong> In this case, you are either asking for a payment method, that is not activated on your account, or the requested currency is not set up for you.</p><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Behavior&quot;: &quot;ABORT&quot;,
-  &quot;ErrorName&quot;: &quot;NO_CONTRACT&quot;,
-  &quot;ErrorMessage&quot;: &quot;No contract for the combination of terminal, means of payment/service provider and currency&quot;,
-  &quot;TransactionId&quot;: &quot;bAvfOzbpIlI5rAzG74IEA0x3j47b&quot;,
-  &quot;ProcessorResult&quot;: &quot;&quot;,
-  &quot;ProcessorMessage&quot;: &quot;&quot;
-}
-</pre><hr><p><strong>PERMISSION_DENIED - &quot;Invalid License&quot;:</strong> Should you get this error, you are trying to acces Saferpay Business functions, without the corresponding contract. <a href="https://saferpay.github.io/sndbx/Interfaces.html">More on that here</a>.</p><p>Example:</p><pre class="prettyprint">{
- &quot;ResponseHeader&quot;: {
-   &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-   &quot;RequestId&quot;: &quot;[your request id]&quot;
- },
- &quot;Behavior&quot;: &quot;ABORT&quot;,
- &quot;ErrorName&quot;: &quot;PERMISSION_DENIED&quot;,
- &quot;ErrorMessage&quot;: &quot;Permission denied&quot;,
- &quot;ErrorDetail&quot;: [
-   &quot;Invalid license&quot;
- ]
-}
-</pre><hr><p><strong>TRANSACTION_IN_WRONG_STATE:</strong> This means, that there are steps in the transaction flow you have to execute, before the currently executed one, for example missing a redirect, or initializing and then authorizing the transaction, without providing the necessary means of payment. Please see our <a href="https://saferpay.github.io/sndbx/index.html">Integration Guide</a> for more information about the available flows.</p><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;Behavior&quot;: &quot;ABORT&quot;,
-  &quot;ErrorName&quot;: &quot;TRANSACTION_IN_WRONG_STATE&quot;,
-  &quot;ErrorMessage&quot;: &quot;Invalid action&quot;
-}
-</pre></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
+</pre></div></div><div class="row"><div class="col-md-6"></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
   <tbody><tr>
     <td class="text-right col-sm-3">ABORT</td>
     <td class="col-sm-9">Do not retry this request. It will never succeed.</td>
@@ -801,10 +750,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
   </tr>
 </tbody></table><p>List of error names (these names will not change, so you may parse these and attach your logic to the ErrorName):</p><table class="table table-striped">
   <tbody><tr>
-      <td class="text-right">ACTION_DECLINED</td>
-      <td>The requested action was declined by processor.</td>
-  </tr>
-  <tr>
       <td class="text-right">ACTION_NOT_SUPPORTED</td>
       <td>
           The requested action is not supported in the given context or the action can't be executed with the request data.
@@ -859,6 +804,13 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       </td>
   </tr>
   <tr>
+      <td class="text-right">CARD_EXPIRED</td>
+      <td>
+          Card expired<br>
+          <i>Solution:</i> Use another card or correct expiry date
+      </td>
+  </tr>
+  <tr>
       <td class="text-right">COMMUNICATION_FAILED</td>
       <td>
           The communication to the processor failed.<br>
@@ -898,12 +850,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       </td>
   </tr>
   <tr>
-      <td class="text-right">LOOKUP_FAILED</td>
-      <td>
-          The transaction look up failed
-      </td>
-  </tr>
-  <tr>
       <td class="text-right">NO_CONTRACT</td>
       <td>
           No contract available for the brand / currency combination.<br>
@@ -915,12 +861,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       <td>
           No more credits available for this account.<br>
           <i>Solution:</i> Buy more transaction credits
-      </td>
-  </tr>
-  <tr>
-      <td class="text-right">NOT_FOUND</td>
-      <td>
-          Requested resource not found
       </td>
   </tr>
   <tr>
@@ -980,12 +920,6 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       </td>
   </tr>
   <tr>
-      <td class="text-right">TRANSACTION_ALREADY_FINALIZED</td>
-      <td>
-          Transaction already finalized.
-      </td>
-  </tr>
-  <tr>
       <td class="text-right">TRANSACTION_DECLINED</td>
       <td>
           Declined by the processor.<br>
@@ -993,18 +927,12 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       </td>
   </tr>
   <tr>
-      <td class="text-right">TRANSACTION_EXPIRED</td>
-      <td>
-          Transaction expired.
-      </td>
-  </tr>
-  <tr>
       <td class="text-right">TRANSACTION_IN_WRONG_STATE</td>
-      <td>The transaction referenced is not in an expected state.</td>
+      <td></td>
   </tr>
   <tr>
       <td class="text-right">TRANSACTION_NOT_FOUND</td>
-      <td>The transaction referenced does not exist or can't be accessed by this customer.</td>
+      <td></td>
   </tr>
   <tr>
       <td class="text-right">TRANSACTION_NOT_STARTED</td>
@@ -1244,7 +1172,7 @@ Possible values: MASTERPASS, APPLEPAY.<br>
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_PaymentPageStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1681,8 +1609,7 @@ Id[1..50]<br>
     &quot;ThreeDs&quot;: {
       &quot;Authenticated&quot;: true,
       &quot;LiabilityShift&quot;: true,
-      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;
     }
   }
 }
@@ -1848,7 +1775,7 @@ Numeric[8..8]<br>
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1924,6 +1851,20 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>RedirectNotifyUrls</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_RedirectNotifyUrls">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">If a redirect of the payer is required, these URLs will be used by Saferpay to notify you when the payer has completed<br> the required steps and the transaction is ready to be authorized or when the operation has failed or has been aborted by the payer.<br> If no redirect of the payer is required, then these URLs will not be called, see .<br><br>Supported schemes are http and https. You also have to make sure to support the GET-method.<br> The whole url including query string parameters must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents are logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2346,8 +2287,7 @@ Numeric[3..4]<br>
     &quot;ThreeDs&quot;: {
       &quot;Authenticated&quot;: true,
       &quot;LiabilityShift&quot;: true,
-      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;
     }
   }
 }
@@ -4685,7 +4625,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5159,8 +5099,7 @@ Id[1..50]<br>
     &quot;ThreeDs&quot;: {
       &quot;Authenticated&quot;: true,
       &quot;LiabilityShift&quot;: true,
-      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
-      &quot;VerificationValue&quot;: &quot;AAABBIIFmAAAAAAAAAAAAAAAAAA=&quot;
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;
     }
   }
 }
@@ -5687,7 +5626,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_Styling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6097,6 +6036,20 @@ Id[1..50]<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains that is received from the issuer in the response of a successful payment by other payment providers. This data will be used for authorizations based on this alias.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -7152,6 +7105,81 @@ Id[1..20]<br>
   &quot;OfferId&quot;: &quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
   &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_terminals_payment-methods"><h2><a name="rest_customers_terminals_payment-methods"></a>TerminalInfo PaymentMethods</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve a list of all available payment methods and wallets for a terminal</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br>
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Wallets</strong><br>
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of strings representing all wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;PaymentMethods&quot;: [
+    {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;,
+        &quot;CHF&quot;
+      ]
+    },
+    {
+      &quot;PaymentMethod&quot;: &quot;MASTERCARD&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;,
+        &quot;CHF&quot;
+      ]
+    },
+    {
+      &quot;PaymentMethod&quot;: &quot;MAESTRO&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;
+      ]
+    },
+    {
+      &quot;PaymentMethod&quot;: &quot;PAYPAL&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;,
+        &quot;CHF&quot;,
+        &quot;USD&quot;
+      ]
+    }
+  ],
+  &quot;Wallets&quot;: [
+    &quot;APPLEPAY&quot;
+  ]
+}
 </pre></div></div><div class="row"><div class="col-md-6"><div class="visible-print-block" id="type-dict">
 	<h4>Container Dictionary</h4>
 			<h2>Container &quot;Common_Models_Data_Address&quot;</h2>
@@ -7626,8 +7654,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22<br>
-				    <span>Example: <code>1.22</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23<br>
+				    <span>Example: <code>1.23</code></span>
 	</i>
 </td>
 							</tr>
@@ -7735,8 +7763,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22<br>
-				    <span>Example: <code>1.22</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23<br>
+				    <span>Example: <code>1.23</code></span>
 	</i>
 </td>
 							</tr>
@@ -9048,6 +9076,53 @@ Iso885915[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_ExtendedStyling&quot;</h2>
+				<table class="table" id="Payment_Models_Data_ExtendedStyling">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Theme</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<i class="small text-muted">
+Possible values: DEFAULT, SIX, NONE.<br>
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CssUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br>
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_IdealOptions&quot;</h2>
 				<table class="table" id="Payment_Models_Data_IdealOptions">
 					<tbody>
@@ -9533,7 +9608,7 @@ Id[1..15]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/notify</code></span>
+				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
 							</tr>
@@ -10203,6 +10278,20 @@ Id[1..35]<br>
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SchemeToken</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_PaymentMeansInfo&quot;</h2>
@@ -10430,6 +10519,53 @@ Id[1..35]<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_PaymentPageStyling&quot;</h2>
+				<table class="table" id="Payment_Models_Data_PaymentPageStyling">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Theme</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<i class="small text-muted">
+Possible values: DEFAULT, SIX, NONE.<br>
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CssUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br>
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_PaymentTransaction&quot;</h2>
 				<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
@@ -10462,7 +10598,7 @@ Possible values: PAYMENT.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -10799,6 +10935,45 @@ Utf8[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_RedirectNotifyUrls&quot;</h2>
+				<table class="table" id="Payment_Models_Data_RedirectNotifyUrls">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Success</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Notification url called when the payer has completed the redirect steps successfully and the transaction is ready to be authorized.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/success/123</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Fail</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Notification url called when the payer redirect steps have failed. The transaction cannot be authorized.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/fail/123</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_Refund&quot;</h2>
 				<table class="table" id="Payment_Models_Data_Refund">
 					<tbody>
@@ -10886,7 +11061,7 @@ Possible values: REFUND.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -11347,6 +11522,92 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_SchemeToken&quot;</h2>
+				<table class="table" id="Payment_Models_Data_SchemeToken">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Number</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Token number</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiry Month of the token.</div>
+	<i class="small text-muted">
+Range: inclusive between 1 and 12<br>
+				    <span>Example: <code>10</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiry Year of the token.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthValue</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Cardholder Authentication Verification Value (CAVV)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Eci</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Saferpay E-Commerce Indicator</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_StrongCustomerAuthenticationDirect&quot;</h2>
 				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationDirect">
 					<tbody>
@@ -11432,53 +11693,6 @@ Possible values: RECURRING.<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Payment_Models_Data_Styling&quot;</h2>
-				<table class="table" id="Payment_Models_Data_Styling">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>CssUrl</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ContentSecurityEnabled</strong><br>
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Theme</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
-	<i class="small text-muted">
-Possible values: DEFAULT, SIX, NONE.<br>
-				    <span>Example: <code>DEFAULT</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Payment_Models_Data_ThreeDsInfo&quot;</h2>
 				<table class="table" id="Payment_Models_Data_ThreeDsInfo">
 					<tbody>
@@ -11529,20 +11743,6 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	<i class="small text-muted">
 				    <span>Example: <code>ARkvCgk5Y1t/BDFFXkUPGX9DUgs= for 3D Secure version 1 /
             1ef5b3db-3b97-47df-8272-320d0bd18ab5 for 3D Secure version 2</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>VerificationValue</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Authentication Value generated by the card issuer's 3D Secure Access Control Server. Available only for 3D Secure 1.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>AAABBIIFmAAAAAAAAAAAAAAAAAA=</code></span>
 	</i>
 </td>
 							</tr>
@@ -11609,7 +11809,7 @@ Possible values: PAYMENT, REFUND.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -12165,6 +12365,37 @@ Utf8[1..100]<br>
 Possible values: RANDOM.<br>
 				    <span>Example: <code>RANDOM</code></span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;RestApi_Models_PaymentMethodInfo&quot;</h2>
+				<table class="table" id="RestApi_Models_PaymentMethodInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentMethod</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of the payment method</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Currencies</strong><br>
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of strings representing all the supported currencies for the payment method</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
