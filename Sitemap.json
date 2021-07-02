@@ -34,10 +34,6 @@
         "target": "index.html"
       },
       {
-        "Source": "texts/06_ErrorHandling_CommonErrors.md",
-        "target": "index.html"
-      },
-      {
         "Source": "texts/06_ErrorHandling_TechnicalDetails.md",
         "target": "index.html"
       }
@@ -52,11 +48,6 @@
     "Target": "index.html#ChapterPaymentPage",
     "Subsites": [
       {
-        "Title": "PaymentPage Payment Process",
-        "Source": "texts/ChapterPaymentPage.md",
-        "Target": "index.html#ChapterPaymentPageProcess"
-      },
-      {
         "Title": "PaymentPage Initialize",
         "Source": "texts/ChapterPaymentPage.md",
         "Target": "index.html#Payment_v1_PaymentPage_Initialize"
@@ -65,14 +56,6 @@
         "Title": "PaymentPage Assert",
         "Source": "texts/ChapterPaymentPage.md",
         "Target": "index.html#Payment_v1_PaymentPage_Assert"
-      },
-      {
-        "Title": "Transaction Capture",
-        "Target": "index.html#Payment_v1_Transaction_Capture"
-      },
-      {
-        "Title": "Transaction Cancel",
-        "Target": "index.html#Payment_v1_Transaction_Cancel"
       }
     ]
   },
@@ -81,11 +64,6 @@
     "Source": "texts/ChapterTransaction.md",
     "Target": "index.html#ChapterTransaction",
     "Subsites": [
-      {
-        "Title": "Payment Process with the Transaction Interface",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#ChapterTransactionProcess"
-      },
       {
         "Title": "Transaction Initialize",
         "Source": "texts/ChapterTransaction.md",
@@ -258,16 +236,21 @@
         "Title": "SecurePayGate Offers",
         "Source": "texts/ChapterRestApi.md",
         "Target": "index.html#rest_customers_terminals_spg-offers"
+      },
+      {
+        "Title": "TerminalInfo PaymentMethods",
+        "Source": "texts/ChapterRestApi.md",
+        "Target": "index.html#rest_customers_terminals_payment-methods"
       }
     ]
   },
   {
     "Source": "texts/ContainerDictionary.md",
-    "Target": "index.html"
+    "target": "index.html"
   },
   {
     "Title": "Changelog",
     "Source": "texts/Changelog.md",
-    "Target": "index.html#changelog"
+    "target": "index.html#changelog"
   }
 ]

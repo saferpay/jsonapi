@@ -472,8 +472,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22<br />
-				    <span>Example: <code>1.22</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23<br />
+				    <span>Example: <code>1.23</code></span>
 	</i>
 </td>
 							</tr>
@@ -581,8 +581,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22<br />
-				    <span>Example: <code>1.22</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23<br />
+				    <span>Example: <code>1.23</code></span>
 	</i>
 </td>
 							</tr>
@@ -1894,6 +1894,53 @@ Iso885915[1..100]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_ExtendedStyling"</h2>
+				<table class="table" id="Payment_Models_Data_ExtendedStyling">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Theme</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<i class="small text-muted">
+Possible values: DEFAULT, SIX, NONE.<br />
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CssUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_IdealOptions"</h2>
 				<table class="table" id="Payment_Models_Data_IdealOptions">
 					<tbody>
@@ -2379,7 +2426,7 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/notify</code></span>
+				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
 							</tr>
@@ -3049,6 +3096,20 @@ Id[1..35]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SchemeToken</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_PaymentMeansInfo"</h2>
@@ -3276,6 +3337,53 @@ Id[1..35]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_PaymentPageStyling"</h2>
+				<table class="table" id="Payment_Models_Data_PaymentPageStyling">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Theme</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<i class="small text-muted">
+Possible values: DEFAULT, SIX, NONE.<br />
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CssUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_PaymentTransaction"</h2>
 				<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
@@ -3308,7 +3416,7 @@ Possible values: PAYMENT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -3645,6 +3753,45 @@ Utf8[1..100]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_RedirectNotifyUrls"</h2>
+				<table class="table" id="Payment_Models_Data_RedirectNotifyUrls">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Success</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Notification url called when the payer has completed the redirect steps successfully and the transaction is ready to be authorized.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/success/123</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Fail</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Notification url called when the payer redirect steps have failed. The transaction cannot be authorized.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/fail/123</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_Refund"</h2>
 				<table class="table" id="Payment_Models_Data_Refund">
 					<tbody>
@@ -3732,7 +3879,7 @@ Possible values: REFUND.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -4193,6 +4340,92 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_SchemeToken"</h2>
+				<table class="table" id="Payment_Models_Data_SchemeToken">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Number</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Token number</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiry Month of the token.</div>
+	<i class="small text-muted">
+Range: inclusive between 1 and 12<br />
+				    <span>Example: <code>10</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiry Year of the token.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthValue</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Cardholder Authentication Verification Value (CAVV)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Eci</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Saferpay E-Commerce Indicator</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_StrongCustomerAuthenticationDirect"</h2>
 				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationDirect">
 					<tbody>
@@ -4278,53 +4511,6 @@ Possible values: RECURRING.<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_Styling"</h2>
-				<table class="table" id="Payment_Models_Data_Styling">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>CssUrl</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ContentSecurityEnabled</strong><br />
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Theme</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
-	<i class="small text-muted">
-Possible values: DEFAULT, SIX, NONE.<br />
-				    <span>Example: <code>DEFAULT</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_ThreeDsInfo"</h2>
 				<table class="table" id="Payment_Models_Data_ThreeDsInfo">
 					<tbody>
@@ -4375,20 +4561,6 @@ Possible values: DEFAULT, SIX, NONE.<br />
 	<i class="small text-muted">
 				    <span>Example: <code>ARkvCgk5Y1t/BDFFXkUPGX9DUgs= for 3D Secure version 1 /
             1ef5b3db-3b97-47df-8272-320d0bd18ab5 for 3D Secure version 2</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>VerificationValue</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Authentication Value generated by the card issuer's 3D Secure Access Control Server. Available only for 3D Secure 1.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>AAABBIIFmAAAAAAAAAAAAAAAAAA=</code></span>
 	</i>
 </td>
 							</tr>
@@ -4455,7 +4627,7 @@ Possible values: PAYMENT, REFUND.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -5011,6 +5183,37 @@ Utf8[1..100]<br />
 Possible values: RANDOM.<br />
 				    <span>Example: <code>RANDOM</code></span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_PaymentMethodInfo"</h2>
+				<table class="table" id="RestApi_Models_PaymentMethodInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentMethod</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of the payment method</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Currencies</strong><br />
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of strings representing all the supported currencies for the payment method</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>

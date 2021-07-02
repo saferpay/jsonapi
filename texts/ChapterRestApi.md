@@ -397,4 +397,127 @@ Id[1..20]<br />
 
 
 
+## <a name="rest_customers_terminals_payment-methods"></a>TerminalInfo PaymentMethods
+
+This method is used to retrieve a list of all available payment methods and wallets for a terminal
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br />
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Wallets</strong><br />
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of strings representing all wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "PaymentMethods": [
+    {
+      "PaymentMethod": "VISA",
+      "Currencies": [
+        "EUR",
+        "CHF"
+      ]
+    },
+    {
+      "PaymentMethod": "MASTERCARD",
+      "Currencies": [
+        "EUR",
+        "CHF"
+      ]
+    },
+    {
+      "PaymentMethod": "MAESTRO",
+      "Currencies": [
+        "EUR"
+      ]
+    },
+    {
+      "PaymentMethod": "PAYPAL",
+      "Currencies": [
+        "EUR",
+        "CHF",
+        "USD"
+      ]
+    }
+  ],
+  "Wallets": [
+    "APPLEPAY"
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
 
