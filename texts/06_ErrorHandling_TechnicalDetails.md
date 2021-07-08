@@ -80,6 +80,13 @@ List of error names (these names will not change, so you may parse these and att
       </td>
   </tr>
   <tr>
+      <td class="text-right">CARD_EXPIRED</td>
+      <td>
+          Card expired<br />
+          <i>Solution:</i> Use another card or correct expiry date
+      </td>
+  </tr>
+  <tr>
       <td class="text-right">COMMUNICATION_FAILED</td>
       <td>
           The communication to the processor failed.<br />

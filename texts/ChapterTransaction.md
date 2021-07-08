@@ -269,7 +269,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">If a redirect of the payer is required, these URLs will be used by Saferpay to notify you when the payer has completed<br> the required steps and the transaction is ready to be authorized or when the operation has failed or has been aborted by the payer.<br> If no redirect of the payer is required, then these URLs will not be called, see .<br><br>Supported schemes are http and https. You also have to make sure to support the GET-method.<br> The whole url including query string parameters must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents are logged by our web servers.</div>
+	<div style="padding-bottom: 10px">If a redirect of the payer is required, these URLs will be used by Saferpay to notify you when the payer has completed the required steps and the transaction is ready to be authorized or when the operation has failed or has been aborted by the payer.<br> If no redirect of the payer is required, then these URLs will not be called (see RedirectRequired attribute of the Transaction Initialize response).<br><br>Supported schemes are http and https. You also have to make sure to support the GET-method.<br> The whole url including query string parameters must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents are logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
