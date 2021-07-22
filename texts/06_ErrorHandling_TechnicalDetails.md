@@ -1,4 +1,4 @@
-﻿--->>>
+--->>>
 
 List of behaviors:
 
@@ -77,13 +77,6 @@ List of error names (these names will not change, so you may parse these and att
       <td>
           Cvc not entered but required<br />
           <i>Solution:</i> Retry with cvc entered
-      </td>
-  </tr>
-  <tr>
-      <td class="text-right">CARD_EXPIRED</td>
-      <td>
-          Card expired<br />
-          <i>Solution:</i> Use another card or correct expiry date
       </td>
   </tr>
   <tr>
