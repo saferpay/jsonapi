@@ -2787,7 +2787,7 @@ This method may be called to refund a previous transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
+	<div style="padding-bottom: 10px">Optional pending notification options</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3236,11 +3236,25 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_RefundDirectSupportingPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information on the means of payment. Important: Only fully PCI certified merchants may directly use the card data.<br> If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead.<br> If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OriginalCreditTransfer</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_OriginalCreditTransfer">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the Original Credit Transfer like the Address of the Recipient.</div>
 	<i class="small text-muted">
 			</i>
 </td>

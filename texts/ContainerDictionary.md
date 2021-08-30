@@ -472,8 +472,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23<br />
-				    <span>Example: <code>1.23</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24<br />
+				    <span>Example: <code>1.24</code></span>
 	</i>
 </td>
 							</tr>
@@ -581,8 +581,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23<br />
-				    <span>Example: <code>1.23</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24<br />
+				    <span>Example: <code>1.24</code></span>
 	</i>
 </td>
 							</tr>
@@ -1064,25 +1064,6 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_AliasPaymentMeans"</h2>
-				<table class="table" id="Payment_Models_Data_AliasPaymentMeans">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SaferpayFields</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_AlternativePaymentNotification"</h2>
 				<table class="table" id="Payment_Models_Data_AlternativePaymentNotification">
 					<tbody>
@@ -1147,6 +1128,28 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Bancontact specific data for processing payment</div>
 	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_ApplePay"</h2>
+				<table class="table" id="Payment_Models_Data_ApplePay">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentToken</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Base64 encoded ApplePayPaymentToken Json according to <a href="https://developer.apple.com/library/archive/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html" target="_blank">Apple's Payment Token Format Reference</a></div>
+	<i class="small text-muted">
+Base64 encoded string<br />
 			</i>
 </td>
 							</tr>
@@ -1962,6 +1965,25 @@ Possible values: DEFAULT, SIX, NONE.<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_InsertAliasSupportingPaymentMeans"</h2>
+				<table class="table" id="Payment_Models_Data_InsertAliasSupportingPaymentMeans">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_InstallmentOptions"</h2>
 				<table class="table" id="Payment_Models_Data_InstallmentOptions">
 					<tbody>
@@ -2201,6 +2223,67 @@ String length: inclusive between 4 and 4<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_KlarnaAttachment"</h2>
+				<table class="table" id="Payment_Models_Data_KlarnaAttachment">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentType</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+Utf8[1..1000]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Body</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+Utf8[1..100000]<br />
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_KlarnaOptions"</h2>
+				<table class="table" id="Payment_Models_Data_KlarnaOptions">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Attachment</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_KlarnaAttachment">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Klarna extra merchant data (EMD).<br> Check <a href="https://developers.klarna.com/documentation/klarna-checkout/use-cases/extra-merchant-data/" target="_blank">Klarna's EMD documentation</a> for further details.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_LiabilityInfo"</h2>
 				<table class="table" id="Payment_Models_Data_LiabilityInfo">
 					<tbody>
@@ -2415,7 +2498,7 @@ Id[1..15]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>NotifyUrl</strong><br />
+	<strong>SuccessNotifyUrl</strong><br />
 	<span class="text-muted small">
 					<span>
 				<span class="text-recommended">recommended</span>,
@@ -2424,7 +2507,24 @@ Id[1..15]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
+	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous success notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/notify/123</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FailNotifyUrl</strong><br />
+	<span class="text-muted small">
+					<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous failure notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
@@ -2629,6 +2729,25 @@ Range: inclusive between 0 and 99999<br />
 	<i class="small text-muted">
 				    <span>Example: <code>10</code></span>
 	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_OriginalCreditTransfer"</h2>
+				<table class="table" id="Payment_Models_Data_OriginalCreditTransfer">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Recipient</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Address of the Recipient.</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -3070,20 +3189,6 @@ Id[1..35]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>BankAccount</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 				
@@ -3105,7 +3210,35 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px"></div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenisation Specification</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BankAccount</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApplePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3416,7 +3549,7 @@ Possible values: PAYMENT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and WL Crypto Payments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -3619,7 +3752,7 @@ Id[1..80]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
+	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent when the transaction is completed.<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>[&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</code></span>
 	</i>
@@ -3636,7 +3769,7 @@ Id[1..80]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING). Up until now, this is only applicable for Paydirekt transactions.</div>
+	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for Paydirekt or WL Crypto Payments transactions.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/pendingnotify</code></span>
 	</i>
@@ -3847,6 +3980,67 @@ Utf8[1..1000]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_RefundDirectSupportingPaymentMeans"</h2>
+				<table class="table" id="Payment_Models_Data_RefundDirectSupportingPaymentMeans">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Card</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SchemeToken</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenisation Specification</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_RefundTransaction"</h2>
 				<table class="table" id="Payment_Models_Data_RefundTransaction">
 					<tbody>
@@ -3879,7 +4073,7 @@ Possible values: REFUND.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and WL Crypto Payments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -4627,7 +4821,7 @@ Possible values: PAYMENT, REFUND.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and wlcryptopayments refund at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and WL Crypto Payments refund at the moment)</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -5086,6 +5280,20 @@ Possible values: APPROVED, MANUAL_REVIEW.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional. Options which only apply to IDEAL.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Klarna</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_KlarnaOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. Options which only apply to Klarna.</div>
 	<i class="small text-muted">
 			</i>
 </td>
