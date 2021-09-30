@@ -2627,7 +2627,7 @@ Numeric[8..8]<br>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AuthorizeDirectPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7777,40 +7777,6 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;MobilePayment_Models_RiskDetails&quot;</h2>
-				<table class="table" id="MobilePayment_Models_RiskDetails">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>BlockReason</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Indicates the blocking reason of the transaction.</div>
-	<i class="small text-muted">
-Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLACKLIST_PAYMENT_MEANS_ORIGIN.<br>
-				    <span>Example: <code>BLACKLIST_IP_ORIGIN</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>IpLocation</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>CH</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Payment_Models_AlipayOptions&quot;</h2>
 				<table class="table" id="Payment_Models_AlipayOptions">
 					<tbody>
@@ -8339,6 +8305,95 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 	<div style="padding-bottom: 10px">Base64 encoded ApplePayPaymentToken Json according to <a href="https://developer.apple.com/library/archive/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html" target="_blank">Apple's Payment Token Format Reference</a></div>
 	<i class="small text-muted">
 Base64 encoded string<br>
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_AuthorizeDirectPaymentMeans&quot;</h2>
+				<table class="table" id="Payment_Models_Data_AuthorizeDirectPaymentMeans">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Card</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SchemeToken</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BankAccount</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApplePay</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
+	<i class="small text-muted">
 			</i>
 </td>
 							</tr>
@@ -10399,7 +10454,7 @@ Id[1..35]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenisation Specification</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -10414,20 +10469,6 @@ Id[1..35]<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ApplePay</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -11223,7 +11264,7 @@ Utf8[1..1000]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenisation Specification</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -12485,6 +12526,40 @@ Possible values: APPROVED, MANUAL_REVIEW.<br>
 	<div style="padding-bottom: 10px">Optional. Options which only apply to Klarna.</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_RiskDetails&quot;</h2>
+				<table class="table" id="Payment_Models_RiskDetails">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BlockReason</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates the blocking reason of the transaction.</div>
+	<i class="small text-muted">
+Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLACKLIST_PAYMENT_MEANS_ORIGIN.<br>
+				    <span>Example: <code>BLACKLIST_IP_ORIGIN</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpLocation</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>CH</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
