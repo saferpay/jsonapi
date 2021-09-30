@@ -1234,7 +1234,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AuthorizeDirectPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
