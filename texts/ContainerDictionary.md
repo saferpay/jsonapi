@@ -250,8 +250,47 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Common_Models_Data_Amount"</h2>
-				<table class="table" id="Common_Models_Data_Amount">
+			<h2>Container "Common_Models_Data_AmountWithoutZero"</h2>
+				<table class="table" id="Common_Models_Data_AmountWithoutZero">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Value</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
+	<i class="small text-muted">
+				    <span>Example: <code>100</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CurrencyCode</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
+	<i class="small text-muted">
+				    <span>Example: <code>CHF</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Common_Models_Data_AmountWithZero"</h2>
+				<table class="table" id="Common_Models_Data_AmountWithZero">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -314,7 +353,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> de-ch - Swiss German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-ch - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
 	<i class="small text-muted">
 				    <span>Example: <code>de</code></span>
 	</i>
@@ -420,7 +459,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> de - German<br> de-ch - Swiss German<br> en - English<br> fr - French<br> da - Danish<br> cs - Czech<br> es - Spanish<br> et - Estonian<br> hr - Croatian<br> it - Italian<br> hu - Hungarian<br> lv - Latvian<br> lt - Lithuanian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ru - Russian<br> ro - Romanian<br> sk - Slovak<br> sl - Slovenian<br> fi - Finnish<br> sv - Swedish<br> tr - Turkish<br> el - Greek<br> ja - Japanese<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-ch - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
 	<i class="small text-muted">
 				    <span>Example: <code>de</code></span>
 	</i>
@@ -472,8 +511,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24<br />
-				    <span>Example: <code>1.24</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25<br />
+				    <span>Example: <code>1.25</code></span>
 	</i>
 </td>
 							</tr>
@@ -581,8 +620,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24<br />
-				    <span>Example: <code>1.24</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25<br />
+				    <span>Example: <code>1.25</code></span>
 	</i>
 </td>
 							</tr>
@@ -1208,6 +1247,20 @@ Base64 encoded string<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>GooglePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_BancontactProcessingData"</h2>
@@ -1398,7 +1451,7 @@ AlphaNumeric[8..11]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1489,7 +1542,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, WLCRYPTOPAYMENTS.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 			</i>
 </td>
 							</tr>
@@ -1855,7 +1908,7 @@ Iso885915[1..100]<br />
 	<strong>InstallmentFee</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1882,7 +1935,7 @@ Iso885915[1..100]<br />
 	<strong>TotalAmountDue</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1904,7 +1957,7 @@ Iso885915[1..100]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1993,6 +2046,27 @@ Possible values: DEFAULT, SIX, NONE.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_GooglePay"</h2>
+				<table class="table" id="Payment_Models_Data_GooglePay">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentToken</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">GooglePay Payment Token</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2098,7 +2172,7 @@ Range: inclusive between 2 and 99<br />
 	<strong>InstallmentFee</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2125,7 +2199,7 @@ Range: inclusive between 2 and 99<br />
 	<strong>FirstInstallmentAmount</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2139,7 +2213,7 @@ Range: inclusive between 2 and 99<br />
 	<strong>SubsequentInstallmentAmount</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2153,7 +2227,7 @@ Range: inclusive between 2 and 99<br />
 	<strong>TotalAmountDue</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2430,7 +2504,7 @@ Id[1..15]<br />
 	<strong>Fee</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2444,7 +2518,7 @@ Id[1..15]<br />
 	<strong>FeeRefund</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3095,7 +3169,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3379,6 +3453,20 @@ Id[1..35]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayPal</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_PayPalInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">PayPal data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_PaymentPagePayment"</h2>
@@ -3392,7 +3480,7 @@ Id[1..35]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3654,7 +3742,7 @@ Id[1..64]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3778,6 +3866,46 @@ Id[1..80]<br />
 	<div style="padding-bottom: 10px">Issuer reference information, if applicable</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_PayPalInfo"</h2>
+				<table class="table" id="Payment_Models_Data_PayPalInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayerId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">PayerId from PayPal</div>
+	<i class="small text-muted">
+				    <span>Example: <code>5b9aefc5-9b48-4a95-ae47-cda20420d68e</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SellerProtectionStatus</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Seller protection status from PayPal.</div>
+	<i class="small text-muted">
+Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
+				    <span>Example: <code>ELIGIBLE</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
@@ -3977,7 +4105,75 @@ Utf8[1..100]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+					<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference defined by the merchant.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description provided by merchant</div>
+	<i class="small text-muted">
+Utf8[1..1000]<br />
+				    <span>Example: <code>Description</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>RestrictRefundAmountToCapturedAmount</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The refund is rejected if the sum of authorized refunds exceeds the capture value.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_RefundDirect"</h2>
+				<table class="table" id="Payment_Models_Data_RefundDirect">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4178,7 +4374,7 @@ Id[1..64]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4926,7 +5122,7 @@ Id[1..64]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5241,7 +5437,7 @@ Possible values: MASTERPASS.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SAFERPAYTEST, SOFORT, TWINT, UNIONPAY, VISA, VPAY, WLCRYPTOPAYMENTS.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -5386,7 +5582,7 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5495,6 +5691,50 @@ Possible values: RANDOM.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of strings representing all the supported currencies for the payment method</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LogoUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The logo of the payment method as url</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_WalletInfo"</h2>
+				<table class="table" id="RestApi_Models_WalletInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>WalletName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of the wallet</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LogoUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The logo of the wallet as url</div>
 	<i class="small text-muted">
 			</i>
 </td>
