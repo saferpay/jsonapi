@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.24](#v1.24.0.0.20210914)
 - [Version 1.23](#v1.23.0.0.20210713)
 - [Version 1.22](#v1.22.0.0.20210518)
 - [Version 1.21](#v1.21.0.0.20210323)
@@ -21,6 +22,15 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.24.0.0.20210914"></a> Version 1.24 (released 2021-09-14)
+- available on Sandbox: 2021-08-31
+- introduced version 1.24
+- added value `1.24` for _SpecVersion_
+- replaced parameter `NotifyUrl` in the _Notification_ container with the two separate parameters `SuccessNotifyUrl` and `FailNotifyUrl` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment) requests
+- added container _Klarna_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request
+- added container _OriginalCreditTransfer_ to [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) request
+- added container _ApplePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
 
 ## <a name="v1.23.0.0.20210713"></a> Version 1.23 (released 2021-07-13)
 - available on Sandbox: 2021-07-13
