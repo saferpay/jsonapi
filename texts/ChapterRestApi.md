@@ -465,7 +465,7 @@ No example available
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This property only exists for the JsonApi Doc</div>
+	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
 	<i class="small text-muted">
 			</i>
 </td>
