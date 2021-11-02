@@ -350,7 +350,7 @@ Id[1..20]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
+				globally unique identifier
 	</span>
 </td>
 <td class="col-sm-8">
@@ -460,11 +460,12 @@ No example available
 					<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				array of strings
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Array of strings representing all wallets that are available for the terminal</div>
+	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -482,22 +483,24 @@ No example available
     {
       "PaymentMethod": "VISA",
       "Currencies": [
-        "EUR",
-        "CHF"
-      ]
+        "USD"
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/visa.svg?v=637381079349290910"
     },
     {
       "PaymentMethod": "MASTERCARD",
       "Currencies": [
         "EUR",
         "CHF"
-      ]
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/mastercard.svg?v=637381079349290910"
     },
     {
       "PaymentMethod": "MAESTRO",
       "Currencies": [
         "EUR"
-      ]
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/maestro.svg?v=637381079349290910"
     },
     {
       "PaymentMethod": "PAYPAL",
@@ -505,11 +508,19 @@ No example available
         "EUR",
         "CHF",
         "USD"
-      ]
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/paypal.svg?v=637381079349290910"
     }
   ],
   "Wallets": [
-    "APPLEPAY"
+    {
+      "WalletName": "APPLEPAY",
+      "LogoUrl": "https://www.saferpay.com/static/logo/applepay.svg?v=637381079349290910"
+    },
+    {
+      "WalletName": "GOOGLEPAY",
+      "LogoUrl": "https://www.saferpay.com/static/logo/googlepay.svg?v=637381079349290910"
+    }
   ]
 }
 </pre>

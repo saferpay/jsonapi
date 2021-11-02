@@ -213,7 +213,7 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, SAFERPAYTEST, UNIONPAY, VISA, VPAY. Additional values may be accepted but are ignored.<br />
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, UNIONPAY, VISA. Additional values may be accepted but are ignored.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -1060,7 +1060,7 @@ Id[1..50]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1252,7 +1252,7 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Strong Customer Authentication (exemptions, ...)</div>
+	<div style="padding-bottom: 10px">Strong Customer Authentication exemption for this transaction.<br> Some exemptions are only applicable to payer-initiated transactions and will be ignored otherwise. If you are performing a payer-initiated transaction, make sure you set the 'Initiator' attribute properly (see below).</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1902,7 +1902,7 @@ This method may be used to finalize previously authorized transactions and refun
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2180,7 +2180,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_Amount">object</a>
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3219,7 +3219,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_Refund">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_RefundDirect">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

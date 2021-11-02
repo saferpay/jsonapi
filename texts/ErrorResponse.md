@@ -29,7 +29,7 @@
 	<strong>Risk</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#MobilePayment_Models_RiskDetails">object</a>
+				<a class="type-details in" href="#Payment_Models_RiskDetails">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
