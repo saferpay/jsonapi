@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.25](#v1.25.0.0.20211116)
 - [Version 1.24](#v1.24.0.0.20210914)
 - [Version 1.23](#v1.23.0.0.20210713)
 - [Version 1.22](#v1.22.0.0.20210518)
@@ -22,6 +23,16 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.25.0.0.20211116"></a> Version 1.25 (released 2021-11-16)
+- available on Sandbox: 2021-11-02
+- introduced version 1.25
+- added value `1.25` for _SpecVersion_
+- added container _GooglePay_ to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
+- added value `GOOGLEPAY` for _Wallets_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of Apple Pay
+- added container _PayPal_ to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) response
+- added parameter _RestrictRefundAmountToCapturedAmount_ to container _Refund_ in [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) request
+- added parameter _LogoUrl_ to containers _PaymentMethods_ and _Wallets_ in Management API [TerminalInfo PaymentMethods](index.html#rest_customers_terminals_payment-methods) response
 
 ## <a name="v1.24.0.0.20210914"></a> Version 1.24 (released 2021-09-14)
 - available on Sandbox: 2021-08-31
