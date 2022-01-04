@@ -219,17 +219,18 @@ Utf8[1..100]<br />
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Display</strong><br />
+	<strong>AddressSource</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
+				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Specifies whether to show the address form or not.</div>
+	<div style="padding-bottom: 10px">Specifies where the Address will be taken from depending on the payment method.<br> NONE will result in no address returned. As of version 1.26, PREFER_PAYMENTMETHOD will return the delivery address from PayPal.<br> Where available, other payment methods will implement PREFER_PAYMENTMETHOD in the future.<br> PREFER_PAYMENTMETHOD will default to SAFERPAY if not available with the chosen payment method.</div>
 	<i class="small text-muted">
+Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 			</i>
 </td>
 							</tr>
@@ -241,7 +242,7 @@ Utf8[1..100]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.</div>
+	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
 	<i class="small text-muted">
 Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br />
 				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
@@ -511,8 +512,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25<br />
-				    <span>Example: <code>1.25</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26<br />
+				    <span>Example: <code>1.26</code></span>
 	</i>
 </td>
 							</tr>
@@ -620,8 +621,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25<br />
-				    <span>Example: <code>1.25</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26<br />
+				    <span>Example: <code>1.26</code></span>
 	</i>
 </td>
 							</tr>
@@ -1067,6 +1068,109 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IssuerReference</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasInsertDirectPaymentMeans"</h2>
+				<table class="table" id="Payment_Models_Data_AliasInsertDirectPaymentMeans">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SaferpayFields</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Card</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>SchemeToken</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BankAccount</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>GooglePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_AlternativePaymentNotification"</h2>
@@ -1235,20 +1339,6 @@ Base64 encoded string<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>ApplePay</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br />
 	<span class="text-muted small">
 				
@@ -1257,6 +1347,20 @@ Base64 encoded string<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApplePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2107,6 +2211,20 @@ Possible values: DEFAULT, SIX, NONE.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Card</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3358,6 +3476,20 @@ Id[1..35]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>GooglePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_PaymentMeansInfo"</h2>
@@ -4155,7 +4287,7 @@ Utf8[1..1000]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The refund is rejected if the sum of authorized refunds exceeds the capture value.</div>
+	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of authorized refunds exceeds the capture value. By default this check is disabled.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5566,6 +5698,207 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>CH</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_Data_Order"</h2>
+				<table class="table" id="RestApi_Models_Data_Order">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Items</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_Data_OrderItem">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Order items</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_Data_OrderItem"</h2>
+				<table class="table" id="RestApi_Models_Data_OrderItem">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Order item type</div>
+	<i class="small text-muted">
+Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SALESTAX, SURCHARGE.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product id</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>C123192</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>VariantId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product variant id</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>C123192-red</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Name</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product name</div>
+	<i class="small text-muted">
+Utf8[1..200]<br />
+				    <span>Example: <code>red swiss army knife</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CategoryName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Category name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>knives</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Product description</div>
+	<i class="small text-muted">
+Utf8[1..200]<br />
+				    <span>Example: <code>The well known swiss army knife</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Quantity</strong><br />
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The quantity of the order item</div>
+	<i class="small text-muted">
+				    <span>Example: <code>3</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>UnitPrice</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 2.00 &rArr; Value=200). <b>Only Integer values will be accepted!</b></div>
+	<i class="small text-muted">
+				    <span>Example: <code>200</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IsPreOrder</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Flag, which indicates that the order item is a pre order. Per default, it is not a pre order.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>true</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TaxRate</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 125 means 1.25%<br> Valid values are 0-99999</div>
+	<i class="small text-muted">
+Range: inclusive between 0 and 99999<br />
+				    <span>Example: <code>2100</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TaxAmount</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Tax amount which is included in the item price</div>
+	<i class="small text-muted">
+				    <span>Example: <code>42</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DiscountAmount</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Discount amount including tax</div>
+	<i class="small text-muted">
+				    <span>Example: <code>10</code></span>
 	</i>
 </td>
 							</tr>

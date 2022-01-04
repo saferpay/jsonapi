@@ -254,7 +254,7 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Used to have the payer enter his billing address in the payment process.</div>
+	<div style="padding-bottom: 10px">Use this container if you need to get a billing address from the payer during the payment process.<br> Saferpay can show an address form and depending on the means of payment, it is also possible to get the address from the means of payment (e.g. PayPal or any kind of wallet) if available.<br> Check the options in the container for different behaviors.<br> In case you also provide payer addresses, these are used as default values to prefill the address form (if displayed) and are overwritten by the final address entered by the payer or provided by the payment method.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -268,7 +268,7 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Used to have the payer enter his delivery address in the payment process.</div>
+	<div style="padding-bottom: 10px">Use this container if you need to get a delivery address from the payer during the payment process.<br> Saferpay can show an address form and depending on the means of payment, it is also possible to get the address from the means of payment (e.g. PayPal or any kind of wallet) if available.<br> Check the options in the container for different behaviors.<br> In case you also provide payer addresses, these are used as default values to prefill the address form (if displayed) and are overwritten by the final address entered by the payer or provided by the payment method.</div>
 	<i class="small text-muted">
 			</i>
 </td>

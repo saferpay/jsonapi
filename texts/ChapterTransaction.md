@@ -2113,8 +2113,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 <div class="info">
 <p><strong>Important:</strong></p>
 <ul>
-<li>MultipartCapture is available for SIX Acquiring contracts <strong>only!</strong></li>
-<li>Your live merchant-account needs to be configured, in order to support Multipart Captures, or the request will fail!</li>
+<li>MultipartCapture is available for PayPal, Klarna and card payments Visa, Mastercard, Maestro, Diners/Discover, JCB and American Express which are acquired by Worldline.</li>
 <li>No MultipartCapture request should be sent before receiving the response of a preceding request (i.e. no parallel calls are allowed).</li>
 <li>The sum of multipart captures must not exceed the authorized amount.</li>
 <li>A unique OrderPartId must be used for each request.</li>
