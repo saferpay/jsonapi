@@ -5,6 +5,10 @@
 
 This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.
 
+<div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+</div>
+
 --->>>
 
 <div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Insert</p></div>
@@ -587,7 +591,7 @@ This method may be used to insert an alias directly with card-data collected by 
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasInsertDirectPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

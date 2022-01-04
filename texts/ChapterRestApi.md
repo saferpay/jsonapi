@@ -290,6 +290,20 @@ Id[1..20]<br />
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Order</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional order information</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
