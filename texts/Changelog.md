@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.26](#v1.26.0.0.20220118)
 - [Version 1.25](#v1.25.0.0.20211116)
 - [Version 1.24](#v1.24.0.0.20210914)
 - [Version 1.23](#v1.23.0.0.20210713)
@@ -23,6 +24,13 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.26.0.0.20220118"></a> Version 1.26 (released 2022-01-18)
+- available on Sandbox: 2021-12-30
+- introduced version 1.26
+- added value `1.26` for _SpecVersion_
+- added container _GooglePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
+- added parameter _AddressSource_ to containers _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) response
 
 ## <a name="v1.25.0.0.20211116"></a> Version 1.25 (released 2021-11-16)
 - available on Sandbox: 2021-11-02
