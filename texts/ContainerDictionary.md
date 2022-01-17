@@ -228,7 +228,7 @@ Utf8[1..100]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Specifies where the Address will be taken from depending on the payment method.<br> NONE will result in no address returned. As of version 1.26, PREFER_PAYMENTMETHOD will return the delivery address from PayPal.<br> Where available, other payment methods will implement PREFER_PAYMENTMETHOD in the future.<br> PREFER_PAYMENTMETHOD will default to SAFERPAY if not available with the chosen payment method.</div>
+	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported (currently only PayPal). PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
 	<i class="small text-muted">
 Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 			</i>
