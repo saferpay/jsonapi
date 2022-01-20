@@ -1,3 +1,6 @@
+branches:
+    only:
+    - master
 language: csharp
 script: |
     cd "$TRAVIS_BUILD_DIR"
