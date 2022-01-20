@@ -3,7 +3,7 @@
 
 ## <a name="Payment_v1_OmniChannel_InsertAlias"></a>OmniChannel InsertAlias
 
-This function may be used to create an alias by providing a SixTransactionReference.
+This function may be used to create an alias by providing a SixTransactionReference. (this is a test text which should not be published)
 
 --->>>
 
