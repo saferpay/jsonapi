@@ -30,7 +30,9 @@
 - introduced version 1.26
 - added value `1.26` for _SpecVersion_
 - added container _GooglePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
-- added parameter _AddressSource_ to containers _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) response
+- added parameter _AddressSource_ to container _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+- added parameter _AddressSource_ to container _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+- removed parameter _Display_ from containers _BillingAddressForm_ and _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) as it is replaced by _AddressSource_
 
 ## <a name="v1.25.0.0.20211116"></a> Version 1.25 (released 2021-11-16)
 - available on Sandbox: 2021-11-02
