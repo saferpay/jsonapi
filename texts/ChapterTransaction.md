@@ -1486,6 +1486,20 @@ Possible values: MERCHANT, PAYER.<br />
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Liability</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.26</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 

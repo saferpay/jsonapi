@@ -150,7 +150,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

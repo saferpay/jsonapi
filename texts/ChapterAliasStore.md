@@ -461,7 +461,7 @@ Id[1..50]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -713,7 +713,7 @@ This method may be used to insert an alias directly with card-data collected by 
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -931,7 +931,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

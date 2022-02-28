@@ -362,20 +362,6 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>DeliveryAddress</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
@@ -399,6 +385,20 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. Use a unique id for your customer (a UUID is highly recommended).<br> For GDPR reasons, we don't recommend using an id which contains personal data (eg. no name).</div>
 	<i class="small text-muted">
 Id[1..50]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DeliveryAddress</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
+	<i class="small text-muted">
 			</i>
 </td>
 							</tr>
@@ -468,20 +468,6 @@ Id[1..50]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>DeliveryAddress</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information on the payers delivery address</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
@@ -512,8 +498,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26<br />
-				    <span>Example: <code>1.26</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27<br />
+				    <span>Example: <code>1.27</code></span>
 	</i>
 </td>
 							</tr>
@@ -621,8 +607,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26<br />
-				    <span>Example: <code>1.26</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27<br />
+				    <span>Example: <code>1.27</code></span>
 	</i>
 </td>
 							</tr>
@@ -968,7 +954,7 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days.</div>
+	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days. If not filled, the default lifetime (1000 days) will be used.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>1000</code></span>
 	</i>
@@ -1167,6 +1153,115 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApplePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasPaymentMeansInfo"</h2>
+				<table class="table" id="Payment_Models_Data_AliasPaymentMeansInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Brand</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Brand information</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DisplayText</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
+	<i class="small text-muted">
+				    <span>Example: <code>DisplayText</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Wallet</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<i class="small text-muted">
+				    <span>Example: <code>MasterPass</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Card</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BankAccount</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Bank account data for direct debit transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Twint</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_TwintInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Twint data</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2068,6 +2163,40 @@ Iso885915[1..100]<br />
 	<div style="padding-bottom: 10px">Amount in payer’s currency</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Markup</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">DCC markup fee</div>
+	<i class="small text-muted">
+				    <span>Example: <code>3%</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExchangeRate</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The used exchange rate including markup</div>
+	<i class="small text-muted">
+				    <span>Example: <code>1,2345</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
@@ -3490,6 +3619,20 @@ Id[1..35]<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ApplePay</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment Data from ApplePay</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_PaymentMeansInfo"</h2>
@@ -4038,6 +4181,22 @@ Id[1..80]<br />
 Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
 				    <span>Example: <code>ELIGIBLE</code></span>
 	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Email</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The email address used in PayPal</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -4678,7 +4837,7 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime will be used.</div>
+	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1000 days) will be used.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br />
 				    <span>Example: <code>1000</code></span>
@@ -4876,6 +5035,19 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is the transaction B2B?</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DeviceFingerprint</strong><br />
+	<span class="text-muted small">
+				System.Object
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Fraugster device fingerprint according to https://docs.fraugster.com/integration-tools/device-fingerprinting/</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5468,7 +5640,7 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay.</div>
+	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1000 days) will be used.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br />
 			</i>

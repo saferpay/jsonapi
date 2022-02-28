@@ -238,7 +238,7 @@ AlphaNumeric[10..10]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
+	<div style="padding-bottom: 10px">This parameter lets you define your payment page config (PPConfig) by name. If this parameter is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
 	<i class="small text-muted">
 Id[1..20]<br />
 				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
