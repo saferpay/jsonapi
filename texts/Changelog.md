@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.27](#v1.27.0.0.20220315)
 - [Version 1.26](#v1.26.0.0.20220118)
 - [Version 1.25](#v1.25.0.0.20211116)
 - [Version 1.24](#v1.24.0.0.20210914)
@@ -24,6 +25,15 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.27.0.0.20220315"></a> Version 1.27 (released 2022-03-15)
+- available on Sandbox: 2022-03-01
+- introduced version 1.27
+- added value `1.27` for _SpecVersion_
+- container _Liability_ replaces _ThreeDs_ in [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) responses
+- added paramters _Markup_ and _ExchangeRate_ to container _Dcc_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) and [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) responses
+- added parameter _Email_ to container _PayPal_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire), [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) and [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction) responses
+- added paramter _DeviceFingerprint_ to container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests
 
 ## <a name="v1.26.0.0.20220118"></a> Version 1.26 (released 2022-01-18)
 - available on Sandbox: 2021-12-30
