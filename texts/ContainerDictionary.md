@@ -2193,9 +2193,9 @@ Iso885915[1..100]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The used exchange rate including markup</div>
+	<div style="padding-bottom: 10px">The used exchange rate including markup<br> The decimal separator used is '.' regardless of location</div>
 	<i class="small text-muted">
-				    <span>Example: <code>1,2345</code></span>
+				    <span>Example: <code>1.2345</code></span>
 	</i>
 </td>
 							</tr>
