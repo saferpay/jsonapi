@@ -37,7 +37,7 @@
 - added containers _ApplePay_ and _GooglePay_ to [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
 - added container _ApplePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
 - added values `GOOGLEPAY` and `APPLEPAY` to `Wallet` in [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) responses
-- added value `APPLEPAY` to `Wallet` in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) responses
+- added value `APPLEPAY` to `Wallet` in [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) responses
 
 ## <a name="v1.26.0.0.20220118"></a> Version 1.26 (released 2022-01-18)
 - available on Sandbox: 2021-12-30
