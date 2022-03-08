@@ -34,6 +34,10 @@
 - added parameters _Markup_ and _ExchangeRate_ to container _Dcc_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) and [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) responses
 - added parameter _Email_ to container _PayPal_ in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) responses
 - added parameter _DeviceFingerprint_ to container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests
+- added containers _ApplePay_ and _GooglePay_ to [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
+- added container _ApplePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
+- added values `GOOGLEPAY` and `APPLEPAY` to `Wallet` in [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) requests
+- added value `APPLEPAY` to `Wallet` in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
 
 ## <a name="v1.26.0.0.20220118"></a> Version 1.26 (released 2022-01-18)
 - available on Sandbox: 2021-12-30
