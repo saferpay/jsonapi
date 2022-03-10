@@ -52,7 +52,6 @@
 - available on Sandbox: 2021-11-02
 - introduced version 1.25
 - added value `1.25` for _SpecVersion_
-- added container _GooglePay_ to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
 - added value `GOOGLEPAY` for _Wallets_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of Apple Pay
 - added container _PayPal_ to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) response
 - added parameter _RestrictRefundAmountToCapturedAmount_ to container _Refund_ in [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) request
