@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.28](#v1.28.0.0.20220517)
 - [Version 1.27](#v1.27.0.0.20220315)
 - [Version 1.26](#v1.26.0.0.20220118)
 - [Version 1.25](#v1.25.0.0.20211116)
@@ -25,6 +26,12 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.28.0.0.20220517"></a> Version 1.28 (released 2022-05-17)
+- available on Sandbox: 2022-05-04
+- introduced version 1.28
+- added value `1.28` for _SpecVersion_
+- added parameter _VatNumber_ to `BillingAddress` container in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment), [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment), [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 
 ## <a name="v1.27.0.0.20220315"></a> Version 1.27 (released 2022-03-15)
 - available on Sandbox: 2022-03-01

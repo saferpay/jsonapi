@@ -337,9 +337,6 @@ Id[1..20]<br />
       "CountryCode": "CH",
       "Email": "payer@provider.com"
     }
-  },
-  "BillingAddressForm": {
-    "Display": true
   }
 }
 </pre>

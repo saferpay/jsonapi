@@ -244,7 +244,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
 	<i class="small text-muted">
-Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br />
+Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br />
 				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
 	</i>
 </td>
@@ -329,6 +329,234 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Common_Models_Data_BillingAddress"</h2>
+				<table class="table" id="Common_Models_Data_BillingAddress">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FirstName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's first name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>John</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LastName</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's last name</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>Doe</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Company</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's company</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>ACME Corp.</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Gender</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's gender</div>
+	<i class="small text-muted">
+Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
+				    <span>Example: <code>COMPANY</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Street</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's street</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>Bakerstreet 32</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Zip</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's zip code</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>8000</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>City</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's city</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>Zurich</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CountryCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
+	<i class="small text-muted">
+Alphabetic[2..2]<br />
+				    <span>Example: <code>CH</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Email</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's email address</div>
+	<i class="small text-muted">
+				    <span>Example: <code>payer@provider.com</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DateOfBirth</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
+	<i class="small text-muted">
+AlphaNumeric[10..10]<br />
+				    <span>Example: <code>1990-05-31</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>LegalForm</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's legal form</div>
+	<i class="small text-muted">
+Possible values: AG, GmbH, Misc.<br />
+				    <span>Example: <code>AG</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Street2</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>Stewart House</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CountrySubdivisionCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's country subdivision code<br> ISO 3166-2 country subdivision code</div>
+	<i class="small text-muted">
+AlphaNumeric[1..3]<br />
+				    <span>Example: <code>ZH</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Phone</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's phone number</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>+41 12 345 6789</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>VatNumber</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The payer's vat number</div>
+	<i class="small text-muted">
+Utf8[1..25]<br />
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Common_Models_Data_Payer"</h2>
 				<table class="table" id="Common_Models_Data_Payer">
 					<tbody>
@@ -365,7 +593,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+				<a class="type-details in" href="#Common_Models_Data_BillingAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -471,7 +699,7 @@ Id[1..50]<br />
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+				<a class="type-details in" href="#Common_Models_Data_BillingAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -498,8 +726,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27<br />
-				    <span>Example: <code>1.27</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28<br />
+				    <span>Example: <code>1.28</code></span>
 	</i>
 </td>
 							</tr>
@@ -607,8 +835,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27<br />
-				    <span>Example: <code>1.27</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28<br />
+				    <span>Example: <code>1.28</code></span>
 	</i>
 </td>
 							</tr>
@@ -954,7 +1182,7 @@ Numeric[8..8]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days. If not filled, the default lifetime (1000 days) will be used.</div>
+	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>1000</code></span>
 	</i>
@@ -3191,7 +3419,7 @@ Range: inclusive between 0 and 99999<br />
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_Address">object</a>
+				<a class="type-details in" href="#Common_Models_Data_BillingAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4837,7 +5065,7 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1000 days) will be used.</div>
+	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1096 days) will be used.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br />
 				    <span>Example: <code>1000</code></span>
@@ -5043,7 +5271,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 								<td class="col-sm-4 text-right">
 	<strong>DeviceFingerprint</strong><br />
 	<span class="text-muted small">
-				System.Object
+				object
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5640,7 +5868,7 @@ Id[1..40]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1000 days) will be used.</div>
+	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay.</div>
 	<i class="small text-muted">
 Range: inclusive between 1 and 1600<br />
 			</i>
