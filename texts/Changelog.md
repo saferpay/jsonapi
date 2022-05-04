@@ -31,7 +31,7 @@
 - available on Sandbox: 2022-05-04
 - introduced version 1.28
 - added value `1.28` for _SpecVersion_
-- added parameter _VatNumber_ to `BillingAddress` container in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment), [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment), [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
+- added parameter _VatNumber_ to `BillingAddress` container in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment), [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment), [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_terminals_spg-offers) requests and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) and [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 
 ## <a name="v1.27.0.0.20220315"></a> Version 1.27 (released 2022-03-15)
 - available on Sandbox: 2022-03-01
@@ -51,9 +51,9 @@
 - introduced version 1.26
 - added value `1.26` for _SpecVersion_
 - added container _GooglePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
-- added parameter _AddressSource_ to container _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+- added parameter _AddressSource_ to container _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_terminals_spg-offers)
 - added parameter _AddressSource_ to container _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-- removed parameter _Display_ from containers _BillingAddressForm_ and _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) as it is replaced by _AddressSource_
+- removed parameter _Display_ from containers _BillingAddressForm_ and _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_terminals_spg-offers) as it is replaced by _AddressSource_
 
 ## <a name="v1.25.0.0.20211116"></a> Version 1.25 (released 2021-11-16)
 - available on Sandbox: 2021-11-02
@@ -117,7 +117,7 @@
 - added containers _Order_ and _RiskFactors_ to [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) request
 - added container _FraudPrevention_ in [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) responses
 - removed parameters _AccountCreationDate_ and _PasswordLastChangeDate_ from container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests (moved to container _PayerProfile_)
-- added parameter _Description_ to container _Payment_ in [Saferpay Secure PayGate API CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) request
+- added parameter _Description_ to container _Payment_ in [Saferpay Secure PayGate API CreateOffer](index.html#rest_customers_terminals_spg-offers) request
 
 ## <a name="v1.18.0.0.20200714"></a> Version 1.18 (released 2020-07-14)
 - available on Sandbox: 2020-07-01
@@ -126,7 +126,7 @@
 - added parameter _Id_ to container _Payer_ in  [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment), [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire), [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 - added container _Order_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
 - added container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
-- added container _RegisterAlias_ in [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+- added container _RegisterAlias_ in [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_terminals_spg-offers)
 
 ## <a name="v1.17.0.0.20200512"></a> Version 1.17 (released 2020-05-12)
 - available on Sandbox: 2020-04-28
