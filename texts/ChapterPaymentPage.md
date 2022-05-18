@@ -250,7 +250,7 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br />
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
+				<a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -264,7 +264,7 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br />
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
+				<a class="type-details in" href="#Common_Models_Data_DeliveryAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
