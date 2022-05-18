@@ -1179,7 +1179,7 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br>
 	<strong>BillingAddressForm</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
+				<a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1193,7 +1193,7 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br>
 	<strong>DeliveryAddressForm</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
+				<a class="type-details in" href="#Common_Models_Data_DeliveryAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7016,7 +7016,7 @@ Id[1..20]<br>
 	<strong>BillingAddressForm</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_AddressForm">object</a>
+				<a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7426,43 +7426,6 @@ Utf8[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Common_Models_Data_AddressForm&quot;</h2>
-				<table class="table" id="Common_Models_Data_AddressForm">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>AddressSource</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
-	<i class="small text-muted">
-Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>MandatoryFields</strong><br>
-	<span class="text-muted small">
-				array of strings
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
-	<i class="small text-muted">
-Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br>
-				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Common_Models_Data_AmountWithoutZero&quot;</h2>
 				<table class="table" id="Common_Models_Data_AmountWithoutZero">
 					<tbody>
@@ -7765,6 +7728,80 @@ Utf8[1..100]<br>
 	<i class="small text-muted">
 Utf8[1..25]<br>
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Common_Models_Data_BillingAddressForm&quot;</h2>
+				<table class="table" id="Common_Models_Data_BillingAddressForm">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AddressSource</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
+	<i class="small text-muted">
+Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MandatoryFields</strong><br>
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
+	<i class="small text-muted">
+Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br>
+				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Common_Models_Data_DeliveryAddressForm&quot;</h2>
+				<table class="table" id="Common_Models_Data_DeliveryAddressForm">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AddressSource</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
+	<i class="small text-muted">
+Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MandatoryFields</strong><br>
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
+	<i class="small text-muted">
+Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br>
+				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
