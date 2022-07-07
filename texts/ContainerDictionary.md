@@ -693,8 +693,30 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">When set to true, a transaction might be authorized with an amount less the requested authorization amount. Not all the payment methods support this option. This option is currently supported only in AuthorizeDirect.</div>
+	<div style="padding-bottom: 10px">When set to true, a transaction might be authorized with an amount less than requested authorization amount.<br> <div class="info"> <p><strong>Important:</strong></p> <ul> <li>Not all the payment methods support this option.</li> <li>This option is currently supported only in Transaction/Initialize and Transaction/AuthorizeDirect.</li> <li>Using this option in Transaction/Initialize prevents DCC.</li> </ul> </div></div>
 	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Common_Models_Data_SpgBillingAddressForm"</h2>
+				<table class="table" id="Common_Models_Data_SpgBillingAddressForm">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AddressSource</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
+	<i class="small text-muted">
+Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 			</i>
 </td>
 							</tr>
@@ -763,8 +785,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28<br />
-				    <span>Example: <code>1.28</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29<br />
+				    <span>Example: <code>1.29</code></span>
 	</i>
 </td>
 							</tr>
@@ -872,8 +894,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28<br />
-				    <span>Example: <code>1.28</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29<br />
+				    <span>Example: <code>1.29</code></span>
 	</i>
 </td>
 							</tr>

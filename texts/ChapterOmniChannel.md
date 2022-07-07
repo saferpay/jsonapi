@@ -215,7 +215,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 
 ## <a name="Payment_v1_OmniChannel_AcquireTransaction"></a>OmniChannel AcquireTransaction
 
-This function may be used to acquire an authorized transaction by providing a SixTransactionReference. This transaction can then be captured or canceled.
+This function may be used to acquire a POS authorized or captured transaction by providing a SixTransactionReference. This transaction can then be authorized, canceled, captured or refunded.
 
 --->>>
 
