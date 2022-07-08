@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.29](#v1.29.0.0.20220707)
 - [Version 1.28](#v1.28.0.0.20220517)
 - [Version 1.27](#v1.27.0.0.20220315)
 - [Version 1.26](#v1.26.0.0.20220118)
@@ -26,6 +27,12 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.29.0.0.20220707"></a> Version 1.29 (released 2022-07-07)
+- available on Sandbox: 2022-07-07
+- introduced version 1.29
+- added value `1.29` for _SpecVersion_
+- in addition to [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), partial approval is now supported by [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize). Using this option in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) prevents DCC.
 
 ## <a name="v1.28.0.0.20220517"></a> Version 1.28 (released 2022-05-17)
 - available on Sandbox: 2022-05-04
