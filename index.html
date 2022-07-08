@@ -97,7 +97,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="#ChapterRestApi">Management API</a>
+							<a href="#ChapterManagementApi">Management API</a>
 							<ul class="nav">
 								<li><a href="#rest_customers_terminals_fields-access-tokens">HostedFieldsAccessToken CreateAccessToken</a></li>
 								<li><a href="#rest_customers_terminals_spg-offers">SecurePayGate Offers</a></li>
@@ -205,7 +205,7 @@
 							</ul>
 							</li>
 							<li>
-							<a href="#ChapterRestApi">Management API</a>
+							<a href="#ChapterManagementApi">Management API</a>
 							<ul class="nav">
 								<li><a href="#rest_customers_terminals_fields-access-tokens">HostedFieldsAccessToken CreateAccessToken</a></li>
 								<li><a href="#rest_customers_terminals_spg-offers">SecurePayGate Offers</a></li>
@@ -6833,14 +6833,14 @@ Id[1..80]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterRestApi"><h1><a name="ChapterRestApi"></a>Management API</h1><div class="row"><div class="col-md-6"><p>This interface offers REST based access to various Secure PayGate features.
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterManagementApi"><h1><a name="ChapterManagementApi"></a>Management API</h1><div class="row"><div class="col-md-6"><p>This interface offers REST based access to various management features.
 This enables customers to integrate those features into their systems on a technical level.</p><div class="info">
     <p>
         <strong>Important Note:</strong>
-        The Saferpay REST API does not use the JSON API header.
+        The Saferpay Management API does not use the JSON API header.
         Instead, some additional HTTP header fields are required.
     </p>
-</div><p></p></div></div></section><section><h3>Additional HTTP Headers</h3><div class="row"><div class="col-md-6"><p></p><p>Instead of the <code>RequestHeader</code> container used in the JSON API, the REST API uses additional HTTP Headers to store and transfer general information about the request.
+</div><p></p></div></div></section><section><h3>Additional HTTP Headers</h3><div class="row"><div class="col-md-6"><p></p><p>Instead of the <code>RequestHeader</code> container used in the JSON API, the Management API uses additional HTTP Headers to store and transfer general information about the request.
 All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">content encoding</a> and <a href="#authentication">authentication</a>) still apply.</p><table class="table">
   <thead>
     <tr>
@@ -7016,7 +7016,7 @@ Id[1..20]<br>
 	<strong>BillingAddressForm</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
+				<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
