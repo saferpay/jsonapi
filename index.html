@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.29</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.30</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.29</span>
+						<span class="text-primary">JSON API Spec-Version 1.30</span>
 					</h3>
 
 					<ul class="nav">
@@ -122,7 +122,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.29</span>
+								<span class="text-primary">JSON API Spec-Version 1.30</span>
 							</h3>
 						</button>
 
@@ -719,6 +719,19 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">OrderId of the failed transaction. This is only returned in the PaymentPage Assert Response and the Transaction Authorize Response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -729,7 +742,9 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
   &quot;ErrorMessage&quot;: &quot;Request validation failed&quot;,
   &quot;ErrorDetail&quot;: [
     &quot;PaymentMeans.BankAccount.IBAN: The field IBAN is invalid.&quot;
-  ]
+  ],
+  &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;,
+  &quot;OrderId&quot;: &quot;c52ad18472354511ab2c33b59e796901&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
   <tbody><tr>
@@ -1330,7 +1345,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won&#8217;t be accepted for any further action.</div>
+	<div style="padding-bottom: 10px">Expiration date / time of the RedirectUrl in ISO 8601 format in UTC. After this time, the RedirectUrl can't be called anymore.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>2011-07-14T19:43:37+01:00</code></span>
 	</i>
@@ -1347,9 +1362,9 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Redirecturl for the payment page transaction. Simply add this to a &quot;Pay Now&quot;-button or do an automatic redirect.</div>
+	<div style="padding-bottom: 10px">RedirectUrl for the payment page transaction. Simply add this to a &quot;Pay Now&quot;-button or do an automatic redirect.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/z2p7a0plpgsd41m97wjvm5jza</code></span>
+				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/234uhfh78234hlasdfh8234e1234</code></span>
 	</i>
 </td>
 				</tr>
@@ -1630,7 +1645,7 @@ Id[1..50]<br>
 <li>Transaction is finished!</li>
 </ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -2557,7 +2572,7 @@ Id[1..50]<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div><div class="warning">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Important:</strong> This function does not perform 3D Secure! Only the <a href="https://saferpay.github.io/jsonapi/#ChapterPaymentPage">PaymentPage</a> or <a href="https://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Initialize">Transaction Initialize</a> do support 3D Secure!</p>
@@ -4184,7 +4199,7 @@ Possible values: PENDING, CAPTURED.<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -5553,7 +5568,7 @@ Id[1..50]<br>
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-md-6"><p>This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p><div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Insert</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -5666,7 +5681,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.<br> <b>IMPORTANT NOTE:</b> The Check function is only available for certain brands / acquirers! For more information, see <a href="https://saferpay.github.io/sndbx/scd.html#scd-check">Saferpay Integration Guide for Secure Card Data</a><p></p></div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.<br> <b>IMPORTANT NOTE:</b> The Check function is only available for certain brands / acquirers! For more information, see <a href="https://docs.saferpay.com/home/integration-guide/licences-and-interfaces/secure-card-data">Saferpay Integration Guide for Secure Card Data</a><p></p></div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5976,7 +5991,7 @@ Id[1..50]<br>
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_InsertDirect"><h2><a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect</h2><div class="row"><div class="col-md-6"><p>This method may be used to insert an alias directly with card-data collected by using your own HTML form.</p><div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -7997,8 +8012,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29<br>
-				    <span>Example: <code>1.29</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30<br>
+				    <span>Example: <code>1.30</code></span>
 	</i>
 </td>
 							</tr>
@@ -8106,8 +8121,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29<br>
-				    <span>Example: <code>1.29</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30<br>
+				    <span>Example: <code>1.30</code></span>
 	</i>
 </td>
 							</tr>
@@ -10606,6 +10621,34 @@ Range: inclusive between 0 and 99999<br>
 	</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ProductUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">URL to the product page</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/product/1</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ImageUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">URL to an image showing the product</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/product/1/image</code></span>
+	</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_OriginalCreditTransfer&quot;</h2>
@@ -12822,7 +12865,7 @@ Possible values: RECURRING.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Determines how the card holder was authenticated. Some 3D Secure Versions allow a Frictionless authentication.</div>
 	<i class="small text-muted">
-Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, NONE.<br>
+Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTION, NONE.<br>
 				    <span>Example: <code>StrongCustomerAuthentication</code></span>
 	</i>
 </td>
@@ -13570,6 +13613,34 @@ Range: inclusive between 0 and 99999<br>
 	<div style="padding-bottom: 10px">Discount amount including tax</div>
 	<i class="small text-muted">
 				    <span>Example: <code>10</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ProductUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">URL to the product page</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/product/1</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ImageUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">URL to an image showing the product</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/product/1/image</code></span>
 	</i>
 </td>
 							</tr>
