@@ -165,6 +165,19 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">OrderId of the failed transaction. This is only returned in the PaymentPage Assert Response and the Transaction Authorize Response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 
@@ -183,7 +196,9 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
   "ErrorMessage": "Request validation failed",
   "ErrorDetail": [
     "PaymentMeans.BankAccount.IBAN: The field IBAN is invalid."
-  ]
+  ],
+  "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb",
+  "OrderId": "c52ad18472354511ab2c33b59e796901"
 }
 </pre>
 

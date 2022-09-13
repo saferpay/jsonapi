@@ -418,7 +418,7 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
+	<div style="padding-bottom: 10px">Expiration date / time of the RedirectUrl in ISO 8601 format in UTC. After this time, the RedirectUrl can't be called anymore.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>2011-07-14T19:43:37+01:00</code></span>
 	</i>
@@ -435,9 +435,9 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Redirecturl for the payment page transaction. Simply add this to a "Pay Now"-button or do an automatic redirect.</div>
+	<div style="padding-bottom: 10px">RedirectUrl for the payment page transaction. Simply add this to a "Pay Now"-button or do an automatic redirect.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/z2p7a0plpgsd41m97wjvm5jza</code></span>
+				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/234uhfh78234hlasdfh8234e1234</code></span>
 	</i>
 </td>
 				</tr>

@@ -6,7 +6,7 @@
 This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.
 
 <div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div>
 
 --->>>
@@ -132,7 +132,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.<br> <b>IMPORTANT NOTE:</b> The Check function is only available for certain brands / acquirers! For more information, see <a href="https://saferpay.github.io/sndbx/scd.html#scd-check">Saferpay Integration Guide for Secure Card Data</a></p></div>
+	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.<br> <b>IMPORTANT NOTE:</b> The Check function is only available for certain brands / acquirers! For more information, see <a href="https://docs.saferpay.com/home/integration-guide/licences-and-interfaces/secure-card-data">Saferpay Integration Guide for Secure Card Data</a></p></div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -529,7 +529,7 @@ Id[1..50]<br />
 This method may be used to insert an alias directly with card-data collected by using your own HTML form.
 
 <div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
-<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://saferpay.github.io/sndbx/#pci">Click here for more information!</a></p>
+<p><strong>Warning:</strong> Only respectively PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div>
 
 --->>>
