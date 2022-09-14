@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.30](#v1.30.0.0.20220920)
 - [Version 1.29](#v1.29.0.0.20220719)
 - [Version 1.28](#v1.28.0.0.20220517)
 - [Version 1.27](#v1.27.0.0.20220315)
@@ -27,6 +28,13 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.30.0.0.20220920"></a> Version 1.30 (released 2022-09-20)
+- available on Sandbox: 2022-09-06
+- introduced version 1.30
+- added value `1.30` for _SpecVersion_
+- added _ProductUrl_ and _ImageUrl_ to `Order Items` container in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+- added _OrderId_ in the response to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
 
 ## <a name="v1.29.0.0.20220719"></a> Version 1.29 (released 2022-07-19)
 - available on Sandbox: 2022-07-19
