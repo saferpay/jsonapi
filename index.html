@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.30</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.31</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.30</span>
+						<span class="text-primary">JSON API Spec-Version 1.31</span>
 					</h3>
 
 					<ul class="nav">
@@ -122,7 +122,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.30</span>
+								<span class="text-primary">JSON API Spec-Version 1.31</span>
 							</h3>
 						</button>
 
@@ -1643,7 +1643,7 @@ Id[1..50]<br>
 </ul>
 </li>
 <li>Transaction is finished!</li>
-</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p><div class="danger">
+</ol></div></div></section><section id="Payment_v1_Transaction_Initialize"><h2><a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to start a transaction which may involve either DCC and / or 3d-secure.</p><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Initialize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -2016,7 +2016,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
     &quot;PaymentMeansRequired&quot;: true
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Authorize"><h2><a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Authorize"><h2><a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Authorize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2299,7 +2299,7 @@ Numeric[3..4]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2470,7 +2470,7 @@ Id[1..50]<br>
     &quot;IpLocation&quot;: &quot;DE&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -2570,7 +2570,7 @@ Id[1..50]<br>
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).</p><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div><div class="warning">
@@ -2929,7 +2929,7 @@ Possible values: MERCHANT, PAYER.<br>
     &quot;IpLocation&quot;: &quot;DE&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeReferenced"><h2><a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AuthorizeReferenced</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3183,7 +3183,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Capture"><h2><a name="Payment_v1_Transaction_Capture"></a>Transaction Capture <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Capture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3399,7 +3399,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture</h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><div class="info">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartCapture"><h2><a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to capture multiple parts of an authorized transaction.</p><div class="info">
 <p><strong>Important:</strong></p>
 <ul>
 <li>MultipartCapture is available for PayPal, Klarna and card payments Visa, Mastercard, Maestro, Diners/Discover, JCB and American Express which are acquired by Worldline.</li>
@@ -3618,7 +3618,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2018-08-08T13:45:22.258+02:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture</h2><div class="row"><div class="col-md-6"><div class="warning">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><div class="warning">
 <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -3771,7 +3771,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartFinalize"><h2><a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize</h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_MultipartFinalize"><h2><a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/MultipartFinalize</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -3851,7 +3851,7 @@ Possible values: PENDING, CAPTURED.<br>
     &quot;RequestId&quot;: &quot;[unique request identifier]&quot;
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Refund"><h2><a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund a previous transaction.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Refund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4044,7 +4044,7 @@ Possible values: PENDING, CAPTURED.<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p><div class="warning">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to inquire the status and further information of pending refunds.</p><div class="warning">
 <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -4197,7 +4197,7 @@ Possible values: PENDING, CAPTURED.<br>
   &quot;Status&quot;: &quot;CAPTURED&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RefundDirect"><h2><a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.</p><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RefundDirect</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -4400,7 +4400,7 @@ Numeric[8..8]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Cancel"><h2><a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel</h2><div class="row"><div class="col-md-6"><p>This method may be used to cancel previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Cancel"><h2><a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method may be used to cancel previously authorized transactions and refunds.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Cancel</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -4531,7 +4531,7 @@ Numeric[8..8]<br>
   &quot;OrderId&quot;: &quot;c52ad18472354511ab2c33b59e796901&quot;,
   &quot;Date&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_RedirectPayment"><h2><a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/RedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -4769,7 +4769,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
   &quot;Expiration&quot;: &quot;2015-01-30T12:45:22.258+01:00&quot;,
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/Api/...&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><div class="danger">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRedirectPayment"><h2><a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>WARNING:</strong> This feature is deprecated and replaced by the <a href="index.html#ChapterPaymentPage"><strong>Payment Page</strong></a>. Please use the parameter <strong>PaymentMethods</strong> to directly select the desired 3rd party provider!</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRedirectPayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -4928,7 +4928,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Inquire"><h2><a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire</h2><div class="row"><div class="col-md-6"><p>This method can be used to get the details of a transaction that has been authorized successfully.</p><div class="info">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_Inquire"><h2><a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method can be used to get the details of a transaction that has been authorized successfully.</p><div class="info">
 <span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 55px;height: 75px;float: left;margin-right: 15px;margin-top: 0px;"></span>
 <p><strong>Fair use:</strong></p><p>This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/Inquire</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
@@ -5124,7 +5124,7 @@ Id[1..50]<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AlternativePayment"><h2><a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>This method can be used to authorize the payments that do not have a payment-page or
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AlternativePayment"><h2><a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>This method can be used to authorize the payments that do not have a payment-page or
 for the payments that before authorization some additional steps such as authentication should be done.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AlternativePayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -5375,7 +5375,7 @@ Possible values: BANCONTACT.<br>
     }
   }
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryAlternativePayment"><h2><a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory"><a href="https://saferpay.github.io/sndbx/Interfaces.html">Business license required</a></span></h2><div class="row"><div class="col-md-6"><p>Call this method to get information about a previously initialized alternative payment transaction</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryAlternativePayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryAlternativePayment"><h2><a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory"><a href="https://saferpay.github.io/jsonapi/#rest_customers_license-configuration">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p>Call this method to get information about a previously initialized alternative payment transaction</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryAlternativePayment</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -6953,6 +6953,69 @@ Utf8[1..128]<br>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;AccessToken&quot;: &quot;67f47961-2912-4338-8039-22ac2b8486f3&quot;
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_license-configuration"><h2><a name="rest_customers_license-configuration"></a>Licensing CustomerLicenseConfiguration</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve the current license configuration for a customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>Package</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the configured package</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Features</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;Package&quot;: {
+    &quot;Id&quot;: &quot;SAFERPAY_FLEX&quot;,
+    &quot;DisplayName&quot;: &quot;Saferpay Flex&quot;
+  },
+  &quot;Features&quot;: [
+    {
+      &quot;Id&quot;: &quot;MANAGEMENT_API&quot;,
+      &quot;DisplayName&quot;: &quot;Management API&quot;
+    },
+    {
+      &quot;Id&quot;: &quot;PAYMENT_API&quot;,
+      &quot;DisplayName&quot;: &quot;Payment API&quot;
+    }
+  ]
+}
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_terminals_spg-offers"><h2><a name="rest_customers_terminals_spg-offers"></a>SecurePayGate Offers</h2><div class="row"><div class="col-md-6"><p>This function may be used to create a SecurePayGate (SPG) offer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
@@ -8012,8 +8075,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30<br>
-				    <span>Example: <code>1.30</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31<br>
+				    <span>Example: <code>1.31</code></span>
 	</i>
 </td>
 							</tr>
@@ -8121,8 +8184,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30<br>
-				    <span>Example: <code>1.30</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31<br>
+				    <span>Example: <code>1.31</code></span>
 	</i>
 </td>
 							</tr>
@@ -9255,7 +9318,7 @@ Utf8[1..1000]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 			</i>
 </td>
 							</tr>
@@ -13283,7 +13346,7 @@ Possible values: MASTERPASS.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -13741,6 +13804,84 @@ Possible values: RANDOM.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;RestApi_Models_Feature&quot;</h2>
+				<table class="table" id="RestApi_Models_Feature">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id of the feature</div>
+	<i class="small text-muted">
+				    <span>Example: <code>SAFERPAY_EXAMPLE</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DisplayName</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Display name of the feature</div>
+	<i class="small text-muted">
+				    <span>Example: <code>Saferpay Example</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;RestApi_Models_LicensePackage&quot;</h2>
+				<table class="table" id="RestApi_Models_LicensePackage">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id of the package</div>
+	<i class="small text-muted">
+				    <span>Example: <code>SAFERPAY_EXAMPLE</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DisplayName</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Display name of the package</div>
+	<i class="small text-muted">
+				    <span>Example: <code>Saferpay Example</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;RestApi_Models_PaymentMethodInfo&quot;</h2>
 				<table class="table" id="RestApi_Models_PaymentMethodInfo">
 					<tbody>
@@ -13817,6 +13958,7 @@ Possible values: RANDOM.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.31.0.0.20221115">Version 1.31</a></li>
 <li><a href="#v1.30.0.0.20220920">Version 1.30</a></li>
 <li><a href="#v1.29.0.0.20220719">Version 1.29</a></li>
 <li><a href="#v1.28.0.0.20220517">Version 1.28</a></li>
@@ -13844,6 +13986,11 @@ Possible values: RANDOM.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.31.0.0.20221115"><h2><a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2022-11-01</li>
+<li>introduced version 1.31</li>
+<li>added value <code>1.31</code> for <em>SpecVersion</em></li>
+<li>added new function to <a href="index.html#ChapterManagementApi">Saferpay Management API</a> for querying the license configuration of a customer</li>
 </ul></div></div></section><section id="v1.30.0.0.20220920"><h2><a name="v1.30.0.0.20220920"></a> Version 1.30 (released 2022-09-20)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2022-09-06</li>
 <li>introduced version 1.30</li>
