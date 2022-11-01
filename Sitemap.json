@@ -241,6 +241,11 @@
         "Title": "TerminalInfo PaymentMethods",
         "Source": "texts/ChapterManagementApi.md",
         "Target": "index.html#rest_customers_terminals_payment-methods"
+      },
+      {
+        "Title": "Licensing CustomerLicenseConfiguration",
+        "Source": "texts/ChapterManagementApi.md",
+        "Target": "index.html#rest_customers_license-configuration"
       }
     ]
   },
