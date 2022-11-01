@@ -174,6 +174,117 @@ Utf8[1..128]<br />
 
 
 
+## <a name="rest_customers_license-configuration"></a>Licensing CustomerLicenseConfiguration
+
+This method is used to retrieve the current license configuration for a customer
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Package</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the configured package</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Features</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "Package": {
+    "Id": "SAFERPAY_FLEX",
+    "DisplayName": "Saferpay Flex"
+  },
+  "Features": [
+    {
+      "Id": "MANAGEMENT_API",
+      "DisplayName": "Management API"
+    },
+    {
+      "Id": "PAYMENT_API",
+      "DisplayName": "Payment API"
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
 ## <a name="rest_customers_terminals_spg-offers"></a>SecurePayGate Offers
 
 This function may be used to create a SecurePayGate (SPG) offer
