@@ -31,7 +31,7 @@
 - [Version 1.4](#v1.4.0.20161015)
 
 ## <a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)
-- available on Sandbox: 2022-11-02
+- available on Sandbox: 2022-11-01
 - introduced version 1.31
 - added value `1.31` for _SpecVersion_
 - added new function to [Saferpay Management API](index.html#ChapterManagementApi) for querying the license configuration of a customer
