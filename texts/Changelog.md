@@ -1,7 +1,8 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
-- [Version 1.31](#v1.31.0.0.20221115) 
+- [Version 1.32](#v1.32.0.0.20230117)
+- [Version 1.31](#v1.31.0.0.20221115)
 - [Version 1.30](#v1.30.0.0.20220920)
 - [Version 1.29](#v1.29.0.0.20220719)
 - [Version 1.28](#v1.28.0.0.20220517)
@@ -29,6 +30,13 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.32.0.0.20230117"></a> Version 1.32 (released 2023-01-17)
+- available on Sandbox: 2022-12-29
+- introduced version 1.32
+- added value `1.32` for _SpecVersion_
+- This method is now obsolete: `/api/rest/customers/{customerid}/terminals/{terminalid}/payment-methods` and replaced with this method: `/api/rest/customers/{customerid}/terminals/{terminalid}`
+- In addition, there is a new method that allows the merchant to query which terminals he has: `/api/rest/customers/{customerid}/terminals`
 
 ## <a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)
 - available on Sandbox: 2022-11-01
@@ -213,7 +221,7 @@
 - added value `1.11` for _SpecVersion_
 - added method [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) for inquiring the details of previous transaction
 - added container _PaymentMethodsOptions_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) to allow for setting payment method specific options
-- added _Condition_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to control the minimum authentication level 
+- added _Condition_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to control the minimum authentication level
 - added _HolderSegment_ to [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) responses to indicate the segment (e.g. Corporate) of the card holder
 - added _CaptureId_ to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/Refund](index.html#Payment_v1_Transaction_Refund), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) and [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction) responses to identify a (partial) capture for refunding
 - added value `IF_ALLOWED_BY_SCHEME` for field `Condition` in [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) request

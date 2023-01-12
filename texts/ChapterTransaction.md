@@ -13,7 +13,7 @@ This chapter will give you a simple overview about the general transaction flow,
 1. [Transaction Initialize](index.html#Payment_v1_Transaction_Initialize)
   	* Initializes the Payment and generates the RedirectUrl for the [iFrame Integration](https://saferpay.github.io/sndbx/CssiFrame.html).
 2. Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!
-3. Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!
+3. Return to ReturnUrl. The ReturnUrl is defined in step 1!
 4. [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
   	* Authorizes the card, which has been gathered in step 2. Up until now, *no transaction has been made*!
 5. Depending on the outcome of step 4 you may
@@ -160,17 +160,17 @@ Numeric[8..8]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br />
+	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -299,9 +299,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   "Payer": {
     "LanguageCode": "en"
   },
-  "ReturnUrls": {
-    "Success": "[your shop payment success url]",
-    "Fail": "[your shop payment fail url]"
+  "ReturnUrl": {
+    "Url": "[your shop payment url]"
   },
   "Styling": {
     "CssUrl": "[your shop css url]"
@@ -745,15 +744,15 @@ Numeric[3..4]<br />
     "Brand": {
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
+    },
+    "DisplayText": "9123 45xx xxxx 1234",
+    "Card": {
+      "MaskedNumber": "912345xxxxxx1234",
+      "ExpYear": 2015,
+      "ExpMonth": 9,
+      "HolderName": "Max Mustermann",
+      "CountryCode": "CH"
     }
-  },
-  "DisplayText": "9123 45xx xxxx 1234",
-  "Card": {
-    "MaskedNumber": "912345xxxxxx1234",
-    "ExpYear": 2015,
-    "ExpMonth": 9,
-    "HolderName": "Max Mustermann",
-    "CountryCode": "CH"
   },
   "Payer": {
     "IpAddress": "1.2.3.4",
@@ -835,14 +834,14 @@ Id[1..50]<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br />
+	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3705,17 +3704,17 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br />
+	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3771,9 +3770,8 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
     }
   },
   "ServiceProvider": "PAYPAL",
-  "ReturnUrls": {
-    "Success": "[your shop payment success url]",
-    "Fail": "[your shop payment fail url]"
+  "ReturnUrl": {
+    "Url": "[your shop payment url]"
   }
 }
 </pre>
