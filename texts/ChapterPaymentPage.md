@@ -16,7 +16,7 @@ This chapter will give you a simple overview about the transaction flow, when us
 1. [Payment Page Initialize](index.html#Payment_v1_PaymentPage_Initialize)
   	* Initializes the Payment and generates the RedirectUrl for the Payment Page.
 2. Redirect to the RedirectUrl
-3. Return to ReturnUrl depending on the outcome of the transaction. The ReturnUrls are defined in step 1!
+3. Return to ReturnUrl. The ReturnUrl is defined in step 1!
 4. [Payment Page Assert](index.html#Payment_v1_PaymentPage_Assert)
   	* Gathers all the information about the payment, like LiabilityShift through 3D Secure and more, using the Token, gathered in step 1!
 5. Depending on the outcome of step 4 you may
@@ -124,7 +124,7 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -202,17 +202,17 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br />
+	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -353,9 +353,8 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
     "OrderId": "Id of the order",
     "Description": "Description of payment"
   },
-  "ReturnUrls": {
-    "Success": "[your shop payment success url]",
-    "Fail": "[your shop payment fail url]"
+  "ReturnUrl": {
+    "Url": "[your shop payment url]"
   }
 }
 </pre>

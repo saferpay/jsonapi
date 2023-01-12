@@ -53,7 +53,7 @@ HTTP Headers example:
 <<<---
 
 
-## <a name="rest_customers_terminals_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken
 
 Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).
 
@@ -174,7 +174,7 @@ Utf8[1..128]<br />
 
 
 
-## <a name="rest_customers_license-configuration"></a>Licensing CustomerLicenseConfiguration
+## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
 This method is used to retrieve the current license configuration for a customer
 
@@ -285,7 +285,7 @@ No example available
 
 
 
-## <a name="rest_customers_terminals_spg-offers"></a>SecurePayGate Offers
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Offers
 
 This function may be used to create a SecurePayGate (SPG) offer
 
@@ -519,9 +519,188 @@ Id[1..20]<br />
 
 
 
-## <a name="rest_customers_terminals_payment-methods"></a>TerminalInfo PaymentMethods
+## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
 
-This method is used to retrieve a list of all available payment methods and wallets for a terminal
+This method is used to retrieve details of one terminal
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Id of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The type of the terminal</div>
+	<i class="small text-muted">
+Possible values: ECOM, SPG, MPO.<br />
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br />
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Wallets</strong><br />
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "TerminalId": "1000001",
+  "Type": "ECOM",
+  "Description": "Terminal 1 for Payment Page / Ecommerce",
+  "PaymentMethods": [
+    {
+      "PaymentMethod": "VISA",
+      "Currencies": [
+        "USD"
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/visa.svg?v=637381079349290910"
+    },
+    {
+      "PaymentMethod": "MASTERCARD",
+      "Currencies": [
+        "EUR",
+        "CHF"
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/mastercard.svg?v=637381079349290910"
+    },
+    {
+      "PaymentMethod": "MAESTRO",
+      "Currencies": [
+        "EUR"
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/maestro.svg?v=637381079349290910"
+    },
+    {
+      "PaymentMethod": "PAYPAL",
+      "Currencies": [
+        "EUR",
+        "CHF",
+        "USD"
+      ],
+      "LogoUrl": "https://www.saferpay.com/static/logo/paypal.svg?v=637381079349290910"
+    }
+  ],
+  "Wallets": [
+    {
+      "WalletName": "APPLEPAY",
+      "LogoUrl": "https://www.saferpay.com/static/logo/applepay.svg?v=637381079349290910"
+    },
+    {
+      "WalletName": "GOOGLEPAY",
+      "LogoUrl": "https://www.saferpay.com/static/logo/googlepay.svg?v=637381079349290910"
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
+
+<strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
+
+This method is used to retrieve a list of all available payment methods and wallets for a terminal.
 
 --->>>
 
@@ -642,6 +821,100 @@ No example available
     {
       "WalletName": "GOOGLEPAY",
       "LogoUrl": "https://www.saferpay.com/static/logo/googlepay.svg?v=637381079349290910"
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
+
+This method is used to retrieve all terminals
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Terminals</strong><br />
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of terminals</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "Terminals": [
+    {
+      "TerminalId": "1000001",
+      "Type": "ECOM",
+      "Description": "Terminal 1 for Payment Page / Ecommerce"
+    },
+    {
+      "TerminalId": "1000002",
+      "Type": "MPO",
+      "Description": "Terminal 2 for Mail Phone Order"
+    },
+    {
+      "TerminalId": "1000002",
+      "Type": "SPG",
+      "Description": "Terminal 3 for Secure Pay Gate"
     }
   ]
 }

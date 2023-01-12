@@ -80,17 +80,17 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br />
+	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop.<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -199,9 +199,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
     "IdGenerator": "RANDOM"
   },
   "Type": "CARD",
-  "ReturnUrls": {
-    "Success": "[your shop alias registration success url]",
-    "Fail": "[your shop alias registration fail url]"
+  "ReturnUrl": {
+    "Url": "[your shop alias registration url]"
   }
 }
 </pre>
