@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.31</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.32</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.31</span>
+						<span class="text-primary">JSON API Spec-Version 1.32</span>
 					</h3>
 
 					<ul class="nav">
@@ -123,7 +123,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.31</span>
+								<span class="text-primary">JSON API Spec-Version 1.32</span>
 							</h3>
 						</button>
 
@@ -974,7 +974,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </ul>
 </li>
 <li>Redirect to the RedirectUrl</li>
-<li>Return to ReturnUrl depending on the outcome of the transaction. The ReturnUrls are defined in step 1!</li>
+<li>Return to ReturnUrl. The ReturnUrl is defined in step 1!</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">Payment Page Assert</a>
 <ul>
 <li>Gathers all the information about the payment, like LiabilityShift through 3D Secure and more, using the Token, gathered in step 1!</li>
@@ -1070,7 +1070,7 @@ Numeric[8..8]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYPAL, PAYDIREKT, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -1148,17 +1148,17 @@ Possible values: MASTERPASS, APPLEPAY, GOOGLEPAY.<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br>
+	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1291,9 +1291,8 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br>
     &quot;OrderId&quot;: &quot;Id of the order&quot;,
     &quot;Description&quot;: &quot;Description of payment&quot;
   },
-  &quot;ReturnUrls&quot;: {
-    &quot;Success&quot;: &quot;[your shop payment success url]&quot;,
-    &quot;Fail&quot;: &quot;[your shop payment fail url]&quot;
+  &quot;ReturnUrl&quot;: {
+    &quot;Url&quot;: &quot;[your shop payment url]&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -1632,7 +1631,7 @@ Id[1..50]<br>
 </ul>
 </li>
 <li>Open the RedirectUrl inside an HTML-iFrame, to show the hosted card entry form!</li>
-<li>Return to Return Url depending on the outcome of the 3D Secure procedure. The ReturnUrls are defined in step 1!</li>
+<li>Return to ReturnUrl. The ReturnUrl is defined in step 1!</li>
 <li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a>
 <ul>
 <li>Authorizes the card, which has been gathered in step 2. Up until now, <em>no transaction has been made</em>!</li>
@@ -1765,17 +1764,17 @@ Numeric[8..8]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br>
+	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1896,9 +1895,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   &quot;Payer&quot;: {
     &quot;LanguageCode&quot;: &quot;en&quot;
   },
-  &quot;ReturnUrls&quot;: {
-    &quot;Success&quot;: &quot;[your shop payment success url]&quot;,
-    &quot;Fail&quot;: &quot;[your shop payment fail url]&quot;
+  &quot;ReturnUrl&quot;: {
+    &quot;Url&quot;: &quot;[your shop payment url]&quot;
   },
   &quot;Styling&quot;: {
     &quot;CssUrl&quot;: &quot;[your shop css url]&quot;
@@ -2277,15 +2275,15 @@ Numeric[3..4]<br>
     &quot;Brand&quot;: {
       &quot;PaymentMethod&quot;: &quot;VISA&quot;,
       &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
     }
-  },
-  &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-  &quot;Card&quot;: {
-    &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-    &quot;ExpYear&quot;: 2015,
-    &quot;ExpMonth&quot;: 9,
-    &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-    &quot;CountryCode&quot;: &quot;CH&quot;
   },
   &quot;Payer&quot;: {
     &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
@@ -2344,14 +2342,14 @@ Id[1..50]<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br>
+	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4628,17 +4626,17 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br>
+	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4686,9 +4684,8 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
     }
   },
   &quot;ServiceProvider&quot;: &quot;PAYPAL&quot;,
-  &quot;ReturnUrls&quot;: {
-    &quot;Success&quot;: &quot;[your shop payment success url]&quot;,
-    &quot;Fail&quot;: &quot;[your shop payment fail url]&quot;
+  &quot;ReturnUrl&quot;: {
+    &quot;Url&quot;: &quot;[your shop payment url]&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -5631,17 +5628,17 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 				</tr>
 				<tr>
 					<td class="col-sm-4 text-right">
-	<strong>ReturnUrls</strong><br>
+	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrls">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Urls which are to be used to redirect the payer back to the shop.<br><br>These Urls are used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop.<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5742,9 +5739,8 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
     &quot;IdGenerator&quot;: &quot;RANDOM&quot;
   },
   &quot;Type&quot;: &quot;CARD&quot;,
-  &quot;ReturnUrls&quot;: {
-    &quot;Success&quot;: &quot;[your shop alias registration success url]&quot;,
-    &quot;Fail&quot;: &quot;[your shop alias registration fail url]&quot;
+  &quot;ReturnUrl&quot;: {
+    &quot;Url&quot;: &quot;[your shop alias registration url]&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -6882,7 +6878,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
       <td>Id generated by merchant system, for debugging purposes. Should be unique for each new request. If a request is retried due to an error, use the same request id.</td>
     </tr>
   </tbody>
-</table></div><div class="col-md-6"><p>HTTP Headers example:</p><p><code>Saferpay-ApiVersion: 1.14</code></p><p><code>Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_terminals_fields-access-tokens"><h2><a name="rest_customers_terminals_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken</h2><div class="row"><div class="col-md-6"><p>Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</table></div><div class="col-md-6"><p>HTTP Headers example:</p><p><code>Saferpay-ApiVersion: 1.14</code></p><p><code>Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken</h2><div class="row"><div class="col-md-6"><p>Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -6955,7 +6951,7 @@ Utf8[1..128]<br>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;AccessToken&quot;: &quot;67f47961-2912-4338-8039-22ac2b8486f3&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_license-configuration"><h2><a name="rest_customers_license-configuration"></a>Licensing CustomerLicenseConfiguration</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve the current license configuration for a customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_license-configuration"><h2><a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve the current license configuration for a customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -7018,7 +7014,7 @@ Utf8[1..128]<br>
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_terminals_spg-offers"><h2><a name="rest_customers_terminals_spg-offers"></a>SecurePayGate Offers</h2><div class="row"><div class="col-md-6"><p>This function may be used to create a SecurePayGate (SPG) offer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Offers</h2><div class="row"><div class="col-md-6"><p>This function may be used to create a SecurePayGate (SPG) offer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -7204,7 +7200,136 @@ Id[1..20]<br>
   &quot;OfferId&quot;: &quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
   &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_terminals_payment-methods"><h2><a name="rest_customers_terminals_payment-methods"></a>TerminalInfo PaymentMethods</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve a list of all available payment methods and wallets for a terminal</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve details of one terminal</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Id of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Type</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The type of the terminal</div>
+	<i class="small text-muted">
+Possible values: ECOM, SPG, MPO.<br>
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Description</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br>
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Wallets</strong><br>
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;TerminalId&quot;: &quot;1000001&quot;,
+  &quot;Type&quot;: &quot;ECOM&quot;,
+  &quot;Description&quot;: &quot;Terminal 1 for Payment Page / Ecommerce&quot;,
+  &quot;PaymentMethods&quot;: [
+    {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Currencies&quot;: [
+        &quot;USD&quot;
+      ],
+      &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/visa.svg?v=637381079349290910&quot;
+    },
+    {
+      &quot;PaymentMethod&quot;: &quot;MASTERCARD&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;,
+        &quot;CHF&quot;
+      ],
+      &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/mastercard.svg?v=637381079349290910&quot;
+    },
+    {
+      &quot;PaymentMethod&quot;: &quot;MAESTRO&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;
+      ],
+      &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/maestro.svg?v=637381079349290910&quot;
+    },
+    {
+      &quot;PaymentMethod&quot;: &quot;PAYPAL&quot;,
+      &quot;Currencies&quot;: [
+        &quot;EUR&quot;,
+        &quot;CHF&quot;,
+        &quot;USD&quot;
+      ],
+      &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/paypal.svg?v=637381079349290910&quot;
+    }
+  ],
+  &quot;Wallets&quot;: [
+    {
+      &quot;WalletName&quot;: &quot;APPLEPAY&quot;,
+      &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/applepay.svg?v=637381079349290910&quot;
+    },
+    {
+      &quot;WalletName&quot;: &quot;GOOGLEPAY&quot;,
+      &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/googlepay.svg?v=637381079349290910&quot;
+    }
+  ]
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods</h2><div class="row"><div class="col-md-6"><p><strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/</p><p>This method is used to retrieve a list of all available payment methods and wallets for a terminal.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -7287,6 +7412,52 @@ Id[1..20]<br>
     {
       &quot;WalletName&quot;: &quot;GOOGLEPAY&quot;,
       &quot;LogoUrl&quot;: &quot;https://www.saferpay.com/static/logo/googlepay.svg?v=637381079349290910&quot;
+    }
+  ]
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals"><h2><a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve all terminals</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>Terminals</strong><br>
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of terminals</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;Terminals&quot;: [
+    {
+      &quot;TerminalId&quot;: &quot;1000001&quot;,
+      &quot;Type&quot;: &quot;ECOM&quot;,
+      &quot;Description&quot;: &quot;Terminal 1 for Payment Page / Ecommerce&quot;
+    },
+    {
+      &quot;TerminalId&quot;: &quot;1000002&quot;,
+      &quot;Type&quot;: &quot;MPO&quot;,
+      &quot;Description&quot;: &quot;Terminal 2 for Mail Phone Order&quot;
+    },
+    {
+      &quot;TerminalId&quot;: &quot;1000002&quot;,
+      &quot;Type&quot;: &quot;SPG&quot;,
+      &quot;Description&quot;: &quot;Terminal 3 for Secure Pay Gate&quot;
     }
   ]
 }
@@ -8077,8 +8248,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31<br>
-				    <span>Example: <code>1.31</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32<br>
+				    <span>Example: <code>1.32</code></span>
 	</i>
 </td>
 							</tr>
@@ -8186,8 +8357,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31<br>
-				    <span>Example: <code>1.31</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32<br>
+				    <span>Example: <code>1.32</code></span>
 	</i>
 </td>
 							</tr>
@@ -9320,7 +9491,7 @@ Utf8[1..1000]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 			</i>
 </td>
 							</tr>
@@ -12549,12 +12720,12 @@ Range: inclusive between 1 and 1600<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Payment_Models_Data_ReturnUrls&quot;</h2>
-				<table class="table" id="Payment_Models_Data_ReturnUrls">
+			<h2>Container &quot;Payment_Models_Data_ReturnUrl&quot;</h2>
+				<table class="table" id="Payment_Models_Data_ReturnUrl">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Success</strong><br>
+	<strong>Url</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
@@ -12563,40 +12734,9 @@ Range: inclusive between 1 and 1600<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Return url for successful transaction</div>
+	<div style="padding-bottom: 10px">Return url for successful, failed or aborted transaction</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/success</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Fail</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Return url for failed transaction</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/fail</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Abort</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Return url for transaction aborted by the payer.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://merchanthost/abort</code></span>
+				    <span>Example: <code>https://merchanthost/return</code></span>
 	</i>
 </td>
 							</tr>
@@ -13348,7 +13488,7 @@ Possible values: MASTERPASS.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -13928,6 +14068,79 @@ Possible values: RANDOM.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;RestApi_Models_TerminalResult&quot;</h2>
+				<table class="table" id="RestApi_Models_TerminalResult">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Id of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Type</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The type of the terminal</div>
+	<i class="small text-muted">
+Possible values: ECOM, SPG, MPO.<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br>
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Wallets</strong><br>
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;RestApi_Models_WalletInfo&quot;</h2>
 				<table class="table" id="RestApi_Models_WalletInfo">
 					<tbody>
@@ -13960,6 +14173,7 @@ Possible values: RANDOM.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.32.0.0.20230117">Version 1.32</a></li>
 <li><a href="#v1.31.0.0.20221115">Version 1.31</a></li>
 <li><a href="#v1.30.0.0.20220920">Version 1.30</a></li>
 <li><a href="#v1.29.0.0.20220719">Version 1.29</a></li>
@@ -13988,6 +14202,12 @@ Possible values: RANDOM.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.32.0.0.20230117"><h2><a name="v1.32.0.0.20230117"></a> Version 1.32 (released 2023-01-17)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2022-12-29</li>
+<li>introduced version 1.32</li>
+<li>added value <code>1.32</code> for <em>SpecVersion</em></li>
+<li>This method is now obsolete: <code>/api/rest/customers/{customerid}/terminals/{terminalid}/payment-methods</code> and replaced with this method: <code>/api/rest/customers/{customerid}/terminals/{terminalid}</code></li>
+<li>In addition, there is a new method that allows the merchant to query which terminals he has: <code>/api/rest/customers/{customerid}/terminals</code></li>
 </ul></div></div></section><section id="v1.31.0.0.20221115"><h2><a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2022-11-01</li>
 <li>introduced version 1.31</li>
