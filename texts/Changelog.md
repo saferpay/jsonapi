@@ -37,6 +37,8 @@
 - added value `1.32` for _SpecVersion_
 - This method is now obsolete: `/api/rest/customers/{customerid}/terminals/{terminalid}/payment-methods` and replaced with this method: `/api/rest/customers/{customerid}/terminals/{terminalid}`
 - In addition, there is a new method that allows the merchant to query which terminals he has: `/api/rest/customers/{customerid}/terminals`
+- added values `PAYCONIQ` for _Brand.PaymentMethod_ and _PaymentMethods_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+- container _ReturnUrls_ (parameters _Success_ and _Fail_) is replaced by container _ReturnUrl_ (parameter _Url_) 
 
 ## <a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)
 - available on Sandbox: 2022-11-01
