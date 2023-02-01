@@ -5424,7 +5424,7 @@ Range: inclusive between 1 and 12<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Cardholder Authentication Verification Value (CAVV)</div>
+	<div style="padding-bottom: 10px">TAVV Cryptogram</div>
 	<i class="small text-muted">
 			</i>
 </td>
