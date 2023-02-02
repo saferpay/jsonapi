@@ -3374,7 +3374,7 @@ Range: inclusive between 0 and 99999<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Tax amount which is included in the item price</div>
+	<div style="padding-bottom: 10px">Total tax amount of the order item. This tax needs to be included in the UnitPrice and must take the Quantity of the order item into account.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>42</code></span>
 	</i>
