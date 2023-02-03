@@ -3319,7 +3319,7 @@ Utf8[1..200]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The quantity of the order item</div>
 	<i class="small text-muted">
-				    <span>Example: <code>3</code></span>
+				    <span>Example: <code>2</code></span>
 	</i>
 </td>
 							</tr>
@@ -3331,9 +3331,9 @@ Utf8[1..200]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 2.00 &rArr; Value=200). <b>Only Integer values will be accepted!</b></div>
+	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 15.50 &rArr; Value=1550). <b>Only Integer values will be accepted!</b></div>
 	<i class="small text-muted">
-				    <span>Example: <code>200</code></span>
+				    <span>Example: <code>1550</code></span>
 	</i>
 </td>
 							</tr>
@@ -3359,10 +3359,10 @@ Utf8[1..200]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 125 means 1.25%<br> Valid values are 0-99999</div>
+	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 1900 means 19.00%<br> Valid values are 0-99999</div>
 	<i class="small text-muted">
 Range: inclusive between 0 and 99999<br />
-				    <span>Example: <code>2100</code></span>
+				    <span>Example: <code>1900</code></span>
 	</i>
 </td>
 							</tr>
@@ -3376,7 +3376,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Total tax amount of the order item. This tax needs to be included in the UnitPrice and must take the Quantity of the order item into account.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>42</code></span>
+				    <span>Example: <code>480</code></span>
 	</i>
 </td>
 							</tr>
@@ -3390,7 +3390,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Discount amount including tax</div>
 	<i class="small text-muted">
-				    <span>Example: <code>10</code></span>
+				    <span>Example: <code>92</code></span>
 	</i>
 </td>
 							</tr>
