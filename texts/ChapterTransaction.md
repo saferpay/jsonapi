@@ -4091,7 +4091,7 @@ Id[1..50]<br />
 This method can be used to get the details of a transaction that has been authorized successfully.
 <div class="info">
 <span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-<p><strong>Fair use:</strong></p><p>This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
+<p><strong>Fair use:</strong>This method is not intended for polling. You have to restrict the usage of this method in order to provide a fair data access to all our customers. We may contact you if we notice the excessive usage of this function and in some exceptional cases we preserve the right to limit the access to it.</p>
 </div>
 
 --->>>
