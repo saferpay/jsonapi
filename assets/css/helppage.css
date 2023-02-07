@@ -245,3 +245,19 @@ code {
         page-break-after: always;
     }
 }
+
+.danger {
+    display: flex;
+}
+
+.success {
+    display: flex;
+}
+
+.info {
+    display: flex;
+}
+
+.warning {
+    display: flex;
+}
