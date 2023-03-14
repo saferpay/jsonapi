@@ -285,9 +285,9 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Offers
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
-This function may be used to create a SecurePayGate (SPG) offer
+This function may be used to create a single use payment link
 
 --->>>
 
@@ -314,7 +314,7 @@ This function may be used to create a SecurePayGate (SPG) offer
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#RestApi_Models_Data_Payment">object</a>
+				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -334,7 +334,7 @@ This function may be used to create a SecurePayGate (SPG) offer
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The date until the offer should be valid in ISO 8601.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
+	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
 	<i class="small text-muted">
 AlphaNumeric[10..10]<br />
 				    <span>Example: <code>2019-10-20</code></span>
@@ -511,6 +511,181 @@ Id[1..20]<br />
   "OfferId": "503a3d7b-072b-400f-9e7e-8ec15191c737",
   "PaymentLink": "https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737"
 }
+</pre>
+
+<<<---
+
+
+
+
+
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate Get SingleUsePaymentLink
+
+This function may be used to fetch the status of a previously created single use payment link
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+#### Response
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>OfferId</strong><br />
+	<span class="text-muted small">
+				globally unique identifier
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentLink</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The status of the SecurePayGate offer</div>
+	<i class="small text-muted">
+Possible values: OPEN, PAID, EXPIRED.<br />
+				    <span>Example: <code>PAID</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The transaction id once a transaction was made</div>
+	<i class="small text-muted">
+				    <span>Example: <code>vA3bhlAht2WlSAOKOvQSAOnbAdCb</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Payment</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payment (amount, currency, description, orderId)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CreationDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The creation date and time of the SecurePayGate offer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023-02-24T11:34:11.128+01:00</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>ExpirationDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The date after which the offer expires</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023-04-20T00:00:00.000+02:00</code></span>
+	</i>
+</td>
+				</tr>
+
+</table>
+
+
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+              "OfferId":"503a3d7b-072b-400f-9e7e-8ec15191c737",
+              "PaymentLink":"https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737"
+              "Status":"OPEN",
+              "Payment":{
+                "Amount":{
+                  "Value":"100",
+                  "CurrencyCode":"CHF",
+                },
+                "OrderId":"cd0005bf21bb4906bcbea939d74cee72",
+                "Description":"Hallo"
+              },
+              "CreationDate":"2023-03-01T11:37:47.682+01:00",
+              "ExpirationDate":"2023-04-01T00:00:00.000+02:00"
+            }
 </pre>
 
 <<<---

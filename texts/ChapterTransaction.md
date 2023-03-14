@@ -4272,6 +4272,20 @@ This method can be used to get the details of a transaction that has been author
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 
 </table>
 

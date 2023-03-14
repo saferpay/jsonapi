@@ -180,6 +180,21 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Notification</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasNotification">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the process completion. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/notify/123</code></span>
+	</i>
+</td>
+				</tr>
 
 </table>
 

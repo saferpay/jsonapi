@@ -4,8 +4,8 @@ List of behaviors:
 
 <table class="table table-striped">
   <tr>
-    <td class="text-right col-sm-3">ABORT</td>
-    <td class="col-sm-9">Do not retry this request. It will never succeed.</td>
+    <td class="text-right col-sm-3">DO_NOT_RETRY</td>
+    <td class="col-sm-9">Do not try again to avoid potential fees related to authorization reattempts that do not respect card schemes instructions. The card issuer will never approve this authorization request.</td>
   </tr>
   <tr>
     <td class="text-right">RETRY</td>
@@ -13,7 +13,7 @@ List of behaviors:
   </tr>
   <tr>
     <td class="text-right">RETRY_LATER</td>
-    <td>This request can be retried later after certain state/ error condition has been changed.</td>
+    <td>This request can be retried later after a certain state/error condition has been changed. For example, insufficient funds  (up to 10 attempts in 30 days)</td>
   </tr>
   <tr>
     <td class="text-right">OTHER_MEANS</td>
@@ -215,6 +215,13 @@ List of error names (these names will not change, so you may parse these and att
       <td>
           The acquirer returned an unexpected error code.<br />
           <i>Solution:</i> Try again
+      </td>
+  </tr>
+  <tr>
+      <td class="text-right">UPDATE_CARD_INFORMATION</td>
+      <td>
+          Card details need to be updated in order to have the possibility of a successful payment<br />
+          <i>Solution:</i> Update card data
       </td>
   </tr>
   <tr>

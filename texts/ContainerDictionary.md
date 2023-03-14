@@ -785,8 +785,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32<br />
-				    <span>Example: <code>1.32</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br />
+				    <span>Example: <code>1.33</code></span>
 	</i>
 </td>
 							</tr>
@@ -894,8 +894,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32<br />
-				    <span>Example: <code>1.32</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br />
+				    <span>Example: <code>1.33</code></span>
 	</i>
 </td>
 							</tr>
@@ -1454,6 +1454,24 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_AliasNotification"</h2>
+				<table class="table" id="Payment_Models_Data_AliasNotification">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>NotifyUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">the url that should be called to notify when the process is done</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2028,7 +2046,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 			</i>
 </td>
 							</tr>
@@ -4031,20 +4049,6 @@ Id[1..35]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Twint</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_TwintInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Twint data</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>PayPal</strong><br />
 	<span class="text-muted small">
 				
@@ -4761,7 +4765,7 @@ Utf8[1..1000]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of authorized refunds exceeds the capture value. By default this check is disabled.</div>
+	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of refunds exceeds the captured amount.<br> All authorized refunds are included in the calculation even if the have not been captured yet. Cancelled refunds are not included.<br> By default this check is disabled.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5319,19 +5323,6 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is the transaction B2B?</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>DeviceFingerprint</strong><br />
-	<span class="text-muted small">
-				object
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Fraugster device fingerprint according to https://docs.fraugster.com/integration-tools/device-fingerprinting/</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6025,7 +6016,7 @@ Possible values: MASTERPASS.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -6388,8 +6379,8 @@ Range: inclusive between 0 and 99999<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "RestApi_Models_Data_Payment"</h2>
-				<table class="table" id="RestApi_Models_Data_Payment">
+			<h2>Container "RestApi_Models_Data_PaymentWithOptions"</h2>
+				<table class="table" id="RestApi_Models_Data_PaymentWithOptions">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -6456,6 +6447,64 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">Specific payment options</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_Data_PaymentWithoutOptions"</h2>
+				<table class="table" id="RestApi_Models_Data_PaymentWithoutOptions">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
+	<i class="small text-muted">
+Utf8[1..100]<br />
+				    <span>Example: <code>Description of payment</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>

@@ -51,7 +51,7 @@
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">What can be done to resolve the error?</div>
 	<i class="small text-muted">
-Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
+Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 			</i>
 </td>
 				</tr>
@@ -191,7 +191,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br />
     "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
   },
-  "Behavior": "ABORT",
+  "Behavior": "DO_NOT_RETRY",
   "ErrorName": "VALIDATION_FAILED",
   "ErrorMessage": "Request validation failed",
   "ErrorDetail": [
