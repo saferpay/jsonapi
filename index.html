@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.32</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.33</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.32</span>
+						<span class="text-primary">JSON API Spec-Version 1.33</span>
 					</h3>
 
 					<ul class="nav">
@@ -125,7 +125,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.32</span>
+								<span class="text-primary">JSON API Spec-Version 1.33</span>
 							</h3>
 						</button>
 
@@ -611,7 +611,7 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">What can be done to resolve the error?</div>
 	<i class="small text-muted">
-Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
+Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 			</i>
 </td>
 				</tr>
@@ -743,7 +743,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
   },
-  &quot;Behavior&quot;: &quot;ABORT&quot;,
+  &quot;Behavior&quot;: &quot;DO_NOT_RETRY&quot;,
   &quot;ErrorName&quot;: &quot;VALIDATION_FAILED&quot;,
   &quot;ErrorMessage&quot;: &quot;Request validation failed&quot;,
   &quot;ErrorDetail&quot;: [
@@ -754,8 +754,8 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div><div class="col-md-6"><p>List of behaviors:</p><table class="table table-striped">
   <tbody><tr>
-    <td class="text-right col-sm-3">ABORT</td>
-    <td class="col-sm-9">Do not retry this request. It will never succeed.</td>
+    <td class="text-right col-sm-3">DO_NOT_RETRY</td>
+    <td class="col-sm-9">Do not try again to avoid potential fees related to authorization reattempts that do not respect card schemes instructions. The card issuer will never approve this authorization request.</td>
   </tr>
   <tr>
     <td class="text-right">RETRY</td>
@@ -763,7 +763,7 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
   </tr>
   <tr>
     <td class="text-right">RETRY_LATER</td>
-    <td>This request can be retried later after certain state/ error condition has been changed.</td>
+    <td>This request can be retried later after a certain state/error condition has been changed. For example, insufficient funds  (up to 10 attempts in 30 days)</td>
   </tr>
   <tr>
     <td class="text-right">OTHER_MEANS</td>
@@ -963,6 +963,13 @@ Possible values: ABORT, OTHER_MEANS, RETRY, RETRY_LATER.<br>
       </td>
   </tr>
   <tr>
+      <td class="text-right">UPDATE_CARD_INFORMATION</td>
+      <td>
+          Card details need to be updated in order to have the possibility of a successful payment<br>
+          <i>Solution:</i> Update card data
+      </td>
+  </tr>
+  <tr>
       <td class="text-right">VALIDATION_FAILED</td>
       <td>
           Validation failed.<br>
@@ -1074,7 +1081,7 @@ Numeric[8..8]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -5084,6 +5091,20 @@ Id[1..50]<br>
 			</i>
 </td>
 				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;1.11&quot;,
@@ -5730,6 +5751,21 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<div style="padding-bottom: 10px">Means of payment to register</div>
 	<i class="small text-muted">
 			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Notification</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasNotification">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the process completion. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://merchanthost/notify/123</code></span>
+	</i>
 </td>
 				</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
@@ -7018,7 +7054,7 @@ Utf8[1..128]<br>
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Offers</h2><div class="row"><div class="col-md-6"><p>This function may be used to create a SecurePayGate (SPG) offer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p>This function may be used to create a single use payment link</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 	<thead>
 		<tr>
 			<th colspan="2">Arguments</th>
@@ -7032,7 +7068,7 @@ Utf8[1..128]<br>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#RestApi_Models_Data_Payment">object</a>
+				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7052,7 +7088,7 @@ Utf8[1..128]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The date until the offer should be valid in ISO 8601.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
+	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
 	<i class="small text-muted">
 AlphaNumeric[10..10]<br>
 				    <span>Example: <code>2019-10-20</code></span>
@@ -7204,6 +7240,133 @@ Id[1..20]<br>
   &quot;OfferId&quot;: &quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
   &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate Get SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p>This function may be used to fetch the status of a previously created single use payment link</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+				<tbody><tr>
+					<td class="col-sm-4 text-right">
+	<strong>OfferId</strong><br>
+	<span class="text-muted small">
+				globally unique identifier
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>PaymentLink</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Status</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The status of the SecurePayGate offer</div>
+	<i class="small text-muted">
+Possible values: OPEN, PAID, EXPIRED.<br>
+				    <span>Example: <code>PAID</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The transaction id once a transaction was made</div>
+	<i class="small text-muted">
+				    <span>Example: <code>vA3bhlAht2WlSAOKOvQSAOnbAdCb</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>Payment</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payment (amount, currency, description, orderId)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>CreationDate</strong><br>
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The creation date and time of the SecurePayGate offer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023-02-24T11:34:11.128+01:00</code></span>
+	</i>
+</td>
+				</tr>
+				<tr>
+					<td class="col-sm-4 text-right">
+	<strong>ExpirationDate</strong><br>
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The date after which the offer expires</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023-04-20T00:00:00.000+02:00</code></span>
+	</i>
+</td>
+				</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+              &quot;OfferId&quot;:&quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
+              &quot;PaymentLink&quot;:&quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;
+              &quot;Status&quot;:&quot;OPEN&quot;,
+              &quot;Payment&quot;:{
+                &quot;Amount&quot;:{
+                  &quot;Value&quot;:&quot;100&quot;,
+                  &quot;CurrencyCode&quot;:&quot;CHF&quot;,
+                },
+                &quot;OrderId&quot;:&quot;cd0005bf21bb4906bcbea939d74cee72&quot;,
+                &quot;Description&quot;:&quot;Hallo&quot;
+              },
+              &quot;CreationDate&quot;:&quot;2023-03-01T11:37:47.682+01:00&quot;,
+              &quot;ExpirationDate&quot;:&quot;2023-04-01T00:00:00.000+02:00&quot;
+            }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal</h2><div class="row"><div class="col-md-6"><p>This method is used to retrieve details of one terminal</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 	<thead>
 		<tr>
@@ -8252,8 +8415,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32<br>
-				    <span>Example: <code>1.32</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br>
+				    <span>Example: <code>1.33</code></span>
 	</i>
 </td>
 							</tr>
@@ -8361,8 +8524,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32<br>
-				    <span>Example: <code>1.32</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br>
+				    <span>Example: <code>1.33</code></span>
 	</i>
 </td>
 							</tr>
@@ -8921,6 +9084,24 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment Data from Apple Pay Wallet</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_AliasNotification&quot;</h2>
+				<table class="table" id="Payment_Models_Data_AliasNotification">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>NotifyUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">the url that should be called to notify when the process is done</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -9495,7 +9676,7 @@ Utf8[1..1000]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 			</i>
 </td>
 							</tr>
@@ -11498,20 +11679,6 @@ Id[1..35]<br>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Twint</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_TwintInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Twint data</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>PayPal</strong><br>
 	<span class="text-muted small">
 				
@@ -12228,7 +12395,7 @@ Utf8[1..1000]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of authorized refunds exceeds the capture value. By default this check is disabled.</div>
+	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of refunds exceeds the captured amount.<br> All authorized refunds are included in the calculation even if the have not been captured yet. Cancelled refunds are not included.<br> By default this check is disabled.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -12786,19 +12953,6 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is the transaction B2B?</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>DeviceFingerprint</strong><br>
-	<span class="text-muted small">
-				object
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Fraugster device fingerprint according to https://docs.fraugster.com/integration-tools/device-fingerprinting/</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -13492,7 +13646,7 @@ Possible values: MASTERPASS.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
 	<i class="small text-muted">
-Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -13855,8 +14009,8 @@ Range: inclusive between 0 and 99999<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;RestApi_Models_Data_Payment&quot;</h2>
-				<table class="table" id="RestApi_Models_Data_Payment">
+			<h2>Container &quot;RestApi_Models_Data_PaymentWithOptions&quot;</h2>
+				<table class="table" id="RestApi_Models_Data_PaymentWithOptions">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
@@ -13923,6 +14077,64 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">Specific payment options</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;RestApi_Models_Data_PaymentWithoutOptions&quot;</h2>
+				<table class="table" id="RestApi_Models_Data_PaymentWithoutOptions">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<i class="small text-muted">
+Id[1..80]<br>
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
+	<i class="small text-muted">
+Utf8[1..100]<br>
+				    <span>Example: <code>Description of payment</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
@@ -14177,6 +14389,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.33.0.0.20230321">Version 1.33</a></li>
 <li><a href="#v1.32.0.0.20230117">Version 1.32</a></li>
 <li><a href="#v1.31.0.0.20221115">Version 1.31</a></li>
 <li><a href="#v1.30.0.0.20220920">Version 1.30</a></li>
@@ -14206,12 +14419,38 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.33.0.0.20230321"><h2><a name="v1.33.0.0.20230321"></a> Version 1.33 (released 2023-03-21)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2023-03-07</li>
+<li>introduced version 1.33</li>
+<li>added value <code>1.33</code> for <em>SpecVersion</em></li>
+<li>added <code>NotifyUrl</code> to the <a href="index.html#Payment_v1_Alias_Insert">SecureCardData/AliasInsert</a> request</li>
+<li>added the value <code>FraudPrevention</code> to the <a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a> response</li>
+<li>added <code>ACCOUNTTOACCOUNT</code> as a possible payment method in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> and <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li>a new method was added which allows the merchant to fetch data about a previously created SingeUsePaymentLink: <code>/rest/customers/{customerId}/terminals/{terminalId}/spg-offers/{offerId}</code></li>
+<li>the error behavior <code>ABORT</code> was renamed to <code>DO_NOT_RETRY</code></li>
+<li>the new error message <code>UPDATE_CARD_INFORMATION</code> was added</li>
+<li><code>DeviceFingerprint</code> was removed from all versions</li>
+<li>the <code>Twint</code> object was removed from the response of:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryPaymentMeans">Transaction/QueryPaymentMeans</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AssertRedirectPayment">Transaction/AssertRedirectPayment</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
+<li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.32.0.0.20230117"><h2><a name="v1.32.0.0.20230117"></a> Version 1.32 (released 2023-01-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2022-12-29</li>
 <li>introduced version 1.32</li>
 <li>added value <code>1.32</code> for <em>SpecVersion</em></li>
-<li>This method is now obsolete: <code>/api/rest/customers/{customerid}/terminals/{terminalid}/payment-methods</code> and replaced with this method: <code>/api/rest/customers/{customerid}/terminals/{terminalid}</code></li>
-<li>In addition, there is a new method that allows the merchant to query which terminals he has: <code>/api/rest/customers/{customerid}/terminals</code></li>
+<li>this method is now obsolete: <code>/api/rest/customers/{customerid}/terminals/{terminalid}/payment-methods</code> and replaced with this method: <code>/api/rest/customers/{customerid}/terminals/{terminalid}</code></li>
+<li>in addition, there is a new method that allows the merchant to query which terminals he has: <code>/api/rest/customers/{customerid}/terminals</code></li>
 <li>added values <code>PAYCONIQ</code> for <em>Brand.PaymentMethod</em> and <em>PaymentMethods</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
 <li>container <em>ReturnUrls</em> (parameters <em>Success</em> and <em>Fail</em>) is replaced by container <em>ReturnUrl</em> (parameter <em>Url</em>)</li>
 </ul></div></div></section><section id="v1.31.0.0.20221115"><h2><a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)</h2><div class="row"><div class="col-md-6"><ul>
