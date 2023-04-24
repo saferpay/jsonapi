@@ -5327,6 +5327,20 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DeviceFingerprintTransactionId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The customer's Session ID (mastered by DFP Device Fingerprinting), or the event ID if the session is not available</div>
+	<i class="small text-muted">
+Max length: 1024<br />
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_SaferpayFields"</h2>
