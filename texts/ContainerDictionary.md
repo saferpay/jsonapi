@@ -785,8 +785,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br />
-				    <span>Example: <code>1.33</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34<br />
+				    <span>Example: <code>1.34</code></span>
 	</i>
 </td>
 							</tr>
@@ -894,8 +894,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br />
-				    <span>Example: <code>1.33</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34<br />
+				    <span>Example: <code>1.34</code></span>
 	</i>
 </td>
 							</tr>
@@ -1525,7 +1525,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
 	<i class="small text-muted">
-				    <span>Example: <code>MasterPass</code></span>
+				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
 </td>
 							</tr>
@@ -4015,7 +4015,7 @@ Id[1..35]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
 	<i class="small text-muted">
-				    <span>Example: <code>MasterPass</code></span>
+				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
 </td>
 							</tr>
@@ -5980,69 +5980,6 @@ Range: inclusive between 1 and 12<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Card data</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_Wallet"</h2>
-				<table class="table" id="Payment_Models_Data_Wallet">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Type</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The type of the wallet.</div>
-	<i class="small text-muted">
-Possible values: MASTERPASS.<br />
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>PaymentMethods</strong><br />
-	<span class="text-muted small">
-				array of strings
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
-	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
-				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>RequestDeliveryAddress</strong><br />
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Have the payer select a delivery address in his wallet. If not sent, no address is obtained from wallet.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>EnableAmountAdjustment</strong><br />
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs.<br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect).<br> DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
 	<i class="small text-muted">
 			</i>
 </td>
