@@ -23,7 +23,7 @@ This chapter will give you a simple overview about the general transaction flow,
 
 
 
-## <a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to start a transaction which may involve either DCC and / or 3d-secure.
 
@@ -185,20 +185,6 @@ Numeric[8..8]<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Styling options</div>
-	<i class="small text-muted">
-			</i>
-</td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
-	<strong>Wallet</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Wallet">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Wallet system to be used for the transaction (this cannot be combined with PaymentMeans above).</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -445,7 +431,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 
 
 
-## <a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.
 
@@ -776,7 +762,7 @@ Numeric[3..4]<br />
 
 
 
-## <a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.
 
@@ -789,7 +775,7 @@ This method may be used to query the payment means and payer data (address) afte
 #### Request
 
 
-This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.<br> For MasterPass, the address the payer has selected in his wallet is returned as well as the RedirectUrl for DCC if DCC was skipped by the EnableAmountAdjustment attribute in Initialize.
+This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.
 
 <table class="table">
 	<thead>
@@ -995,7 +981,7 @@ Id[1..50]<br />
 
 
 
-## <a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to adjust the amount after query payment means.
 
@@ -1008,7 +994,7 @@ This method may be used to adjust the amount after query payment means.
 #### Request
 
 
-This function allows a change of the authorization amount which was originally set by Initialize.<br> For the time being, this is only allowed for MasterPass business integration scenario and requires a flag having been set in the Initialize call.
+This function allows a change of the authorization amount which was originally set by Initialize.<br> It requires a flag having been set in the Initialize and is only available in specific use cases.
 
 <table class="table">
 	<thead>
@@ -1143,7 +1129,7 @@ Id[1..50]<br />
 
 
 
-## <a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).
 
@@ -1553,7 +1539,7 @@ Possible values: MERCHANT, PAYER.<br />
 
 
 
-## <a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.
 
@@ -1855,7 +1841,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Capture"></a>Transaction Capture <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Capture"></a>Transaction Capture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to finalize previously authorized transactions and refunds.
 
@@ -2119,7 +2105,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 
-## <a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to capture multiple parts of an authorized transaction.
 
@@ -2388,7 +2374,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 
-## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 <div class="warning">
 <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
@@ -2590,7 +2576,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 
-## <a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).
 
@@ -2718,7 +2704,7 @@ This method may be used to finalize a transaction having one or more partial cap
 
 
 
-## <a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be called to refund a previous transaction.
 
@@ -2959,7 +2945,7 @@ This method may be called to refund a previous transaction.
 
 
 
-## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to inquire the status and further information of pending refunds.
 
@@ -3162,7 +3148,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 
-## <a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.
 
@@ -3415,7 +3401,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method may be used to cancel previously authorized transactions and refunds.
 
@@ -3594,7 +3580,7 @@ This method may be used to cancel previously authorized transactions and refunds
 
 
 
-## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 <div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
@@ -3879,7 +3865,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 
 
 
-## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 <div class="danger">
 <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
@@ -4086,7 +4072,7 @@ Id[1..50]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method can be used to get the details of a transaction that has been authorized successfully.
 <div class="info">
@@ -4345,7 +4331,7 @@ This method can be used to get the details of a transaction that has been author
 
 
 
-## <a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 This method can be used to authorize the payments that do not have a payment-page or
 for the payments that before authorization some additional steps such as authentication should be done.
@@ -4644,7 +4630,7 @@ Possible values: BANCONTACT.<br />
 
 
 
-## <a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory"><a href= "https://saferpay.github.io/jsonapi/#rest_customers_[customerId]_license-configuration">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
 
 Call this method to get information about a previously initialized alternative payment transaction
 
