@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.33](#v1.34.0.0.20230516)
 - [Version 1.33](#v1.33.0.0.20230321)
 - [Version 1.32](#v1.32.0.0.20230117)
 - [Version 1.31](#v1.31.0.0.20221115)
@@ -32,6 +33,15 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.34.0.0.20230516"></a> Version 1.44 (released 2023-05-16)
+- available on Sandbox: 2023-05-03
+- introduced version 1.34
+- added value `1.34` for _SpecVersion_
+- added parameter `DeviceFingerprintTransactionId` to container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests
+- removed `MASTERPASS` as valid value from field `Wallets` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
+- added additional info about expected values to field `LanguageCode` of [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
+- updated link to [license information](https://docs.saferpay.com/home/master/licensing)
+
 ## <a name="v1.33.0.0.20230321"></a> Version 1.33 (released 2023-03-21)
 - available on Sandbox: 2023-03-07
 - introduced version 1.33
@@ -43,7 +53,7 @@
 - the error behavior `ABORT` was renamed to `DO_NOT_RETRY`
 - the new error message `UPDATE_CARD_INFORMATION` was added
 - `DeviceFingerprint` was removed from all versions
-- the `Twint` object was removed from the response of: 
+- the `Twint` object was removed from the response of:
   - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
   - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
   - [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
@@ -63,7 +73,7 @@
 - this method is now obsolete: `/api/rest/customers/{customerid}/terminals/{terminalid}/payment-methods` and replaced with this method: `/api/rest/customers/{customerid}/terminals/{terminalid}`
 - in addition, there is a new method that allows the merchant to query which terminals he has: `/api/rest/customers/{customerid}/terminals`
 - added values `PAYCONIQ` for _Brand.PaymentMethod_ and _PaymentMethods_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-- container _ReturnUrls_ (parameters _Success_ and _Fail_) is replaced by container _ReturnUrl_ (parameter _Url_) 
+- container _ReturnUrls_ (parameters _Success_ and _Fail_) is replaced by container _ReturnUrl_ (parameter _Url_)
 
 ## <a name="v1.31.0.0.20221115"></a> Version 1.31 (released 2022-11-15)
 - available on Sandbox: 2022-11-01
@@ -215,14 +225,12 @@
 - added container _Ideal_ to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of an iDEAL issuer
 - added value `APPLEPAY` for _Wallets_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of Apple Pay
 
-
 ## <a name="v1.14.0.0.20191119"></a> Version 1.14 (released 2019-11-19)
 - available on Sandbox: 2019-11-05
 - introduced version 1.14
 - added value `1.14` for _SpecVersion_
 - added new [Saferpay Secure PayGate API](index.html#ChapterManagementApi) for automated creation of Saferpay Secure PayGate offers
 - added container _SaferpayFields_ to container _PaymentMeans_ in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) requests
-
 
 ## <a name="v1.13.0.0.20190917"></a> Version 1.13 (released 2019-09-17)
 - available on Sandbox: 2019-09-10
@@ -232,7 +240,6 @@
 - added new country code value _XK_ (Kosovo) to field CountryCode
 - added new value _DIVERSE_ in field Gender
 - added new error code _PAYMENTMEANS_NOT_SUPPORTED_ with corresponding error message "Unsupported means of payment (e.g. non SEPA IBAN)"
-
 
 ## <a name="v1.12.0.0.20190716"></a> Version 1.12 (released 2019-07-16)
 - available on Sandbox: 2019-07-02
