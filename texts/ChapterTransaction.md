@@ -938,7 +938,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Available if DCC may be performed.</div>
 	<i class="small text-muted">
-			</i>
+				    <span>Example: <code>https://www.saferpay.com/VT2/api/...</code></span>
+	</i>
 </td>
 				</tr>
 
@@ -1309,7 +1310,8 @@ Numeric[8..8]<br />
 	<div style="padding-bottom: 10px">Specify if the transaction was initiated by the merchant (default behavior if not specified) or by the payer.<br> This is relevant for most credit and debit cards managed by Mastercard, Visa and American Express card schemes (in card scheme jargon: MERCHANT means MIT, PAYER means CIT).<br> For these schemes, transactions initiated by the payer usually require authentication of the card holder, which is not possible if you use Transaction/AuthorizeDirect (use Transaction/Initialize or PaymentPage/Initialize if you're not sure).<br> Saferpay will flag the transaction accordingly (also taking the optional Exemption in the Authentication container into account) on the protocols which support this and card issuers might approve or decline transactions depending on this flagging.</div>
 	<i class="small text-muted">
 Possible values: MERCHANT, PAYER.<br />
-			</i>
+				    <span>Example: <code>MERCHANT</code></span>
+	</i>
 </td>
 				</tr>
 

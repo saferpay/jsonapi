@@ -1346,7 +1346,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2571,6 +2571,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
 	</i>
 </td>
@@ -2864,7 +2865,7 @@ Max length: 50<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">SettlementDate with the format MMYY</div>
+	<div style="padding-bottom: 10px">SettlementDate with the format MMDD</div>
 	<i class="small text-muted">
 String length: inclusive between 4 and 4<br />
 				    <span>Example: <code>0122</code></span>
@@ -3190,6 +3191,7 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous success notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
@@ -3207,6 +3209,7 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous failure notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
@@ -3422,6 +3425,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to the product page</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1</code></span>
 	</i>
 </td>
@@ -3436,6 +3440,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to an image showing the product</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1/image</code></span>
 	</i>
 </td>
@@ -4221,6 +4226,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
 	</i>
 </td>
@@ -4415,7 +4421,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-				    <span>Example: <code>AcquirerReference</code></span>
+				    <span>Example: <code>109510</code></span>
 	</i>
 </td>
 							</tr>
@@ -4681,6 +4687,7 @@ Utf8[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification url called when the payer has completed the redirect steps successfully and the transaction is ready to be authorized.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/success/123</code></span>
 	</i>
 </td>
@@ -4698,6 +4705,7 @@ Utf8[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification url called when the payer redirect steps have failed. The transaction cannot be authorized.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/fail/123</code></span>
 	</i>
 </td>
@@ -5063,7 +5071,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-				    <span>Example: <code>AcquirerReference</code></span>
+				    <span>Example: <code>109510</code></span>
 	</i>
 </td>
 							</tr>
@@ -5277,6 +5285,7 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Return url for successful, failed or aborted transaction</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/return</code></span>
 	</i>
 </td>
@@ -5794,7 +5803,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-				    <span>Example: <code>AcquirerReference</code></span>
+				    <span>Example: <code>109510</code></span>
 	</i>
 </td>
 							</tr>
@@ -6310,6 +6319,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to the product page</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1</code></span>
 	</i>
 </td>
@@ -6324,6 +6334,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to an image showing the product</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1/image</code></span>
 	</i>
 </td>
