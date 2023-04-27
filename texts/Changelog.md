@@ -33,7 +33,7 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
-## <a name="v1.34.0.0.20230516"></a> Version 1.44 (released 2023-05-16)
+## <a name="v1.34.0.0.20230516"></a> Version 1.34 (released 2023-05-16)
 - available on Sandbox: 2023-05-03
 - introduced version 1.34
 - added value `1.34` for _SpecVersion_
