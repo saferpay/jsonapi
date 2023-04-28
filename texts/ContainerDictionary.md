@@ -619,7 +619,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-ch - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language using the payers browser agent.<br> The supported language codes are listed below. This list may be extended in the future as more languages become available. If the submitted language code has a valid format, but is not supported, then the default language is used.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-ch - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
 	<i class="small text-muted">
 				    <span>Example: <code>de</code></span>
 	</i>
@@ -747,7 +747,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language, using the payers browser agent.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-ch - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
+	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language using the payers browser agent.<br> The supported language codes are listed below. This list may be extended in the future as more languages become available. If the submitted language code has a valid format, but is not supported, then the default language is used.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-ch - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
 	<i class="small text-muted">
 				    <span>Example: <code>de</code></span>
 	</i>
@@ -785,8 +785,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br />
-				    <span>Example: <code>1.33</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34<br />
+				    <span>Example: <code>1.34</code></span>
 	</i>
 </td>
 							</tr>
@@ -894,8 +894,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33<br />
-				    <span>Example: <code>1.33</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34<br />
+				    <span>Example: <code>1.34</code></span>
 	</i>
 </td>
 							</tr>
@@ -1346,7 +1346,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1525,7 +1525,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
 	<i class="small text-muted">
-				    <span>Example: <code>MasterPass</code></span>
+				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
 </td>
 							</tr>
@@ -2571,6 +2571,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
 	</i>
 </td>
@@ -2864,7 +2865,7 @@ Max length: 50<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">SettlementDate with the format MMYY</div>
+	<div style="padding-bottom: 10px">SettlementDate with the format MMDD</div>
 	<i class="small text-muted">
 String length: inclusive between 4 and 4<br />
 				    <span>Example: <code>0122</code></span>
@@ -3190,6 +3191,7 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous success notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
@@ -3207,6 +3209,7 @@ Id[1..15]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous failure notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
@@ -3422,6 +3425,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to the product page</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1</code></span>
 	</i>
 </td>
@@ -3436,6 +3440,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to an image showing the product</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1/image</code></span>
 	</i>
 </td>
@@ -4015,7 +4020,7 @@ Id[1..35]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
 	<i class="small text-muted">
-				    <span>Example: <code>MasterPass</code></span>
+				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
 </td>
 							</tr>
@@ -4221,6 +4226,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
 	</i>
 </td>
@@ -4415,7 +4421,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-				    <span>Example: <code>AcquirerReference</code></span>
+				    <span>Example: <code>109510</code></span>
 	</i>
 </td>
 							</tr>
@@ -4681,6 +4687,7 @@ Utf8[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification url called when the payer has completed the redirect steps successfully and the transaction is ready to be authorized.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/success/123</code></span>
 	</i>
 </td>
@@ -4698,6 +4705,7 @@ Utf8[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification url called when the payer redirect steps have failed. The transaction cannot be authorized.</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/fail/123</code></span>
 	</i>
 </td>
@@ -5063,7 +5071,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-				    <span>Example: <code>AcquirerReference</code></span>
+				    <span>Example: <code>109510</code></span>
 	</i>
 </td>
 							</tr>
@@ -5277,6 +5285,7 @@ Range: inclusive between 1 and 1600<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Return url for successful, failed or aborted transaction</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/return</code></span>
 	</i>
 </td>
@@ -5324,6 +5333,20 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is the transaction B2B?</div>
 	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DeviceFingerprintTransactionId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The customer's Session ID (mastered by DFP Device Fingerprinting), or the event ID if the session is not available</div>
+	<i class="small text-muted">
+Max length: 1024<br />
 			</i>
 </td>
 							</tr>
@@ -5780,7 +5803,7 @@ Id[1..80]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
 	<i class="small text-muted">
-				    <span>Example: <code>AcquirerReference</code></span>
+				    <span>Example: <code>109510</code></span>
 	</i>
 </td>
 							</tr>
@@ -5980,69 +6003,6 @@ Range: inclusive between 1 and 12<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Card data</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_Wallet"</h2>
-				<table class="table" id="Payment_Models_Data_Wallet">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Type</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The type of the wallet.</div>
-	<i class="small text-muted">
-Possible values: MASTERPASS.<br />
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>PaymentMethods</strong><br />
-	<span class="text-muted small">
-				array of strings
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">May be used to restrict the brands which should be allowed. If not sent, we use all brands configured on this terminal.</div>
-	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
-				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>RequestDeliveryAddress</strong><br />
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Have the payer select a delivery address in his wallet. If not sent, no address is obtained from wallet.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>EnableAmountAdjustment</strong><br />
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">This option is very specific for the MasterPass business scenario where the amount may be adjusted after the redirect to MasterPass and QueryPaymentMeans to allow for changes in shipping costs.<br> If this is set to true, DCC will not be done right away (but may be done later with an additional redirect).<br> DON’T USE THIS IF YOU’RE NOT SURE – IT’S PROBABLY NOT WHAT YOU WANT!</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6359,6 +6319,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to the product page</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1</code></span>
 	</i>
 </td>
@@ -6373,6 +6334,7 @@ Range: inclusive between 0 and 99999<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to an image showing the product</div>
 	<i class="small text-muted">
+Max length: 2000<br />
 				    <span>Example: <code>https://merchanthost/product/1/image</code></span>
 	</i>
 </td>
