@@ -40,7 +40,7 @@
 - added parameter `DeviceFingerprintTransactionId` to container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests
 - removed `MASTERPASS` as valid value from field `Wallets` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
 - removed `UNIONPAY` as valid value from field `PaymentMethods` in [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
-- added additional info about expected values to field `LanguageCode` of [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
+- added additional info about expected values to field `LanguageCode` of the _Payer_ container and [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
 - updated link to [license information](https://docs.saferpay.com/home/master/licensing)
 
 ## <a name="v1.33.0.0.20230321"></a> Version 1.33 (released 2023-03-21)
