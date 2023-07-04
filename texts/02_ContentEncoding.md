@@ -1,4 +1,4 @@
-﻿# <a name="encoding"></a>Content Encoding
+# <a name="encoding"></a>Content Encoding
 
 `UTF-8` must be used for text encoding (there are restrictions on allowed characters for specific fields though).
 

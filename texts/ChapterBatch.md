@@ -3,6 +3,7 @@
 
 ## <a name="Payment_v1_Batch_Close"></a>Batch Close
 
+<span class="POST request-method">POST</span><br>
 This chapter covers the Batch Close via API
 
 <div class="info">
@@ -20,14 +21,15 @@ This chapter covers the Batch Close via API
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -42,9 +44,9 @@ This chapter covers the Batch Close via API
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -60,11 +62,11 @@ Numeric[8..8]<br />
 				    <span>Example: <code>12341234</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -82,19 +84,21 @@ Numeric[8..8]<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -109,11 +113,11 @@ Numeric[8..8]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -127,6 +131,7 @@ Numeric[8..8]<br />
 </pre>
 
 <<<---
+
 
 
 

@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.35](#v1.35.0.0.20230718)
 - [Version 1.34](#v1.34.0.0.20230516)
 - [Version 1.33](#v1.33.0.0.20230321)
 - [Version 1.32](#v1.32.0.0.20230117)
@@ -32,6 +33,21 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)
+- available on Sandbox: 2023-07-04
+- introduced version 1.35
+- added value `1.35` for _SpecVersion_
+- added CARD as value from field PaymentMethod in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
+- added [CustomerLicense](index.html#rest_customers_[customerId]_license) method to Saferpay Management API
+- removed `CustomerLicenseConfiguration` method from Saferpay Management API
+- added endpoint SecurePayGate `Delete` [SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]) to Saferpay Management API
+- added container `payer` to [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+- added container `notification` to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) and [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+- added property `PayerDccReceiptEmail` to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) and [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+- per default, in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) the field `HolderName` is not shown
+- [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers), argument `ExpirationDate` is now in the format`yyyy-MM-ddTHH:mm:ssK` and has to be at least 1h in the future and within 180 days
+
 
 ## <a name="v1.34.0.0.20230516"></a> Version 1.34 (released 2023-05-16)
 - available on Sandbox: 2023-05-03

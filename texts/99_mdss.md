@@ -1,4 +1,4 @@
-﻿# Markdown CheatSheet
+# Markdown CheatSheet
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/).
 

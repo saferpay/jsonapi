@@ -55,6 +55,7 @@ HTTP Headers example:
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken
 
+<span class="POST request-method">POST</span><br>
 Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).
 
 --->>>
@@ -68,14 +69,15 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>SourceUrls</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -90,9 +92,9 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 				    <span>Example: <code>https://yourshop.com/</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -107,11 +109,11 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 Utf8[1..128]<br />
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -127,19 +129,21 @@ Utf8[1..128]<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>AccessToken</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -154,11 +158,11 @@ Utf8[1..128]<br />
 				    <span>Example: <code>67f47961-2912-4338-8039-22ac2b8486f3</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -174,13 +178,15 @@ Utf8[1..128]<br />
 
 
 
-## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
+## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
+
+<span class="GET request-method">GET</span><br>
 This method is used to retrieve the current license configuration for a customer
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license</p></div>
 
 <<<---
 
@@ -189,16 +195,12 @@ This method is used to retrieve the current license configuration for a customer
 
 No body needed
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -208,19 +210,21 @@ No example available
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -235,9 +239,9 @@ No example available
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -252,11 +256,11 @@ No example available
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -285,8 +289,123 @@ No example available
 
 
 
+
+## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
+
+<span class="GET request-method">GET</span><br>
+<strong>DEPRECATED:</strong> since Version 1.35. Please use instead: /rest/customers/{customerId}/license
+
+This method is used to retrieve the current license configuration for a customer
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Package</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the configured package</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Features</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "Package": {
+    "Id": "SAFERPAY_FLEX",
+    "DisplayName": "Saferpay Flex"
+  },
+  "Features": [
+    {
+      "Id": "MANAGEMENT_API",
+      "DisplayName": "Management API"
+    },
+    {
+      "Id": "PAYMENT_API",
+      "DisplayName": "Payment API"
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
+<span class="POST request-method">POST</span><br>
 This function may be used to create a single use payment link
 
 --->>>
@@ -300,14 +419,15 @@ This function may be used to create a single use payment link
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -322,9 +442,9 @@ This function may be used to create a single use payment link
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -334,15 +454,15 @@ This function may be used to create a single use payment link
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> YYYY-MM-DD<br> Must be within the next 180 days.</div>
+	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> yyyy-MM-ddTHH:mm:ssK<br> Must be at least 1h in the future and within the next 180 days.</div>
 	<i class="small text-muted">
-AlphaNumeric[10..10]<br />
-				    <span>Example: <code>2019-10-20</code></span>
+AlphaNumeric[10..25]<br />
+				    <span>Example: <code>2019-10-20T00:00:00+02:00</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
 				string
@@ -355,9 +475,9 @@ Id[1..20]<br />
 				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -372,9 +492,9 @@ Id[1..20]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 				
@@ -386,9 +506,9 @@ Id[1..20]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 				
@@ -400,9 +520,9 @@ Id[1..20]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
 				
@@ -414,11 +534,11 @@ Id[1..20]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -434,7 +554,7 @@ Id[1..20]<br />
       "PreAuth": true
     }
   },
-  "ExpirationDate": "2020-04-23",
+  "ExpirationDate": "2020-04-23T00:00:00+02:00",
   "Payer": {
     "LanguageCode": "de",
     "BillingAddress": {
@@ -454,19 +574,21 @@ Id[1..20]<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -481,9 +603,9 @@ Id[1..20]<br />
 				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -498,11 +620,11 @@ Id[1..20]<br />
 				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -519,8 +641,10 @@ Id[1..20]<br />
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate Get SingleUsePaymentLink
 
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink
+
+<span class="GET request-method">GET</span><br>
 This function may be used to fetch the status of a previously created single use payment link
 
 --->>>
@@ -534,16 +658,12 @@ This function may be used to fetch the status of a previously created single use
 
 No body needed
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -553,19 +673,21 @@ No example available
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
 				globally unique identifier
@@ -577,9 +699,9 @@ No example available
 				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
 				string
@@ -591,9 +713,9 @@ No example available
 				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 				string
@@ -606,9 +728,9 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 				    <span>Example: <code>PAID</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 				string
@@ -620,9 +742,9 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 				    <span>Example: <code>vA3bhlAht2WlSAOKOvQSAOnbAdCb</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 				
@@ -634,9 +756,9 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br />
 	<span class="text-muted small">
 				date
@@ -648,9 +770,9 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 				    <span>Example: <code>2023-02-24T11:34:11.128+01:00</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
 				date
@@ -662,30 +784,30 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 				    <span>Example: <code>2023-04-20T00:00:00.000+02:00</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
 <pre class="prettyprint">
 {
-              "OfferId":"503a3d7b-072b-400f-9e7e-8ec15191c737",
-              "PaymentLink":"https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737"
-              "Status":"OPEN",
-              "Payment":{
-                "Amount":{
-                  "Value":"100",
-                  "CurrencyCode":"CHF",
-                },
-                "OrderId":"cd0005bf21bb4906bcbea939d74cee72",
-                "Description":"Hallo"
-              },
-              "CreationDate":"2023-03-01T11:37:47.682+01:00",
-              "ExpirationDate":"2023-04-01T00:00:00.000+02:00"
-            }
+  "OfferId": "503a3d7b-072b-400f-9e7e-8ec15191c737",
+  "PaymentLink": "https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737",
+  "Status": "OPEN",
+  "Payment": {
+    "Amount": {
+      "Value": "100",
+      "CurrencyCode": "CHF"
+    },
+    "OrderId": "cd0005bf21bb4906bcbea939d74cee72",
+    "Description": "Hallo"
+  },
+  "CreationDate": "2023-03-01T11:37:47.682+01:00",
+  "ExpirationDate": "2023-04-01T00:00:00+02:00"
+}
 </pre>
 
 <<<---
@@ -694,8 +816,46 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 
 
+
+
+
+<span class="DELETE request-method">DELETE</span><br>
+This function may be used to delete a single use payment link before it's expiry
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
 
+<span class="GET request-method">GET</span><br>
 This method is used to retrieve details of one terminal
 
 --->>>
@@ -709,16 +869,12 @@ This method is used to retrieve details of one terminal
 
 No body needed
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -728,19 +884,21 @@ No example available
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 				string
@@ -751,9 +909,9 @@ No example available
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 				string
@@ -765,9 +923,9 @@ No example available
 Possible values: ECOM, SPG, MPO.<br />
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 				string
@@ -778,9 +936,9 @@ Possible values: ECOM, SPG, MPO.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 				
@@ -792,9 +950,9 @@ Possible values: ECOM, SPG, MPO.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 				
@@ -806,11 +964,11 @@ Possible values: ECOM, SPG, MPO.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -871,8 +1029,10 @@ Possible values: ECOM, SPG, MPO.<br />
 
 
 
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
 
+<span class="GET request-method">GET</span><br>
 <strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
 
 This method is used to retrieve a list of all available payment methods and wallets for a terminal.
@@ -888,16 +1048,12 @@ This method is used to retrieve a list of all available payment methods and wall
 
 No body needed
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -907,19 +1063,21 @@ No example available
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 				
@@ -931,9 +1089,9 @@ No example available
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 				
@@ -945,11 +1103,11 @@ No example available
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1007,8 +1165,10 @@ No example available
 
 
 
+
 ## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
 
+<span class="GET request-method">GET</span><br>
 This method is used to retrieve all terminals
 
 --->>>
@@ -1022,16 +1182,12 @@ This method is used to retrieve all terminals
 
 No body needed
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1041,19 +1197,21 @@ No example available
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
 				
@@ -1065,11 +1223,11 @@ No example available
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1096,6 +1254,7 @@ No example available
 </pre>
 
 <<<---
+
 
 
 

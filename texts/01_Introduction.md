@@ -1,4 +1,4 @@
-﻿# <a name="intro"></a>Introduction
+# <a name="intro"></a>Introduction
 
 This page describes the Saferpay JSON application programming interface.
 

@@ -1,4 +1,4 @@
-﻿# <a name="authentication"></a>Authentication
+# <a name="authentication"></a>Authentication
 
 Saferpay supports the mechanism of basic authentication or a client certificate for authentication of a
 server (host) system.

@@ -1,14 +1,15 @@
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -23,9 +24,9 @@
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Risk</strong><br />
 	<span class="text-muted small">
 				
@@ -37,9 +38,9 @@
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Behavior</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -54,9 +55,9 @@
 Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ErrorName</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -70,9 +71,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -86,9 +87,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 				string
@@ -99,9 +100,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ErrorDetail</strong><br />
 	<span class="text-muted small">
 				array of strings
@@ -112,9 +113,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ProcessorName</strong><br />
 	<span class="text-muted small">
 				string
@@ -125,9 +126,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ProcessorResult</strong><br />
 	<span class="text-muted small">
 				string
@@ -138,9 +139,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ProcessorMessage</strong><br />
 	<span class="text-muted small">
 				string
@@ -151,9 +152,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PayerMessage</strong><br />
 	<span class="text-muted small">
 				string
@@ -164,9 +165,9 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -177,11 +178,11 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -203,5 +204,6 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br />
 </pre>
 
 <<<---
+
 
 
