@@ -1,4 +1,4 @@
-﻿# <a name="errorhandling"></a>Error Handling
+# <a name="errorhandling"></a>Error Handling
 
 Successfully completed requests are confirmed with an http status code of `200` and
 contain the appropriate response message in the body.

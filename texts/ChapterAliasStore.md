@@ -3,6 +3,7 @@
 
 ## <a name="Payment_v1_Alias_Insert"></a>Alias Insert
 
+<span class="POST request-method">POST</span><br>
 This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.
 
 <div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
@@ -20,14 +21,15 @@ This function may be used to insert an alias without knowledge about the card de
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -42,9 +44,9 @@ This function may be used to insert an alias without knowledge about the card de
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -59,9 +61,9 @@ This function may be used to insert an alias without knowledge about the card de
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -77,9 +79,9 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 				    <span>Example: <code>CARD</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -94,9 +96,9 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
@@ -108,9 +110,9 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
 				string
@@ -122,9 +124,9 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 				    <span>Example: <code>de</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
 				
@@ -136,9 +138,9 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 				array of strings
@@ -151,9 +153,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 				
@@ -165,9 +167,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 				
@@ -179,9 +181,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
 				
@@ -194,11 +196,11 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -222,19 +224,21 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -249,9 +253,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -266,9 +270,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -283,9 +287,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 				    <span>Example: <code>2015-01-30T13:45:22.258+02:00</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
 				boolean
@@ -296,9 +300,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br />
 	<span class="text-muted small">
 				
@@ -310,11 +314,11 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -340,8 +344,10 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 
 
 
+
 ## <a name="Payment_v1_Alias_AssertInsert"></a>Alias AssertInsert
 
+<span class="POST request-method">POST</span><br>
 This method may be used to inquire the Alias Id and further information after a successful Alias Insert call.
 This function can be called up to 24 hours after the transaction was initialized.
 
@@ -360,14 +366,15 @@ This function can be called up to 24 hours after the transaction was initialized
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -382,9 +389,9 @@ This function can be called up to 24 hours after the transaction was initialized
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -400,11 +407,11 @@ Id[1..50]<br />
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -422,19 +429,21 @@ Id[1..50]<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -449,9 +458,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -466,9 +475,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -483,9 +492,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 				
@@ -497,11 +506,11 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -538,8 +547,10 @@ Id[1..50]<br />
 
 
 
+
 ## <a name="Payment_v1_Alias_InsertDirect"></a>Alias InsertDirect
 
+<span class="POST request-method">POST</span><br>
 This method may be used to insert an alias directly with card-data collected by using your own HTML form.
 
 <div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
@@ -557,14 +568,15 @@ This method may be used to insert an alias directly with card-data collected by 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -579,9 +591,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -596,9 +608,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -613,9 +625,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
 				
@@ -627,9 +639,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
 				
@@ -641,11 +653,11 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -674,19 +686,21 @@ This method may be used to insert an alias directly with card-data collected by 
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -701,9 +715,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -718,9 +732,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -735,9 +749,9 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 				
@@ -749,11 +763,11 @@ This method may be used to insert an alias directly with card-data collected by 
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -790,8 +804,10 @@ This method may be used to insert an alias directly with card-data collected by 
 
 
 
+
 ## <a name="Payment_v1_Alias_Update"></a>Alias Update
 
+<span class="POST request-method">POST</span><br>
 This method may be used to update an alias' lifetime and / or its credit card expiry date
 
 --->>>
@@ -805,14 +821,15 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -827,9 +844,9 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>UpdateAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -844,9 +861,9 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>UpdatePaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -861,11 +878,11 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -879,7 +896,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
   },
   "AliasUpdate": {
     "Id": "[your alias id]",
-    "LifeTime": "[your lifetime]"
+    "Lifetime": "[your lifetime]"
   },
   "UpdatePaymentMeans": {
     "Card": {
@@ -892,19 +909,21 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -919,9 +938,9 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -936,9 +955,9 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -953,11 +972,11 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -994,8 +1013,10 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 
 
 
+
 ## <a name="Payment_v1_Alias_Delete"></a>Alias Delete
 
+<span class="POST request-method">POST</span><br>
 This method may be used to delete previously inserted aliases.
 
 --->>>
@@ -1009,14 +1030,15 @@ This method may be used to delete previously inserted aliases.
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1031,9 +1053,9 @@ This method may be used to delete previously inserted aliases.
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1049,11 +1071,11 @@ Id[1..40]<br />
 				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1071,19 +1093,21 @@ Id[1..40]<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1098,11 +1122,11 @@ Id[1..40]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1116,6 +1140,7 @@ Id[1..40]<br />
 </pre>
 
 <<<---
+
 
 
 

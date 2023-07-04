@@ -1,4 +1,4 @@
-﻿# <a name="integration"></a>Integration
+# <a name="integration"></a>Integration
 
 ## Test Environment
 

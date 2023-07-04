@@ -28,6 +28,7 @@ This chapter will give you a simple overview about the transaction flow, when us
 
 ## <a name="Payment_v1_PaymentPage_Initialize"></a>PaymentPage Initialize
 
+<span class="POST request-method">POST</span><br>
 This method can be used to start a transaction with the Payment Page which may involve either DCC and / or 3d-secure
 
 --->>>
@@ -41,14 +42,15 @@ This method can be used to start a transaction with the Payment Page which may i
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -63,9 +65,9 @@ This method can be used to start a transaction with the Payment Page which may i
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
 				string
@@ -78,9 +80,9 @@ Id[1..20]<br />
 				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -96,9 +98,9 @@ Numeric[8..8]<br />
 				    <span>Example: <code>12345678</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -113,9 +115,9 @@ Numeric[8..8]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 				array of strings
@@ -124,13 +126,13 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br />
 	<span class="text-muted small">
 				
@@ -142,9 +144,9 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRE
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
 				
@@ -156,9 +158,9 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, DIRE
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 				array of strings
@@ -171,9 +173,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
@@ -185,9 +187,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 				
@@ -199,9 +201,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -216,9 +218,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
 				
@@ -230,9 +232,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
@@ -244,9 +246,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 				
@@ -258,9 +260,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
 				
@@ -272,9 +274,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 				
@@ -286,9 +288,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
 				string
@@ -300,9 +302,9 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
 				
@@ -314,9 +316,9 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
 				
@@ -328,11 +330,11 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -361,19 +363,21 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -388,9 +392,9 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -405,9 +409,9 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 				    <span>Example: <code>234uhfh78234hlasdfh8234e1234</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -422,9 +426,9 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 				    <span>Example: <code>2011-07-14T19:43:37+01:00</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -439,11 +443,11 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/234uhfh78234hlasdfh8234e1234</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -465,8 +469,10 @@ Possible values: WITH_LIABILITY_SHIFT, IF_ALLOWED_BY_SCHEME.<br />
 
 
 
+
 ## <a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert
 
+<span class="POST request-method">POST</span><br>
 Call this function to safely check the status of the transaction from your server.
 
 <div class="info">
@@ -492,14 +498,15 @@ Call this function to safely check the status of the transaction from your serve
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -514,9 +521,9 @@ Call this function to safely check the status of the transaction from your serve
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -532,11 +539,11 @@ Id[1..50]<br />
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -554,19 +561,21 @@ Id[1..50]<br />
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -581,9 +590,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -598,9 +607,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -615,9 +624,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 				
@@ -629,9 +638,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
 				
@@ -643,9 +652,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
 				
@@ -657,9 +666,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
 				
@@ -671,9 +680,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
 				
@@ -685,9 +694,9 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
 				
@@ -699,11 +708,11 @@ Id[1..50]<br />
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -746,7 +755,6 @@ Id[1..50]<br />
     "LiableEntity": "THREEDS",
     "ThreeDs": {
       "Authenticated": true,
-      "LiabilityShift": true,
       "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs="
     }
   }
@@ -754,6 +762,7 @@ Id[1..50]<br />
 </pre>
 
 <<<---
+
 
 
 

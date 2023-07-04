@@ -1,4 +1,4 @@
-﻿# <a name="formats"></a>Formats
+# <a name="formats"></a>Formats
 
 The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:
 

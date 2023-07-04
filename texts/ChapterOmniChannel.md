@@ -3,6 +3,7 @@
 
 ## <a name="Payment_v1_OmniChannel_InsertAlias"></a>OmniChannel InsertAlias
 
+<span class="POST request-method">POST</span><br>
 This function may be used to create an alias by providing a SixTransactionReference.
 
 --->>>
@@ -16,14 +17,15 @@ This function may be used to create an alias by providing a SixTransactionRefere
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -38,9 +40,9 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -55,9 +57,9 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -72,11 +74,11 @@ This function may be used to create an alias by providing a SixTransactionRefere
 				    <span>Example: <code>1:100002:199970683910</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -97,19 +99,21 @@ This function may be used to create an alias by providing a SixTransactionRefere
 
 <<<---
 
+
 #### Response
 
 
 
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -124,9 +128,9 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -141,9 +145,9 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -158,9 +162,9 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 				
@@ -172,11 +176,11 @@ This function may be used to create an alias by providing a SixTransactionRefere
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -213,8 +217,10 @@ This function may be used to create an alias by providing a SixTransactionRefere
 
 
 
+
 ## <a name="Payment_v1_OmniChannel_AcquireTransaction"></a>OmniChannel AcquireTransaction
 
+<span class="POST request-method">POST</span><br>
 This function may be used to acquire a POS authorized or captured transaction by providing a SixTransactionReference. This transaction can then be authorized, canceled, captured or refunded.
 
 --->>>
@@ -228,14 +234,15 @@ This function may be used to acquire a POS authorized or captured transaction by
 
 This request allows to acquire an OmniChannel transaction.
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -250,9 +257,9 @@ This request allows to acquire an OmniChannel transaction.
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -268,9 +275,9 @@ Numeric[8..8]<br />
 				    <span>Example: <code>12345678</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
 				string
@@ -283,9 +290,9 @@ Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
 	</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -300,11 +307,11 @@ Id[1..80]<br />
 				    <span>Example: <code>1:100002:199970683910</code></span>
 	</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -324,19 +331,21 @@ Id[1..80]<br />
 
 <<<---
 
+
 #### Response
 
 
 This response returns an acquired OmniChannel transaction.
 
+
 <table class="table">
-	<thead>
-		<tr>
-			<th colspan="2">Arguments</th>
-		</tr>
-	</thead>
+			<thead>
 				<tr>
-					<td class="col-sm-4 text-right">
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -351,9 +360,9 @@ This response returns an acquired OmniChannel transaction.
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -368,9 +377,9 @@ This response returns an acquired OmniChannel transaction.
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
-				<tr>
-					<td class="col-sm-4 text-right">
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -385,11 +394,11 @@ This response returns an acquired OmniChannel transaction.
 	<i class="small text-muted">
 			</i>
 </td>
-				</tr>
+						</tr>
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -432,6 +441,7 @@ This response returns an acquired OmniChannel transaction.
 </pre>
 
 <<<---
+
 
 
 
