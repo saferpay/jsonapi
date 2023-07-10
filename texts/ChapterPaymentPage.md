@@ -167,7 +167,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page and to go directly to the given wallet (if exactly one wallet is filled and PaymentMethods is not set).</div>
+	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page.</div>
 	<i class="small text-muted">
 Possible values: APPLEPAY, GOOGLEPAY.<br />
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>

@@ -592,7 +592,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> Allows country codes formatted as ISO 3166 or ISO 3166-2.</div>
 	<i class="small text-muted">
 Iso3166[1..6]<br />
-				    <span>Example: <code>ZH</code></span>
+				    <span>Example: <code>ZH / CH-ZH</code></span>
 	</i>
 </td>
 							</tr>
@@ -820,7 +820,7 @@ Utf8[1..25]<br />
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> Allows country codes formatted as ISO 3166 or ISO 3166-2.</div>
 	<i class="small text-muted">
 Iso3166[1..6]<br />
-				    <span>Example: <code>ZH</code></span>
+				    <span>Example: <code>ZH / CH-ZH</code></span>
 	</i>
 </td>
 							</tr>

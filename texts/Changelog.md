@@ -47,6 +47,7 @@
 - added property `PayerDccReceiptEmail` to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) and [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
 - per default, in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) the field `HolderName` is not shown
 - [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers), argument `ExpirationDate` is now in the format`yyyy-MM-ddTHH:mm:ssK` and has to be at least 1h in the future and within 180 days
+- the `CountrySubdivisionCode` in the address containers now also accepts complete country codes (e.g. `CH-ZH`) beside the already accepted subdivision codes
 
 
 ## <a name="v1.34.0.0.20230516"></a> Version 1.34 (released 2023-05-16)
