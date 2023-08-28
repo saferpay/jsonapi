@@ -538,21 +538,6 @@ AlphaNumeric[10..10]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br />
-				    <span>Example: <code>AG</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
 				string
@@ -747,21 +732,6 @@ Alphabetic[2..2]<br />
 	<i class="small text-muted">
 AlphaNumeric[10..10]<br />
 				    <span>Example: <code>1990-05-31</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br />
-				    <span>Example: <code>AG</code></span>
 	</i>
 </td>
 							</tr>
@@ -980,21 +950,6 @@ AlphaNumeric[10..10]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br />
-				    <span>Example: <code>AG</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
 				string
@@ -1194,21 +1149,6 @@ AlphaNumeric[10..10]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br />
-				    <span>Example: <code>AG</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
 				string
@@ -1367,8 +1307,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35<br />
-				    <span>Example: <code>1.35</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36<br />
+				    <span>Example: <code>1.36</code></span>
 	</i>
 </td>
 							</tr>
@@ -1476,8 +1416,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35<br />
-				    <span>Example: <code>1.35</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36<br />
+				    <span>Example: <code>1.36</code></span>
 	</i>
 </td>
 							</tr>
@@ -3628,7 +3568,7 @@ Possible values: YES, NO, UNKNOWN.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf the capture or refund capture is being made.</div>
+	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf a multipart capture or refund capture is being made.</div>
 	<i class="small text-muted">
 Id[1..15]<br />
 			</i>

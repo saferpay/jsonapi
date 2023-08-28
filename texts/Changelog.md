@@ -34,6 +34,29 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)
+- available on Sandbox: 2023-08-29
+- introduced version 1.36
+- added value `1.36` for _SpecVersion_
+- removed `CheckResult` from [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias) response
+- removed `UNIONPAY` as valid value from field `PaymentMethods` in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
+- removed `LegalForm`from the `BillingAddress` container, affecting the following requests and responses:
+  - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+  - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+  - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
+  - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
+  - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+  - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+  - [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
+  - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+  - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+  - [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
+  - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+  - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+  - [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+
 ## <a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)
 - available on Sandbox: 2023-07-04
 - introduced version 1.35
