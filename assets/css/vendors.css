@@ -151,3 +151,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     border-left: 5px solid #F0A92B;
     padding: 2px 0px 2px 5px;
 }
+
+span.request-method {
+    padding: 4px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #a9a9a9;
+}
+
+span.GET {
+    background: rgba(97,175,254,.1);    
+    border: 1px solid #61affe;
+}
+span.DELETE {
+    background: rgba(249,62,62,.1);
+    border: 1px solid #f93e3e;
+}
+span.POST{
+    background: rgba(73,204,144,.1);
+    border: 1px solid  #49cc90;
+}
+span.PUT {
+    background:rgba(252,161,48,.1);
+    border: 1px solid  #fca130;
+}
+
+
+
+

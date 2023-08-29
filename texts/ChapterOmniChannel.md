@@ -163,20 +163,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			</i>
 </td>
 						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>CheckResult</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Result of the Check</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
 
 </table>
 
