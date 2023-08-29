@@ -40,7 +40,7 @@
 - added value `1.36` for _SpecVersion_
 - removed `CheckResult` from [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias) response
 - removed `UNIONPAY` as valid value from field `PaymentMethods` in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
-- removed `LegalForm`from the `BillingAddress` container, affecting the following requests and responses:
+- removed `LegalForm` from the `BillingAddress` container, affecting the following requests and responses:
   - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
   - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
   - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
