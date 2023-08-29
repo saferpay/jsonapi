@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.35</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.36</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.35</span>
+						<span class="text-primary">JSON API Spec-Version 1.36</span>
 					</h3>
 
 					<ul class="nav">
@@ -126,7 +126,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.35</span>
+								<span class="text-primary">JSON API Spec-Version 1.36</span>
 							</h3>
 						</button>
 
@@ -1818,7 +1818,7 @@ Numeric[8..8]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, UNIONPAY, VISA. Additional values may be accepted but are ignored.<br>
+Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, VISA. Additional values may be accepted but are ignored.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -6711,20 +6711,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			</i>
 </td>
 						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>CheckResult</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Result of the Check</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -8252,21 +8238,6 @@ AlphaNumeric[10..10]<br>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br>
-				    <span>Example: <code>AG</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
 				string
@@ -8461,21 +8432,6 @@ Alphabetic[2..2]<br>
 	<i class="small text-muted">
 AlphaNumeric[10..10]<br>
 				    <span>Example: <code>1990-05-31</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br>
-				    <span>Example: <code>AG</code></span>
 	</i>
 </td>
 							</tr>
@@ -8694,21 +8650,6 @@ AlphaNumeric[10..10]<br>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br>
-				    <span>Example: <code>AG</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
 				string
@@ -8908,21 +8849,6 @@ AlphaNumeric[10..10]<br>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LegalForm</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The payer's legal form</div>
-	<i class="small text-muted">
-Possible values: AG, GmbH, Misc.<br>
-				    <span>Example: <code>AG</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
 				string
@@ -9081,8 +9007,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35<br>
-				    <span>Example: <code>1.35</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36<br>
+				    <span>Example: <code>1.36</code></span>
 	</i>
 </td>
 							</tr>
@@ -9190,8 +9116,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35<br>
-				    <span>Example: <code>1.35</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36<br>
+				    <span>Example: <code>1.36</code></span>
 	</i>
 </td>
 							</tr>
@@ -11342,7 +11268,7 @@ Possible values: YES, NO, UNKNOWN.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf the capture or refund capture is being made.</div>
+	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf a multipart capture or refund capture is being made.</div>
 	<i class="small text-muted">
 Id[1..15]<br>
 			</i>
@@ -15067,6 +14993,38 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.36.0.0.20230912"><h2><a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2023-08-29</li>
+<li>introduced version 1.36</li>
+<li>added value <code>1.36</code> for <em>SpecVersion</em></li>
+<li>removed <code>CheckResult</code> from <a href="index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> response</li>
+<li>removed <code>UNIONPAY</code> as valid value from field <code>PaymentMethods</code> in <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests</li>
+<li>removed <code>LegalForm</code> from the <code>BillingAddress</code> container, affecting the following requests and responses:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryPaymentMeans">Transaction/QueryPaymentMeans</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AssertRedirectPayment">Transaction/AssertRedirectPayment</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AlternativePayment">Transaction/AlternativePayment</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
+<li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
+<li><a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
+</ul>
+</li>
+<li>renamed the following values of the <code>Condition</code> field
+<ul>
+<li><code>WITH_LIABILITY_SHIFT</code> is now <code>3DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED</code></li>
+<li><code>IF_ALLOWED_BY_SCHEME</code> is now <code>NONE</code></li>
+</ul>
+</li>
+<li>added <code>Condition</code> field to <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a> requests</li>
 </ul></div></div></section><section id="v1.35.0.0.20230718"><h2><a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2023-07-04</li>
 <li>introduced version 1.35</li>
