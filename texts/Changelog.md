@@ -56,6 +56,10 @@
   - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
   - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
   - [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+- renamed the following values of the `Condition` field
+  - `WITH_LIABILITY_SHIFT` is now `3DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED`
+  - `IF_ALLOWED_BY_SCHEME` is now `NONE`
+- added `Condition` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests
 
 ## <a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)
 - available on Sandbox: 2023-07-04
