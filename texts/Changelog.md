@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.36](#v1.36.0.0.20230912)
 - [Version 1.35](#v1.35.0.0.20230718)
 - [Version 1.34](#v1.34.0.0.20230516)
 - [Version 1.33](#v1.33.0.0.20230321)
