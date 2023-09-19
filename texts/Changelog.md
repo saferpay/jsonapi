@@ -58,7 +58,7 @@
   - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
   - [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
 - renamed the following values of the `Condition` field
-  - `WITH_LIABILITY_SHIFT` is now `3DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED`
+  - `WITH_LIABILITY_SHIFT` is now `THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED`
   - `IF_ALLOWED_BY_SCHEME` is now `NONE`
 - added `Condition` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests
 
