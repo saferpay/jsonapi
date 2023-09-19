@@ -6055,7 +6055,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">3DS Secure challenge options</div>
 	<i class="small text-muted">
-Possible values: AVOID, FORCE.<br />
+Possible values: FORCE.<br />
 			</i>
 </td>
 							</tr>
