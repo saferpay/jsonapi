@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.37](#v1.37.0.0.20231114)
 - [Version 1.36](#v1.36.0.0.20230912)
 - [Version 1.35](#v1.35.0.0.20230718)
 - [Version 1.34](#v1.34.0.0.20230516)
@@ -34,6 +35,31 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.37.0.0.20231114"></a> Version 1.37 (released 2023-11-14)
+- available on Sandbox: 2023-10-27
+- introduced version 1.37
+- added value `1.37` for _SpecVersion_
+- added `POSTFINANCE` as valid value for field `PaymentMethods` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
+- extended selection of possible characters for `PayerId`, affecting the following requests and responses:
+  - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+  - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+  - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
+  - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
+  - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+  - [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
+  - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+  - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+  - [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
+  - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+- added `TokenType` field to `SchemeToken`, affecting the following requests and responses:
+  - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+  - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+  - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+
 
 ## <a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)
 - available on Sandbox: 2023-08-29
