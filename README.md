@@ -8,7 +8,8 @@ To learn more about Saferpay please check www.saferpay.com.
 
 ### Versions
 
-* [Spec version 1.36 (latest)](https://saferpay.github.io/jsonapi)
+* [Spec version 1.37 (latest)](https://saferpay.github.io/jsonapi)
+* [Spec version 1.36](https://saferpay.github.io/jsonapi/1.36)
 * [Spec version 1.35](https://saferpay.github.io/jsonapi/1.35)
 * [Spec version 1.34](https://saferpay.github.io/jsonapi/1.34)
 * [Spec version 1.33](https://saferpay.github.io/jsonapi/1.33)
