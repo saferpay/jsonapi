@@ -219,9 +219,9 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. Use a unique id for your customer (a UUID is highly recommended).<br> For GDPR reasons, we don't recommend using an id which contains personal data (eg. no name).</div>
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. The ID can be numeric, alphabetical and contain any of the following special characters: .:!#$%&'*+-/=?^_`{|}~@@.<br> For GDPR reasons we <strong>strongly discourage</strong> the use of ids containing any personal data (e.g. names) and instead recommend the usage of a merchant-side generated UUID for your customer.</div>
 	<i class="small text-muted">
-Id[1..50]<br />
+PayerId[1..256]<br />
 			</i>
 </td>
 							</tr>
@@ -1307,8 +1307,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36<br />
-				    <span>Example: <code>1.36</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37<br />
+				    <span>Example: <code>1.37</code></span>
 	</i>
 </td>
 							</tr>
@@ -1416,8 +1416,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36<br />
-				    <span>Example: <code>1.36</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37<br />
+				    <span>Example: <code>1.37</code></span>
 	</i>
 </td>
 							</tr>
@@ -2568,7 +2568,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
 			</i>
 </td>
 							</tr>
@@ -4013,8 +4013,9 @@ Max length: 2000<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop.</div>
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. The ID can be numeric, alphabetical and contain any of the following special characters: .:!#$%&amp;'*+-/=?^_`{|}~@@.</div>
 	<i class="small text-muted">
+PayerId[1..256]<br />
 			</i>
 </td>
 							</tr>
@@ -5987,10 +5988,27 @@ Range: inclusive between 1 and 12<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Saferpay E-Commerce Indicator</div>
+	<div style="padding-bottom: 10px">Saferpay E-Commerce Indicator. This indicator is just informational.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2023</code></span>
+				    <span>Example: <code>07</code></span>
 	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TokenType</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of the Scheme Token.</div>
+	<i class="small text-muted">
+Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER.<br />
+			</i>
 </td>
 							</tr>
 					</tbody>
