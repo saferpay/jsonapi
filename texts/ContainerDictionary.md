@@ -6001,14 +6001,14 @@ Range: inclusive between 1 and 12<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				SIX.Saferpay.Common.Types.SchemeTokenType
+				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Scheme Token Type to be used</div>
+	<div style="padding-bottom: 10px">Type of the Scheme Token.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>GooglePay, SamsungPay, ApplePay, ClickToPay, Other</code></span>
-	</i>
+Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER.<br />
+			</i>
 </td>
 							</tr>
 					</tbody>
