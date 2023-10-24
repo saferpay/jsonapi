@@ -55,10 +55,8 @@
   - [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
   - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
 - added `TokenType` field to `SchemeToken`, affecting the following requests and responses:
-  - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+  - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
   - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-  - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
 
 ## <a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)
 - available on Sandbox: 2023-08-29
