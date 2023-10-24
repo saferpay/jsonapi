@@ -40,7 +40,7 @@
 - available on Sandbox: 2023-10-27
 - introduced version 1.37
 - added value `1.37` for _SpecVersion_
-- added `POSTFINANCE` as valid value for field `PaymentMethods` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
+- added `POSTFINANCEPAY` as valid value for field `PaymentMethods` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
 - extended selection of possible characters for `PayerId`, affecting the following requests and responses:
   - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
   - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
@@ -59,7 +59,6 @@
   - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
   - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
   - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
-
 
 ## <a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)
 - available on Sandbox: 2023-08-29
