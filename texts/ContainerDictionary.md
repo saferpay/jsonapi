@@ -1933,7 +1933,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2240,7 +2240,7 @@ Base64 encoded string<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -4461,7 +4461,7 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5426,7 +5426,7 @@ Utf8[1..1000]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
 	<i class="small text-muted">
 			</i>
 </td>
