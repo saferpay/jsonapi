@@ -217,7 +217,6 @@
 - added container _SchemeToken_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) and [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) requests
 - added container _IssuerReference_ to [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) request
 - removed parameter _VerificationValue_ from [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire), [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment), [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert), [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect) and [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias) responses
-- marked parameter _CssUrl_ as ***deprecated*** in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 
 ## <a name="v1.22.0.0.20210518"></a> Version 1.22 (released 2021-05-18)
 - available on Sandbox: 2021-05-04
@@ -273,7 +272,7 @@
 - removed parameter _RedirectUrl_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
 - added parameter _RedirectRequired_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
 - added container _Redirect_ in [Alias/Insert](index.html#Payment_v1_Alias_Insert) response
-- marked parameter _CssUrl_ as _**deprecated**_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment) and [Alias/Insert](index.html#Payment_v1_Alias_Insert) requests
+- marked parameter _CssUrl_ as ***deprecated*** in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 
 ## <a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)
 - available on Sandbox: 2020-03-03
