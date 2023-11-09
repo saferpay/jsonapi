@@ -1084,7 +1084,7 @@ Numeric[8..8]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
+Possible values: ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -12476,7 +12476,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong>: This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong> This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
 	<i class="small text-muted">
 Max length: 2000<br>
 				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
@@ -12530,7 +12530,7 @@ Possible values: PAYMENT.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and WL Crypto Payments refund at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING'</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -13180,7 +13180,7 @@ Possible values: REFUND.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and WL Crypto Payments refund at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING'</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -13913,7 +13913,7 @@ Possible values: PAYMENT, REFUND.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING' (PENDING is only used for paydirekt and WL Crypto Payments refund at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING'</div>
 	<i class="small text-muted">
 Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 				    <span>Example: <code>AUTHORIZED</code></span>
@@ -15258,7 +15258,7 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>removed parameter <em>RedirectUrl</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> response</li>
 <li>added parameter <em>RedirectRequired</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> response</li>
 <li>added container <em>Redirect</em> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> response</li>
-<li>marked parameter <em>CssUrl</em> as <em><strong>deprecated</strong></em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a>, <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a>, <a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a> and <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a> requests</li>
+<li>marked parameter <em>CssUrl</em> as <strong><em>deprecated</em></strong> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
 </ul></div></div></section><section id="v1.16.0.0.20200317"><h2><a name="v1.16.0.0.20200317"></a> Version 1.16 (released 2020-03-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2020-03-03</li>
 <li>introduced version 1.16</li>
