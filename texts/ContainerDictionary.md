@@ -331,7 +331,7 @@ PayerId[1..256]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Color depth</div>
 	<i class="small text-muted">
-Possible values: 1bit, 4bits, 8bits, 15bits, 16bits, 24bits, 32bits.<br />
+Possible values: 1bit, 4bits, 8bits, 15bits, 16bits, 24bits, 32bits, 48bits.<br />
 				    <span>Example: <code>32bits</code></span>
 	</i>
 </td>
@@ -1307,8 +1307,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37<br />
-				    <span>Example: <code>1.37</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38<br />
+				    <span>Example: <code>1.38</code></span>
 	</i>
 </td>
 							</tr>
@@ -1416,19 +1416,19 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37<br />
-				    <span>Example: <code>1.37</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38<br />
+				    <span>Example: <code>1.38</code></span>
 	</i>
 </td>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_AlipayOptions"</h2>
-				<table class="table" id="Payment_Models_AlipayOptions">
+			<h2>Container "Payment_Models_A2ARefund"</h2>
+				<table class="table" id="Payment_Models_A2ARefund">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>LocalWallet</strong><br />
+	<strong>AccountHolderName</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
@@ -1437,10 +1437,10 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Preselect the Alipay local wallet. May only be used in conjunction with special Alipay integrations.</div>
+	<div style="padding-bottom: 10px">The account holder name will be used if not already present in the authorization.<br> If no account holder name is present in the authorization and none provided in the refund request, the refund cannot be processed.</div>
 	<i class="small text-muted">
-Iso885915[1..64]<br />
-				    <span>Example: <code>&quot;TNG&quot;</code></span>
+Utf8[1..50]<br />
+				    <span>Example: <code>John Doe</code></span>
 	</i>
 </td>
 							</tr>
@@ -6592,20 +6592,6 @@ Possible values: APPROVED, MANUAL_REVIEW.<br />
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Alipay</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_AlipayOptions">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional. Options which only apply to Alipay.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Ideal</strong><br />
 	<span class="text-muted small">
 				
@@ -6628,6 +6614,25 @@ Possible values: APPROVED, MANUAL_REVIEW.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional. Options which only apply to Klarna.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_RefundPaymentMethodsOptions"</h2>
+				<table class="table" id="Payment_Models_RefundPaymentMethodsOptions">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>A2A</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_A2ARefund">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. Options which only apply to account to account</div>
 	<i class="small text-muted">
 			</i>
 </td>

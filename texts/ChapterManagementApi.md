@@ -53,132 +53,6 @@ HTTP Headers example:
 <<<---
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>HostedFieldsAccessToken CreateAccessToken
-
-<span class="POST request-method">POST</span><br>
-Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).
-
---->>>
-
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
-
-<<<---
-
-#### Request
-
-
-
-
-
-<table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>SourceUrls</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string[]
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://yourshop.com/</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Description</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">A human readable description that will be shown in the Saferpay Backoffice to easily identify the Access Token.</div>
-	<i class="small text-muted">
-Utf8[1..128]<br />
-			</i>
-</td>
-						</tr>
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-{
-  "SourceUrls": [
-    "https://a.yourshop.com/",
-    "https://b.yourshop.com/"
-  ],
-  "Description": "Saferpay Fields Access Token for YourShop"
-}
-</pre>
-
-<<<---
-
-
-#### Response
-
-
-
-
-
-<table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>AccessToken</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The AccessToken for the Saferpay Fields JavaScript library</div>
-	<i class="small text-muted">
-				    <span>Example: <code>67f47961-2912-4338-8039-22ac2b8486f3</code></span>
-	</i>
-</td>
-						</tr>
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-{
-  "AccessToken": "67f47961-2912-4338-8039-22ac2b8486f3"
-}
-</pre>
-
-<<<---
-
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
 
 <span class="GET request-method">GET</span><br>
@@ -393,6 +267,132 @@ No example available
       "DisplayName": "Payment API"
     }
   ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
+
+<span class="POST request-method">POST</span><br>
+Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>SourceUrls</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://yourshop.com/</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description that will be shown in the Saferpay Backoffice to easily identify the Access Token.</div>
+	<i class="small text-muted">
+Utf8[1..128]<br />
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "SourceUrls": [
+    "https://a.yourshop.com/",
+    "https://b.yourshop.com/"
+  ],
+  "Description": "Saferpay Fields Access Token for YourShop"
+}
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>AccessToken</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The AccessToken for the Saferpay Fields JavaScript library</div>
+	<i class="small text-muted">
+				    <span>Example: <code>67f47961-2912-4338-8039-22ac2b8486f3</code></span>
+	</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "AccessToken": "67f47961-2912-4338-8039-22ac2b8486f3"
 }
 </pre>
 
