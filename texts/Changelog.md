@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.38](#v1.38.0.0.20240123)
 - [Version 1.37](#v1.37.0.0.20231114)
 - [Version 1.36](#v1.36.0.0.20230912)
 - [Version 1.35](#v1.35.0.0.20230718)
@@ -35,6 +36,17 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+
+## <a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)
+- available on Sandbox: 2024-01-04
+- introduced version 1.38
+- added value `1.38` for _SpecVersion_
+- added 48 bits support to `ColorDepth`
+- removed Alipay from `PaymentMethodOptions` container [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
+- added `PaymentMethodsOptions` to [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) for A2A AccountHolderName
+- improve case validation
+- common error message improvements
 
 ## <a name="v1.37.0.0.20231114"></a> Version 1.37 (released 2023-11-14)
 - available on Sandbox: 2023-10-27

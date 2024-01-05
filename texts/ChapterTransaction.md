@@ -2871,6 +2871,20 @@ This method may be called to refund a previous transaction.
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PaymentMethodsOptions</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_RefundPaymentMethodsOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"></div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 
 </table>
 
