@@ -1,0 +1,23 @@
+name: create gh pages
+on: 
+    push:
+        branches:
+        - master
+jobs:
+  Create-AND-PUBLISH-GH-PAGES:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: build pages
+        run: libs/GitHubPagesGenerator.exe -i "${{ github.workspace }}" -s "${{ github.workspace }}/Sitemap.json" -c "${{ github.workspace }}" -o _gh_pages -t "JSON API Spec-Version 1.38"
+      
+      - name: push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: _gh_pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Updated Github pages"
