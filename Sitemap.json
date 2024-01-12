@@ -228,9 +228,9 @@
     "Target": "index.html#ChapterManagementApi",
     "Subsites": [
       {
-        "Title": "HostedFieldsAccessToken CreateAccessToken",
+        "Title": "Licensing CustomerLicense",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"
+        "Target": "index.html#rest_customers_[customerId]_license"
       },
       {
         "Title": "Licensing CustomerLicenseConfiguration",
@@ -238,12 +238,17 @@
         "Target": "index.html#rest_customers_[customerId]_license-configuration"
       },
       {
+        "Title": "SaferpayFieldsAccessToken CreateAccessToken",
+        "Source": "texts/ChapterManagementApi.md",
+        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"
+      },
+      {
         "Title": "SecurePayGate Create SingleUsePaymentLink",
         "Source": "texts/ChapterManagementApi.md",
         "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers"
       },
       {
-        "Title": "SecurePayGate Get SingleUsePaymentLink",
+        "Title": "SecurePayGate SingleUsePaymentLink",
         "Source": "texts/ChapterManagementApi.md",
         "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"
       },

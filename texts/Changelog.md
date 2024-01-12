@@ -43,8 +43,9 @@
 - introduced version 1.38
 - added value `1.38` for _SpecVersion_
 - added 48 bits support to `ColorDepth`
-- removed Alipay from `PaymentMethodOptions` container [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
+- removed Alipay from `PaymentMethodOptions` container [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 - added `PaymentMethodsOptions` to [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) for A2A AccountHolderName
+- Token expiration increased for [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and pending transactions
 - improve case validation
 - common error message improvements
 
