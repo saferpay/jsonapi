@@ -45,6 +45,7 @@
 - added 48 bits support to `ColorDepth`
 - removed Alipay from `PaymentMethodOptions` container [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 - added `PaymentMethodsOptions` to [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) for A2A AccountHolderName
+- added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` value to `Condition` in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests
 - Token expiration increased for [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and pending transactions
 - improve case validation
 - common error message improvements
