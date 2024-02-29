@@ -170,6 +170,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page.</div>
 	<i class="small text-muted">
 Possible values: APPLEPAY, GOOGLEPAY.<br />
+Possible values: APPLEPAY, GOOGLEPAY.<br />
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>
 	</i>
 </td>
@@ -229,20 +230,6 @@ Possible values: APPLEPAY, GOOGLEPAY.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification options</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Styling</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentPageStyling">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Styling options</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -481,7 +468,7 @@ Call this function to safely check the status of the transaction from your serve
 <p><strong>Important:</strong></p>
 <ul>
 <li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
-<li>This function can be called up to 24 hours after the transaction was initialized. For pending transaction the token expiration is increased to 96 hours.</li>
+<li>This function can be called up to 24 hours after the transaction was initialized. For pending transaction the token expiration is increased to 120 hours.</li>
 <li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>
 </ul>
 </div>

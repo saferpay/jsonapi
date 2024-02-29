@@ -99,20 +99,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Styling</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Custom styling resource for the Hosted Register form.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
 				string
