@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.38</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.39</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.38</span>
+						<span class="text-primary">JSON API Spec-Version 1.39</span>
 					</h3>
 
 					<ul class="nav">
@@ -127,7 +127,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.38</span>
+								<span class="text-primary">JSON API Spec-Version 1.39</span>
 							</h3>
 						</button>
 
@@ -1130,6 +1130,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page.</div>
 	<i class="small text-muted">
 Possible values: APPLEPAY, GOOGLEPAY.<br>
+Possible values: APPLEPAY, GOOGLEPAY.<br>
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>
 	</i>
 </td>
@@ -1189,20 +1190,6 @@ Possible values: APPLEPAY, GOOGLEPAY.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification options</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Styling</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentPageStyling">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Styling options</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1401,7 +1388,7 @@ Call this function to safely check the status of the transaction from your serve
 <p><strong>Important:</strong></p>
 <ul>
 <li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
-<li>This function can be called up to 24 hours after the transaction was initialized. For pending transaction the token expiration is increased to 96 hours.</li>
+<li>This function can be called up to 24 hours after the transaction was initialized. For pending transaction the token expiration is increased to 120 hours.</li>
 <li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>
 </ul>
 </div>
@@ -1798,20 +1785,6 @@ Numeric[8..8]<br>
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Styling</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Styling options</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
 				array of strings
@@ -1914,9 +1887,6 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   },
   &quot;ReturnUrl&quot;: {
     &quot;Url&quot;: &quot;[your shop payment url]&quot;
-  },
-  &quot;Styling&quot;: {
-    &quot;CssUrl&quot;: &quot;[your shop css url]&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -2314,280 +2284,6 @@ Numeric[3..4]<br>
       &quot;Authenticated&quot;: true,
       &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;
     }
-  }
-}
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_QueryPaymentMeans"><h2><a name="Payment_v1_Transaction_QueryPaymentMeans"></a>Transaction QueryPaymentMeans <span class="label text-mandatory"><a href="https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
-This method may be used to query the payment means and payer data (address) after initialize and wallet redirect.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/QueryPaymentMeans</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function may be called to retrieve information on the means of payment which was entered / chosen by the payer after the browser is redirected to the successUrl.</p><table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tbody><tr>
-							<td class="col-sm-4 text-right">
-	<strong>RequestHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">General information about the request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Token</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Token returned by Initialize</div>
-	<i class="small text-muted">
-Id[1..50]<br>
-				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>ReturnUrl</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
-    &quot;RequestId&quot;: &quot;[unique request id]&quot;,
-    &quot;RetryIndicator&quot;: 0
-  },
-  &quot;Token&quot;: &quot;sdu5ymxx210y2dz1ggig2ey0o&quot;
-}
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tbody><tr>
-							<td class="col-sm-4 text-right">
-	<strong>ResponseHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general information about the response.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>PaymentMeans</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the means of payment</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Payer</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>RedirectRequired</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px"></div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>RedirectUrl</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Available if DCC may be performed.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/VT2/api/...</code></span>
-	</i>
-</td>
-						</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
-  },
-  &quot;PaymentMeans&quot;: {
-    &quot;Brand&quot;: {
-      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
-      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
-    },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
-    &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
-      &quot;ExpYear&quot;: 2015,
-      &quot;ExpMonth&quot;: 9,
-      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
-      &quot;CountryCode&quot;: &quot;CH&quot;
-    }
-  },
-  &quot;Payer&quot;: {
-    &quot;IpAddress&quot;: &quot;1.2.3.4&quot;,
-    &quot;IpLocation&quot;: &quot;DE&quot;
-  }
-}
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AdjustAmount"><h2><a name="Payment_v1_Transaction_AdjustAmount"></a>Transaction AdjustAmount <span class="label text-mandatory"><a href="https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
-This method may be used to adjust the amount after query payment means.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AdjustAmount</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>This function allows a change of the authorization amount which was originally set by Initialize.<br> It requires a flag having been set in the Initialize and is only available in specific use cases.</p><table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tbody><tr>
-							<td class="col-sm-4 text-right">
-	<strong>RequestHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">General information about the request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Token</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Token returned by Initialize</div>
-	<i class="small text-muted">
-Id[1..50]<br>
-				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Amount</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The new amount</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;RequestHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
-    &quot;RequestId&quot;: &quot;[unique request id]&quot;,
-    &quot;RetryIndicator&quot;: 0
-  },
-  &quot;Token&quot;: &quot;sdu5ymxx210y2dz1ggig2ey0o&quot;,
-  &quot;Amount&quot;: {
-    &quot;Value&quot;: &quot;110&quot;,
-    &quot;CurrencyCode&quot;: &quot;CHF&quot;
-  }
-}
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tbody><tr>
-							<td class="col-sm-4 text-right">
-	<strong>ResponseHeader</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general information about the response.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;ResponseHeader&quot;: {
-    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
-    &quot;RequestId&quot;: &quot;[your request id]&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AuthorizeDirect"><h2><a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href="https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
@@ -4102,7 +3798,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertRefund"><h2><a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href="https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
 This method may be used to inquire the status and further information of pending refunds.</p><div class="warning">
 <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-<p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt transactions at the moment.</p>
+<p><strong>Attention:</strong> This method is only supported for pending refunds. A pending refund is only applicable for paydirekt or WL Crypto Payments transactions at the moment.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/AssertRefund</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 			<thead>
 				<tr>
@@ -4695,20 +4391,6 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Styling</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Custom styling resource</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5713,20 +5395,6 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop.<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Styling</strong><br>
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Custom styling resource for the Hosted Register form.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -8959,6 +8627,21 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MandatoryFields</strong><br>
+	<span class="text-muted small">
+				array of strings
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
+	<i class="small text-muted">
+Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALUTATION, STATE, STREET, ZIP.<br>
+				    <span>Example: <code>[&quot;FIRSTNAME&quot;, &quot;LASTNAME&quot;, &quot;PHONE&quot;]</code></span>
+	</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Common_Models_Data_SpgPayer&quot;</h2>
@@ -9038,8 +8721,8 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38<br>
-				    <span>Example: <code>1.38</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39<br>
+				    <span>Example: <code>1.39</code></span>
 	</i>
 </td>
 							</tr>
@@ -9147,8 +8830,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38<br>
-				    <span>Example: <code>1.38</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39<br>
+				    <span>Example: <code>1.39</code></span>
 	</i>
 </td>
 							</tr>
@@ -10796,54 +10479,6 @@ Iso885915[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Payment_Models_Data_ExtendedStyling&quot;</h2>
-				<table class="table" id="Payment_Models_Data_ExtendedStyling">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Theme</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
-	<i class="small text-muted">
-Possible values: DEFAULT, SIX, NONE.<br>
-				    <span>Example: <code>DEFAULT</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>CssUrl</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
-	<i class="small text-muted">
-Max length: 2000<br>
-				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ContentSecurityEnabled</strong><br>
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Payment_Models_Data_GooglePay&quot;</h2>
 				<table class="table" id="Payment_Models_Data_GooglePay">
 					<tbody>
@@ -12466,54 +12101,6 @@ Id[1..35]<br>
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container &quot;Payment_Models_Data_PaymentPageStyling&quot;</h2>
-				<table class="table" id="Payment_Models_Data_PaymentPageStyling">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Theme</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
-	<i class="small text-muted">
-Possible values: DEFAULT, SIX, NONE.<br>
-				    <span>Example: <code>DEFAULT</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>CssUrl</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px"><strong>DEPRECATED:</strong> This feature will be removed in one of the next versions. Consider using payment page config (PPConfig) or Saferpay Fields instead.<br> <br> Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
-	<i class="small text-muted">
-Max length: 2000<br>
-				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ContentSecurityEnabled</strong><br>
-	<span class="text-muted small">
-				boolean
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container &quot;Payment_Models_Data_PaymentTransaction&quot;</h2>
 				<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
@@ -12822,7 +12409,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for Paydirekt or WL Crypto Payments transactions.</div>
+	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for Paydirekt transactions or WL Crypto Payments refunds.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/pendingnotify</code></span>
 	</i>
@@ -15015,6 +14602,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.39.0.0.20240319">Version 1.39</a></li>
 <li><a href="#v1.38.0.0.20240123">Version 1.38</a></li>
 <li><a href="#v1.37.0.0.20231114">Version 1.37</a></li>
 <li><a href="#v1.36.0.0.20230912">Version 1.36</a></li>
@@ -15050,6 +14638,21 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.39.0.0.20240319"><h2><a name="v1.39.0.0.20240319"></a> Version 1.39 (released 2024-03-19)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2024-03-01</li>
+<li>introduced version 1.39</li>
+<li>added value <code>1.39</code> for <em>SpecVersion</em></li>
+<li>removed <code>Styling</code> container from following requests in all API versions:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a></li>
+<li><a href="index.html#Payment_v1_Alias_Insert">SecureCardData/AliasInsert</a></li>
+</ul>
+</li>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> can now be called up to 120 hours for pending transactions (instead of 96 hours before)</li>
+<li>removed <code>Transaction/QueryPaymentMeans</code> and <code>Transaction/AdjustAmount</code> methods from Saferpay Payment API</li>
+<li>added <code>MandatoryFields</code> field to <em>BillingAddressForm</em> container in <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
 </ul></div></div></section><section id="v1.38.0.0.20240123"><h2><a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-01-04</li>
 <li>introduced version 1.38</li>
