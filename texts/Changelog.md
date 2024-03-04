@@ -55,6 +55,7 @@
   - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
   - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
   - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+  - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
 
 ## <a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)
 - available on Sandbox: 2024-01-04
