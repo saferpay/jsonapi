@@ -50,6 +50,12 @@
 - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) can now be called up to 120 hours for pending transactions (instead of 96 hours before)
 - removed `Transaction/QueryPaymentMeans` and `Transaction/AdjustAmount` methods from Saferpay Payment API
 - added `MandatoryFields` field to _BillingAddressForm_ container in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+- option `MANUAL_REVIEW` in field `Result` of _FraudPrevention_ container is now called `CHALLENGED`. This affects following requests:
+  - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+  - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+  - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
 
 ## <a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)
 - available on Sandbox: 2024-01-04
