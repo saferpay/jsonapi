@@ -6499,7 +6499,7 @@ Range: inclusive between 1 and 12<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the performed fraud prevention check</div>
 	<i class="small text-muted">
-Possible values: APPROVED, MANUAL_REVIEW, CHALLENGED.<br />
+Possible values: APPROVED, CHALLENGED.<br />
 				    <span>Example: <code>APPROVED</code></span>
 	</i>
 </td>
