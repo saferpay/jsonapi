@@ -13898,7 +13898,7 @@ Range: inclusive between 1 and 12<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the performed fraud prevention check</div>
 	<i class="small text-muted">
-Possible values: APPROVED, MANUAL_REVIEW.<br>
+Possible values: APPROVED, CHALLENGED.<br>
 				    <span>Example: <code>APPROVED</code></span>
 	</i>
 </td>
@@ -14653,6 +14653,15 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> can now be called up to 120 hours for pending transactions (instead of 96 hours before)</li>
 <li>removed <code>Transaction/QueryPaymentMeans</code> and <code>Transaction/AdjustAmount</code> methods from Saferpay Payment API</li>
 <li>added <code>MandatoryFields</code> field to <em>BillingAddressForm</em> container in <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
+<li>option <code>MANUAL_REVIEW</code> in field <code>Result</code> of <em>FraudPrevention</em> container is now called <code>CHALLENGED</code>. This affects following requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.38.0.0.20240123"><h2><a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-01-04</li>
 <li>introduced version 1.38</li>
