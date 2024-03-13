@@ -1785,6 +1785,20 @@ Numeric[8..8]<br>
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>Styling</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Styling options</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
 				array of strings
@@ -1887,6 +1901,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   },
   &quot;ReturnUrl&quot;: {
     &quot;Url&quot;: &quot;[your shop payment url]&quot;
+  },
+  &quot;Styling&quot;: {
+    &quot;CssUrl&quot;: &quot;[your shop css url]&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -4397,6 +4414,20 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br>
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>Styling</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
 				
@@ -5395,6 +5426,20 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop.<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Styling</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource for the Hosted Register form.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -10479,6 +10524,54 @@ Iso885915[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_ExtendedStyling&quot;</h2>
+				<table class="table" id="Payment_Models_Data_ExtendedStyling">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Theme</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<i class="small text-muted">
+Possible values: DEFAULT, SIX, NONE.<br>
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CssUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<i class="small text-muted">
+Max length: 2000<br>
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br>
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_GooglePay&quot;</h2>
 				<table class="table" id="Payment_Models_Data_GooglePay">
 					<tbody>
@@ -14642,14 +14735,7 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>available on Sandbox: 2024-03-01</li>
 <li>introduced version 1.39</li>
 <li>added value <code>1.39</code> for <em>SpecVersion</em></li>
-<li>removed <code>Styling</code> container from following requests in all API versions:
-<ul>
-<li><a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
-<li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
-<li><a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a></li>
-<li><a href="index.html#Payment_v1_Alias_Insert">SecureCardData/AliasInsert</a></li>
-</ul>
-</li>
+<li>removed <code>Styling</code> container from <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> in all API versions</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> can now be called up to 120 hours for pending transactions (instead of 96 hours before)</li>
 <li>removed <code>Transaction/QueryPaymentMeans</code> and <code>Transaction/AdjustAmount</code> methods from Saferpay Payment API</li>
 <li>added <code>MandatoryFields</code> field to <em>BillingAddressForm</em> container in <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
