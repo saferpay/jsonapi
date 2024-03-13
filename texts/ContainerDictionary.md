@@ -3080,6 +3080,54 @@ Iso885915[1..100]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_ExtendedStyling"</h2>
+				<table class="table" id="Payment_Models_Data_ExtendedStyling">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Theme</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<i class="small text-muted">
+Possible values: DEFAULT, SIX, NONE.<br />
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CssUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
+	<i class="small text-muted">
+Max length: 2000<br />
+				    <span>Example: <code>https://merchanthost/merchant.css</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ContentSecurityEnabled</strong><br />
+	<span class="text-muted small">
+				boolean
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_GooglePay"</h2>
 				<table class="table" id="Payment_Models_Data_GooglePay">
 					<tbody>

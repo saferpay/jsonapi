@@ -179,6 +179,20 @@ Numeric[8..8]<br />
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>Styling</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Styling options</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 				array of strings
@@ -289,6 +303,9 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
   },
   "ReturnUrl": {
     "Url": "[your shop payment url]"
+  },
+  "Styling": {
+    "CssUrl": "[your shop css url]"
   }
 }
 </pre>
@@ -3421,6 +3438,20 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop if the transaction requires some kind of browser redirection (3d-secure, dcc)<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Styling</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Custom styling resource</div>
 	<i class="small text-muted">
 			</i>
 </td>
