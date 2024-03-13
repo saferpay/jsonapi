@@ -42,11 +42,7 @@
 - available on Sandbox: 2024-03-01
 - introduced version 1.39
 - added value `1.39` for _SpecVersion_
-- removed `Styling` container from following requests in all API versions:
-  - [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-  - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
-  - [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
-  - [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert)
+- removed `Styling` container from [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) in all API versions
 - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) can now be called up to 120 hours for pending transactions (instead of 96 hours before)
 - removed `Transaction/QueryPaymentMeans` and `Transaction/AdjustAmount` methods from Saferpay Payment API
 - added `MandatoryFields` field to _BillingAddressForm_ container in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
