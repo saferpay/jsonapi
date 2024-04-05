@@ -75,16 +75,6 @@
         "Target": "index.html#Payment_v1_Transaction_Authorize"
       },
       {
-        "Title": "Transaction QueryPaymentMeans",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_QueryPaymentMeans"
-      },
-      {
-        "Title": "Transaction AdjustAmount",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AdjustAmount"
-      },
-      {
         "Title": "Transaction AuthorizeDirect",
         "Source": "texts/ChapterTransaction.md",
         "Target": "index.html#Payment_v1_Transaction_AuthorizeDirect"
