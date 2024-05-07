@@ -44,7 +44,7 @@
 - introduced version 1.40
 - added value `1.40` for _SpecVersion_
 - added Scheme Token type `MDES` and `VTS` (only available for Worldline Acquiring)
-- added `WECHAT` as valid value for the field `PaymentMethods`
+- added `WECHATPAY` as valid value for the field `PaymentMethods`
 - added `SchemeToken` to `PaymentMeans` container
 - added `POSTFINANCEPAY` as valid value for `Type` in [Alias/Insert](index.html#Payment_v1_Alias_Insert)
 - removed `PAYPAL` as option in [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment) (feature is deprecated)
