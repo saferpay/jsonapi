@@ -182,7 +182,7 @@ Numeric[8..8]<br />
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -682,20 +682,6 @@ Numeric[3..4]<br />
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>FraudPrevention</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
 				
@@ -703,7 +689,7 @@ Numeric[3..4]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
+	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from API version 1.8</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -718,6 +704,20 @@ Numeric[3..4]<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>FraudPrevention</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -860,7 +860,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPayment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1067,7 +1067,7 @@ Possible values: MERCHANT, PAYER.<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3071,7 +3071,7 @@ Numeric[8..8]<br />
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3406,8 +3406,8 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
 	<i class="small text-muted">
-Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
-				    <span>Example: <code>PAYPAL</code></span>
+Possible values: POSTCARD, POSTFINANCE.<br />
+				    <span>Example: <code>POSTFINANCE</code></span>
 	</i>
 </td>
 						</tr>
@@ -3447,7 +3447,7 @@ Possible values: PAYPAL, POSTCARD, POSTFINANCE.<br />
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3956,7 +3956,7 @@ This method can be used to get the details of a transaction that has been author
 				<span class="text-mandatory">mandatory</span>,
 			</span>
 				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
