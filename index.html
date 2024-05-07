@@ -14910,6 +14910,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.40.0.0.20240521">Version 1.40</a></li>
 <li><a href="#v1.39.0.0.20240319">Version 1.39</a></li>
 <li><a href="#v1.38.0.0.20240123">Version 1.38</a></li>
 <li><a href="#v1.37.0.0.20231114">Version 1.37</a></li>
@@ -14946,6 +14947,18 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.40.0.0.20240521"><h2><a name="v1.40.0.0.20240521"></a> Version 1.40 (released 2024-05-21)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2024-05-07</li>
+<li>introduced version 1.40</li>
+<li>added value <code>1.40</code> for <em>SpecVersion</em></li>
+<li>added Scheme Token type <code>MDES</code> and <code>VTS</code> (only available for Worldline Acquiring)</li>
+<li>added <code>WECHAT</code> as valid value for the field <code>PaymentMethods</code></li>
+<li>added <code>SchemeToken</code> to <code>PaymentMeans</code> container</li>
+<li>added <code>POSTFINANCEPAY</code> as valid value for <code>Type</code> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a></li>
+<li>removed <code>PAYPAL</code> as option in <a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a> (feature is deprecated)</li>
+<li>removed <code>POSTFINANCE</code> and <code>POSTCARD</code> as valid values for <code>PaymentMethods</code> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> requests</li>
+<li>removed <code>POSTFINANCE</code> as valid value for <code>Type</code> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a></li>
+<li>removed <code>BANCONTACT</code> as valid value for <code>PaymentMethods</code> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a></li>
 </ul></div></div></section><section id="v1.39.0.0.20240319"><h2><a name="v1.39.0.0.20240319"></a> Version 1.39 (released 2024-03-19)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-03-01</li>
 <li>introduced version 1.39</li>
