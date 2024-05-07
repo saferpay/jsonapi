@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.40](#v1.40.0.0.20240521)
 - [Version 1.39](#v1.39.0.0.20240319)
 - [Version 1.38](#v1.38.0.0.20240123)
 - [Version 1.37](#v1.37.0.0.20231114)
@@ -37,6 +38,19 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.40.0.0.20240521"></a> Version 1.40 (released 2024-05-21)
+- available on Sandbox: 2024-05-07
+- introduced version 1.40
+- added value `1.40` for _SpecVersion_
+- added Scheme Token type `MDES` and `VTS` (only available for Worldline Acquiring)
+- added `WECHAT` as valid value for the field `PaymentMethods`
+- added `SchemeToken` to `PaymentMeans` container
+- added `POSTFINANCEPAY` as valid value for `Type` in [Alias/Insert](index.html#Payment_v1_Alias_Insert)
+- removed `PAYPAL` as option in [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment) (feature is deprecated)
+- removed `POSTFINANCE` and `POSTCARD` as valid values for `PaymentMethods` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
+- removed `POSTFINANCE` as valid value for `Type` in [Alias/Insert](index.html#Payment_v1_Alias_Insert)
+- removed `BANCONTACT` as valid value for `PaymentMethods` in [Alias/Insert](index.html#Payment_v1_Alias_Insert)
 
 ## <a name="v1.39.0.0.20240319"></a> Version 1.39 (released 2024-03-19)
 - available on Sandbox: 2024-03-01
