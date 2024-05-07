@@ -75,7 +75,7 @@ This function may be used to insert an alias without knowledge about the card de
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
-Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
+Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 				    <span>Example: <code>CARD</code></span>
 	</i>
 </td>
@@ -102,7 +102,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 				
-				<a class="type-details in" href="#Payment_Models_Data_ExtendedStyling">object</a>
+				<a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -149,7 +149,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCE, TWINT.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, VISA. Additional values may be accepted but are ignored.<br />
+Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, VISA. Additional values may be accepted but are ignored.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>

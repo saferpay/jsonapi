@@ -1322,8 +1322,8 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39<br />
-				    <span>Example: <code>1.39</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40<br />
+				    <span>Example: <code>1.40</code></span>
 	</i>
 </td>
 							</tr>
@@ -1431,8 +1431,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39<br />
-				    <span>Example: <code>1.39</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40<br />
+				    <span>Example: <code>1.40</code></span>
 	</i>
 </td>
 							</tr>
@@ -1948,7 +1948,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2255,7 +2255,7 @@ Base64 encoded string<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2583,7 +2583,7 @@ Utf8[1..1000]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
 			</i>
 </td>
 							</tr>
@@ -3080,24 +3080,30 @@ Iso885915[1..100]<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_ExtendedStyling"</h2>
-				<table class="table" id="Payment_Models_Data_ExtendedStyling">
+			<h2>Container "Payment_Models_Data_GooglePay"</h2>
+				<table class="table" id="Payment_Models_Data_GooglePay">
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Theme</strong><br />
+	<strong>PaymentToken</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
+	<div style="padding-bottom: 10px">GooglePay Payment Token</div>
 	<i class="small text-muted">
-Possible values: DEFAULT, SIX, NONE.<br />
-				    <span>Example: <code>DEFAULT</code></span>
-	</i>
+			</i>
 </td>
 							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_HostedFormStyling"</h2>
+				<table class="table" id="Payment_Models_Data_HostedFormStyling">
+					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
 	<strong>CssUrl</strong><br />
@@ -3126,25 +3132,19 @@ Max length: 2000<br />
 			</i>
 </td>
 							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_GooglePay"</h2>
-				<table class="table" id="Payment_Models_Data_GooglePay">
-					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>PaymentToken</strong><br />
+	<strong>Theme</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 				string
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">GooglePay Payment Token</div>
+	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
 	<i class="small text-muted">
-			</i>
+Possible values: DEFAULT, SIX, NONE.<br />
+				    <span>Example: <code>DEFAULT</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
@@ -4017,6 +4017,228 @@ Max length: 2000<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_P2PEnabledPayment"</h2>
+				<table class="table" id="Payment_Models_Data_P2PEnabledPayment">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Amount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount data (currency, value, etc.)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+					<span>
+				<span class="text-recommended">recommended</span>,
+			</span>
+		string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayerNote</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<i class="small text-muted">
+Utf8[1..50]<br />
+				    <span>Example: <code>Payernote</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
+	<i class="small text-muted">
+Utf8[1..1000]<br />
+				    <span>Example: <code>Description</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MandateId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
+	<i class="small text-muted">
+Id[1..35]<br />
+				    <span>Example: <code>MandateId</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Options</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Specific payment options</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Recurring</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Recurring options – cannot be combined with Installment.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Installment</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Installment options – cannot be combined with Recurring.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_P2PEnabledPaymentMeansInfo"</h2>
+				<table class="table" id="Payment_Models_Data_P2PEnabledPaymentMeansInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Brand</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Brand information</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DisplayText</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
+	<i class="small text-muted">
+				    <span>Example: <code>DisplayText</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Wallet</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<i class="small text-muted">
+				    <span>Example: <code>APPLEPAY</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Card</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Card data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>BankAccount</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Bank account data for direct debit transactions.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayPal</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_PayPalInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">PayPal data</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_PayerInfo"</h2>
 				<table class="table" id="Payment_Models_Data_PayerInfo">
 					<tbody>
@@ -4476,7 +4698,7 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5277,7 +5499,7 @@ Utf8[1..1000]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of refunds exceeds the captured amount.<br> All authorized refunds are included in the calculation even if the have not been captured yet. Cancelled refunds are not included.<br> By default this check is disabled.</div>
+	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of refunds exceeds the captured amount.<br> All authorized refunds are included in the calculation even if they have not been captured yet. Cancelled refunds are not included.<br> By default, this check is disabled.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5393,7 +5615,7 @@ Utf8[1..1000]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.</div>
+	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -5872,6 +6094,7 @@ Max length: 1024<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Fields token</div>
 	<i class="small text-muted">
+Id[1..40]<br />
 			</i>
 </td>
 							</tr>
@@ -5935,9 +6158,6 @@ Range: inclusive between 1 and 12<br />
 								<td class="col-sm-4 text-right">
 	<strong>AuthValue</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 				string
 	</span>
 </td>
@@ -5974,7 +6194,7 @@ Range: inclusive between 1 and 12<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of the Scheme Token.</div>
 	<i class="small text-muted">
-Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER.<br />
+Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER, MDES, VTS.<br />
 			</i>
 </td>
 							</tr>

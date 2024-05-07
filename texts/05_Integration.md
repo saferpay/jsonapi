@@ -157,7 +157,7 @@ public static JsonObject sendRequest(URL sfpUrl, JsonObject request, String sfpL
 //This is an EXAMPLE of the payload-Array.
 $payload = array(
     'RequestHeader' => array(
-        'SpecVersion' => "1.7",
+        'SpecVersion' => "[current Spec-Version]",
         'CustomerId' => "[YOUR CUSTOMERID]",
         'RequestId' => "aScdFewDSRFrfas2wsad3",
         'RetryIndicator' => 0,
@@ -181,14 +181,14 @@ $payload = array(
         'IpAddress' => "192.168.178.1",
         'LanguageCode' => "en"
     ),
-    'ReturnUrls' => array(
-        'Success' => "https://myshop.com/success",
-        'Fail' => "https://myshop.com/fail"
+    'ReturnUrl' => array(
+        'Url' => "[your shop payment url]"
     ),
     'Notification' => array(
-        'PayerEmail' => "payee@mailcom",
-        'MerchantEmail' => "merchant@mail.com",
-        'NotifyUrl' => "https://myshop/callback"
+        'PayerEmail' => "payee@mail.com",
+        'MerchantEmails' => array("merchant@mail.com"),
+        'SuccessNotifyUrl' => "[your success notify url]",
+        'FailNotifyUrl' => "[your fail notify url]"
     ),
     'DeliveryAddressForm' => array(
         'Display' => true,
