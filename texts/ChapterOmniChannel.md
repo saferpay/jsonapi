@@ -26,23 +26,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>RequestHeader</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">General information about the request.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -54,6 +37,23 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Registration parameters</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -114,23 +114,6 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>ResponseHeader</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains general information about the response.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -159,6 +142,23 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -229,6 +229,21 @@ This request allows to acquire an OmniChannel transaction.
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
+	<i class="small text-muted">
+Id[1..80]<br />
+				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -246,6 +261,23 @@ This request allows to acquire an OmniChannel transaction.
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>SixTransactionReference</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
+	<i class="small text-muted">
+				    <span>Example: <code>1:100002:199970683910</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -259,38 +291,6 @@ This request allows to acquire an OmniChannel transaction.
 	<i class="small text-muted">
 Numeric[8..8]<br />
 				    <span>Example: <code>12345678</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>OrderId</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
-	<i class="small text-muted">
-Id[1..80]<br />
-				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>SixTransactionReference</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
-	<i class="small text-muted">
-				    <span>Example: <code>1:100002:199970683910</code></span>
 	</i>
 </td>
 						</tr>
@@ -332,6 +332,23 @@ This response returns an acquired OmniChannel transaction.
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -360,23 +377,6 @@ This response returns an acquired OmniChannel transaction.
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the transaction</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>PaymentMeans</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
 			</i>
 </td>
