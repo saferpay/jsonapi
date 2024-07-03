@@ -99,23 +99,6 @@ No example available
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Package</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the configured package</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -127,6 +110,23 @@ No example available
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Package</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the configured package</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -212,23 +212,6 @@ No example available
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Package</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				
-				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the configured package</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -240,6 +223,23 @@ No example available
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Package</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the configured package</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -302,23 +302,6 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>SourceUrls</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string[]
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>https://yourshop.com/</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -332,6 +315,23 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 	<i class="small text-muted">
 Utf8[1..128]<br />
 			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>SourceUrls</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string[]
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>https://yourshop.com/</code></span>
+	</i>
 </td>
 						</tr>
 
@@ -428,19 +428,46 @@ This function may be used to create a single use payment link
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Payment</strong><br />
+	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 				
-				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
+				<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
+	<div style="padding-bottom: 10px">Used to have the payer enter or change his billing address in the payment process.</div>
 	<i class="small text-muted">
 			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Condition</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> WITH_SUCCESSFUL_THREE_DS_CHALLENGE: Will force the 3D-Secure challenge.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
+	<i class="small text-muted">
+Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br />
+				    <span>Example: <code>NONE</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ConfigSet</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">This parameter lets you define your payment page config (PPConfig) by name. If this parameter is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
+	<i class="small text-muted">
+Id[1..20]<br />
+				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
+	</i>
 </td>
 						</tr>
 						<tr>
@@ -463,17 +490,16 @@ AlphaNumeric[10..25]<br />
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>ConfigSet</strong><br />
+	<strong>Order</strong><br />
 	<span class="text-muted small">
-				string
+				
+				<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">This parameter lets you define your payment page config (PPConfig) by name. If this parameter is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
+	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
 	<i class="small text-muted">
-Id[1..20]<br />
-				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
@@ -495,14 +521,17 @@ Id[1..20]<br />
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>BillingAddressForm</strong><br />
+	<strong>Payment</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 				
-				<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
+				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Used to have the payer enter or change his billing address in the payment process.</div>
+	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -519,35 +548,6 @@ Id[1..20]<br />
 	<div style="padding-bottom: 10px">Controls whether the means of payment used for paying the offer should be stored inside the Saferpay Secure Card Data storage.<br> If the offer is paid using a payment means that does not support being stored in the Secure Card Data storage, this parameter has no effect.</div>
 	<i class="small text-muted">
 			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Order</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Condition</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> WITH_SUCCESSFUL_THREE_DS_CHALLENGE: Will force the 3D-Secure challenge.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
-	<i class="small text-muted">
-Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br />
-				    <span>Example: <code>NONE</code></span>
-	</i>
 </td>
 						</tr>
 
@@ -703,6 +703,34 @@ No example available
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>CreationDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The creation date and time of the SecurePayGate offer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023-02-24T11:34:11.128+01:00</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ExpirationDate</strong><br />
+	<span class="text-muted small">
+				date
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The date after which the offer expires</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2023-04-20T00:00:00.000+02:00</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
 				globally unique identifier
@@ -713,6 +741,20 @@ No example available
 	<i class="small text-muted">
 				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
 	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Payment</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payment (amount, currency, description, orderId)</div>
+	<i class="small text-muted">
+			</i>
 </td>
 						</tr>
 						<tr>
@@ -755,48 +797,6 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 	<div style="padding-bottom: 10px">The transaction id once a transaction was made</div>
 	<i class="small text-muted">
 				    <span>Example: <code>vA3bhlAht2WlSAOKOvQSAOnbAdCb</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Payment</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the payment (amount, currency, description, orderId)</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>CreationDate</strong><br />
-	<span class="text-muted small">
-				date
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The creation date and time of the SecurePayGate offer</div>
-	<i class="small text-muted">
-				    <span>Example: <code>2023-02-24T11:34:11.128+01:00</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>ExpirationDate</strong><br />
-	<span class="text-muted small">
-				date
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The date after which the offer expires</div>
-	<i class="small text-muted">
-				    <span>Example: <code>2023-04-20T00:00:00.000+02:00</code></span>
 	</i>
 </td>
 						</tr>
@@ -914,33 +914,6 @@ No example available
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>TerminalId</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Id of the terminal</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Type</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The type of the terminal</div>
-	<i class="small text-muted">
-Possible values: ECOM, SPG, MPO.<br />
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 				string
@@ -963,6 +936,33 @@ Possible values: ECOM, SPG, MPO.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
 	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Id of the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Type</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The type of the terminal</div>
+	<i class="small text-muted">
+Possible values: ECOM, SPG, MPO.<br />
 			</i>
 </td>
 						</tr>
@@ -1093,20 +1093,6 @@ No example available
 			</thead>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>PaymentMethods</strong><br />
-	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 				
@@ -1115,6 +1101,20 @@ No example available
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PaymentMethods</strong><br />
+	<span class="text-muted small">
+				
+				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
 	<i class="small text-muted">
 			</i>
 </td>

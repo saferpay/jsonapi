@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.41](#v1.41.0.0.20240716)
 - [Version 1.40](#v1.40.0.0.20240521)
 - [Version 1.39](#v1.39.0.0.20240319)
 - [Version 1.38](#v1.38.0.0.20240123)
@@ -38,6 +39,12 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.41.0.0.20240716"></a> Version 1.41 (released 2024-07-16)
+- available on Sandbox: 2024-07-02
+- introduced version 1.41
+- added value `1.41` for _SpecVersion_
+- added additional info about the used ISO-standard and applied restrictions to field `LanguageCode` of the _Payer_ container and [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
 
 ## <a name="v1.40.0.0.20240521"></a> Version 1.40 (released 2024-05-21)
 - available on Sandbox: 2024-05-07
