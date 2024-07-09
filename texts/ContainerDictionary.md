@@ -3066,6 +3066,82 @@ Iso885915[1..100]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_ForeignRetailerMerchantInformation"</h2>
+				<table class="table" id="Payment_Models_Data_ForeignRetailerMerchantInformation">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>City</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">City of merchant's location</div>
+	<i class="small text-muted">
+Utf8[1..13]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CountryCode</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">country code of merchant's location<br> ISO 3166-1 alpha-2 country code<br> if not submitted the container will be ignored</div>
+	<i class="small text-muted">
+Alphabetic[2..2]<br />
+				    <span>Example: <code>CH</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Name</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of merchant</div>
+	<i class="small text-muted">
+Utf8[1..14]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Street</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Street of merchant's location</div>
+	<i class="small text-muted">
+Utf8[1..48]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Zip</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Postal code of merchant's location</div>
+	<i class="small text-muted">
+Utf8[1..10]<br />
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_GooglePay"</h2>
 				<table class="table" id="Payment_Models_Data_GooglePay">
 					<tbody>
@@ -3582,6 +3658,20 @@ Possible values: MERCHANT, THREEDS.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The fee amount that will be refunded from the marketplace to the submerchant.<br> The properties Fee and FeeRefund cannot be used simultaneously.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ForeignRetailer</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_ForeignRetailerMerchantInformation">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px"><br><br>Merchant information required for foreign retailers<br> Mandatory for foreign retailers of an international marketplace</div>
 	<i class="small text-muted">
 			</i>
 </td>

@@ -45,6 +45,9 @@
 - introduced version 1.41
 - added value `1.41` for _SpecVersion_
 - added additional info about the used ISO-standard and applied restrictions to field `LanguageCode` of the _Payer_ container and [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
+- added new subcontainer _ForeignRetailer_ to container _Marketplace_. This affects the following requests:
+  - [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
+  - [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
 
 ## <a name="v1.40.0.0.20240521"></a> Version 1.40 (released 2024-05-21)
 - available on Sandbox: 2024-05-07
