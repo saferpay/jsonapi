@@ -41,9 +41,9 @@ Alternatively, Saferpay also supports authentication via a client certificate.
 
 A client certificate for the JSON-API can be ordered in the Saferpay Backoffice under [**Settings > JSON API client certificate**](https://test.saferpay.com/BO/Settings/JsonApiClientCertificate).
 
-If you have a corresponding license, you will find the HTTPS Client Certificate Authentication section under the form for HTTPS Basic Authentication.
+If you have a Saferpay Business licence, you will find the HTTPS Client Certificate Authentication section under the form for HTTPS Basic Authentication.
 
-<img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/BO_Client_certificate_1.png" alt="Basic Authentication">
+<img src="https://raw.githubusercontent.com/saferpay/jsonapi/master/Images/BO_Client_certificate_1.png" alt="Basic Aiuthentication">
 
 Generate the CSR as described on the page and import it using the upload button.
 The signed client certificate will then be downloaded through your browser.

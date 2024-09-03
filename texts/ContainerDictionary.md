@@ -1390,8 +1390,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41<br />
-				    <span>Example: <code>1.41</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42<br />
+				    <span>Example: <code>1.42</code></span>
 	</i>
 </td>
 							</tr>
@@ -1431,8 +1431,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41<br />
-				    <span>Example: <code>1.41</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42<br />
+				    <span>Example: <code>1.42</code></span>
 	</i>
 </td>
 							</tr>
@@ -2513,7 +2513,7 @@ Utf8[1..1000]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
@@ -4182,7 +4182,7 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
@@ -4682,7 +4682,7 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
@@ -5010,7 +5010,7 @@ Id[1..35]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
+	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
@@ -6850,6 +6850,29 @@ Possible values: APPROVED, CHALLENGED.<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_IdealRefund"</h2>
+				<table class="table" id="Payment_Models_IdealRefund">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AccountHolderName</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The account holder name will be used if not already present in the authorization.<br> If no account holder name is present in the authorization and none provided in the refund request, the refund cannot be processed.</div>
+	<i class="small text-muted">
+Utf8[1..140]<br />
+				    <span>Example: <code>John Doe</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_PaymentMethodsOptions"</h2>
 				<table class="table" id="Payment_Models_PaymentMethodsOptions">
 					<tbody>
@@ -6896,6 +6919,20 @@ Possible values: APPROVED, CHALLENGED.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional. Options which only apply to account to account</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Ideal</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_IdealRefund">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. Options which only apply to iDEAL</div>
 	<i class="small text-muted">
 			</i>
 </td>

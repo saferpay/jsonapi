@@ -1,6 +1,6 @@
 # <a name="ChapterPaymentPage"></a>Payment Page
 
-The Payment Page Interface provides a simple and easy integration of Saferpay into your web shop, mobile app or other applications without the need to implement a user interface for card data entry. Licenses including the payment page can be found <a target="_blank" href="https://docs.saferpay.com/home/master/licensing">here</a>. It allows the processing of all <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#paymentmethods">payment methods</a> that are available with Saferpay. Once integrated, more payment methods can be activated at any time and without major adjustments.
+The Payment Page Interface provides a simple and easy integration of Saferpay into your web shop, mobile app or other applications without the need to implement a user interface for card data entry. Licenses including the payment page can be found <a target="_blank" href="https://docs.saferpay.com/home/master/licensing">here</a>.  It allows the processing of all <a target="_blank" href="https://saferpay.github.io/sndbx/index.html#paymentmethods">payment methods</a> that are available with Saferpay. Once integrated, more payment methods can be activated at any time and without major adjustments.
 
 
 ## <a name="ChapterPaymentPageProcess"></a> Payment Process with the Payment Page
