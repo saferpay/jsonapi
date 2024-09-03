@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.42](#v1.42.0.0.20240917)
 - [Version 1.41](#v1.41.0.0.20240716)
 - [Version 1.40](#v1.40.0.0.20240521)
 - [Version 1.39](#v1.39.0.0.20240319)
@@ -40,6 +41,12 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)
+- available on Sandbox: 2024-09-03
+- introduced version 1.42
+- added value `1.42` for _SpecVersion_
+- added `PaymentMethodsOptions` to [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) for iDEAL AccountHolderName
+  
 ## <a name="v1.41.0.0.20240716"></a> Version 1.41 (released 2024-07-16)
 - available on Sandbox: 2024-07-02
 - introduced version 1.41
