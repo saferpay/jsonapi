@@ -45,7 +45,7 @@
 - available on Sandbox: 2024-09-03
 - introduced version 1.42
 - added value `1.42` for _SpecVersion_
-- added `PaymentMethodsOptions` to [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) for iDEAL AccountHolderName
+- added iDEAL with AccountHolderName to `PaymentMethodsOptions` of [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
   
 ## <a name="v1.41.0.0.20240716"></a> Version 1.41 (released 2024-07-16)
 - available on Sandbox: 2024-07-02
