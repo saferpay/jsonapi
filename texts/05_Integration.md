@@ -12,7 +12,7 @@ You can find a list of test-cards and other payment means for testing [over here
 While these Documents are meant as a quick reference and technical specification of the Saferpay JSON-API, [the Saferpay Integration Guide](https://saferpay.github.io/sndbx/index.html) contains an in depth explanation about payment-flows, tips and tricks, as well as best practices for those, who want to integrate the JSON-API and its features for the first time.
 It will also help to understand certain characteristics about the different payment methods we offer, as well as the rules you must follow, when processing vital credit card data and more.
 
-The sequential steps of the general integration process are described in our [Step-by-step Integration-Manual](https://www.six-payment-services.com/en/site/e-commerce/support/integration.html).
+The sequential steps of the general integration process are described in our [Step-by-step Integration-Manual](https://worldline.com/en-ch/home/top-navigation/developers/e-commerce-developer/integration).
 
 ## Server-to-Server code Samples
 
