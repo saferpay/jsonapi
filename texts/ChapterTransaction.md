@@ -1603,6 +1603,20 @@ This method may be used to finalize previously authorized transactions and refun
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
+	<strong>MerchantFundDistributor</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_MerchantFundDistributorCapture">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional Merchant Fund Distributor capture parameters.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
 				
@@ -1851,6 +1865,20 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>MerchantFundDistributor</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_MerchantFundDistributorCapture">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional ForeignRetailer capture parameters.</div>
 	<i class="small text-muted">
 			</i>
 </td>
