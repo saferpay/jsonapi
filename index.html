@@ -226,8 +226,7 @@
 				</div>
 
 				
-<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-md-6"><p><strong>Test accounts:</strong></p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br>
-<a target="_blank" href="https://www.six-payment-services.com/en/site/e-commerce/support/testaccount.html#test-account">View shared test account data</a></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
+<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-md-6"><p><strong>Test accounts:</strong></p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -15070,6 +15069,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.43.0.0.20241112">Version 1.43</a></li>
 <li><a href="#v1.42.0.0.20240917">Version 1.42</a></li>
 <li><a href="#v1.41.0.0.20240716">Version 1.41</a></li>
 <li><a href="#v1.40.0.0.20240521">Version 1.40</a></li>
@@ -15109,6 +15109,18 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.43.0.0.20241112"><h2><a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2024-10-29</li>
+<li>introduced version 1.43</li>
+<li>added value <code>1.43</code> for <em>SpecVersion</em></li>
+<li>added <code>DCC</code> Information to the response of <a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
+<li>added <code>BLIK</code> as valid value for the field <code>PaymentMethods</code></li>
+<li>added new <code>MerchantFundDistributor</code> container with <code>ForeignRetailer</code> subcontainer. This affects the following requests:
+<ul>
+<li><a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a></li>
+<li><a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.42.0.0.20240917"><h2><a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-09-03</li>
 <li>introduced version 1.42</li>
