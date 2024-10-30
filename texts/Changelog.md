@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.43](#v1.43.0.0.20241112)
 - [Version 1.42](#v1.42.0.0.20240917)
 - [Version 1.41](#v1.41.0.0.20240716)
 - [Version 1.40](#v1.40.0.0.20240521)
@@ -40,6 +41,16 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)
+- available on Sandbox: 2024-10-29
+- introduced version 1.43
+- added value `1.43` for _SpecVersion_
+- added `DCC` Information to the response of [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+- added `BLIK` as valid value for the field `PaymentMethods`
+- added new `MerchantFundDistributor` container with `ForeignRetailer` subcontainer. This affects the following requests:
+  - [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
+  - [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
 
 ## <a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)
 - available on Sandbox: 2024-09-03
