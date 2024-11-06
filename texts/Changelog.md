@@ -51,6 +51,9 @@
 - added new `MerchantFundDistributor` container with `ForeignRetailer` subcontainer. This affects the following requests:
   - [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
   - [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
+- added `CLICKTOPAY` as valid value to `Wallet` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests to enable the preselection of Click to Pay
+- added `CLICKTOPAY` as valid value to `Wallet` in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) responses
+  - only provided in responses starting from API version v1.43, in older API versions this information is not provided in the response
 
 ## <a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)
 - available on Sandbox: 2024-09-03
@@ -266,7 +269,7 @@
 - available on Sandbox: 2021-11-02
 - introduced version 1.25
 - added value `1.25` for _SpecVersion_
-- added value `GOOGLEPAY` for _Wallets_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of Apple Pay
+- added value `GOOGLEPAY` for _Wallets_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) request to enable the preselection of Google Pay
 - added container _PayPal_ to [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) response
 - added parameter _RestrictRefundAmountToCapturedAmount_ to container _Refund_ in [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) request
 - added parameter _LogoUrl_ to containers _PaymentMethods_ and _Wallets_ in Management API [TerminalInfo PaymentMethods](index.html#rest_customers_terminals_payment-methods) response

@@ -312,7 +312,7 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page.</div>
 	<i class="small text-muted">
-Possible values: APPLEPAY, GOOGLEPAY.<br />
+Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>
 	</i>
 </td>
