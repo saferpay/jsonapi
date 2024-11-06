@@ -1267,7 +1267,7 @@ Numeric[8..8]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page.</div>
 	<i class="small text-muted">
-Possible values: APPLEPAY, GOOGLEPAY.<br>
+Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>
 	</i>
 </td>
@@ -15121,6 +15121,12 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a></li>
 </ul>
 </li>
+<li>added <code>CLICKTOPAY</code> as valid value to <code>Wallet</code> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> requests to enable the preselection of Click to Pay</li>
+<li>added <code>CLICKTOPAY</code> as valid value to <code>Wallet</code> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> responses
+<ul>
+<li>only provided in responses starting from API version v1.43, in older API versions this information is not provided in the response</li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.42.0.0.20240917"><h2><a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-09-03</li>
 <li>introduced version 1.42</li>
@@ -15338,7 +15344,7 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>available on Sandbox: 2021-11-02</li>
 <li>introduced version 1.25</li>
 <li>added value <code>1.25</code> for <em>SpecVersion</em></li>
-<li>added value <code>GOOGLEPAY</code> for <em>Wallets</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> request to enable the preselection of Apple Pay</li>
+<li>added value <code>GOOGLEPAY</code> for <em>Wallets</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> request to enable the preselection of Google Pay</li>
 <li>added container <em>PayPal</em> to <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> response</li>
 <li>added parameter <em>RestrictRefundAmountToCapturedAmount</em> to container <em>Refund</em> in <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a> request</li>
 <li>added parameter <em>LogoUrl</em> to containers <em>PaymentMethods</em> and <em>Wallets</em> in Management API <a href="index.html#rest_customers_terminals_payment-methods">TerminalInfo PaymentMethods</a> response</li>
