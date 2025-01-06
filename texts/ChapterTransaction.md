@@ -537,21 +537,6 @@ Id[1..50]<br />
 	</i>
 </td>
 						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>VerificationCode</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Card verification code if available</div>
-	<i class="small text-muted">
-Numeric[3..4]<br />
-				    <span>Example: <code>123</code></span>
-	</i>
-</td>
-						</tr>
 
 </table>
 

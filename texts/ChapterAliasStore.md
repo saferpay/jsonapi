@@ -507,6 +507,20 @@ Id[1..50]<br />
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 
 </table>
 
@@ -764,6 +778,20 @@ This method may be used to insert an alias directly with card-data collected by 
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 
 </table>
 
@@ -969,6 +997,20 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
 			</i>
 </td>
