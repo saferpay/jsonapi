@@ -47,7 +47,7 @@
 - available on Sandbox: 2025-01-07
 - introduced version 1.44
 - added value `1.44` for _SpecVersion_
-- relax definitions to allow new payment methods for old api versions in these requests:
+- improved documentation of some API response fields related to payment methods to clarify that new, currently undocumented values might be returned in the future by Saferpay as support for new payment methods is implemented. The following API responses are affected:
   - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
   - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
 - added new function to [Saferpay Management API](index.html#ChapterManagementApi) for deleting Fields AccessTokens
