@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.43</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.44</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.43</span>
+						<span class="text-primary">JSON API Spec-Version 1.44</span>
 					</h3>
 
 					<ul class="nav">
@@ -125,7 +125,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.43</span>
+								<span class="text-primary">JSON API Spec-Version 1.44</span>
 							</h3>
 						</button>
 
@@ -2082,21 +2082,6 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
 	<i class="small text-muted">
 Id[1..50]<br>
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
-	</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>VerificationCode</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Card verification code if available</div>
-	<i class="small text-muted">
-Numeric[3..4]<br>
-				    <span>Example: <code>123</code></span>
 	</i>
 </td>
 						</tr>
@@ -5789,6 +5774,20 @@ Id[1..50]<br>
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -5992,6 +5991,20 @@ This method may be used to insert an alias directly with card-data collected by 
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -6149,6 +6162,20 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
@@ -6251,6 +6278,166 @@ Id[1..40]<br>
   &quot;ResponseHeader&quot;: {
     &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
     &quot;RequestId&quot;: &quot;[your request id]&quot;
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Inquire"><h2><a name="Payment_v1_Alias_Inquire"></a>Alias Inquire</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
+This method can be used to get the latest details of an alias</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Inquire</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tbody><tr>
+							<td class="col-sm-4 text-right">
+	<strong>AliasId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The alias for which you want to receive details.</div>
+	<i class="small text-muted">
+Id[1..40]<br>
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;AliasId&quot;: &quot;alias35nfd9mkzfw0x57iwx&quot;
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tbody><tr>
+							<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered alias.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;ResponseHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+    &quot;RequestId&quot;: &quot;[your request id]&quot;
+  },
+  &quot;Alias&quot;: {
+    &quot;Id&quot;: &quot;alias35nfd9mkzfw0x57iwx&quot;,
+    &quot;Lifetime&quot;: 1000
+  },
+  &quot;PaymentMeans&quot;: {
+    &quot;Brand&quot;: {
+      &quot;PaymentMethod&quot;: &quot;VISA&quot;,
+      &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
+    },
+    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;Card&quot;: {
+      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;ExpYear&quot;: 2015,
+      &quot;ExpMonth&quot;: 9,
+      &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
+      &quot;CountryCode&quot;: &quot;CH&quot;
+    }
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterBatch"><h1><a name="ChapterBatch"></a>Batch</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Batch_Close"><h2><a name="Payment_v1_Batch_Close"></a>Batch Close</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
@@ -6901,7 +7088,13 @@ Utf8[1..128]<br>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;AccessToken&quot;: &quot;67f47961-2912-4338-8039-22ac2b8486f3&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
+This method may be used to delete a previously created Saferpay Fields Access Token.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
+This method may be used to delete a previously created Saferpay Fields Access Token.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens/[accessToken]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
 This function may be used to create a single use payment link</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 			<thead>
 				<tr>
@@ -8870,8 +9063,8 @@ Range: inclusive between 0 and 9<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43<br>
-				    <span>Example: <code>1.43</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44<br>
+				    <span>Example: <code>1.44</code></span>
 	</i>
 </td>
 							</tr>
@@ -8911,8 +9104,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43<br>
-				    <span>Example: <code>1.43</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44<br>
+				    <span>Example: <code>1.44</code></span>
 	</i>
 </td>
 							</tr>
@@ -9568,7 +9761,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
@@ -10050,7 +10243,7 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on &#8211; might change over time, only use for display, never for parsing). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
+	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on &#8211; might change over time). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>VISA</code></span>
 	</i>
@@ -10064,7 +10257,7 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
+	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand. Note that this can change in the future. Please make sure to accept undocumented values as new payment methods are introduced.</div>
 	<i class="small text-muted">
 Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br>
 			</i>
@@ -10243,7 +10436,7 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
+	<div style="padding-bottom: 10px">Expiration month of the payer's card.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>9</code></span>
 	</i>
@@ -10260,23 +10453,10 @@ Possible values: NONE, MANDATORY.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Year of expiration</div>
+	<div style="padding-bottom: 10px">Expiration year of the payer's card.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2015</code></span>
+				    <span>Example: <code>2025</code></span>
 	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>HashValue</strong><br>
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The HashValue, if the hash generation is configured for the customer.</div>
-	<i class="small text-muted">
-			</i>
 </td>
 							</tr>
 							<tr>
@@ -10319,10 +10499,24 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Masked card number</div>
+	<div style="padding-bottom: 10px">The masked version of the full card number that the payer can see on his card.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>912345xxxxxx1234</code></span>
 	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TokenPan</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_TransactionTokenPan">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains information about the tokenPAN if the transaction, or the referenced transaction, was conducted with a scheme token PAN.</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -11792,7 +11986,7 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
@@ -12395,7 +12589,7 @@ Utf8[1..50]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
@@ -13554,6 +13748,20 @@ Range: inclusive between 1 and 1600<br>
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container &quot;Payment_Models_Data_ReturnUrl&quot;</h2>
@@ -14192,6 +14400,62 @@ AlphaNumeric[1..64]<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;Payment_Models_Data_TransactionTokenPan&quot;</h2>
+				<table class="table" id="Payment_Models_Data_TransactionTokenPan">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration month (eg 9 for September) of tokenPan</div>
+	<i class="small text-muted">
+				    <span>Example: <code>9</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration year of tokenPAN</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2045</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MaskedNumber</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Masked number of tokenPAN</div>
+	<i class="small text-muted">
+				    <span>Example: <code>912345xxxxxx1234</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;Payment_Models_Data_TwintInfo&quot;</h2>
 				<table class="table" id="Payment_Models_Data_TwintInfo">
 					<tbody>
@@ -14453,6 +14717,113 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>CH</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_SecureCardData_Tokenization_TokenizationInfo&quot;</h2>
+				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenizationInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Program</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The system used to tokenize the payment means.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The current state of the tokenization of payment means.</div>
+	<i class="small text-muted">
+Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTED, NOT_PERFORMED, DENIED_BY_SCHEME.<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TokenPan</strong><br>
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenPanInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains information about the returned token PAN from the scheme for card payment means. It will only be returned when the tokenization is SUCCESSFUL.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_SecureCardData_Tokenization_TokenPanInfo&quot;</h2>
+				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenPanInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CardImageUrl</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The URL to the image of the payer's physical card.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br>
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Month of expiration (eg 4 for April) of the token PAN.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>9</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br>
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Year of expiration of the token PAN.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2027</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br>
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The current status of the token PAN by the scheme. If the payer or the issuer terminates the card, the token PAN will be given the status 'DELETED,' and the alias cannot be used for new authorization.</div>
+	<i class="small text-muted">
+Possible values: ACTIVE, SUSPENDED, DELETED.<br>
+				    <span>Example: <code>DELETED</code></span>
 	</i>
 </td>
 							</tr>
@@ -15069,6 +15440,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.44.0.0.20250121">Version 1.44</a></li>
 <li><a href="#v1.43.0.0.20241112">Version 1.43</a></li>
 <li><a href="#v1.42.0.0.20240917">Version 1.42</a></li>
 <li><a href="#v1.41.0.0.20240716">Version 1.41</a></li>
@@ -15109,6 +15481,37 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.44.0.0.20250121"><h2><a name="v1.44.0.0.20250121"></a> Version 1.44 (released 2025-01-21)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2025-01-07</li>
+<li>introduced version 1.44</li>
+<li>added value <code>1.44</code> for <em>SpecVersion</em></li>
+<li>relax definitions to allow new payment methods for old api versions in these requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
+</ul>
+</li>
+<li>added new function to <a href="index.html#ChapterManagementApi">Saferpay Management API</a> for deleting Fields AccessTokens</li>
+<li>added new function <a href="index.html#Payment_v1_Alias_Inquire">Alias\Inquire</a></li>
+<li>added new <code>Tokenization</code> container to the following responses:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage\Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction\Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction\AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Alias_AssertInsert">Alias\AssertInsert</a></li>
+<li><a href="index.html#Payment_v1_Alias_InsertDirect">Alias\InsertDirect</a></li>
+<li><a href="index.html#Payment_v1_Alias_Update">Alias\Update</a></li>
+</ul>
+</li>
+<li>added masked token PAN and expiry date to <code>Card</code> container to the following responses:
+<ul>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction\Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction\AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction\RefundDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Refund">Transaction\Refund</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transactzion\Inquire</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.43.0.0.20241112"><h2><a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-10-29</li>
 <li>introduced version 1.43</li>
