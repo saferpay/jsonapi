@@ -403,6 +403,78 @@ Utf8[1..128]<br />
 
 
 
+
+
+<span class="DELETE request-method">DELETE</span><br>
+This method may be used to delete a previously created Saferpay Fields Access Token.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken
+
+<span class="DELETE request-method">DELETE</span><br>
+This method may be used to delete a previously created Saferpay Fields Access Token.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens/[accessToken]</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
 <span class="POST request-method">POST</span><br>

@@ -507,6 +507,20 @@ Id[1..50]<br />
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 
 </table>
 
@@ -764,6 +778,20 @@ This method may be used to insert an alias directly with card-data collected by 
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 
 </table>
 
@@ -973,6 +1001,20 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			</i>
 </td>
 						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
 
 </table>
 
@@ -1135,6 +1177,218 @@ Id[1..40]<br />
   "ResponseHeader": {
     "SpecVersion": "[current Spec-Version]",
     "RequestId": "[your request id]"
+  }
+}
+</pre>
+
+<<<---
+
+
+
+
+
+
+## <a name="Payment_v1_Alias_Inquire"></a>Alias Inquire
+
+<span class="POST request-method">POST</span><br>
+This method can be used to get the latest details of an alias
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Inquire</p></div>
+
+<<<---
+
+#### Request
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>AliasId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The alias for which you want to receive details.</div>
+	<i class="small text-muted">
+Id[1..40]<br />
+				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>RequestHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_RequestHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">General information about the request.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "RequestHeader": {
+    "SpecVersion": "[current Spec-Version]",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request identifier]",
+    "RetryIndicator": 0
+  },
+  "AliasId": "alias35nfd9mkzfw0x57iwx"
+}
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Alias</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered alias.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>CheckResult</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Result of the Check</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PaymentMeans</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				
+				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "ResponseHeader": {
+    "SpecVersion": "[current Spec-Version]",
+    "RequestId": "[your request id]"
+  },
+  "Alias": {
+    "Id": "alias35nfd9mkzfw0x57iwx",
+    "Lifetime": 1000
+  },
+  "PaymentMeans": {
+    "Brand": {
+      "PaymentMethod": "VISA",
+      "Name": "VISA Saferpay Test"
+    },
+    "DisplayText": "9123 45xx xxxx 1234",
+    "Card": {
+      "MaskedNumber": "912345xxxxxx1234",
+      "ExpYear": 2015,
+      "ExpMonth": 9,
+      "HolderName": "Max Mustermann",
+      "CountryCode": "CH"
+    }
   }
 }
 </pre>

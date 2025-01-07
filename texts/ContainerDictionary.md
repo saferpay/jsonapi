@@ -1390,8 +1390,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43<br />
-				    <span>Example: <code>1.43</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44<br />
+				    <span>Example: <code>1.44</code></span>
 	</i>
 </td>
 							</tr>
@@ -1431,8 +1431,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43<br />
-				    <span>Example: <code>1.43</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44<br />
+				    <span>Example: <code>1.44</code></span>
 	</i>
 </td>
 							</tr>
@@ -2088,7 +2088,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
@@ -2570,7 +2570,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on – might change over time, only use for display, never for parsing). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
+	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on – might change over time). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>VISA</code></span>
 	</i>
@@ -2584,7 +2584,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand</div>
+	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand. Note that this can change in the future. Please make sure to accept undocumented values as new payment methods are introduced.</div>
 	<i class="small text-muted">
 Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
 			</i>
@@ -2763,7 +2763,7 @@ Possible values: NONE, MANDATORY.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
+	<div style="padding-bottom: 10px">Expiration month of the payer's card.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>9</code></span>
 	</i>
@@ -2780,23 +2780,10 @@ Possible values: NONE, MANDATORY.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Year of expiration</div>
+	<div style="padding-bottom: 10px">Expiration year of the payer's card.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2015</code></span>
+				    <span>Example: <code>2025</code></span>
 	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>HashValue</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The HashValue, if the hash generation is configured for the customer.</div>
-	<i class="small text-muted">
-			</i>
 </td>
 							</tr>
 							<tr>
@@ -2839,10 +2826,24 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Masked card number</div>
+	<div style="padding-bottom: 10px">The masked version of the full card number that the payer can see on his card.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>912345xxxxxx1234</code></span>
 	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TokenPan</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_Data_TransactionTokenPan">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains information about the tokenPAN if the transaction, or the referenced transaction, was conducted with a scheme token PAN.</div>
+	<i class="small text-muted">
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -4312,7 +4313,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
@@ -4915,7 +4916,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet</div>
+	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>APPLEPAY</code></span>
 	</i>
@@ -6074,6 +6075,20 @@ Range: inclusive between 1 and 1600<br />
 			</i>
 </td>
 							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_ReturnUrl"</h2>
@@ -6712,6 +6727,62 @@ AlphaNumeric[1..64]<br />
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container "Payment_Models_Data_TransactionTokenPan"</h2>
+				<table class="table" id="Payment_Models_Data_TransactionTokenPan">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration month (eg 9 for September) of tokenPan</div>
+	<i class="small text-muted">
+				    <span>Example: <code>9</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration year of tokenPAN</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2045</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MaskedNumber</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Masked number of tokenPAN</div>
+	<i class="small text-muted">
+				    <span>Example: <code>912345xxxxxx1234</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container "Payment_Models_Data_TwintInfo"</h2>
 				<table class="table" id="Payment_Models_Data_TwintInfo">
 					<tbody>
@@ -6973,6 +7044,113 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>CH</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_SecureCardData_Tokenization_TokenizationInfo"</h2>
+				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenizationInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Program</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The system used to tokenize the payment means.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The current state of the tokenization of payment means.</div>
+	<i class="small text-muted">
+Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTED, NOT_PERFORMED, DENIED_BY_SCHEME.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TokenPan</strong><br />
+	<span class="text-muted small">
+				
+				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenPanInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains information about the returned token PAN from the scheme for card payment means. It will only be returned when the tokenization is SUCCESSFUL.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_SecureCardData_Tokenization_TokenPanInfo"</h2>
+				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenPanInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CardImageUrl</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The URL to the image of the payer's physical card.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br />
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Month of expiration (eg 4 for April) of the token PAN.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>9</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br />
+	<span class="text-muted small">
+				integer
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Year of expiration of the token PAN.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2027</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+				string
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The current status of the token PAN by the scheme. If the payer or the issuer terminates the card, the token PAN will be given the status 'DELETED,' and the alias cannot be used for new authorization.</div>
+	<i class="small text-muted">
+Possible values: ACTIVE, SUSPENDED, DELETED.<br />
+				    <span>Example: <code>DELETED</code></span>
 	</i>
 </td>
 							</tr>

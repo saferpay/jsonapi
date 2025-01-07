@@ -1,6 +1,7 @@
 # <a name="changelog"></a> Changelog
 
 ## Table of Contents
+- [Version 1.44](#v1.44.0.0.20250121)
 - [Version 1.43](#v1.43.0.0.20241112)
 - [Version 1.42](#v1.42.0.0.20240917)
 - [Version 1.41](#v1.41.0.0.20240716)
@@ -42,6 +43,29 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.44.0.0.20250121"></a> Version 1.44 (released 2025-01-21)
+- available on Sandbox: 2025-01-07
+- introduced version 1.44
+- added value `1.44` for _SpecVersion_
+- relax definitions to allow new payment methods for old api versions in these requests:
+  - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+  - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+- added new function to [Saferpay Management API](index.html#ChapterManagementApi) for deleting Fields AccessTokens
+- added new function [Alias\Inquire](index.html#Payment_v1_Alias_Inquire)
+- added new `Tokenization` container to the following responses:
+  - [PaymentPage\Assert](index.html#Payment_v1_PaymentPage_Assert)
+  - [Transaction\Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction\AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Alias\AssertInsert](index.html#Payment_v1_Alias_AssertInsert)
+  - [Alias\InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+  - [Alias\Update](index.html#Payment_v1_Alias_Update)
+- added masked token PAN and expiry date to `Card` container to the following responses:
+  - [Transaction\Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction\AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Transaction\RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+  - [Transaction\Refund](index.html#Payment_v1_Transaction_Refund)
+  - [Transactzion\Inquire](index.html#Payment_v1_Transaction_Inquire)
+
 ## <a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)
 - available on Sandbox: 2024-10-29
 - introduced version 1.43
@@ -60,7 +84,7 @@
 - introduced version 1.42
 - added value `1.42` for _SpecVersion_
 - added iDEAL with AccountHolderName to `PaymentMethodsOptions` of [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
-  
+
 ## <a name="v1.41.0.0.20240716"></a> Version 1.41 (released 2024-07-16)
 - available on Sandbox: 2024-07-02
 - introduced version 1.41
