@@ -51,20 +51,20 @@
   - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
   - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
 - added new function to [Saferpay Management API](index.html#ChapterManagementApi) for deleting Fields AccessTokens
-- added new function [Alias\Inquire](index.html#Payment_v1_Alias_Inquire)
-- added new `Tokenization` container to the following responses:
-  - [PaymentPage\Assert](index.html#Payment_v1_PaymentPage_Assert)
-  - [Transaction\Authorize](index.html#Payment_v1_Transaction_Authorize)
-  - [Transaction\AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  - [Alias\AssertInsert](index.html#Payment_v1_Alias_AssertInsert)
-  - [Alias\InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
-  - [Alias\Update](index.html#Payment_v1_Alias_Update)
+- added new function [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
+- added new `Tokenization` container starting from API Version `1.44` to the following responses:
+  - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+  - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert)
+  - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+  - [Alias/Update](index.html#Payment_v1_Alias_Update)
 - added masked token PAN and expiry date to `Card` container to the following responses:
-  - [Transaction\Authorize](index.html#Payment_v1_Transaction_Authorize)
-  - [Transaction\AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  - [Transaction\RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-  - [Transaction\Refund](index.html#Payment_v1_Transaction_Refund)
-  - [Transactzion\Inquire](index.html#Payment_v1_Transaction_Inquire)
+  - [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+  - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+  - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+  - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+  - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
 
 ## <a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)
 - available on Sandbox: 2024-10-29
