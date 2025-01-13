@@ -6075,20 +6075,6 @@ Range: inclusive between 1 and 1600<br />
 			</i>
 </td>
 							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Tokenization</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">result of external tokenization</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
 					</tbody>
 				</table>
 			<h2>Container "Payment_Models_Data_ReturnUrl"</h2>
@@ -7044,113 +7030,6 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>CH</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_SecureCardData_Tokenization_TokenizationInfo"</h2>
-				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenizationInfo">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Program</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The system used to tokenize the payment means.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Status</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The current state of the tokenization of payment means.</div>
-	<i class="small text-muted">
-Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTED, NOT_PERFORMED, DENIED_BY_SCHEME.<br />
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>TokenPan</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenPanInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains information about the returned token PAN from the scheme for card payment means. It will only be returned when the tokenization is SUCCESSFUL.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_SecureCardData_Tokenization_TokenPanInfo"</h2>
-				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenPanInfo">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>CardImageUrl</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The URL to the image of the payer's physical card.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ExpMonth</strong><br />
-	<span class="text-muted small">
-				integer
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Month of expiration (eg 4 for April) of the token PAN.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>9</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ExpYear</strong><br />
-	<span class="text-muted small">
-				integer
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Year of expiration of the token PAN.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>2027</code></span>
-	</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Status</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The current status of the token PAN by the scheme. If the payer or the issuer terminates the card, the token PAN will be given the status 'DELETED,' and the alias cannot be used for new authorization.</div>
-	<i class="small text-muted">
-Possible values: ACTIVE, SUSPENDED, DELETED.<br />
-				    <span>Example: <code>DELETED</code></span>
 	</i>
 </td>
 							</tr>
