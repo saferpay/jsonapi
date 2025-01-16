@@ -79,6 +79,7 @@
 								<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
 								<li><a href="#Payment_v1_Alias_Update">Alias Update</a></li>
 								<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+								<li><a href="#Payment_v1_Alias_Inquire">Alias Inquire</a></li>
 							</ul>
 							</li>
 							<li>
@@ -190,6 +191,7 @@
 								<li><a href="#Payment_v1_Alias_InsertDirect">Alias InsertDirect</a></li>
 								<li><a href="#Payment_v1_Alias_Update">Alias Update</a></li>
 								<li><a href="#Payment_v1_Alias_Delete">Alias Delete</a></li>
+								<li><a href="#Payment_v1_Alias_Inquire">Alias Inquire</a></li>
 							</ul>
 							</li>
 							<li>
@@ -6856,10 +6858,10 @@ This method is used to retrieve the current license configuration for a customer
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_Feature&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
 	<i class="small text-muted">
@@ -6873,10 +6875,10 @@ This method is used to retrieve the current license configuration for a customer
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_LicensePackage&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the configured package</div>
 	<i class="small text-muted">
@@ -6915,10 +6917,10 @@ This method is used to retrieve the current license configuration for a customer
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_Feature&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
 	<i class="small text-muted">
@@ -6932,10 +6934,10 @@ This method is used to retrieve the current license configuration for a customer
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_LicensePackage&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the configured package</div>
 	<i class="small text-muted">
@@ -7032,10 +7034,7 @@ Utf8[1..128]<br>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
   &quot;AccessToken&quot;: &quot;67f47961-2912-4338-8039-22ac2b8486f3&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
-This method may be used to delete a previously created Saferpay Fields Access Token.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
-</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
 This method may be used to delete a previously created Saferpay Fields Access Token.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens/[accessToken]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
@@ -7049,10 +7048,10 @@ This function may be used to create a single use payment link</p></div><div clas
 							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br>
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#Common_Models_Data_SpgBillingAddressForm&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to have the payer enter or change his billing address in the payment process.</div>
 	<i class="small text-muted">
@@ -7111,10 +7110,10 @@ AlphaNumeric[10..25]<br>
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br>
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_Data_Order&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
 	<i class="small text-muted">
@@ -7128,10 +7127,10 @@ AlphaNumeric[10..25]<br>
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#Common_Models_Data_SpgPayer&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payer</div>
 	<i class="small text-muted">
@@ -7145,10 +7144,10 @@ AlphaNumeric[10..25]<br>
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_Data_PaymentWithOptions&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
@@ -7159,10 +7158,10 @@ AlphaNumeric[10..25]<br>
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_Data_RegisterAlias&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Controls whether the means of payment used for paying the offer should be stored inside the Saferpay Secure Card Data storage.<br> If the offer is paid using a payment means that does not support being stored in the Secure Card Data storage, this parameter has no effect.</div>
 	<i class="small text-muted">
@@ -7295,10 +7294,10 @@ This function may be used to fetch the status of a previously created single use
 							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
-	</span>
-</td>
+<pre><code>			&lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_Data_PaymentWithoutOptions&quot;&gt;object&lt;/a&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, description, orderId)</div>
 	<i class="small text-muted">
@@ -7392,10 +7391,10 @@ This method is used to retrieve details of one terminal</p></div><div class="col
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_PaymentMethodInfo&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
 	<i class="small text-muted">
@@ -7433,10 +7432,10 @@ Possible values: ECOM, SPG, MPO.<br>
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_WalletInfo&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
 	<i class="small text-muted">
@@ -7504,10 +7503,10 @@ Possible values: ECOM, SPG, MPO.<br>
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_WalletInfo&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
 	<i class="small text-muted">
@@ -7518,10 +7517,10 @@ Possible values: ECOM, SPG, MPO.<br>
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_PaymentMethodInfo&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
 	<i class="small text-muted">
@@ -7586,10 +7585,10 @@ This method is used to retrieve all terminals</p></div><div class="col-md-6"><di
 							<td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br>
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
-	</span>
-</td>
+<pre><code>			&lt;span&gt;array of &lt;a class=&quot;type-details in&quot; href=&quot;#RestApi_Models_TerminalResult&quot;&gt;object&lt;/a&gt;s&lt;/span&gt;
+&lt;/span&gt;
+</code></pre>
+</span></td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of terminals</div>
 	<i class="small text-muted">
