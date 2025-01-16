@@ -74,7 +74,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -104,7 +104,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
 	</span>
 </td>
@@ -121,7 +121,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
+
 				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
 	</span>
 </td>
@@ -134,7 +134,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -187,7 +187,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -217,7 +217,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
 	</span>
 </td>
@@ -234,7 +234,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
+
 				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
 	</span>
 </td>
@@ -247,7 +247,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -337,7 +337,7 @@ Utf8[1..128]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -386,7 +386,7 @@ Utf8[1..128]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -397,45 +397,6 @@ Utf8[1..128]<br />
 </pre>
 
 <<<---
-
-
-
-
-
-
-
-
-<span class="DELETE request-method">DELETE</span><br>
-This method may be used to delete a previously created Saferpay Fields Access Token.
-
---->>>
-
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
-
-<<<---
-
-#### Request
-
-
-No body needed
-
-
-<table class="table">
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-No example available
-</pre>
-
-<<<---
-
-
-#### Response
 
 
 
@@ -460,7 +421,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -502,7 +463,7 @@ This function may be used to create a single use payment link
 							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-				
+
 				<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
 	</span>
 </td>
@@ -564,7 +525,7 @@ AlphaNumeric[10..25]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-				
+
 				<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
 	</span>
 </td>
@@ -581,7 +542,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
+
 				<a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
 	</span>
 </td>
@@ -598,7 +559,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
+
 				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
 	</span>
 </td>
@@ -612,7 +573,7 @@ AlphaNumeric[10..25]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-				
+
 				<a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
@@ -625,7 +586,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -711,7 +672,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -750,7 +711,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -819,7 +780,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
-				
+
 				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
 	</span>
 </td>
@@ -875,7 +836,7 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -925,7 +886,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -961,7 +922,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1001,7 +962,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
@@ -1042,7 +1003,7 @@ Possible values: ECOM, SPG, MPO.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
@@ -1055,7 +1016,7 @@ Possible values: ECOM, SPG, MPO.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1140,7 +1101,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1167,7 +1128,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
@@ -1181,7 +1142,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
@@ -1194,7 +1155,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1274,7 +1235,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1301,7 +1262,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
-				
+
 				<span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
 	</span>
 </td>
@@ -1314,7 +1275,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
