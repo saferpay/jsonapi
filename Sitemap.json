@@ -238,6 +238,11 @@
         "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"
       },
       {
+        "Title": "SaferpayFieldsAccessToken DeleteAccessToken",
+        "Source": "texts/ChapterManagementApi.md",
+        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"
+      },
+      {
         "Title": "SecurePayGate Create SingleUsePaymentLink",
         "Source": "texts/ChapterManagementApi.md",
         "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers"
