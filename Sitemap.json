@@ -180,6 +180,11 @@
         "Title": "Alias Delete",
         "Source": "texts/ChapterAliasStore.md",
         "Target": "index.html#Payment_v1_Alias_Delete"
+      },
+      {
+        "Title": "Alias Inquire",
+        "Source": "texts/ChapterAliasStore.md",
+        "Target": "index.html#Payment_v1_Alias_Inquire"
       }
     ]
   },
