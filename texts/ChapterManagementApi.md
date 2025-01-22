@@ -104,8 +104,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-
-				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
+			<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -121,8 +120,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-
-				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+			<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -216,9 +214,8 @@ No example available
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
-			</span>
-
 				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
+			</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -234,8 +231,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-
-				<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+			<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -962,7 +958,6 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-
 				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
@@ -1003,7 +998,6 @@ Possible values: ECOM, SPG, MPO.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-
 				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
@@ -1128,7 +1122,6 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-
 				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
@@ -1142,7 +1135,6 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-
 				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
@@ -1262,7 +1254,6 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
-
 				<span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
 	</span>
 </td>
