@@ -3212,27 +3212,6 @@ Possible values: DEFAULT, SIX, NONE.<br />
 							</tr>
 					</tbody>
 				</table>
-			<h2>Container "Payment_Models_Data_IdealOptions"</h2>
-				<table class="table" id="Payment_Models_Data_IdealOptions">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>IssuerId</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Preselect the iDEAL issuer. If specified together with PaymentMethods preselection of iDEAL,<br> the user is redirected directly to the issuer bank.<br> If the IssuerId is set, it is mandatory to use iDEAL in PaymentMethods.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
 			<h2>Container "Payment_Models_Data_InsertAliasSupportingPaymentMeans"</h2>
 				<table class="table" id="Payment_Models_Data_InsertAliasSupportingPaymentMeans">
 					<tbody>
@@ -6938,20 +6917,6 @@ Utf8[1..140]<br />
 			<h2>Container "Payment_Models_PaymentMethodsOptions"</h2>
 				<table class="table" id="Payment_Models_PaymentMethodsOptions">
 					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Ideal</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IdealOptions">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional. Options which only apply to IDEAL.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
 	<strong>Klarna</strong><br />
