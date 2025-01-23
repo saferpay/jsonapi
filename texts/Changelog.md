@@ -58,6 +58,7 @@
   - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
   - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
   - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+- removed subcontainer `Ideal` from container `PaymentMethodsOptions` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 
 ## <a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)
 - available on Sandbox: 2024-10-29
