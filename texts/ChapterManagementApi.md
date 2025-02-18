@@ -459,8 +459,7 @@ This function may be used to create a single use payment link
 							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-
-				<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
+		<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
