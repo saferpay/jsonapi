@@ -459,7 +459,7 @@ This function may be used to create a single use payment link
 							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-		<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object_test</a>
+		<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -520,8 +520,7 @@ AlphaNumeric[10..25]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-
-				<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
+		<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -537,8 +536,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-
-				<a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
+			<a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -554,8 +552,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-
-				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
+			<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -568,8 +565,7 @@ AlphaNumeric[10..25]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-
-				<a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
+		<a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -775,8 +771,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
-
-				<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
+		<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
