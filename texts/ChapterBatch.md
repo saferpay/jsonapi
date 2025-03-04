@@ -35,8 +35,7 @@ This chapter covers the Batch Close via API
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -52,8 +51,7 @@ This chapter covers the Batch Close via API
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
@@ -104,8 +102,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

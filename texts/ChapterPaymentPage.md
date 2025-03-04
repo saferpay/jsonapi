@@ -53,8 +53,7 @@ This method can be used to start a transaction with the Payment Page which may i
 							<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationInteractive">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationInteractive">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -67,8 +66,7 @@ This method can be used to start a transaction with the Payment Page which may i
 							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -81,8 +79,7 @@ This method can be used to start a transaction with the Payment Page which may i
 							<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -95,8 +92,7 @@ This method can be used to start a transaction with the Payment Page which may i
 							<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>Liability</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: NONE (empty)</div>
@@ -109,8 +105,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 							<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameters is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
@@ -124,8 +119,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_DeliveryAddressForm">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_DeliveryAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -138,8 +132,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Notification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Notification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -152,8 +145,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Order">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -166,8 +158,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -183,8 +174,7 @@ Id[1..20]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentPagePayment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentPagePayment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -197,13 +187,12 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -212,8 +201,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -226,8 +214,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -243,8 +230,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -260,8 +246,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -274,8 +259,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 							<td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -291,8 +275,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
@@ -306,8 +289,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to control if wallets should be enabled on the payment selection page.</div>
@@ -369,8 +351,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the RedirectUrl in ISO 8601 format in UTC. After this time, the RedirectUrl can't be called anymore.</div>
@@ -386,8 +367,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">RedirectUrl for the payment page transaction. Simply add this to a "Pay Now"-button or do an automatic redirect.</div>
@@ -403,8 +383,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -420,8 +399,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token for later referencing</div>
@@ -498,8 +476,7 @@ Call this function to safely check the status of the transaction from your serve
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -515,8 +492,7 @@ Call this function to safely check the status of the transaction from your serve
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
@@ -564,8 +540,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -578,8 +553,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+		        <a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -592,8 +566,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -606,8 +579,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -620,8 +592,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -637,8 +608,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -651,8 +621,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -668,8 +637,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -685,8 +653,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

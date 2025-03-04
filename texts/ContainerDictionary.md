@@ -10,8 +10,7 @@
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
@@ -27,8 +26,7 @@
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
@@ -49,8 +47,7 @@
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 4217 3-letter currency code (CHF, USD, EUR, ...)</div>
@@ -66,8 +63,7 @@
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Amount in minor unit (CHF 1.00 &rArr; Value=100). <b>Only Integer values will be accepted!</b></div>
@@ -88,8 +84,7 @@
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
@@ -102,8 +97,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 								<td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
@@ -125,8 +119,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
@@ -139,8 +132,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 								<td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
@@ -159,8 +151,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 								<td class="col-sm-4 text-right">
 	<strong>AcceptHeader</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Browser accept header</div>
@@ -173,8 +164,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_RequestBillingAddress">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_RequestBillingAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -187,8 +177,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 								<td class="col-sm-4 text-right">
 	<strong>ColorDepth</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Color depth</div>
@@ -202,8 +191,7 @@ Possible values: 1bit, 4bits, 8bits, 15bits, 16bits, 24bits, 32bits, 48bits.<br 
 								<td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_RequestAddress">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_RequestAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -216,8 +204,7 @@ Possible values: 1bit, 4bits, 8bits, 15bits, 16bits, 24bits, 32bits, 48bits.<br 
 								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. The ID can be numeric, alphabetical and contain any of the following special characters: .:!#$%&'*+-/=?^_`{|}~@@.<br> For GDPR reasons we <strong>strongly discourage</strong> the use of ids containing any personal data (e.g. names) and instead recommend the usage of a merchant-side generated UUID for your customer.</div>
@@ -230,8 +217,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
@@ -244,8 +230,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Ipv6Address</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv6 address of the card holder / payer if available.</div>
@@ -258,8 +243,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>JavaEnabled</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is Java enabled</div>
@@ -271,8 +255,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>JavaScriptEnabled</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is JavaScript enabled</div>
@@ -284,8 +267,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language using the payers browser agent.<br> Format: ISO 639-1 (two-letter language code), optionally followed by a hyphen and ISO 3166-1 alpha-2 (two-letter country code).<br> The supported language codes are listed below. This list may be extended in the future as more languages become available.<br> We recommend to only use supported language and country codes. If the submitted value has a valid format, but the language is unsupported, then the default language is used.<br> For supported languages, using different country codes than those explicitly listed here may or may not work as expected.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-CH - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
@@ -298,8 +280,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ScreenHeight</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Screen height</div>
@@ -312,8 +293,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ScreenWidth</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Screen width</div>
@@ -326,8 +306,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>TimeZoneOffsetMinutes</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Time zone offset in minutes</div>
@@ -341,8 +320,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>UserAgent</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">User agent</div>
@@ -360,8 +338,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AllowPartialAuthorization</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">When set to true, a transaction might be authorized with an amount less than requested authorization amount.<br> <div class="info"> <p><strong>Important:</strong></p> <ul> <li>Not all the payment methods support this option.</li> <li>This option is currently supported only in Transaction/Initialize and Transaction/AuthorizeDirect.</li> <li>Using this option in Transaction/Initialize prevents DCC.</li> </ul> </div></div>
@@ -373,8 +350,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PreAuth</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Indicates the desired transaction type. When set to true the transaction is processed as a pre-authorization otherwise as a final authorization. Please note that not all payment methods support both options and the effective transaction type is determined by Saferpay.</div>
@@ -391,8 +367,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>City</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's city</div>
@@ -406,8 +381,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Company</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's company</div>
@@ -421,8 +395,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
@@ -436,8 +409,7 @@ Alphabetic[2..2]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> Allows country codes formatted as ISO 3166 or ISO 3166-2.</div>
@@ -451,8 +423,7 @@ Iso3166[1..6]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
@@ -466,8 +437,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's email address</div>
@@ -480,8 +450,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's first name</div>
@@ -495,8 +464,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Gender</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's gender</div>
@@ -510,8 +478,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LastName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's last name</div>
@@ -525,8 +492,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Phone</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's phone number</div>
@@ -540,8 +506,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street</div>
@@ -555,8 +520,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
@@ -570,8 +534,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Zip</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's zip code</div>
@@ -590,8 +553,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>City</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's city</div>
@@ -605,8 +567,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Company</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's company</div>
@@ -620,8 +581,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
@@ -635,8 +595,7 @@ Alphabetic[2..2]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> Allows country codes formatted as ISO 3166 or ISO 3166-2.</div>
@@ -650,8 +609,7 @@ Iso3166[1..6]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
@@ -665,8 +623,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's email address</div>
@@ -679,8 +636,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's first name</div>
@@ -694,8 +650,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Gender</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's gender</div>
@@ -709,8 +664,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LastName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's last name</div>
@@ -724,8 +678,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Phone</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's phone number</div>
@@ -739,8 +692,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street</div>
@@ -754,8 +706,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
@@ -769,8 +720,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>VatNumber</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The company's vat number</div>
@@ -783,8 +733,7 @@ Utf8[1..25]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Zip</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's zip code</div>
@@ -803,8 +752,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>City</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's city</div>
@@ -818,8 +766,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Company</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's company</div>
@@ -833,8 +780,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
@@ -848,8 +794,7 @@ Alphabetic[2..2]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country subdivision code in ISO 3166-2</div>
@@ -863,8 +808,7 @@ AlphaNumeric[1..3]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
@@ -878,8 +822,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's email address</div>
@@ -892,8 +835,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's first name</div>
@@ -907,8 +849,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Gender</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's gender</div>
@@ -922,8 +863,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LastName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's last name</div>
@@ -937,8 +877,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Phone</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's phone number</div>
@@ -952,8 +891,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street</div>
@@ -967,8 +905,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
@@ -982,8 +919,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Zip</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's zip code</div>
@@ -1002,8 +938,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>City</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's city</div>
@@ -1017,8 +952,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Company</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's company</div>
@@ -1032,8 +966,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country code<br> ISO 3166-1 alpha-2 country code<br> (Non-standard: XK for Kosovo)</div>
@@ -1047,8 +980,7 @@ Alphabetic[2..2]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's country subdivision code in ISO 3166-2</div>
@@ -1062,8 +994,7 @@ AlphaNumeric[1..3]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth in ISO 8601 extended date notation<br> YYYY-MM-DD</div>
@@ -1077,8 +1008,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's email address</div>
@@ -1091,8 +1021,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's first name</div>
@@ -1106,8 +1035,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Gender</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's gender</div>
@@ -1121,8 +1049,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LastName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's last name</div>
@@ -1136,8 +1063,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Phone</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's phone number</div>
@@ -1151,8 +1077,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street</div>
@@ -1166,8 +1091,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street2</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's street, second line. Only use this, if you need two lines. It may not be supported by all acquirers.</div>
@@ -1181,8 +1105,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>VatNumber</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The company's vat number</div>
@@ -1195,8 +1118,7 @@ Utf8[1..25]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Zip</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's zip code</div>
@@ -1218,8 +1140,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Specifies if and where Saferpay should take the payer's address data from.<br> SAFERPAY will result in an address form being shown to the payer in the Saferpay Payment Page.<br> PREFER_PAYMENTMETHOD will retrieve the address data from the means of payment if supported. PREFER_PAYMENTMETHOD will fall back to SAFERPAY if not available with the chosen payment method.<br> For NONE no address form will be displayed and no address data will be retrieved from the means of payment.</div>
@@ -1232,8 +1153,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br />
 								<td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">List of fields which the payer must enter to proceed with the payment.<br> This is only applicable if Saferpay displays the address form.<br> If no mandatory fields are sent, all fields except SALUTATION, COMPANY and PHONE are mandatory.</div>
@@ -1252,8 +1172,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_RequestBillingAddress">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_RequestBillingAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1266,8 +1185,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 								<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
@@ -1280,8 +1198,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 								<td class="col-sm-4 text-right">
 	<strong>Ipv6Address</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv6 address of the card holder / payer if available.</div>
@@ -1294,8 +1211,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 								<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Language to force Saferpay to display something to the payer in a certain language. Per default, Saferpay will determine the language using the payers browser agent.<br> Format: ISO 639-1 (two-letter language code), optionally followed by a hyphen and ISO 3166-1 alpha-2 (two-letter country code).<br> The supported language codes are listed below. This list may be extended in the future as more languages become available.<br> We recommend to only use supported language and country codes. If the submitted value has a valid format, but the language is unsupported, then the default language is used.<br> For supported languages, using different country codes than those explicitly listed here may or may not work as expected.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-CH - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
@@ -1313,8 +1229,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 								<td class="col-sm-4 text-right">
 	<strong>ClientInfo</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ClientInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ClientInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1330,8 +1245,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay customer id. Part of the Saferpay AccountID, which has the following format: 123123-12345678. The first Value is your CustomerID.</div>
@@ -1348,8 +1262,7 @@ Numeric[1..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id generated by merchant system, for debugging purposes. Should be unique for each new request. If a request is retried due to an error, use the same request id. In this case, the <strong>RetryIndicator</strong> should be increased instead, to indicate a subsequent attempt.</div>
@@ -1366,8 +1279,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">0 if this specific request is attempted for the first time, >=1 if it is a retry.</div>
@@ -1384,14 +1296,13 @@ Range: inclusive between 0 and 9<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44<br />
-				    <span>Example: <code>1.44</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45<br />
+				    <span>Example: <code>1.45</code></span>
 	</i>
 </td>
 							</tr>
@@ -1407,8 +1318,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">RequestId of the original request header</div>
@@ -1425,37 +1335,13 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44<br />
-				    <span>Example: <code>1.44</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_A2ARefund"</h2>
-				<table class="table" id="Payment_Models_A2ARefund">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>AccountHolderName</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The account holder name will be used if not already present in the authorization.<br> If no account holder name is present in the authorization and none provided in the refund request, the refund cannot be processed.</div>
-	<i class="small text-muted">
-Utf8[1..50]<br />
-				    <span>Example: <code>John Doe</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45<br />
+				    <span>Example: <code>1.45</code></span>
 	</i>
 </td>
 							</tr>
@@ -1468,8 +1354,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AppCompletionRedirectUrl</strong><br />
 	<span class="text-muted small">
-				URI
-	</span>
+		        URI	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This URL is called by the bancontact payment app once the payment is authorized successfully.<br> The maximum allowed length for this URL is 256 characters.</div>
@@ -1481,8 +1366,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AppDefaultRedirectUrl</strong><br />
 	<span class="text-muted small">
-				URI
-	</span>
+		        URI	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This URL is called by the bancontact payment app when the payer cancels the payment.<br> The maximum allowed length for this URL is 256 characters.</div>
@@ -1499,8 +1383,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Bancontact</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1518,8 +1401,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the referenced capture.</div>
@@ -1533,8 +1415,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
@@ -1548,8 +1429,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderPartId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderPartId of the referenced capture if a partial capture should be referenced and the CaptureId/TransactionId of the partial capture is not available.</div>
@@ -1563,8 +1443,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the referenced transaction. This should only be used if you don't have the CaptureId of the referenced Capture (probably, because it was performed with an older SpecVersion)</div>
@@ -1586,8 +1465,7 @@ AlphaNumeric[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id / name of the alias. This value is case-insensitive.</div>
@@ -1601,8 +1479,7 @@ Id[1..40]<br />
 								<td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable (if the alias referenced is a card).</div>
@@ -1624,8 +1501,7 @@ Numeric[3..4]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
@@ -1641,8 +1517,7 @@ Numeric[3..4]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
@@ -1655,8 +1530,7 @@ Possible values: OK, NOT_SUPPORTED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Xid</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Transaction Id, given by the MPI. References the 3D Secure version 2 process.</div>
@@ -1677,8 +1551,7 @@ Possible values: OK, NOT_SUPPORTED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
@@ -1694,8 +1567,7 @@ Possible values: OK, NOT_SUPPORTED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
@@ -1716,8 +1588,7 @@ Possible values: OK, NOT_SUPPORTED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id to be used for checking.</div>
@@ -1734,8 +1605,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of check to perform.</div>
@@ -1757,8 +1627,7 @@ Possible values: ONLINE.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id / name of the alias</div>
@@ -1774,8 +1643,7 @@ Possible values: ONLINE.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Number of days this card is stored within Saferpay. Minimum 1 day, maximum 1600 days.</div>
@@ -1796,8 +1664,7 @@ Possible values: ONLINE.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id to be used for checking.</div>
@@ -1814,8 +1681,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> ONLINE performs an online account check (one transaction point will be billed for such a check)<br> ONLINE_STRONG performs a strong customer authentication (SCA) which involves a 3DS v2 authentication and an online account check (for which one transaction point will be billed)</div>
@@ -1834,8 +1700,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasAuthenticationResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasAuthenticationResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1848,8 +1713,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 								<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1865,8 +1729,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
@@ -1882,8 +1745,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the card check.</div>
@@ -1901,8 +1763,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1915,8 +1776,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1929,8 +1789,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1943,8 +1802,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Card">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1957,8 +1815,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1971,8 +1828,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>SchemeToken</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1990,8 +1846,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">the url that should be called to notify when the process is done</div>
@@ -2008,8 +1863,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2025,8 +1879,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2039,8 +1892,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2056,8 +1908,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
@@ -2070,8 +1921,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Twint</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_TwintInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TwintInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2084,8 +1934,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
@@ -2103,8 +1952,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
@@ -2117,8 +1965,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerEmail</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
@@ -2134,8 +1981,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				URI
-	</span>
+		        URI	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
@@ -2153,8 +1999,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Bancontact</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BancontactProcessingData">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BancontactProcessingData">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2175,8 +2020,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Base64 encoded ApplePayPaymentToken Json according to <a href="https://developer.apple.com/library/archive/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html" target="_blank">Apple's Payment Token Format Reference</a></div>
@@ -2194,8 +2038,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2208,8 +2051,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2222,8 +2064,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2236,8 +2077,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Card">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2250,8 +2090,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2264,8 +2103,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2278,8 +2116,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>SchemeToken</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2297,8 +2134,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>IntentUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to be used for payment on the same device (web-to-app or app-to-app switch)</div>
@@ -2310,8 +2146,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>QrCodeData</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Data which should be integrated into a QR code. In order to make the scanning as easy as possible,<br> the recommended format of QR code encoding is version 3, with lower error rate correction level<br> in character mode, resulting with a 29 x 29 pixels image maximum.</div>
@@ -2328,8 +2163,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the Bank.</div>
@@ -2341,8 +2175,7 @@ Base64 encoded string<br />
 								<td class="col-sm-4 text-right">
 	<strong>BIC</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Bank Identifier Code without spaces.</div>
@@ -2356,8 +2189,7 @@ AlphaNumeric[8..11]<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the account holder.</div>
@@ -2374,8 +2206,7 @@ Iso885915[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">International Bank Account Number in electronical format (without spaces).</div>
@@ -2394,8 +2225,7 @@ AlphaNumeric[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the Bank.</div>
@@ -2407,8 +2237,7 @@ AlphaNumeric[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BIC</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Bank Identifier Code without spaces.</div>
@@ -2422,8 +2251,7 @@ AlphaNumeric[8..11]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the IBAN origin (if available)</div>
@@ -2436,8 +2264,7 @@ AlphaNumeric[8..11]<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the account holder.</div>
@@ -2454,8 +2281,7 @@ Iso885915[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">International Bank Account Number in electronical format (without spaces).</div>
@@ -2477,8 +2303,7 @@ AlphaNumeric[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2491,8 +2316,7 @@ AlphaNumeric[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
@@ -2509,8 +2333,7 @@ Utf8[1..1000]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
@@ -2524,33 +2347,13 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-				    <span>Example: <code>Payernote</code></span>
-	</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_BillpayCapture"</h2>
-				<table class="table" id="Payment_Models_Data_BillpayCapture">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>DelayInDays</strong><br />
-	<span class="text-muted small">
-				integer
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of days to delay the due date of the invoice / direct debit (see billpay for specifics)</div>
-	<i class="small text-muted">
-				    <span>Example: <code>10</code></span>
+				    <span>Example: <code>Thank you for your purchase</code></span>
 	</i>
 </td>
 							</tr>
@@ -2566,8 +2369,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the Brand (Visa, Mastercard, an so on – might change over time). Only use it for display, never for parsing and/or mapping! Use PaymentMethod instead.</div>
@@ -2580,13 +2382,12 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand. Note that this can change in the future. Please make sure to accept undocumented values as new payment methods are introduced.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
 			</i>
 </td>
 							</tr>
@@ -2602,8 +2403,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
@@ -2620,8 +2420,7 @@ Range: inclusive between 1 and 12<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Year of expiration</div>
@@ -2635,8 +2434,7 @@ Range: inclusive between 2000 and 9999<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the card holder</div>
@@ -2653,8 +2451,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Card number without separators</div>
@@ -2667,8 +2464,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Verification code (CVV, CVC) if applicable</div>
@@ -2687,8 +2483,7 @@ Numeric[3..4]<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter lets you customize the holder name field on the card entry form. Per default, a holder name field is not shown.</div>
@@ -2707,8 +2502,7 @@ Possible values: NONE, MANDATORY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter lets you customize the holder name field on the card entry form. Per default, a holder name field is not shown.</div>
@@ -2722,8 +2516,7 @@ Possible values: NONE, MANDATORY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter can be used to display an entry form to request Verification Code (CVV, CVC) in case that an alias is used as PaymentMeans. Note that not all brands support Verification Code.</div>
@@ -2742,8 +2535,7 @@ Possible values: NONE, MANDATORY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">ISO 2-letter country code of the card origin (if available)</div>
@@ -2759,8 +2551,7 @@ Possible values: NONE, MANDATORY.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration month of the payer's card.</div>
@@ -2776,8 +2567,7 @@ Possible values: NONE, MANDATORY.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration year of the payer's card.</div>
@@ -2790,8 +2580,7 @@ Possible values: NONE, MANDATORY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the card holder (if known)</div>
@@ -2804,8 +2593,7 @@ Possible values: NONE, MANDATORY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>HolderSegment</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect and Alias/Update calls if available.</div>
@@ -2822,8 +2610,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The masked version of the full card number that the payer can see on his card.</div>
@@ -2836,8 +2623,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 								<td class="col-sm-4 text-right">
 	<strong>TokenPan</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionTokenPan">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionTokenPan">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2855,8 +2641,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 								<td class="col-sm-4 text-right">
 	<strong>OsInfo</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information on the operating system</div>
@@ -2870,8 +2655,7 @@ Iso885915[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ShopInfo</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name and version of the shop software</div>
@@ -2890,8 +2674,7 @@ Iso885915[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AnnualPercentageRate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Annual percentage rate in hundreth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
@@ -2903,8 +2686,7 @@ Iso885915[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>InstallmentFee</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2917,8 +2699,7 @@ Iso885915[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>InterestRate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Interest rate in hundredth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
@@ -2933,8 +2714,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Minimum Number of Installments. Valid values are 2–99 and<br> MinimumNumberOfInstallments must be smaller or equal MaximumNumberOfInstallments.</div>
@@ -2949,8 +2729,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Maximum Number of Installments. Valid values are 2–99 and<br> MaximumNumberOfInstallments must be bigger or equal MinimumNumberOfInstallments.</div>
@@ -2962,8 +2741,7 @@ Iso885915[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>TotalAmountDue</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2984,8 +2762,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The used exchange rate including markup<br> The decimal separator used is '.' regardless of location</div>
@@ -3001,8 +2778,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">DCC markup fee</div>
@@ -3018,8 +2794,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3040,8 +2815,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Creditor id, required for german direct debit payments.</div>
@@ -3056,8 +2830,7 @@ Iso885915[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The unique Mandate reference, required for german direct debit payments.</div>
@@ -3074,8 +2847,7 @@ Iso885915[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>City</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">City of merchant's location</div>
@@ -3088,8 +2860,7 @@ Utf8[1..13]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">country code of merchant's location<br> ISO 3166-1 alpha-2 country code<br> if not submitted the container will be ignored</div>
@@ -3103,8 +2874,7 @@ Alphabetic[2..2]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Name</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of merchant</div>
@@ -3117,8 +2887,7 @@ Utf8[1..14]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Street</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Street of merchant's location</div>
@@ -3131,8 +2900,7 @@ Utf8[1..48]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Zip</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Postal code of merchant's location</div>
@@ -3153,8 +2921,7 @@ Utf8[1..10]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">GooglePay Payment Token</div>
@@ -3171,8 +2938,7 @@ Utf8[1..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ContentSecurityEnabled</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">When enabled, then ContentSecurity/SAQ-A is requested, which leads to the CSS being loaded from the saferpay server.</div>
@@ -3184,8 +2950,7 @@ Utf8[1..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CssUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Custom styling resource (url) which will be referenced in web pages displayed by Saferpay to apply your custom styling.<br> This file must be hosted on a SSL/TLS secured web server (the url must start with https://).<br> If a custom CSS is provided, any design related settings set in the payment page config (PPConfig) will be ignored and the default design will be used.</div>
@@ -3199,8 +2964,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>Theme</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter let you customize the appearance of the displayed payment pages. Per default a lightweight responsive styling will be applied.<br> If you don't want any styling use 'NONE'.</div>
@@ -3219,8 +2983,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Card">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3233,8 +2996,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3255,8 +3017,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If set to true, the authorization may later be referenced for installment followup transactions.</div>
@@ -3273,8 +3034,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>AnnualPercentageRate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Annual percentage rate in hundredth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
@@ -3286,8 +3046,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>FirstInstallmentAmount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3300,8 +3059,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>InstallmentFee</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3314,8 +3072,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>InterestRate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Interest rate in hundredth of a percent. e.g. value 125 means 1.25%.<br> Valid values are 0-99999</div>
@@ -3330,8 +3087,7 @@ Possible values: DEFAULT, SIX, NONE.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Number of Installments. Valid values are 2–99.</div>
@@ -3344,8 +3100,7 @@ Range: inclusive between 2 and 99<br />
 								<td class="col-sm-4 text-right">
 	<strong>SubsequentInstallmentAmount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3358,57 +3113,11 @@ Range: inclusive between 2 and 99<br />
 								<td class="col-sm-4 text-right">
 	<strong>TotalAmountDue</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Total Amount Due</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-			<h2>Container "Payment_Models_Data_InvoiceInfo"</h2>
-				<table class="table" id="Payment_Models_Data_InvoiceInfo">
-					<tbody>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>DueDate</strong><br />
-	<span class="text-muted small">
-				date
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The date by which the invoice needs to be settled</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>Payee</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the payee, eg billpay, who is responsible for collecting the bill</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>ReasonForTransfer</strong><br />
-	<span class="text-muted small">
-				string
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The reason for transfer to be stated when paying the invoice (transfer of funds)</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -3422,8 +3131,7 @@ Range: inclusive between 2 and 99<br />
 								<td class="col-sm-4 text-right">
 	<strong>SettlementDate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">SettlementDate with the format MMDD</div>
@@ -3440,8 +3148,7 @@ String length: inclusive between 4 and 4<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">TransactionStamp</div>
@@ -3460,8 +3167,7 @@ Max length: 50<br />
 								<td class="col-sm-4 text-right">
 	<strong>SettlementDate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">SCA transaction settlement date, created by the card issuer. For MasterCard schemes only.</div>
@@ -3473,8 +3179,7 @@ Max length: 50<br />
 								<td class="col-sm-4 text-right">
 	<strong>TransactionStamp</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">SCA transaction stamp, created by the card issuer</div>
@@ -3494,8 +3199,7 @@ Max length: 50<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px"></div>
@@ -3511,8 +3215,7 @@ Utf8[1..100000]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px"></div>
@@ -3533,8 +3236,7 @@ Utf8[1..1000]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_KlarnaAttachment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_KlarnaAttachment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3552,8 +3254,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>InPsd2Scope</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Determines if the transaction is in the PSD2 Scope (Payment Service Directive 2 of the European Union)</div>
@@ -3569,8 +3270,7 @@ Possible values: YES, NO, UNKNOWN.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is liability shifted for this transaction</div>
@@ -3585,8 +3285,7 @@ Possible values: YES, NO, UNKNOWN.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Indicates who takes the liability for the transaction</div>
@@ -3599,8 +3298,7 @@ Possible values: MERCHANT, THREEDS.<br />
 								<td class="col-sm-4 text-right">
 	<strong>ThreeDs</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ThreeDsInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3618,8 +3316,7 @@ Possible values: MERCHANT, THREEDS.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Fee</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3632,8 +3329,7 @@ Possible values: MERCHANT, THREEDS.<br />
 								<td class="col-sm-4 text-right">
 	<strong>FeeRefund</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3649,8 +3345,7 @@ Possible values: MERCHANT, THREEDS.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The id of the marketplace submerchant on whose behalf a multipart capture or refund capture is being made.</div>
@@ -3668,8 +3363,7 @@ Id[1..15]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CustomPlan</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CustomPlan">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CustomPlan">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3682,8 +3376,7 @@ Id[1..15]<br />
 								<td class="col-sm-4 text-right">
 	<strong>InstallmentPlans</strong><br />
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#Payment_Models_Data_InstallmentPlan">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#Payment_Models_Data_InstallmentPlan">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3696,8 +3389,7 @@ Id[1..15]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ReceiptFreeText</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Receipt Free Text</div>
@@ -3714,8 +3406,7 @@ Id[1..15]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ChosenPlan</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InstallmentPlan">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_InstallmentPlan">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3733,8 +3424,7 @@ Id[1..15]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ForeignRetailer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ForeignRetailerMerchantInformation">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ForeignRetailerMerchantInformation">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3755,8 +3445,7 @@ Id[1..15]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous failure notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
@@ -3770,8 +3459,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent to the merchants after successful authorizations.<br> A maximum of 10 email addresses is allowed.</div>
@@ -3784,8 +3472,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerDccReceiptEmail</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations processed with DCC.<br> This option can only be used when the field PayerEmail is not set.</div>
@@ -3798,8 +3485,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerEmail</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations.</div>
@@ -3815,8 +3501,7 @@ Max length: 2000<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous success notification for the transaction. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
@@ -3838,8 +3523,7 @@ Max length: 2000<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<span>array of <a class="type-details in" href="#Payment_Models_Data_OrderItem">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#Payment_Models_Data_OrderItem">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3857,8 +3541,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>CategoryName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Category name</div>
@@ -3872,8 +3555,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product description</div>
@@ -3887,8 +3569,7 @@ Utf8[1..200]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DiscountAmount</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Discount amount including tax</div>
@@ -3901,8 +3582,7 @@ Utf8[1..200]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product id</div>
@@ -3916,8 +3596,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ImageUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to an image showing the product</div>
@@ -3931,8 +3610,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>IsPreOrder</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Flag, which indicates that the order item is a pre order. Per default, it is not a pre order.</div>
@@ -3945,8 +3623,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>Name</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product name</div>
@@ -3960,8 +3637,7 @@ Utf8[1..200]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ProductUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to the product page</div>
@@ -3975,8 +3651,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>Quantity</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The quantity of the order item</div>
@@ -3989,8 +3664,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>TaxAmount</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Total tax amount of the order item. This tax needs to be included in the UnitPrice and must take the Quantity of the order item into account.</div>
@@ -4003,8 +3677,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>TaxRate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 1900 means 19.00%<br> Valid values are 0-99999</div>
@@ -4018,8 +3691,7 @@ Range: inclusive between 0 and 99999<br />
 								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Order item type</div>
@@ -4032,8 +3704,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 								<td class="col-sm-4 text-right">
 	<strong>UnitPrice</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 15.50 &rArr; Value=1550). <b>Only Integer values will be accepted!</b></div>
@@ -4046,8 +3717,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 								<td class="col-sm-4 text-right">
 	<strong>VariantId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product variant id</div>
@@ -4066,8 +3736,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Recipient</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_RequestAddress">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_RequestAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4088,8 +3757,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4102,8 +3770,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
@@ -4117,8 +3784,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Installment</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4131,8 +3797,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
@@ -4146,8 +3811,7 @@ Id[1..35]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4163,8 +3827,7 @@ Id[1..35]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
@@ -4178,14 +3841,13 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-				    <span>Example: <code>Payernote</code></span>
+				    <span>Example: <code>Thank you for your purchase</code></span>
 	</i>
 </td>
 							</tr>
@@ -4193,8 +3855,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4212,8 +3873,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4229,8 +3889,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4243,8 +3902,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4260,8 +3918,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
@@ -4274,8 +3931,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayPal</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayPalInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayPalInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4288,8 +3944,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
@@ -4307,8 +3962,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_ResponseBillingAddress">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_ResponseBillingAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4321,8 +3975,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_ResponseAddress">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_ResponseAddress">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4335,8 +3988,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. The ID can be numeric, alphabetical and contain any of the following special characters: .:!#$%&amp;'*+-/=?^_`{|}~@@.</div>
@@ -4349,8 +4001,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">IPv4 address of the card holder / payer if available. Dotted quad notation.</div>
@@ -4363,8 +4014,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>IpLocation</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The location the IpAddress, if available. This might be a valid country code or a special value for 'non-country' locations (anonymous proxy, satellite phone, ...).</div>
@@ -4382,8 +4032,7 @@ PayerId[1..256]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Company</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's company</div>
@@ -4396,8 +4045,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br />
 	<span class="text-muted small">
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when user account was created</div>
@@ -4411,8 +4059,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's date of birth (ISO 8601)<br> YYYY-MM-DD</div>
@@ -4426,8 +4073,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's email address</div>
@@ -4440,8 +4086,7 @@ AlphaNumeric[10..10]<br />
 								<td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's first name</div>
@@ -4454,8 +4099,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Gender</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's gender</div>
@@ -4469,8 +4113,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>HasAccount</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Does the payer have an account in the shop?</div>
@@ -4482,8 +4125,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>HasPassword</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Does the payer have a password?</div>
@@ -4495,8 +4137,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LastLoginDate</strong><br />
 	<span class="text-muted small">
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's last login (ISO 8601)</div>
@@ -4510,8 +4151,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LastName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's last name</div>
@@ -4524,8 +4164,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PasswordForgotten</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Was the password reset by the payer using the "forgot my password" feature in the current session?</div>
@@ -4537,8 +4176,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PasswordLastChangeDate</strong><br />
 	<span class="text-muted small">
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and Time (ISO 8601) when the account password was changed last time</div>
@@ -4552,8 +4190,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Phone</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Phone">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Phone">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4566,8 +4203,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>SecondaryEmail</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's secondary email address</div>
@@ -4588,8 +4224,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4602,8 +4237,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that can be displayed in web sites.</div>
@@ -4617,8 +4251,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Installment</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4631,8 +4264,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
@@ -4646,8 +4278,7 @@ Id[1..35]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4663,8 +4294,7 @@ Id[1..35]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
@@ -4678,14 +4308,13 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-				    <span>Example: <code>Payernote</code></span>
+				    <span>Example: <code>Thank you for your purchase</code></span>
 	</i>
 </td>
 							</tr>
@@ -4693,8 +4322,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4712,8 +4340,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4726,8 +4353,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4740,8 +4366,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BankAccount">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4754,8 +4379,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Card">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4768,8 +4392,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_GooglePay">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4782,8 +4405,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4796,8 +4418,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>SchemeToken</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4815,8 +4436,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BankAccountInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4832,8 +4452,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4846,8 +4465,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CardInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4863,8 +4481,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment formatted / masked for display purposes</div>
@@ -4877,8 +4494,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayPal</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayPalInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayPalInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4891,8 +4507,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of Wallet, if the transaction was done by a wallet. Note that this can change in the future. Please make sure to accept undocumented values as new wallets are introduced.</div>
@@ -4913,8 +4528,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4930,8 +4544,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
@@ -4945,8 +4558,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Installment</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_InstallmentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4959,8 +4571,7 @@ Utf8[1..1000]<br />
 								<td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mandate reference of the payment. Needed for German direct debits (ELV) only. The value has to be unique.</div>
@@ -4974,8 +4585,7 @@ Id[1..35]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4991,8 +4601,7 @@ Id[1..35]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.<br> Please note that for some payment methods e.g. TWINT, iDEAL only 50 characters are supported, the remaining characters are truncated.</div>
@@ -5006,14 +4615,13 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that maximum allowed characters are rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
-				    <span>Example: <code>Payernote</code></span>
+				    <span>Example: <code>Thank you for your purchase</code></span>
 	</i>
 </td>
 							</tr>
@@ -5021,8 +4629,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RecurringOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5040,8 +4647,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
@@ -5054,8 +4660,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
@@ -5071,8 +4676,7 @@ Utf8[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5085,8 +4689,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
@@ -5099,8 +4702,7 @@ Utf8[1..50]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
@@ -5117,8 +4719,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
@@ -5131,8 +4732,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5149,8 +4749,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
@@ -5161,24 +4760,9 @@ Id[1..64]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Invoice</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5191,8 +4775,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderId given with request</div>
@@ -5209,8 +4792,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
@@ -5226,8 +4808,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING'</div>
@@ -5244,8 +4825,7 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT'</div>
@@ -5267,8 +4847,7 @@ Possible values: PAYMENT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The email address used in PayPal</div>
@@ -5283,8 +4862,7 @@ Possible values: PAYMENT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">PayerId from PayPal</div>
@@ -5300,8 +4878,7 @@ Possible values: PAYMENT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Seller protection status from PayPal.</div>
@@ -5320,8 +4897,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent when the transaction is completed.<br> A maximum of 10 email addresses is allowed.</div>
@@ -5337,8 +4913,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for Paydirekt transactions or WL Crypto Payments refunds.</div>
@@ -5356,8 +4931,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Main</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's main phone number</div>
@@ -5371,8 +4945,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Mobile</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's mobile number</div>
@@ -5386,8 +4959,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Work</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The payer's work phone number</div>
@@ -5409,8 +4981,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If set to true, the authorization may later be referenced for recurring followup transactions.</div>
@@ -5430,8 +5001,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If 'true', the given URL must either be used as the target of a form (POST) containing card data entered by the card holder or to redirect the browser to (GET). If ‘false’, a GET redirect without additional data must be performed.</div>
@@ -5446,8 +5016,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Redirect-URL. Used to either redirect the payer or let him enter his means of payment.</div>
@@ -5468,8 +5037,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification url called when the payer redirect steps have failed. The transaction cannot be authorized.</div>
@@ -5486,8 +5054,7 @@ Max length: 2000<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification url called when the payer has completed the redirect steps successfully and the transaction is ready to be authorized.</div>
@@ -5509,8 +5076,7 @@ Max length: 2000<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5523,8 +5089,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description provided by merchant</div>
@@ -5541,8 +5106,7 @@ Utf8[1..1000]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference defined by the merchant.</div>
@@ -5554,10 +5118,23 @@ Id[1..80]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
+	<strong>PayerNote</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<i class="small text-muted">
+Utf8[1..50]<br />
+				    <span>Example: <code>Early bird discount</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
 	<strong>RestrictRefundAmountToCapturedAmount</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If set to true, the refund will be rejected if the sum of refunds exceeds the captured amount.<br> All authorized refunds are included in the calculation even if they have not been captured yet. Cancelled refunds are not included.<br> By default, this check is disabled.</div>
@@ -5577,8 +5154,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5591,8 +5167,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description provided by merchant</div>
@@ -5609,14 +5184,27 @@ Utf8[1..1000]<br />
 					<span>
 				<span class="text-recommended">recommended</span>,
 			</span>
-		string
-	</span>
+        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference defined by the merchant.</div>
 	<i class="small text-muted">
 Id[1..80]<br />
 				    <span>Example: <code>c52ad18472354511ab2c33b59e796901</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayerNote</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<i class="small text-muted">
+Utf8[1..50]<br />
+				    <span>Example: <code>Early bird discount</code></span>
 	</i>
 </td>
 							</tr>
@@ -5629,8 +5217,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5643,8 +5230,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Card</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Card">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Card">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5657,8 +5243,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5671,8 +5256,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>SchemeToken</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5690,8 +5274,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
@@ -5704,8 +5287,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
@@ -5721,8 +5303,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5735,8 +5316,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
@@ -5749,8 +5329,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
@@ -5767,8 +5346,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
@@ -5781,8 +5359,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5799,8 +5376,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
@@ -5811,24 +5387,9 @@ Id[1..64]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Invoice</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -5841,8 +5402,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderId given with request</div>
@@ -5859,8 +5419,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
@@ -5876,8 +5435,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING'</div>
@@ -5894,8 +5452,7 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of transaction. One of 'REFUND'</div>
@@ -5914,8 +5471,7 @@ Possible values: REFUND.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Alias id to be used for registration if not generated by Saferpay. Mandatory if IdGenerator is 'MANUAL'. This value is case-insensitive.</div>
@@ -5932,8 +5488,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id generator to be used by Saferpay.</div>
@@ -5947,8 +5502,7 @@ Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1096 days) will be used.</div>
@@ -5967,8 +5521,7 @@ Range: inclusive between 1 and 1600<br />
 								<td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description of the error.</div>
@@ -5981,8 +5534,7 @@ Range: inclusive between 1 and 1600<br />
 								<td class="col-sm-4 text-right">
 	<strong>ErrorName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name / id of the error.</div>
@@ -6000,8 +5552,7 @@ Range: inclusive between 1 and 1600<br />
 								<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6014,8 +5565,7 @@ Range: inclusive between 1 and 1600<br />
 								<td class="col-sm-4 text-right">
 	<strong>AuthenticationResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasAuthenticationResultBase">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasAuthenticationResultBase">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6028,8 +5578,7 @@ Range: inclusive between 1 and 1600<br />
 								<td class="col-sm-4 text-right">
 	<strong>Error</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegistrationErrorInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegistrationErrorInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6045,11 +5594,23 @@ Range: inclusive between 1 and 1600<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Result of registration</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -6066,8 +5627,7 @@ Range: inclusive between 1 and 1600<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Return url for successful, failed or aborted transaction</div>
@@ -6086,8 +5646,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>DeliveryType</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Delivery method</div>
@@ -6100,8 +5659,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 								<td class="col-sm-4 text-right">
 	<strong>DeviceFingerprintTransactionId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The customer's Session ID (mastered by DFP Device Fingerprinting), or the event ID if the session is not available</div>
@@ -6114,8 +5672,7 @@ Max length: 1024<br />
 								<td class="col-sm-4 text-right">
 	<strong>IsB2B</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is the transaction B2B?</div>
@@ -6127,8 +5684,7 @@ Max length: 1024<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerProfile</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerProfile">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerProfile">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6149,8 +5705,7 @@ Max length: 1024<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Fields token</div>
@@ -6168,8 +5723,7 @@ Id[1..40]<br />
 								<td class="col-sm-4 text-right">
 	<strong>AuthValue</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">TAVV Cryptogram</div>
@@ -6181,8 +5735,7 @@ Id[1..40]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Eci</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay E-Commerce Indicator. This indicator is just informational.</div>
@@ -6198,8 +5751,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiry Month of the token.</div>
@@ -6216,8 +5768,7 @@ Range: inclusive between 1 and 12<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiry Year of the token.</div>
@@ -6233,8 +5784,7 @@ Range: inclusive between 1 and 12<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token number</div>
@@ -6249,8 +5799,7 @@ Range: inclusive between 1 and 12<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of the Scheme Token.</div>
@@ -6268,8 +5817,7 @@ Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER, MDES, VTS.<
 								<td class="col-sm-4 text-right">
 	<strong>Exemption</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of Exemption</div>
@@ -6282,8 +5830,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br />
 								<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6301,8 +5848,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Exemption</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of Exemption</div>
@@ -6315,8 +5861,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS.<br />
 								<td class="col-sm-4 text-right">
 	<strong>ThreeDsChallenge</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">3DS Secure challenge options</div>
@@ -6334,8 +5879,7 @@ Possible values: FORCE.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Exemption</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of Exemption</div>
@@ -6356,8 +5900,7 @@ Possible values: RECURRING.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Indicates, whether the payer has successfuly authenticated him/herself or not.</div>
@@ -6369,8 +5912,7 @@ Possible values: RECURRING.<br />
 								<td class="col-sm-4 text-right">
 	<strong>AuthenticationType</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Determines how the card holder was authenticated. Some 3D Secure Versions allow a Frictionless authentication.</div>
@@ -6384,8 +5926,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 								<td class="col-sm-4 text-right">
 	<strong>Version</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The 3D Secure Version.</div>
@@ -6401,8 +5942,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Transaction Id, given by the MPI. References the 3D Secure process.</div>
@@ -6421,8 +5961,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 								<td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the acquirer</div>
@@ -6435,8 +5974,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 								<td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Reference id of the acquirer (if available)</div>
@@ -6452,8 +5990,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6466,8 +6003,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 								<td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Approval id of the acquirer (if available)</div>
@@ -6480,8 +6016,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 								<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay capture id.<br> Available if the transaction was already captured (Status: CAPTURED).<br> Must be stored for later reference (eg refund).</div>
@@ -6498,8 +6033,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date / time of the authorization</div>
@@ -6512,8 +6046,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DirectDebitInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6530,8 +6063,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique Saferpay transaction id. Used to reference the transaction in any further step.</div>
@@ -6542,24 +6074,9 @@ Id[1..64]<br />
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Invoice</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Invoice information, if applicable</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_IssuerReferenceInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6572,8 +6089,7 @@ Id[1..64]<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderId given with request</div>
@@ -6590,8 +6106,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unique SIX transaction reference.</div>
@@ -6607,8 +6122,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the transaction. One of 'AUTHORIZED','CANCELED', 'CAPTURED' or 'PENDING'</div>
@@ -6625,8 +6139,7 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of transaction. One of 'PAYMENT', 'REFUND'</div>
@@ -6645,8 +6158,7 @@ Possible values: PAYMENT, REFUND.<br />
 								<td class="col-sm-4 text-right">
 	<strong>PayerDccReceiptEmail</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Email address to which a confirmation email will be sent to the payer after successful authorizations processed with DCC.</div>
@@ -6664,8 +6176,7 @@ Possible values: PAYMENT, REFUND.<br />
 								<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous OrderId of the referenced transaction.</div>
@@ -6679,8 +6190,7 @@ Id[1..80]<br />
 								<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
@@ -6702,8 +6212,7 @@ AlphaNumeric[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration month (eg 9 for September) of tokenPan</div>
@@ -6719,8 +6228,7 @@ AlphaNumeric[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration year of tokenPAN</div>
@@ -6736,8 +6244,7 @@ AlphaNumeric[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Masked number of tokenPAN</div>
@@ -6758,8 +6265,7 @@ AlphaNumeric[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Twint token expiry date</div>
@@ -6780,8 +6286,7 @@ AlphaNumeric[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The id of the alias that should be updated.. This value is case-insensitive.</div>
@@ -6795,8 +6300,7 @@ Id[1..40]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Number of days this card is to be stored within Saferpay. If not filled, the default lifetime (1096 days) will be used.</div>
@@ -6818,8 +6322,7 @@ Range: inclusive between 1 and 1600<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Month of expiration (eg 9 for September)</div>
@@ -6836,8 +6339,7 @@ Range: inclusive between 1 and 12<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Year of expiration</div>
@@ -6859,8 +6361,7 @@ Range: inclusive between 2000 and 9999<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_UpdateCreditCard">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_UpdateCreditCard">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6878,8 +6379,7 @@ Range: inclusive between 2000 and 9999<br />
 								<td class="col-sm-4 text-right">
 	<strong>Result</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the performed fraud prevention check</div>
@@ -6901,8 +6401,7 @@ Possible values: APPROVED, CHALLENGED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The account holder name will be used if not already present in the authorization.<br> If no account holder name is present in the authorization and none provided in the refund request, the refund cannot be processed.</div>
@@ -6921,8 +6420,7 @@ Utf8[1..140]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Klarna</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_KlarnaOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_KlarnaOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6938,24 +6436,9 @@ Utf8[1..140]<br />
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>A2A</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_A2ARefund">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional. Options which only apply to account to account</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>Ideal</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_IdealRefund">object</a>
+		        <a class="type-details in" href="#Payment_Models_IdealRefund">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -6973,8 +6456,7 @@ Utf8[1..140]<br />
 								<td class="col-sm-4 text-right">
 	<strong>BlockReason</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Indicates the blocking reason of the transaction.</div>
@@ -6988,13 +6470,112 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 								<td class="col-sm-4 text-right">
 	<strong>IpLocation</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Is the location of the payer and it can be either the two letter country-code (such as CH, DE, etc.)<br> or the special cases. The special cases are: PROXY and SATELLITE_PROVIDER.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>CH</code></span>
+	</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_SecureCardData_Tokenization_TokenizationInfo"</h2>
+				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenizationInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Program</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The system used to tokenize the payment means.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The current state of the tokenization of payment means.</div>
+	<i class="small text-muted">
+Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTED, NOT_PERFORMED, DENIED_BY_SCHEME.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TokenPan</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenPanInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains information about the returned token PAN from the scheme for card payment means. It will only be returned when the tokenization is SUCCESSFUL.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_SecureCardData_Tokenization_TokenPanInfo"</h2>
+				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenPanInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CardImageUrl</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The URL to the image of the payer's physical card.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpMonth</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Month of expiration (eg 4 for April) of the token PAN.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>9</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExpYear</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Year of expiration of the token PAN.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2027</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Status</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The current status of the token PAN by the scheme. If the payer or the issuer terminates the card, the token PAN will be given the status 'DELETED,' and the alias cannot be used for new authorization.</div>
+	<i class="small text-muted">
+Possible values: ACTIVE, SUSPENDED, DELETED, ACTIVATION_IN_PROGRESS.<br />
+				    <span>Example: <code>DELETED</code></span>
 	</i>
 </td>
 							</tr>
@@ -7010,8 +6591,7 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_Data_OrderItem">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Data_OrderItem">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7029,8 +6609,7 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 								<td class="col-sm-4 text-right">
 	<strong>CategoryName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Category name</div>
@@ -7044,8 +6623,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product description</div>
@@ -7059,8 +6637,7 @@ Utf8[1..200]<br />
 								<td class="col-sm-4 text-right">
 	<strong>DiscountAmount</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Discount amount including tax</div>
@@ -7073,8 +6650,7 @@ Utf8[1..200]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Id</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product id</div>
@@ -7088,8 +6664,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ImageUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to an image showing the product</div>
@@ -7103,8 +6678,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>IsPreOrder</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Flag, which indicates that the order item is a pre order. Per default, it is not a pre order.</div>
@@ -7117,8 +6691,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>Name</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product name</div>
@@ -7132,8 +6705,7 @@ Utf8[1..200]<br />
 								<td class="col-sm-4 text-right">
 	<strong>ProductUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL to the product page</div>
@@ -7147,8 +6719,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>Quantity</strong><br />
 	<span class="text-muted small">
-				integer
-	</span>
+		        integer	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The quantity of the order item</div>
@@ -7161,8 +6732,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>TaxAmount</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Tax amount which is included in the item price</div>
@@ -7175,8 +6745,7 @@ Max length: 2000<br />
 								<td class="col-sm-4 text-right">
 	<strong>TaxRate</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 125 means 1.25%<br> Valid values are 0-99999</div>
@@ -7190,8 +6759,7 @@ Range: inclusive between 0 and 99999<br />
 								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Order item type</div>
@@ -7204,8 +6772,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 								<td class="col-sm-4 text-right">
 	<strong>UnitPrice</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 2.00 &rArr; Value=200). <b>Only Integer values will be accepted!</b></div>
@@ -7218,8 +6785,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 								<td class="col-sm-4 text-right">
 	<strong>VariantId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Product variant id</div>
@@ -7241,8 +6807,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7258,8 +6823,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
@@ -7273,8 +6837,7 @@ Utf8[1..100]<br />
 								<td class="col-sm-4 text-right">
 	<strong>Options</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_PaymentOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7290,8 +6853,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
@@ -7313,8 +6875,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7330,8 +6891,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
@@ -7348,8 +6908,7 @@ Utf8[1..100]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant / shop. This identifier might be used as reference later on.</div>
@@ -7371,8 +6930,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id generator to be used by Saferpay.</div>
@@ -7394,8 +6952,7 @@ Possible values: RANDOM.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Display name of the feature</div>
@@ -7411,8 +6968,7 @@ Possible values: RANDOM.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the feature</div>
@@ -7433,8 +6989,7 @@ Possible values: RANDOM.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Display name of the package</div>
@@ -7450,8 +7005,7 @@ Possible values: RANDOM.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the package</div>
@@ -7469,8 +7023,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Currencies</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of strings representing all the supported currencies for the payment method</div>
@@ -7482,8 +7035,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LogoUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The logo of the payment method as url</div>
@@ -7495,8 +7047,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the payment method</div>
@@ -7513,8 +7064,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description of the terminal</div>
@@ -7526,8 +7076,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7540,8 +7089,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the terminal</div>
@@ -7553,8 +7101,7 @@ Possible values: RANDOM.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The type of the terminal</div>
@@ -7567,8 +7114,7 @@ Possible values: ECOM, SPG, MPO.<br />
 								<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				
-				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7586,8 +7132,7 @@ Possible values: ECOM, SPG, MPO.<br />
 								<td class="col-sm-4 text-right">
 	<strong>LogoUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The logo of the wallet as url</div>
@@ -7599,8 +7144,7 @@ Possible values: ECOM, SPG, MPO.<br />
 								<td class="col-sm-4 text-right">
 	<strong>WalletName</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the wallet</div>

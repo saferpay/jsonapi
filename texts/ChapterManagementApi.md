@@ -52,7 +52,6 @@ HTTP Headers example:
 
 <<<---
 
-
 ## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
 
 <span class="GET request-method">GET</span><br>
@@ -66,14 +65,11 @@ This method is used to retrieve the current license configuration for a customer
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -84,12 +80,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -104,7 +95,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-			<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -120,7 +111,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-			<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+		        <a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -131,7 +122,6 @@ No example available
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -156,11 +146,6 @@ No example available
 </pre>
 
 <<<---
-
-
-
-
-
 
 ## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
@@ -177,14 +162,11 @@ This method is used to retrieve the current license configuration for a customer
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -195,12 +177,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -214,8 +191,8 @@ No example available
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
-				<span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
 			</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Feature">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -231,7 +208,7 @@ No example available
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-			<a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
+		        <a class="type-details in" href="#RestApi_Models_LicensePackage">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -242,7 +219,6 @@ No example available
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -268,11 +244,6 @@ No example available
 
 <<<---
 
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
 
 <span class="POST request-method">POST</span><br>
@@ -285,10 +256,6 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 <<<---
 
 #### Request
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -303,8 +270,7 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">A human readable description that will be shown in the Saferpay Backoffice to easily identify the Access Token.</div>
@@ -320,8 +286,7 @@ Utf8[1..128]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string[]
-	</span>
+		        string[]	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
@@ -332,7 +297,6 @@ Utf8[1..128]<br />
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -349,12 +313,7 @@ Utf8[1..128]<br />
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -369,8 +328,7 @@ Utf8[1..128]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The AccessToken for the Saferpay Fields JavaScript library</div>
@@ -382,7 +340,6 @@ Utf8[1..128]<br />
 
 </table>
 
-
 --->>>
 
 <p>Example:</p>
@@ -393,8 +350,6 @@ Utf8[1..128]<br />
 </pre>
 
 <<<---
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken
 
@@ -409,14 +364,11 @@ This method may be used to delete a previously created Saferpay Fields Access To
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -427,10 +379,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
@@ -445,10 +394,6 @@ This function may be used to create a single use payment link
 
 #### Request
 
-
-
-
-
 <table class="table">
 			<thead>
 				<tr>
@@ -459,7 +404,7 @@ This function may be used to create a single use payment link
 							<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
-		<a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -472,8 +417,7 @@ This function may be used to create a single use payment link
 							<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> WITH_SUCCESSFUL_THREE_DS_CHALLENGE: Will force the 3D-Secure challenge.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
@@ -487,8 +431,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUC
 							<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter lets you define your payment page config (PPConfig) by name. If this parameter is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
@@ -505,8 +448,7 @@ Id[1..20]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> yyyy-MM-ddTHH:mm:ssK<br> Must be at least 1h in the future and within the next 180 days.</div>
@@ -520,7 +462,7 @@ AlphaNumeric[10..25]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-		<a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
+		        <a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -536,7 +478,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-			<a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_SpgPayer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -552,7 +494,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-			<a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
+		        <a class="type-details in" href="#RestApi_Models_Data_PaymentWithOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -565,7 +507,7 @@ AlphaNumeric[10..25]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-		<a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -576,7 +518,6 @@ AlphaNumeric[10..25]<br />
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -613,12 +554,7 @@ AlphaNumeric[10..25]<br />
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -633,8 +569,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				globally unique identifier
-	</span>
+		        globally unique identifier	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
@@ -650,8 +585,7 @@ AlphaNumeric[10..25]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
@@ -662,7 +596,6 @@ AlphaNumeric[10..25]<br />
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -675,11 +608,6 @@ AlphaNumeric[10..25]<br />
 </pre>
 
 <<<---
-
-
-
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink
 
@@ -694,14 +622,11 @@ This function may be used to fetch the status of a previously created single use
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -712,12 +637,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -729,8 +649,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br />
 	<span class="text-muted small">
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The creation date and time of the SecurePayGate offer</div>
@@ -743,8 +662,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The date after which the offer expires</div>
@@ -757,8 +675,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
-				globally unique identifier
-	</span>
+		        globally unique identifier	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
@@ -771,7 +688,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
-		<a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
+		        <a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -784,8 +701,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
@@ -798,8 +714,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The status of the SecurePayGate offer</div>
@@ -813,8 +728,7 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 							<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The transaction id once a transaction was made</div>
@@ -825,7 +739,6 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -850,13 +763,6 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 <<<---
 
-
-
-
-
-
-
-
 <span class="DELETE request-method">DELETE</span><br>
 This function may be used to delete a single use payment link before it's expiry
 
@@ -868,14 +774,11 @@ This function may be used to delete a single use payment link before it's expiry
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -886,10 +789,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
 
@@ -904,14 +804,11 @@ This method is used to retrieve details of one terminal
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -922,12 +819,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -939,8 +831,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description of the terminal</div>
@@ -952,7 +843,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -965,8 +856,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the terminal</div>
@@ -978,8 +868,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The type of the terminal</div>
@@ -992,7 +881,7 @@ Possible values: ECOM, SPG, MPO.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1003,7 +892,6 @@ Possible values: ECOM, SPG, MPO.<br />
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -1061,11 +949,6 @@ Possible values: ECOM, SPG, MPO.<br />
 
 <<<---
 
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
@@ -1081,14 +964,11 @@ This method is used to retrieve a list of all available payment methods and wall
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -1099,12 +979,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -1116,7 +991,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
-				<span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1129,7 +1004,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				<span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1140,7 +1015,6 @@ No example available
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -1195,11 +1069,6 @@ No example available
 
 <<<---
 
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
 
 <span class="GET request-method">GET</span><br>
@@ -1213,14 +1082,11 @@ This method is used to retrieve all terminals
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
-
 
 --->>>
 
@@ -1231,12 +1097,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -1248,7 +1109,7 @@ No example available
 							<td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
-				<span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1259,7 +1120,6 @@ No example available
 						</tr>
 
 </table>
-
 
 --->>>
 
@@ -1287,10 +1147,3 @@ No example available
 </pre>
 
 <<<---
-
-
-
-
-
-
-

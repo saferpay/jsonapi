@@ -55,8 +55,7 @@ This method may be used to start a transaction which may involve either DCC and 
 							<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationInteractive">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationInteractive">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -69,8 +68,7 @@ This method may be used to start a transaction which may involve either DCC and 
 							<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CardFormInTransactionInitialize">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CardFormInTransactionInitialize">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -83,8 +81,7 @@ This method may be used to start a transaction which may involve either DCC and 
 							<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">This parameter let you define your payment page config (PPConfig) by name. If this parameter is not set, your default PPConfig will be applied if available.<br> When the PPConfig can't be found (e.g. wrong name), the Saferpay basic style will be applied to the payment page.</div>
@@ -98,8 +95,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionNotification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionNotification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -112,8 +108,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Order">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -126,8 +121,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -143,8 +137,7 @@ Id[1..20]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -157,8 +150,7 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -171,13 +163,12 @@ Id[1..20]<br />
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, VISA. Additional values may be accepted but are ignored.<br />
+Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Additional values may be accepted but are ignored.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -186,8 +177,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 							<td class="col-sm-4 text-right">
 	<strong>RedirectNotifyUrls</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RedirectNotifyUrls">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RedirectNotifyUrls">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -203,8 +193,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -220,8 +209,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -234,8 +222,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 							<td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -248,8 +235,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 							<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -265,8 +251,7 @@ Possible values: AMEX, BANCONTACT, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MAS
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
@@ -332,8 +317,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
@@ -346,8 +330,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Indicates if liability shift to issuer is possible or not. Not present if PaymentMeans container was not present in InitializeTransaction request. True, if liability shift to issuer is possible, false if not.</div>
@@ -359,8 +342,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -376,8 +358,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">True if a redirect must be performed to continue, false otherwise</div>
@@ -392,8 +373,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -409,8 +389,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id for referencing later</div>
@@ -477,8 +456,7 @@ This function may be called to authorize a transaction which was started by a ca
 							<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
@@ -492,8 +470,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -509,8 +486,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -526,8 +502,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token returned by Initialize</div>
@@ -576,8 +551,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -590,8 +564,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+		        <a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -604,8 +577,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -618,8 +590,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -632,8 +603,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -649,8 +619,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -663,8 +632,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -680,8 +648,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -697,8 +664,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -806,8 +772,7 @@ This function may be used to directly authorize transactions which do not requir
 							<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationDirect">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationDirect">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -820,8 +785,7 @@ This function may be used to directly authorize transactions which do not requir
 							<td class="col-sm-4 text-right">
 	<strong>Initiator</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Specify if the transaction was initiated by the merchant (default behavior if not specified) or by the payer.<br> This is relevant for most credit and debit cards managed by Mastercard, Visa and American Express card schemes (in card scheme jargon: MERCHANT means MIT, PAYER means CIT).<br> For these schemes, transactions initiated by the payer usually require authentication of the card holder, which is not possible if you use Transaction/AuthorizeDirect (use Transaction/Initialize or PaymentPage/Initialize if you're not sure).<br> Saferpay will flag the transaction accordingly (also taking the optional Exemption in the Authentication container into account) on the protocols which support this and card issuers might approve or decline transactions depending on this flagging.</div>
@@ -835,8 +799,7 @@ Possible values: MERCHANT, PAYER.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Order">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -849,8 +812,7 @@ Possible values: MERCHANT, PAYER.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -866,8 +828,7 @@ Possible values: MERCHANT, PAYER.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPayment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_P2PEnabledPayment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -883,8 +844,7 @@ Possible values: MERCHANT, PAYER.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AuthorizeDirectPaymentMeans">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AuthorizeDirectPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -897,8 +857,7 @@ Possible values: MERCHANT, PAYER.<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -914,8 +873,7 @@ Possible values: MERCHANT, PAYER.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -928,8 +886,7 @@ Possible values: MERCHANT, PAYER.<br />
 							<td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -945,8 +902,7 @@ Possible values: MERCHANT, PAYER.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
@@ -988,6 +944,9 @@ Numeric[8..8]<br />
       "HolderName": "Max Mustermann",
       "VerificationCode": "123"
     }
+  },
+  "Authentication": {
+    "Exemption": "RECURRING"
   }
 }
 </pre>
@@ -1011,8 +970,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+		        <a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1025,8 +983,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1039,8 +996,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1053,8 +1009,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1070,8 +1025,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1084,8 +1038,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1101,8 +1054,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1118,8 +1070,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1210,8 +1161,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 							<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationReferenced">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationReferenced">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1224,8 +1174,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionNotification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionNotification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1241,8 +1190,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_BasicPayment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_BasicPayment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1258,8 +1206,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1272,8 +1219,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 							<td class="col-sm-4 text-right">
 	<strong>SuppressDcc</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to suppress direct currency conversion</div>
@@ -1288,8 +1234,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
@@ -1306,8 +1251,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1340,6 +1284,9 @@ Numeric[8..8]<br />
     "Description": "Test123",
     "PayerNote": "Order123_Testshop"
   },
+  "Authentication": {
+    "Exemption": "RECURRING"
+  },
   "TransactionReference": {
     "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
   }
@@ -1365,8 +1312,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1379,8 +1325,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1396,8 +1341,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1413,8 +1357,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1430,8 +1373,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1528,8 +1470,7 @@ This method may be used to finalize previously authorized transactions and refun
 							<td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1540,24 +1481,9 @@ This method may be used to finalize previously authorized transactions and refun
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Billpay</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_BillpayCapture">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Billpay specific options.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1570,8 +1496,7 @@ This method may be used to finalize previously authorized transactions and refun
 							<td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsSelection">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsSelection">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1584,8 +1509,7 @@ This method may be used to finalize previously authorized transactions and refun
 							<td class="col-sm-4 text-right">
 	<strong>MerchantFundDistributor</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MerchantFundDistributorCapture">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MerchantFundDistributorCapture">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1598,8 +1522,7 @@ This method may be used to finalize previously authorized transactions and refun
 							<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PendingNotification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PendingNotification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1615,8 +1538,7 @@ This method may be used to finalize previously authorized transactions and refun
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1632,8 +1554,7 @@ This method may be used to finalize previously authorized transactions and refun
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1682,8 +1603,7 @@ This method may be used to finalize previously authorized transactions and refun
 							<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">CaptureId of the created capture. Must be stored for later reference (eg refund).</div>
@@ -1700,8 +1620,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
@@ -1712,27 +1631,12 @@ Id[1..64]<br />
 						</tr>
 						<tr>
 							<td class="col-sm-4 text-right">
-	<strong>Invoice</strong><br />
-	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InvoiceInfo">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional infos for invoice based payments.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1748,8 +1652,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
@@ -1824,8 +1727,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1838,8 +1740,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 							<td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MarketplaceCapture">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1852,8 +1753,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 							<td class="col-sm-4 text-right">
 	<strong>MerchantFundDistributor</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_MerchantFundDistributorCapture">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_MerchantFundDistributorCapture">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1869,8 +1769,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Must be unique. It identifies each individual step and is especially important for follow-up actions such as refund.</div>
@@ -1887,8 +1786,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1904,8 +1802,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1921,8 +1818,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">'PARTIAL' if more captures should be possible later on, 'FINAL' if no more captures will be done on this authorization.</div>
@@ -1984,8 +1880,7 @@ Possible values: PARTIAL, FINAL.<br />
 							<td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">CaptureId of the created capture. Must be stored for later reference (eg refund).</div>
@@ -2002,8 +1897,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
@@ -2019,8 +1913,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2036,8 +1929,7 @@ Id[1..64]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
@@ -2106,8 +1998,7 @@ This method is only supported for pending capture transactions (only used for pa
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_CaptureReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_CaptureReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2123,8 +2014,7 @@ This method is only supported for pending capture transactions (only used for pa
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2176,8 +2066,7 @@ This method is only supported for pending capture transactions (only used for pa
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
@@ -2190,8 +2079,7 @@ This method is only supported for pending capture transactions (only used for pa
 							<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
@@ -2208,8 +2096,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2225,8 +2112,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
@@ -2242,8 +2128,7 @@ Possible values: PENDING, CAPTURED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
@@ -2309,8 +2194,7 @@ This method may be used to finalize a transaction having one or more partial cap
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2326,8 +2210,7 @@ This method may be used to finalize a transaction having one or more partial cap
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2379,8 +2262,7 @@ This method may be used to finalize a transaction having one or more partial cap
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2442,8 +2324,7 @@ This method may be called to refund a previous transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_CaptureReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_CaptureReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2456,8 +2337,7 @@ This method may be called to refund a previous transaction.
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_RefundPaymentMethodsOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_RefundPaymentMethodsOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2470,8 +2350,7 @@ This method may be called to refund a previous transaction.
 							<td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PendingNotification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PendingNotification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2487,8 +2366,7 @@ This method may be called to refund a previous transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Refund">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Refund">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2504,8 +2382,7 @@ This method may be called to refund a previous transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2560,8 +2437,7 @@ This method may be called to refund a previous transaction.
 							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2577,8 +2453,7 @@ This method may be called to refund a previous transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2594,8 +2469,7 @@ This method may be called to refund a previous transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2611,8 +2485,7 @@ This method may be called to refund a previous transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RefundTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2707,8 +2580,7 @@ This method may be used to inquire the status and further information of pending
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2724,8 +2596,7 @@ This method may be used to inquire the status and further information of pending
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2777,8 +2648,7 @@ This method may be used to inquire the status and further information of pending
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and time of capture. Not set if the capture state is pending.</div>
@@ -2791,8 +2661,7 @@ This method may be used to inquire the status and further information of pending
 							<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
@@ -2809,8 +2678,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2826,8 +2694,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
@@ -2843,8 +2710,7 @@ Possible values: PENDING, CAPTURED.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
@@ -2912,8 +2778,7 @@ This method may be called to refund an amount to the given means of payment (not
 							<td class="col-sm-4 text-right">
 	<strong>OriginalCreditTransfer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_OriginalCreditTransfer">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_OriginalCreditTransfer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2929,8 +2794,7 @@ This method may be called to refund an amount to the given means of payment (not
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RefundDirectSupportingPaymentMeans">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RefundDirectSupportingPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2946,8 +2810,7 @@ This method may be called to refund an amount to the given means of payment (not
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RefundDirect">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RefundDirect">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2963,8 +2826,7 @@ This method may be called to refund an amount to the given means of payment (not
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2980,8 +2842,7 @@ This method may be called to refund an amount to the given means of payment (not
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay Terminal-Id</div>
@@ -3043,8 +2904,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3060,8 +2920,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3077,8 +2936,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RefundTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RefundTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3168,8 +3026,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3185,8 +3042,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3238,8 +3094,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Date and time of cancel.</div>
@@ -3252,8 +3107,7 @@ This method may be used to cancel previously authorized transactions and refunds
 							<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">OrderId of the referenced transaction. If present.</div>
@@ -3269,8 +3123,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3286,8 +3139,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
@@ -3352,8 +3204,7 @@ This method may be used to cancel previously authorized transactions and refunds
 							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Notification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Notification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3366,8 +3217,7 @@ This method may be used to cancel previously authorized transactions and refunds
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3383,8 +3233,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3400,8 +3249,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3417,8 +3265,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3434,8 +3281,7 @@ This method may be used to cancel previously authorized transactions and refunds
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
@@ -3449,8 +3295,7 @@ Possible values: POSTCARD, POSTFINANCE.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3466,8 +3311,7 @@ Possible values: POSTCARD, POSTFINANCE.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
@@ -3528,8 +3372,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
@@ -3542,8 +3385,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Url to redirect the browser to for payment processing</div>
@@ -3559,8 +3401,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3576,8 +3417,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id for referencing later</div>
@@ -3645,8 +3485,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3662,8 +3501,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
@@ -3711,8 +3549,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3728,8 +3565,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3745,8 +3581,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3762,8 +3597,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3858,8 +3692,7 @@ This method can be used to get the details of a transaction that has been author
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3875,8 +3708,7 @@ This method can be used to get the details of a transaction that has been author
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_TransactionReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3925,8 +3757,7 @@ This method can be used to get the details of a transaction that has been author
 							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3939,8 +3770,7 @@ This method can be used to get the details of a transaction that has been author
 							<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+		        <a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3953,8 +3783,7 @@ This method can be used to get the details of a transaction that has been author
 							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3967,8 +3796,7 @@ This method can be used to get the details of a transaction that has been author
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3984,8 +3812,7 @@ This method can be used to get the details of a transaction that has been author
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_P2PEnabledPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4001,8 +3828,7 @@ This method can be used to get the details of a transaction that has been author
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4018,8 +3844,7 @@ This method can be used to get the details of a transaction that has been author
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Transaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Transaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4118,8 +3943,7 @@ for the payments that before authorization some additional steps such as authent
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AlternativePaymentNotification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AlternativePaymentNotification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4132,8 +3956,7 @@ for the payments that before authorization some additional steps such as authent
 							<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Order">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Order">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4146,8 +3969,7 @@ for the payments that before authorization some additional steps such as authent
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Common_Models_Data_Payer">object</a>
+		        <a class="type-details in" href="#Common_Models_Data_Payer">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4163,8 +3985,7 @@ for the payments that before authorization some additional steps such as authent
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Payment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4180,8 +4001,7 @@ for the payments that before authorization some additional steps such as authent
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
@@ -4195,8 +4015,7 @@ Possible values: BANCONTACT.<br />
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethodOptions</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_AlternativePayment_PaymentMethodOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_AlternativePayment_PaymentMethodOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4212,8 +4031,7 @@ Possible values: BANCONTACT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4226,8 +4044,7 @@ Possible values: BANCONTACT.<br />
 							<td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4243,8 +4060,7 @@ Possible values: BANCONTACT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay terminal to use for this authorization</div>
@@ -4302,8 +4118,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC. After this time, the token won’t be accepted for any further action.</div>
@@ -4316,8 +4131,7 @@ Numeric[8..8]<br />
 							<td class="col-sm-4 text-right">
 	<strong>ProcessingData</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AlternativePaymentProcessingData">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AlternativePaymentProcessingData">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4333,8 +4147,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4350,8 +4163,7 @@ Numeric[8..8]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id for referencing later</div>
@@ -4421,8 +4233,7 @@ Call this method to get information about a previously initialized alternative p
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4438,8 +4249,7 @@ Call this method to get information about a previously initialized alternative p
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
@@ -4487,8 +4297,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
+		        <a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4501,8 +4310,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4515,8 +4323,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4532,8 +4339,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4549,8 +4355,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -4566,8 +4371,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

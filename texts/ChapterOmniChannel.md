@@ -31,8 +31,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -48,8 +47,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -65,8 +63,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
@@ -119,8 +116,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -136,8 +132,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -153,8 +148,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -231,8 +225,7 @@ This request allows to acquire an OmniChannel transaction.
 							<td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Unambiguous order identifier defined by the merchant/ shop. This identifier might be used as reference later on.</div>
@@ -249,8 +242,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -266,8 +258,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">SIX Transaction Reference</div>
@@ -283,8 +274,7 @@ Id[1..80]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Saferpay terminal id</div>
@@ -334,8 +324,7 @@ This response returns an acquired OmniChannel transaction.
 							<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -351,8 +340,7 @@ This response returns an acquired OmniChannel transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -368,8 +356,7 @@ This response returns an acquired OmniChannel transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -385,8 +372,7 @@ This response returns an acquired OmniChannel transaction.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_PaymentTransaction">object</a>
 	</span>
 </td>
 <td class="col-sm-8">

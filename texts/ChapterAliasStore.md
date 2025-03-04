@@ -32,8 +32,7 @@ This function may be used to insert an alias without knowledge about the card de
 							<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -46,8 +45,7 @@ This function may be used to insert an alias without knowledge about the card de
 							<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -60,8 +58,7 @@ This function may be used to insert an alias without knowledge about the card de
 							<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Language used for displaying forms. Format: ISO 639-1 (two-letter language code), optionally followed by a hyphen and ISO 3166-1 alpha-2 (two-letter country code).<br> The supported language codes are listed below. This list may be extended in the future as more languages become available.<br> We recommend to only use supported language and country codes. If the submitted value has a valid format, but the language is unsupported, then the default language is used.<br> For supported languages, using different country codes than those explicitly listed here may or may not work as expected.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-CH - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
@@ -74,8 +71,7 @@ This function may be used to insert an alias without knowledge about the card de
 							<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasNotification">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasNotification">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -89,8 +85,7 @@ This function may be used to insert an alias without knowledge about the card de
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_InsertAliasSupportingPaymentMeans">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_InsertAliasSupportingPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -103,13 +98,12 @@ This function may be used to insert an alias without knowledge about the card de
 							<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
-				array of strings
-	</span>
+		        array of strings	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer</div>
 	<i class="small text-muted">
-Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYONE, VISA. Additional values may be accepted but are ignored.<br />
+Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Additional values may be accepted but are ignored.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -121,8 +115,7 @@ Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYO
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -138,8 +131,7 @@ Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYO
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -155,8 +147,7 @@ Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYO
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_ReturnUrl">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -169,8 +160,7 @@ Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYO
 							<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -186,8 +176,7 @@ Possible values: AMEX, BONUS, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, MYO
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
@@ -244,8 +233,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				date
-	</span>
+		        date	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
@@ -258,8 +246,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 							<td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -272,8 +259,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 							<td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
-				boolean
-	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">True if a redirect must be performed to continue, false otherwise</div>
@@ -288,8 +274,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -305,8 +290,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Id for referencing later</div>
@@ -380,8 +364,7 @@ This function can be called up to 24 hours after the transaction was initialized
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -397,8 +380,7 @@ This function can be called up to 24 hours after the transaction was initialized
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Token returned by initial call.</div>
@@ -449,8 +431,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -463,8 +444,7 @@ Id[1..50]<br />
 							<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -480,8 +460,7 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -497,12 +476,24 @@ Id[1..50]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -579,8 +570,7 @@ This method may be used to insert an alias directly with card-data collected by 
 							<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasDirectInsertCheck">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasDirectInsertCheck">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -593,8 +583,7 @@ This method may be used to insert an alias directly with card-data collected by 
 							<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -610,8 +599,7 @@ This method may be used to insert an alias directly with card-data collected by 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertDirectPaymentMeans">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertDirectPaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -627,8 +615,7 @@ This method may be used to insert an alias directly with card-data collected by 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -644,8 +631,7 @@ This method may be used to insert an alias directly with card-data collected by 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -706,8 +692,7 @@ This method may be used to insert an alias directly with card-data collected by 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -720,8 +705,7 @@ This method may be used to insert an alias directly with card-data collected by 
 							<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -737,8 +721,7 @@ This method may be used to insert an alias directly with card-data collected by 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -754,12 +737,24 @@ This method may be used to insert an alias directly with card-data collected by 
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -835,8 +830,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -852,8 +846,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_UpdateAlias">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_UpdateAlias">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -869,8 +862,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_UpdatePaymentMeans">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -929,8 +921,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -946,8 +937,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -963,12 +953,24 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -1044,8 +1046,7 @@ This method may be used to delete previously inserted aliases.
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Alias you want to delete. This value is case-insensitive.</div>
@@ -1062,8 +1063,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1113,8 +1113,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1176,8 +1175,7 @@ This method can be used to get the latest details of an alias
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				string
-	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The alias for which you want to receive details.</div>
@@ -1194,8 +1192,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_RequestHeader">object</a>
+		        <a class="type-details in" href="#Common_RequestHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1245,8 +1242,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1259,8 +1255,7 @@ Id[1..40]<br />
 							<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1276,8 +1271,7 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_AliasPaymentMeansInfo">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -1293,12 +1287,24 @@ Id[1..40]<br />
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-				
-				<a class="type-details in" href="#Common_ResponseHeader">object</a>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Tokenization</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
 			</i>
 </td>
