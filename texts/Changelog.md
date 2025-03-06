@@ -71,14 +71,8 @@
     -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
     -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 -   added `PayerNote` to the following requests:
-    -   [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-    -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
-    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-    -   [Transaction/AuthoroizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
     -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
     -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-    -   [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
-    -   [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
 
 ## <a name="v1.44.0.0.20250121"></a> Version 1.44 (released 2025-01-21)
 
