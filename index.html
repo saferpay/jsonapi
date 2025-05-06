@@ -8629,8 +8629,8 @@ Range: inclusive between 0 and 9<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45<br>
-				    <span>Example: <code>1.45</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46<br>
+				    <span>Example: <code>1.46</code></span>
 	</i>
 </td>
 							</tr>
@@ -8668,8 +8668,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45<br>
-				    <span>Example: <code>1.45</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46<br>
+				    <span>Example: <code>1.46</code></span>
 	</i>
 </td>
 							</tr>
@@ -10163,6 +10163,167 @@ Iso885915[1..100]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The unique Mandate reference, required for german direct debit payments.</div>
 	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_ExternalThreeDsData&quot;</h2>
+				<table class="table" id="Payment_Models_Data_ExternalThreeDsData">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AcsTransId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Access Control Server (ACS) Transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationMode</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mode of the 3DS authentication process.</div>
+	<i class="small text-muted">
+Possible values: CHALLENGE, FRICTIONLESS.<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationTime</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date and time of the authentication process in ISO 8601 format.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..2147483647]<br>
+				    <span>Example: <code>2025-04-06T10:30:00.123+01:00: Represents April 6, 2025, at 10:30:00.123 in a time zone that is 1 hour ahead of UTC</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationValue</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication VAlue may be used to provide proof of authentication.</div>
+	<i class="small text-muted">
+Base64 encoded string<br>
+String length: inclusive between 28 and 28<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DsTransId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Directory Server (DS) Transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Eci</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Electronic Commerce Indicator<br> Payment System-specific value provided by the ACS or the DS to indicate the results of the attempt to authenticate the Cardholder.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..2]<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Scheme</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Scheme of the payment method used for the transaction.</div>
+	<i class="small text-muted">
+Possible values: MASTERCARD, VISA, JCB, DINNERS, UNIONPAY, AMEX.<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDsFullVersion</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ThreeDS protocol version number used for the transaction.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2.2.0</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDSServerTransId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">3DS Server Transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransStatus</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The final status of the 3DS authentication process. This indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
+	<i class="small text-muted">
+Possible values: Y, A, U, I.<br>
 			</i>
 </td>
 							</tr>
@@ -13156,6 +13317,19 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br>
 							</tr>
 							<tr>
 								<td class="col-sm-4 text-right">
+	<strong>ExternalThreeDS</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_ExternalThreeDsData">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">If you want to use an external 3DS solution, you can provide the authentication data here.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
@@ -14483,6 +14657,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.46.0.0.20250506">Version 1.46</a></li>
 <li><a href="#v1.45.0.0.20250318">Version 1.45</a></li>
 <li><a href="#v1.44.0.0.20250121">Version 1.44</a></li>
 <li><a href="#v1.43.0.0.20241112">Version 1.43</a></li>
@@ -14525,12 +14700,17 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.46.0.0.20250506"><h2><a name="v1.46.0.0.20250506"></a> Version 1.46 (released 2025-05-20)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2025-03-04</li>
+<li>introduced version 1.46</li>
+<li>added value <code>1.46</code> for <em>SpecVersion</em></li>
+<li>added new subcontainer <em>ExternalThreeDS</em> to container <em>Authentication</em>. This affects the following requests:</li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
 </ul></div></div></section><section id="v1.45.0.0.20250318"><h2><a name="v1.45.0.0.20250318"></a> Version 1.45 (released 2025-03-18)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2025-03-04</li>
 <li>introduced version 1.45</li>
 <li>added value <code>1.45</code> for <em>SpecVersion</em></li>
-<li>added <code>Tokenization</code> to the following responses:
-<ul>
+<li>added <code>Tokenization</code> to the following responses:</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
 <li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
@@ -14538,14 +14718,11 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a></li>
 <li><a href="index.html#Payment_v1_Alias_Update">Alias/Update</a></li>
 <li><a href="index.html#Payment_v1_Alias_Inquire">Alias/Inquire</a></li>
-</ul>
-</li>
 <li>added <code>REKA</code> as valid value for the field <code>PaymentMethods</code></li>
 <li>removed <code>BONUS</code> and <code>MYONE</code> as valid values for the field <code>PaymentMethods</code></li>
 <li>removed <code>Billpay</code> from the request in <a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a></li>
 <li>removed <code>A2A</code> from the request in <a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
-<li>removed <code>Invoice</code> from the following responses
-<ul>
+<li>removed <code>Invoice</code> from the following responses</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
 <li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
@@ -14553,35 +14730,24 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
 <li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
 <li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
-</ul>
-</li>
-<li>added <code>PayerNote</code> to the following requests:
-<ul>
+<li>added <code>PayerNote</code> to the following requests:</li>
 <li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
 <li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
-</ul>
-</li>
 </ul></div></div></section><section id="v1.44.0.0.20250121"><h2><a name="v1.44.0.0.20250121"></a> Version 1.44 (released 2025-01-21)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2025-01-07</li>
 <li>introduced version 1.44</li>
 <li>added value <code>1.44</code> for <em>SpecVersion</em></li>
-<li>improved documentation of some API response fields related to payment methods to clarify that new, currently undocumented values might be returned in the future by Saferpay as support for new payment methods is implemented. The following API responses are affected:
-<ul>
+<li>improved documentation of some API response fields related to payment methods to clarify that new, currently undocumented values might be returned in the future by Saferpay as support for new payment methods is implemented. The following API responses are affected:</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
-</ul>
-</li>
 <li>added new function to <a href="index.html#ChapterManagementApi">Saferpay Management API</a> for deleting Fields AccessTokens</li>
 <li>added new function <a href="index.html#Payment_v1_Alias_Inquire">Alias/Inquire</a></li>
-<li>added masked token PAN and expiry date to <code>Card</code> container to the following responses:
-<ul>
+<li>added masked token PAN and expiry date to <code>Card</code> container to the following responses:</li>
 <li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
 <li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
 <li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
-</ul>
-</li>
 <li>removed subcontainer <code>Ideal</code> from container <code>PaymentMethodsOptions</code> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
 </ul></div></div></section><section id="v1.43.0.0.20241112"><h2><a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-10-29</li>
@@ -14589,18 +14755,12 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>added value <code>1.43</code> for <em>SpecVersion</em></li>
 <li>added <code>DCC</code> Information to the response of <a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
 <li>added <code>BLIK</code> as valid value for the field <code>PaymentMethods</code></li>
-<li>added new <code>MerchantFundDistributor</code> container with <code>ForeignRetailer</code> subcontainer. This affects the following requests:
-<ul>
+<li>added new <code>MerchantFundDistributor</code> container with <code>ForeignRetailer</code> subcontainer. This affects the following requests:</li>
 <li><a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a></li>
 <li><a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a></li>
-</ul>
-</li>
 <li>added <code>CLICKTOPAY</code> as valid value to <code>Wallet</code> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> requests to enable the preselection of Click to Pay</li>
-<li>added <code>CLICKTOPAY</code> as valid value to <code>Wallet</code> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> responses
-<ul>
+<li>added <code>CLICKTOPAY</code> as valid value to <code>Wallet</code> in <a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> responses</li>
 <li>only provided in responses starting from API version v1.43, in older API versions this information is not provided in the response</li>
-</ul>
-</li>
 </ul></div></div></section><section id="v1.42.0.0.20240917"><h2><a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-09-03</li>
 <li>introduced version 1.42</li>
@@ -14611,12 +14771,9 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>introduced version 1.41</li>
 <li>added value <code>1.41</code> for <em>SpecVersion</em></li>
 <li>added additional info about the used ISO-standard and applied restrictions to field <code>LanguageCode</code> of the <em>Payer</em> container and <a href="index.html#Payment_v1_Alias_Insert">SecureCardData/AliasInsert</a> requests</li>
-<li>added new subcontainer <em>ForeignRetailer</em> to container <em>Marketplace</em>. This affects the following requests:
-<ul>
+<li>added new subcontainer <em>ForeignRetailer</em> to container <em>Marketplace</em>. This affects the following requests:</li>
 <li><a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a></li>
 <li><a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a></li>
-</ul>
-</li>
 </ul></div></div></section><section id="v1.40.0.0.20240521"><h2><a name="v1.40.0.0.20240521"></a> Version 1.40 (released 2024-05-21)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-05-07</li>
 <li>introduced version 1.40</li>
@@ -14637,15 +14794,12 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a> can now be called up to 120 hours for pending transactions (instead of 96 hours before)</li>
 <li>removed <code>Transaction/QueryPaymentMeans</code> and <code>Transaction/AdjustAmount</code> methods from Saferpay Payment API</li>
 <li>added <code>MandatoryFields</code> field to <em>BillingAddressForm</em> container in <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
-<li>option <code>MANUAL_REVIEW</code> in field <code>Result</code> of <em>FraudPrevention</em> container is now called <code>CHALLENGED</code>. This affects following requests:
-<ul>
+<li>option <code>MANUAL_REVIEW</code> in field <code>Result</code> of <em>FraudPrevention</em> container is now called <code>CHALLENGED</code>. This affects following requests:</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
 <li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
 <li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
-</ul>
-</li>
 </ul></div></div></section><section id="v1.38.0.0.20240123"><h2><a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2024-01-04</li>
 <li>introduced version 1.38</li>
@@ -14662,8 +14816,7 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>introduced version 1.37</li>
 <li>added value <code>1.37</code> for <em>SpecVersion</em></li>
 <li>added <code>POSTFINANCEPAY</code> as valid value for field <code>PaymentMethods</code> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a> requests</li>
-<li>extended selection of possible characters for <code>PayerId</code>, affecting the following requests and responses:
-<ul>
+<li>extended selection of possible characters for <code>PayerId</code>, affecting the following requests and responses:</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
@@ -14676,22 +14829,16 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
 <li><a href="index.html#Payment_v1_Transaction_AlternativePayment">Transaction/AlternativePayment</a></li>
 <li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
-</ul>
-</li>
-<li>added <code>TokenType</code> field to <code>SchemeToken</code>, affecting the following requests and responses:
-<ul>
+<li>added <code>TokenType</code> field to <code>SchemeToken</code>, affecting the following requests and responses:</li>
 <li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
 <li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
-</ul>
-</li>
 </ul></div></div></section><section id="v1.36.0.0.20230912"><h2><a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2023-08-29</li>
 <li>introduced version 1.36</li>
 <li>added value <code>1.36</code> for <em>SpecVersion</em></li>
 <li>removed <code>CheckResult</code> from <a href="index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a> response</li>
 <li>removed <code>UNIONPAY</code> as valid value from field <code>PaymentMethods</code> in <a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a> requests</li>
-<li>removed <code>LegalForm</code> from the <code>BillingAddress</code>, <code>DeliveryAddress</code> and <code>Recipient</code> container, affecting the following requests and responses:
-<ul>
+<li>removed <code>LegalForm</code> from the <code>BillingAddress</code>, <code>DeliveryAddress</code> and <code>Recipient</code> container, affecting the following requests and responses:</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Initialize">Transaction/Initialize</a></li>
@@ -14707,14 +14854,9 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
 <li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
 <li><a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
-</ul>
-</li>
-<li>renamed the following values of the <code>Condition</code> field
-<ul>
+<li>renamed the following values of the <code>Condition</code> field</li>
 <li><code>WITH_LIABILITY_SHIFT</code> is now <code>THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED</code></li>
 <li><code>IF_ALLOWED_BY_SCHEME</code> is now <code>NONE</code></li>
-</ul>
-</li>
 <li>added <code>Condition</code> field to <a href="index.html#rest_customers_%5BcustomerId%5D_terminals_%5BterminalId%5D_spg-offers">SecurePayGate Create SingleUsePaymentLink</a> requests</li>
 </ul></div></div></section><section id="v1.35.0.0.20230718"><h2><a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2023-07-04</li>
@@ -14750,8 +14892,7 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>the error behavior <code>ABORT</code> was renamed to <code>DO_NOT_RETRY</code></li>
 <li>the new error message <code>UPDATE_CARD_INFORMATION</code> was added</li>
 <li><code>DeviceFingerprint</code> was removed from all versions</li>
-<li>the <code>Twint</code> object was removed from the response of:
-<ul>
+<li>the <code>Twint</code> object was removed from the response of:</li>
 <li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
 <li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
 <li><a href="index.html#Payment_v1_Transaction_QueryPaymentMeans">Transaction/QueryPaymentMeans</a></li>
@@ -14763,8 +14904,6 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
 <li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
 <li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
-</ul>
-</li>
 </ul></div></div></section><section id="v1.32.0.0.20230117"><h2><a name="v1.32.0.0.20230117"></a> Version 1.32 (released 2023-01-17)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2022-12-29</li>
 <li>introduced version 1.32</li>
@@ -14991,15 +15130,12 @@ Possible values: ECOM, SPG, MPO.<br>
 <li>added <em>ContentSecurityEnabled</em> to <em>Styling</em> container to control Content Security Policy</li>
 <li>corrected type documentation for <em>CountrySubdivisionCode</em> to &quot;<em>AlphaNumeric</em>&quot; in the address containers</li>
 </ul></div></div></section><section id="v1.4.0.20161015"><h2><a name="v1.4.0.20161015"></a> Version 1.4 (released 2016-10-15)</h2><div class="row"><div class="col-md-6"><ul>
-<li>new version 1.4
-<ul>
+<li>new version 1.4</li>
 <li>added value <code>1.4</code> for <em>SpecVersion</em></li>
 <li>added option <em>SuppressDcc</em> for <a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
 <li>added values <code>BANCONTACT</code> and <code>PAYDIREKT</code> for <em>Brand.PaymentMethod</em> and <em>PaymentMethods</em> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
 <li>added validation for element <em>Payment.MandateId</em></li>
 <li>added option <em>ConfigSet</em> for <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
-</ul>
-</li>
 <li>added a note that partial captures are currently only supported for PayPal</li>
 <li>added a note that values for AliasID are case-insensitive</li>
 <li>corrected example for <a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
