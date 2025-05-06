@@ -1301,8 +1301,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45<br />
-				    <span>Example: <code>1.45</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46<br />
+				    <span>Example: <code>1.46</code></span>
 	</i>
 </td>
 							</tr>
@@ -1340,8 +1340,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45<br />
-				    <span>Example: <code>1.45</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46<br />
+				    <span>Example: <code>1.46</code></span>
 	</i>
 </td>
 							</tr>
@@ -2835,6 +2835,167 @@ Iso885915[1..100]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The unique Mandate reference, required for german direct debit payments.</div>
 	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_ExternalThreeDsData"</h2>
+				<table class="table" id="Payment_Models_Data_ExternalThreeDsData">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AcsTransId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Access Control Server (ACS) Transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationMode</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mode of the 3DS authentication process.</div>
+	<i class="small text-muted">
+Possible values: CHALLENGE, FRICTIONLESS.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationTime</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Date and time of the authentication process in ISO 8601 format.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..2147483647]<br />
+				    <span>Example: <code>2025-04-06T10:30:00.123+01:00: Represents April 6, 2025, at 10:30:00.123 in a time zone that is 1 hour ahead of UTC</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthenticationValue</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment System-specific value provided by the ACS or the DS using an algorithm defined by Payment System. Authentication VAlue may be used to provide proof of authentication.</div>
+	<i class="small text-muted">
+Base64 encoded string<br />
+String length: inclusive between 28 and 28<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>DsTransId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Directory Server (DS) Transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Eci</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Electronic Commerce Indicator<br> Payment System-specific value provided by the ACS or the DS to indicate the results of the attempt to authenticate the Cardholder.</div>
+	<i class="small text-muted">
+AlphaNumeric[1..2]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Scheme</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Scheme of the payment method used for the transaction.</div>
+	<i class="small text-muted">
+Possible values: MASTERCARD, VISA, JCB, DINNERS, UNIONPAY, AMEX.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDsFullVersion</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ThreeDS protocol version number used for the transaction.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2.2.0</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ThreeDSServerTransId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">3DS Server Transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransStatus</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The final status of the 3DS authentication process. This indicates whether a transaction qualifies as an authenticated transaction or account verification.</div>
+	<i class="small text-muted">
+Possible values: Y, A, U, I.<br />
 			</i>
 </td>
 							</tr>
@@ -5823,6 +5984,19 @@ Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER, MDES, VTS.<
 	<div style="padding-bottom: 10px">Type of Exemption</div>
 	<i class="small text-muted">
 Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExternalThreeDS</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_ExternalThreeDsData">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">If you want to use an external 3DS solution, you can provide the authentication data here.</div>
+	<i class="small text-muted">
 			</i>
 </td>
 							</tr>
