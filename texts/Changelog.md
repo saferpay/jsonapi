@@ -48,10 +48,10 @@
 
 ## <a name="v1.46.0.0.20250506"></a> Version 1.46 (released 2025-05-20)
 
--   available on Sandbox: 2025-03-04
+-   available on Sandbox: 2025-05-06
 -   introduced version 1.46
 -   added value `1.46` for _SpecVersion_
--   added new subcontainer _ExternalThreeDS_ to container _Authentication_. This affects the following requests:
+-   added new subcontainer `ExternalThreeDS` to container `Authentication`. This affects the following requests:
   -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
 
 ## <a name="v1.45.0.0.20250318"></a> Version 1.45 (released 2025-03-18)
