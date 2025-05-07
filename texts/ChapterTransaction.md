@@ -776,7 +776,7 @@ This function may be used to directly authorize transactions which do not requir
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Strong Customer Authentication exemption for this transaction.<br> Some exemptions are only applicable to payer-initiated transactions and will be ignored otherwise. If you are performing a payer-initiated transaction, make sure you set the 'Initiator' attribute properly (see below).</div>
+	<div style="padding-bottom: 10px">Authentication information for this transaction.</div>
 	<i class="small text-muted">
 			</i>
 </td>

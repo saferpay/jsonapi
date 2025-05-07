@@ -5981,7 +5981,7 @@ Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER, MDES, VTS.<
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Type of Exemption</div>
+	<div style="padding-bottom: 10px">Strong Customer Authentication exemption for this transaction.<br> Some exemptions are only applicable to payer-initiated transactions and will be ignored otherwise. If you are performing a payer-initiated transaction, make sure you set the 'Initiator' attribute properly (see below).</div>
 	<i class="small text-muted">
 Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br />
 			</i>
