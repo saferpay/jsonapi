@@ -52,7 +52,7 @@
 -   introduced version 1.46
 -   added value `1.46` for _SpecVersion_
 -   added new subcontainer `ExternalThreeDS` to container `Authentication`. This affects the following requests:
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
 
 ## <a name="v1.45.0.0.20250318"></a> Version 1.45 (released 2025-03-18)
 
@@ -60,28 +60,28 @@
 -   introduced version 1.45
 -   added value `1.45` for _SpecVersion_
 -   added `Tokenization` to the following responses:
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  -   [Alias/Insert](index.html#Payment_v1_Alias_Insert)
-  -   [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
-  -   [Alias/Update](index.html#Payment_v1_Alias_Update)
-  -   [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Alias/Insert](index.html#Payment_v1_Alias_Insert)
+    -   [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+    -   [Alias/Update](index.html#Payment_v1_Alias_Update)
+    -   [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
 -   added `REKA` as valid value for the field `PaymentMethods`
 -   removed `BONUS` and `MYONE` as valid values for the field `PaymentMethods`
 -   removed `Billpay` from the request in [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
 -   removed `A2A` from the request in [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
 -   removed `Invoice` from the following responses
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
-  -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-  -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_AssertRedirectPayment)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
-  -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
-  -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 -   added `PayerNote` to the following requests:
-  -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
-  -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
 
 ## <a name="v1.44.0.0.20250121"></a> Version 1.44 (released 2025-01-21)
 
@@ -89,16 +89,16 @@
 -   introduced version 1.44
 -   added value `1.44` for _SpecVersion_
 -   improved documentation of some API response fields related to payment methods to clarify that new, currently undocumented values might be returned in the future by Saferpay as support for new payment methods is implemented. The following API responses are affected:
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
 -   added new function to [Saferpay Management API](index.html#ChapterManagementApi) for deleting Fields AccessTokens
 -   added new function [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
 -   added masked token PAN and expiry date to `Card` container to the following responses:
-  -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-  -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
 -   removed subcontainer `Ideal` from container `PaymentMethodsOptions` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 
 ## <a name="v1.43.0.0.20241112"></a> Version 1.43 (released 2024-11-12)
@@ -109,11 +109,11 @@
 -   added `DCC` Information to the response of [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 -   added `BLIK` as valid value for the field `PaymentMethods`
 -   added new `MerchantFundDistributor` container with `ForeignRetailer` subcontainer. This affects the following requests:
-  -   [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
-  -   [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
+    -   [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
+    -   [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
 -   added `CLICKTOPAY` as valid value to `Wallet` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests to enable the preselection of Click to Pay
 -   added `CLICKTOPAY` as valid value to `Wallet` in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) responses
-  -   only provided in responses starting from API version v1.43, in older API versions this information is not provided in the response
+    -   only provided in responses starting from API version v1.43, in older API versions this information is not provided in the response
 
 ## <a name="v1.42.0.0.20240917"></a> Version 1.42 (released 2024-09-17)
 
@@ -129,8 +129,8 @@
 -   added value `1.41` for _SpecVersion_
 -   added additional info about the used ISO-standard and applied restrictions to field `LanguageCode` of the _Payer_ container and [SecureCardData/AliasInsert](index.html#Payment_v1_Alias_Insert) requests
 -   added new subcontainer _ForeignRetailer_ to container _Marketplace_. This affects the following requests:
-  -   [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
-  -   [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
+    -   [Transaction/Capture](index.html#Payment_v1_Transaction_Capture)
+    -   [Transaction/MultipartCapture](index.html#Payment_v1_Transaction_MultipartCapture)
 
 ## <a name="v1.40.0.0.20240521"></a> Version 1.40 (released 2024-05-21)
 
@@ -156,11 +156,11 @@
 -   removed `Transaction/QueryPaymentMeans` and `Transaction/AdjustAmount` methods from Saferpay Payment API
 -   added `MandatoryFields` field to _BillingAddressForm_ container in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
 -   option `MANUAL_REVIEW` in field `Result` of _FraudPrevention_ container is now called `CHALLENGED`. This affects following requests:
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
-  -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
 
 ## <a name="v1.38.0.0.20240123"></a> Version 1.38 (released 2024-01-23)
 
@@ -182,21 +182,21 @@
 -   added value `1.37` for _SpecVersion_
 -   added `POSTFINANCEPAY` as valid value for field `PaymentMethods` in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
 -   extended selection of possible characters for `PayerId`, affecting the following requests and responses:
-  -   [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
-  -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
-  -   [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  -   [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
-  -   [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
-  -   [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
-  -   [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
-  -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    -   [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
+    -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+    -   [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    -   [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
+    -   [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
+    -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
 -   added `TokenType` field to `SchemeToken`, affecting the following requests and responses:
-  -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
 
 ## <a name="v1.36.0.0.20230912"></a> Version 1.36 (released 2023-09-12)
 
@@ -206,24 +206,24 @@
 -   removed `CheckResult` from [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias) response
 -   removed `UNIONPAY` as valid value from field `PaymentMethods` in [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
 -   removed `LegalForm` from the `BillingAddress`, `DeliveryAddress` and `Recipient` container, affecting the following requests and responses:
-  -   [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
-  -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
-  -   [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  -   [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
-  -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-  -   [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
-  -   [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
-  -   [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
-  -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
-  -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
-  -   [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+    -   [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
+    -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+    -   [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    -   [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
+    -   [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
+    -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+    -   [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
 -   renamed the following values of the `Condition` field
-  -   `WITH_LIABILITY_SHIFT` is now `THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED`
-  -   `IF_ALLOWED_BY_SCHEME` is now `NONE`
+    -   `WITH_LIABILITY_SHIFT` is now `THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED`
+    -   `IF_ALLOWED_BY_SCHEME` is now `NONE`
 -   added `Condition` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests
 
 ## <a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)
@@ -266,17 +266,17 @@
 -   the new error message `UPDATE_CARD_INFORMATION` was added
 -   `DeviceFingerprint` was removed from all versions
 -   the `Twint` object was removed from the response of:
-  -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-  -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
-  -   [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
-  -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-  -   [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
-  -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
-  -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-  -   [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
-  -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
-  -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
-  -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+    -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
+    -   [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans)
+    -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    -   [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    -   [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    -   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    -   [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+    -   [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 
 ## <a name="v1.32.0.0.20230117"></a> Version 1.32 (released 2023-01-17)
 
@@ -562,11 +562,11 @@
 ## <a name="v1.4.0.20161015"></a> Version 1.4 (released 2016-10-15)
 
 -   new version 1.4
-  -   added value `1.4` for _SpecVersion_
-  -   added option _SuppressDcc_ for [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
-  -   added values `BANCONTACT` and `PAYDIREKT` for _Brand.PaymentMethod_ and _PaymentMethods_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
-  -   added validation for element _Payment.MandateId_
-  -   added option _ConfigSet_ for [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+    -   added value `1.4` for _SpecVersion_
+    -   added option _SuppressDcc_ for [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    -   added values `BANCONTACT` and `PAYDIREKT` for _Brand.PaymentMethod_ and _PaymentMethods_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+    -   added validation for element _Payment.MandateId_
+    -   added option _ConfigSet_ for [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 -   added a note that partial captures are currently only supported for PayPal
 -   added a note that values for AliasID are case-insensitive
 -   corrected example for [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
