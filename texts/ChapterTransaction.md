@@ -959,9 +959,6 @@ Numeric[8..8]<br />
       "HolderName": "Max Mustermann",
       "VerificationCode": "123"
     }
-  },
-  "Authentication": {
-    "Exemption": "RECURRING"
   }
 }
 </pre>
@@ -1298,9 +1295,6 @@ Numeric[8..8]<br />
     },
     "Description": "Test123",
     "PayerNote": "Order123_Testshop"
-  },
-  "Authentication": {
-    "Exemption": "RECURRING"
   },
   "TransactionReference": {
     "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
@@ -2963,7 +2957,6 @@ Numeric[8..8]<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
