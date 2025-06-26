@@ -52,6 +52,7 @@ HTTP Headers example:
 
 <<<---
 
+
 ## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
 
 <span class="GET request-method">GET</span><br>
@@ -65,12 +66,15 @@ This method is used to retrieve the current license configuration for a customer
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -80,7 +84,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -123,6 +132,7 @@ No example available
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -146,6 +156,11 @@ No example available
 </pre>
 
 <<<---
+
+
+
+
+
 
 ## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
@@ -162,12 +177,15 @@ This method is used to retrieve the current license configuration for a customer
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -177,7 +195,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -220,6 +243,7 @@ No example available
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -244,6 +268,11 @@ No example available
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
 
 <span class="POST request-method">POST</span><br>
@@ -256,6 +285,10 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 <<<---
 
 #### Request
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -298,6 +331,7 @@ Utf8[1..128]<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -313,7 +347,12 @@ Utf8[1..128]<br />
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -340,6 +379,7 @@ Utf8[1..128]<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -350,6 +390,47 @@ Utf8[1..128]<br />
 </pre>
 
 <<<---
+
+
+
+
+
+
+
+
+<span class="DELETE request-method">DELETE</span><br>
+This method may be used to delete a previously created Saferpay Fields Access Token.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken
 
@@ -364,12 +445,15 @@ This method may be used to delete a previously created Saferpay Fields Access To
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -379,7 +463,10 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
@@ -393,6 +480,10 @@ This function may be used to create a single use payment link
 <<<---
 
 #### Request
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -519,6 +610,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -554,7 +646,12 @@ AlphaNumeric[10..25]<br />
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -597,6 +694,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -608,6 +706,11 @@ AlphaNumeric[10..25]<br />
 </pre>
 
 <<<---
+
+
+
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink
 
@@ -622,12 +725,15 @@ This function may be used to fetch the status of a previously created single use
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -637,7 +743,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -740,6 +851,7 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -763,6 +875,13 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 <<<---
 
+
+
+
+
+
+
+
 <span class="DELETE request-method">DELETE</span><br>
 This function may be used to delete a single use payment link before it's expiry
 
@@ -774,12 +893,15 @@ This function may be used to delete a single use payment link before it's expiry
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -789,7 +911,10 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
 
@@ -804,12 +929,15 @@ This method is used to retrieve details of one terminal
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -819,7 +947,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -893,6 +1026,7 @@ Possible values: ECOM, SPG, MPO.<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -949,6 +1083,11 @@ Possible values: ECOM, SPG, MPO.<br />
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
@@ -964,12 +1103,15 @@ This method is used to retrieve a list of all available payment methods and wall
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -979,7 +1121,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -1016,6 +1163,7 @@ No example available
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1069,6 +1217,11 @@ No example available
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
 
 <span class="GET request-method">GET</span><br>
@@ -1082,12 +1235,15 @@ This method is used to retrieve all terminals
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1097,7 +1253,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -1121,6 +1282,7 @@ No example available
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1147,3 +1309,10 @@ No example available
 </pre>
 
 <<<---
+
+
+
+
+
+
+
