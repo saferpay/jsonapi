@@ -511,21 +511,6 @@ Id[1..50]<br />
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
 	</i>
 </td>
-    					</tr>
-    					<tr>
-<td class="col-sm-4 text-right">
-    <strong>VerificationCode</strong><br />
-    <span class="text-muted small">
-    			string
-    </span>
-</td>
-<td class="col-sm-8">
-    <div style="padding-bottom: 10px">Card verification code if available</div>
-    <i class="small text-muted">
-Numeric[3..4]<br />
-    			    <span>Example: <code>123</code></span>
-    </i>
-</td>
 						</tr>
 
 </table>
@@ -959,6 +944,9 @@ Numeric[8..8]<br />
       "HolderName": "Max Mustermann",
       "VerificationCode": "123"
     }
+  },
+  "Authentication": {
+    "Exemption": "RECURRING"
   }
 }
 </pre>
@@ -1295,6 +1283,9 @@ Numeric[8..8]<br />
     },
     "Description": "Test123",
     "PayerNote": "Order123_Testshop"
+  },
+  "Authentication": {
+    "Exemption": "RECURRING"
   },
   "TransactionReference": {
     "TransactionId": "723n4MAjMdhjSAhAKEUdA8jtl9jb"
@@ -2957,6 +2948,7 @@ Numeric[8..8]<br />
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
