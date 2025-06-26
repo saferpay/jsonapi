@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+-   [Version 1.4](#v1.47.0.0.20250708)
 -   [Version 1.46](#v1.46.0.0.20250506)
 -   [Version 1.45](#v1.45.0.0.20250318)
 -   [Version 1.44](#v1.44.0.0.20250121)
@@ -45,6 +46,13 @@
 -   [Version 1.6](#v1.6.0.20170404)
 -   [Version 1.5](#v1.5.0.20170207)
 -   [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.47.0.0.20250708"></a> Version 1.47 (released 2025-07-08)
+
+-   available on Sandbox: 2025-06-24
+-   introduced version 1.47
+-   added value `1.47` for _SpecVersion_
+-   added value `ONLINE_STRONG` to `Type` in the `Check` container and added new container `ExternalThreeDS` in [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
 
 ## <a name="v1.46.0.0.20250506"></a> Version 1.46 (released 2025-05-20)
 
