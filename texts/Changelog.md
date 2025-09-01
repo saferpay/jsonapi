@@ -55,6 +55,9 @@
 -   added value `1.48` for _SpecVersion_
 -   introduced a new function to retrieve a list of transactions:  `/rest/customers/[customerId]/transactions` [TransactionReporting GetTransactions](index.html#rest_customers_[customerId]_transactions)
 -   introduced a new function to provide Dynamic Currency Conversion (DCC) inquiry details for your customer: [Transaction\DccInquiry](index.html#Payment_v1_Transaction_DccInquiry)
+- A mistake in the JSON API documentation has been fixed:
+  - SaferpayFields- and SchemeToken-PaymentMeans are not supported in Transaction RefundDirect.
+  - Alias- and SchemeToken-PaymentMeans are not supported in Alias InsertDirect.
 
 
 ## <a name="v1.47.0.0.20250708"></a> Version 1.47 (released 2025-07-08)
