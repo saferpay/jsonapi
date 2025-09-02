@@ -4439,4 +4439,173 @@ Id[1..50]<br />
 
 
 
+## <a name="Payment_v1_Transaction_DccInquiry"></a>Transaction DccInquiry <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+
+<span class="POST request-method">POST</span><br>
+Call this method to provide Dynamic currency conversion (DCC) inquiry details for your customer
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/DccInquiry</p></div>
+
+<<<---
+
+#### Request
+
+
+DccInquiryRequest
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "RequestHeader": {
+    "SpecVersion": "[current Spec-Version]",
+    "CustomerId": "[your customer id]",
+    "RequestId": "[unique request identifier]",
+    "RetryIndicator": 0
+  },
+  "TerminalId": "[your terminal id]",
+  "CardNumber": "1234123412341234",
+  "Amount": {
+    "Value": "100",
+    "CurrencyCode": "EUR"
+  }
+}
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>DccAvailable</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        boolean	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information if dcc is possible for requested card</div>
+	<i class="small text-muted">
+				    <span>Example: <code>true</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>DccInfo</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_DccInquiryInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>DccToken</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>qiuwerhfi23h4189asdhflk23489</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Expiration</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        date	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration date / time of the generated DCC token in ISO 8601 format in UTC.<br> After this time is exceeded, the DCC proposal cannot be used anymore</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2015-01-30T13:45:22.258+02:00</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+              DccToken":"cb176dda-147f-4295-86a1-f4df6f630411",
+              "DccAvailable":true,
+                "DccInfo":{
+                  "CardHolderAmount":{
+                  "Value":"1941",
+                  "CurrencyCode":"NAD"
+                },
+                "MerchantAmount":{
+                  "Value":"100",
+                  "CurrencyCode":"EUR"
+                },
+                "Markup":"2.5%",
+                "ExchangeRate":"0.051515",
+                "Source":"European Central Bank"
+              },
+              "Expiration":"2025-07-31T15:12:48.000"
+            }
+</pre>
+
+<<<---
+
+
+
+
+
+
 

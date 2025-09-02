@@ -17,7 +17,7 @@ jobs:
           path: _gh_pages
 
       - name: build new version page
-        run: libs/GitHubPagesGenerator.exe -i "${{ github.workspace }}" -s "${{ github.workspace }}/Sitemap.json" -c "${{ github.workspace }}" -o _gh_pages -t "JSON API Spec-Version 1.47"
+        run: libs/GitHubPagesGenerator.exe -i "${{ github.workspace }}" -s "${{ github.workspace }}/Sitemap.json" -c "${{ github.workspace }}" -o _gh_pages -t "JSON API Spec-Version 1.48"
 
       - name: push updated gh pages
         uses: s0/git-publish-subdir-action@develop

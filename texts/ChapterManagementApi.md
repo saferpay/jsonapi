@@ -1315,4 +1315,328 @@ No example available
 
 
 
+## <a name="rest_customers_[customerId]_transactions"></a>TransactionReporting GetTransactions
+
+<span class="GET request-method">GET</span><br>
+This method is used to retrieve a list of transactions based on the provided criteria.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/transactions</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageNumber</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageSize</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>TotalTransactions</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Transactions</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "PageNumber": 0,
+  "PageSize": 100,
+  "TotalTransactions": 1,
+  "Transactions": [
+    {
+      "MerchantAmount": "5.00",
+      "MerchantCurrency": "EUR",
+      "CustomerId": 123456,
+      "TerminalId": 1000001,
+      "TerminalType": "ECOM",
+      "Application": "Saferpay Payment Page",
+      "TransactionId": "j8nCKMAr5bptUApfdp1MbEQpMpSb",
+      "OrderId": "6a9bb0cd6ec841698ae375e981002af5",
+      "Provider": "PayPal",
+      "PaymentMethod": "PayPal",
+      "IpAddress": "10.153.83.132",
+      "Description": "Test Transaction",
+      "AuthorizationDetails": {
+        "AuthorizationDate": "2025-08-14T12:41:30.618",
+        "LastActionDate": "2025-08-14T12:41:30.618",
+        "Type": "PAYMENT",
+        "State": "AUTHORIZED",
+        "CapturedMerchantAmount": "3.00",
+        "HasCVC": false,
+        "HasLiabilityShift": false,
+        "ProcessingAuthCode": "4887bffc-6b5f-4acc-a9d9-1c4e812eaa68",
+        "AuthorizedBy": "API_123456_10592483",
+        "HasCurrencyConversion": false,
+        "PayerCurrency": "EUR",
+        "PayerAmount": "5.00",
+        "IsCaptured": false,
+        "HasPartialCaptures": false,
+        "IsRefunded": false,
+        "IsCancelled": false,
+        "IsOmniChannel": false
+      }
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+
+## <a name="rest_customers_[customerId]_transactionsAsync"></a>TransactionReporting GetTransactionsAsync
+
+<span class="GET request-method">GET</span><br>
+This method is used to retrieve a list of transactions based on the provided criteria.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/transactionsAsync</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageNumber</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageSize</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>TotalTransactions</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Transactions</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "PageNumber": 0,
+  "PageSize": 100,
+  "TotalTransactions": 1,
+  "Transactions": [
+    {
+      "MerchantAmount": "5.00",
+      "MerchantCurrency": "EUR",
+      "CustomerId": 123456,
+      "TerminalId": 1000001,
+      "TerminalType": "ECOM",
+      "Application": "Saferpay Payment Page",
+      "TransactionId": "j8nCKMAr5bptUApfdp1MbEQpMpSb",
+      "OrderId": "6a9bb0cd6ec841698ae375e981002af5",
+      "Provider": "PayPal",
+      "PaymentMethod": "PayPal",
+      "IpAddress": "10.153.83.132",
+      "Description": "Test Transaction",
+      "AuthorizationDetails": {
+        "AuthorizationDate": "2025-08-14T12:41:30.618",
+        "LastActionDate": "2025-08-14T12:41:30.618",
+        "Type": "PAYMENT",
+        "State": "AUTHORIZED",
+        "CapturedMerchantAmount": "3.00",
+        "HasCVC": false,
+        "HasLiabilityShift": false,
+        "ProcessingAuthCode": "4887bffc-6b5f-4acc-a9d9-1c4e812eaa68",
+        "AuthorizedBy": "API_123456_10592483",
+        "HasCurrencyConversion": false,
+        "PayerCurrency": "EUR",
+        "PayerAmount": "5.00",
+        "IsCaptured": false,
+        "HasPartialCaptures": false,
+        "IsRefunded": false,
+        "IsCancelled": false,
+        "IsOmniChannel": false
+      }
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+
 
