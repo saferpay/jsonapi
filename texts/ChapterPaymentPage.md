@@ -192,7 +192,7 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS, GIFTCARD.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -437,13 +437,14 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 ## <a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert
 
 <span class="POST request-method">POST</span><br>
-Call this function to safely check the status of the transaction from your server.
+Call this function to safely check the status of the transaction from your server, either after the payer was redirected back to your shop or your shop system received the server-to-server notification call.
 
 <div class="info">
 <span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
 <div>
 <p><strong>Important:</strong></p>
 <ul>
+<li>Do not poll this function! Wait until the payer is redirected back to the shop or until the notification was called (we strongly recommend using the notification feature).</li>
 <li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
 <li>This function can be called up to 24 hours after the transaction was initialized. For pending transaction the token expiration is increased to 120 hours.</li>
 <li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>

@@ -415,7 +415,7 @@ Alphabetic[2..2]<br />
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> Allows country codes formatted as ISO 3166 or ISO 3166-2.</div>
 	<i class="small text-muted">
 Iso3166[1..6]<br />
-				    <span>Example: <code>ZH / CH-ZH</code></span>
+				    <span>Example: <code>CH-ZH</code></span>
 	</i>
 </td>
 							</tr>
@@ -1301,8 +1301,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47<br />
-				    <span>Example: <code>1.47</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48<br />
+				    <span>Example: <code>1.48</code></span>
 	</i>
 </td>
 							</tr>
@@ -1340,8 +1340,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47<br />
-				    <span>Example: <code>1.47</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48<br />
+				    <span>Example: <code>1.48</code></span>
 	</i>
 </td>
 							</tr>
@@ -1761,19 +1761,6 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Alias</strong><br />
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
@@ -1820,19 +1807,6 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SchemeToken</strong><br />
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -2350,7 +2324,7 @@ Id[1..80]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -2387,7 +2361,7 @@ Utf8[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand. Note that this can change in the future. Please make sure to accept undocumented values as new payment methods are introduced.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS, GIFTCARD.<br />
 			</i>
 </td>
 							</tr>
@@ -2801,6 +2775,89 @@ Iso885915[1..100]<br />
 	<div style="padding-bottom: 10px">Amount in payer’s currency</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "Payment_Models_Data_DccInquiryInfo"</h2>
+				<table class="table" id="Payment_Models_Data_DccInquiryInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Brand</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Brand information</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CardHolderAmount</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount in payer’s currency</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExchangeRate</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The used exchange rate including markup<br> The decimal separator used is '.' regardless of location</div>
+	<i class="small text-muted">
+				    <span>Example: <code>1.2345</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Markup</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">DCC markup fee</div>
+	<i class="small text-muted">
+				    <span>Example: <code>3%</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MerchantAmount</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount in merchant’s currency</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Source</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Source of the exchange rate, according to the source a disclaimer with different requirements must be shown.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>Six Financial Services</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
@@ -4005,7 +4062,7 @@ Id[1..80]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -4472,7 +4529,7 @@ Id[1..80]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -4708,7 +4765,7 @@ Utf8[1..50]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
+	<div style="padding-bottom: 10px">A human-readable description provided by the merchant that will be displayed in Payment Page.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br />
 				    <span>Example: <code>Description of payment</code></span>
@@ -4779,7 +4836,7 @@ Id[1..80]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -5396,32 +5453,6 @@ Utf8[1..50]<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Card data</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SaferpayFields</strong><br />
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SchemeToken</strong><br />
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -7294,6 +7325,232 @@ Possible values: ECOM, SPG, MPO.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container "RestApi_Models_Transactions_Transaction"</h2>
+				<table class="table" id="RestApi_Models_Transactions_Transaction">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Application</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Application part that processed the transaction</div>
+	<i class="small text-muted">
+Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay Batch Processing, Saferpay Authorization Interface, Saferpay Https Interface.<br />
+				    <span>Example: <code>JSON API</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthorizationDetails</strong><br />
+	<span class="text-muted small">
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Potential details on the authorization of the transaction, if authorization was successful</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CustomerId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ID of the customer linked to the transaction.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of the transaction passed by the merchant</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FailedDetails</strong><br />
+	<span class="text-muted small">
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Potential details why the authorization of the transaction failed</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpAddress</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">IPv4 address of the payer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>192.0.0.1</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpOrigin</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The location the IP address, this might be a valid country code or a special value for 'non-country' locations (e.g. satellite phone)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MerchantAmount</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount (currency and value) of the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">OrderId given by the merchant to identify the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayerId</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop</div>
+	<i class="small text-muted">
+PayerId[1..256]<br />
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentMethod</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment method used for the transaction</div>
+	<i class="small text-muted">
+				    <span>Example: <code>VISA</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PendingDetails</strong><br />
+	<span class="text-muted small">
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Potential details of the transaction when in pending state</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Provider</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Provider that processed the transaction</div>
+	<i class="small text-muted">
+				    <span>Example: <code>VISA Worldline (EU) E-Link</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ID of the terminal on which the transaction was processed.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TerminalType</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of the terminal on which the transaction was processed.</div>
+	<i class="small text-muted">
+Possible values: ECOM, MPO, SPG.<br />
+				    <span>Example: <code>ECOM</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay transaction ID</div>
 	<i class="small text-muted">
 			</i>
 </td>
