@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.47</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.48</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.47</span>
+						<span class="text-primary">JSON API Spec-Version 1.48</span>
 					</h3>
 
 					<ul class="nav">
@@ -127,7 +127,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.47</span>
+								<span class="text-primary">JSON API Spec-Version 1.48</span>
 							</h3>
 						</button>
 
@@ -1139,7 +1139,7 @@ Id[1..20]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br>
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS, GIFTCARD.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 	</i>
 </td>
@@ -1346,11 +1346,12 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
   &quot;RedirectUrl&quot;: &quot;https://www.saferpay.com/vt2/api/...&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_PaymentPage_Assert"><h2><a name="Payment_v1_PaymentPage_Assert"></a>PaymentPage Assert</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
-Call this function to safely check the status of the transaction from your server.</p><div class="info">
+Call this function to safely check the status of the transaction from your server, either after the payer was redirected back to your shop or your shop system received the server-to-server notification call.</p><div class="info">
 <span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
 <div>
 <p><strong>Important:</strong></p>
 <ul>
+<li>Do not poll this function! Wait until the payer is redirected back to the shop or until the notification was called (we strongly recommend using the notification feature).</li>
 <li>Depending on the payment provider, the resulting transaction may either be an authorization or may already be captured (meaning the financial flow was already triggered). This will be visible in the status of the transaction container returned in the response.</li>
 <li>This function can be called up to 24 hours after the transaction was initialized. For pending transaction the token expiration is increased to 120 hours.</li>
 <li>If the transaction failed (the payer was redirected to the Fail url or he manipulated the return url), an error response with an http status code 400 or higher containing an error message will be returned providing some information on the transaction failure.</li>
@@ -5116,6 +5117,123 @@ Id[1..50]<br>
     }
   }
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_DccInquiry"><h2><a name="Payment_v1_Transaction_DccInquiry"></a>Transaction DccInquiry <span class="label text-mandatory"><a href="https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
+Call this method to provide Dynamic currency conversion (DCC) inquiry details for your customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Transaction/DccInquiry</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>DccInquiryRequest</p><table class="table">
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;RequestHeader&quot;: {
+    &quot;SpecVersion&quot;: &quot;[current Spec-Version]&quot;,
+    &quot;CustomerId&quot;: &quot;[your customer id]&quot;,
+    &quot;RequestId&quot;: &quot;[unique request identifier]&quot;,
+    &quot;RetryIndicator&quot;: 0
+  },
+  &quot;TerminalId&quot;: &quot;[your terminal id]&quot;,
+  &quot;CardNumber&quot;: &quot;1234123412341234&quot;,
+  &quot;Amount&quot;: {
+    &quot;Value&quot;: &quot;100&quot;,
+    &quot;CurrencyCode&quot;: &quot;EUR&quot;
+  }
+}
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tbody><tr>
+							<td class="col-sm-4 text-right">
+	<strong>DccAvailable</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        boolean	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information if dcc is possible for requested card</div>
+	<i class="small text-muted">
+				    <span>Example: <code>true</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>DccInfo</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_DccInquiryInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the means of payment</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>DccToken</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Id of the referenced transaction.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>qiuwerhfi23h4189asdhflk23489</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Expiration</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        date	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Expiration date / time of the generated DCC token in ISO 8601 format in UTC.<br> After this time is exceeded, the DCC proposal cannot be used anymore</div>
+	<i class="small text-muted">
+				    <span>Example: <code>2015-01-30T13:45:22.258+02:00</code></span>
+	</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>ResponseHeader</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <a class="type-details in" href="#Common_ResponseHeader">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Contains general information about the response.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+              DccToken&quot;:&quot;cb176dda-147f-4295-86a1-f4df6f630411&quot;,
+              &quot;DccAvailable&quot;:true,
+                &quot;DccInfo&quot;:{
+                  &quot;CardHolderAmount&quot;:{
+                  &quot;Value&quot;:&quot;1941&quot;,
+                  &quot;CurrencyCode&quot;:&quot;NAD&quot;
+                },
+                &quot;MerchantAmount&quot;:{
+                  &quot;Value&quot;:&quot;100&quot;,
+                  &quot;CurrencyCode&quot;:&quot;EUR&quot;
+                },
+                &quot;Markup&quot;:&quot;2.5%&quot;,
+                &quot;ExchangeRate&quot;:&quot;0.051515&quot;,
+                &quot;Source&quot;:&quot;European Central Bank&quot;
+              },
+              &quot;Expiration&quot;:&quot;2025-07-31T15:12:48.000&quot;
+            }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="ChapterAliasStore"><h1><a name="ChapterAliasStore"></a>Secure Card Data</h1><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Alias_Insert"><h2><a name="Payment_v1_Alias_Insert"></a>Alias Insert</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
 This function may be used to insert an alias without knowledge about the card details. Therefore a redirect of the customer is required.</p><div class="danger"><span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
 <p><strong>Warning:</strong> Only PCI certified merchants may submit the card-data directly, or use their own HTML form! <a href="https://docs.saferpay.com/home/integration-guide/data-security-and-pci-dss">Click here for more information!</a></p>
@@ -7342,6 +7460,226 @@ This method is used to retrieve all terminals</p></div><div class="col-md-6"><di
     }
   ]
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_transactions"><h2><a name="rest_customers_[customerId]_transactions"></a>TransactionReporting GetTransactions</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+This method is used to retrieve a list of transactions based on the provided criteria.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/transactions</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tbody><tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageNumber</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageSize</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>TotalTransactions</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Transactions</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;PageNumber&quot;: 0,
+  &quot;PageSize&quot;: 100,
+  &quot;TotalTransactions&quot;: 1,
+  &quot;Transactions&quot;: [
+    {
+      &quot;MerchantAmount&quot;: &quot;5.00&quot;,
+      &quot;MerchantCurrency&quot;: &quot;EUR&quot;,
+      &quot;CustomerId&quot;: 123456,
+      &quot;TerminalId&quot;: 1000001,
+      &quot;TerminalType&quot;: &quot;ECOM&quot;,
+      &quot;Application&quot;: &quot;Saferpay Payment Page&quot;,
+      &quot;TransactionId&quot;: &quot;j8nCKMAr5bptUApfdp1MbEQpMpSb&quot;,
+      &quot;OrderId&quot;: &quot;6a9bb0cd6ec841698ae375e981002af5&quot;,
+      &quot;Provider&quot;: &quot;PayPal&quot;,
+      &quot;PaymentMethod&quot;: &quot;PayPal&quot;,
+      &quot;IpAddress&quot;: &quot;10.153.83.132&quot;,
+      &quot;Description&quot;: &quot;Test Transaction&quot;,
+      &quot;AuthorizationDetails&quot;: {
+        &quot;AuthorizationDate&quot;: &quot;2025-08-14T12:41:30.618&quot;,
+        &quot;LastActionDate&quot;: &quot;2025-08-14T12:41:30.618&quot;,
+        &quot;Type&quot;: &quot;PAYMENT&quot;,
+        &quot;State&quot;: &quot;AUTHORIZED&quot;,
+        &quot;CapturedMerchantAmount&quot;: &quot;3.00&quot;,
+        &quot;HasCVC&quot;: false,
+        &quot;HasLiabilityShift&quot;: false,
+        &quot;ProcessingAuthCode&quot;: &quot;4887bffc-6b5f-4acc-a9d9-1c4e812eaa68&quot;,
+        &quot;AuthorizedBy&quot;: &quot;API_123456_10592483&quot;,
+        &quot;HasCurrencyConversion&quot;: false,
+        &quot;PayerCurrency&quot;: &quot;EUR&quot;,
+        &quot;PayerAmount&quot;: &quot;5.00&quot;,
+        &quot;IsCaptured&quot;: false,
+        &quot;HasPartialCaptures&quot;: false,
+        &quot;IsRefunded&quot;: false,
+        &quot;IsCancelled&quot;: false,
+        &quot;IsOmniChannel&quot;: false
+      }
+    }
+  ]
+}
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_transactionsAsync"><h2><a name="rest_customers_[customerId]_transactionsAsync"></a>TransactionReporting GetTransactionsAsync</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+This method is used to retrieve a list of transactions based on the provided criteria.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/transactionsAsync</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tbody><tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageNumber</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>PageSize</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>TotalTransactions</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+						<tr>
+							<td class="col-sm-4 text-right">
+	<strong>Transactions</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
+	<i class="small text-muted">
+			</i>
+</td>
+						</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+  &quot;PageNumber&quot;: 0,
+  &quot;PageSize&quot;: 100,
+  &quot;TotalTransactions&quot;: 1,
+  &quot;Transactions&quot;: [
+    {
+      &quot;MerchantAmount&quot;: &quot;5.00&quot;,
+      &quot;MerchantCurrency&quot;: &quot;EUR&quot;,
+      &quot;CustomerId&quot;: 123456,
+      &quot;TerminalId&quot;: 1000001,
+      &quot;TerminalType&quot;: &quot;ECOM&quot;,
+      &quot;Application&quot;: &quot;Saferpay Payment Page&quot;,
+      &quot;TransactionId&quot;: &quot;j8nCKMAr5bptUApfdp1MbEQpMpSb&quot;,
+      &quot;OrderId&quot;: &quot;6a9bb0cd6ec841698ae375e981002af5&quot;,
+      &quot;Provider&quot;: &quot;PayPal&quot;,
+      &quot;PaymentMethod&quot;: &quot;PayPal&quot;,
+      &quot;IpAddress&quot;: &quot;10.153.83.132&quot;,
+      &quot;Description&quot;: &quot;Test Transaction&quot;,
+      &quot;AuthorizationDetails&quot;: {
+        &quot;AuthorizationDate&quot;: &quot;2025-08-14T12:41:30.618&quot;,
+        &quot;LastActionDate&quot;: &quot;2025-08-14T12:41:30.618&quot;,
+        &quot;Type&quot;: &quot;PAYMENT&quot;,
+        &quot;State&quot;: &quot;AUTHORIZED&quot;,
+        &quot;CapturedMerchantAmount&quot;: &quot;3.00&quot;,
+        &quot;HasCVC&quot;: false,
+        &quot;HasLiabilityShift&quot;: false,
+        &quot;ProcessingAuthCode&quot;: &quot;4887bffc-6b5f-4acc-a9d9-1c4e812eaa68&quot;,
+        &quot;AuthorizedBy&quot;: &quot;API_123456_10592483&quot;,
+        &quot;HasCurrencyConversion&quot;: false,
+        &quot;PayerCurrency&quot;: &quot;EUR&quot;,
+        &quot;PayerAmount&quot;: &quot;5.00&quot;,
+        &quot;IsCaptured&quot;: false,
+        &quot;HasPartialCaptures&quot;: false,
+        &quot;IsRefunded&quot;: false,
+        &quot;IsCancelled&quot;: false,
+        &quot;IsOmniChannel&quot;: false
+      }
+    }
+  ]
+}
 </pre></div></div><div class="row"><div class="col-md-6"><div class="visible-print-block" id="type-dict">
 	<h4>Container Dictionary</h4>
 			<h2>Container &quot;Common_Models_Data_AmountWithoutZero&quot;</h2>
@@ -7759,7 +8097,7 @@ Alphabetic[2..2]<br>
 	<div style="padding-bottom: 10px">The payer's country subdivision code<br> Allows country codes formatted as ISO 3166 or ISO 3166-2.</div>
 	<i class="small text-muted">
 Iso3166[1..6]<br>
-				    <span>Example: <code>ZH / CH-ZH</code></span>
+				    <span>Example: <code>CH-ZH</code></span>
 	</i>
 </td>
 							</tr>
@@ -8645,8 +8983,8 @@ Range: inclusive between 0 and 9<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47<br>
-				    <span>Example: <code>1.47</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48<br>
+				    <span>Example: <code>1.48</code></span>
 	</i>
 </td>
 							</tr>
@@ -8684,8 +9022,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47<br>
-				    <span>Example: <code>1.47</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48<br>
+				    <span>Example: <code>1.48</code></span>
 	</i>
 </td>
 							</tr>
@@ -9105,19 +9443,6 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 					<tbody>
 							<tr>
 								<td class="col-sm-4 text-right">
-	<strong>Alias</strong><br>
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_Alias">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Alias data if payment means was registered with Secure Card Data before.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br>
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_ApplePay">object</a>
@@ -9164,19 +9489,6 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SchemeToken</strong><br>
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -9694,7 +10006,7 @@ Id[1..80]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -9731,7 +10043,7 @@ Utf8[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand. Note that this can change in the future. Please make sure to accept undocumented values as new payment methods are introduced.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS.<br>
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS, GIFTCARD.<br>
 			</i>
 </td>
 							</tr>
@@ -10145,6 +10457,89 @@ Iso885915[1..100]<br>
 	<div style="padding-bottom: 10px">Amount in payer&#8217;s currency</div>
 	<i class="small text-muted">
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+			<h2>Container &quot;Payment_Models_Data_DccInquiryInfo&quot;</h2>
+				<table class="table" id="Payment_Models_Data_DccInquiryInfo">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Brand</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_Brand">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Brand information</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CardHolderAmount</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount in payer&#8217;s currency</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>ExchangeRate</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The used exchange rate including markup<br> The decimal separator used is '.' regardless of location</div>
+	<i class="small text-muted">
+				    <span>Example: <code>1.2345</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Markup</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">DCC markup fee</div>
+	<i class="small text-muted">
+				    <span>Example: <code>3%</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MerchantAmount</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Common_Models_Data_AmountWithoutZero">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount in merchant&#8217;s currency</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Source</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Source of the exchange rate, according to the source a disclaimer with different requirements must be shown.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>Six Financial Services</code></span>
+	</i>
 </td>
 							</tr>
 					</tbody>
@@ -11349,7 +11744,7 @@ Id[1..80]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -11816,7 +12211,7 @@ Id[1..80]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -12052,7 +12447,7 @@ Utf8[1..50]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">A human readable description provided by the merchant that will be displayed in Payment Page.</div>
+	<div style="padding-bottom: 10px">A human-readable description provided by the merchant that will be displayed in Payment Page.</div>
 	<i class="small text-muted">
 Utf8[1..1000]<br>
 				    <span>Example: <code>Description of payment</code></span>
@@ -12123,7 +12518,7 @@ Id[1..80]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by SIX Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
+	<div style="padding-bottom: 10px">Text which will be printed on payer's debit note. Supported by Worldline Acquiring. No guarantee that it will show up on the payer's debit note, because his bank has to support it too.<br> Please note that the maximum allowed number of characters is rarely supported. It's usually around 10-12.</div>
 	<i class="small text-muted">
 Utf8[1..50]<br>
 				    <span>Example: <code>Thank you for your purchase</code></span>
@@ -12740,32 +13135,6 @@ Utf8[1..50]<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Card data</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SaferpayFields</strong><br>
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_SaferpayFields">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment means data collected with SaferpayFields.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-							</tr>
-							<tr>
-								<td class="col-sm-4 text-right">
-	<strong>SchemeToken</strong><br>
-	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_SchemeToken">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Surrogate values that replace the primary account number (PAN) according to the EMV Payment Tokenization Specification.<br> Note: LiabilityShift is only possible with Transaction Initialize, AuthorizeDirect and RefundDirect.<br> Note: Scheme tokens MDES and VTS are only available for Worldline Acquiring.</div>
 	<i class="small text-muted">
 			</i>
 </td>
@@ -14644,6 +15013,232 @@ Possible values: ECOM, SPG, MPO.<br>
 							</tr>
 					</tbody>
 				</table>
+			<h2>Container &quot;RestApi_Models_Transactions_Transaction&quot;</h2>
+				<table class="table" id="RestApi_Models_Transactions_Transaction">
+					<tbody>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Application</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Application part that processed the transaction</div>
+	<i class="small text-muted">
+Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay Batch Processing, Saferpay Authorization Interface, Saferpay Https Interface.<br>
+				    <span>Example: <code>JSON API</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>AuthorizationDetails</strong><br>
+	<span class="text-muted small">
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Potential details on the authorization of the transaction, if authorization was successful</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>CustomerId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ID of the customer linked to the transaction.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Description</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of the transaction passed by the merchant</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>FailedDetails</strong><br>
+	<span class="text-muted small">
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Potential details why the authorization of the transaction failed</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpAddress</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">IPv4 address of the payer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>192.0.0.1</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>IpOrigin</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The location the IP address, this might be a valid country code or a special value for 'non-country' locations (e.g. satellite phone)</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>MerchantAmount</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Amount (currency and value) of the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>OrderId</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">OrderId given by the merchant to identify the transaction</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PayerId</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop</div>
+	<i class="small text-muted">
+PayerId[1..256]<br>
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PaymentMethod</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment method used for the transaction</div>
+	<i class="small text-muted">
+				    <span>Example: <code>VISA</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>PendingDetails</strong><br>
+	<span class="text-muted small">
+		        	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Potential details of the transaction when in pending state</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>Provider</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Provider that processed the transaction</div>
+	<i class="small text-muted">
+				    <span>Example: <code>VISA Worldline (EU) E-Link</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ID of the terminal on which the transaction was processed.</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TerminalType</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Type of the terminal on which the transaction was processed.</div>
+	<i class="small text-muted">
+Possible values: ECOM, MPO, SPG.<br>
+				    <span>Example: <code>ECOM</code></span>
+	</i>
+</td>
+							</tr>
+							<tr>
+								<td class="col-sm-4 text-right">
+	<strong>TransactionId</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Unique Saferpay transaction ID</div>
+	<i class="small text-muted">
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 			<h2>Container &quot;RestApi_Models_WalletInfo&quot;</h2>
 				<table class="table" id="RestApi_Models_WalletInfo">
 					<tbody>
@@ -14674,6 +15269,7 @@ Possible values: ECOM, SPG, MPO.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.48.0.0.20250916">Version 1.48</a></li>
 <li><a href="#v1.47.0.0.20250708">Version 1.47</a></li>
 <li><a href="#v1.46.0.0.20250506">Version 1.46</a></li>
 <li><a href="#v1.45.0.0.20250318">Version 1.45</a></li>
@@ -14718,6 +15314,18 @@ Possible values: ECOM, SPG, MPO.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.48.0.0.20250916"><h2><a name="v1.48.0.0.20250916"></a> Version 1.48 (released 2025-09-16)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2025-09-02</li>
+<li>introduced version 1.48</li>
+<li>added value <code>1.48</code> for <em>SpecVersion</em></li>
+<li>introduced a new function to retrieve a list of transactions:  <code>/rest/customers/[customerId]/transactions</code> <a href="index.html#rest_customers_%5BcustomerId%5D_transactions">TransactionReporting GetTransactions</a></li>
+<li>introduced a new function to provide Dynamic Currency Conversion (DCC) inquiry details for your customer: <a href="index.html#Payment_v1_Transaction_DccInquiry">Transaction\DccInquiry</a></li>
+<li>A mistake in the JSON API documentation has been fixed:
+<ul>
+<li>SaferpayFields- and SchemeToken-PaymentMeans are not supported in <a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a>.</li>
+<li>Alias- and SchemeToken-PaymentMeans are not supported in <a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.47.0.0.20250708"><h2><a name="v1.47.0.0.20250708"></a> Version 1.47 (released 2025-07-08)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2025-06-24</li>
 <li>introduced version 1.47</li>
