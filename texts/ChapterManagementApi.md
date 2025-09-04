@@ -52,7 +52,6 @@ HTTP Headers example:
 
 <<<---
 
-
 ## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
 
 <span class="GET request-method">GET</span><br>
@@ -66,15 +65,12 @@ This method is used to retrieve the current license configuration for a customer
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -84,12 +80,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -132,7 +123,6 @@ No example available
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -156,11 +146,6 @@ No example available
 </pre>
 
 <<<---
-
-
-
-
-
 
 ## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
@@ -177,15 +162,12 @@ This method is used to retrieve the current license configuration for a customer
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -195,12 +177,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -243,7 +220,6 @@ No example available
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -268,11 +244,6 @@ No example available
 
 <<<---
 
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
 
 <span class="POST request-method">POST</span><br>
@@ -285,10 +256,6 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 <<<---
 
 #### Request
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -331,7 +298,6 @@ Utf8[1..128]<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -347,12 +313,7 @@ Utf8[1..128]<br />
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -379,7 +340,6 @@ Utf8[1..128]<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -390,13 +350,6 @@ Utf8[1..128]<br />
 </pre>
 
 <<<---
-
-
-
-
-
-
-
 
 <span class="DELETE request-method">DELETE</span><br>
 This method may be used to delete a previously created Saferpay Fields Access Token.
@@ -409,15 +362,12 @@ This method may be used to delete a previously created Saferpay Fields Access To
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -427,10 +377,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken
 
@@ -445,15 +392,12 @@ This method may be used to delete a previously created Saferpay Fields Access To
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -463,10 +407,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
@@ -480,10 +421,6 @@ This function may be used to create a single use payment link
 <<<---
 
 #### Request
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -610,7 +547,6 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -646,12 +582,7 @@ AlphaNumeric[10..25]<br />
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -694,7 +625,6 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -706,11 +636,6 @@ AlphaNumeric[10..25]<br />
 </pre>
 
 <<<---
-
-
-
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink
 
@@ -725,15 +650,12 @@ This function may be used to fetch the status of a previously created single use
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -743,12 +665,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -851,7 +768,6 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -875,13 +791,6 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 <<<---
 
-
-
-
-
-
-
-
 <span class="DELETE request-method">DELETE</span><br>
 This function may be used to delete a single use payment link before it's expiry
 
@@ -893,15 +802,12 @@ This function may be used to delete a single use payment link before it's expiry
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -911,10 +817,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
 
@@ -929,15 +832,12 @@ This method is used to retrieve details of one terminal
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -947,12 +847,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -1026,7 +921,6 @@ Possible values: ECOM, SPG, MPO.<br />
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -1083,11 +977,6 @@ Possible values: ECOM, SPG, MPO.<br />
 
 <<<---
 
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
@@ -1103,15 +992,12 @@ This method is used to retrieve a list of all available payment methods and wall
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -1121,12 +1007,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -1163,7 +1044,6 @@ No example available
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -1217,11 +1097,6 @@ No example available
 
 <<<---
 
-
-
-
-
-
 ## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
 
 <span class="GET request-method">GET</span><br>
@@ -1235,15 +1110,12 @@ This method is used to retrieve all terminals
 
 #### Request
 
-
 No body needed
-
 
 <table class="table">
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -1253,12 +1125,7 @@ No example available
 
 <<<---
 
-
 #### Response
-
-
-
-
 
 <table class="table">
 			<thead>
@@ -1282,7 +1149,6 @@ No example available
 
 </table>
 
-	
 --->>>
 
 <p>Example:</p>
@@ -1309,334 +1175,3 @@ No example available
 </pre>
 
 <<<---
-
-
-
-
-
-
-## <a name="rest_customers_[customerId]_transactions"></a>TransactionReporting GetTransactions
-
-<span class="GET request-method">GET</span><br>
-This method is used to retrieve a list of transactions based on the provided criteria.
-
---->>>
-
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/transactions</p></div>
-
-<<<---
-
-#### Request
-
-
-No body needed
-
-
-<table class="table">
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-No example available
-</pre>
-
-<<<---
-
-
-#### Response
-
-
-
-
-
-<table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>PageNumber</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        integer	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>PageSize</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        integer	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>TotalTransactions</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        integer	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Transactions</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-{
-  "PageNumber": 0,
-  "PageSize": 100,
-  "TotalTransactions": 1,
-  "Transactions": [
-    {
-      "MerchantAmount": "5.00",
-      "MerchantCurrency": "EUR",
-      "CustomerId": 123456,
-      "TerminalId": 1000001,
-      "TerminalType": "ECOM",
-      "Application": "Saferpay Payment Page",
-      "TransactionId": "j8nCKMAr5bptUApfdp1MbEQpMpSb",
-      "OrderId": "6a9bb0cd6ec841698ae375e981002af5",
-      "Provider": "PayPal",
-      "PaymentMethod": "PayPal",
-      "IpAddress": "10.153.83.132",
-      "Description": "Test Transaction",
-      "AuthorizationDetails": {
-        "AuthorizationDate": "2025-08-14T12:41:30.618",
-        "LastActionDate": "2025-08-14T12:41:30.618",
-        "Type": "PAYMENT",
-        "State": "AUTHORIZED",
-        "CapturedMerchantAmount": "3.00",
-        "HasCVC": false,
-        "HasLiabilityShift": false,
-        "ProcessingAuthCode": "4887bffc-6b5f-4acc-a9d9-1c4e812eaa68",
-        "AuthorizedBy": "API_123456_10592483",
-        "HasCurrencyConversion": false,
-        "PayerCurrency": "EUR",
-        "PayerAmount": "5.00",
-        "IsCaptured": false,
-        "HasPartialCaptures": false,
-        "IsRefunded": false,
-        "IsCancelled": false,
-        "IsOmniChannel": false
-      }
-    }
-  ]
-}
-</pre>
-
-<<<---
-
-
-
-
-
-
-## <a name="rest_customers_[customerId]_transactionsAsync"></a>TransactionReporting GetTransactionsAsync
-
-<span class="GET request-method">GET</span><br>
-This method is used to retrieve a list of transactions based on the provided criteria.
-
---->>>
-
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/transactionsAsync</p></div>
-
-<<<---
-
-#### Request
-
-
-No body needed
-
-
-<table class="table">
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-No example available
-</pre>
-
-<<<---
-
-
-#### Response
-
-
-
-
-
-<table class="table">
-			<thead>
-				<tr>
-					<th colspan="2">Arguments</th>
-				</tr>
-			</thead>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>PageNumber</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        integer	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>PageSize</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        integer	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>TotalTransactions</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        integer	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-						<tr>
-							<td class="col-sm-4 text-right">
-	<strong>Transactions</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
-	<i class="small text-muted">
-			</i>
-</td>
-						</tr>
-
-</table>
-
-	
---->>>
-
-<p>Example:</p>
-<pre class="prettyprint">
-{
-  "PageNumber": 0,
-  "PageSize": 100,
-  "TotalTransactions": 1,
-  "Transactions": [
-    {
-      "MerchantAmount": "5.00",
-      "MerchantCurrency": "EUR",
-      "CustomerId": 123456,
-      "TerminalId": 1000001,
-      "TerminalType": "ECOM",
-      "Application": "Saferpay Payment Page",
-      "TransactionId": "j8nCKMAr5bptUApfdp1MbEQpMpSb",
-      "OrderId": "6a9bb0cd6ec841698ae375e981002af5",
-      "Provider": "PayPal",
-      "PaymentMethod": "PayPal",
-      "IpAddress": "10.153.83.132",
-      "Description": "Test Transaction",
-      "AuthorizationDetails": {
-        "AuthorizationDate": "2025-08-14T12:41:30.618",
-        "LastActionDate": "2025-08-14T12:41:30.618",
-        "Type": "PAYMENT",
-        "State": "AUTHORIZED",
-        "CapturedMerchantAmount": "3.00",
-        "HasCVC": false,
-        "HasLiabilityShift": false,
-        "ProcessingAuthCode": "4887bffc-6b5f-4acc-a9d9-1c4e812eaa68",
-        "AuthorizedBy": "API_123456_10592483",
-        "HasCurrencyConversion": false,
-        "PayerCurrency": "EUR",
-        "PayerAmount": "5.00",
-        "IsCaptured": false,
-        "HasPartialCaptures": false,
-        "IsRefunded": false,
-        "IsCancelled": false,
-        "IsOmniChannel": false
-      }
-    }
-  ]
-}
-</pre>
-
-<<<---
-
-
-
-
-
-
-
