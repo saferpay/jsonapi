@@ -148,6 +148,11 @@
         "Title": "Transaction QueryAlternativePayment",
         "Source": "texts/ChapterTransaction.md",
         "Target": "index.html#Payment_v1_Transaction_QueryAlternativePayment"
+      },
+      {
+        "Title": "Transaction DccInquiry",
+        "Source": "texts/ChapterTransaction.md",
+        "Target": "index.html#Payment_v1_Transaction_DccInquiry"
       }
     ]
   },
@@ -266,6 +271,11 @@
         "Title": "Terminals GetTerminals",
         "Source": "texts/ChapterManagementApi.md",
         "Target": "index.html#rest_customers_[customerId]_terminals"
+      },
+      {
+        "Title": "TransactionReporting GetTransactions",
+        "Source": "texts/ChapterManagementApi.md",
+        "Target": "index.html#rest_customers_[customerId]_transactions"
       }
     ]
   },
