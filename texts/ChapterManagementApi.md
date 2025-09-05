@@ -52,6 +52,7 @@ HTTP Headers example:
 
 <<<---
 
+
 ## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
 
 <span class="GET request-method">GET</span><br>
@@ -59,18 +60,21 @@ This method is used to retrieve the current license configuration for a customer
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/license</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -80,7 +84,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -89,7 +98,8 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -101,11 +111,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -117,12 +128,13 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the configured package</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -146,6 +158,11 @@ No example available
 </pre>
 
 <<<---
+
+
+
+
+
 
 ## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
@@ -156,18 +173,21 @@ This method is used to retrieve the current license configuration for a customer
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/license-configuration</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/license-configuration</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -177,7 +197,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -186,7 +211,8 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -198,11 +224,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">All features contained in the configured package or assigned additionally</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -214,12 +241,13 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the configured package</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -244,6 +272,11 @@ No example available
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
 
 <span class="POST request-method">POST</span><br>
@@ -251,11 +284,15 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
 
 <<<---
 
 #### Request
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -264,7 +301,8 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -276,11 +314,12 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 	<div style="padding-bottom: 10px">A human readable description that will be shown in the Saferpay Backoffice to easily identify the Access Token.</div>
 	<i class="small text-muted">
 Utf8[1..128]<br />
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>SourceUrls</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -292,12 +331,13 @@ Utf8[1..128]<br />
 	<div style="padding-bottom: 10px">The fully qualified URL of the shop (the page that integrates Saferpay Fields). We recommend that URLs end with a trailing slash. Only HTTPS is allowed.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://yourshop.com/</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -313,7 +353,12 @@ Utf8[1..128]<br />
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -322,7 +367,8 @@ Utf8[1..128]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>AccessToken</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -334,12 +380,13 @@ Utf8[1..128]<br />
 	<div style="padding-bottom: 10px">The AccessToken for the Saferpay Fields JavaScript library</div>
 	<i class="small text-muted">
 				    <span>Example: <code>67f47961-2912-4338-8039-22ac2b8486f3</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -351,23 +398,33 @@ Utf8[1..128]<br />
 
 <<<---
 
+
+
+
+
+
+
+
 <span class="DELETE request-method">DELETE</span><br>
 This method may be used to delete a previously created Saferpay Fields Access Token.
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -377,7 +434,10 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken
 
@@ -386,18 +446,21 @@ This method may be used to delete a previously created Saferpay Fields Access To
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens/[accessToken]</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens/[accessToken]</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -407,7 +470,10 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
@@ -416,11 +482,15 @@ This function may be used to create a single use payment link
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div>
 
 <<<---
 
 #### Request
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -429,7 +499,8 @@ This function may be used to create a single use payment link
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Common_Models_Data_SpgBillingAddressForm">object</a>
@@ -438,11 +509,12 @@ This function may be used to create a single use payment link
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to have the payer enter or change his billing address in the payment process.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -452,11 +524,12 @@ This function may be used to create a single use payment link
 	<i class="small text-muted">
 Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br />
 				    <span>Example: <code>NONE</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -466,11 +539,12 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUC
 	<i class="small text-muted">
 Id[1..20]<br />
 				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -483,11 +557,12 @@ Id[1..20]<br />
 	<i class="small text-muted">
 AlphaNumeric[10..25]<br />
 				    <span>Example: <code>2019-10-20T00:00:00+02:00</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
@@ -496,11 +571,12 @@ AlphaNumeric[10..25]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -512,11 +588,12 @@ AlphaNumeric[10..25]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payer</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -528,11 +605,12 @@ AlphaNumeric[10..25]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#RestApi_Models_Data_RegisterAlias">object</a>
@@ -541,12 +619,13 @@ AlphaNumeric[10..25]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Controls whether the means of payment used for paying the offer should be stored inside the Saferpay Secure Card Data storage.<br> If the offer is paid using a payment means that does not support being stored in the Secure Card Data storage, this parameter has no effect.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -582,7 +661,12 @@ AlphaNumeric[10..25]<br />
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -591,7 +675,8 @@ AlphaNumeric[10..25]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -603,11 +688,12 @@ AlphaNumeric[10..25]<br />
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
 				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -619,12 +705,13 @@ AlphaNumeric[10..25]<br />
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -637,6 +724,11 @@ AlphaNumeric[10..25]<br />
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink
 
 <span class="GET request-method">GET</span><br>
@@ -644,18 +736,21 @@ This function may be used to fetch the status of a previously created single use
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -665,7 +760,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -674,7 +774,8 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br />
 	<span class="text-muted small">
 		        date	</span>
@@ -683,11 +784,12 @@ No example available
 	<div style="padding-bottom: 10px">The creation date and time of the SecurePayGate offer</div>
 	<i class="small text-muted">
 				    <span>Example: <code>2023-02-24T11:34:11.128+01:00</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
 		        date	</span>
@@ -696,11 +798,12 @@ No example available
 	<div style="padding-bottom: 10px">The date after which the offer expires</div>
 	<i class="small text-muted">
 				    <span>Example: <code>2023-04-20T00:00:00.000+02:00</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
 		        globally unique identifier	</span>
@@ -709,11 +812,12 @@ No example available
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
 				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#RestApi_Models_Data_PaymentWithoutOptions">object</a>
@@ -722,11 +826,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, description, orderId)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -735,11 +840,12 @@ No example available
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -749,11 +855,12 @@ No example available
 	<i class="small text-muted">
 Possible values: OPEN, PAID, EXPIRED.<br />
 				    <span>Example: <code>PAID</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -762,12 +869,13 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 	<div style="padding-bottom: 10px">The transaction id once a transaction was made</div>
 	<i class="small text-muted">
 				    <span>Example: <code>vA3bhlAht2WlSAOKOvQSAOnbAdCb</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -791,23 +899,33 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 <<<---
 
+
+
+
+
+
+
+
 <span class="DELETE request-method">DELETE</span><br>
 This function may be used to delete a single use payment link before it's expiry
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>DELETE:</strong> /rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -817,7 +935,10 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
 
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
 
@@ -826,18 +947,21 @@ This method is used to retrieve details of one terminal
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -847,7 +971,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -856,7 +985,8 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -864,11 +994,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Description of the terminal</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
@@ -877,11 +1008,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -889,11 +1021,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the terminal</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -902,11 +1035,12 @@ No example available
 	<div style="padding-bottom: 10px">The type of the terminal</div>
 	<i class="small text-muted">
 Possible values: ECOM, SPG, MPO.<br />
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 		        <span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
@@ -915,12 +1049,13 @@ Possible values: ECOM, SPG, MPO.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -977,6 +1112,11 @@ Possible values: ECOM, SPG, MPO.<br />
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
@@ -986,18 +1126,21 @@ This method is used to retrieve a list of all available payment methods and wall
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1007,7 +1150,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -1016,7 +1164,8 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 		        <span>array of <a class="type-details in" href="#RestApi_Models_WalletInfo">object</a>s</span>
@@ -1025,11 +1174,12 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of wallets that are available for the terminal</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentMethodInfo">object</a>s</span>
@@ -1038,12 +1188,13 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of payment methods that are available for the terminal</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1097,6 +1248,11 @@ No example available
 
 <<<---
 
+
+
+
+
+
 ## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
 
 <span class="GET request-method">GET</span><br>
@@ -1104,18 +1260,21 @@ This method is used to retrieve all terminals
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>GET:</strong> /rest/customers/[customerId]/terminals</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals</p></div>
 
 <<<---
 
 #### Request
 
+
 No body needed
+
 
 <table class="table">
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1125,7 +1284,12 @@ No example available
 
 <<<---
 
+
 #### Response
+
+
+
+
 
 <table class="table">
 			<thead>
@@ -1134,7 +1298,8 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
 		        <span>array of <a class="type-details in" href="#RestApi_Models_TerminalResult">object</a>s</span>
@@ -1143,12 +1308,13 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Array of terminals</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
 </table>
 
+	
 --->>>
 
 <p>Example:</p>
@@ -1175,3 +1341,275 @@ No example available
 </pre>
 
 <<<---
+
+
+
+
+
+
+## <a name="rest_customers_[customerId]_transactions"></a>TransactionReporting GetTransactions
+
+<span class="GET request-method">GET</span><br>
+This method is used to retrieve a list of transactions based on the provided criteria.
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/transactions</p></div>
+
+<<<---
+
+#### Query Parameters
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="2">Arguments</th>
+		</tr>
+	</thead>
+		<tr>
+			
+<td class="col-sm-4 text-right">
+	<strong>TransactionState</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">State of the transactions to be retrieved</div>
+	<i class="small text-muted">
+Possible values: SUCCESSFUL, FAILED, PENDING.<br />
+							<span>Usage: <code>/rest/customers/[customerId]/transactions?TransactionState=SUCCESSFUL</code></span>
+	</i>
+</td>
+		</tr>
+		<tr>
+			
+<td class="col-sm-4 text-right">
+	<strong>TerminalId</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">ID of the terminal the transactions should be retrieved for. If left empty, all terminals of the customer will be considered.</div>
+	<i class="small text-muted">
+							<span>Usage: <code>/rest/customers/[customerId]/transactions?TerminalId=1</code></span>
+	</i>
+</td>
+		</tr>
+		<tr>
+			
+<td class="col-sm-4 text-right">
+	<strong>StartDate</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Only transactions happened later than this date will be returned. If left empty, the timestamp now will be used.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<i class="small text-muted">
+AlphaNumeric[1..2147483647]<br />
+							<span>Usage: <code>/rest/customers/[customerId]/transactions?StartDate=2023-08-19T11:26</code></span>
+	</i>
+</td>
+		</tr>
+		<tr>
+			
+<td class="col-sm-4 text-right">
+	<strong>EndDate</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Only transactions happened earlier than this date will be returned. If left empty, the timestamp now will be used.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<i class="small text-muted">
+AlphaNumeric[1..2147483647]<br />
+							<span>Usage: <code>/rest/customers/[customerId]/transactions?EndDate=2025-08-19T11:26</code></span>
+	</i>
+</td>
+		</tr>
+		<tr>
+			
+<td class="col-sm-4 text-right">
+	<strong>PageSize</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Maximum number of transactions to be returned. If left empty, the default value of 1000 will be used.<br> Please always make sure to check PageSize in the response as Saferpay reserves the right to shrink large page sizes to a reasonable value.</div>
+	<i class="small text-muted">
+							<span>Usage: <code>/rest/customers/[customerId]/transactions?PageSize=500</code></span>
+	</i>
+</td>
+		</tr>
+		<tr>
+			
+<td class="col-sm-4 text-right">
+	<strong>PageNumber</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of the page to be returned, starting from 1. Previous pages will be skipped. If left empty, the first page will be returned.</div>
+	<i class="small text-muted">
+Range: inclusive between 1 and 2147483647<br />
+							<span>Usage: <code>/rest/customers/[customerId]/transactions?PageNumber=1</code></span>
+	</i>
+</td>
+		</tr>
+
+</table>
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>PageNumber</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Number of the returned page, starting from 0</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>PageSize</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Size of the returned page. This can vary from the requested page size if a page size above the maximum page size was requested.<br> Please always check when processing the result.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>TotalTransactions</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Total number of transactions matching the request, regardless of the pagination</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>Transactions</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        <span>array of <a class="type-details in" href="#RestApi_Models_Transactions_Transaction">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">List of transactions on the requested page</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+  "PageNumber": 0,
+  "PageSize": 100,
+  "TotalTransactions": 1,
+  "Transactions": [
+    {
+      "MerchantAmount": "5.00",
+      "MerchantCurrency": "EUR",
+      "CustomerId": 123456,
+      "TerminalId": 1000001,
+      "TerminalType": "ECOM",
+      "Application": "Saferpay Payment Page",
+      "TransactionId": "j8nCKMAr5bptUApfdp1MbEQpMpSb",
+      "OrderId": "6a9bb0cd6ec841698ae375e981002af5",
+      "Provider": "PayPal",
+      "PaymentMethod": "PayPal",
+      "IpAddress": "10.153.83.132",
+      "Description": "Test Transaction",
+      "AuthorizationDetails": {
+        "AuthorizationDate": "2025-08-14T12:41:30.618",
+        "LastActionDate": "2025-08-14T12:41:30.618",
+        "Type": "PAYMENT",
+        "State": "AUTHORIZED",
+        "CapturedMerchantAmount": "3.00",
+        "HasCVC": false,
+        "HasLiabilityShift": false,
+        "ProcessingAuthCode": "4887bffc-6b5f-4acc-a9d9-1c4e812eaa68",
+        "AuthorizedBy": "API_123456_10592483",
+        "HasCurrencyConversion": false,
+        "PayerCurrency": "EUR",
+        "PayerAmount": "5.00",
+        "IsCaptured": false,
+        "HasPartialCaptures": false,
+        "IsRefunded": false,
+        "IsCancelled": false,
+        "IsOmniChannel": false
+      }
+    }
+  ]
+}
+</pre>
+
+<<<---
+
+
+
+
+
+
+
