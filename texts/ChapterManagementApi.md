@@ -53,7 +53,7 @@ HTTP Headers example:
 <<<---
 
 
-## <a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense
+## <a name="rest_customers_customerId_license"></a>Licensing CustomerLicense
 
 <span class="GET request-method">GET</span><br>
 This method is used to retrieve the current license configuration for a customer
@@ -164,7 +164,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration
+## <a name="rest_customers_customerId_license-configuration"></a>Licensing CustomerLicenseConfiguration
 
 <span class="GET request-method">GET</span><br>
 <strong>DEPRECATED:</strong> since Version 1.35. Please use instead: /rest/customers/{customerId}/license
@@ -277,7 +277,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
+## <a name="rest_customers_customerId_terminals_terminalId_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken
 
 <span class="POST request-method">POST</span><br>
 Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).
@@ -439,7 +439,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken
+## <a name="rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken"></a>SaferpayFieldsAccessToken DeleteAccessToken
 
 <span class="DELETE request-method">DELETE</span><br>
 This method may be used to delete a previously created Saferpay Fields Access Token.
@@ -475,7 +475,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
+## <a name="rest_customers_customerId_terminals_terminalId_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink
 
 <span class="POST request-method">POST</span><br>
 This function may be used to create a single use payment link
@@ -729,7 +729,7 @@ AlphaNumeric[10..25]<br />
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink
+## <a name="rest_customers_customerId_terminals_terminalId_spg-offers_offerId"></a>SecurePayGate SingleUsePaymentLink
 
 <span class="GET request-method">GET</span><br>
 This function may be used to fetch the status of a previously created single use payment link
@@ -940,7 +940,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal
+## <a name="rest_customers_customerId_terminals_terminalId"></a>Terminal GetTerminal
 
 <span class="GET request-method">GET</span><br>
 This method is used to retrieve details of one terminal
@@ -1117,7 +1117,7 @@ Possible values: ECOM, SPG, MPO.<br />
 
 
 
-## <a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods
+## <a name="rest_customers_customerId_terminals_terminalId_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
 <strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
@@ -1253,7 +1253,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals
+## <a name="rest_customers_customerId_terminals"></a>Terminals GetTerminals
 
 <span class="GET request-method">GET</span><br>
 This method is used to retrieve all terminals
@@ -1347,7 +1347,7 @@ No example available
 
 
 
-## <a name="rest_customers_[customerId]_transactions"></a>TransactionReporting GetTransactions
+## <a name="rest_customers_customerId_transactions"></a>TransactionReporting GetTransactions
 
 <span class="GET request-method">GET</span><br>
 This method is used to retrieve a list of transactions based on the provided criteria.
@@ -1433,7 +1433,7 @@ AlphaNumeric[1..2147483647]<br />
 		        integer	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Maximum number of transactions to be returned. If left empty, the default value of 1000 will be used.<br> Please always make sure to check PageSize in the response as Saferpay reserves the right to shrink large page sizes to a reasonable value.</div>
+	<div style="padding-bottom: 10px">Maximum number of transactions to be returned. If left empty, the default value of 1000 will be used. A maximum of 2000 transactions can be requested at once.<br> Please always make sure to check PageSize in the response as Saferpay reserves the right to shrink large page sizes to a reasonable value.</div>
 	<i class="small text-muted">
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?PageSize=500</code></span>
 	</i>
@@ -1447,9 +1447,8 @@ AlphaNumeric[1..2147483647]<br />
 		        integer	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of the page to be returned, starting from 1. Previous pages will be skipped. If left empty, the first page will be returned.</div>
+	<div style="padding-bottom: 10px">Number of the page to be returned, starting from 1. Values smaller than 1 will be automatically set to 1. Previous pages will be skipped. If left empty, the first page will be returned.</div>
 	<i class="small text-muted">
-Range: inclusive between 1 and 2147483647<br />
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?PageNumber=1</code></span>
 	</i>
 </td>

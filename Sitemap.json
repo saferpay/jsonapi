@@ -230,52 +230,52 @@
       {
         "Title": "Licensing CustomerLicense",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_license"
+        "Target": "index.html#rest_customers_customerId_license"
       },
       {
         "Title": "Licensing CustomerLicenseConfiguration",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_license-configuration"
+        "Target": "index.html#rest_customers_customerId_license-configuration"
       },
       {
         "Title": "SaferpayFieldsAccessToken CreateAccessToken",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"
+        "Target": "index.html#rest_customers_customerId_terminals_terminalId_fields-access-tokens"
       },
       {
         "Title": "SaferpayFieldsAccessToken DeleteAccessToken",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"
+        "Target": "index.html#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken"
       },
       {
         "Title": "SecurePayGate Create SingleUsePaymentLink",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers"
+        "Target": "index.html#rest_customers_customerId_terminals_terminalId_spg-offers"
       },
       {
         "Title": "SecurePayGate SingleUsePaymentLink",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"
+        "Target": "index.html#rest_customers_customerId_terminals_terminalId_spg-offers_offerId"
       },
       {
         "Title": "Terminal GetTerminal",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]"
+        "Target": "index.html#rest_customers_customerId_terminals_terminalId"
       },
       {
         "Title": "TerminalInfo PaymentMethods",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals_[terminalId]_payment-methods"
+        "Target": "index.html#rest_customers_customerId_terminals_terminalId_payment-methods"
       },
       {
         "Title": "Terminals GetTerminals",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_terminals"
+        "Target": "index.html#rest_customers_customerId_terminals"
       },
       {
         "Title": "TransactionReporting GetTransactions",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_[customerId]_transactions"
+        "Target": "index.html#rest_customers_customerId_transactions"
       }
     ]
   },
