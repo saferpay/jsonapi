@@ -51,13 +51,14 @@
 ## <a name="v1.48.0.0.20250916"></a> Version 1.48 (released 2025-09-16)
 
 -   available on Sandbox: 2025-09-02
--   introduced version 1.48
+-   introduced version `1.48`
 -   added value `1.48` for _SpecVersion_
+-   introduced a new function to retrieve a list of transactions:  `/rest/customers/[customerId]/transactions` [TransactionReporting GetTransactions](index.html#rest_customers_[customerId]_transactions)
 -   introduced a new function to provide Dynamic Currency Conversion (DCC) inquiry details for your customer: [Transaction\DccInquiry](index.html#Payment_v1_Transaction_DccInquiry)
--   introduced a new function to retrieve a list of transactions: `/rest/customers/[customerId]/transactions` [TransactionReporting GetTransactions](index.html#rest_customers_[customerId]_transactions)
 -   A mistake in the JSON API documentation has been fixed:
-    -   SaferpayFields- and SchemeToken-PaymentMeans are not supported in [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect).
-    -   Alias- and SchemeToken-PaymentMeans are not supported in [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+    - SaferpayFields- and SchemeToken-PaymentMeans are not supported in [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect).
+    - Alias- and SchemeToken-PaymentMeans are not supported in [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+-   added `Giftcard` as valid value for the field `PaymentMethods`
 
 ## <a name="v1.47.0.0.20250708"></a> Version 1.47 (released 2025-07-08)
 
