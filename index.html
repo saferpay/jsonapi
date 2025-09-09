@@ -99,16 +99,16 @@
 							<li>
 							<a href="#ChapterManagementApi">Management API</a>
 							<ul class="nav">
-								<li><a href="#rest_customers_[customerId]_license">Licensing CustomerLicense</a></li>
-								<li><a href="#rest_customers_[customerId]_license-configuration">Licensing CustomerLicenseConfiguration</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens">SaferpayFieldsAccessToken CreateAccessToken</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]">SaferpayFieldsAccessToken DeleteAccessToken</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]">SecurePayGate SingleUsePaymentLink</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]">Terminal GetTerminal</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_payment-methods">TerminalInfo PaymentMethods</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals">Terminals GetTerminals</a></li>
-								<li><a href="#rest_customers_[customerId]_transactions">TransactionReporting GetTransactions</a></li>
+								<li><a href="#rest_customers_customerId_license">Licensing CustomerLicense</a></li>
+								<li><a href="#rest_customers_customerId_license-configuration">Licensing CustomerLicenseConfiguration</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens">SaferpayFieldsAccessToken CreateAccessToken</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken">SaferpayFieldsAccessToken DeleteAccessToken</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_spg-offers_offerId">SecurePayGate SingleUsePaymentLink</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId">Terminal GetTerminal</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_payment-methods">TerminalInfo PaymentMethods</a></li>
+								<li><a href="#rest_customers_customerId_terminals">Terminals GetTerminals</a></li>
+								<li><a href="#rest_customers_customerId_transactions">TransactionReporting GetTransactions</a></li>
 							</ul>
 							</li>
 							<li>
@@ -214,16 +214,16 @@
 							<li>
 							<a href="#ChapterManagementApi">Management API</a>
 							<ul class="nav">
-								<li><a href="#rest_customers_[customerId]_license">Licensing CustomerLicense</a></li>
-								<li><a href="#rest_customers_[customerId]_license-configuration">Licensing CustomerLicenseConfiguration</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens">SaferpayFieldsAccessToken CreateAccessToken</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]">SaferpayFieldsAccessToken DeleteAccessToken</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]">SecurePayGate SingleUsePaymentLink</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]">Terminal GetTerminal</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals_[terminalId]_payment-methods">TerminalInfo PaymentMethods</a></li>
-								<li><a href="#rest_customers_[customerId]_terminals">Terminals GetTerminals</a></li>
-								<li><a href="#rest_customers_[customerId]_transactions">TransactionReporting GetTransactions</a></li>
+								<li><a href="#rest_customers_customerId_license">Licensing CustomerLicense</a></li>
+								<li><a href="#rest_customers_customerId_license-configuration">Licensing CustomerLicenseConfiguration</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens">SaferpayFieldsAccessToken CreateAccessToken</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken">SaferpayFieldsAccessToken DeleteAccessToken</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_spg-offers_offerId">SecurePayGate SingleUsePaymentLink</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId">Terminal GetTerminal</a></li>
+								<li><a href="#rest_customers_customerId_terminals_terminalId_payment-methods">TerminalInfo PaymentMethods</a></li>
+								<li><a href="#rest_customers_customerId_terminals">Terminals GetTerminals</a></li>
+								<li><a href="#rest_customers_customerId_transactions">TransactionReporting GetTransactions</a></li>
 							</ul>
 							</li>
 							<li>
@@ -6721,7 +6721,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
       <td>Id generated by merchant system, for debugging purposes. Should be unique for each new request. If a request is retried due to an error, use the same request id.</td>
     </tr>
   </tbody>
-</table></div><div class="col-md-6"><p>HTTP Headers example:</p><p><code>Saferpay-ApiVersion: 1.14</code></p><p><code>Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_license"><h2><a name="rest_customers_[customerId]_license"></a>Licensing CustomerLicense</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</table></div><div class="col-md-6"><p>HTTP Headers example:</p><p><code>Saferpay-ApiVersion: 1.14</code></p><p><code>Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_license"><h2><a name="rest_customers_customerId_license"></a>Licensing CustomerLicense</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This method is used to retrieve the current license configuration for a customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/license</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -6780,7 +6780,7 @@ This method is used to retrieve the current license configuration for a customer
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_license-configuration"><h2><a name="rest_customers_[customerId]_license-configuration"></a>Licensing CustomerLicenseConfiguration</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_license-configuration"><h2><a name="rest_customers_customerId_license-configuration"></a>Licensing CustomerLicenseConfiguration</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 <strong>DEPRECATED:</strong> since Version 1.35. Please use instead: /rest/customers/{customerId}/license</p><p>This method is used to retrieve the current license configuration for a customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/license-configuration</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -6839,7 +6839,7 @@ This method is used to retrieve the current license configuration for a customer
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_terminals_terminalId_fields-access-tokens"><h2><a name="rest_customers_customerId_terminals_terminalId_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
 Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 			<thead>
 				<tr>
@@ -6916,10 +6916,10 @@ Utf8[1..128]<br>
 </pre></div></div><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
 This method may be used to delete a previously created Saferpay Fields Access Token.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_fields-access-tokens_[accessToken]"></a>SaferpayFieldsAccessToken DeleteAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken"><h2><a name="rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken"></a>SaferpayFieldsAccessToken DeleteAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
 This method may be used to delete a previously created Saferpay Fields Access Token.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens/[accessToken]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_customerId_terminals_terminalId_spg-offers"><h2><a name="rest_customers_customerId_terminals_terminalId_spg-offers"></a>SecurePayGate Create SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
 This function may be used to create a single use payment link</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 			<thead>
 				<tr>
@@ -7121,7 +7121,7 @@ AlphaNumeric[10..25]<br>
   &quot;OfferId&quot;: &quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
   &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]"></a>SecurePayGate SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_terminals_terminalId_spg-offers_offerId"><h2><a name="rest_customers_customerId_terminals_terminalId_spg-offers_offerId"></a>SecurePayGate SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This function may be used to fetch the status of a previously created single use payment link</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -7247,7 +7247,7 @@ Possible values: OPEN, PAID, EXPIRED.<br>
 </pre></div></div><div class="row"><div class="col-md-6"><p><span class="DELETE request-method">DELETE</span><br>
 This function may be used to delete a single use payment link before it's expiry</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
-</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]"></a>Terminal GetTerminal</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4></div></div></section><section id="rest_customers_customerId_terminals_terminalId"><h2><a name="rest_customers_customerId_terminals_terminalId"></a>Terminal GetTerminal</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This method is used to retrieve details of one terminal</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -7372,7 +7372,7 @@ Possible values: ECOM, SPG, MPO.<br>
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"><h2><a name="rest_customers_[customerId]_terminals_[terminalId]_payment-methods"></a>TerminalInfo PaymentMethods</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_terminals_terminalId_payment-methods"><h2><a name="rest_customers_customerId_terminals_terminalId_payment-methods"></a>TerminalInfo PaymentMethods</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 <strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/</p><p>This method is used to retrieve a list of all available payment methods and wallets for a terminal.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/payment-methods</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -7454,7 +7454,7 @@ Possible values: ECOM, SPG, MPO.<br>
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_terminals"><h2><a name="rest_customers_[customerId]_terminals"></a>Terminals GetTerminals</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_terminals"><h2><a name="rest_customers_customerId_terminals"></a>Terminals GetTerminals</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This method is used to retrieve all terminals</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -7496,7 +7496,7 @@ This method is used to retrieve all terminals</p></div><div class="col-md-6"><di
     }
   ]
 }
-</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_[customerId]_transactions"><h2><a name="rest_customers_[customerId]_transactions"></a>TransactionReporting GetTransactions</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_transactions"><h2><a name="rest_customers_customerId_transactions"></a>TransactionReporting GetTransactions</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This method is used to retrieve a list of transactions based on the provided criteria.</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/transactions</p></div></div></div><div class="row"><div class="col-md-6"><h4>Query Parameters</h4><table class="table">
 	<thead>
 		<tr>
@@ -7570,7 +7570,7 @@ AlphaNumeric[1..2147483647]<br>
 		        integer	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Maximum number of transactions to be returned. If left empty, the default value of 1000 will be used.<br> Please always make sure to check PageSize in the response as Saferpay reserves the right to shrink large page sizes to a reasonable value.</div>
+	<div style="padding-bottom: 10px">Maximum number of transactions to be returned. If left empty, the default value of 1000 will be used. A maximum of 2000 transactions can be requested at once.<br> Please always make sure to check PageSize in the response as Saferpay reserves the right to shrink large page sizes to a reasonable value.</div>
 	<i class="small text-muted">
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?PageSize=500</code></span>
 	</i>
@@ -7584,9 +7584,8 @@ AlphaNumeric[1..2147483647]<br>
 		        integer	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Number of the page to be returned, starting from 1. Previous pages will be skipped. If left empty, the first page will be returned.</div>
+	<div style="padding-bottom: 10px">Number of the page to be returned, starting from 1. Values smaller than 1 will be automatically set to 1. Previous pages will be skipped. If left empty, the first page will be returned.</div>
 	<i class="small text-muted">
-Range: inclusive between 1 and 2147483647<br>
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?PageNumber=1</code></span>
 	</i>
 </td>
