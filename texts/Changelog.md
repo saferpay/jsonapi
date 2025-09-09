@@ -53,11 +53,11 @@
 -   available on Sandbox: 2025-09-02
 -   introduced version 1.48
 -   added value `1.48` for _SpecVersion_
--   introduced a new function to retrieve a list of transactions:  `/rest/customers/[customerId]/transactions` [TransactionReporting GetTransactions](index.html#rest_customers_[customerId]_transactions)
+-   introduced a new function to retrieve a list of transactions: `/rest/customers/[customerId]/transactions` [TransactionReporting GetTransactions](index.html#rest_customers_customerId_transactions)
 -   introduced a new function to provide Dynamic Currency Conversion (DCC) inquiry details for your customer: [Transaction\DccInquiry](index.html#Payment_v1_Transaction_DccInquiry)
 -   A mistake in the JSON API documentation has been fixed:
-    - SaferpayFields- and SchemeToken-PaymentMeans are not supported in [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect).
-    - Alias- and SchemeToken-PaymentMeans are not supported in [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+    -   SaferpayFields- and SchemeToken-PaymentMeans are not supported in [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect).
+    -   Alias- and SchemeToken-PaymentMeans are not supported in [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
 -   added `Giftcard` as valid value for the field `PaymentMethods`
 
 ## <a name="v1.47.0.0.20250708"></a> Version 1.47 (released 2025-07-08)
@@ -175,7 +175,7 @@
 -   removed `Styling` container from [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) in all API versions
 -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) can now be called up to 120 hours for pending transactions (instead of 96 hours before)
 -   removed `Transaction/QueryPaymentMeans` and `Transaction/AdjustAmount` methods from Saferpay Payment API
--   added `MandatoryFields` field to _BillingAddressForm_ container in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+-   added `MandatoryFields` field to _BillingAddressForm_ container in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
 -   option `MANUAL_REVIEW` in field `Result` of _FraudPrevention_ container is now called `CHALLENGED`. This affects following requests:
     -   [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     -   [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize)
@@ -191,7 +191,7 @@
 -   added 48 bits support to `ColorDepth`
 -   removed Alipay from `PaymentMethodOptions` container [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
 -   added `PaymentMethodsOptions` to [Transaction/Refund](index.html#Payment_v1_Transaction_Refund) for A2A AccountHolderName
--   added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` value to `Condition` in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests
+-   added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` value to `Condition` in [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers) requests
 -   Token expiration increased for [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and pending transactions
 -   improve case validation
 -   common error message improvements
@@ -241,11 +241,11 @@
     -   [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment)
     -   [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
     -   [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
-    -   [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+    -   [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
 -   renamed the following values of the `Condition` field
     -   `WITH_LIABILITY_SHIFT` is now `THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED`
     -   `IF_ALLOWED_BY_SCHEME` is now `NONE`
--   added `Condition` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) requests
+-   added `Condition` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers) requests
 
 ## <a name="v1.35.0.0.20230718"></a> Version 1.35 (released 2023-07-18)
 
@@ -253,14 +253,14 @@
 -   introduced version 1.35
 -   added value `1.35` for _SpecVersion_
 -   added CARD as value from field PaymentMethod in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) requests
--   added [CustomerLicense](index.html#rest_customers_[customerId]_license) method to Saferpay Management API
+-   added [CustomerLicense](index.html#rest_customers_customerId_license) method to Saferpay Management API
 -   removed `CustomerLicenseConfiguration` method from Saferpay Management API
--   added endpoint SecurePayGate `Delete` [SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers_[offerId]) to Saferpay Management API
+-   added endpoint SecurePayGate `Delete` [SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers_offerid) to Saferpay Management API
 -   added container `payer` to [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize) and [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
 -   added container `notification` to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) and [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
 -   added property `PayerDccReceiptEmail` to [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) and [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
 -   per default, in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) the field `HolderName` is not shown
--   [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers), argument `ExpirationDate` is now in the format`yyyy-MM-ddTHH:mm:ssK` and has to be at least 1h in the future and within 180 days
+-   [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers), argument `ExpirationDate` is now in the format`yyyy-MM-ddTHH:mm:ssK` and has to be at least 1h in the future and within 180 days
 -   the `CountrySubdivisionCode` in the address containers now also accepts complete country codes (e.g. `CH-ZH`) beside the already accepted subdivision codes
 
 ## <a name="v1.34.0.0.20230516"></a> Version 1.34 (released 2023-05-16)
@@ -358,9 +358,9 @@
 -   introduced version 1.26
 -   added value `1.26` for _SpecVersion_
 -   added container _GooglePay_ to [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
--   added parameter _AddressSource_ to container _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+-   added parameter _AddressSource_ to container _BillingAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
 -   added parameter _AddressSource_ to container _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize)
--   removed parameter _Display_ from containers _BillingAddressForm_ and _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) as it is replaced by _AddressSource_
+-   removed parameter _Display_ from containers _BillingAddressForm_ and _DeliveryAddressForm_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_customerId_terminals_terminalId_spg-offers) as it is replaced by _AddressSource_
 
 ## <a name="v1.25.0.0.20211116"></a> Version 1.25 (released 2021-11-16)
 
@@ -430,7 +430,7 @@
 -   added containers _Order_ and _RiskFactors_ to [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) request
 -   added container _FraudPrevention_ in [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) and [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) responses
 -   removed parameters _AccountCreationDate_ and _PasswordLastChangeDate_ from container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests (moved to container _PayerProfile_)
--   added parameter _Description_ to container _Payment_ in [Saferpay Secure PayGate API CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers) request
+-   added parameter _Description_ to container _Payment_ in [Saferpay Secure PayGate API CreateOffer](index.html#rest_customers_customerId_terminals_terminalId_spg-offers) request
 
 ## <a name="v1.18.0.0.20200714"></a> Version 1.18 (released 2020-07-14)
 
@@ -440,7 +440,7 @@
 -   added parameter _Id_ to container _Payer_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize), [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment), [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_AlternativePayment) requests and [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert), [Transaction/Authorize](index.html#Payment_v1_Transaction_Authorize), [Transaction/QueryPaymentMeans](index.html#Payment_v1_Transaction_QueryPaymentMeans), [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect), [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced), [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment), [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire), [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment) responses
 -   added container _Order_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
 -   added container _RiskFactors_ in [PaymentPage/Initialize](index.html#Payment_v1_PaymentPage_Initialize) and [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize) requests
--   added container _RegisterAlias_ in [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_[customerId]_terminals_[terminalId]_spg-offers)
+-   added container _RegisterAlias_ in [Secure PayGate API SecurePayGateOffer CreateOffer](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
 
 ## <a name="v1.17.0.0.20200512"></a> Version 1.17 (released 2020-05-12)
 
