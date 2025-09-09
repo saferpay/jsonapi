@@ -58,7 +58,7 @@
 -   A mistake in the JSON API documentation has been fixed:
     -   SaferpayFields- and SchemeToken-PaymentMeans are not supported in [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect).
     -   Alias- and SchemeToken-PaymentMeans are not supported in [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
--   added `Giftcard` as valid value for the field `PaymentMethods`
+-   added `GIFTCARD` as valid value for the field `PaymentMethods`
 
 ## <a name="v1.47.0.0.20250708"></a> Version 1.47 (released 2025-07-08)
 
