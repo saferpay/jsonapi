@@ -1374,7 +1374,7 @@ This method is used to retrieve a list of transactions based on the provided cri
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">State of the transactions to be retrieved</div>
+	<div style="padding-bottom: 10px">State of the transactions to be retrieved. If left empty successful transactions are retrieved.</div>
 	<i class="small text-muted">
 Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?TransactionState=SUCCESSFUL</code></span>
@@ -1400,10 +1400,13 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 <td class="col-sm-4 text-right">
 	<strong>StartDate</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Only transactions happened later than this date will be returned. If left empty, the timestamp now will be used.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<div style="padding-bottom: 10px">Only transactions happened later than this date will be returned.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..2147483647]<br />
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?StartDate=2023-08-19T11:26</code></span>
@@ -1415,10 +1418,13 @@ AlphaNumeric[1..2147483647]<br />
 <td class="col-sm-4 text-right">
 	<strong>EndDate</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Only transactions happened earlier than this date will be returned. If left empty, the timestamp now will be used.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<div style="padding-bottom: 10px">Only transactions that occurred before this date will be returned.<br> EndDate must be less than today at 00:00 (midnight).<br> For example, to retrieve transactions up to and including yesterday, set EndDate to yesterday at 23:59.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..2147483647]<br />
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?EndDate=2025-08-19T11:26</code></span>
