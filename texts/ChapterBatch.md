@@ -12,7 +12,7 @@ This chapter covers the Batch Close via API
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Batch/Close</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Batch/Close</p></div>
 
 <<<---
 
@@ -29,7 +29,8 @@ This chapter covers the Batch Close via API
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -41,11 +42,12 @@ This chapter covers the Batch Close via API
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -58,7 +60,7 @@ This chapter covers the Batch Close via API
 	<i class="small text-muted">
 Numeric[8..8]<br />
 				    <span>Example: <code>12341234</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -96,7 +98,8 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -108,7 +111,7 @@ Numeric[8..8]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
