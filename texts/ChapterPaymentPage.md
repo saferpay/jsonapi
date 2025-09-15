@@ -33,7 +33,7 @@ This method can be used to start a transaction with the Payment Page which may i
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Initialize</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/PaymentPage/Initialize</p></div>
 
 <<<---
 
@@ -50,7 +50,8 @@ This method can be used to start a transaction with the Payment Page which may i
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_StrongCustomerAuthenticationInteractive">object</a>
@@ -59,11 +60,12 @@ This method can be used to start a transaction with the Payment Page which may i
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Strong Customer Authentication (exemptions, ...)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Common_Models_Data_BillingAddressForm">object</a>
@@ -72,11 +74,12 @@ This method can be used to start a transaction with the Payment Page which may i
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Use this container if you need to get a billing address from the payer during the payment process.<br> Saferpay can show an address form and depending on the means of payment, it is also possible to get the address from the means of payment (e.g. PayPal or any kind of wallet) if available.<br> Check the options in the container for different behaviors.<br> In case you also provide payer addresses, these are used as default values to prefill the address form (if displayed) and are overwritten by the final address entered by the payer or provided by the payment method.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
@@ -85,11 +88,12 @@ This method can be used to start a transaction with the Payment Page which may i
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -98,11 +102,12 @@ This method can be used to start a transaction with the Payment Page which may i
 	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>Liability</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: NONE (empty)</div>
 	<i class="small text-muted">
 Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -112,11 +117,12 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 	<i class="small text-muted">
 Id[1..20]<br />
 				    <span>Example: <code>name of your payment page config (case-insensitive)</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>DeliveryAddressForm</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Common_Models_Data_DeliveryAddressForm">object</a>
@@ -125,11 +131,12 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Use this container if you need to get a delivery address from the payer during the payment process.<br> Saferpay can show an address form and depending on the means of payment, it is also possible to get the address from the means of payment (e.g. PayPal or any kind of wallet) if available.<br> Check the options in the container for different behaviors.<br> In case you also provide payer addresses, these are used as default values to prefill the address form (if displayed) and are overwritten by the final address entered by the payer or provided by the payment method.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_Notification">object</a>
@@ -138,11 +145,12 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Notification options</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_Order">object</a>
@@ -151,11 +159,12 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Common_Models_Data_Payer">object</a>
@@ -164,11 +173,12 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payer</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -180,11 +190,12 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payment (amount, currency, ...)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 		        array of strings	</span>
@@ -194,11 +205,12 @@ Id[1..20]<br />
 	<i class="small text-muted">
 Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS, GIFTCARD.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_PaymentMethodsOptions">object</a>
@@ -207,11 +219,12 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional. May be used to set specific options for some payment methods.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_RegisterAlias">object</a>
@@ -220,11 +233,12 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If the given means of payment should be stored in Saferpay Secure Card Data storage (if applicable)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -236,11 +250,12 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -252,11 +267,12 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_RiskFactors">object</a>
@@ -265,11 +281,12 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Optional risk factors</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -282,11 +299,12 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 	<i class="small text-muted">
 Numeric[8..8]<br />
 				    <span>Example: <code>12345678</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
 		        array of strings	</span>
@@ -296,7 +314,7 @@ Numeric[8..8]<br />
 	<i class="small text-muted">
 Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 				    <span>Example: <code>[&quot;APPLEPAY&quot;]</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -345,7 +363,8 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -357,11 +376,12 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 	<div style="padding-bottom: 10px">Expiration date / time of the RedirectUrl in ISO 8601 format in UTC. After this time, the RedirectUrl can't be called anymore.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>2011-07-14T19:43:37+01:00</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -373,11 +393,12 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 	<div style="padding-bottom: 10px">RedirectUrl for the payment page transaction. Simply add this to a "Pay Now"-button or do an automatic redirect.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://www.saferpay.com/vt2/api/PaymentPage/1234/12341234/234uhfh78234hlasdfh8234e1234</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -389,11 +410,12 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -405,7 +427,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
 	<div style="padding-bottom: 10px">Token for later referencing</div>
 	<i class="small text-muted">
 				    <span>Example: <code>234uhfh78234hlasdfh8234e1234</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -454,7 +476,7 @@ Call this function to safely check the status of the transaction from your serve
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/PaymentPage/Assert</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/PaymentPage/Assert</p></div>
 
 <<<---
 
@@ -471,7 +493,8 @@ Call this function to safely check the status of the transaction from your serve
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -483,11 +506,12 @@ Call this function to safely check the status of the transaction from your serve
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -500,7 +524,7 @@ Call this function to safely check the status of the transaction from your serve
 	<i class="small text-muted">
 Id[1..50]<br />
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -538,7 +562,8 @@ Id[1..50]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
@@ -547,11 +572,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_FraudPrevention">object</a>
@@ -560,11 +586,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains details of a performed fraud prevention check</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_LiabilityInfo">object</a>
@@ -573,11 +600,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">LiabilityShift information, replaces ThreeDs Info from api version 1.8</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_MastercardIssuerInstallmentsOptions">object</a>
@@ -586,11 +614,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mastercard card issuer installment payment options, if applicable</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_PayerInfo">object</a>
@@ -599,11 +628,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -615,11 +645,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the means of payment</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_RegistrationResult">object</a>
@@ -628,11 +659,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the SCD registration outcome</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -644,11 +676,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -660,7 +693,7 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the transaction</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 

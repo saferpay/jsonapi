@@ -12,7 +12,7 @@ This function may be used to insert an alias without knowledge about the card de
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Insert</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Alias/Insert</p></div>
 
 <<<---
 
@@ -29,7 +29,8 @@ This function may be used to insert an alias without knowledge about the card de
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_CardForm">object</a>
@@ -38,11 +39,12 @@ This function may be used to insert an alias without knowledge about the card de
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Options for card data entry form (if applicable)</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheck">object</a>
@@ -51,11 +53,12 @@ This function may be used to insert an alias without knowledge about the card de
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering.<br> <b>IMPORTANT NOTE:</b> The Check function is only available for certain brands / acquirers! For more information, see <a href="https://docs.saferpay.com/home/integration-guide/licences-and-interfaces/secure-card-data">Saferpay Integration Guide for Secure Card Data</a></p></div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -64,11 +67,12 @@ This function may be used to insert an alias without knowledge about the card de
 	<div style="padding-bottom: 10px">Language used for displaying forms. Format: ISO 639-1 (two-letter language code), optionally followed by a hyphen and ISO 3166-1 alpha-2 (two-letter country code).<br> The supported language codes are listed below. This list may be extended in the future as more languages become available.<br> We recommend to only use supported language and country codes. If the submitted value has a valid format, but the language is unsupported, then the default language is used.<br> For supported languages, using different country codes than those explicitly listed here may or may not work as expected.<br> <br> Code-List:<br> bg - Bulgarian<br> cs - Czech<br> da - Danish<br> de - German<br> de-CH - Swiss German<br> el - Greek<br> en - English<br> es - Spanish<br> et - Estonian<br> fi - Finnish<br> fr - French<br> hr - Croatian<br> hu - Hungarian<br> is - Icelandic<br> it - Italian<br> ja - Japanese<br> lt - Lithuanian<br> lv - Latvian<br> nl - Dutch<br> nn - Norwegian<br> pl - Polish<br> pt - Portuguese<br> ro - Romanian<br> ru - Russian<br> sk - Slovak<br> sl - Slovenian<br> sv - Swedish<br> tr - Turkish<br> uk - Ukrainian<br> zh - Chinese</div>
 	<i class="small text-muted">
 				    <span>Example: <code>de</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_AliasNotification">object</a>
@@ -78,11 +82,12 @@ This function may be used to insert an alias without knowledge about the card de
 	<div style="padding-bottom: 10px">Url to which Saferpay will send the asynchronous confirmation for the process completion. Supported schemes are http and https. You also have to make sure to support the GET-method.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/notify/123</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_InsertAliasSupportingPaymentMeans">object</a>
@@ -91,11 +96,12 @@ This function may be used to insert an alias without knowledge about the card de
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment to register</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
 		        array of strings	</span>
@@ -105,11 +111,12 @@ This function may be used to insert an alias without knowledge about the card de
 	<i class="small text-muted">
 Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Additional values may be accepted but are ignored.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -121,11 +128,12 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -137,11 +145,12 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -153,11 +162,12 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">URL which is used to redirect the payer back to the shop.<br><br>This Url is used by Saferpay to redirect the shopper back to the merchant shop. You may add query string parameters to identify your session, but please be aware that the shopper could modify these parameters inside the browser!<br> The whole url including query string parameters should be as short as possible to prevent issues with specific browsers and must not exceed 2000 characters.<br> Note: you should not add sensitive data to the query string, as its contents is plainly visible inside the browser and will be logged by our web servers.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_HostedFormStyling">object</a>
@@ -166,11 +176,12 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Custom styling resource for the Hosted Register form.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -183,7 +194,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 	<i class="small text-muted">
 Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 				    <span>Example: <code>CARD</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -227,7 +238,8 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -239,11 +251,12 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 	<div style="padding-bottom: 10px">Expiration date / time of the generated token in ISO 8601 format in UTC.<br> After this time is exceeded, the token will not be accepted for any further actions except Asserts.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>2015-01-30T13:45:22.258+02:00</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_Redirect">object</a>
@@ -252,11 +265,12 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Mandatory if RedirectRequired is true. Contains the URL for the redirect to use for example the Saferpay hosted register form.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
 		        boolean	</span>
@@ -264,11 +278,12 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">True if a redirect must be performed to continue, false otherwise</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -280,11 +295,12 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -296,7 +312,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
 	<div style="padding-bottom: 10px">Id for referencing later</div>
 	<i class="small text-muted">
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -341,7 +357,7 @@ This function can be called up to 24 hours after the transaction was initialized
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/AssertInsert</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Alias/AssertInsert</p></div>
 
 <<<---
 
@@ -358,7 +374,8 @@ This function can be called up to 24 hours after the transaction was initialized
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -370,11 +387,12 @@ This function can be called up to 24 hours after the transaction was initialized
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -387,7 +405,7 @@ This function can be called up to 24 hours after the transaction was initialized
 	<i class="small text-muted">
 Id[1..50]<br />
 				    <span>Example: <code>234uhfh78234hlasdfh8234e</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 
@@ -425,7 +443,8 @@ Id[1..50]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -437,11 +456,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
@@ -450,11 +470,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -466,11 +487,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -482,11 +504,12 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
@@ -495,7 +518,7 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -550,7 +573,7 @@ This method may be used to insert an alias directly with card-data collected by 
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/InsertDirect</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Alias/InsertDirect</p></div>
 
 <<<---
 
@@ -567,7 +590,8 @@ This method may be used to insert an alias directly with card-data collected by 
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Check</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_AliasDirectInsertCheck">object</a>
@@ -576,11 +600,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Parameters for checking the means of payment before registering. <b>IMPORTANT NOTE:</b> The Check 'ONLINE' function is only available for SIX Payment Services VISA and Mastercard acquiring contracts!</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ExternalThreeDS</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_ExternalThreeDsData">object</a>
@@ -589,11 +614,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">If you want to use an external 3DS solution, you can provide the authentication data here.<br> Additionally the Check object must be sent with type ONLINE_STRONG</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_IssuerReference">object</a>
@@ -602,11 +628,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains that is received from the issuer in the response of a successful payment by other payment providers. This data will be used for authorizations based on this alias.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -618,11 +645,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment to register</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -634,11 +662,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Registration parameters</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -650,7 +679,7 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -699,7 +728,8 @@ This method may be used to insert an alias directly with card-data collected by 
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -711,11 +741,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
@@ -724,11 +755,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -740,11 +772,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -756,11 +789,12 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
@@ -769,7 +803,7 @@ This method may be used to insert an alias directly with card-data collected by 
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -820,7 +854,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Update</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Alias/Update</p></div>
 
 <<<---
 
@@ -837,7 +871,8 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -849,11 +884,12 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>UpdateAlias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -865,11 +901,12 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Update parameters</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>UpdatePaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -881,7 +918,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Means of payment to update</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -928,7 +965,8 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -940,11 +978,12 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -956,11 +995,12 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -972,11 +1012,12 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
@@ -985,7 +1026,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -1036,7 +1077,7 @@ This method may be used to delete previously inserted aliases.
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Delete</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Alias/Delete</p></div>
 
 <<<---
 
@@ -1053,7 +1094,8 @@ This method may be used to delete previously inserted aliases.
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1066,11 +1108,12 @@ This method may be used to delete previously inserted aliases.
 	<i class="small text-muted">
 Id[1..40]<br />
 				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1082,7 +1125,7 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -1120,7 +1163,8 @@ Id[1..40]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1132,7 +1176,7 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -1165,7 +1209,7 @@ This method can be used to get the latest details of an alias
 
 --->>>
 
-<div class="info"><p><strong>Request URL:</strong></p><p><strong>POST:</strong> /Payment/v1/Alias/Inquire</p></div>
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Alias/Inquire</p></div>
 
 <<<---
 
@@ -1182,7 +1226,8 @@ This method can be used to get the latest details of an alias
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1195,11 +1240,12 @@ This method can be used to get the latest details of an alias
 	<i class="small text-muted">
 Id[1..40]<br />
 				    <span>Example: <code>alias35nfd9mkzfw0x57iwx</code></span>
-	</i>
+			</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1211,7 +1257,7 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">General information about the request.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
@@ -1249,7 +1295,8 @@ Id[1..40]<br />
 				</tr>
 			</thead>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Alias</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1261,11 +1308,12 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered alias.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_AliasInsertCheckResult">object</a>
@@ -1274,11 +1322,12 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Result of the Check</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1290,11 +1339,12 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Information about the registered means of payment</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -1306,11 +1356,12 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Contains general information about the response.</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 						<tr>
-							<td class="col-sm-4 text-right">
+							
+<td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_SecureCardData_Tokenization_TokenizationInfo">object</a>
@@ -1319,7 +1370,7 @@ Id[1..40]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">result of external tokenization</div>
 	<i class="small text-muted">
-			</i>
+					</i>
 </td>
 						</tr>
 
