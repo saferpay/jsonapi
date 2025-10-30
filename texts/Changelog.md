@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+-   [Version 1.49](#v1.49.0.0.20251118)
 -   [Version 1.48](#v1.48.0.0.20250916)
 -   [Version 1.47](#v1.47.0.0.20250708)
 -   [Version 1.46](#v1.46.0.0.20250506)
@@ -47,6 +48,17 @@
 -   [Version 1.6](#v1.6.0.20170404)
 -   [Version 1.5](#v1.5.0.20170207)
 -   [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.49.0.0.20251118"></a> Version 1.49 (released 2025-11-18)
+
+-   available on Sandbox: 2025-11-03
+-   introduced version 1.49
+-   added value `1.49` for _SpecVersion_
+-   added `WERO` as valid value for the field `PaymentMethods`
+-   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) is extended with the new subcontainer `DCC`, which references the response from [Transaction/DccInquiry](index.html#Payment_v1_Transaction_DccInquiry) and payer's decision whether he accepts or declines DCC offer
+-   `BLIK` is supported in [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+-   added `MaxPaymentAttempts` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
+
 
 ## <a name="v1.48.0.0.20250916"></a> Version 1.48 (released 2025-09-16)
 
