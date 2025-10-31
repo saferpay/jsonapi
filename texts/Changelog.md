@@ -58,6 +58,7 @@
 -   [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect) is extended with the new subcontainer `DCC`, which references the response from [Transaction/DccInquiry](index.html#Payment_v1_Transaction_DccInquiry) and payer's decision whether he accepts or declines DCC offer
 -   `BLIK` is supported in [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
 -   added `MaxPaymentAttempts` field to [SecurePayGate Create SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
+-   The payment methods `GIROPAY`, `PAYDIREKT`, `SOFORT` and `WLCRYPTOPAYMENTS` are no longer supported.
 
 
 ## <a name="v1.48.0.0.20250916"></a> Version 1.48 (released 2025-09-16)
