@@ -819,6 +819,20 @@ This function may be used to directly authorize transactions which do not requir
 						<tr>
 							
 <td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_DccReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference to DccInquiry and payer's decision whether he accepts or declines DCC offer</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
 	<strong>Initiator</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -1010,6 +1024,20 @@ Numeric[8..8]<br />
 					<th colspan="2">Arguments</th>
 				</tr>
 			</thead>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_DccInfo">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Dcc information, if applicable</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
 						<tr>
 							
 <td class="col-sm-4 text-right">
@@ -4164,7 +4192,8 @@ for the payments that before authorization some additional steps such as authent
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
 	<i class="small text-muted">
-Possible values: BANCONTACT.<br />
+Possible values: BANCONTACT, BLIK.<br />
+Possible values: BANCONTACT, BLIK.<br />
 				    <span>Example: <code>BANCONTACT</code></span>
 			</i>
 </td>
@@ -4835,23 +4864,27 @@ Numeric[8..8]<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-              DccToken":"cb176dda-147f-4295-86a1-f4df6f630411",
-              "DccAvailable":true,
-                "DccInfo":{
-                  "CardHolderAmount":{
-                  "Value":"1941",
-                  "CurrencyCode":"NAD"
-                },
-                "MerchantAmount":{
-                  "Value":"100",
-                  "CurrencyCode":"EUR"
-                },
-                "Markup":"2.5%",
-                "ExchangeRate":"0.051515",
-                "Source":"European Central Bank"
-              },
-              "Expiration":"2025-07-31T15:12:48.000"
-            }
+  "DccToken": "e8dc9c0d-128c-4619-bc87-7974248ee0ef",
+  "DccAvailable": true,
+  "DccInfo": {
+    "CardHolderAmount": {
+      "Value": "171",
+      "CurrencyCode": "AUD"
+    },
+    "MerchantAmount": {
+      "Value": "100",
+      "CurrencyCode": "EUR"
+    },
+    "Markup": "3%",
+    "ExchangeRate": "0.58620689",
+    "Source": "European Central Bank",
+    "Brand": {
+      "PaymentMethod": "MASTERCARD",
+      "Name": "MasterCard"
+    }
+  },
+  "Expiration": "2025-10-30T00:45:44"
+}
 </pre>
 
 <<<---

@@ -563,6 +563,19 @@ AlphaNumeric[10..25]<br />
 						<tr>
 							
 <td class="col-sm-4 text-right">
+	<strong>MaxPaymentAttempts</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Optional. Specifies the maximum number of payment attempts allowed for this offer.<br> Admissible values: 0, 1, 3, 5, 10.<br> 0 means that an unlimited number of payment attempts are allowed. If not provided, the same default as in Saferpay Backoffice applies.<br> If a value outside the admissible range is provided, the request will be rejected.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#RestApi_Models_Data_Order">object</a>
