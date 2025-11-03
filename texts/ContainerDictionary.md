@@ -1390,8 +1390,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48<br />
-				    <span>Example: <code>1.48</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49<br />
+				    <span>Example: <code>1.49</code></span>
 			</i>
 </td>
 							</tr>
@@ -1431,8 +1431,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48<br />
-				    <span>Example: <code>1.48</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49<br />
+				    <span>Example: <code>1.49</code></span>
 			</i>
 </td>
 							</tr>
@@ -1469,6 +1469,24 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 							</tr>
 					</tbody>
 				</table>
+				<h2>Container "Payment_Models_AlternativePayment_BlikPaymentMethodOptions"</h2>
+				<table class="table" id="Payment_Models_AlternativePayment_BlikPaymentMethodOptions">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Code</strong><br />
+	<span class="text-muted small">
+		        integer	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Blik payment code</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 				<h2>Container "Payment_Models_AlternativePayment_PaymentMethodOptions"</h2>
 				<table class="table" id="Payment_Models_AlternativePayment_PaymentMethodOptions">
 					<tbody>
@@ -1478,6 +1496,20 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 	<strong>Bancontact</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">bancontact-specific options for this payment</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Blik</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_AlternativePayment_BlikPaymentMethodOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -2276,19 +2308,6 @@ Base64 encoded string<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>BankName</strong><br />
-	<span class="text-muted small">
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of the Bank.</div>
-	<i class="small text-muted">
-					</i>
-</td>
-							</tr>
-							<tr>
-								
-<td class="col-sm-4 text-right">
 	<strong>BIC</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -2339,19 +2358,6 @@ AlphaNumeric[1..50]<br />
 				<h2>Container "Payment_Models_Data_BankAccountInfo"</h2>
 				<table class="table" id="Payment_Models_Data_BankAccountInfo">
 					<tbody>
-							<tr>
-								
-<td class="col-sm-4 text-right">
-	<strong>BankName</strong><br />
-	<span class="text-muted small">
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of the Bank.</div>
-	<i class="small text-muted">
-					</i>
-</td>
-							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
@@ -2516,7 +2522,7 @@ Utf8[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">alphanumeric id of the payment method / brand. Note that this can change in the future. Please make sure to accept undocumented values as new payment methods are introduced.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WERO, WLCRYPTOPAYMENTS, GIFTCARD.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIFTCARD, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, MYONE, PAYCONIQ, PAYDIREKT, PAYPAL, POSTCARD, POSTFINANCE, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WERO, WLCRYPTOPAYMENTS.<br />
 					</i>
 </td>
 							</tr>
@@ -3045,6 +3051,44 @@ Iso885915[1..100]<br />
 	<i class="small text-muted">
 				    <span>Example: <code>Six Financial Services</code></span>
 			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+				<h2>Container "Payment_Models_Data_DccReference"</h2>
+				<table class="table" id="Payment_Models_Data_DccReference">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>SelectedCurrencyCode</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Currency selected by the payer</div>
+	<i class="small text-muted">
+				    <span>Example: <code>CHF</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Token</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Token from DCC Inquiry response</div>
+	<i class="small text-muted">
+					</i>
 </td>
 							</tr>
 					</tbody>

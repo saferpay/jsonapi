@@ -203,7 +203,7 @@ Id[1..20]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIROPAY, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYDIREKT, PAYPAL, POSTFINANCEPAY, REKA, SOFORT, TWINT, UNIONPAY, VISA, WECHATPAY, WLCRYPTOPAYMENTS, GIFTCARD.<br />
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIFTCARD, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYPAL, POSTFINANCEPAY, REKA, TWINT, UNIONPAY, VISA, WECHATPAY, WERO.<br />
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 			</i>
 </td>
