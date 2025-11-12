@@ -1513,7 +1513,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">bancontact-specific options for this payment</div>
+	<div style="padding-bottom: 10px">Blik-specific options for this payment</div>
 	<i class="small text-muted">
 					</i>
 </td>
