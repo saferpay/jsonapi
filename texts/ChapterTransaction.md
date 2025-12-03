@@ -23,7 +23,7 @@ This chapter will give you a simple overview about the general transaction flow,
 
 
 
-## <a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Initialize"></a>Transaction Initialize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to start a transaction which may involve either DCC and / or 3d-secure.
@@ -52,7 +52,7 @@ This method may be used to start a transaction which may involve either DCC and 
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
@@ -66,7 +66,7 @@ This method may be used to start a transaction which may involve either DCC and 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br />
 	<span class="text-muted small">
@@ -80,7 +80,7 @@ This method may be used to start a transaction which may involve either DCC and 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
@@ -95,7 +95,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
@@ -109,7 +109,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
@@ -123,7 +123,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -137,7 +137,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -154,7 +154,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -168,7 +168,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
@@ -183,7 +183,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectNotifyUrls</strong><br />
 	<span class="text-muted small">
@@ -197,7 +197,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -214,7 +214,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
@@ -231,7 +231,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
@@ -245,7 +245,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
@@ -259,7 +259,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -279,7 +279,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -326,7 +326,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
@@ -343,7 +343,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br />
 	<span class="text-muted small">
@@ -356,7 +356,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br />
 	<span class="text-muted small">
@@ -370,7 +370,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br />
 	<span class="text-muted small">
@@ -386,7 +386,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -403,7 +403,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
@@ -422,7 +422,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -450,7 +450,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Authorize"></a>Transaction Authorize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This function may be called to authorize a transaction which was started by a call to Transaction/Initialize.
@@ -474,7 +474,7 @@ This function may be called to authorize a transaction which was started by a ca
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
@@ -489,7 +489,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
@@ -503,7 +503,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -520,7 +520,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
@@ -540,7 +540,7 @@ Id[1..50]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -573,7 +573,7 @@ Id[1..50]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
@@ -587,7 +587,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
@@ -601,7 +601,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
@@ -615,7 +615,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
@@ -629,7 +629,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -643,7 +643,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -660,7 +660,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
@@ -674,7 +674,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -691,7 +691,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -710,7 +710,7 @@ Id[1..50]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -770,7 +770,7 @@ Id[1..50]<br />
 
 
 
-## <a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AuthorizeDirect"></a>Transaction AuthorizeDirect <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This function may be used to directly authorize transactions which do not require a redirect of the customer (e.g. direct debit or recurring transactions based on a previously registered alias).
@@ -803,7 +803,7 @@ This function may be used to directly authorize transactions which do not requir
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
@@ -817,7 +817,7 @@ This function may be used to directly authorize transactions which do not requir
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
@@ -831,7 +831,7 @@ This function may be used to directly authorize transactions which do not requir
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Initiator</strong><br />
 	<span class="text-muted small">
@@ -846,7 +846,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
@@ -860,7 +860,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -874,7 +874,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -891,7 +891,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -908,7 +908,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
@@ -922,7 +922,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -939,7 +939,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
@@ -953,7 +953,7 @@ Possible values: MERCHANT, PAYER.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -973,7 +973,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1025,7 +1025,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
@@ -1039,7 +1039,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
@@ -1053,7 +1053,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
@@ -1067,7 +1067,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
@@ -1081,7 +1081,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -1095,7 +1095,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -1112,7 +1112,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br />
 	<span class="text-muted small">
@@ -1126,7 +1126,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -1143,7 +1143,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -1162,7 +1162,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1214,7 +1214,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AuthorizeReferenced"></a>Transaction AuthorizeReferenced <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to perform follow-up authorizations to an earlier transaction. At this time, the referenced (initial) transaction must have been performed setting either the recurring or installment option.
@@ -1238,7 +1238,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br />
 	<span class="text-muted small">
@@ -1252,7 +1252,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
@@ -1266,7 +1266,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -1283,7 +1283,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -1300,7 +1300,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>SuppressDcc</strong><br />
 	<span class="text-muted small">
@@ -1313,7 +1313,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -1331,7 +1331,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -1350,7 +1350,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1396,7 +1396,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
@@ -1410,7 +1410,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -1424,7 +1424,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -1441,7 +1441,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -1458,7 +1458,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -1477,7 +1477,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1535,7 +1535,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Capture"></a>Transaction Capture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Capture"></a>Transaction Capture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to finalize previously authorized transactions and refunds.
@@ -1559,7 +1559,7 @@ This method may be used to finalize previously authorized transactions and refun
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
@@ -1573,7 +1573,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br />
 	<span class="text-muted small">
@@ -1587,7 +1587,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br />
 	<span class="text-muted small">
@@ -1601,7 +1601,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantFundDistributor</strong><br />
 	<span class="text-muted small">
@@ -1615,7 +1615,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
@@ -1629,7 +1629,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -1646,7 +1646,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -1665,7 +1665,7 @@ This method may be used to finalize previously authorized transactions and refun
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1699,7 +1699,7 @@ This method may be used to finalize previously authorized transactions and refun
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
@@ -1714,7 +1714,7 @@ Id[1..64]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
@@ -1731,7 +1731,7 @@ Id[1..64]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -1748,7 +1748,7 @@ Id[1..64]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
@@ -1767,7 +1767,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1790,7 +1790,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 
-## <a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_MultipartCapture"></a>Transaction MultipartCapture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to capture multiple parts of an authorized transaction.
@@ -1824,7 +1824,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
@@ -1841,7 +1841,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br />
 	<span class="text-muted small">
@@ -1855,7 +1855,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantFundDistributor</strong><br />
 	<span class="text-muted small">
@@ -1869,7 +1869,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderPartId</strong><br />
 	<span class="text-muted small">
@@ -1887,7 +1887,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -1904,7 +1904,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -1921,7 +1921,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
@@ -1940,7 +1940,7 @@ Possible values: PARTIAL, FINAL.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1987,7 +1987,7 @@ Possible values: PARTIAL, FINAL.<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br />
 	<span class="text-muted small">
@@ -2002,7 +2002,7 @@ Id[1..64]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
@@ -2019,7 +2019,7 @@ Id[1..64]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -2036,7 +2036,7 @@ Id[1..64]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
@@ -2055,7 +2055,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2078,7 +2078,7 @@ Possible values: PENDING, CAPTURED.<br />
 
 
 
-## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 <div class="warning">
@@ -2106,7 +2106,7 @@ This method is only supported for pending capture transactions (only used for pa
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureReference</strong><br />
 	<span class="text-muted small">
@@ -2123,7 +2123,7 @@ This method is only supported for pending capture transactions (only used for pa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -2142,7 +2142,7 @@ This method is only supported for pending capture transactions (only used for pa
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2176,7 +2176,7 @@ This method is only supported for pending capture transactions (only used for pa
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
@@ -2193,7 +2193,7 @@ This method is only supported for pending capture transactions (only used for pa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
@@ -2208,7 +2208,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -2225,7 +2225,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
@@ -2242,7 +2242,7 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
@@ -2262,7 +2262,7 @@ AlphaNumeric[1..64]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2285,7 +2285,7 @@ AlphaNumeric[1..64]<br />
 
 
 
-## <a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_MultipartFinalize"></a>Transaction MultipartFinalize <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to finalize a transaction having one or more partial captures (i.e. marks the end of partial captures).
@@ -2309,7 +2309,7 @@ This method may be used to finalize a transaction having one or more partial cap
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -2326,7 +2326,7 @@ This method may be used to finalize a transaction having one or more partial cap
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -2345,7 +2345,7 @@ This method may be used to finalize a transaction having one or more partial cap
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2379,7 +2379,7 @@ This method may be used to finalize a transaction having one or more partial cap
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -2398,7 +2398,7 @@ This method may be used to finalize a transaction having one or more partial cap
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2418,7 +2418,7 @@ This method may be used to finalize a transaction having one or more partial cap
 
 
 
-## <a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Refund"></a>Transaction Refund <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be called to refund a previous transaction.
@@ -2442,7 +2442,7 @@ This method may be called to refund a previous transaction.
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureReference</strong><br />
 	<span class="text-muted small">
@@ -2459,7 +2459,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br />
 	<span class="text-muted small">
@@ -2473,7 +2473,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br />
 	<span class="text-muted small">
@@ -2487,7 +2487,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Refund</strong><br />
 	<span class="text-muted small">
@@ -2504,7 +2504,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -2523,7 +2523,7 @@ This method may be called to refund a previous transaction.
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2563,7 +2563,7 @@ This method may be called to refund a previous transaction.
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
@@ -2577,7 +2577,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -2594,7 +2594,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -2611,7 +2611,7 @@ This method may be called to refund a previous transaction.
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -2630,7 +2630,7 @@ This method may be called to refund a previous transaction.
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2678,7 +2678,7 @@ This method may be called to refund a previous transaction.
 
 
 
-## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AssertRefund"></a>Transaction AssertRefund <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to inquire the status and further information of pending refunds.
@@ -2707,7 +2707,7 @@ This method may be used to inquire the status and further information of pending
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -2724,7 +2724,7 @@ This method may be used to inquire the status and further information of pending
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -2743,7 +2743,7 @@ This method may be used to inquire the status and further information of pending
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2777,7 +2777,7 @@ This method may be used to inquire the status and further information of pending
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
@@ -2794,7 +2794,7 @@ This method may be used to inquire the status and further information of pending
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
@@ -2809,7 +2809,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -2826,7 +2826,7 @@ Id[1..80]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
@@ -2843,7 +2843,7 @@ Possible values: PENDING, CAPTURED.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
@@ -2863,7 +2863,7 @@ AlphaNumeric[1..64]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -2886,7 +2886,7 @@ AlphaNumeric[1..64]<br />
 
 
 
-## <a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_RefundDirect"></a>Transaction RefundDirect <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be called to refund an amount to the given means of payment (not supported for all means of payment) without referencing a previous transaction. This might be the case if the original transaction was done with a card which is not valid any more.
@@ -2915,7 +2915,7 @@ This method may be called to refund an amount to the given means of payment (not
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OriginalCreditTransfer</strong><br />
 	<span class="text-muted small">
@@ -2929,7 +2929,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -2946,7 +2946,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Refund</strong><br />
 	<span class="text-muted small">
@@ -2963,7 +2963,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -2980,7 +2980,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -3000,7 +3000,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3043,7 +3043,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -3060,7 +3060,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -3077,7 +3077,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -3096,7 +3096,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3144,7 +3144,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Cancel"></a>Transaction Cancel <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method may be used to cancel previously authorized transactions and refunds.
@@ -3168,7 +3168,7 @@ This method may be used to cancel previously authorized transactions and refunds
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -3185,7 +3185,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -3204,7 +3204,7 @@ This method may be used to cancel previously authorized transactions and refunds
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3238,7 +3238,7 @@ This method may be used to cancel previously authorized transactions and refunds
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br />
 	<span class="text-muted small">
@@ -3255,7 +3255,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br />
 	<span class="text-muted small">
@@ -3269,7 +3269,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -3286,7 +3286,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
@@ -3305,7 +3305,7 @@ This method may be used to cancel previously authorized transactions and refunds
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3328,7 +3328,7 @@ This method may be used to cancel previously authorized transactions and refunds
 
 
 
-## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_RedirectPayment"></a>Transaction RedirectPayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 <div class="danger">
@@ -3355,7 +3355,7 @@ This method may be used to cancel previously authorized transactions and refunds
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
@@ -3369,7 +3369,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -3383,7 +3383,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -3400,7 +3400,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -3417,7 +3417,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br />
 	<span class="text-muted small">
@@ -3434,7 +3434,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ServiceProvider</strong><br />
 	<span class="text-muted small">
@@ -3452,7 +3452,7 @@ Possible values: POSTCARD, POSTFINANCE.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Styling</strong><br />
 	<span class="text-muted small">
@@ -3466,7 +3466,7 @@ Possible values: POSTCARD, POSTFINANCE.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -3486,7 +3486,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3528,7 +3528,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
@@ -3545,7 +3545,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br />
 	<span class="text-muted small">
@@ -3559,7 +3559,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -3576,7 +3576,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
@@ -3595,7 +3595,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3618,7 +3618,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AssertRedirectPayment"></a>Transaction AssertRedirectPayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 <div class="danger">
@@ -3645,7 +3645,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -3662,7 +3662,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
@@ -3682,7 +3682,7 @@ Id[1..50]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3714,7 +3714,7 @@ Id[1..50]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -3728,7 +3728,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -3745,7 +3745,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -3762,7 +3762,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -3781,7 +3781,7 @@ Id[1..50]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3830,7 +3830,7 @@ Id[1..50]<br />
 
 
 
-## <a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_Inquire"></a>Transaction Inquire <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method can be used to get the details of a transaction that has been authorized successfully.
@@ -3858,7 +3858,7 @@ This method can be used to get the details of a transaction that has been author
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -3875,7 +3875,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br />
 	<span class="text-muted small">
@@ -3894,7 +3894,7 @@ This method can be used to get the details of a transaction that has been author
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -3928,7 +3928,7 @@ This method can be used to get the details of a transaction that has been author
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br />
 	<span class="text-muted small">
@@ -3942,7 +3942,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
@@ -3956,7 +3956,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
@@ -3970,7 +3970,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -3984,7 +3984,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -4001,7 +4001,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -4018,7 +4018,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -4037,7 +4037,7 @@ This method can be used to get the details of a transaction that has been author
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -4093,7 +4093,7 @@ This method can be used to get the details of a transaction that has been author
 
 
 
-## <a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_AlternativePayment"></a>Transaction AlternativePayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 This method can be used to authorize the payments that do not have a payment-page or
@@ -4118,7 +4118,7 @@ for the payments that before authorization some additional steps such as authent
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
@@ -4135,7 +4135,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
@@ -4149,7 +4149,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -4163,7 +4163,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -4180,7 +4180,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br />
 	<span class="text-muted small">
@@ -4193,13 +4193,12 @@ for the payments that before authorization some additional steps such as authent
 	<div style="padding-bottom: 10px">Service provider to be used for this payment</div>
 	<i class="small text-muted">
 Possible values: BANCONTACT, BLIK.<br />
-Possible values: BANCONTACT, BLIK.<br />
 				    <span>Example: <code>BANCONTACT</code></span>
 			</i>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethodOptions</strong><br />
 	<span class="text-muted small">
@@ -4213,7 +4212,7 @@ Possible values: BANCONTACT, BLIK.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -4230,7 +4229,7 @@ Possible values: BANCONTACT, BLIK.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br />
 	<span class="text-muted small">
@@ -4244,7 +4243,7 @@ Possible values: BANCONTACT, BLIK.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -4264,7 +4263,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -4303,7 +4302,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
@@ -4320,7 +4319,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessingData</strong><br />
 	<span class="text-muted small">
@@ -4334,7 +4333,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -4351,7 +4350,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
@@ -4370,7 +4369,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -4398,7 +4397,7 @@ Numeric[8..8]<br />
 
 
 
-## <a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_QueryAlternativePayment"></a>Transaction QueryAlternativePayment <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 Call this method to get information about a previously initialized alternative payment transaction
@@ -4422,7 +4421,7 @@ Call this method to get information about a previously initialized alternative p
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -4439,7 +4438,7 @@ Call this method to get information about a previously initialized alternative p
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br />
 	<span class="text-muted small">
@@ -4459,7 +4458,7 @@ Id[1..50]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -4491,7 +4490,7 @@ Id[1..50]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br />
 	<span class="text-muted small">
@@ -4505,7 +4504,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br />
 	<span class="text-muted small">
@@ -4519,7 +4518,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -4533,7 +4532,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br />
 	<span class="text-muted small">
@@ -4550,7 +4549,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -4567,7 +4566,7 @@ Id[1..50]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br />
 	<span class="text-muted small">
@@ -4586,7 +4585,7 @@ Id[1..50]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -4642,7 +4641,7 @@ Id[1..50]<br />
 
 
 
-## <a name="Payment_v1_Transaction_DccInquiry"></a>Transaction DccInquiry <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span> 
+## <a name="Payment_v1_Transaction_DccInquiry"></a>Transaction DccInquiry <span class="label text-mandatory"><a href= "https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span>
 
 <span class="POST request-method">POST</span><br>
 Call this method to provide Dynamic currency conversion (DCC) inquiry details for your customer
@@ -4666,7 +4665,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br />
 	<span class="text-muted small">
@@ -4683,7 +4682,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CardNumber</strong><br />
 	<span class="text-muted small">
@@ -4700,7 +4699,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br />
 	<span class="text-muted small">
@@ -4717,7 +4716,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -4737,7 +4736,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -4774,7 +4773,7 @@ Numeric[8..8]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DccAvailable</strong><br />
 	<span class="text-muted small">
@@ -4791,7 +4790,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DccInfo</strong><br />
 	<span class="text-muted small">
@@ -4805,7 +4804,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DccToken</strong><br />
 	<span class="text-muted small">
@@ -4822,7 +4821,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br />
 	<span class="text-muted small">
@@ -4839,7 +4838,7 @@ Numeric[8..8]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br />
 	<span class="text-muted small">
@@ -4858,7 +4857,7 @@ Numeric[8..8]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
