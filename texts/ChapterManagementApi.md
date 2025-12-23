@@ -28,7 +28,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
     <tr>
       <td style="white-space:nowrap;">Saferpay-ApiVersion</td>
       <td>
-        1.14
+        1.50
       </td>
       <td>Version number of the interface specification.</td>
     </tr>
@@ -46,7 +46,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
 
 HTTP Headers example:
 
-`Saferpay-ApiVersion: 1.14`
+`Saferpay-ApiVersion: 1.50`
 
 `Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b`
 
@@ -74,7 +74,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -98,7 +98,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
@@ -115,7 +115,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
@@ -134,7 +134,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -187,7 +187,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -211,7 +211,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
@@ -228,7 +228,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
@@ -247,7 +247,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -301,7 +301,7 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
@@ -318,7 +318,7 @@ Utf8[1..128]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>SourceUrls</strong><br />
 	<span class="text-muted small">
@@ -337,7 +337,7 @@ Utf8[1..128]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -367,7 +367,7 @@ Utf8[1..128]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>AccessToken</strong><br />
 	<span class="text-muted small">
@@ -386,7 +386,7 @@ Utf8[1..128]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -424,7 +424,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -460,7 +460,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -499,7 +499,7 @@ This function may be used to create a single use payment link
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
@@ -513,7 +513,7 @@ This function may be used to create a single use payment link
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
@@ -528,7 +528,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUC
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
@@ -543,7 +543,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
@@ -561,7 +561,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MaxPaymentAttempts</strong><br />
 	<span class="text-muted small">
@@ -574,7 +574,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
@@ -588,7 +588,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -605,7 +605,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -622,7 +622,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
@@ -638,7 +638,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -688,7 +688,7 @@ AlphaNumeric[10..25]<br />
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
@@ -705,7 +705,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
@@ -724,7 +724,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -763,7 +763,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -787,7 +787,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br />
 	<span class="text-muted small">
@@ -801,7 +801,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
@@ -815,7 +815,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
@@ -829,7 +829,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -843,7 +843,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
@@ -857,7 +857,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
@@ -866,13 +866,13 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The status of the SecurePayGate offer</div>
 	<i class="small text-muted">
-Possible values: OPEN, PAID, EXPIRED.<br />
+Possible values: OPEN, PAID, EXPIRED, DISABLED.<br />
 				    <span>Example: <code>PAID</code></span>
 			</i>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
@@ -888,7 +888,7 @@ Possible values: OPEN, PAID, EXPIRED.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -938,7 +938,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -974,7 +974,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -998,7 +998,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
@@ -1011,7 +1011,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
@@ -1025,7 +1025,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -1038,7 +1038,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
@@ -1052,7 +1052,7 @@ Possible values: ECOM, SPG, MPO.<br />
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
@@ -1068,7 +1068,7 @@ Possible values: ECOM, SPG, MPO.<br />
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1133,7 +1133,7 @@ Possible values: ECOM, SPG, MPO.<br />
 ## <a name="rest_customers_customerId_terminals_terminalId_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
-<strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
+<strong>DEPRECATED</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
 
 This method is used to retrieve a list of all available payment methods and wallets for a terminal.
 
@@ -1153,7 +1153,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1177,7 +1177,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
@@ -1191,7 +1191,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
@@ -1207,7 +1207,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1287,7 +1287,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1311,7 +1311,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
@@ -1327,7 +1327,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1380,7 +1380,7 @@ This method is used to retrieve a list of transactions based on the provided cri
 		</tr>
 	</thead>
 		<tr>
-			
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionState</strong><br />
 	<span class="text-muted small">
@@ -1395,7 +1395,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 </td>
 		</tr>
 		<tr>
-			
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -1409,7 +1409,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 </td>
 		</tr>
 		<tr>
-			
+
 <td class="col-sm-4 text-right">
 	<strong>StartDate</strong><br />
 	<span class="text-muted small">
@@ -1427,7 +1427,7 @@ AlphaNumeric[1..2147483647]<br />
 </td>
 		</tr>
 		<tr>
-			
+
 <td class="col-sm-4 text-right">
 	<strong>EndDate</strong><br />
 	<span class="text-muted small">
@@ -1445,7 +1445,7 @@ AlphaNumeric[1..2147483647]<br />
 </td>
 		</tr>
 		<tr>
-			
+
 <td class="col-sm-4 text-right">
 	<strong>PageSize</strong><br />
 	<span class="text-muted small">
@@ -1459,7 +1459,7 @@ AlphaNumeric[1..2147483647]<br />
 </td>
 		</tr>
 		<tr>
-			
+
 <td class="col-sm-4 text-right">
 	<strong>PageNumber</strong><br />
 	<span class="text-muted small">
@@ -1485,7 +1485,7 @@ No body needed
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
@@ -1509,7 +1509,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PageNumber</strong><br />
 	<span class="text-muted small">
@@ -1525,7 +1525,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PageSize</strong><br />
 	<span class="text-muted small">
@@ -1541,7 +1541,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TotalTransactions</strong><br />
 	<span class="text-muted small">
@@ -1557,7 +1557,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transactions</strong><br />
 	<span class="text-muted small">
@@ -1576,7 +1576,7 @@ No example available
 
 </table>
 
-	
+
 --->>>
 
 <p>Example:</p>
