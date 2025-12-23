@@ -233,7 +233,7 @@
 					</ul>
 				</div>
 
-				
+
 <section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>This page describes the Saferpay JSON application programming interface.</p><p>Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which can be understood by off-the-shelf HTTP clients. JSON will be returned in all responses from the API, including errors.</p></div><div class="col-md-6"><p><strong>Test accounts:</strong></p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="encoding"><h1><a name="encoding"></a>Content Encoding</h1><div class="row"><div class="col-md-6"><p><code>UTF-8</code> must be used for text encoding (there are restrictions on allowed characters for specific fields though).</p><p><code>Content-Type</code> and <code>Accept</code> headers should be set to <code>application/json</code> for server-to-server calls. Redirects use the standard browser types.</p></div><div class="col-md-6"><p>HTTP Headers:</p><p><code>Content-Type: application/json; charset=utf-8</code></p><p><code>Accept: application/json</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p><table class="table">
   <thead>
     <tr>
@@ -302,12 +302,12 @@ the description of resources below.</p><p>Server-to-server calls are a secure wa
 call should always follow after the customer returns back to the shop, to gather
 information about the outcome of e.g. 3D Secure.</p><div class="info">
   <span class="glyphicon glyphicon-info-sign" style="color: rgb(110, 199, 215);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-  <p>  
+  <p>
     <strong>Important:</strong> Saferpay only supports TLS 1.2 and up, for secure connections. Please make sure, that your system is configured accordingly! <a href="https://worldline.com/fr-ch/home/top-navigation/developers/e-commerce-developer/tls-faq.html">More information in our TLS-FAQ.</a>
   </p>
 </div><br><div class="warning">
   <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-  <p>  
+  <p>
     <strong>Important:</strong> The redirect towards the redirectUrl via http-POST <strong>IS NOT</strong> supported. You should always use http-GET, unless specifically stated otherwise!
   </p>
 </div><br><div class="danger">
@@ -317,7 +317,7 @@ information about the outcome of e.g. 3D Secure.</p><div class="info">
   </p>
 </div><br><div class="danger">
   <span class="glyphicon glyphicon-remove-sign" style="color: rgb(224, 122, 105);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-  <p>  
+  <p>
     <strong>Caution:</strong> <strong>DO NOT</strong> implement a polling-process, to poll for the transaction-data. Respond with the necessary request, at the correct time (e.g. doing the assert only, if the SuccessUrl, or NotifyUrl are called). Saferpay reserves the right to otherwise deactivate, or block your account!
   </p>
 </div></div><div class="col-md-6"><p>Server-to-server communication:</p><div class="samples" role="tabpanel">
@@ -575,7 +575,7 @@ if it&#8217;s <code>application/json</code>, then there is an error message pres
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Behavior</strong><br>
 	<span class="text-muted small">
@@ -592,7 +592,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ErrorDetail</strong><br>
 	<span class="text-muted small">
@@ -605,7 +605,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br>
 	<span class="text-muted small">
@@ -621,7 +621,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ErrorName</strong><br>
 	<span class="text-muted small">
@@ -637,7 +637,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -650,7 +650,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PayerMessage</strong><br>
 	<span class="text-muted small">
@@ -663,7 +663,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessorMessage</strong><br>
 	<span class="text-muted small">
@@ -676,7 +676,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessorName</strong><br>
 	<span class="text-muted small">
@@ -689,7 +689,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessorResult</strong><br>
 	<span class="text-muted small">
@@ -702,7 +702,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -719,7 +719,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Risk</strong><br>
 	<span class="text-muted small">
@@ -733,7 +733,7 @@ Possible values: DO_NOT_RETRY, OTHER_MEANS, RETRY, RETRY_LATER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -1013,7 +1013,7 @@ This method can be used to start a transaction with the Payment Page which may i
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br>
 	<span class="text-muted small">
@@ -1027,7 +1027,7 @@ This method can be used to start a transaction with the Payment Page which may i
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br>
 	<span class="text-muted small">
@@ -1041,7 +1041,7 @@ This method can be used to start a transaction with the Payment Page which may i
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br>
 	<span class="text-muted small">
@@ -1055,7 +1055,7 @@ This method can be used to start a transaction with the Payment Page which may i
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Condition</strong><br>
 	<span class="text-muted small">
@@ -1069,7 +1069,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br>
 	<span class="text-muted small">
@@ -1084,7 +1084,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DeliveryAddressForm</strong><br>
 	<span class="text-muted small">
@@ -1098,7 +1098,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
@@ -1112,7 +1112,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br>
 	<span class="text-muted small">
@@ -1126,7 +1126,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -1140,7 +1140,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -1157,7 +1157,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
@@ -1172,7 +1172,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br>
 	<span class="text-muted small">
@@ -1186,7 +1186,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -1200,7 +1200,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -1217,7 +1217,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
@@ -1234,7 +1234,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br>
 	<span class="text-muted small">
@@ -1248,7 +1248,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD,
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -1266,7 +1266,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
@@ -1307,7 +1307,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br>
 	<span class="text-muted small">
@@ -1324,7 +1324,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br>
 	<span class="text-muted small">
@@ -1341,7 +1341,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -1358,7 +1358,7 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -1402,7 +1402,7 @@ Call this function to safely check the status of the transaction from your serve
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -1419,7 +1419,7 @@ Call this function to safely check the status of the transaction from your serve
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -1452,7 +1452,7 @@ Id[1..50]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -1466,7 +1466,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br>
 	<span class="text-muted small">
@@ -1480,7 +1480,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br>
 	<span class="text-muted small">
@@ -1494,7 +1494,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br>
 	<span class="text-muted small">
@@ -1508,7 +1508,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -1522,7 +1522,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -1539,7 +1539,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br>
 	<span class="text-muted small">
@@ -1553,7 +1553,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -1570,7 +1570,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -1661,7 +1661,7 @@ This method may be used to start a transaction which may involve either DCC and 
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br>
 	<span class="text-muted small">
@@ -1675,7 +1675,7 @@ This method may be used to start a transaction which may involve either DCC and 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br>
 	<span class="text-muted small">
@@ -1689,7 +1689,7 @@ This method may be used to start a transaction which may involve either DCC and 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br>
 	<span class="text-muted small">
@@ -1704,7 +1704,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
@@ -1718,7 +1718,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br>
 	<span class="text-muted small">
@@ -1732,7 +1732,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -1746,7 +1746,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -1763,7 +1763,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -1777,7 +1777,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
@@ -1792,7 +1792,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectNotifyUrls</strong><br>
 	<span class="text-muted small">
@@ -1806,7 +1806,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -1823,7 +1823,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
@@ -1840,7 +1840,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br>
 	<span class="text-muted small">
@@ -1854,7 +1854,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
@@ -1868,7 +1868,7 @@ Possible values: AMEX, BANCONTACT, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -1916,7 +1916,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br>
 	<span class="text-muted small">
@@ -1933,7 +1933,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br>
 	<span class="text-muted small">
@@ -1946,7 +1946,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br>
 	<span class="text-muted small">
@@ -1960,7 +1960,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br>
 	<span class="text-muted small">
@@ -1976,7 +1976,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -1993,7 +1993,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -2031,7 +2031,7 @@ This function may be called to authorize a transaction which was started by a ca
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Condition</strong><br>
 	<span class="text-muted small">
@@ -2046,7 +2046,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -2060,7 +2060,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -2077,7 +2077,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -2111,7 +2111,7 @@ Id[1..50]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -2125,7 +2125,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br>
 	<span class="text-muted small">
@@ -2139,7 +2139,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br>
 	<span class="text-muted small">
@@ -2153,7 +2153,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br>
 	<span class="text-muted small">
@@ -2167,7 +2167,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -2181,7 +2181,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -2198,7 +2198,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br>
 	<span class="text-muted small">
@@ -2212,7 +2212,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -2229,7 +2229,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -2305,7 +2305,7 @@ This function may be used to directly authorize transactions which do not requir
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br>
 	<span class="text-muted small">
@@ -2319,7 +2319,7 @@ This function may be used to directly authorize transactions which do not requir
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -2333,7 +2333,7 @@ This function may be used to directly authorize transactions which do not requir
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Initiator</strong><br>
 	<span class="text-muted small">
@@ -2348,7 +2348,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br>
 	<span class="text-muted small">
@@ -2362,7 +2362,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -2376,7 +2376,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -2393,7 +2393,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -2410,7 +2410,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -2424,7 +2424,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -2441,7 +2441,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br>
 	<span class="text-muted small">
@@ -2455,7 +2455,7 @@ Possible values: MERCHANT, PAYER.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -2508,7 +2508,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -2522,7 +2522,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br>
 	<span class="text-muted small">
@@ -2536,7 +2536,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br>
 	<span class="text-muted small">
@@ -2550,7 +2550,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br>
 	<span class="text-muted small">
@@ -2564,7 +2564,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -2578,7 +2578,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -2595,7 +2595,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegistrationResult</strong><br>
 	<span class="text-muted small">
@@ -2609,7 +2609,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -2626,7 +2626,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -2688,7 +2688,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br>
 	<span class="text-muted small">
@@ -2702,7 +2702,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
@@ -2716,7 +2716,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -2733,7 +2733,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -2750,7 +2750,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>SuppressDcc</strong><br>
 	<span class="text-muted small">
@@ -2763,7 +2763,7 @@ This method may be used to perform follow-up authorizations to an earlier transa
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -2781,7 +2781,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -2827,7 +2827,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -2841,7 +2841,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -2855,7 +2855,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -2872,7 +2872,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -2889,7 +2889,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -2957,7 +2957,7 @@ This method may be used to finalize previously authorized transactions and refun
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -2971,7 +2971,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br>
 	<span class="text-muted small">
@@ -2985,7 +2985,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MastercardIssuerInstallments</strong><br>
 	<span class="text-muted small">
@@ -2999,7 +2999,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantFundDistributor</strong><br>
 	<span class="text-muted small">
@@ -3013,7 +3013,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br>
 	<span class="text-muted small">
@@ -3027,7 +3027,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -3044,7 +3044,7 @@ This method may be used to finalize previously authorized transactions and refun
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -3078,7 +3078,7 @@ This method may be used to finalize previously authorized transactions and refun
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
@@ -3093,7 +3093,7 @@ Id[1..64]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -3110,7 +3110,7 @@ Id[1..64]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -3127,7 +3127,7 @@ Id[1..64]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -3168,7 +3168,7 @@ This method may be used to capture multiple parts of an authorized transaction.<
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -3185,7 +3185,7 @@ This method may be used to capture multiple parts of an authorized transaction.<
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Marketplace</strong><br>
 	<span class="text-muted small">
@@ -3199,7 +3199,7 @@ This method may be used to capture multiple parts of an authorized transaction.<
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantFundDistributor</strong><br>
 	<span class="text-muted small">
@@ -3213,7 +3213,7 @@ This method may be used to capture multiple parts of an authorized transaction.<
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderPartId</strong><br>
 	<span class="text-muted small">
@@ -3231,7 +3231,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -3248,7 +3248,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -3265,7 +3265,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -3312,7 +3312,7 @@ Possible values: PARTIAL, FINAL.<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
@@ -3327,7 +3327,7 @@ Id[1..64]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -3344,7 +3344,7 @@ Id[1..64]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -3361,7 +3361,7 @@ Id[1..64]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -3396,7 +3396,7 @@ Possible values: PENDING, CAPTURED.<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureReference</strong><br>
 	<span class="text-muted small">
@@ -3413,7 +3413,7 @@ Possible values: PENDING, CAPTURED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -3447,7 +3447,7 @@ Possible values: PENDING, CAPTURED.<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -3464,7 +3464,7 @@ Possible values: PENDING, CAPTURED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -3479,7 +3479,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -3496,7 +3496,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -3513,7 +3513,7 @@ Possible values: PENDING, CAPTURED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -3547,7 +3547,7 @@ This method may be used to finalize a transaction having one or more partial cap
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -3564,7 +3564,7 @@ This method may be used to finalize a transaction having one or more partial cap
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -3598,7 +3598,7 @@ This method may be used to finalize a transaction having one or more partial cap
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -3628,7 +3628,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureReference</strong><br>
 	<span class="text-muted small">
@@ -3645,7 +3645,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethodsOptions</strong><br>
 	<span class="text-muted small">
@@ -3659,7 +3659,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PendingNotification</strong><br>
 	<span class="text-muted small">
@@ -3673,7 +3673,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Refund</strong><br>
 	<span class="text-muted small">
@@ -3690,7 +3690,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -3730,7 +3730,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -3744,7 +3744,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -3761,7 +3761,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -3778,7 +3778,7 @@ This method may be called to refund a previous transaction.</p></div><div class=
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -3839,7 +3839,7 @@ This method may be used to inquire the status and further information of pending
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -3856,7 +3856,7 @@ This method may be used to inquire the status and further information of pending
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -3890,7 +3890,7 @@ This method may be used to inquire the status and further information of pending
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -3907,7 +3907,7 @@ This method may be used to inquire the status and further information of pending
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -3922,7 +3922,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -3939,7 +3939,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -3956,7 +3956,7 @@ Possible values: PENDING, CAPTURED.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -3993,7 +3993,7 @@ This method may be called to refund an amount to the given means of payment (not
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OriginalCreditTransfer</strong><br>
 	<span class="text-muted small">
@@ -4007,7 +4007,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -4024,7 +4024,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Refund</strong><br>
 	<span class="text-muted small">
@@ -4041,7 +4041,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -4058,7 +4058,7 @@ This method may be called to refund an amount to the given means of payment (not
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -4102,7 +4102,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -4119,7 +4119,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -4136,7 +4136,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -4194,7 +4194,7 @@ This method may be used to cancel previously authorized transactions and refunds
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -4211,7 +4211,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -4245,7 +4245,7 @@ This method may be used to cancel previously authorized transactions and refunds
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -4262,7 +4262,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -4276,7 +4276,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -4293,7 +4293,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -4328,7 +4328,7 @@ This method may be used to cancel previously authorized transactions and refunds
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
@@ -4342,7 +4342,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -4356,7 +4356,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -4373,7 +4373,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -4390,7 +4390,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
@@ -4407,7 +4407,7 @@ This method may be used to cancel previously authorized transactions and refunds
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ServiceProvider</strong><br>
 	<span class="text-muted small">
@@ -4425,7 +4425,7 @@ Possible values: POSTCARD, POSTFINANCE.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
@@ -4439,7 +4439,7 @@ Possible values: POSTCARD, POSTFINANCE.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -4482,7 +4482,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br>
 	<span class="text-muted small">
@@ -4499,7 +4499,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br>
 	<span class="text-muted small">
@@ -4513,7 +4513,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -4530,7 +4530,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -4565,7 +4565,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -4582,7 +4582,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -4615,7 +4615,7 @@ Id[1..50]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -4629,7 +4629,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -4646,7 +4646,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -4663,7 +4663,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -4725,7 +4725,7 @@ This method can be used to get the details of a transaction that has been author
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -4742,7 +4742,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionReference</strong><br>
 	<span class="text-muted small">
@@ -4776,7 +4776,7 @@ This method can be used to get the details of a transaction that has been author
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -4790,7 +4790,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br>
 	<span class="text-muted small">
@@ -4804,7 +4804,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br>
 	<span class="text-muted small">
@@ -4818,7 +4818,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -4832,7 +4832,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -4849,7 +4849,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -4866,7 +4866,7 @@ This method can be used to get the details of a transaction that has been author
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -4933,7 +4933,7 @@ for the payments that before authorization some additional steps such as authent
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
@@ -4950,7 +4950,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br>
 	<span class="text-muted small">
@@ -4964,7 +4964,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -4978,7 +4978,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -4995,7 +4995,7 @@ for the payments that before authorization some additional steps such as authent
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br>
 	<span class="text-muted small">
@@ -5014,7 +5014,7 @@ Possible values: BANCONTACT, BLIK.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethodOptions</strong><br>
 	<span class="text-muted small">
@@ -5028,7 +5028,7 @@ Possible values: BANCONTACT, BLIK.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -5045,7 +5045,7 @@ Possible values: BANCONTACT, BLIK.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RiskFactors</strong><br>
 	<span class="text-muted small">
@@ -5059,7 +5059,7 @@ Possible values: BANCONTACT, BLIK.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -5099,7 +5099,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br>
 	<span class="text-muted small">
@@ -5116,7 +5116,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessingData</strong><br>
 	<span class="text-muted small">
@@ -5130,7 +5130,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -5147,7 +5147,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -5185,7 +5185,7 @@ Call this method to get information about a previously initialized alternative p
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -5202,7 +5202,7 @@ Call this method to get information about a previously initialized alternative p
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -5235,7 +5235,7 @@ Id[1..50]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>FraudPrevention</strong><br>
 	<span class="text-muted small">
@@ -5249,7 +5249,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Liability</strong><br>
 	<span class="text-muted small">
@@ -5263,7 +5263,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -5277,7 +5277,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -5294,7 +5294,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -5311,7 +5311,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -5377,7 +5377,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -5394,7 +5394,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CardNumber</strong><br>
 	<span class="text-muted small">
@@ -5411,7 +5411,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -5428,7 +5428,7 @@ Call this method to provide Dynamic currency conversion (DCC) inquiry details fo
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -5466,7 +5466,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DccAvailable</strong><br>
 	<span class="text-muted small">
@@ -5483,7 +5483,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DccInfo</strong><br>
 	<span class="text-muted small">
@@ -5497,7 +5497,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>DccToken</strong><br>
 	<span class="text-muted small">
@@ -5514,7 +5514,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br>
 	<span class="text-muted small">
@@ -5531,7 +5531,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -5579,7 +5579,7 @@ This function may be used to insert an alias without knowledge about the card de
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CardForm</strong><br>
 	<span class="text-muted small">
@@ -5593,7 +5593,7 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Check</strong><br>
 	<span class="text-muted small">
@@ -5607,7 +5607,7 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br>
 	<span class="text-muted small">
@@ -5621,7 +5621,7 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
@@ -5636,7 +5636,7 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -5650,7 +5650,7 @@ This function may be used to insert an alias without knowledge about the card de
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
@@ -5665,7 +5665,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -5682,7 +5682,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -5699,7 +5699,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ReturnUrl</strong><br>
 	<span class="text-muted small">
@@ -5716,7 +5716,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Styling</strong><br>
 	<span class="text-muted small">
@@ -5730,7 +5730,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -5769,7 +5769,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Expiration</strong><br>
 	<span class="text-muted small">
@@ -5786,7 +5786,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Redirect</strong><br>
 	<span class="text-muted small">
@@ -5800,7 +5800,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectRequired</strong><br>
 	<span class="text-muted small">
@@ -5813,7 +5813,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -5830,7 +5830,7 @@ Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -5870,7 +5870,7 @@ This function can be called up to 24 hours after the transaction was initialized
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -5887,7 +5887,7 @@ This function can be called up to 24 hours after the transaction was initialized
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -5920,7 +5920,7 @@ Id[1..50]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -5937,7 +5937,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br>
 	<span class="text-muted small">
@@ -5951,7 +5951,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -5968,7 +5968,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -5985,7 +5985,7 @@ Id[1..50]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br>
 	<span class="text-muted small">
@@ -6032,7 +6032,7 @@ This method may be used to insert an alias directly with card-data collected by 
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Check</strong><br>
 	<span class="text-muted small">
@@ -6046,7 +6046,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ExternalThreeDS</strong><br>
 	<span class="text-muted small">
@@ -6060,7 +6060,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
@@ -6074,7 +6074,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -6091,7 +6091,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -6108,7 +6108,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6151,7 +6151,7 @@ This method may be used to insert an alias directly with card-data collected by 
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -6168,7 +6168,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br>
 	<span class="text-muted small">
@@ -6182,7 +6182,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -6199,7 +6199,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -6216,7 +6216,7 @@ This method may be used to insert an alias directly with card-data collected by 
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br>
 	<span class="text-muted small">
@@ -6261,7 +6261,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6278,7 +6278,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>UpdateAlias</strong><br>
 	<span class="text-muted small">
@@ -6295,7 +6295,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>UpdatePaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -6336,7 +6336,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -6353,7 +6353,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -6370,7 +6370,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -6387,7 +6387,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br>
 	<span class="text-muted small">
@@ -6432,7 +6432,7 @@ This method may be used to delete previously inserted aliases.</p></div><div cla
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br>
 	<span class="text-muted small">
@@ -6450,7 +6450,7 @@ Id[1..40]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6482,7 +6482,7 @@ Id[1..40]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -6512,7 +6512,7 @@ This method can be used to get the latest details of an alias</p></div><div clas
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>AliasId</strong><br>
 	<span class="text-muted small">
@@ -6530,7 +6530,7 @@ Id[1..40]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6562,7 +6562,7 @@ Id[1..40]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -6579,7 +6579,7 @@ Id[1..40]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>CheckResult</strong><br>
 	<span class="text-muted small">
@@ -6593,7 +6593,7 @@ Id[1..40]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -6610,7 +6610,7 @@ Id[1..40]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -6627,7 +6627,7 @@ Id[1..40]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br>
 	<span class="text-muted small">
@@ -6674,7 +6674,7 @@ This chapter covers the Batch Close via API</p><div class="info">
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6691,7 +6691,7 @@ This chapter covers the Batch Close via API</p><div class="info">
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -6724,7 +6724,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -6754,7 +6754,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -6771,7 +6771,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6788,7 +6788,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br>
 	<span class="text-muted small">
@@ -6823,7 +6823,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -6840,7 +6840,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -6857,7 +6857,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -6905,7 +6905,7 @@ This function may be used to acquire a POS authorized or captured transaction by
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -6920,7 +6920,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>RequestHeader</strong><br>
 	<span class="text-muted small">
@@ -6937,7 +6937,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br>
 	<span class="text-muted small">
@@ -6954,7 +6954,7 @@ Id[1..80]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -6989,7 +6989,7 @@ Numeric[8..8]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Dcc</strong><br>
 	<span class="text-muted small">
@@ -7003,7 +7003,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeans</strong><br>
 	<span class="text-muted small">
@@ -7020,7 +7020,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>ResponseHeader</strong><br>
 	<span class="text-muted small">
@@ -7037,7 +7037,7 @@ Numeric[8..8]<br>
 </td>
 						</tr>
 						<tr>
-							
+
 <td class="col-sm-4 text-right">
 	<strong>Transaction</strong><br>
 	<span class="text-muted small">
@@ -7108,19 +7108,22 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
     <tr>
       <td style="white-space:nowrap;">Saferpay-ApiVersion</td>
       <td>
-        1.50
+        <i class="small text-muted">
+			1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50
+		<br><span>Example: <code>1.50</code></span>
+		</i>
       </td>
       <td>Version number of the interface specification.</td>
     </tr>
     <tr>
       <td style="white-space:nowrap;">Saferpay-RequestId</td>
       <td>
-        <samp style="white-space:nowrap;">Id[1..50]</samp>
+        <samp style="white-space:nowrap;"><i class="small text-muted">Id[1..50]</i></samp>
       </td>
       <td>Id generated by merchant system, for debugging purposes. Should be unique for each new request. If a request is retried due to an error, use the same request id.</td>
     </tr>
   </tbody>
-</table></div><div class="col-md-6"><p>HTTP Headers example:</p><p><code>Saferpay-ApiVersion: 1.50</code></p><p><code>Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_license"><h2><a name="rest_customers_customerId_license"></a>Licensing CustomerLicense</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+</table></div><div class="col-md-6"><p>HTTP Headers example:</p><p><code>Saferpay-ApiVersion: [current Spec-Version]</code></p><p><code>Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b</code></p></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_license"><h2><a name="rest_customers_customerId_license"></a>Licensing CustomerLicense</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This method is used to retrieve the current license configuration for a customer</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/license</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -8084,7 +8087,7 @@ AlphaNumeric[1..2147483647]<br>
 				<table class="table" id="Common_Models_Data_AmountWithoutZero">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CurrencyCode</strong><br>
 	<span class="text-muted small">
@@ -8101,7 +8104,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Value</strong><br>
 	<span class="text-muted small">
@@ -8123,7 +8126,7 @@ AlphaNumeric[1..2147483647]<br>
 				<table class="table" id="Common_Models_Data_AmountWithZero">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CurrencyCode</strong><br>
 	<span class="text-muted small">
@@ -8140,7 +8143,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Value</strong><br>
 	<span class="text-muted small">
@@ -8162,7 +8165,7 @@ AlphaNumeric[1..2147483647]<br>
 				<table class="table" id="Common_Models_Data_BillingAddressForm">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AddressSource</strong><br>
 	<span class="text-muted small">
@@ -8179,7 +8182,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br>
 	<span class="text-muted small">
@@ -8199,7 +8202,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 				<table class="table" id="Common_Models_Data_DeliveryAddressForm">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AddressSource</strong><br>
 	<span class="text-muted small">
@@ -8216,7 +8219,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br>
 	<span class="text-muted small">
@@ -8236,7 +8239,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 				<table class="table" id="Common_Models_Data_Payer">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcceptHeader</strong><br>
 	<span class="text-muted small">
@@ -8250,7 +8253,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br>
 	<span class="text-muted small">
@@ -8264,7 +8267,7 @@ Possible values: CITY, COMPANY, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, PHONE, SALU
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ColorDepth</strong><br>
 	<span class="text-muted small">
@@ -8279,7 +8282,7 @@ Possible values: 1bit, 4bits, 8bits, 15bits, 16bits, 24bits, 32bits, 48bits.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br>
 	<span class="text-muted small">
@@ -8293,7 +8296,7 @@ Possible values: 1bit, 4bits, 8bits, 15bits, 16bits, 24bits, 32bits, 48bits.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -8307,7 +8310,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br>
 	<span class="text-muted small">
@@ -8321,7 +8324,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Ipv6Address</strong><br>
 	<span class="text-muted small">
@@ -8335,7 +8338,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>JavaEnabled</strong><br>
 	<span class="text-muted small">
@@ -8348,7 +8351,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>JavaScriptEnabled</strong><br>
 	<span class="text-muted small">
@@ -8361,7 +8364,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br>
 	<span class="text-muted small">
@@ -8375,7 +8378,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ScreenHeight</strong><br>
 	<span class="text-muted small">
@@ -8389,7 +8392,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ScreenWidth</strong><br>
 	<span class="text-muted small">
@@ -8403,7 +8406,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TimeZoneOffsetMinutes</strong><br>
 	<span class="text-muted small">
@@ -8418,7 +8421,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>UserAgent</strong><br>
 	<span class="text-muted small">
@@ -8437,7 +8440,7 @@ PayerId[1..256]<br>
 				<table class="table" id="Common_Models_Data_PaymentOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AllowPartialAuthorization</strong><br>
 	<span class="text-muted small">
@@ -8450,7 +8453,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PreAuth</strong><br>
 	<span class="text-muted small">
@@ -8468,7 +8471,7 @@ PayerId[1..256]<br>
 				<table class="table" id="Common_Models_Data_RequestAddress">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>City</strong><br>
 	<span class="text-muted small">
@@ -8483,7 +8486,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Company</strong><br>
 	<span class="text-muted small">
@@ -8498,7 +8501,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -8513,7 +8516,7 @@ Alphabetic[2..2]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br>
 	<span class="text-muted small">
@@ -8528,7 +8531,7 @@ Iso3166[1..6]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br>
 	<span class="text-muted small">
@@ -8543,7 +8546,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
@@ -8557,7 +8560,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br>
 	<span class="text-muted small">
@@ -8572,7 +8575,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Gender</strong><br>
 	<span class="text-muted small">
@@ -8587,7 +8590,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastName</strong><br>
 	<span class="text-muted small">
@@ -8602,7 +8605,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Phone</strong><br>
 	<span class="text-muted small">
@@ -8617,7 +8620,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street</strong><br>
 	<span class="text-muted small">
@@ -8632,7 +8635,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
@@ -8647,7 +8650,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Zip</strong><br>
 	<span class="text-muted small">
@@ -8667,7 +8670,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Common_Models_Data_RequestBillingAddress">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>City</strong><br>
 	<span class="text-muted small">
@@ -8682,7 +8685,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Company</strong><br>
 	<span class="text-muted small">
@@ -8697,7 +8700,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -8712,7 +8715,7 @@ Alphabetic[2..2]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br>
 	<span class="text-muted small">
@@ -8727,7 +8730,7 @@ Iso3166[1..6]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br>
 	<span class="text-muted small">
@@ -8742,7 +8745,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
@@ -8756,7 +8759,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br>
 	<span class="text-muted small">
@@ -8771,7 +8774,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Gender</strong><br>
 	<span class="text-muted small">
@@ -8786,7 +8789,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastName</strong><br>
 	<span class="text-muted small">
@@ -8801,7 +8804,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Phone</strong><br>
 	<span class="text-muted small">
@@ -8816,7 +8819,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street</strong><br>
 	<span class="text-muted small">
@@ -8831,7 +8834,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
@@ -8846,7 +8849,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VatNumber</strong><br>
 	<span class="text-muted small">
@@ -8860,7 +8863,7 @@ Utf8[1..25]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Zip</strong><br>
 	<span class="text-muted small">
@@ -8880,7 +8883,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Common_Models_Data_ResponseAddress">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>City</strong><br>
 	<span class="text-muted small">
@@ -8895,7 +8898,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Company</strong><br>
 	<span class="text-muted small">
@@ -8910,7 +8913,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -8925,7 +8928,7 @@ Alphabetic[2..2]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br>
 	<span class="text-muted small">
@@ -8940,7 +8943,7 @@ AlphaNumeric[1..3]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br>
 	<span class="text-muted small">
@@ -8955,7 +8958,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
@@ -8969,7 +8972,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br>
 	<span class="text-muted small">
@@ -8984,7 +8987,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Gender</strong><br>
 	<span class="text-muted small">
@@ -8999,7 +9002,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastName</strong><br>
 	<span class="text-muted small">
@@ -9014,7 +9017,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Phone</strong><br>
 	<span class="text-muted small">
@@ -9029,7 +9032,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street</strong><br>
 	<span class="text-muted small">
@@ -9044,7 +9047,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
@@ -9059,7 +9062,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Zip</strong><br>
 	<span class="text-muted small">
@@ -9079,7 +9082,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Common_Models_Data_ResponseBillingAddress">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>City</strong><br>
 	<span class="text-muted small">
@@ -9094,7 +9097,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Company</strong><br>
 	<span class="text-muted small">
@@ -9109,7 +9112,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -9124,7 +9127,7 @@ Alphabetic[2..2]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountrySubdivisionCode</strong><br>
 	<span class="text-muted small">
@@ -9139,7 +9142,7 @@ AlphaNumeric[1..3]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br>
 	<span class="text-muted small">
@@ -9154,7 +9157,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
@@ -9168,7 +9171,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br>
 	<span class="text-muted small">
@@ -9183,7 +9186,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Gender</strong><br>
 	<span class="text-muted small">
@@ -9198,7 +9201,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastName</strong><br>
 	<span class="text-muted small">
@@ -9213,7 +9216,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Phone</strong><br>
 	<span class="text-muted small">
@@ -9228,7 +9231,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street</strong><br>
 	<span class="text-muted small">
@@ -9243,7 +9246,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street2</strong><br>
 	<span class="text-muted small">
@@ -9258,7 +9261,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VatNumber</strong><br>
 	<span class="text-muted small">
@@ -9272,7 +9275,7 @@ Utf8[1..25]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Zip</strong><br>
 	<span class="text-muted small">
@@ -9292,7 +9295,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Common_Models_Data_SpgBillingAddressForm">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AddressSource</strong><br>
 	<span class="text-muted small">
@@ -9309,7 +9312,7 @@ Possible values: NONE, SAFERPAY, PREFER_PAYMENTMETHOD.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandatoryFields</strong><br>
 	<span class="text-muted small">
@@ -9329,7 +9332,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 				<table class="table" id="Common_Models_Data_SpgPayer">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br>
 	<span class="text-muted small">
@@ -9343,7 +9346,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br>
 	<span class="text-muted small">
@@ -9357,7 +9360,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Ipv6Address</strong><br>
 	<span class="text-muted small">
@@ -9371,7 +9374,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LanguageCode</strong><br>
 	<span class="text-muted small">
@@ -9390,7 +9393,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 				<table class="table" id="Common_RequestHeader">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ClientInfo</strong><br>
 	<span class="text-muted small">
@@ -9404,7 +9407,7 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CustomerId</strong><br>
 	<span class="text-muted small">
@@ -9422,7 +9425,7 @@ Numeric[1..8]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>RequestId</strong><br>
 	<span class="text-muted small">
@@ -9440,7 +9443,7 @@ Id[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>RetryIndicator</strong><br>
 	<span class="text-muted small">
@@ -9458,7 +9461,7 @@ Range: inclusive between 0 and 9<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SpecVersion</strong><br>
 	<span class="text-muted small">
@@ -9481,7 +9484,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 				<table class="table" id="Common_ResponseHeader">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>RequestId</strong><br>
 	<span class="text-muted small">
@@ -9499,7 +9502,7 @@ Id[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SpecVersion</strong><br>
 	<span class="text-muted small">
@@ -9522,7 +9525,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 				<table class="table" id="Payment_Models_AlternativePayment_BancontactPaymentMethodOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AppCompletionRedirectUrl</strong><br>
 	<span class="text-muted small">
@@ -9535,7 +9538,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AppDefaultRedirectUrl</strong><br>
 	<span class="text-muted small">
@@ -9553,7 +9556,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 				<table class="table" id="Payment_Models_AlternativePayment_BlikPaymentMethodOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Code</strong><br>
 	<span class="text-muted small">
@@ -9571,7 +9574,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 				<table class="table" id="Payment_Models_AlternativePayment_PaymentMethodOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Bancontact</strong><br>
 	<span class="text-muted small">
@@ -9585,7 +9588,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Blik</strong><br>
 	<span class="text-muted small">
@@ -9604,7 +9607,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 				<table class="table" id="Payment_Models_CaptureReference">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
@@ -9619,7 +9622,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -9634,7 +9637,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderPartId</strong><br>
 	<span class="text-muted small">
@@ -9649,7 +9652,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -9669,7 +9672,7 @@ AlphaNumeric[1..64]<br>
 				<table class="table" id="Payment_Models_Data_Alias">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -9687,7 +9690,7 @@ Id[1..40]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br>
 	<span class="text-muted small">
@@ -9707,7 +9710,7 @@ Numeric[3..4]<br>
 				<table class="table" id="Payment_Models_Data_AliasAuthenticationResult">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Message</strong><br>
 	<span class="text-muted small">
@@ -9724,7 +9727,7 @@ Numeric[3..4]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Result</strong><br>
 	<span class="text-muted small">
@@ -9741,7 +9744,7 @@ Possible values: OK, NOT_SUPPORTED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Xid</strong><br>
 	<span class="text-muted small">
@@ -9760,7 +9763,7 @@ Possible values: OK, NOT_SUPPORTED.<br>
 				<table class="table" id="Payment_Models_Data_AliasAuthenticationResultBase">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Message</strong><br>
 	<span class="text-muted small">
@@ -9777,7 +9780,7 @@ Possible values: OK, NOT_SUPPORTED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Result</strong><br>
 	<span class="text-muted small">
@@ -9799,7 +9802,7 @@ Possible values: OK, NOT_SUPPORTED.<br>
 				<table class="table" id="Payment_Models_Data_AliasDirectInsertCheck">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -9817,7 +9820,7 @@ Numeric[8..8]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -9840,7 +9843,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 				<table class="table" id="Payment_Models_Data_AliasInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -9857,7 +9860,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br>
 	<span class="text-muted small">
@@ -9879,7 +9882,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 				<table class="table" id="Payment_Models_Data_AliasInsertCheck">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -9897,7 +9900,7 @@ Numeric[8..8]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -9920,7 +9923,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 				<table class="table" id="Payment_Models_Data_AliasInsertCheckResult">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Authentication</strong><br>
 	<span class="text-muted small">
@@ -9934,7 +9937,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
@@ -9948,7 +9951,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Message</strong><br>
 	<span class="text-muted small">
@@ -9965,7 +9968,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Result</strong><br>
 	<span class="text-muted small">
@@ -9987,7 +9990,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 				<table class="table" id="Payment_Models_Data_AliasInsertDirectPaymentMeans">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br>
 	<span class="text-muted small">
@@ -10001,7 +10004,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -10015,7 +10018,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -10029,7 +10032,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br>
 	<span class="text-muted small">
@@ -10048,7 +10051,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 				<table class="table" id="Payment_Models_Data_AliasNotification">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br>
 	<span class="text-muted small">
@@ -10066,7 +10069,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 				<table class="table" id="Payment_Models_Data_AliasPaymentMeansInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -10080,7 +10083,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Brand</strong><br>
 	<span class="text-muted small">
@@ -10097,7 +10100,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -10111,7 +10114,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DisplayText</strong><br>
 	<span class="text-muted small">
@@ -10128,7 +10131,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Twint</strong><br>
 	<span class="text-muted small">
@@ -10142,7 +10145,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br>
 	<span class="text-muted small">
@@ -10161,7 +10164,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 				<table class="table" id="Payment_Models_Data_AlternativePaymentNotification">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br>
 	<span class="text-muted small">
@@ -10175,7 +10178,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerEmail</strong><br>
 	<span class="text-muted small">
@@ -10189,7 +10192,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>StateNotificationUrl</strong><br>
 	<span class="text-muted small">
@@ -10211,7 +10214,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 				<table class="table" id="Payment_Models_Data_AlternativePaymentProcessingData">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Bancontact</strong><br>
 	<span class="text-muted small">
@@ -10230,7 +10233,7 @@ Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
 				<table class="table" id="Payment_Models_Data_ApplePay">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentToken</strong><br>
 	<span class="text-muted small">
@@ -10252,7 +10255,7 @@ Base64 encoded string<br>
 				<table class="table" id="Payment_Models_Data_AuthorizeDirectPaymentMeans">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -10266,7 +10269,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br>
 	<span class="text-muted small">
@@ -10280,7 +10283,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -10294,7 +10297,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -10308,7 +10311,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br>
 	<span class="text-muted small">
@@ -10322,7 +10325,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br>
 	<span class="text-muted small">
@@ -10336,7 +10339,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SchemeToken</strong><br>
 	<span class="text-muted small">
@@ -10355,7 +10358,7 @@ Base64 encoded string<br>
 				<table class="table" id="Payment_Models_Data_BancontactProcessingData">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IntentUrl</strong><br>
 	<span class="text-muted small">
@@ -10368,7 +10371,7 @@ Base64 encoded string<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>QrCodeData</strong><br>
 	<span class="text-muted small">
@@ -10386,7 +10389,7 @@ Base64 encoded string<br>
 				<table class="table" id="Payment_Models_Data_BankAccount">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BIC</strong><br>
 	<span class="text-muted small">
@@ -10401,7 +10404,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10416,7 +10419,7 @@ Iso885915[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IBAN</strong><br>
 	<span class="text-muted small">
@@ -10439,7 +10442,7 @@ AlphaNumeric[1..50]<br>
 				<table class="table" id="Payment_Models_Data_BankAccountBase">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10454,7 +10457,7 @@ Iso885915[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IBAN</strong><br>
 	<span class="text-muted small">
@@ -10477,7 +10480,7 @@ AlphaNumeric[1..50]<br>
 				<table class="table" id="Payment_Models_Data_BankAccountInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BIC</strong><br>
 	<span class="text-muted small">
@@ -10492,7 +10495,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -10506,7 +10509,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10521,7 +10524,7 @@ Iso885915[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IBAN</strong><br>
 	<span class="text-muted small">
@@ -10544,7 +10547,7 @@ AlphaNumeric[1..50]<br>
 				<table class="table" id="Payment_Models_Data_BasicPayment">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -10561,7 +10564,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -10576,7 +10579,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -10594,7 +10597,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br>
 	<span class="text-muted small">
@@ -10614,7 +10617,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_Brand">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Name</strong><br>
 	<span class="text-muted small">
@@ -10631,7 +10634,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br>
 	<span class="text-muted small">
@@ -10650,7 +10653,7 @@ Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, BONUS, DINERS
 				<table class="table" id="Payment_Models_Data_Card">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br>
 	<span class="text-muted small">
@@ -10668,7 +10671,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br>
 	<span class="text-muted small">
@@ -10686,7 +10689,7 @@ Range: inclusive between 2000 and 9999<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10701,7 +10704,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Number</strong><br>
 	<span class="text-muted small">
@@ -10718,7 +10721,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br>
 	<span class="text-muted small">
@@ -10738,7 +10741,7 @@ Numeric[3..4]<br>
 				<table class="table" id="Payment_Models_Data_CardForm">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10758,7 +10761,7 @@ Possible values: NONE, MANDATORY.<br>
 				<table class="table" id="Payment_Models_Data_CardFormInTransactionInitialize">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10773,7 +10776,7 @@ Possible values: NONE, MANDATORY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VerificationCode</strong><br>
 	<span class="text-muted small">
@@ -10793,7 +10796,7 @@ Possible values: NONE, MANDATORY.<br>
 				<table class="table" id="Payment_Models_Data_CardInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -10807,7 +10810,7 @@ Possible values: NONE, MANDATORY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br>
 	<span class="text-muted small">
@@ -10824,7 +10827,7 @@ Possible values: NONE, MANDATORY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br>
 	<span class="text-muted small">
@@ -10841,7 +10844,7 @@ Possible values: NONE, MANDATORY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -10855,7 +10858,7 @@ Possible values: NONE, MANDATORY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderSegment</strong><br>
 	<span class="text-muted small">
@@ -10870,7 +10873,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MaskedNumber</strong><br>
 	<span class="text-muted small">
@@ -10887,7 +10890,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TokenPan</strong><br>
 	<span class="text-muted small">
@@ -10906,7 +10909,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br>
 				<table class="table" id="Payment_Models_Data_ClientInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OsInfo</strong><br>
 	<span class="text-muted small">
@@ -10921,7 +10924,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ShopInfo</strong><br>
 	<span class="text-muted small">
@@ -10941,7 +10944,7 @@ Iso885915[1..100]<br>
 				<table class="table" id="Payment_Models_Data_CustomPlan">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AnnualPercentageRate</strong><br>
 	<span class="text-muted small">
@@ -10954,7 +10957,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>InstallmentFee</strong><br>
 	<span class="text-muted small">
@@ -10968,7 +10971,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>InterestRate</strong><br>
 	<span class="text-muted small">
@@ -10981,7 +10984,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MaximumNumberOfInstallments</strong><br>
 	<span class="text-muted small">
@@ -10997,7 +11000,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MinimumNumberOfInstallments</strong><br>
 	<span class="text-muted small">
@@ -11013,7 +11016,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TotalAmountDue</strong><br>
 	<span class="text-muted small">
@@ -11032,7 +11035,7 @@ Iso885915[1..100]<br>
 				<table class="table" id="Payment_Models_Data_DccInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExchangeRate</strong><br>
 	<span class="text-muted small">
@@ -11049,7 +11052,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Markup</strong><br>
 	<span class="text-muted small">
@@ -11066,7 +11069,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerAmount</strong><br>
 	<span class="text-muted small">
@@ -11088,7 +11091,7 @@ Iso885915[1..100]<br>
 				<table class="table" id="Payment_Models_Data_DccInquiryInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Brand</strong><br>
 	<span class="text-muted small">
@@ -11102,7 +11105,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CardHolderAmount</strong><br>
 	<span class="text-muted small">
@@ -11116,7 +11119,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExchangeRate</strong><br>
 	<span class="text-muted small">
@@ -11130,7 +11133,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Markup</strong><br>
 	<span class="text-muted small">
@@ -11144,7 +11147,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantAmount</strong><br>
 	<span class="text-muted small">
@@ -11158,7 +11161,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Source</strong><br>
 	<span class="text-muted small">
@@ -11177,7 +11180,7 @@ Iso885915[1..100]<br>
 				<table class="table" id="Payment_Models_Data_DccReference">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SelectedCurrencyCode</strong><br>
 	<span class="text-muted small">
@@ -11194,7 +11197,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -11215,7 +11218,7 @@ Iso885915[1..100]<br>
 				<table class="table" id="Payment_Models_Data_DirectDebitInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CreditorId</strong><br>
 	<span class="text-muted small">
@@ -11231,7 +11234,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br>
 	<span class="text-muted small">
@@ -11252,7 +11255,7 @@ Iso885915[1..100]<br>
 				<table class="table" id="Payment_Models_Data_ExternalThreeDsData">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcsTransId</strong><br>
 	<span class="text-muted small">
@@ -11268,7 +11271,7 @@ Iso885915[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthenticationMode</strong><br>
 	<span class="text-muted small">
@@ -11282,7 +11285,7 @@ Possible values: CHALLENGE, FRICTIONLESS.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthenticationTime</strong><br>
 	<span class="text-muted small">
@@ -11300,7 +11303,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthenticationValue</strong><br>
 	<span class="text-muted small">
@@ -11318,7 +11321,7 @@ String length: inclusive between 28 and 28<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DsTransId</strong><br>
 	<span class="text-muted small">
@@ -11334,7 +11337,7 @@ String length: inclusive between 28 and 28<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Eci</strong><br>
 	<span class="text-muted small">
@@ -11351,7 +11354,7 @@ AlphaNumeric[1..2]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Scheme</strong><br>
 	<span class="text-muted small">
@@ -11368,7 +11371,7 @@ Possible values: MASTERCARD, VISA, JCB, DINERS, AMEX.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ThreeDsFullVersion</strong><br>
 	<span class="text-muted small">
@@ -11385,7 +11388,7 @@ Possible values: MASTERCARD, VISA, JCB, DINERS, AMEX.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ThreeDSServerTransId</strong><br>
 	<span class="text-muted small">
@@ -11401,7 +11404,7 @@ Possible values: MASTERCARD, VISA, JCB, DINERS, AMEX.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TransStatus</strong><br>
 	<span class="text-muted small">
@@ -11423,7 +11426,7 @@ Possible values: Y, A, U, I.<br>
 				<table class="table" id="Payment_Models_Data_ForeignRetailerMerchantInformation">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>City</strong><br>
 	<span class="text-muted small">
@@ -11437,7 +11440,7 @@ Utf8[1..13]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
@@ -11452,7 +11455,7 @@ Alphabetic[2..2]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Name</strong><br>
 	<span class="text-muted small">
@@ -11466,7 +11469,7 @@ Utf8[1..14]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Street</strong><br>
 	<span class="text-muted small">
@@ -11480,7 +11483,7 @@ Utf8[1..48]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Zip</strong><br>
 	<span class="text-muted small">
@@ -11499,7 +11502,7 @@ Utf8[1..10]<br>
 				<table class="table" id="Payment_Models_Data_GooglePay">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentToken</strong><br>
 	<span class="text-muted small">
@@ -11520,7 +11523,7 @@ Utf8[1..10]<br>
 				<table class="table" id="Payment_Models_Data_HostedFormStyling">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ContentSecurityEnabled</strong><br>
 	<span class="text-muted small">
@@ -11533,7 +11536,7 @@ Utf8[1..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CssUrl</strong><br>
 	<span class="text-muted small">
@@ -11548,7 +11551,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Theme</strong><br>
 	<span class="text-muted small">
@@ -11568,7 +11571,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 				<table class="table" id="Payment_Models_Data_InsertAliasSupportingPaymentMeans">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -11582,7 +11585,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br>
 	<span class="text-muted small">
@@ -11601,7 +11604,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 				<table class="table" id="Payment_Models_Data_InstallmentOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Initial</strong><br>
 	<span class="text-muted small">
@@ -11622,7 +11625,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 				<table class="table" id="Payment_Models_Data_InstallmentPlan">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AnnualPercentageRate</strong><br>
 	<span class="text-muted small">
@@ -11635,7 +11638,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FirstInstallmentAmount</strong><br>
 	<span class="text-muted small">
@@ -11649,7 +11652,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>InstallmentFee</strong><br>
 	<span class="text-muted small">
@@ -11663,7 +11666,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>InterestRate</strong><br>
 	<span class="text-muted small">
@@ -11676,7 +11679,7 @@ Possible values: DEFAULT, SIX, NONE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>NumberOfInstallments</strong><br>
 	<span class="text-muted small">
@@ -11693,7 +11696,7 @@ Range: inclusive between 2 and 99<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SubsequentInstallmentAmount</strong><br>
 	<span class="text-muted small">
@@ -11707,7 +11710,7 @@ Range: inclusive between 2 and 99<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TotalAmountDue</strong><br>
 	<span class="text-muted small">
@@ -11726,7 +11729,7 @@ Range: inclusive between 2 and 99<br>
 				<table class="table" id="Payment_Models_Data_IssuerReference">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SettlementDate</strong><br>
 	<span class="text-muted small">
@@ -11741,7 +11744,7 @@ String length: inclusive between 4 and 4<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionStamp</strong><br>
 	<span class="text-muted small">
@@ -11764,7 +11767,7 @@ Max length: 50<br>
 				<table class="table" id="Payment_Models_Data_IssuerReferenceInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SettlementDate</strong><br>
 	<span class="text-muted small">
@@ -11777,7 +11780,7 @@ Max length: 50<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionStamp</strong><br>
 	<span class="text-muted small">
@@ -11795,7 +11798,7 @@ Max length: 50<br>
 				<table class="table" id="Payment_Models_Data_KlarnaAttachment">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Body</strong><br>
 	<span class="text-muted small">
@@ -11812,7 +11815,7 @@ Utf8[1..100000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ContentType</strong><br>
 	<span class="text-muted small">
@@ -11834,7 +11837,7 @@ Utf8[1..1000]<br>
 				<table class="table" id="Payment_Models_Data_KlarnaOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Attachment</strong><br>
 	<span class="text-muted small">
@@ -11856,7 +11859,7 @@ Utf8[1..1000]<br>
 				<table class="table" id="Payment_Models_Data_LiabilityInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>InPsd2Scope</strong><br>
 	<span class="text-muted small">
@@ -11870,7 +11873,7 @@ Possible values: YES, NO, UNKNOWN.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LiabilityShift</strong><br>
 	<span class="text-muted small">
@@ -11886,7 +11889,7 @@ Possible values: YES, NO, UNKNOWN.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LiableEntity</strong><br>
 	<span class="text-muted small">
@@ -11903,7 +11906,7 @@ Possible values: MERCHANT, THREEDS.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ThreeDs</strong><br>
 	<span class="text-muted small">
@@ -11922,7 +11925,7 @@ Possible values: MERCHANT, THREEDS.<br>
 				<table class="table" id="Payment_Models_Data_MarketplaceCapture">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Fee</strong><br>
 	<span class="text-muted small">
@@ -11936,7 +11939,7 @@ Possible values: MERCHANT, THREEDS.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FeeRefund</strong><br>
 	<span class="text-muted small">
@@ -11950,7 +11953,7 @@ Possible values: MERCHANT, THREEDS.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SubmerchantId</strong><br>
 	<span class="text-muted small">
@@ -11972,7 +11975,7 @@ Id[1..15]<br>
 				<table class="table" id="Payment_Models_Data_MastercardIssuerInstallmentsOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CustomPlan</strong><br>
 	<span class="text-muted small">
@@ -11986,7 +11989,7 @@ Id[1..15]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>InstallmentPlans</strong><br>
 	<span class="text-muted small">
@@ -12000,7 +12003,7 @@ Id[1..15]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ReceiptFreeText</strong><br>
 	<span class="text-muted small">
@@ -12018,7 +12021,7 @@ Id[1..15]<br>
 				<table class="table" id="Payment_Models_Data_MastercardIssuerInstallmentsSelection">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ChosenPlan</strong><br>
 	<span class="text-muted small">
@@ -12037,7 +12040,7 @@ Id[1..15]<br>
 				<table class="table" id="Payment_Models_Data_MerchantFundDistributorCapture">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ForeignRetailer</strong><br>
 	<span class="text-muted small">
@@ -12056,7 +12059,7 @@ Id[1..15]<br>
 				<table class="table" id="Payment_Models_Data_Notification">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FailNotifyUrl</strong><br>
 	<span class="text-muted small">
@@ -12074,7 +12077,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br>
 	<span class="text-muted small">
@@ -12088,7 +12091,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerDccReceiptEmail</strong><br>
 	<span class="text-muted small">
@@ -12102,7 +12105,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerEmail</strong><br>
 	<span class="text-muted small">
@@ -12116,7 +12119,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SuccessNotifyUrl</strong><br>
 	<span class="text-muted small">
@@ -12139,7 +12142,7 @@ Max length: 2000<br>
 				<table class="table" id="Payment_Models_Data_Order">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Items</strong><br>
 	<span class="text-muted small">
@@ -12161,7 +12164,7 @@ Max length: 2000<br>
 				<table class="table" id="Payment_Models_Data_OrderItem">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CategoryName</strong><br>
 	<span class="text-muted small">
@@ -12176,7 +12179,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -12191,7 +12194,7 @@ Utf8[1..200]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DiscountAmount</strong><br>
 	<span class="text-muted small">
@@ -12205,7 +12208,7 @@ Utf8[1..200]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -12220,7 +12223,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ImageUrl</strong><br>
 	<span class="text-muted small">
@@ -12235,7 +12238,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsPreOrder</strong><br>
 	<span class="text-muted small">
@@ -12249,7 +12252,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Name</strong><br>
 	<span class="text-muted small">
@@ -12264,7 +12267,7 @@ Utf8[1..200]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ProductUrl</strong><br>
 	<span class="text-muted small">
@@ -12279,7 +12282,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Quantity</strong><br>
 	<span class="text-muted small">
@@ -12293,7 +12296,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TaxAmount</strong><br>
 	<span class="text-muted small">
@@ -12307,7 +12310,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TaxRate</strong><br>
 	<span class="text-muted small">
@@ -12322,7 +12325,7 @@ Range: inclusive between 0 and 99999<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -12336,7 +12339,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>UnitPrice</strong><br>
 	<span class="text-muted small">
@@ -12350,7 +12353,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VariantId</strong><br>
 	<span class="text-muted small">
@@ -12370,7 +12373,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Payment_Models_Data_OriginalCreditTransfer">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Recipient</strong><br>
 	<span class="text-muted small">
@@ -12389,7 +12392,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Payment_Models_Data_P2PEnabledPayment">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -12406,7 +12409,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -12421,7 +12424,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Installment</strong><br>
 	<span class="text-muted small">
@@ -12435,7 +12438,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br>
 	<span class="text-muted small">
@@ -12450,7 +12453,7 @@ Id[1..35]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Options</strong><br>
 	<span class="text-muted small">
@@ -12464,7 +12467,7 @@ Id[1..35]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -12482,7 +12485,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br>
 	<span class="text-muted small">
@@ -12497,7 +12500,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br>
 	<span class="text-muted small">
@@ -12516,7 +12519,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_P2PEnabledPaymentMeansInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -12530,7 +12533,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Brand</strong><br>
 	<span class="text-muted small">
@@ -12547,7 +12550,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -12561,7 +12564,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DisplayText</strong><br>
 	<span class="text-muted small">
@@ -12578,7 +12581,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayPal</strong><br>
 	<span class="text-muted small">
@@ -12592,7 +12595,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br>
 	<span class="text-muted small">
@@ -12611,7 +12614,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_PayerInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br>
 	<span class="text-muted small">
@@ -12625,7 +12628,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br>
 	<span class="text-muted small">
@@ -12639,7 +12642,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -12653,7 +12656,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br>
 	<span class="text-muted small">
@@ -12667,7 +12670,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpLocation</strong><br>
 	<span class="text-muted small">
@@ -12686,7 +12689,7 @@ PayerId[1..256]<br>
 				<table class="table" id="Payment_Models_Data_PayerProfile">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Company</strong><br>
 	<span class="text-muted small">
@@ -12700,7 +12703,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br>
 	<span class="text-muted small">
@@ -12715,7 +12718,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DateOfBirth</strong><br>
 	<span class="text-muted small">
@@ -12730,7 +12733,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
@@ -12744,7 +12747,7 @@ AlphaNumeric[10..10]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FirstName</strong><br>
 	<span class="text-muted small">
@@ -12758,7 +12761,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Gender</strong><br>
 	<span class="text-muted small">
@@ -12773,7 +12776,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HasAccount</strong><br>
 	<span class="text-muted small">
@@ -12786,7 +12789,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HasPassword</strong><br>
 	<span class="text-muted small">
@@ -12799,7 +12802,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastLoginDate</strong><br>
 	<span class="text-muted small">
@@ -12814,7 +12817,7 @@ Possible values: MALE, FEMALE, DIVERSE, COMPANY.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastName</strong><br>
 	<span class="text-muted small">
@@ -12828,7 +12831,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PasswordForgotten</strong><br>
 	<span class="text-muted small">
@@ -12841,7 +12844,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PasswordLastChangeDate</strong><br>
 	<span class="text-muted small">
@@ -12856,7 +12859,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Phone</strong><br>
 	<span class="text-muted small">
@@ -12870,7 +12873,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SecondaryEmail</strong><br>
 	<span class="text-muted small">
@@ -12889,7 +12892,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Payment_Models_Data_Payment">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -12906,7 +12909,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -12921,7 +12924,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Installment</strong><br>
 	<span class="text-muted small">
@@ -12935,7 +12938,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br>
 	<span class="text-muted small">
@@ -12950,7 +12953,7 @@ Id[1..35]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Options</strong><br>
 	<span class="text-muted small">
@@ -12964,7 +12967,7 @@ Id[1..35]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -12982,7 +12985,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br>
 	<span class="text-muted small">
@@ -12997,7 +13000,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br>
 	<span class="text-muted small">
@@ -13016,7 +13019,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_PaymentMeans">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -13030,7 +13033,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ApplePay</strong><br>
 	<span class="text-muted small">
@@ -13044,7 +13047,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -13058,7 +13061,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -13072,7 +13075,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>GooglePay</strong><br>
 	<span class="text-muted small">
@@ -13086,7 +13089,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SaferpayFields</strong><br>
 	<span class="text-muted small">
@@ -13100,7 +13103,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SchemeToken</strong><br>
 	<span class="text-muted small">
@@ -13119,7 +13122,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_PaymentMeansInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -13133,7 +13136,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Brand</strong><br>
 	<span class="text-muted small">
@@ -13150,7 +13153,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -13164,7 +13167,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DisplayText</strong><br>
 	<span class="text-muted small">
@@ -13181,7 +13184,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayPal</strong><br>
 	<span class="text-muted small">
@@ -13195,7 +13198,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br>
 	<span class="text-muted small">
@@ -13214,7 +13217,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_PaymentPagePayment">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -13231,7 +13234,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -13249,7 +13252,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Installment</strong><br>
 	<span class="text-muted small">
@@ -13263,7 +13266,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MandateId</strong><br>
 	<span class="text-muted small">
@@ -13278,7 +13281,7 @@ Id[1..35]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Options</strong><br>
 	<span class="text-muted small">
@@ -13292,7 +13295,7 @@ Id[1..35]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -13310,7 +13313,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br>
 	<span class="text-muted small">
@@ -13325,7 +13328,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Recurring</strong><br>
 	<span class="text-muted small">
@@ -13344,7 +13347,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_PaymentTransaction">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br>
 	<span class="text-muted small">
@@ -13358,7 +13361,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br>
 	<span class="text-muted small">
@@ -13372,7 +13375,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -13389,7 +13392,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br>
 	<span class="text-muted small">
@@ -13403,7 +13406,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
@@ -13418,7 +13421,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -13435,7 +13438,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br>
 	<span class="text-muted small">
@@ -13450,7 +13453,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -13467,7 +13470,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
@@ -13481,7 +13484,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -13496,7 +13499,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br>
 	<span class="text-muted small">
@@ -13513,7 +13516,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -13531,7 +13534,7 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -13554,7 +13557,7 @@ Possible values: PAYMENT.<br>
 				<table class="table" id="Payment_Models_Data_PayPalInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
@@ -13570,7 +13573,7 @@ Possible values: PAYMENT.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerId</strong><br>
 	<span class="text-muted small">
@@ -13587,7 +13590,7 @@ Possible values: PAYMENT.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SellerProtectionStatus</strong><br>
 	<span class="text-muted small">
@@ -13610,7 +13613,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br>
 				<table class="table" id="Payment_Models_Data_PendingNotification">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantEmails</strong><br>
 	<span class="text-muted small">
@@ -13624,7 +13627,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>NotifyUrl</strong><br>
 	<span class="text-muted small">
@@ -13646,7 +13649,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br>
 				<table class="table" id="Payment_Models_Data_Phone">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Main</strong><br>
 	<span class="text-muted small">
@@ -13661,7 +13664,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Mobile</strong><br>
 	<span class="text-muted small">
@@ -13676,7 +13679,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Work</strong><br>
 	<span class="text-muted small">
@@ -13696,7 +13699,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Payment_Models_Data_RecurringOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Initial</strong><br>
 	<span class="text-muted small">
@@ -13717,7 +13720,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Payment_Models_Data_Redirect">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMeansRequired</strong><br>
 	<span class="text-muted small">
@@ -13733,7 +13736,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>RedirectUrl</strong><br>
 	<span class="text-muted small">
@@ -13755,7 +13758,7 @@ Utf8[1..100]<br>
 				<table class="table" id="Payment_Models_Data_RedirectNotifyUrls">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Fail</strong><br>
 	<span class="text-muted small">
@@ -13773,7 +13776,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Success</strong><br>
 	<span class="text-muted small">
@@ -13796,7 +13799,7 @@ Max length: 2000<br>
 				<table class="table" id="Payment_Models_Data_Refund">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -13813,7 +13816,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -13828,7 +13831,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -13846,7 +13849,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br>
 	<span class="text-muted small">
@@ -13861,7 +13864,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>RestrictRefundAmountToCapturedAmount</strong><br>
 	<span class="text-muted small">
@@ -13879,7 +13882,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_RefundDirect">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -13896,7 +13899,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -13911,7 +13914,7 @@ Utf8[1..1000]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -13929,7 +13932,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerNote</strong><br>
 	<span class="text-muted small">
@@ -13949,7 +13952,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_RefundDirectSupportingPaymentMeans">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -13963,7 +13966,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BankAccount</strong><br>
 	<span class="text-muted small">
@@ -13977,7 +13980,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -13996,7 +13999,7 @@ Utf8[1..50]<br>
 				<table class="table" id="Payment_Models_Data_RefundTransaction">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br>
 	<span class="text-muted small">
@@ -14010,7 +14013,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br>
 	<span class="text-muted small">
@@ -14024,7 +14027,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -14041,7 +14044,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br>
 	<span class="text-muted small">
@@ -14055,7 +14058,7 @@ Utf8[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
@@ -14070,7 +14073,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -14087,7 +14090,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br>
 	<span class="text-muted small">
@@ -14102,7 +14105,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -14119,7 +14122,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
@@ -14133,7 +14136,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -14148,7 +14151,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br>
 	<span class="text-muted small">
@@ -14165,7 +14168,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -14183,7 +14186,7 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -14206,7 +14209,7 @@ Possible values: REFUND.<br>
 				<table class="table" id="Payment_Models_Data_RegisterAlias">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -14221,7 +14224,7 @@ Id[1..40]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IdGenerator</strong><br>
 	<span class="text-muted small">
@@ -14239,7 +14242,7 @@ Possible values: MANUAL, RANDOM, RANDOM_UNIQUE.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br>
 	<span class="text-muted small">
@@ -14259,7 +14262,7 @@ Range: inclusive between 1 and 1600<br>
 				<table class="table" id="Payment_Models_Data_RegistrationErrorInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ErrorMessage</strong><br>
 	<span class="text-muted small">
@@ -14273,7 +14276,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ErrorName</strong><br>
 	<span class="text-muted small">
@@ -14292,7 +14295,7 @@ Range: inclusive between 1 and 1600<br>
 				<table class="table" id="Payment_Models_Data_RegistrationResult">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Alias</strong><br>
 	<span class="text-muted small">
@@ -14306,7 +14309,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthenticationResult</strong><br>
 	<span class="text-muted small">
@@ -14320,7 +14323,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Error</strong><br>
 	<span class="text-muted small">
@@ -14334,7 +14337,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Success</strong><br>
 	<span class="text-muted small">
@@ -14350,7 +14353,7 @@ Range: inclusive between 1 and 1600<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Tokenization</strong><br>
 	<span class="text-muted small">
@@ -14369,7 +14372,7 @@ Range: inclusive between 1 and 1600<br>
 				<table class="table" id="Payment_Models_Data_ReturnUrl">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Url</strong><br>
 	<span class="text-muted small">
@@ -14392,7 +14395,7 @@ Max length: 2000<br>
 				<table class="table" id="Payment_Models_Data_RiskFactors">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DeliveryType</strong><br>
 	<span class="text-muted small">
@@ -14406,7 +14409,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DeviceFingerprintTransactionId</strong><br>
 	<span class="text-muted small">
@@ -14420,7 +14423,7 @@ Max length: 1024<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsB2B</strong><br>
 	<span class="text-muted small">
@@ -14433,7 +14436,7 @@ Max length: 1024<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerProfile</strong><br>
 	<span class="text-muted small">
@@ -14452,7 +14455,7 @@ Max length: 1024<br>
 				<table class="table" id="Payment_Models_Data_SaferpayFields">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Token</strong><br>
 	<span class="text-muted small">
@@ -14474,7 +14477,7 @@ Id[1..40]<br>
 				<table class="table" id="Payment_Models_Data_SchemeToken">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthValue</strong><br>
 	<span class="text-muted small">
@@ -14488,7 +14491,7 @@ String length: inclusive between 28 and 28<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Eci</strong><br>
 	<span class="text-muted small">
@@ -14502,7 +14505,7 @@ String length: inclusive between 28 and 28<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br>
 	<span class="text-muted small">
@@ -14520,7 +14523,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br>
 	<span class="text-muted small">
@@ -14537,7 +14540,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Number</strong><br>
 	<span class="text-muted small">
@@ -14553,7 +14556,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TokenType</strong><br>
 	<span class="text-muted small">
@@ -14575,7 +14578,7 @@ Possible values: APPLEPAY, GOOGLEPAY, SAMSUNGPAY, CLICKTOPAY, OTHER, MDES, VTS.<
 				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationDirect">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Exemption</strong><br>
 	<span class="text-muted small">
@@ -14589,7 +14592,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExternalThreeDS</strong><br>
 	<span class="text-muted small">
@@ -14603,7 +14606,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
@@ -14622,7 +14625,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS, RECURRING.<br>
 				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationInteractive">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Exemption</strong><br>
 	<span class="text-muted small">
@@ -14636,7 +14639,7 @@ Possible values: LOW_VALUE, TRANSACTION_RISK_ANALYSIS.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ThreeDsChallenge</strong><br>
 	<span class="text-muted small">
@@ -14655,7 +14658,7 @@ Possible values: FORCE.<br>
 				<table class="table" id="Payment_Models_Data_StrongCustomerAuthenticationReferenced">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Exemption</strong><br>
 	<span class="text-muted small">
@@ -14674,7 +14677,7 @@ Possible values: RECURRING.<br>
 				<table class="table" id="Payment_Models_Data_ThreeDsInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Authenticated</strong><br>
 	<span class="text-muted small">
@@ -14690,7 +14693,7 @@ Possible values: RECURRING.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthenticationType</strong><br>
 	<span class="text-muted small">
@@ -14705,7 +14708,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Version</strong><br>
 	<span class="text-muted small">
@@ -14719,7 +14722,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Xid</strong><br>
 	<span class="text-muted small">
@@ -14742,7 +14745,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 				<table class="table" id="Payment_Models_Data_Transaction">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcquirerName</strong><br>
 	<span class="text-muted small">
@@ -14756,7 +14759,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AcquirerReference</strong><br>
 	<span class="text-muted small">
@@ -14770,7 +14773,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -14787,7 +14790,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ApprovalCode</strong><br>
 	<span class="text-muted small">
@@ -14801,7 +14804,7 @@ Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTIO
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureId</strong><br>
 	<span class="text-muted small">
@@ -14816,7 +14819,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Date</strong><br>
 	<span class="text-muted small">
@@ -14833,7 +14836,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DirectDebit</strong><br>
 	<span class="text-muted small">
@@ -14848,7 +14851,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -14865,7 +14868,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IssuerReference</strong><br>
 	<span class="text-muted small">
@@ -14879,7 +14882,7 @@ Id[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -14894,7 +14897,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SixTransactionReference</strong><br>
 	<span class="text-muted small">
@@ -14911,7 +14914,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -14929,7 +14932,7 @@ Possible values: AUTHORIZED, CANCELED, CAPTURED, PENDING.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -14952,7 +14955,7 @@ Possible values: PAYMENT, REFUND.<br>
 				<table class="table" id="Payment_Models_Data_TransactionNotification">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerDccReceiptEmail</strong><br>
 	<span class="text-muted small">
@@ -14971,7 +14974,7 @@ Possible values: PAYMENT, REFUND.<br>
 				<table class="table" id="Payment_Models_Data_TransactionReference">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -14986,7 +14989,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -15006,7 +15009,7 @@ AlphaNumeric[1..64]<br>
 				<table class="table" id="Payment_Models_Data_TransactionTokenPan">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br>
 	<span class="text-muted small">
@@ -15023,7 +15026,7 @@ AlphaNumeric[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br>
 	<span class="text-muted small">
@@ -15040,7 +15043,7 @@ AlphaNumeric[1..64]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MaskedNumber</strong><br>
 	<span class="text-muted small">
@@ -15062,7 +15065,7 @@ AlphaNumeric[1..64]<br>
 				<table class="table" id="Payment_Models_Data_TwintInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CertificateExpirationDate</strong><br>
 	<span class="text-muted small">
@@ -15084,7 +15087,7 @@ AlphaNumeric[1..64]<br>
 				<table class="table" id="Payment_Models_Data_UpdateAlias">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -15102,7 +15105,7 @@ Id[1..40]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Lifetime</strong><br>
 	<span class="text-muted small">
@@ -15122,7 +15125,7 @@ Range: inclusive between 1 and 1600<br>
 				<table class="table" id="Payment_Models_Data_UpdateCreditCard">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br>
 	<span class="text-muted small">
@@ -15140,7 +15143,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br>
 	<span class="text-muted small">
@@ -15163,7 +15166,7 @@ Range: inclusive between 2000 and 9999<br>
 				<table class="table" id="Payment_Models_Data_UpdatePaymentMeans">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Card</strong><br>
 	<span class="text-muted small">
@@ -15185,7 +15188,7 @@ Range: inclusive between 2000 and 9999<br>
 				<table class="table" id="Payment_Models_FraudPrevention">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Result</strong><br>
 	<span class="text-muted small">
@@ -15205,7 +15208,7 @@ Possible values: APPROVED, CHALLENGED.<br>
 				<table class="table" id="Payment_Models_IdealRefund">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AccountHolderName</strong><br>
 	<span class="text-muted small">
@@ -15228,7 +15231,7 @@ Utf8[1..140]<br>
 				<table class="table" id="Payment_Models_PaymentMethodsOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Klarna</strong><br>
 	<span class="text-muted small">
@@ -15247,7 +15250,7 @@ Utf8[1..140]<br>
 				<table class="table" id="Payment_Models_RefundPaymentMethodsOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Ideal</strong><br>
 	<span class="text-muted small">
@@ -15266,7 +15269,7 @@ Utf8[1..140]<br>
 				<table class="table" id="Payment_Models_RiskDetails">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BlockReason</strong><br>
 	<span class="text-muted small">
@@ -15281,7 +15284,7 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpLocation</strong><br>
 	<span class="text-muted small">
@@ -15300,7 +15303,7 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenizationInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Program</strong><br>
 	<span class="text-muted small">
@@ -15313,7 +15316,7 @@ Possible values: BLACKLIST_IP, BLACKLIST_IP_ORIGIN, BLACKLIST_PAYMENT_MEANS, BLA
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -15327,7 +15330,7 @@ Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTE
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TokenPan</strong><br>
 	<span class="text-muted small">
@@ -15346,7 +15349,7 @@ Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTE
 				<table class="table" id="Payment_Models_SecureCardData_Tokenization_TokenPanInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CardImageUrl</strong><br>
 	<span class="text-muted small">
@@ -15359,7 +15362,7 @@ Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTE
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpMonth</strong><br>
 	<span class="text-muted small">
@@ -15373,7 +15376,7 @@ Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTE
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpYear</strong><br>
 	<span class="text-muted small">
@@ -15387,7 +15390,7 @@ Possible values: SUCCESSFUL, FAILED, SCHEME_NOT_SUPPORTED, ACQUIRER_NOT_SUPPORTE
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -15407,7 +15410,7 @@ Possible values: ACTIVE, SUSPENDED, DELETED, ACTIVATION_IN_PROGRESS.<br>
 				<table class="table" id="RestApi_Models_Data_Order">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Items</strong><br>
 	<span class="text-muted small">
@@ -15429,7 +15432,7 @@ Possible values: ACTIVE, SUSPENDED, DELETED, ACTIVATION_IN_PROGRESS.<br>
 				<table class="table" id="RestApi_Models_Data_OrderItem">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CategoryName</strong><br>
 	<span class="text-muted small">
@@ -15444,7 +15447,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -15459,7 +15462,7 @@ Utf8[1..200]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DiscountAmount</strong><br>
 	<span class="text-muted small">
@@ -15473,7 +15476,7 @@ Utf8[1..200]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -15488,7 +15491,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ImageUrl</strong><br>
 	<span class="text-muted small">
@@ -15503,7 +15506,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsPreOrder</strong><br>
 	<span class="text-muted small">
@@ -15517,7 +15520,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Name</strong><br>
 	<span class="text-muted small">
@@ -15532,7 +15535,7 @@ Utf8[1..200]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ProductUrl</strong><br>
 	<span class="text-muted small">
@@ -15547,7 +15550,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Quantity</strong><br>
 	<span class="text-muted small">
@@ -15561,7 +15564,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TaxAmount</strong><br>
 	<span class="text-muted small">
@@ -15575,7 +15578,7 @@ Max length: 2000<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TaxRate</strong><br>
 	<span class="text-muted small">
@@ -15590,7 +15593,7 @@ Range: inclusive between 0 and 99999<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -15604,7 +15607,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>UnitPrice</strong><br>
 	<span class="text-muted small">
@@ -15618,7 +15621,7 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>VariantId</strong><br>
 	<span class="text-muted small">
@@ -15638,7 +15641,7 @@ Utf8[1..100]<br>
 				<table class="table" id="RestApi_Models_Data_PaymentWithOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -15655,7 +15658,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -15673,7 +15676,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Options</strong><br>
 	<span class="text-muted small">
@@ -15687,7 +15690,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -15710,7 +15713,7 @@ Id[1..80]<br>
 				<table class="table" id="RestApi_Models_Data_PaymentWithoutOptions">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Amount</strong><br>
 	<span class="text-muted small">
@@ -15727,7 +15730,7 @@ Id[1..80]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -15745,7 +15748,7 @@ Utf8[1..100]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -15768,7 +15771,7 @@ Id[1..80]<br>
 				<table class="table" id="RestApi_Models_Data_RegisterAlias">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IdGenerator</strong><br>
 	<span class="text-muted small">
@@ -15791,7 +15794,7 @@ Possible values: RANDOM.<br>
 				<table class="table" id="RestApi_Models_Feature">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DisplayName</strong><br>
 	<span class="text-muted small">
@@ -15808,7 +15811,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -15830,7 +15833,7 @@ Possible values: RANDOM.<br>
 				<table class="table" id="RestApi_Models_LicensePackage">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DisplayName</strong><br>
 	<span class="text-muted small">
@@ -15847,7 +15850,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Id</strong><br>
 	<span class="text-muted small">
@@ -15869,7 +15872,7 @@ Possible values: RANDOM.<br>
 				<table class="table" id="RestApi_Models_PaymentMethodInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Currencies</strong><br>
 	<span class="text-muted small">
@@ -15882,7 +15885,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LogoUrl</strong><br>
 	<span class="text-muted small">
@@ -15895,7 +15898,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br>
 	<span class="text-muted small">
@@ -15913,7 +15916,7 @@ Possible values: RANDOM.<br>
 				<table class="table" id="RestApi_Models_TerminalResult">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -15926,7 +15929,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
@@ -15940,7 +15943,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -15953,7 +15956,7 @@ Possible values: RANDOM.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -15967,7 +15970,7 @@ Possible values: ECOM, SPG, MPO.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
@@ -15986,7 +15989,7 @@ Possible values: ECOM, SPG, MPO.<br>
 				<table class="table" id="RestApi_Models_Transactions_AuthorizationDetails">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthorizationDate</strong><br>
 	<span class="text-muted small">
@@ -16003,7 +16006,7 @@ Possible values: ECOM, SPG, MPO.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthorizedBy</strong><br>
 	<span class="text-muted small">
@@ -16019,7 +16022,7 @@ Possible values: ECOM, SPG, MPO.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BIC</strong><br>
 	<span class="text-muted small">
@@ -16033,7 +16036,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>BillingAddress</strong><br>
 	<span class="text-muted small">
@@ -16047,7 +16050,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CancellationDate</strong><br>
 	<span class="text-muted small">
@@ -16061,7 +16064,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CancelledBy</strong><br>
 	<span class="text-muted small">
@@ -16074,7 +16077,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CaptureDate</strong><br>
 	<span class="text-muted small">
@@ -16088,7 +16091,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CapturedBy</strong><br>
 	<span class="text-muted small">
@@ -16101,7 +16104,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CapturedMerchantAmount</strong><br>
 	<span class="text-muted small">
@@ -16118,7 +16121,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CardOrigin</strong><br>
 	<span class="text-muted small">
@@ -16131,7 +16134,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DeliveryAddress</strong><br>
 	<span class="text-muted small">
@@ -16145,7 +16148,7 @@ AlphaNumeric[8..11]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpiryMonth</strong><br>
 	<span class="text-muted small">
@@ -16159,7 +16162,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ExpiryYear</strong><br>
 	<span class="text-muted small">
@@ -16173,7 +16176,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HasCurrencyConversion</strong><br>
 	<span class="text-muted small">
@@ -16189,7 +16192,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HasCVC</strong><br>
 	<span class="text-muted small">
@@ -16205,7 +16208,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HasLiabilityShift</strong><br>
 	<span class="text-muted small">
@@ -16221,7 +16224,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HasPartialCaptures</strong><br>
 	<span class="text-muted small">
@@ -16237,7 +16240,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
@@ -16250,7 +16253,7 @@ Range: inclusive between 1 and 12<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IBAN</strong><br>
 	<span class="text-muted small">
@@ -16264,7 +16267,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsCancelled</strong><br>
 	<span class="text-muted small">
@@ -16280,7 +16283,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsCaptured</strong><br>
 	<span class="text-muted small">
@@ -16296,7 +16299,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsOmniChannel</strong><br>
 	<span class="text-muted small">
@@ -16312,7 +16315,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IsRefunded</strong><br>
 	<span class="text-muted small">
@@ -16328,7 +16331,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LastActionDate</strong><br>
 	<span class="text-muted small">
@@ -16345,7 +16348,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MaskedCardNumber</strong><br>
 	<span class="text-muted small">
@@ -16358,7 +16361,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerAmount</strong><br>
 	<span class="text-muted small">
@@ -16375,7 +16378,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessingAuthCode</strong><br>
 	<span class="text-muted small">
@@ -16388,7 +16391,7 @@ AlphaNumeric[1..50]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>State</strong><br>
 	<span class="text-muted small">
@@ -16406,7 +16409,7 @@ Possible values: AUTHORIZED, CAPTURED, CANCELED.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -16424,7 +16427,7 @@ Possible values: PAYMENT, REFUND.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Wallet</strong><br>
 	<span class="text-muted small">
@@ -16442,7 +16445,7 @@ Possible values: PAYMENT, REFUND.<br>
 				<table class="table" id="RestApi_Models_Transactions_FailedDetails">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>DeclinedBy</strong><br>
 	<span class="text-muted small">
@@ -16460,7 +16463,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FailedDate</strong><br>
 	<span class="text-muted small">
@@ -16477,7 +16480,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MaskedPaymentMethod</strong><br>
 	<span class="text-muted small">
@@ -16490,7 +16493,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethodOrigin</strong><br>
 	<span class="text-muted small">
@@ -16503,7 +16506,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessorErrorCode</strong><br>
 	<span class="text-muted small">
@@ -16516,7 +16519,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>ProcessorErrorText</strong><br>
 	<span class="text-muted small">
@@ -16529,7 +16532,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SaferpayErrorCode</strong><br>
 	<span class="text-muted small">
@@ -16542,7 +16545,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>SaferpayErrorText</strong><br>
 	<span class="text-muted small">
@@ -16560,7 +16563,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 				<table class="table" id="RestApi_Models_Transactions_PendingDetails">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PendingSinceDate</strong><br>
 	<span class="text-muted small">
@@ -16582,7 +16585,7 @@ Possible values: SAFERPAY, ACQUIRER, RISK, CONFIGURATION, THREEDS, FRAUDPREVENTI
 				<table class="table" id="RestApi_Models_Transactions_Transaction">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Application</strong><br>
 	<span class="text-muted small">
@@ -16600,7 +16603,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>AuthorizationDetails</strong><br>
 	<span class="text-muted small">
@@ -16614,7 +16617,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>CustomerId</strong><br>
 	<span class="text-muted small">
@@ -16630,7 +16633,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -16643,7 +16646,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>FailedDetails</strong><br>
 	<span class="text-muted small">
@@ -16657,7 +16660,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br>
 	<span class="text-muted small">
@@ -16671,7 +16674,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>IpOrigin</strong><br>
 	<span class="text-muted small">
@@ -16684,7 +16687,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>MerchantAmount</strong><br>
 	<span class="text-muted small">
@@ -16701,7 +16704,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>OrderId</strong><br>
 	<span class="text-muted small">
@@ -16714,7 +16717,7 @@ Possible values: Json Api, Saferpay Backoffice, Saferpay Payment Page, Saferpay 
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PayerId</strong><br>
 	<span class="text-muted small">
@@ -16728,7 +16731,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethod</strong><br>
 	<span class="text-muted small">
@@ -16745,7 +16748,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>PendingDetails</strong><br>
 	<span class="text-muted small">
@@ -16759,7 +16762,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>Provider</strong><br>
 	<span class="text-muted small">
@@ -16776,7 +16779,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -16792,7 +16795,7 @@ PayerId[1..256]<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TerminalType</strong><br>
 	<span class="text-muted small">
@@ -16807,7 +16810,7 @@ Possible values: ECOM, MPO, SPG.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -16828,7 +16831,7 @@ Possible values: ECOM, MPO, SPG.<br>
 				<table class="table" id="RestApi_Models_WalletInfo">
 					<tbody>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>LogoUrl</strong><br>
 	<span class="text-muted small">
@@ -16841,7 +16844,7 @@ Possible values: ECOM, MPO, SPG.<br>
 </td>
 							</tr>
 							<tr>
-								
+
 <td class="col-sm-4 text-right">
 	<strong>WalletName</strong><br>
 	<span class="text-muted small">
