@@ -866,7 +866,7 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The status of the SecurePayGate offer</div>
 	<i class="small text-muted">
-Possible values: OPEN, PAID, EXPIRED.<br />
+Possible values: OPEN, PAID, EXPIRED, DISABLED.<br />
 				    <span>Example: <code>PAID</code></span>
 			</i>
 </td>
@@ -1133,7 +1133,7 @@ Possible values: ECOM, SPG, MPO.<br />
 ## <a name="rest_customers_customerId_terminals_terminalId_payment-methods"></a>TerminalInfo PaymentMethods
 
 <span class="GET request-method">GET</span><br>
-<strong>DEPRECATED:</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
+<strong>DEPRECATED</strong>: since Version 1.31. Please use instead: /rest/customers/{customerId}/terminals/{terminalId}/
 
 This method is used to retrieve a list of all available payment methods and wallets for a terminal.
 
