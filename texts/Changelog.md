@@ -55,8 +55,8 @@
 -   available on Sandbox: 2026-01-06
 -   introduced version 1.50
 -   added value `1.50` for _SpecVersion_
--   The API response for [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert) is extended with two new values in the BankAccount container: HolderName and IBAN
--   There is a new container in [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) for your Bank account data with HolderName and IBAN which is necessary for PostFinance Instant Payout
+-   added `HolderName` and `IBAN` to the `BankAccount` container in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+-   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) is extended with the new subcontainer `BankAccount`. This is a required container for PostFinance Instant Payout
 
 ## <a name="v1.49.0.0.20251118"></a> Version 1.49 (released 2025-11-18)
 
