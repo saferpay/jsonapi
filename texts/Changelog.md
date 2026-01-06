@@ -52,7 +52,7 @@
 
 ## <a name="v1.50.0.0.20260120"></a> Version 1.50 (released 2026-01-20)
 
--   available on Sandbox: 2026-01-06
+-   available on Sandbox: 2026-01-07
 -   introduced version 1.50
 -   added value `1.50` for _SpecVersion_
 -   added `HolderName` and `IBAN` to the `BankAccount` container in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
