@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+-   [Version 1.50](#v1.50.0.0.20260120)
 -   [Version 1.49](#v1.49.0.0.20251118)
 -   [Version 1.48](#v1.48.0.0.20250916)
 -   [Version 1.47](#v1.47.0.0.20250708)
@@ -48,6 +49,14 @@
 -   [Version 1.6](#v1.6.0.20170404)
 -   [Version 1.5](#v1.5.0.20170207)
 -   [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.50.0.0.20260120"></a> Version 1.50 (released 2026-01-20)
+
+-   available on Sandbox: 2026-01-07
+-   introduced version 1.50
+-   added value `1.50` for _SpecVersion_
+-   added `HolderName` and `IBAN` to the `BankAccount` container in [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+-   [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect) is extended with the new subcontainer `BankAccount`. This is a required container for PostFinance Instant Payout
 
 ## <a name="v1.49.0.0.20251118"></a> Version 1.49 (released 2025-11-18)
 
