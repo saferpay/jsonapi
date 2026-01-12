@@ -5554,7 +5554,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
         string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for Paydirekt transactions or WL Crypto Payments refunds.</div>
+	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for PostFinance Instant Payout.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/pendingnotify</code></span>
 			</i>
