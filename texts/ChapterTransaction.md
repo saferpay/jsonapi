@@ -1623,7 +1623,7 @@ This method may be used to finalize previously authorized transactions and refun
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
+	<div style="padding-bottom: 10px">Optional pending notification capture options for PostFinance Instant Payout transactions.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -1758,7 +1758,7 @@ Id[1..64]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 					</i>
@@ -2046,7 +2046,7 @@ Id[1..64]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 					</i>
@@ -2083,9 +2083,9 @@ Possible values: PENDING, CAPTURED.<br />
 <span class="POST request-method">POST</span><br>
 <div class="warning">
 <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-<p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
+<p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for PostFinance Instant Payout transactions at the moment.</p>
 </div>
-This method is only supported for pending capture transactions (only used for paydirekt at the moment)
+This method is only supported for pending capture transactions (only used for PostFinance Instant Payout at the moment)
 
 --->>>
 
@@ -2235,7 +2235,7 @@ Id[1..80]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 					</i>
@@ -2836,7 +2836,7 @@ Id[1..80]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 					</i>
