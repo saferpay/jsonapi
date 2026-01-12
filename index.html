@@ -3021,7 +3021,7 @@ This method may be used to finalize previously authorized transactions and refun
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional pending notification capture options for Paydirekt transactions.</div>
+	<div style="padding-bottom: 10px">Optional pending notification capture options for PostFinance Instant Payout transactions.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -3137,7 +3137,7 @@ Id[1..64]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 					</i>
@@ -3371,7 +3371,7 @@ Id[1..64]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 					</i>
@@ -3388,7 +3388,7 @@ Possible values: PENDING, CAPTURED.<br>
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="Payment_v1_Transaction_AssertCapture"><h2><a name="Payment_v1_Transaction_AssertCapture"></a>Transaction AssertCapture <span class="label text-mandatory"><a href="https://docs.saferpay.com/home/master/licensing">Available depending on license</a></span></h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br></p><div class="warning">
 <span class="glyphicon glyphicon-exclamation-sign" style="color: rgb(240, 169, 43);font-size: 30px;height: 100%;float: left;margin-right: 15px;margin-top: 0;"></span>
-<p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for paydirekt transactions at the moment.</p>
+<p><strong>Attention:</strong> This method is only supported for pending captures. A pending capture is only applicable for PostFinance Instant Payout transactions at the moment.</p>
 </div></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/Payment/v1/Transaction/AssertCapture</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 			<thead>
 				<tr>
@@ -3506,7 +3506,7 @@ Id[1..80]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 					</i>
@@ -3949,7 +3949,7 @@ Id[1..80]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for paydirekt at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 					</i>
@@ -13634,7 +13634,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br>
         string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for Paydirekt transactions or WL Crypto Payments refunds.</div>
+	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a &#8216;pending&#8217; state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for PostFinance Instant Payout.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/pendingnotify</code></span>
 			</i>
