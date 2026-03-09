@@ -192,7 +192,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
-Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br />
+Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT, PAYPAL.<br />
 				    <span>Example: <code>CARD</code></span>
 			</i>
 </td>
