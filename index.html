@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.50</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.51</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.50</span>
+						<span class="text-primary">JSON API Spec-Version 1.51</span>
 					</h3>
 
 					<ul class="nav">
@@ -129,7 +129,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.50</span>
+								<span class="text-primary">JSON API Spec-Version 1.51</span>
 							</h3>
 						</button>
 
@@ -1166,7 +1166,7 @@ Id[1..20]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Used to restrict the means of payment which are available to the payer for this transaction. If only one payment method id is set, the payment selection step will be skipped.</div>
 	<i class="small text-muted">
-Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIFTCARD, IDEAL, INVOICE, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYPAL, POSTFINANCEPAY, REKA, TWINT, UNIONPAY, VISA, WECHATPAY, WERO.<br>
+Possible values: ACCOUNTTOACCOUNT, ALIPAY, AMEX, BANCONTACT, BLIK, DINERS, CARD, DIRECTDEBIT, EPRZELEWY, EPS, GIFTCARD, IDEAL, JCB, KLARNA, MAESTRO, MASTERCARD, PAYCONIQ, PAYPAL, POSTFINANCEPAY, REKA, TWINT, UNIONPAY, VISA, WECHATPAY, WERO.<br>
 				    <span>Example: <code>[&quot;VISA&quot;, &quot;MASTERCARD&quot;]</code></span>
 			</i>
 </td>
@@ -2496,9 +2496,6 @@ Numeric[8..8]<br>
       &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
       &quot;VerificationCode&quot;: &quot;123&quot;
     }
-  },
-  &quot;Authentication&quot;: {
-    &quot;Exemption&quot;: &quot;RECURRING&quot;
   }
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
@@ -2812,9 +2809,6 @@ Numeric[8..8]<br>
     },
     &quot;Description&quot;: &quot;Test123&quot;,
     &quot;PayerNote&quot;: &quot;Order123_Testshop&quot;
-  },
-  &quot;Authentication&quot;: {
-    &quot;Exemption&quot;: &quot;RECURRING&quot;
   },
   &quot;TransactionReference&quot;: {
     &quot;TransactionId&quot;: &quot;723n4MAjMdhjSAhAKEUdA8jtl9jb&quot;
@@ -5742,7 +5736,7 @@ Possible values: AMEX, DINERS, DIRECTDEBIT, JCB, MAESTRO, MASTERCARD, VISA. Addi
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Type of payment means to register</div>
 	<i class="small text-muted">
-Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT.<br>
+Possible values: CARD, BANK_ACCOUNT, POSTFINANCEPAY, TWINT, PAYPAL.<br>
 				    <span>Example: <code>CARD</code></span>
 			</i>
 </td>
@@ -9470,8 +9464,8 @@ Range: inclusive between 0 and 9<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50<br>
-				    <span>Example: <code>1.50</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br>
+				    <span>Example: <code>1.51</code></span>
 			</i>
 </td>
 							</tr>
@@ -9511,8 +9505,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50<br>
-				    <span>Example: <code>1.50</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br>
+				    <span>Example: <code>1.51</code></span>
 			</i>
 </td>
 							</tr>
@@ -9709,48 +9703,48 @@ Numeric[3..4]<br>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Message</strong><br>
+	<strong>Authenticated</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		        string	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don&#8217;t parse it.</div>
+	<div style="padding-bottom: 10px">Indicates whether Strong Customer Authentication (SCA) was successfully completed.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>Card holder authentication with 3DSv2 successful.</code></span>
-			</i>
-</td>
-							</tr>
-							<tr>
-								
-<td class="col-sm-4 text-right">
-	<strong>Result</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
-	<i class="small text-muted">
-Possible values: OK, NOT_SUPPORTED.<br>
 					</i>
 </td>
 							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Xid</strong><br>
+	<strong>AuthenticationType</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Determines how the cardholder was authenticated during card registration.</div>
+	<i class="small text-muted">
+Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, UNSPECIFIED, NONE.<br>
+				    <span>Example: <code>STRONG_CUSTOMER_AUTHENTICATION</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Message</strong><br>
 	<span class="text-muted small">
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Transaction Id, given by the MPI. References the 3D Secure version 2 process.</div>
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don&#8217;t parse it.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>1ef5b3db-3b97-47df-8272-320d0bd18ab5</code></span>
+				    <span>Example: <code>cardholder authentication with 3DSv2 successful.</code></span>
 			</i>
 </td>
 							</tr>
@@ -9762,7 +9756,23 @@ Possible values: OK, NOT_SUPPORTED.<br>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Message</strong><br>
+	<strong>Authenticated</strong><br>
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        boolean	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates whether Strong Customer Authentication (SCA) was successfully completed.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>AuthenticationType</strong><br>
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
@@ -9770,27 +9780,25 @@ Possible values: OK, NOT_SUPPORTED.<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don&#8217;t parse it.</div>
+	<div style="padding-bottom: 10px">Determines how the cardholder was authenticated during card registration.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>Card holder authentication with 3DSv2 successful.</code></span>
+Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, UNSPECIFIED, NONE.<br>
+				    <span>Example: <code>STRONG_CUSTOMER_AUTHENTICATION</code></span>
 			</i>
 </td>
 							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Result</strong><br>
+	<strong>Message</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don&#8217;t parse it.</div>
 	<i class="small text-muted">
-Possible values: OK, NOT_SUPPORTED.<br>
-					</i>
+				    <span>Example: <code>cardholder authentication with 3DSv2 successful.</code></span>
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -9907,9 +9915,9 @@ Numeric[8..8]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> ONLINE performs an online account check (one transaction point will be billed for such a check)<br> ONLINE_STRONG performs a strong customer authentication (SCA) which involves a 3DS v2 authentication and an online account check (for which one transaction point will be billed)</div>
+	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> <ul><br> <li><strong>ONLINE</strong> performs an online account check (one transaction point will be billed for such a check). </li><br> <li><strong>ONLINE_STRONG</strong> enforces a strong customer authentication (SCA), triggering a 3DS v2 challenge that the payer must complete, plus an online account check (billed as one transaction point).</li><br> <li><strong>ONLINE_CHALLENGED</strong> behaves similarly to ONLINE_STRONG, but prior to registration we check whether a challenge was truly completed because some issuers use frictionless authentication.</li></ul></div>
 	<i class="small text-muted">
-Possible values: ONLINE, ONLINE_STRONG.<br>
+Possible values: ONLINE, ONLINE_STRONG, ONLINE_CHALLENGED.<br>
 				    <span>Example: <code>ONLINE</code></span>
 			</i>
 </td>
@@ -9928,7 +9936,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">More details about the card holder authentication.</div>
+	<div style="padding-bottom: 10px">More details about the cardholder authentication.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -9952,9 +9960,6 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 <td class="col-sm-4 text-right">
 	<strong>Message</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
@@ -9977,7 +9982,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the card check.</div>
 	<i class="small text-muted">
-Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br>
+Possible values: OK, NOT_PERFORMED.<br>
 					</i>
 </td>
 							</tr>
@@ -10843,6 +10848,21 @@ Possible values: NONE, MANDATORY.<br>
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>FundingSource</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">returns the funding source of the card. Only returned for Alias/AssertInsert, Alias/InsertDirect, Alias/Update and Alias/Inquire calls if available.</div>
+	<i class="small text-muted">
+Possible values: UNSPECIFIED, CREDIT, DEBIT, PREPAID.<br>
+				    <span>Example: <code>Credit</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br>
 	<span class="text-muted small">
 		        string	</span>
@@ -10862,7 +10882,7 @@ Possible values: NONE, MANDATORY.<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect and Alias/Update calls if available.</div>
+	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect, Alias/Update and Alias/Inquire calls if available.</div>
 	<i class="small text-muted">
 Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br>
 				    <span>Example: <code>CORPORATE</code></span>
@@ -11441,10 +11461,13 @@ Utf8[1..13]<br>
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br>
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">country code of merchant's location<br> ISO 3166-1 alpha-2 country code<br> if not submitted the container will be ignored</div>
+	<div style="padding-bottom: 10px">country code of merchant's location<br> ISO 3166-1 alpha-2 country code.</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br>
 				    <span>Example: <code>CH</code></span>
@@ -12045,7 +12068,7 @@ Id[1..15]<br>
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px"><br><br>Merchant information required for foreign retailers<br> Mandatory for foreign retailers of an international marketplace</div>
+	<div style="padding-bottom: 10px">Details of foreign retailers on the international marketplace</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -14413,7 +14436,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The customer's Session ID (mastered by DFP Device Fingerprinting), or the event ID if the session is not available</div>
+	<div style="padding-bottom: 10px">The customer's Session ID, or the event ID if the session is not available</div>
 	<i class="small text-muted">
 Max length: 1024<br>
 					</i>
@@ -14684,7 +14707,7 @@ Possible values: RECURRING.<br>
 		        boolean	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Indicates, whether the payer has successfuly authenticated him/herself or not.</div>
+	<div style="padding-bottom: 10px">Indicates, whether the payer has successfully authenticated him/herself or not.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -14700,7 +14723,7 @@ Possible values: RECURRING.<br>
 	<div style="padding-bottom: 10px">Determines how the card holder was authenticated. Some 3D Secure Versions allow a Frictionless authentication.</div>
 	<i class="small text-muted">
 Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTION, NONE.<br>
-				    <span>Example: <code>StrongCustomerAuthentication</code></span>
+				    <span>Example: <code>STRONG_CUSTOMER_AUTHENTICATION</code></span>
 			</i>
 </td>
 							</tr>
@@ -16856,6 +16879,7 @@ Possible values: ECOM, MPO, SPG.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.51.0.0.20260324">Version 1.51</a></li>
 <li><a href="#v1.50.0.0.20260120">Version 1.50</a></li>
 <li><a href="#v1.49.0.0.20251118">Version 1.49</a></li>
 <li><a href="#v1.48.0.0.20250916">Version 1.48</a></li>
@@ -16903,6 +16927,55 @@ Possible values: ECOM, MPO, SPG.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.51.0.0.20260324"><h2><a name="v1.51.0.0.20260324"></a> Version 1.51 (released 2026-03-24)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2026-03-10</li>
+<li>introduced version 1.51</li>
+<li>added value <code>1.51</code> for <em>SpecVersion</em></li>
+<li>added <code>PAYPAL</code> as valid value for field <code>Type</code> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a></li>
+<li>added <code>ONLINE_CHALLENGED</code> as valid value for field <code>Type</code> of container <code>Check</code> in <a href="index.html#Payment_v1_Alias_Insert">Alias/Insert</a></li>
+<li>removed <code>OK_AUTHENTICATED</code> as valid value from field <code>Result</code> of container <code>CheckResult</code>. This affects the responses to following requests:
+<ul>
+<li><a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a></li>
+<li><a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a></li>
+<li><a href="index.html#Payment_v1_Alias_Inquire">Alias/Inquire</a></li>
+</ul>
+</li>
+<li>removed <code>INVOICE</code> as valid value from <code>PaymentMethods</code> in <a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage/Initialize</a></li>
+<li>added fields <code>Authenticated</code> and <code>AuthenticationType</code> to container <code>AuthenticationResult</code>. Removed field <code>Result</code> from container in return. This affects the responses to following requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a></li>
+<li><a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a></li>
+<li><a href="index.html#Payment_v1_Alias_Inquire">Alias/Inquire</a></li>
+</ul>
+</li>
+<li>added field <code>FundingSource</code> to container <code>Card</code> in the responses to following requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction/Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AssertRedirectPayment">Transaction/AssertRedirectPayment</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
+<li><a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a></li>
+<li><a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a></li>
+<li><a href="index.html#Payment_v1_Alias_Update">Alias/Update</a></li>
+<li><a href="index.html#Payment_v1_Alias_Inquire">Alias/Inquire</a></li>
+<li><a href="index.html#Payment_v1_OmniChannel_InsertAlias">OmniChannel/InsertAlias</a></li>
+<li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
+</ul>
+</li>
+<li>field <code>CountryCode</code> in container <code>ForeignRetailer</code> is now mandatory. This affects following requests:
+<ul>
+<li><a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a></li>
+<li><a href="index.html#Payment_v1_Transaction_MultipartCapture">Transaction/MultipartCapture</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.50.0.0.20260120"><h2><a name="v1.50.0.0.20260120"></a> Version 1.50 (released 2026-01-20)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2026-01-07</li>
 <li>introduced version 1.50</li>
