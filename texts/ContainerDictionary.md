@@ -1390,8 +1390,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50<br />
-				    <span>Example: <code>1.50</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br />
+				    <span>Example: <code>1.51</code></span>
 			</i>
 </td>
 							</tr>
@@ -1431,8 +1431,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50<br />
-				    <span>Example: <code>1.50</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br />
+				    <span>Example: <code>1.51</code></span>
 			</i>
 </td>
 							</tr>
@@ -1629,48 +1629,48 @@ Numeric[3..4]<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Message</strong><br />
+	<strong>Authenticated</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
 			</span>
-		        string	</span>
+		        boolean	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
+	<div style="padding-bottom: 10px">Indicates whether Strong Customer Authentication (SCA) was successfully completed.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>Card holder authentication with 3DSv2 successful.</code></span>
-			</i>
-</td>
-							</tr>
-							<tr>
-								
-<td class="col-sm-4 text-right">
-	<strong>Result</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
-	<i class="small text-muted">
-Possible values: OK, NOT_SUPPORTED.<br />
 					</i>
 </td>
 							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Xid</strong><br />
+	<strong>AuthenticationType</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Determines how the cardholder was authenticated during card registration.</div>
+	<i class="small text-muted">
+Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, UNSPECIFIED, NONE.<br />
+				    <span>Example: <code>STRONG_CUSTOMER_AUTHENTICATION</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Message</strong><br />
 	<span class="text-muted small">
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Transaction Id, given by the MPI. References the 3D Secure version 2 process.</div>
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>1ef5b3db-3b97-47df-8272-320d0bd18ab5</code></span>
+				    <span>Example: <code>cardholder authentication with 3DSv2 successful.</code></span>
 			</i>
 </td>
 							</tr>
@@ -1682,7 +1682,23 @@ Possible values: OK, NOT_SUPPORTED.<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Message</strong><br />
+	<strong>Authenticated</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        boolean	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates whether Strong Customer Authentication (SCA) was successfully completed.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>AuthenticationType</strong><br />
 	<span class="text-muted small">
 			<span>
 				<span class="text-mandatory">mandatory</span>,
@@ -1690,27 +1706,25 @@ Possible values: OK, NOT_SUPPORTED.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
+	<div style="padding-bottom: 10px">Determines how the cardholder was authenticated during card registration.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>Card holder authentication with 3DSv2 successful.</code></span>
+Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, UNSPECIFIED, NONE.<br />
+				    <span>Example: <code>STRONG_CUSTOMER_AUTHENTICATION</code></span>
 			</i>
 </td>
 							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>Result</strong><br />
+	<strong>Message</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The result of the card holder authentication.</div>
+	<div style="padding-bottom: 10px">More details, if available. Contents may change at any time, so don’t parse it.</div>
 	<i class="small text-muted">
-Possible values: OK, NOT_SUPPORTED.<br />
-					</i>
+				    <span>Example: <code>cardholder authentication with 3DSv2 successful.</code></span>
+			</i>
 </td>
 							</tr>
 					</tbody>
@@ -1827,9 +1841,9 @@ Numeric[8..8]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> ONLINE performs an online account check (one transaction point will be billed for such a check)<br> ONLINE_STRONG performs a strong customer authentication (SCA) which involves a 3DS v2 authentication and an online account check (for which one transaction point will be billed)</div>
+	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> <ul><br> <li><strong>ONLINE</strong> performs an online account check (one transaction point will be billed for such a check). </li><br> <li><strong>ONLINE_STRONG</strong> enforces a strong customer authentication (SCA), triggering a 3DS v2 challenge that the payer must complete, plus an online account check (billed as one transaction point).</li><br> <li><strong>ONLINE_CHALLENGED</strong> behaves similarly to ONLINE_STRONG, but prior to registration we check whether a challenge was truly completed because some issuers use frictionless authentication.</li></div>
 	<i class="small text-muted">
-Possible values: ONLINE, ONLINE_STRONG.<br />
+Possible values: ONLINE, ONLINE_STRONG, ONLINE_CHALLENGED.<br />
 				    <span>Example: <code>ONLINE</code></span>
 			</i>
 </td>
@@ -1848,7 +1862,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">More details about the card holder authentication.</div>
+	<div style="padding-bottom: 10px">More details about the cardholder authentication.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -1872,9 +1886,6 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 <td class="col-sm-4 text-right">
 	<strong>Message</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
@@ -1897,7 +1908,7 @@ Possible values: ONLINE, ONLINE_STRONG.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The result of the card check.</div>
 	<i class="small text-muted">
-Possible values: OK, OK_AUTHENTICATED, NOT_PERFORMED.<br />
+Possible values: OK, NOT_PERFORMED.<br />
 					</i>
 </td>
 							</tr>
@@ -2763,6 +2774,21 @@ Possible values: NONE, MANDATORY.<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>FundingSource</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">returns the funding source of the card. Only returned for Alias/AssertInsert, Alias/InsertDirect, Alias/Update and Alias/Inquire calls if available.</div>
+	<i class="small text-muted">
+Possible values: UNSPECIFIED, CREDIT, DEBIT, PREPAID.<br />
+				    <span>Example: <code>Credit</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>HolderName</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -2782,7 +2808,7 @@ Possible values: NONE, MANDATORY.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect and Alias/Update calls if available.</div>
+	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect, Alias/Update and Alias/Inquire calls if available.</div>
 	<i class="small text-muted">
 Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 				    <span>Example: <code>CORPORATE</code></span>
@@ -3361,10 +3387,13 @@ Utf8[1..13]<br />
 <td class="col-sm-4 text-right">
 	<strong>CountryCode</strong><br />
 	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">country code of merchant's location<br> ISO 3166-1 alpha-2 country code<br> if not submitted the container will be ignored</div>
+	<div style="padding-bottom: 10px">country code of merchant's location<br> ISO 3166-1 alpha-2 country code.</div>
 	<i class="small text-muted">
 Alphabetic[2..2]<br />
 				    <span>Example: <code>CH</code></span>
@@ -3965,7 +3994,7 @@ Id[1..15]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px"><br><br>Merchant information required for foreign retailers<br> Mandatory for foreign retailers of an international marketplace</div>
+	<div style="padding-bottom: 10px">Details of foreign retailers on the international marketplace</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -6333,7 +6362,7 @@ Possible values: EMAIL, SHOP, HOMEDELIVERY, PICKUP, HQ.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The customer's Session ID (mastered by DFP Device Fingerprinting), or the event ID if the session is not available</div>
+	<div style="padding-bottom: 10px">The customer's Session ID, or the event ID if the session is not available</div>
 	<i class="small text-muted">
 Max length: 1024<br />
 					</i>
@@ -6604,7 +6633,7 @@ Possible values: RECURRING.<br />
 		        boolean	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Indicates, whether the payer has successfuly authenticated him/herself or not.</div>
+	<div style="padding-bottom: 10px">Indicates, whether the payer has successfully authenticated him/herself or not.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -6620,7 +6649,7 @@ Possible values: RECURRING.<br />
 	<div style="padding-bottom: 10px">Determines how the card holder was authenticated. Some 3D Secure Versions allow a Frictionless authentication.</div>
 	<i class="small text-muted">
 Possible values: STRONG_CUSTOMER_AUTHENTICATION, FRICTIONLESS, ATTEMPT, EXEMPTION, NONE.<br />
-				    <span>Example: <code>StrongCustomerAuthentication</code></span>
+				    <span>Example: <code>STRONG_CUSTOMER_AUTHENTICATION</code></span>
 			</i>
 </td>
 							</tr>
