@@ -238,7 +238,7 @@
         "Target": "index.html#rest_customers_customerId_license-configuration"
       },
       {
-        "Title": "PaymentPage GetConfigurations",
+        "Title": "PaymentPageConfig GetConfigurations",
         "Source": "texts/ChapterManagementApi.md",
         "Target": "index.html#rest_customers_customerId_payment-page_configurations"
       },
