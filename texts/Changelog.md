@@ -64,6 +64,15 @@
 - added `MastercardTLID` to the `IssuerReference` container in the following requests:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
+    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    - [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert)
+    - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+    - [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
+    - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 - removed `PayerId` from the `PayPal` container in the following requests:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
