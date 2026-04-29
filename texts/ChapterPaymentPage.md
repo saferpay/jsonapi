@@ -99,10 +99,11 @@ This method can be used to start a transaction with the Payment Page which may i
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>Liability</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: NONE (empty)</div>
+	<div style="padding-bottom: 10px">The ThreeDS condition is checked before authorization. If omitted, authorization proceeds and may be approved with or without a liability shift to the issuer. This condition is ignored for brands for which Saferpay does not offer 3D Secure.<br> <ul><br> <li><strong>THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED:</strong>Authorization will be performed if the 3D Secure process indicates that a liability shift to the issuer is possible; however, the liability shift may still be declined during authorization.</li><br> <li><strong>WITH_SUCCESSFUL_THREE_DS_CHALLENGE:</strong> It will be checked whether a challenge (active authentication) was <strong>successfully</strong> completed by the payer. Using this condition automatically enforces a challenge as well (as if <i>Authentication.ThreeDsChallenge</i> were set to <i>FORCE</i>).</li><br> </ul></div>
 	<i class="small text-muted">
-Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
-					</i>
+Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br />
+				    <span>Example: <code>WITH_SUCCESSFUL_THREE_DS_CHALLENGE</code></span>
+			</i>
 </td>
 						</tr>
 						<tr>
@@ -338,8 +339,8 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br />
       "Value": "100",
       "CurrencyCode": "CHF"
     },
-    "OrderId": "Id of the order",
-    "Description": "Description of payment"
+    "OrderId": "[Id of the order]",
+    "Description": "[Description of payment - will be displayed in Payment page]"
   },
   "ReturnUrl": {
     "Url": "[your shop payment url]"

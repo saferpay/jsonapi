@@ -532,7 +532,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -731,7 +731,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -944,7 +944,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -1143,7 +1143,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -1390,8 +1390,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br />
-				    <span>Example: <code>1.51</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52<br />
+				    <span>Example: <code>1.52</code></span>
 			</i>
 </td>
 							</tr>
@@ -1431,8 +1431,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br />
-				    <span>Example: <code>1.51</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52<br />
+				    <span>Example: <code>1.52</code></span>
 			</i>
 </td>
 							</tr>
@@ -1841,7 +1841,7 @@ Numeric[8..8]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> <ul><br> <li><strong>ONLINE</strong> performs an online account check (one transaction point will be billed for such a check). </li><br> <li><strong>ONLINE_STRONG</strong> enforces a strong customer authentication (SCA), triggering a 3DS v2 challenge that the payer must complete, plus an online account check (billed as one transaction point).</li><br> <li><strong>ONLINE_CHALLENGED</strong> behaves similarly to ONLINE_STRONG, but prior to registration we check whether a challenge was truly completed because some issuers use frictionless authentication.</li></div>
+	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> <ul><br> <li><strong>ONLINE</strong> performs an online account check (one transaction point will be billed for such a check). </li><br> <li><strong>ONLINE_STRONG</strong> enforces a strong customer authentication (SCA), triggering a 3DS v2 challenge that the payer must complete, plus an online account check (billed as one transaction point).</li><br> <li><strong>ONLINE_CHALLENGED</strong> behaves similarly to ONLINE_STRONG, but prior to registration we check whether a challenge was truly completed because some issuers use frictionless authentication.</li><br> </ul></div>
 	<i class="small text-muted">
 Possible values: ONLINE, ONLINE_STRONG, ONLINE_CHALLENGED.<br />
 				    <span>Example: <code>ONLINE</code></span>
@@ -3677,6 +3677,21 @@ Range: inclusive between 2 and 99<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>MastercardTLID</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mastercard Transaction Link ID (TLID) is a unique identifier generated by Mastercard for each payment. It is used in all subsequent actions related to the original payment, including Merchant Initiated Transactions (MIT).<br> TLID is a 22-character, case-sensitive UUID made up of uppercase and lowercase alphabetic, numeric, and special characters in random order, with no spaces allowed.</div>
+	<i class="small text-muted">
+String length: inclusive between 22 and 22<br />
+				    <span>Example: <code>bWyZ3Ci-981f6MvBGa_tM1</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>SettlementDate</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -3712,6 +3727,20 @@ Max length: 50<br />
 				<h2>Container "Payment_Models_Data_IssuerReferenceInfo"</h2>
 				<table class="table" id="Payment_Models_Data_IssuerReferenceInfo">
 					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>MastercardTLID</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mastercard Transaction Link ID (TLID) is a unique identifier generated by Mastercard for each payment. It is used in all subsequent actions related to the original payment, including Merchant Initiated Transactions (MIT).<br> TLID is a 22-character, case-sensitive UUID made up of uppercase and lowercase alphabetic, numeric, and special characters in random order, with no spaces allowed.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>bWyZ3Ci-981f6MvBGa_tM1</code></span>
+			</i>
+</td>
+							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
@@ -5521,23 +5550,6 @@ Possible values: PAYMENT.<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>PayerId</strong><br />
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">PayerId from PayPal</div>
-	<i class="small text-muted">
-				    <span>Example: <code>5b9aefc5-9b48-4a95-ae47-cda20420d68e</code></span>
-			</i>
-</td>
-							</tr>
-							<tr>
-								
-<td class="col-sm-4 text-right">
 	<strong>SellerProtectionStatus</strong><br />
 	<span class="text-muted small">
 			<span>
@@ -5605,7 +5617,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
 	<div style="padding-bottom: 10px">The payer's main phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -5620,7 +5632,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's mobile number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 79 345 6789</code></span>
+				    <span>Example: <code>+41793456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -5635,7 +5647,7 @@ Utf8[1..100]<br />
 	<div style="padding-bottom: 10px">The payer's work phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br />
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -7852,6 +7864,50 @@ Possible values: RANDOM.<br />
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the payment method</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+				<h2>Container "RestApi_Models_PaymentPageConfigResult"</h2>
+				<table class="table" id="RestApi_Models_PaymentPageConfigResult">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Description</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of PaymentPage Configuration</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>IsDefault</strong><br />
+	<span class="text-muted small">
+		        boolean	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates if the configuration is the default configuration for the customer<br> The configuration marked as "Default" is used as the default setting even if no payment page configuration was specified in the call.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Name</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of PaymentPage Configuration (parameter for the request)</div>
 	<i class="small text-muted">
 					</i>
 </td>
