@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Version 1.52](#v1.52.0.0.20260429)
 - [Version 1.51](#v1.51.0.0.20260324)
 - [Version 1.50](#v1.50.0.0.20260120)
 - [Version 1.49](#v1.49.0.0.20251118)
@@ -50,6 +51,30 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.52.0.0.20260429"></a> Version 1.52 (released 2026-05-12)
+
+- available on Sandbox: 2026-04-28
+- introduced version 1.52
+- added value `1.52` for _SpecVersion_
+- added [PaymentPage GetConfigurations](index.html#rest_customers_customerId_payment-page_configurations) method to Saferpay Management API
+- added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` as valid value for the field `Condition` in following requests:
+    - [PaymentPage Initialize](index.html#Payment_v1_PaymentPage_Initialize)
+    - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
+- added `MastercardTLID` to the `IssuerReference` container in following requests:
+    - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
+- removed `PayerId` from the `PayPal` container in following requests:
+    - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
+    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+    - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 
 ## <a name="v1.51.0.0.20260324"></a> Version 1.51 (released 2026-03-24)
 
