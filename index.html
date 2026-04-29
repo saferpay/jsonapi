@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.51</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.52</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.51</span>
+						<span class="text-primary">JSON API Spec-Version 1.52</span>
 					</h3>
 
 					<ul class="nav">
@@ -129,7 +129,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.51</span>
+								<span class="text-primary">JSON API Spec-Version 1.52</span>
 							</h3>
 						</button>
 
@@ -1062,10 +1062,11 @@ This method can be used to start a transaction with the Payment Page which may i
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Condition for Authorization (only 3DSv2), to control, whether or not, transactions without LiabilityShift should be accepted. <strong>Important Note:</strong> This only filters out transactions, where the condition is conclusive <strong>before</strong> the authorization itself. It is possible, that LiabilityShift is rejected after the authorization. Please always check the <strong>Liability</strong> container, within the authorization-response, to be 100% sure, if LiabilityShift applies, or not!<br> Default: NONE (empty)</div>
+	<div style="padding-bottom: 10px">The ThreeDS condition is checked before authorization. If omitted, authorization proceeds and may be approved with or without a liability shift to the issuer. This condition is ignored for brands for which Saferpay does not offer 3D Secure.<br> <ul><br> <li><strong>THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED:</strong>Authorization will be performed if the 3D Secure process indicates that a liability shift to the issuer is possible; however, the liability shift may still be declined during authorization.</li><br> <li><strong>WITH_SUCCESSFUL_THREE_DS_CHALLENGE:</strong> It will be checked whether a challenge (active authentication) was <strong>successfully</strong> completed by the payer. Using this condition automatically enforces a challenge as well (as if <i>Authentication.ThreeDsChallenge</i> were set to <i>FORCE</i>).</li><br> </ul></div>
 	<i class="small text-muted">
-Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
-					</i>
+Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br>
+				    <span>Example: <code>WITH_SUCCESSFUL_THREE_DS_CHALLENGE</code></span>
+			</i>
 </td>
 						</tr>
 						<tr>
@@ -1293,8 +1294,8 @@ Possible values: APPLEPAY, GOOGLEPAY, CLICKTOPAY.<br>
       &quot;Value&quot;: &quot;100&quot;,
       &quot;CurrencyCode&quot;: &quot;CHF&quot;
     },
-    &quot;OrderId&quot;: &quot;Id of the order&quot;,
-    &quot;Description&quot;: &quot;Description of payment&quot;
+    &quot;OrderId&quot;: &quot;[Id of the order]&quot;,
+    &quot;Description&quot;: &quot;[Description of payment - will be displayed in Payment page]&quot;
   },
   &quot;ReturnUrl&quot;: {
     &quot;Url&quot;: &quot;[your shop payment url]&quot;
@@ -2038,10 +2039,10 @@ This function may be called to authorize a transaction which was started by a ca
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
+	<div style="padding-bottom: 10px">The ThreeDS condition is checked before authorization. If omitted, authorization proceeds and may be approved with or without a liability shift to the issuer. This condition is ignored for brands for which Saferpay does not offer 3D Secure.<br> <ul><br> <li><strong>THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED:</strong>Authorization will be performed if the 3D Secure process indicates that a liability shift to the issuer is possible; however, the liability shift may still be declined during authorization.</li><br> <li><strong>WITH_SUCCESSFUL_THREE_DS_CHALLENGE:</strong> It will be checked whether a challenge (active authentication) was <strong>successfully</strong> completed by the payer. It is strongly recommended to set <i>Authentication.ThreeDsChallenge</i> to <i>FORCE</i>, as otherwise the issuer may decide to authenticate the payer without challenge.</li><br> </ul></div>
 	<i class="small text-muted">
-Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br>
-				    <span>Example: <code>NONE</code></span>
+Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br>
+				    <span>Example: <code>WITH_SUCCESSFUL_THREE_DS_CHALLENGE</code></span>
 			</i>
 </td>
 						</tr>
@@ -2101,8 +2102,7 @@ Id[1..50]<br>
     &quot;RequestId&quot;: &quot;[unique request id]&quot;,
     &quot;RetryIndicator&quot;: 0
   },
-  &quot;Token&quot;: &quot;sdu5ymxx210y2dz1ggig2ey0o&quot;,
-  &quot;VerificationCode&quot;: &quot;123&quot;
+  &quot;Token&quot;: &quot;sdu5ymxx210y2dz1ggig2ey0o&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 			<thead>
@@ -2269,9 +2269,9 @@ Id[1..50]<br>
       &quot;PaymentMethod&quot;: &quot;VISA&quot;,
       &quot;Name&quot;: &quot;VISA Saferpay Test&quot;
     },
-    &quot;DisplayText&quot;: &quot;9123 45xx xxxx 1234&quot;,
+    &quot;DisplayText&quot;: &quot;xxxx xxxx xxxx 1234&quot;,
     &quot;Card&quot;: {
-      &quot;MaskedNumber&quot;: &quot;912345xxxxxx1234&quot;,
+      &quot;MaskedNumber&quot;: &quot;91234582xxxx1234&quot;,
       &quot;ExpYear&quot;: 2015,
       &quot;ExpMonth&quot;: 9,
       &quot;HolderName&quot;: &quot;Max Mustermann&quot;,
@@ -2287,7 +2287,9 @@ Id[1..50]<br>
     &quot;LiableEntity&quot;: &quot;THREEDS&quot;,
     &quot;ThreeDs&quot;: {
       &quot;Authenticated&quot;: true,
-      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;
+      &quot;Xid&quot;: &quot;ARkvCgk5Y1t/BDFFXkUPGX9DUgs=&quot;,
+      &quot;Version&quot;: 2,
+      &quot;AuthenticationType&quot;: &quot;STRONG_CUSTOMER_AUTHENTICATION&quot;
     }
   }
 }
@@ -7124,6 +7126,7 @@ This method is used to retrieve the current license configuration for a customer
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Features</strong><br>
 	<span class="text-muted small">
@@ -7140,6 +7143,7 @@ This method is used to retrieve the current license configuration for a customer
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Package</strong><br>
 	<span class="text-muted small">
@@ -7181,6 +7185,7 @@ This method is used to retrieve the current license configuration for a customer
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Features</strong><br>
 	<span class="text-muted small">
@@ -7197,6 +7202,7 @@ This method is used to retrieve the current license configuration for a customer
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Package</strong><br>
 	<span class="text-muted small">
@@ -7228,6 +7234,48 @@ This method is used to retrieve the current license configuration for a customer
     }
   ]
 }
+</pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_payment-page_configurations"><h2><a name="rest_customers_customerId_payment-page_configurations"></a>PaymentPageConfig GetConfigurations</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
+This method is used to retrieve all terminals</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/payment-page/configurations</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+</table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
+</pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tbody><tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>Configurations</strong><br>
+	<span class="text-muted small">
+		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentPageConfigResult">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of PaymentPage configurations</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+</tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
+                &quot;Configurations&quot;: [
+                    {
+                        &quot;name&quot;:&quot;default&quot;,
+                        &quot;isDefault&quot;: true&quot;,
+                        &quot;Description&quot;: &quot;Default Configuration&quot;
+                    },
+                    {
+                        &quot;name&quot;:&quot;special&quot;,
+                        &quot;isDefault&quot;: false&quot;,
+                        &quot;Description&quot;: &quot;Special Payment Page Configuration&quot;
+                    },
+                    {
+                        &quot;name&quot;:&quot;event&quot;,
+                        &quot;isDefault&quot;: false&quot;,
+                        &quot;Description&quot;: &quot;Special Payment Page Configuration for Events&quot;
+                    }
+                ]
+            }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_terminals_terminalId_fields-access-tokens"><h2><a name="rest_customers_customerId_terminals_terminalId_fields-access-tokens"></a>SaferpayFieldsAccessToken CreateAccessToken</h2><div class="row"><div class="col-md-6"><p><span class="POST request-method">POST</span><br>
 Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fields into web pages and is restricted to the given customerId, terminalId and URL(s).</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/fields-access-tokens</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><table class="table">
 			<thead>
@@ -7236,6 +7284,7 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -7252,6 +7301,7 @@ Utf8[1..128]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>SourceUrls</strong><br>
 	<span class="text-muted small">
@@ -7281,6 +7331,7 @@ Utf8[1..128]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>AccessToken</strong><br>
 	<span class="text-muted small">
@@ -7313,6 +7364,7 @@ This function may be used to create a single use payment link</p></div><div clas
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br>
 	<span class="text-muted small">
@@ -7326,6 +7378,7 @@ This function may be used to create a single use payment link</p></div><div clas
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Condition</strong><br>
 	<span class="text-muted small">
@@ -7340,6 +7393,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUC
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br>
 	<span class="text-muted small">
@@ -7354,6 +7408,7 @@ Id[1..20]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br>
 	<span class="text-muted small">
@@ -7371,6 +7426,7 @@ AlphaNumeric[10..25]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>MaxPaymentAttempts</strong><br>
 	<span class="text-muted small">
@@ -7383,6 +7439,7 @@ AlphaNumeric[10..25]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br>
 	<span class="text-muted small">
@@ -7396,6 +7453,7 @@ AlphaNumeric[10..25]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br>
 	<span class="text-muted small">
@@ -7412,6 +7470,7 @@ AlphaNumeric[10..25]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -7428,6 +7487,7 @@ AlphaNumeric[10..25]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br>
 	<span class="text-muted small">
@@ -7474,6 +7534,7 @@ AlphaNumeric[10..25]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br>
 	<span class="text-muted small">
@@ -7490,6 +7551,7 @@ AlphaNumeric[10..25]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br>
 	<span class="text-muted small">
@@ -7519,6 +7581,7 @@ This function may be used to fetch the status of a previously created single use
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br>
 	<span class="text-muted small">
@@ -7532,6 +7595,7 @@ This function may be used to fetch the status of a previously created single use
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br>
 	<span class="text-muted small">
@@ -7545,6 +7609,7 @@ This function may be used to fetch the status of a previously created single use
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br>
 	<span class="text-muted small">
@@ -7558,6 +7623,7 @@ This function may be used to fetch the status of a previously created single use
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br>
 	<span class="text-muted small">
@@ -7571,6 +7637,7 @@ This function may be used to fetch the status of a previously created single use
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br>
 	<span class="text-muted small">
@@ -7584,6 +7651,7 @@ This function may be used to fetch the status of a previously created single use
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br>
 	<span class="text-muted small">
@@ -7598,6 +7666,7 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br>
 	<span class="text-muted small">
@@ -7638,6 +7707,7 @@ This method is used to retrieve details of one terminal</p></div><div class="col
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br>
 	<span class="text-muted small">
@@ -7650,6 +7720,7 @@ This method is used to retrieve details of one terminal</p></div><div class="col
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
@@ -7663,6 +7734,7 @@ This method is used to retrieve details of one terminal</p></div><div class="col
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -7675,6 +7747,7 @@ This method is used to retrieve details of one terminal</p></div><div class="col
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br>
 	<span class="text-muted small">
@@ -7688,6 +7761,7 @@ Possible values: ECOM, SPG, MPO.<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
@@ -7758,6 +7832,7 @@ Possible values: ECOM, SPG, MPO.<br>
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br>
 	<span class="text-muted small">
@@ -7771,6 +7846,7 @@ Possible values: ECOM, SPG, MPO.<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br>
 	<span class="text-muted small">
@@ -7838,6 +7914,7 @@ This method is used to retrieve all terminals</p></div><div class="col-md-6"><di
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br>
 	<span class="text-muted small">
@@ -7877,6 +7954,7 @@ This method is used to retrieve a list of transactions based on the provided cri
 		</tr>
 	</thead>
 		<tbody><tr>
+			
 <td class="col-sm-4 text-right">
 	<strong>TransactionState</strong><br>
 	<span class="text-muted small">
@@ -7891,6 +7969,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br>
 </td>
 		</tr>
 		<tr>
+			
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br>
 	<span class="text-muted small">
@@ -7904,6 +7983,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br>
 </td>
 		</tr>
 		<tr>
+			
 <td class="col-sm-4 text-right">
 	<strong>StartDate</strong><br>
 	<span class="text-muted small">
@@ -7921,6 +8001,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 		</tr>
 		<tr>
+			
 <td class="col-sm-4 text-right">
 	<strong>EndDate</strong><br>
 	<span class="text-muted small">
@@ -7938,6 +8019,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 		</tr>
 		<tr>
+			
 <td class="col-sm-4 text-right">
 	<strong>PageSize</strong><br>
 	<span class="text-muted small">
@@ -7951,6 +8033,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 		</tr>
 		<tr>
+			
 <td class="col-sm-4 text-right">
 	<strong>PageNumber</strong><br>
 	<span class="text-muted small">
@@ -7972,6 +8055,7 @@ AlphaNumeric[1..2147483647]<br>
 				</tr>
 			</thead>
 						<tbody><tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>PageNumber</strong><br>
 	<span class="text-muted small">
@@ -7987,6 +8071,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>PageSize</strong><br>
 	<span class="text-muted small">
@@ -8002,6 +8087,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>TotalTransactions</strong><br>
 	<span class="text-muted small">
@@ -8017,6 +8103,7 @@ AlphaNumeric[1..2147483647]<br>
 </td>
 						</tr>
 						<tr>
+							
 <td class="col-sm-4 text-right">
 	<strong>Transactions</strong><br>
 	<span class="text-muted small">
@@ -8606,7 +8693,7 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -8805,7 +8892,7 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -9018,7 +9105,7 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -9217,7 +9304,7 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">The payer's phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -9464,8 +9551,8 @@ Range: inclusive between 0 and 9<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br>
-				    <span>Example: <code>1.51</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52<br>
+				    <span>Example: <code>1.52</code></span>
 			</i>
 </td>
 							</tr>
@@ -9505,8 +9592,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51<br>
-				    <span>Example: <code>1.51</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52<br>
+				    <span>Example: <code>1.52</code></span>
 			</i>
 </td>
 							</tr>
@@ -9915,7 +10002,7 @@ Numeric[8..8]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> <ul><br> <li><strong>ONLINE</strong> performs an online account check (one transaction point will be billed for such a check). </li><br> <li><strong>ONLINE_STRONG</strong> enforces a strong customer authentication (SCA), triggering a 3DS v2 challenge that the payer must complete, plus an online account check (billed as one transaction point).</li><br> <li><strong>ONLINE_CHALLENGED</strong> behaves similarly to ONLINE_STRONG, but prior to registration we check whether a challenge was truly completed because some issuers use frictionless authentication.</li></ul></div>
+	<div style="padding-bottom: 10px">Type of check to perform (subject to availability for the brand/acquirer).<br> <ul><br> <li><strong>ONLINE</strong> performs an online account check (one transaction point will be billed for such a check). </li><br> <li><strong>ONLINE_STRONG</strong> enforces a strong customer authentication (SCA), triggering a 3DS v2 challenge that the payer must complete, plus an online account check (billed as one transaction point).</li><br> <li><strong>ONLINE_CHALLENGED</strong> behaves similarly to ONLINE_STRONG, but prior to registration we check whether a challenge was truly completed because some issuers use frictionless authentication.</li><br> </ul></div>
 	<i class="small text-muted">
 Possible values: ONLINE, ONLINE_STRONG, ONLINE_CHALLENGED.<br>
 				    <span>Example: <code>ONLINE</code></span>
@@ -11751,6 +11838,21 @@ Range: inclusive between 2 and 99<br>
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>MastercardTLID</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mastercard Transaction Link ID (TLID) is a unique identifier generated by Mastercard for each payment. It is used in all subsequent actions related to the original payment, including Merchant Initiated Transactions (MIT).<br> TLID is a 22-character, case-sensitive UUID made up of uppercase and lowercase alphabetic, numeric, and special characters in random order, with no spaces allowed.</div>
+	<i class="small text-muted">
+String length: inclusive between 22 and 22<br>
+				    <span>Example: <code>bWyZ3Ci-981f6MvBGa_tM1</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>SettlementDate</strong><br>
 	<span class="text-muted small">
 		        string	</span>
@@ -11786,6 +11888,20 @@ Max length: 50<br>
 				<h2>Container &quot;Payment_Models_Data_IssuerReferenceInfo&quot;</h2>
 				<table class="table" id="Payment_Models_Data_IssuerReferenceInfo">
 					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>MastercardTLID</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Mastercard Transaction Link ID (TLID) is a unique identifier generated by Mastercard for each payment. It is used in all subsequent actions related to the original payment, including Merchant Initiated Transactions (MIT).<br> TLID is a 22-character, case-sensitive UUID made up of uppercase and lowercase alphabetic, numeric, and special characters in random order, with no spaces allowed.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>bWyZ3Ci-981f6MvBGa_tM1</code></span>
+			</i>
+</td>
+							</tr>
 							<tr>
 								
 <td class="col-sm-4 text-right">
@@ -13595,23 +13711,6 @@ Possible values: PAYMENT.<br>
 							<tr>
 								
 <td class="col-sm-4 text-right">
-	<strong>PayerId</strong><br>
-	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">PayerId from PayPal</div>
-	<i class="small text-muted">
-				    <span>Example: <code>5b9aefc5-9b48-4a95-ae47-cda20420d68e</code></span>
-			</i>
-</td>
-							</tr>
-							<tr>
-								
-<td class="col-sm-4 text-right">
 	<strong>SellerProtectionStatus</strong><br>
 	<span class="text-muted small">
 			<span>
@@ -13679,7 +13778,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br>
 	<div style="padding-bottom: 10px">The payer's main phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -13694,7 +13793,7 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">The payer's mobile number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 79 345 6789</code></span>
+				    <span>Example: <code>+41793456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -13709,7 +13808,7 @@ Utf8[1..100]<br>
 	<div style="padding-bottom: 10px">The payer's work phone number</div>
 	<i class="small text-muted">
 Utf8[1..100]<br>
-				    <span>Example: <code>+41 12 345 6789</code></span>
+				    <span>Example: <code>+41123456789</code></span>
 			</i>
 </td>
 							</tr>
@@ -15926,6 +16025,50 @@ Possible values: RANDOM.<br>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Name of the payment method</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+				<h2>Container &quot;RestApi_Models_PaymentPageConfigResult&quot;</h2>
+				<table class="table" id="RestApi_Models_PaymentPageConfigResult">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Description</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Description of PaymentPage Configuration</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>IsDefault</strong><br>
+	<span class="text-muted small">
+		        boolean	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Indicates if the configuration is the default configuration for the customer<br> The configuration marked as &quot;Default&quot; is used as the default setting even if no payment page configuration was specified in the call.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Name</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Name of PaymentPage Configuration (parameter for the request)</div>
 	<i class="small text-muted">
 					</i>
 </td>
