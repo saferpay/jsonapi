@@ -101,6 +101,7 @@
 							<ul class="nav">
 								<li><a href="#rest_customers_customerId_license">Licensing CustomerLicense</a></li>
 								<li><a href="#rest_customers_customerId_license-configuration">Licensing CustomerLicenseConfiguration</a></li>
+								<li><a href="#rest_customers_customerId_payment-page_configurations">PaymentPageConfig GetConfigurations</a></li>
 								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens">SaferpayFieldsAccessToken CreateAccessToken</a></li>
 								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken">SaferpayFieldsAccessToken DeleteAccessToken</a></li>
 								<li><a href="#rest_customers_customerId_terminals_terminalId_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
@@ -216,6 +217,7 @@
 							<ul class="nav">
 								<li><a href="#rest_customers_customerId_license">Licensing CustomerLicense</a></li>
 								<li><a href="#rest_customers_customerId_license-configuration">Licensing CustomerLicenseConfiguration</a></li>
+								<li><a href="#rest_customers_customerId_payment-page_configurations">PaymentPageConfig GetConfigurations</a></li>
 								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens">SaferpayFieldsAccessToken CreateAccessToken</a></li>
 								<li><a href="#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken">SaferpayFieldsAccessToken DeleteAccessToken</a></li>
 								<li><a href="#rest_customers_customerId_terminals_terminalId_spg-offers">SecurePayGate Create SingleUsePaymentLink</a></li>
@@ -17022,6 +17024,7 @@ Possible values: ECOM, MPO, SPG.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.52.0.0.20260429">Version 1.52</a></li>
 <li><a href="#v1.51.0.0.20260324">Version 1.51</a></li>
 <li><a href="#v1.50.0.0.20260120">Version 1.50</a></li>
 <li><a href="#v1.49.0.0.20251118">Version 1.49</a></li>
@@ -17070,6 +17073,37 @@ Possible values: ECOM, MPO, SPG.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.52.0.0.20260429"><h2><a name="v1.52.0.0.20260429"></a> Version 1.52 (released 2026-05-12)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2026-04-28</li>
+<li>introduced version 1.52</li>
+<li>added value <code>1.52</code> for <em>SpecVersion</em></li>
+<li>added <a href="index.html#rest_customers_customerId_payment-page_configurations">PaymentPage GetConfigurations</a> method to Saferpay Management API</li>
+<li>added <code>WITH_SUCCESSFUL_THREE_DS_CHALLENGE</code> as a valid value for the field <code>Condition</code> in the following requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Initialize">PaymentPage Initialize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+</ul>
+</li>
+<li>added <code>MastercardTLID</code> to the <code>IssuerReference</code> container in the following requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+</ul>
+</li>
+<li>removed <code>PayerId</code> from the <code>PayPal</code> container in the following requests:
+<ul>
+<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
+<li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
+<li><a href="index.html#Payment_v1_Transaction_AssertRedirectPayment">Transaction/AssertRedirectPayment</a></li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
+<li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
+<li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
+</ul>
+</li>
 </ul></div></div></section><section id="v1.51.0.0.20260324"><h2><a name="v1.51.0.0.20260324"></a> Version 1.51 (released 2026-03-24)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2026-03-10</li>
 <li>introduced version 1.51</li>
