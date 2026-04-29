@@ -481,10 +481,10 @@ This function may be called to authorize a transaction which was started by a ca
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED: the authorization will be executed if the previous 3d-secure process indicates that the liability shift to the issuer is possible<br> (liability shift may still be declined with the authorization though). This condition will be ignored for brands which Saferpay does not offer 3d-secure for.<br> ---<br> If left out, the authorization will be done if allowed, but possibly without liability shift to the issuer. See the specific result codes in the response message.</div>
+	<div style="padding-bottom: 10px">The ThreeDS condition is checked before authorization. If omitted, authorization proceeds and may be approved with or without a liability shift to the issuer. This condition is ignored for brands for which Saferpay does not offer 3D Secure.<br> <ul><br> <li><strong>THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED:</strong>Authorization will be performed if the 3D Secure process indicates that a liability shift to the issuer is possible; however, the liability shift may still be declined during authorization.</li><br> <li><strong>WITH_SUCCESSFUL_THREE_DS_CHALLENGE:</strong> It will be checked whether a challenge (active authentication) was <strong>successfully</strong> completed by the payer. It is strongly recommended to set <i>Authentication.ThreeDsChallenge</i> to <i>FORCE</i>, as otherwise the issuer may decide to authenticate the payer without challenge.</li><br> </ul></div>
 	<i class="small text-muted">
-Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED.<br />
-				    <span>Example: <code>NONE</code></span>
+Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUCCESSFUL_THREE_DS_CHALLENGE.<br />
+				    <span>Example: <code>WITH_SUCCESSFUL_THREE_DS_CHALLENGE</code></span>
 			</i>
 </td>
 						</tr>
@@ -552,8 +552,7 @@ Id[1..50]<br />
     "RequestId": "[unique request id]",
     "RetryIndicator": 0
   },
-  "Token": "sdu5ymxx210y2dz1ggig2ey0o",
-  "VerificationCode": "123"
+  "Token": "sdu5ymxx210y2dz1ggig2ey0o"
 }
 </pre>
 
@@ -739,9 +738,9 @@ Id[1..50]<br />
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
-      "MaskedNumber": "912345xxxxxx1234",
+      "MaskedNumber": "91234582xxxx1234",
       "ExpYear": 2015,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
@@ -757,7 +756,9 @@ Id[1..50]<br />
     "LiableEntity": "THREEDS",
     "ThreeDs": {
       "Authenticated": true,
-      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs="
+      "Xid": "ARkvCgk5Y1t/BDFFXkUPGX9DUgs=",
+      "Version": 2,
+      "AuthenticationType": "STRONG_CUSTOMER_AUTHENTICATION"
     }
   }
 }

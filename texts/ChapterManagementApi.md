@@ -74,7 +74,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -98,7 +98,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
@@ -115,7 +115,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
@@ -134,7 +134,7 @@ No example available
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -187,7 +187,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -211,7 +211,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Features</strong><br />
 	<span class="text-muted small">
@@ -228,7 +228,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Package</strong><br />
 	<span class="text-muted small">
@@ -247,7 +247,7 @@ No example available
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -268,6 +268,100 @@ No example available
     }
   ]
 }
+</pre>
+
+<<<---
+
+
+
+
+
+
+## <a name="rest_customers_customerId_payment-page_configurations"></a>PaymentPageConfig GetConfigurations
+
+<span class="GET request-method">GET</span><br>
+This method is used to retrieve all terminals
+
+--->>>
+
+<div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/payment-page/configurations</p></div>
+
+<<<---
+
+#### Request
+
+
+No body needed
+
+
+<table class="table">
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+No example available
+</pre>
+
+<<<---
+
+
+#### Response
+
+
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Arguments</th>
+				</tr>
+			</thead>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>Configurations</strong><br />
+	<span class="text-muted small">
+		        <span>array of <a class="type-details in" href="#RestApi_Models_PaymentPageConfigResult">object</a>s</span>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Array of PaymentPage configurations</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+
+</table>
+
+	
+--->>>
+
+<p>Example:</p>
+<pre class="prettyprint">
+{
+                "Configurations": [
+                    {
+                        "name":"default",
+                        "isDefault": true",
+                        "Description": "Default Configuration"
+                    },
+                    {
+                        "name":"special",
+                        "isDefault": false",
+                        "Description": "Special Payment Page Configuration"
+                    },
+                    {
+                        "name":"event",
+                        "isDefault": false",
+                        "Description": "Special Payment Page Configuration for Events"
+                    }
+                ]
+            }
 </pre>
 
 <<<---
@@ -301,7 +395,7 @@ Create a Saferpay Fields Access Token that can be used to integrate Saferpay Fie
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
@@ -318,7 +412,7 @@ Utf8[1..128]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>SourceUrls</strong><br />
 	<span class="text-muted small">
@@ -337,7 +431,7 @@ Utf8[1..128]<br />
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -367,7 +461,7 @@ Utf8[1..128]<br />
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>AccessToken</strong><br />
 	<span class="text-muted small">
@@ -386,7 +480,7 @@ Utf8[1..128]<br />
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -424,7 +518,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -460,7 +554,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -499,7 +593,7 @@ This function may be used to create a single use payment link
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>BillingAddressForm</strong><br />
 	<span class="text-muted small">
@@ -513,7 +607,7 @@ This function may be used to create a single use payment link
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Condition</strong><br />
 	<span class="text-muted small">
@@ -528,7 +622,7 @@ Possible values: NONE, THREE_DS_AUTHENTICATION_SUCCESSFUL_OR_ATTEMPTED, WITH_SUC
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>ConfigSet</strong><br />
 	<span class="text-muted small">
@@ -543,7 +637,7 @@ Id[1..20]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
@@ -561,7 +655,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>MaxPaymentAttempts</strong><br />
 	<span class="text-muted small">
@@ -574,7 +668,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Order</strong><br />
 	<span class="text-muted small">
@@ -588,7 +682,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Payer</strong><br />
 	<span class="text-muted small">
@@ -605,7 +699,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -622,7 +716,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>RegisterAlias</strong><br />
 	<span class="text-muted small">
@@ -638,7 +732,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -688,7 +782,7 @@ AlphaNumeric[10..25]<br />
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
@@ -705,7 +799,7 @@ AlphaNumeric[10..25]<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
@@ -724,7 +818,7 @@ AlphaNumeric[10..25]<br />
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -763,7 +857,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -787,7 +881,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>CreationDate</strong><br />
 	<span class="text-muted small">
@@ -801,7 +895,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>ExpirationDate</strong><br />
 	<span class="text-muted small">
@@ -815,7 +909,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>OfferId</strong><br />
 	<span class="text-muted small">
@@ -829,7 +923,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Payment</strong><br />
 	<span class="text-muted small">
@@ -843,7 +937,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentLink</strong><br />
 	<span class="text-muted small">
@@ -857,7 +951,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Status</strong><br />
 	<span class="text-muted small">
@@ -872,7 +966,7 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>TransactionId</strong><br />
 	<span class="text-muted small">
@@ -888,7 +982,7 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br />
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -938,7 +1032,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -974,7 +1068,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -998,7 +1092,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Description</strong><br />
 	<span class="text-muted small">
@@ -1011,7 +1105,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
@@ -1025,7 +1119,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -1038,7 +1132,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Type</strong><br />
 	<span class="text-muted small">
@@ -1052,7 +1146,7 @@ Possible values: ECOM, SPG, MPO.<br />
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
@@ -1068,7 +1162,7 @@ Possible values: ECOM, SPG, MPO.<br />
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1153,7 +1247,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1177,7 +1271,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Wallets</strong><br />
 	<span class="text-muted small">
@@ -1191,7 +1285,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>PaymentMethods</strong><br />
 	<span class="text-muted small">
@@ -1207,7 +1301,7 @@ No example available
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1287,7 +1381,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1311,7 +1405,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Terminals</strong><br />
 	<span class="text-muted small">
@@ -1327,7 +1421,7 @@ No example available
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1380,7 +1474,7 @@ This method is used to retrieve a list of transactions based on the provided cri
 		</tr>
 	</thead>
 		<tr>
-
+			
 <td class="col-sm-4 text-right">
 	<strong>TransactionState</strong><br />
 	<span class="text-muted small">
@@ -1395,7 +1489,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 </td>
 		</tr>
 		<tr>
-
+			
 <td class="col-sm-4 text-right">
 	<strong>TerminalId</strong><br />
 	<span class="text-muted small">
@@ -1409,7 +1503,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 </td>
 		</tr>
 		<tr>
-
+			
 <td class="col-sm-4 text-right">
 	<strong>StartDate</strong><br />
 	<span class="text-muted small">
@@ -1427,7 +1521,7 @@ AlphaNumeric[1..2147483647]<br />
 </td>
 		</tr>
 		<tr>
-
+			
 <td class="col-sm-4 text-right">
 	<strong>EndDate</strong><br />
 	<span class="text-muted small">
@@ -1445,7 +1539,7 @@ AlphaNumeric[1..2147483647]<br />
 </td>
 		</tr>
 		<tr>
-
+			
 <td class="col-sm-4 text-right">
 	<strong>PageSize</strong><br />
 	<span class="text-muted small">
@@ -1459,7 +1553,7 @@ AlphaNumeric[1..2147483647]<br />
 </td>
 		</tr>
 		<tr>
-
+			
 <td class="col-sm-4 text-right">
 	<strong>PageNumber</strong><br />
 	<span class="text-muted small">
@@ -1485,7 +1579,7 @@ No body needed
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
@@ -1509,7 +1603,7 @@ No example available
 				</tr>
 			</thead>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>PageNumber</strong><br />
 	<span class="text-muted small">
@@ -1525,7 +1619,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>PageSize</strong><br />
 	<span class="text-muted small">
@@ -1541,7 +1635,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>TotalTransactions</strong><br />
 	<span class="text-muted small">
@@ -1557,7 +1651,7 @@ No example available
 </td>
 						</tr>
 						<tr>
-
+							
 <td class="col-sm-4 text-right">
 	<strong>Transactions</strong><br />
 	<span class="text-muted small">
@@ -1576,7 +1670,7 @@ No example available
 
 </table>
 
-
+	
 --->>>
 
 <p>Example:</p>
