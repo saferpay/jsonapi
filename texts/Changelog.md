@@ -58,13 +58,13 @@
 - introduced version 1.52
 - added value `1.52` for _SpecVersion_
 - added [PaymentPage GetConfigurations](index.html#rest_customers_customerId_payment-page_configurations) method to Saferpay Management API
-- added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` as valid value for the field `Condition` in following requests:
+- added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` as a valid value for the field `Condition` in the following requests:
     - [PaymentPage Initialize](index.html#Payment_v1_PaymentPage_Initialize)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
-- added `MastercardTLID` to the `IssuerReference` container in following requests:
+- added `MastercardTLID` to the `IssuerReference` container in the following requests:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
-- removed `PayerId` from the `PayPal` container in following requests:
+- removed `PayerId` from the `PayPal` container in the following requests:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
     - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
