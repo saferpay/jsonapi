@@ -61,7 +61,7 @@
 - added `WITH_SUCCESSFUL_THREE_DS_CHALLENGE` as a valid value for the field `Condition` in the following requests:
     - [PaymentPage Initialize](index.html#Payment_v1_PaymentPage_Initialize)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
-- added `MastercardTLID` to the `IssuerReference` container in the following requests:
+- added `MastercardTLID` to the `IssuerReference` container in the response of the following methods:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
     - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
