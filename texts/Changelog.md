@@ -73,7 +73,7 @@
     - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
     - [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
     - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
-- removed `PayerId` from the `PayPal` container in the following requests:
+- removed `PayerId` from the `PayPal` container in the following responses:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
     - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
