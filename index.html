@@ -7237,7 +7237,7 @@ This method is used to retrieve the current license configuration for a customer
   ]
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_payment-page_configurations"><h2><a name="rest_customers_customerId_payment-page_configurations"></a>PaymentPageConfig GetConfigurations</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
-This method is used to retrieve all terminals</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/payment-page/configurations</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
+This method is used to retrieve all payment page configurations</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/payment-page/configurations</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
 </table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">No example available
 </pre></div></div><div class="row"><div class="col-md-6"><h4>Response</h4><table class="table">
 			<thead>
@@ -13699,9 +13699,6 @@ Possible values: PAYMENT.<br>
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
@@ -13713,11 +13710,22 @@ Possible values: PAYMENT.<br>
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>PayerId</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">PayerId from PayPal</div>
+	<i class="small text-muted">
+				    <span>Example: <code>5b9aefc5-9b48-4a95-ae47-cda20420d68e</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>SellerProtectionStatus</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
@@ -17096,20 +17104,6 @@ Possible values: ECOM, MPO, SPG.<br>
 <li><a href="index.html#Payment_v1_Alias_AssertInsert">Alias/AssertInsert</a></li>
 <li><a href="index.html#Payment_v1_Alias_InsertDirect">Alias/InsertDirect</a></li>
 <li><a href="index.html#Payment_v1_Alias_Inquire">Alias/Inquire</a></li>
-<li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
-</ul>
-</li>
-<li>removed <code>PayerId</code> from the <code>PayPal</code> container in the following responses:
-<ul>
-<li><a href="index.html#Payment_v1_PaymentPage_Assert">PaymentPage/Assert</a></li>
-<li><a href="index.html#Payment_v1_Transaction_Authorize">Transaction Authorize</a></li>
-<li><a href="index.html#Payment_v1_Transaction_AuthorizeDirect">Transaction/AuthorizeDirect</a></li>
-<li><a href="index.html#Payment_v1_Transaction_AuthorizeReferenced">Transaction/AuthorizeReferenced</a></li>
-<li><a href="index.html#Payment_v1_Transaction_Refund">Transaction/Refund</a></li>
-<li><a href="index.html#Payment_v1_Transaction_RefundDirect">Transaction/RefundDirect</a></li>
-<li><a href="index.html#Payment_v1_Transaction_AssertRedirectPayment">Transaction/AssertRedirectPayment</a></li>
-<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a></li>
-<li><a href="index.html#Payment_v1_Transaction_QueryAlternativePayment">Transaction/QueryAlternativePayment</a></li>
 <li><a href="index.html#Payment_v1_OmniChannel_AcquireTransaction">OmniChannel/AcquireTransaction</a></li>
 </ul>
 </li>
