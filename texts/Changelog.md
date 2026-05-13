@@ -73,17 +73,6 @@
     - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
     - [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
     - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
-- removed `PayerId` from the `PayPal` container in the following responses:
-    - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
-    - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
-    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
-    - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
-    - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
-    - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
-    - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
-    - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
-    - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
-    - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 
 ## <a name="v1.51.0.0.20260324"></a> Version 1.51 (released 2026-03-24)
 

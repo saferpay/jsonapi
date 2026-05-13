@@ -5536,9 +5536,6 @@ Possible values: PAYMENT.<br />
 <td class="col-sm-4 text-right">
 	<strong>Email</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
@@ -5550,11 +5547,22 @@ Possible values: PAYMENT.<br />
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>PayerId</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">PayerId from PayPal</div>
+	<i class="small text-muted">
+				    <span>Example: <code>5b9aefc5-9b48-4a95-ae47-cda20420d68e</code></span>
+			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>SellerProtectionStatus</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        string	</span>
 </td>
 <td class="col-sm-8">
