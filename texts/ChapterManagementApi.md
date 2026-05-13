@@ -280,7 +280,7 @@ No example available
 ## <a name="rest_customers_customerId_payment-page_configurations"></a>PaymentPageConfig GetConfigurations
 
 <span class="GET request-method">GET</span><br>
-This method is used to retrieve all terminals
+This method is used to retrieve all payment page configurations
 
 --->>>
 
