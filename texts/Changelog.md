@@ -55,7 +55,7 @@
 
 ## <a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)
 
-- available on Sandbox: 2026-xx-xx
+- available on Sandbox: 2026-06-23
 - introduced version 1.53
 - added value `1.53` for _SpecVersion_
 - added support for order items via PayPal transactions
