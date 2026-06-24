@@ -158,7 +158,7 @@ Id[1..20]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
+	<div style="padding-bottom: 10px">Optional order information. Only used for Klarna (mandatory) and optional for PayPal or Fraud Intelligence.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -729,7 +729,7 @@ Id[1..50]<br />
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
       "ExpYear": 2015,

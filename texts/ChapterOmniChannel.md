@@ -185,7 +185,7 @@ This function may be used to create an alias by providing a SixTransactionRefere
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
       "ExpYear": 2015,
@@ -427,7 +427,7 @@ This response returns an acquired OmniChannel transaction.
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "Number": "912345678901234",
       "MaskedNumber": "912345xxxxxx1234",

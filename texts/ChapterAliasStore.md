@@ -543,7 +543,7 @@ Id[1..50]<br />
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
       "ExpYear": 2015,
@@ -828,7 +828,7 @@ This method may be used to insert an alias directly with card-data collected by 
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
       "ExpYear": 2015,
@@ -1051,7 +1051,7 @@ This method may be used to update an alias' lifetime and / or its credit card ex
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
       "ExpYear": 2015,
@@ -1395,7 +1395,7 @@ Id[1..40]<br />
       "PaymentMethod": "VISA",
       "Name": "VISA Saferpay Test"
     },
-    "DisplayText": "9123 45xx xxxx 1234",
+    "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
       "ExpYear": 2015,

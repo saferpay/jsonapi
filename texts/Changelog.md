@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Version 1.53](#v1.53.0.0.20260707)
 - [Version 1.52](#v1.52.0.0.20260429)
 - [Version 1.51](#v1.51.0.0.20260324)
 - [Version 1.50](#v1.50.0.0.20260120)
@@ -52,6 +53,15 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)
+
+- available on Sandbox: 2026-xx-xx
+- introduced version 1.53
+- added value `1.53` for _SpecVersion_
+- removed deprecated features
+    - [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
+    - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+
 ## <a name="v1.52.0.0.20260429"></a> Version 1.52 (released 2026-05-12)
 
 - available on Sandbox: 2026-04-28
@@ -72,6 +82,17 @@
     - [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert)
     - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
     - [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
+    - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+- removed `PayerId` from the `PayPal` container in the following responses:
+    - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
+    - [Transaction Authorize](index.html#Payment_v1_Transaction_Authorize)
+    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
+    - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    - [Transaction/QueryAlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
     - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
 
 ## <a name="v1.51.0.0.20260324"></a> Version 1.51 (released 2026-03-24)
