@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Version 1.53](#v1.53.0.0.20260707)
 - [Version 1.52](#v1.52.0.0.20260429)
 - [Version 1.51](#v1.51.0.0.20260324)
 - [Version 1.50](#v1.50.0.0.20260120)
@@ -51,6 +52,17 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)
+
+- available on Sandbox: 2026-06-23
+- introduced version 1.53
+- added value `1.53` for _SpecVersion_
+- added support for order items via PayPal transactions
+- return bin range info in all responses. The display text will remain returned in masked form.
+- removed deprecated features
+    - [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
+    - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)
 
 ## <a name="v1.52.0.0.20260429"></a> Version 1.52 (released 2026-05-12)
 

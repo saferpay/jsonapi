@@ -28,7 +28,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
     <tr>
       <td style="white-space:nowrap;">Saferpay-ApiVersion</td>
       <td>
-        1.50
+        1.14
       </td>
       <td>Version number of the interface specification.</td>
     </tr>
@@ -46,7 +46,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
 
 HTTP Headers example:
 
-`Saferpay-ApiVersion: 1.50`
+`Saferpay-ApiVersion: 1.14`
 
 `Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b`
 
@@ -344,24 +344,24 @@ No example available
 <p>Example:</p>
 <pre class="prettyprint">
 {
-                "Configurations": [
-                    {
-                        "name":"default",
-                        "isDefault": true",
-                        "Description": "Default Configuration"
-                    },
-                    {
-                        "name":"special",
-                        "isDefault": false",
-                        "Description": "Special Payment Page Configuration"
-                    },
-                    {
-                        "name":"event",
-                        "isDefault": false",
-                        "Description": "Special Payment Page Configuration for Events"
-                    }
-                ]
-            }
+  "Configurations": [
+    {
+      "name": "default",
+      "isDefault": true,
+      "Description": "Default Configuration"
+    },
+    {
+      "name": "special",
+      "isDefault": false,
+      "Description": "Special Payment Page Configuration"
+    },
+    {
+      "name": "event",
+      "isDefault": false,
+      "Description": "Special Payment Page Configuration for Events"
+    }
+  ]
+}
 </pre>
 
 <<<---
@@ -676,7 +676,7 @@ AlphaNumeric[10..25]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional order information. Only used for payment method Klarna (mandatory) and for Fraud Intelligence (optional).</div>
+	<div style="padding-bottom: 10px">Optional order information. Only used for Klarna (mandatory) and optional for PayPal or Fraud Intelligence.</div>
 	<i class="small text-muted">
 					</i>
 </td>
