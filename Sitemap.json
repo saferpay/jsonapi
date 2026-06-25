@@ -125,16 +125,6 @@
         "Target": "index.html#Payment_v1_Transaction_Cancel"
       },
       {
-        "Title": "Transaction RedirectPayment",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_RedirectPayment"
-      },
-      {
-        "Title": "Transaction AssertRedirectPayment",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AssertRedirectPayment"
-      },
-      {
         "Title": "Transaction Inquire",
         "Source": "texts/ChapterTransaction.md",
         "Target": "index.html#Payment_v1_Transaction_Inquire"
