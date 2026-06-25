@@ -1,296 +1,286 @@
 [
-  {
-    "Title": "Introduction",
-    "Source": "texts/01_Introduction.md",
-    "Target": "index.html#intro"
-  },
-  {
-    "Title": "Content encoding",
-    "Source": "texts/02_ContentEncoding.md",
-    "Target": "index.html#encoding"
-  },
-  {
-    "Title": "Formats",
-    "Source": "texts/03_Formats.md",
-    "Target": "index.html#formats"
-  },
-  {
-    "Title": "Authentication",
-    "Source": "texts/04_Authentication.md",
-    "Target": "index.html#authentication"
-  },
-  {
-    "Title": "Integration",
-    "Source": "texts/05_Integration.md",
-    "Target": "index.html#integration"
-  },
-  {
-    "Title": "Error Handling",
-    "Source": "texts/06_ErrorHandling.md",
-    "Target": "index.html#errorhandling",
-    "Subsites": [
-      {
-        "Source": "texts/ErrorResponse.md",
-        "target": "index.html"
-      },
-      {
-        "Source": "texts/06_ErrorHandling_TechnicalDetails.md",
-        "target": "index.html"
-      }
-    ]
-  },
-  {
-    "Title": "Interfaces"
-  },
-  {
-    "Title": "Payment Page",
-    "Source": "texts/ChapterPaymentPage.md",
-    "Target": "index.html#ChapterPaymentPage",
-    "Subsites": [
-      {
-        "Title": "PaymentPage Initialize",
+    {
+        "Title": "Introduction",
+        "Source": "texts/01_Introduction.md",
+        "Target": "index.html#intro"
+    },
+    {
+        "Title": "Content encoding",
+        "Source": "texts/02_ContentEncoding.md",
+        "Target": "index.html#encoding"
+    },
+    {
+        "Title": "Formats",
+        "Source": "texts/03_Formats.md",
+        "Target": "index.html#formats"
+    },
+    {
+        "Title": "Authentication",
+        "Source": "texts/04_Authentication.md",
+        "Target": "index.html#authentication"
+    },
+    {
+        "Title": "Integration",
+        "Source": "texts/05_Integration.md",
+        "Target": "index.html#integration"
+    },
+    {
+        "Title": "Error Handling",
+        "Source": "texts/06_ErrorHandling.md",
+        "Target": "index.html#errorhandling",
+        "Subsites": [
+            {
+                "Source": "texts/ErrorResponse.md",
+                "target": "index.html"
+            },
+            {
+                "Source": "texts/06_ErrorHandling_TechnicalDetails.md",
+                "target": "index.html"
+            }
+        ]
+    },
+    {
+        "Title": "Interfaces"
+    },
+    {
+        "Title": "Payment Page",
         "Source": "texts/ChapterPaymentPage.md",
-        "Target": "index.html#Payment_v1_PaymentPage_Initialize"
-      },
-      {
-        "Title": "PaymentPage Assert",
-        "Source": "texts/ChapterPaymentPage.md",
-        "Target": "index.html#Payment_v1_PaymentPage_Assert"
-      }
-    ]
-  },
-  {
-    "Title": "Transaction",
-    "Source": "texts/ChapterTransaction.md",
-    "Target": "index.html#ChapterTransaction",
-    "Subsites": [
-      {
-        "Title": "Transaction Initialize",
+        "Target": "index.html#ChapterPaymentPage",
+        "Subsites": [
+            {
+                "Title": "PaymentPage Initialize",
+                "Source": "texts/ChapterPaymentPage.md",
+                "Target": "index.html#Payment_v1_PaymentPage_Initialize"
+            },
+            {
+                "Title": "PaymentPage Assert",
+                "Source": "texts/ChapterPaymentPage.md",
+                "Target": "index.html#Payment_v1_PaymentPage_Assert"
+            }
+        ]
+    },
+    {
+        "Title": "Transaction",
         "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_Initialize"
-      },
-      {
-        "Title": "Transaction Authorize",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_Authorize"
-      },
-      {
-        "Title": "Transaction AuthorizeDirect",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AuthorizeDirect"
-      },
-      {
-        "Title": "Transaction AuthorizeReferenced",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AuthorizeReferenced"
-      },
-      {
-        "Title": "Transaction Capture",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_Capture"
-      },
-      {
-        "Title": "Transaction MultipartCapture",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_MultipartCapture"
-      },
-      {
-        "Title": "Transaction AssertCapture",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AssertCapture"
-      },
-      {
-        "Title": "Transaction MultipartFinalize",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_MultipartFinalize"
-      },
-      {
-        "Title": "Transaction Refund",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_Refund"
-      },
-      {
-        "Title": "Transaction AssertRefund",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AssertRefund"
-      },
-      {
-        "Title": "Transaction RefundDirect",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_RefundDirect"
-      },
-      {
-        "Title": "Transaction Cancel",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_Cancel"
-      },
-      {
-        "Title": "Transaction RedirectPayment",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_RedirectPayment"
-      },
-      {
-        "Title": "Transaction AssertRedirectPayment",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AssertRedirectPayment"
-      },
-      {
-        "Title": "Transaction Inquire",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_Inquire"
-      },
-      {
-        "Title": "Transaction AlternativePayment",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_AlternativePayment"
-      },
-      {
-        "Title": "Transaction QueryAlternativePayment",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_QueryAlternativePayment"
-      },
-      {
-        "Title": "Transaction DccInquiry",
-        "Source": "texts/ChapterTransaction.md",
-        "Target": "index.html#Payment_v1_Transaction_DccInquiry"
-      }
-    ]
-  },
-  {
-    "Title": "Secure Card Data",
-    "Source": "texts/ChapterAliasStore.md",
-    "Target": "index.html#ChapterAliasStore",
-    "Subsites": [
-      {
-        "Title": "Alias Insert",
+        "Target": "index.html#ChapterTransaction",
+        "Subsites": [
+            {
+                "Title": "Transaction Initialize",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_Initialize"
+            },
+            {
+                "Title": "Transaction Authorize",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_Authorize"
+            },
+            {
+                "Title": "Transaction AuthorizeDirect",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_AuthorizeDirect"
+            },
+            {
+                "Title": "Transaction AuthorizeReferenced",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_AuthorizeReferenced"
+            },
+            {
+                "Title": "Transaction Capture",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_Capture"
+            },
+            {
+                "Title": "Transaction MultipartCapture",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_MultipartCapture"
+            },
+            {
+                "Title": "Transaction AssertCapture",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_AssertCapture"
+            },
+            {
+                "Title": "Transaction MultipartFinalize",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_MultipartFinalize"
+            },
+            {
+                "Title": "Transaction Refund",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_Refund"
+            },
+            {
+                "Title": "Transaction AssertRefund",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_AssertRefund"
+            },
+            {
+                "Title": "Transaction RefundDirect",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_RefundDirect"
+            },
+            {
+                "Title": "Transaction Cancel",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_Cancel"
+            },
+            {
+                "Title": "Transaction Inquire",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_Inquire"
+            },
+            {
+                "Title": "Transaction AlternativePayment",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_AlternativePayment"
+            },
+            {
+                "Title": "Transaction QueryAlternativePayment",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_QueryAlternativePayment"
+            },
+            {
+                "Title": "Transaction DccInquiry",
+                "Source": "texts/ChapterTransaction.md",
+                "Target": "index.html#Payment_v1_Transaction_DccInquiry"
+            }
+        ]
+    },
+    {
+        "Title": "Secure Card Data",
         "Source": "texts/ChapterAliasStore.md",
-        "Target": "index.html#Payment_v1_Alias_Insert"
-      },
-      {
-        "Title": "Alias AssertInsert",
-        "Source": "texts/ChapterAliasStore.md",
-        "Target": "index.html#Payment_v1_Alias_AssertInsert"
-      },
-      {
-        "Title": "Alias InsertDirect",
-        "Source": "texts/ChapterAliasStore.md",
-        "Target": "index.html#Payment_v1_Alias_InsertDirect"
-      },
-      {
-        "Title": "Alias Update",
-        "Source": "texts/ChapterAliasStore.md",
-        "Target": "index.html#Payment_v1_Alias_Update"
-      },
-      {
-        "Title": "Alias Delete",
-        "Source": "texts/ChapterAliasStore.md",
-        "Target": "index.html#Payment_v1_Alias_Delete"
-      },
-      {
-        "Title": "Alias Inquire",
-        "Source": "texts/ChapterAliasStore.md",
-        "Target": "index.html#Payment_v1_Alias_Inquire"
-      }
-    ]
-  },
-  {
-    "Title": "Batch",
-    "Source": "texts/ChapterBatch.md",
-    "Target": "index.html#ChapterBatch",
-    "Subsites": [
-      {
-        "Title": "Batch Close",
+        "Target": "index.html#ChapterAliasStore",
+        "Subsites": [
+            {
+                "Title": "Alias Insert",
+                "Source": "texts/ChapterAliasStore.md",
+                "Target": "index.html#Payment_v1_Alias_Insert"
+            },
+            {
+                "Title": "Alias AssertInsert",
+                "Source": "texts/ChapterAliasStore.md",
+                "Target": "index.html#Payment_v1_Alias_AssertInsert"
+            },
+            {
+                "Title": "Alias InsertDirect",
+                "Source": "texts/ChapterAliasStore.md",
+                "Target": "index.html#Payment_v1_Alias_InsertDirect"
+            },
+            {
+                "Title": "Alias Update",
+                "Source": "texts/ChapterAliasStore.md",
+                "Target": "index.html#Payment_v1_Alias_Update"
+            },
+            {
+                "Title": "Alias Delete",
+                "Source": "texts/ChapterAliasStore.md",
+                "Target": "index.html#Payment_v1_Alias_Delete"
+            },
+            {
+                "Title": "Alias Inquire",
+                "Source": "texts/ChapterAliasStore.md",
+                "Target": "index.html#Payment_v1_Alias_Inquire"
+            }
+        ]
+    },
+    {
+        "Title": "Batch",
         "Source": "texts/ChapterBatch.md",
-        "Target": "index.html#Payment_v1_Batch_Close"
-      }
-    ]
-  },
-  {
-    "Title": "OmniChannel",
-    "Source": "texts/ChapterOmniChannel.md",
-    "Target": "index.html#ChapterOmniChannel",
-    "Subsites": [
-      {
-        "Title": "OmniChannel InsertAlias",
+        "Target": "index.html#ChapterBatch",
+        "Subsites": [
+            {
+                "Title": "Batch Close",
+                "Source": "texts/ChapterBatch.md",
+                "Target": "index.html#Payment_v1_Batch_Close"
+            }
+        ]
+    },
+    {
+        "Title": "OmniChannel",
         "Source": "texts/ChapterOmniChannel.md",
-        "Target": "index.html#Payment_v1_OmniChannel_InsertAlias"
-      },
-      {
-        "Title": "OmniChannel AcquireTransaction",
-        "Source": "texts/ChapterOmniChannel.md",
-        "Target": "index.html#Payment_v1_OmniChannel_AcquireTransaction"
-      }
-    ]
-  },
-  {
-    "Title": "Management API",
-    "Source": "texts/ChapterManagementApi.md",
-    "Target": "index.html#ChapterManagementApi",
-    "Subsites": [
-      {
-        "Title": "Licensing CustomerLicense",
+        "Target": "index.html#ChapterOmniChannel",
+        "Subsites": [
+            {
+                "Title": "OmniChannel InsertAlias",
+                "Source": "texts/ChapterOmniChannel.md",
+                "Target": "index.html#Payment_v1_OmniChannel_InsertAlias"
+            },
+            {
+                "Title": "OmniChannel AcquireTransaction",
+                "Source": "texts/ChapterOmniChannel.md",
+                "Target": "index.html#Payment_v1_OmniChannel_AcquireTransaction"
+            }
+        ]
+    },
+    {
+        "Title": "Management API",
         "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_license"
-      },
-      {
-        "Title": "Licensing CustomerLicenseConfiguration",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_license-configuration"
-      },
-      {
-        "Title": "PaymentPageConfig GetConfigurations",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_payment-page_configurations"
-      },
-      {
-        "Title": "SaferpayFieldsAccessToken CreateAccessToken",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals_terminalId_fields-access-tokens"
-      },
-      {
-        "Title": "SaferpayFieldsAccessToken DeleteAccessToken",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken"
-      },
-      {
-        "Title": "SecurePayGate Create SingleUsePaymentLink",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals_terminalId_spg-offers"
-      },
-      {
-        "Title": "SecurePayGate SingleUsePaymentLink",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals_terminalId_spg-offers_offerId"
-      },
-      {
-        "Title": "Terminal GetTerminal",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals_terminalId"
-      },
-      {
-        "Title": "TerminalInfo PaymentMethods",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals_terminalId_payment-methods"
-      },
-      {
-        "Title": "Terminals GetTerminals",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_terminals"
-      },
-      {
-        "Title": "TransactionReporting GetTransactions",
-        "Source": "texts/ChapterManagementApi.md",
-        "Target": "index.html#rest_customers_customerId_transactions"
-      }
-    ]
-  },
-  {
-    "Source": "texts/ContainerDictionary.md",
-    "target": "index.html"
-  },
-  {
-    "Title": "Changelog",
-    "Source": "texts/Changelog.md",
-    "target": "index.html#changelog"
-  }
+        "Target": "index.html#ChapterManagementApi",
+        "Subsites": [
+            {
+                "Title": "Licensing CustomerLicense",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_license"
+            },
+            {
+                "Title": "Licensing CustomerLicenseConfiguration",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_license-configuration"
+            },
+            {
+                "Title": "PaymentPageConfig GetConfigurations",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_payment-page_configurations"
+            },
+            {
+                "Title": "SaferpayFieldsAccessToken CreateAccessToken",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals_terminalId_fields-access-tokens"
+            },
+            {
+                "Title": "SaferpayFieldsAccessToken DeleteAccessToken",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals_terminalId_fields-access-tokens_accessToken"
+            },
+            {
+                "Title": "SecurePayGate Create SingleUsePaymentLink",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals_terminalId_spg-offers"
+            },
+            {
+                "Title": "SecurePayGate SingleUsePaymentLink",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals_terminalId_spg-offers_offerId"
+            },
+            {
+                "Title": "Terminal GetTerminal",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals_terminalId"
+            },
+            {
+                "Title": "TerminalInfo PaymentMethods",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals_terminalId_payment-methods"
+            },
+            {
+                "Title": "Terminals GetTerminals",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_terminals"
+            },
+            {
+                "Title": "TransactionReporting GetTransactions",
+                "Source": "texts/ChapterManagementApi.md",
+                "Target": "index.html#rest_customers_customerId_transactions"
+            }
+        ]
+    },
+    {
+        "Source": "texts/ContainerDictionary.md",
+        "target": "index.html"
+    },
+    {
+        "Title": "Changelog",
+        "Source": "texts/Changelog.md",
+        "target": "index.html#changelog"
+    }
 ]
