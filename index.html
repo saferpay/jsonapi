@@ -16691,7 +16691,7 @@ Possible values: ECOM, MPO, SPG.<br>
 <li>introduced version 1.53</li>
 <li>added value <code>1.53</code> for <em>SpecVersion</em></li>
 <li>added support for order items via PayPal transactions</li>
-<li>return bin range info in all responses. The display text will remain returned in masked form.</li>
+<li>All returned masked card numbers include the BIN range info (first 8 digits), except for <code>DisplayText</code>, where the BIN range info is masked.</li>
 <li>removed deprecated features
 <ul>
 <li><a href="index.html#Payment_v1_Transaction_RedirectPayment">Transaction/RedirectPayment</a></li>
