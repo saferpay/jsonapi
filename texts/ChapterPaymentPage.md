@@ -627,7 +627,7 @@ Id[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the payer / card holder</div>
+	<div style="padding-bottom: 10px">Information about the payer / cardholder</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -732,10 +732,12 @@ Id[1..50]<br />
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   },
   "Liability": {

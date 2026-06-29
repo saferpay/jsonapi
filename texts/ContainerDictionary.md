@@ -2624,7 +2624,7 @@ Range: inclusive between 2000 and 9999<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of the card holder</div>
+	<div style="padding-bottom: 10px">Name of the cardholder</div>
 	<i class="small text-muted">
 Utf8[1..50]<br />
 				    <span>Example: <code>John Doe</code></span>
@@ -2779,7 +2779,7 @@ Possible values: NONE, MANDATORY.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">returns the funding source of the card. Only returned for Alias/AssertInsert, Alias/InsertDirect, Alias/Update and Alias/Inquire calls if available.</div>
+	<div style="padding-bottom: 10px">Returns the funding source of the card (if available).</div>
 	<i class="small text-muted">
 Possible values: UNSPECIFIED, CREDIT, DEBIT, PREPAID.<br />
 				    <span>Example: <code>Credit</code></span>
@@ -2794,7 +2794,7 @@ Possible values: UNSPECIFIED, CREDIT, DEBIT, PREPAID.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Name of the card holder (if known)</div>
+	<div style="padding-bottom: 10px">Name of the cardholder (if known)</div>
 	<i class="small text-muted">
 				    <span>Example: <code>John Doe</code></span>
 			</i>
@@ -2808,7 +2808,7 @@ Possible values: UNSPECIFIED, CREDIT, DEBIT, PREPAID.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The Segment of card holder. Only returned for Alias/AssertInsert, Alias/InsertDirect, Alias/Update and Alias/Inquire calls if available.</div>
+	<div style="padding-bottom: 10px">The Segment of cardholder (if available).</div>
 	<i class="small text-muted">
 Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 				    <span>Example: <code>CORPORATE</code></span>
@@ -2841,7 +2841,7 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Contains information about the tokenPAN if the transaction, or the referenced transaction, was conducted with a scheme token PAN.</div>
+	<div style="padding-bottom: 10px">Contains information about the token PAN if the transaction was conducted with a scheme token PAN.</div>
 	<i class="small text-muted">
 					</i>
 </td>

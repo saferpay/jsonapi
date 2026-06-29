@@ -546,10 +546,12 @@ Id[1..50]<br />
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   }
 }
@@ -831,10 +833,12 @@ This method may be used to insert an alias directly with card-data collected by 
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   }
 }
@@ -1054,10 +1058,12 @@ This method may be used to update an alias' lifetime and / or its credit card ex
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   }
 }
@@ -1398,10 +1404,12 @@ Id[1..40]<br />
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   }
 }
