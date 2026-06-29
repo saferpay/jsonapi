@@ -60,6 +60,7 @@
 - added value `1.53` for _SpecVersion_
 - added support for order items via PayPal transactions
 - All returned masked card numbers include the BIN range info (first 8 digits), except for `DisplayText`, where the BIN range info is masked.
+- `HolderSegment` and `FundingSource` are filled and returned in all methods.
 - removed deprecated features
     - [Transaction/RedirectPayment](index.html#Payment_v1_Transaction_RedirectPayment)
     - [Transaction/AssertRedirectPayment](index.html#Payment_v1_Transaction_AssertRedirectPayment)

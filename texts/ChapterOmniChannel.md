@@ -188,10 +188,12 @@ This function may be used to create an alias by providing a SixTransactionRefere
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   }
 }
@@ -429,12 +431,13 @@ This response returns an acquired OmniChannel transaction.
     },
     "DisplayText": "xxxx xxxx xxxx 1234",
     "Card": {
-      "Number": "912345678901234",
       "MaskedNumber": "912345xxxxxx1234",
-      "ExpYear": 2015,
+      "ExpYear": 2029,
       "ExpMonth": 9,
       "HolderName": "Max Mustermann",
-      "CountryCode": "CH"
+      "HolderSegment": "CONSUMER",
+      "CountryCode": "CH",
+      "FundingSource": "CREDIT"
     }
   }
 }
