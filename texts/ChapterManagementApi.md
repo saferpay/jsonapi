@@ -794,7 +794,7 @@ AlphaNumeric[10..25]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
-				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>7a4aa5fd-b03d-4ef3-9264-f291019dfbaf</code></span>
 			</i>
 </td>
 						</tr>
@@ -811,7 +811,7 @@ AlphaNumeric[10..25]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68</code></span>
 			</i>
 </td>
 						</tr>
@@ -824,8 +824,8 @@ AlphaNumeric[10..25]<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-  "OfferId": "503a3d7b-072b-400f-9e7e-8ec15191c737",
-  "PaymentLink": "https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737"
+  "OfferId": "7a4aa5fd-b03d-4ef3-9264-f291019dfbaf",
+  "PaymentLink": "https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68"
 }
 </pre>
 
@@ -918,8 +918,22 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
-				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>7a4aa5fd-b03d-4ef3-9264-f291019dfbaf</code></span>
 			</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#RestApi_Models_Data_PayerWithoutOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payer</div>
+	<i class="small text-muted">
+					</i>
 </td>
 						</tr>
 						<tr>
@@ -946,7 +960,7 @@ No example available
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68</code></span>
 			</i>
 </td>
 						</tr>
@@ -988,8 +1002,8 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br />
 <p>Example:</p>
 <pre class="prettyprint">
 {
-  "OfferId": "503a3d7b-072b-400f-9e7e-8ec15191c737",
-  "PaymentLink": "https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737",
+  "OfferId": "7a4aa5fd-b03d-4ef3-9264-f291019dfbaf",
+  "PaymentLink": "https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68",
   "Status": "OPEN",
   "Payment": {
     "Amount": {
@@ -998,6 +1012,9 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br />
     },
     "OrderId": "cd0005bf21bb4906bcbea939d74cee72",
     "Description": "Hallo"
+  },
+  "Payer": {
+    "Id": "customer-1234"
   },
   "CreationDate": "2023-03-01T11:37:47.682+01:00",
   "ExpirationDate": "2023-04-01T00:00:00+02:00"
@@ -1513,7 +1530,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Only transactions happened later than this date will be returned.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<div style="padding-bottom: 10px">Sets the lower temporal bound for transactions returned.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..2147483647]<br />
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?StartDate=2023-08-19T11:26</code></span>
@@ -1531,7 +1548,7 @@ AlphaNumeric[1..2147483647]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Only transactions that occurred before this date will be returned.<br> EndDate must be less than today at 00:00 (midnight).<br> For example, to retrieve transactions up to and including yesterday, set EndDate to yesterday at 23:59.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<div style="padding-bottom: 10px">Sets the upper temporal bound for transactions returned.<br> Must be a date in the past (up to yesterday, 23:59:59 CE(S)T).<br> Note: Any timestamp set to midnight (00:00:00) is automatically shifted to midnight of the next day (00:00:00 + 1 day) so that all transactions for that entire date are included.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..2147483647]<br />
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?EndDate=2025-08-19T11:26</code></span>
