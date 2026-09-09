@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Version 1.54](#v1.54.0.0.20260922)
 - [Version 1.53](#v1.53.0.0.20260707)
 - [Version 1.52](#v1.52.0.0.20260429)
 - [Version 1.51](#v1.51.0.0.20260324)
@@ -52,6 +53,19 @@
 - [Version 1.6](#v1.6.0.20170404)
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
+
+## <a name="v1.54.0.0.20260922"></a> Version 1.54 (released 2026-09-22)
+
+- available on Sandbox: 2026-09-08
+- introduced version 1.54
+- added value `1.54` for _SpecVersion_
+- added Payer.Id to Single-Use Payment Links in the Management API
+- added support for using the result of Transaction DccInquiry for payments performed with the Transaction Initialize API method
+- added PENDING status for captures of WERO refunds
+- changed the type of the Blik payment code field to string to accommodate codes starting with zero
+- changed Klarna Extra Merchant Data (EMD) from mandatory to optional
+- add shipping information fields for Klarna
+
 
 ## <a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)
 
