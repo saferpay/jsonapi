@@ -61,10 +61,13 @@
 - added value `1.54` for _SpecVersion_
 - added Payer.Id to Single-Use Payment Links in the Management API
 - added support for using the result of Transaction DccInquiry for payments performed with the Transaction Initialize API method
-- added PENDING status for captures of WERO refunds
+- added PENDING status for captures of WERO refunds in the following API methods:
+    - [Transaction/Capture](index.html#Payment_v1_Transaction_Capture) (starting from API 1.54, previous API versions always return 'CAPTURED' status)
+    - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire) (retroactively for all API versions)
 - changed the type of the Blik payment code field to string to accommodate codes starting with zero
 - changed Klarna Extra Merchant Data (EMD) from mandatory to optional
 - add shipping information fields for Klarna
+- various improvements to API field descriptions and examples
 
 
 ## <a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)
