@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/vendors.css" />
 	<link rel="stylesheet" href="assets/css/helppage.css">
 
-	<title>Saferpay documentation | JSON API Spec-Version 1.53</title>
+	<title>Saferpay documentation | JSON API Spec-Version 1.54</title>
 </head>
 <body data-spy="scroll" data-target="#navScrollspy">
 
@@ -17,7 +17,7 @@
 
 					<h3>
 						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-						<span class="text-primary">JSON API Spec-Version 1.53</span>
+						<span class="text-primary">JSON API Spec-Version 1.54</span>
 					</h3>
 
 					<ul class="nav">
@@ -128,7 +128,7 @@
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
 							<h3 style="display: inline-block">
 								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
-								<span class="text-primary">JSON API Spec-Version 1.53</span>
+								<span class="text-primary">JSON API Spec-Version 1.54</span>
 							</h3>
 						</button>
 
@@ -1707,6 +1707,20 @@ Id[1..20]<br>
 						<tr>
 							
 <td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_DccReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference to DccInquiry and payer's decision whether he accepts or declines DCC offer</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br>
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_TransactionNotification">object</a>
@@ -3137,7 +3151,7 @@ Id[1..64]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout and for WERO refund captures)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br>
 					</i>
@@ -7169,7 +7183,7 @@ AlphaNumeric[10..25]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
-				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>7a4aa5fd-b03d-4ef3-9264-f291019dfbaf</code></span>
 			</i>
 </td>
 						</tr>
@@ -7186,13 +7200,13 @@ AlphaNumeric[10..25]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68</code></span>
 			</i>
 </td>
 						</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;OfferId&quot;: &quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
-  &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;
+  &quot;OfferId&quot;: &quot;7a4aa5fd-b03d-4ef3-9264-f291019dfbaf&quot;,
+  &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68&quot;
 }
 </pre></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="rest_customers_customerId_terminals_terminalId_spg-offers_offerId"><h2><a name="rest_customers_customerId_terminals_terminalId_spg-offers_offerId"></a>SecurePayGate SingleUsePaymentLink</h2><div class="row"><div class="col-md-6"><p><span class="GET request-method">GET</span><br>
 This function may be used to fetch the status of a previously created single use payment link</p></div><div class="col-md-6"><div class="info"><p><strong>Request URL:</strong></p><p style="margin:0 5px;">/rest/customers/[customerId]/terminals/[terminalId]/spg-offers/[offerId]</p></div></div></div><div class="row"><div class="col-md-6"><h4>Request</h4><p>No body needed</p><table class="table">
@@ -7241,8 +7255,22 @@ This function may be used to fetch the status of a previously created single use
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Id of the SecurePayGate offer</div>
 	<i class="small text-muted">
-				    <span>Example: <code>503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>7a4aa5fd-b03d-4ef3-9264-f291019dfbaf</code></span>
 			</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
+	<strong>Payer</strong><br>
+	<span class="text-muted small">
+		        <a class="type-details in" href="#RestApi_Models_Data_PayerWithoutOptions">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Information about the payer</div>
+	<i class="small text-muted">
+					</i>
 </td>
 						</tr>
 						<tr>
@@ -7269,7 +7297,7 @@ This function may be used to fetch the status of a previously created single use
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The SecurePayGate link for the payment</div>
 	<i class="small text-muted">
-				    <span>Example: <code>https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737</code></span>
+				    <span>Example: <code>https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68</code></span>
 			</i>
 </td>
 						</tr>
@@ -7303,8 +7331,8 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br>
 </td>
 						</tr>
 </tbody></table></div><div class="col-md-6"><p>Example:</p><pre class="prettyprint">{
-  &quot;OfferId&quot;: &quot;503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
-  &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SecurePayGate/Payment/123456/12345678/503a3d7b-072b-400f-9e7e-8ec15191c737&quot;,
+  &quot;OfferId&quot;: &quot;7a4aa5fd-b03d-4ef3-9264-f291019dfbaf&quot;,
+  &quot;PaymentLink&quot;: &quot;https://www.saferpay.com/SPG/s/s8YHAP2lSno9sPNOkmTykQGd-68&quot;,
   &quot;Status&quot;: &quot;OPEN&quot;,
   &quot;Payment&quot;: {
     &quot;Amount&quot;: {
@@ -7313,6 +7341,9 @@ Possible values: OPEN, PAID, EXPIRED, DISABLED.<br>
     },
     &quot;OrderId&quot;: &quot;cd0005bf21bb4906bcbea939d74cee72&quot;,
     &quot;Description&quot;: &quot;Hallo&quot;
+  },
+  &quot;Payer&quot;: {
+    &quot;Id&quot;: &quot;customer-1234&quot;
   },
   &quot;CreationDate&quot;: &quot;2023-03-01T11:37:47.682+01:00&quot;,
   &quot;ExpirationDate&quot;: &quot;2023-04-01T00:00:00+02:00&quot;
@@ -7616,7 +7647,7 @@ Possible values: SUCCESSFUL, FAILED, PENDING.<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Only transactions happened later than this date will be returned.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<div style="padding-bottom: 10px">Sets the lower temporal bound for transactions returned.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..2147483647]<br>
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?StartDate=2023-08-19T11:26</code></span>
@@ -7634,7 +7665,7 @@ AlphaNumeric[1..2147483647]<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Only transactions that occurred before this date will be returned.<br> EndDate must be less than today at 00:00 (midnight).<br> For example, to retrieve transactions up to and including yesterday, set EndDate to yesterday at 23:59.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
+	<div style="padding-bottom: 10px">Sets the upper temporal bound for transactions returned.<br> Must be a date in the past (up to yesterday, 23:59:59 CE(S)T).<br> Note: Any timestamp set to midnight (00:00:00) is automatically shifted to midnight of the next day (00:00:00 + 1 day) so that all transactions for that entire date are included.<br> Value can be provided in ISO 8601 format only using the date (yyyy-MM-dd) or as a date time (yyyy-MM-ddTHH:mm).</div>
 	<i class="small text-muted">
 AlphaNumeric[1..2147483647]<br>
 							<span>Usage: <code>/rest/customers/[customerId]/transactions?EndDate=2025-08-19T11:26</code></span>
@@ -9049,6 +9080,20 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. The ID can be numeric, alphabetical and contain any of the following special characters: .:!#$%&amp;'*+-/=?^_`{|}~@.<br> For GDPR reasons we strongly discourage the use of ids containing any personal data (e.g. names) and instead recommend the usage of a merchant-side generated UUID for your customer.</div>
+	<i class="small text-muted">
+PayerId[1..256]<br>
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br>
 	<span class="text-muted small">
 		        string	</span>
@@ -9174,8 +9219,8 @@ Range: inclusive between 0 and 9<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53<br>
-				    <span>Example: <code>1.53</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54<br>
+				    <span>Example: <code>1.54</code></span>
 			</i>
 </td>
 							</tr>
@@ -9215,8 +9260,8 @@ Id[1..50]<br>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53<br>
-				    <span>Example: <code>1.53</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54<br>
+				    <span>Example: <code>1.54</code></span>
 			</i>
 </td>
 							</tr>
@@ -9261,7 +9306,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 <td class="col-sm-4 text-right">
 	<strong>Code</strong><br>
 	<span class="text-muted small">
-		        integer	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Blik payment code</div>
@@ -11600,15 +11645,53 @@ Utf8[1..1000]<br>
 <td class="col-sm-4 text-right">
 	<strong>Attachment</strong><br>
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        <a class="type-details in" href="#Payment_Models_Data_KlarnaAttachment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Klarna extra merchant data (EMD).<br> Check <a href="https://docs.klarna.com/api/extra-merchant-data/" target="_blank">Klarna's EMD documentation</a> for further details.</div>
 	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>ShippingCarrier</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The company responsible for the shipping.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>ShippingType</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The type of shipping selected for this order. If not set, the default will be 'TO_DOOR'.</div>
+	<i class="small text-muted">
+Possible values: TO_DOOR, TO_CURB, TO_MAILBOX, PICKUP_BOX, PICKUP_POINT, PICKUP_STORE, PICKUP_WAREHOUSE, DIGITAL_DOWNLOAD, DIGITAL_OTHER, PHYSICAL_OTHER.<br>
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>ShippingTypeAttribute</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Additional service/attribute to the shipping type.</div>
+	<i class="small text-muted">
+Possible values: SIGNATURE_REQUIRED, IDENTIFICATION_REQUIRED, CONTACTLESS_DELIVERY, LEAVE_AT_DOOR, LEAVE_AT_CURB, LEAVE_WITH_NEIGHBOUR, EXPRESS, TRACKED, UNTRACKED.<br>
 					</i>
 </td>
 							</tr>
@@ -12062,9 +12145,9 @@ Max length: 2000<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Total tax amount of the order item. This tax needs to be included in the UnitPrice and must take the Quantity of the order item into account.</div>
+	<div style="padding-bottom: 10px">Total tax amount of the order item across all Quantity units.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>480</code></span>
+				    <span>Example: <code>200</code></span>
 			</i>
 </td>
 							</tr>
@@ -12076,10 +12159,10 @@ Max length: 2000<br>
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 1900 means 19.00%<br> Valid values are 0-99999</div>
+	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 1000 means 10.00%<br> Valid values are 0-99999</div>
 	<i class="small text-muted">
 Range: inclusive between 0 and 99999<br>
-				    <span>Example: <code>1900</code></span>
+				    <span>Example: <code>1000</code></span>
 			</i>
 </td>
 							</tr>
@@ -12105,9 +12188,9 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 15.50 &#8658; Value=1550). <b>Only Integer values will be accepted!</b></div>
+	<div style="padding-bottom: 10px">Gross price per single item <b>including tax</b> in minor unit (CHF 11.00 &#8658; Value=1100). <b>Only Integer values will be accepted!</b></div>
 	<i class="small text-muted">
-				    <span>Example: <code>1550</code></span>
+				    <span>Example: <code>1100</code></span>
 			</i>
 </td>
 							</tr>
@@ -15387,6 +15470,25 @@ Utf8[1..100]<br>
 							</tr>
 					</tbody>
 				</table>
+				<h2>Container &quot;RestApi_Models_Data_PayerWithoutOptions&quot;</h2>
+				<table class="table" id="RestApi_Models_Data_PayerWithoutOptions">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Id</strong><br>
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>customer-1234</code></span>
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
 				<h2>Container &quot;RestApi_Models_Data_PaymentWithOptions&quot;</h2>
 				<table class="table" id="RestApi_Models_Data_PaymentWithOptions">
 					<tbody>
@@ -16653,6 +16755,7 @@ Possible values: ECOM, MPO, SPG.<br>
 					</tbody>
 				</table>
 </div></div></div></section><section id="changelog"><h1><a name="changelog"></a> Changelog</h1><div class="row"><div class="col-md-6"></div></div></section><section><h2>Table of Contents</h2><div class="row"><div class="col-md-6"><ul>
+<li><a href="#v1.54.0.0.20260922">Version 1.54</a></li>
 <li><a href="#v1.53.0.0.20260707">Version 1.53</a></li>
 <li><a href="#v1.52.0.0.20260429">Version 1.52</a></li>
 <li><a href="#v1.51.0.0.20260324">Version 1.51</a></li>
@@ -16703,6 +16806,22 @@ Possible values: ECOM, MPO, SPG.<br>
 <li><a href="#v1.6.0.20170404">Version 1.6</a></li>
 <li><a href="#v1.5.0.20170207">Version 1.5</a></li>
 <li><a href="#v1.4.0.20161015">Version 1.4</a></li>
+</ul></div></div></section><section id="v1.54.0.0.20260922"><h2><a name="v1.54.0.0.20260922"></a> Version 1.54 (released 2026-09-22)</h2><div class="row"><div class="col-md-6"><ul>
+<li>available on Sandbox: 2026-09-08</li>
+<li>introduced version 1.54</li>
+<li>added value <code>1.54</code> for <em>SpecVersion</em></li>
+<li>added Payer.Id to Single-Use Payment Links in the Management API</li>
+<li>added support for using the result of Transaction DccInquiry for payments performed with the Transaction Initialize API method</li>
+<li>added PENDING status for captures of WERO refunds in the following API methods:
+<ul>
+<li><a href="index.html#Payment_v1_Transaction_Capture">Transaction/Capture</a> (starting from API 1.54, previous API versions always return 'CAPTURED' status)</li>
+<li><a href="index.html#Payment_v1_Transaction_Inquire">Transaction/Inquire</a> (retroactively for all API versions)</li>
+</ul>
+</li>
+<li>changed the type of the Blik payment code field to string to accommodate codes starting with zero</li>
+<li>changed Klarna Extra Merchant Data (EMD) from mandatory to optional</li>
+<li>add shipping information fields for Klarna</li>
+<li>various improvements to API field descriptions and examples</li>
 </ul></div></div></section><section id="v1.53.0.0.20260707"><h2><a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)</h2><div class="row"><div class="col-md-6"><ul>
 <li>available on Sandbox: 2026-06-23</li>
 <li>introduced version 1.53</li>
