@@ -1265,6 +1265,20 @@ Possible values: CITY, COMPANY, VATNUMBER, COUNTRY, EMAIL, FIRSTNAME, LASTNAME, 
 							<tr>
 								
 <td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop. The ID can be numeric, alphabetical and contain any of the following special characters: .:!#$%&'*+-/=?^_`{|}~@@.<br> For GDPR reasons we strongly discourage the use of ids containing any personal data (e.g. names) and instead recommend the usage of a merchant-side generated UUID for your customer.</div>
+	<i class="small text-muted">
+PayerId[1..256]<br />
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
 	<strong>IpAddress</strong><br />
 	<span class="text-muted small">
 		        string	</span>
@@ -1390,8 +1404,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53<br />
-				    <span>Example: <code>1.53</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54<br />
+				    <span>Example: <code>1.54</code></span>
 			</i>
 </td>
 							</tr>
@@ -1431,8 +1445,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53<br />
-				    <span>Example: <code>1.53</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54<br />
+				    <span>Example: <code>1.54</code></span>
 			</i>
 </td>
 							</tr>
@@ -1477,7 +1491,7 @@ Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1
 <td class="col-sm-4 text-right">
 	<strong>Code</strong><br />
 	<span class="text-muted small">
-		        integer	</span>
+		        string	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">The Blik payment code</div>
@@ -3816,15 +3830,53 @@ Utf8[1..1000]<br />
 <td class="col-sm-4 text-right">
 	<strong>Attachment</strong><br />
 	<span class="text-muted small">
-			<span>
-				<span class="text-mandatory">mandatory</span>,
-			</span>
 		        <a class="type-details in" href="#Payment_Models_Data_KlarnaAttachment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Klarna extra merchant data (EMD).<br> Check <a href="https://docs.klarna.com/api/extra-merchant-data/" target="_blank">Klarna's EMD documentation</a> for further details.</div>
 	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>ShippingCarrier</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The company responsible for the shipping.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>ShippingType</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The type of shipping selected for this order. If not set, the default will be 'TO_DOOR'.</div>
+	<i class="small text-muted">
+Possible values: TO_DOOR, TO_CURB, TO_MAILBOX, PICKUP_BOX, PICKUP_POINT, PICKUP_STORE, PICKUP_WAREHOUSE, DIGITAL_DOWNLOAD, DIGITAL_OTHER, PHYSICAL_OTHER.<br />
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>ShippingTypeAttribute</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Additional service/attribute to the shipping type.</div>
+	<i class="small text-muted">
+Possible values: SIGNATURE_REQUIRED, IDENTIFICATION_REQUIRED, CONTACTLESS_DELIVERY, LEAVE_AT_DOOR, LEAVE_AT_CURB, LEAVE_WITH_NEIGHBOUR, EXPRESS, TRACKED, UNTRACKED.<br />
 					</i>
 </td>
 							</tr>
@@ -4278,9 +4330,9 @@ Max length: 2000<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Total tax amount of the order item. This tax needs to be included in the UnitPrice and must take the Quantity of the order item into account.</div>
+	<div style="padding-bottom: 10px">Total tax amount of the order item across all Quantity units.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>480</code></span>
+				    <span>Example: <code>200</code></span>
 			</i>
 </td>
 							</tr>
@@ -4292,10 +4344,10 @@ Max length: 2000<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 1900 means 19.00%<br> Valid values are 0-99999</div>
+	<div style="padding-bottom: 10px">Tax rate of the item price in hundredth of a percent. e.g. value 1000 means 10.00%<br> Valid values are 0-99999</div>
 	<i class="small text-muted">
 Range: inclusive between 0 and 99999<br />
-				    <span>Example: <code>1900</code></span>
+				    <span>Example: <code>1000</code></span>
 			</i>
 </td>
 							</tr>
@@ -4321,9 +4373,9 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Price per single item in minor unit (CHF 15.50 &rArr; Value=1550). <b>Only Integer values will be accepted!</b></div>
+	<div style="padding-bottom: 10px">Gross price per single item <b>including tax</b> in minor unit (CHF 11.00 &rArr; Value=1100). <b>Only Integer values will be accepted!</b></div>
 	<i class="small text-muted">
-				    <span>Example: <code>1550</code></span>
+				    <span>Example: <code>1100</code></span>
 			</i>
 </td>
 							</tr>
@@ -7598,6 +7650,25 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 	<i class="small text-muted">
 Utf8[1..100]<br />
 				    <span>Example: <code>C123192-red</code></span>
+			</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+				<h2>Container "RestApi_Models_Data_PayerWithoutOptions"</h2>
+				<table class="table" id="RestApi_Models_Data_PayerWithoutOptions">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Id</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop.</div>
+	<i class="small text-muted">
+				    <span>Example: <code>customer-1234</code></span>
 			</i>
 </td>
 							</tr>

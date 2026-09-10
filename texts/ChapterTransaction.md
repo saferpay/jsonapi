@@ -97,6 +97,20 @@ Id[1..20]<br />
 						<tr>
 							
 <td class="col-sm-4 text-right">
+	<strong>Dcc</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_DccReference">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Reference to DccInquiry and payer's decision whether he accepts or declines DCC offer</div>
+	<i class="small text-muted">
+					</i>
+</td>
+						</tr>
+						<tr>
+							
+<td class="col-sm-4 text-right">
 	<strong>Notification</strong><br />
 	<span class="text-muted small">
 		        <a class="type-details in" href="#Payment_Models_Data_TransactionNotification">object</a>
@@ -1757,7 +1771,7 @@ Id[1..64]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout at the moment)</div>
+	<div style="padding-bottom: 10px">Current status of the capture. (PENDING is only used for PostFinance Instant Payout and for WERO refund captures)</div>
 	<i class="small text-muted">
 Possible values: PENDING, CAPTURED.<br />
 					</i>
