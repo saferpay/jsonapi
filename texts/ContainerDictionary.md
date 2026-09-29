@@ -5638,7 +5638,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
 		        array of strings	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent when the transaction is completed.<br> A maximum of 10 email addresses is allowed.</div>
+	<div style="padding-bottom: 10px">Email addresses to which a confirmation email will be sent when a final state is reached if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING).<br> A maximum of 10 email addresses is allowed.</div>
 	<i class="small text-muted">
 				    <span>Example: <code>[&quot;merchant1@saferpay.com&quot;, &quot;merchant2@saferpay.com&quot;]</code></span>
 			</i>
@@ -5655,7 +5655,7 @@ Possible values: ELIGIBLE, PARTIALLY_ELIGIBLE, NOT_ELIGIBLE.<br />
         string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Url which is called by Saferpay if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING). Up until now, this is only applicable for PostFinance Instant Payout.</div>
+	<div style="padding-bottom: 10px">Url which is called by Saferpay when a final state is reached if an action could not be completed synchronously and was reported with a ‘pending’ state (eg CAPTURE_PENDING or REFUND_PENDING).</div>
 	<i class="small text-muted">
 				    <span>Example: <code>https://merchanthost/pendingnotify</code></span>
 			</i>

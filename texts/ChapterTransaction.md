@@ -1636,7 +1636,7 @@ This method may be used to finalize previously authorized transactions and refun
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional pending notification capture options for PostFinance Instant Payout transactions.</div>
+	<div style="padding-bottom: 10px">Optional pending notification capture options for PostFinance Instant Payout and Wero refunds.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -2494,7 +2494,7 @@ This method may be called to refund a previous transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional pending notification options</div>
+	<div style="padding-bottom: 10px">Optional pending notification options (can be used for Paydirekt and Crypto payment refunds)</div>
 	<i class="small text-muted">
 					</i>
 </td>
