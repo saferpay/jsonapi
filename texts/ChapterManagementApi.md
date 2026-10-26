@@ -20,7 +20,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
   <thead>
     <tr>
       <th>Header field</th>
-      <th>Possible values</th>
+      <th>Format</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -28,9 +28,9 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
     <tr>
       <td style="white-space:nowrap;">Saferpay-ApiVersion</td>
       <td>
-        1.14
+        [1-9].[0-9]+
       </td>
-      <td>Version number of the interface specification.</td>
+      <td>Version number of the interface specification (it is recommended to use the latest, but at least 1.32)</td>
     </tr>
     <tr>
       <td style="white-space:nowrap;">Saferpay-RequestId</td>
@@ -46,7 +46,7 @@ All other requirements regarding the HTTP Headers (e.g. for <a href="#encoding">
 
 HTTP Headers example:
 
-`Saferpay-ApiVersion: 1.14`
+`Saferpay-ApiVersion: 1.54`
 
 `Saferpay-RequestId: 33e8af17-35c1-4165-a343-c1c86a320f3b`
 
@@ -647,7 +647,7 @@ Id[1..20]<br />
 		        string	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> yyyy-MM-ddTHH:mm:ssK<br> Must be at least 1h in the future and within the next 180 days.</div>
+	<div style="padding-bottom: 10px">The date after which the offer expires in ISO 8601 format.<br> yyyy-MM-ddTHH:mm:ssK<br> Must be at least 1h in the future and within the next 6 months.</div>
 	<i class="small text-muted">
 AlphaNumeric[10..25]<br />
 				    <span>Example: <code>2019-10-20T00:00:00+02:00</code></span>
@@ -920,20 +920,6 @@ No example available
 	<i class="small text-muted">
 				    <span>Example: <code>7a4aa5fd-b03d-4ef3-9264-f291019dfbaf</code></span>
 			</i>
-</td>
-						</tr>
-						<tr>
-							
-<td class="col-sm-4 text-right">
-	<strong>Payer</strong><br />
-	<span class="text-muted small">
-		        <a class="type-details in" href="#RestApi_Models_Data_PayerWithoutOptions">object</a>
-	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Information about the payer</div>
-	<i class="small text-muted">
-					</i>
 </td>
 						</tr>
 						<tr>

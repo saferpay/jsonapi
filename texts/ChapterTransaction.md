@@ -176,7 +176,7 @@ Id[1..20]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Means of payment (either card data or a reference to a previously stored card).<br> Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
+	<div style="padding-bottom: 10px">Means of payment (e.g. card data, a reference to a previously stored card or a payment method specific token).<br> Important: Only fully PCI certified merchants may directly use the card data. If your system is not explicitly certified to handle card data directly, then use the Saferpay Secure Card Data-Storage instead. If the customer enters a new card, you may want to use the Saferpay Hosted Register Form to capture the card data through Saferpay.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -1594,7 +1594,7 @@ This method may be used to finalize previously authorized transactions and refun
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
+	<div style="padding-bottom: 10px">Optional Marketplace capture parameters. Only applicable for capture refund. Use Multipart Capture for Marketplace capture purchase.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -1862,7 +1862,7 @@ This method may be used to capture multiple parts of an authorized transaction.
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Optional Marketplace capture parameters.</div>
+	<div style="padding-bottom: 10px">Optional Marketplace capture parameters. Only applicable for capture refund. Use Multipart Capture for Marketplace capture purchase.</div>
 	<i class="small text-muted">
 					</i>
 </td>
