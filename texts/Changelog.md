@@ -78,7 +78,7 @@
     - [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
     - [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias)
     - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
-- removed _Payer_ container from [SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers_offerid)
+- removed _Payer_ container from [SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers)
 
 ## <a name="v1.54.0.0.20260922"></a> Version 1.54 (released 2026-09-22)
 
