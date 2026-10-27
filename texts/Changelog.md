@@ -64,7 +64,7 @@
     - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
     - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
 - added _PaymentAccountReference_ under _Card_ to the following responses:
-    - [PaymentPage/Assert](LINK)
+    - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction/Authorize](index.html#Payment_v1_Transaction_Initialize)
     - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
     - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
