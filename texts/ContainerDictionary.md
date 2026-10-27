@@ -1404,8 +1404,8 @@ Range: inclusive between 0 and 9<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification. For new implementations, the newest Version should be used.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54<br />
-				    <span>Example: <code>1.54</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54, 1.55<br />
+				    <span>Example: <code>1.55</code></span>
 			</i>
 </td>
 							</tr>
@@ -1445,8 +1445,8 @@ Id[1..50]<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Version number of the interface specification.</div>
 	<i class="small text-muted">
-Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54<br />
-				    <span>Example: <code>1.54</code></span>
+Possible values: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35, 1.36, 1.37, 1.38, 1.39, 1.40, 1.41, 1.42, 1.43, 1.44, 1.45, 1.46, 1.47, 1.48, 1.49, 1.50, 1.51, 1.52, 1.53, 1.54, 1.55<br />
+				    <span>Example: <code>1.55</code></span>
 			</i>
 </td>
 							</tr>
@@ -2233,7 +2233,7 @@ Base64 encoded string<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
+	<div style="padding-bottom: 10px">Bank account data for direct debit transaction.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -2247,7 +2247,7 @@ Base64 encoded string<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Card data</div>
+	<div style="padding-bottom: 10px">Card data.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -2261,7 +2261,21 @@ Base64 encoded string<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<div style="padding-bottom: 10px">Payment Data from GooglePay.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Klarna</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_KlarnaPaymentMeans">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment data from Klarna.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -2781,7 +2795,7 @@ Possible values: NONE, MANDATORY.<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiration year of the payer's card.</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2025</code></span>
+				    <span>Example: <code>2029</code></span>
 			</i>
 </td>
 							</tr>
@@ -2844,6 +2858,19 @@ Possible values: UNSPECIFIED, CONSUMER, CORPORATE, CORPORATE_AND_CONSUMER.<br />
 	<i class="small text-muted">
 				    <span>Example: <code>912345xxxxxx1234</code></span>
 			</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>PaymentAccountReference</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">A unique ID for the underlying payment account of the card, shared across all the ways it's used (physical card, Apple Pay, Google Pay, etc.).<br> It enables card recognition without exposing sensitive card details.</div>
+	<i class="small text-muted">
+					</i>
 </td>
 							</tr>
 							<tr>
@@ -3783,8 +3810,8 @@ Max length: 50<br />
 							</tr>
 					</tbody>
 				</table>
-				<h2>Container "Payment_Models_Data_KlarnaAttachment"</h2>
-				<table class="table" id="Payment_Models_Data_KlarnaAttachment">
+				<h2>Container "Payment_Models_Data_Klarna_KlarnaAttachment"</h2>
+				<table class="table" id="Payment_Models_Data_Klarna_KlarnaAttachment">
 					<tbody>
 							<tr>
 								
@@ -3822,15 +3849,15 @@ Utf8[1..1000]<br />
 							</tr>
 					</tbody>
 				</table>
-				<h2>Container "Payment_Models_Data_KlarnaOptions"</h2>
-				<table class="table" id="Payment_Models_Data_KlarnaOptions">
+				<h2>Container "Payment_Models_Data_Klarna_KlarnaOptions"</h2>
+				<table class="table" id="Payment_Models_Data_Klarna_KlarnaOptions">
 					<tbody>
 							<tr>
 								
 <td class="col-sm-4 text-right">
 	<strong>Attachment</strong><br />
 	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_KlarnaAttachment">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Klarna_KlarnaAttachment">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -3877,6 +3904,42 @@ Possible values: TO_DOOR, TO_CURB, TO_MAILBOX, PICKUP_BOX, PICKUP_POINT, PICKUP_
 	<div style="padding-bottom: 10px">Additional service/attribute to the shipping type.</div>
 	<i class="small text-muted">
 Possible values: SIGNATURE_REQUIRED, IDENTIFICATION_REQUIRED, CONTACTLESS_DELIVERY, LEAVE_AT_DOOR, LEAVE_AT_CURB, LEAVE_WITH_NEIGHBOUR, EXPRESS, TRACKED, UNTRACKED.<br />
+					</i>
+</td>
+							</tr>
+					</tbody>
+				</table>
+				<h2>Container "Payment_Models_Data_KlarnaPaymentMeans"</h2>
+				<table class="table" id="Payment_Models_Data_KlarnaPaymentMeans">
+					<tbody>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>KlarnaNetworkData</strong><br />
+	<span class="text-muted small">
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Additional data to enable custom features or data exchange as supported by Klarna via klarna_network_data.</div>
+	<i class="small text-muted">
+String length: inclusive between 0 and 10240<br />
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>KlarnaNetworkSessionToken</strong><br />
+	<span class="text-muted small">
+			<span>
+				<span class="text-mandatory">mandatory</span>,
+			</span>
+		        string	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">The Klarna-issued token klarna_network_session_token that represents an active network session.<br> Used to securely link interactions across payments, express checkout, sign-in with Klarna, On-site messaging and prequalification.</div>
+	<i class="small text-muted">
+String length: inclusive between 1 and 8092<br />
 					</i>
 </td>
 							</tr>
@@ -5068,7 +5131,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment Data from ApplePay</div>
+	<div style="padding-bottom: 10px">Payment Data from ApplePay.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -5082,7 +5145,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Bank account data for direct debit transaction</div>
+	<div style="padding-bottom: 10px">Bank account data for direct debit transaction.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -5096,7 +5159,7 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Card data</div>
+	<div style="padding-bottom: 10px">Card data.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -5110,7 +5173,21 @@ Utf8[1..50]<br />
 	</span>
 </td>
 <td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payment Data from GooglePay</div>
+	<div style="padding-bottom: 10px">Payment Data from GooglePay.</div>
+	<i class="small text-muted">
+					</i>
+</td>
+							</tr>
+							<tr>
+								
+<td class="col-sm-4 text-right">
+	<strong>Klarna</strong><br />
+	<span class="text-muted small">
+		        <a class="type-details in" href="#Payment_Models_Data_KlarnaPaymentMeans">object</a>
+	</span>
+</td>
+<td class="col-sm-8">
+	<div style="padding-bottom: 10px">Payment data from Klarna.</div>
 	<i class="small text-muted">
 					</i>
 </td>
@@ -7253,7 +7330,7 @@ Utf8[1..140]<br />
 <td class="col-sm-4 text-right">
 	<strong>Klarna</strong><br />
 	<span class="text-muted small">
-		        <a class="type-details in" href="#Payment_Models_Data_KlarnaOptions">object</a>
+		        <a class="type-details in" href="#Payment_Models_Data_Klarna_KlarnaOptions">object</a>
 	</span>
 </td>
 <td class="col-sm-8">
@@ -7650,25 +7727,6 @@ Possible values: DIGITAL, PHYSICAL, SERVICE, GIFTCARD, DISCOUNT, SHIPPINGFEE, SA
 	<i class="small text-muted">
 Utf8[1..100]<br />
 				    <span>Example: <code>C123192-red</code></span>
-			</i>
-</td>
-							</tr>
-					</tbody>
-				</table>
-				<h2>Container "RestApi_Models_Data_PayerWithoutOptions"</h2>
-				<table class="table" id="RestApi_Models_Data_PayerWithoutOptions">
-					<tbody>
-							<tr>
-								
-<td class="col-sm-4 text-right">
-	<strong>Id</strong><br />
-	<span class="text-muted small">
-		        string	</span>
-</td>
-<td class="col-sm-8">
-	<div style="padding-bottom: 10px">Payer identifier defined by the merchant / shop.</div>
-	<i class="small text-muted">
-				    <span>Example: <code>customer-1234</code></span>
 			</i>
 </td>
 							</tr>
@@ -8252,7 +8310,7 @@ Range: inclusive between 1 and 12<br />
 <td class="col-sm-8">
 	<div style="padding-bottom: 10px">Expiry year of the card</div>
 	<i class="small text-muted">
-				    <span>Example: <code>2025</code></span>
+				    <span>Example: <code>2029</code></span>
 			</i>
 </td>
 							</tr>

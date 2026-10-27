@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Version 1.55](#v1.55.0.0.20261110)
 - [Version 1.54](#v1.54.0.0.20260922)
 - [Version 1.53](#v1.53.0.0.20260707)
 - [Version 1.52](#v1.52.0.0.20260429)
@@ -54,6 +55,31 @@
 - [Version 1.5](#v1.5.0.20170207)
 - [Version 1.4](#v1.4.0.20161015)
 
+## <a name="v1.55.0.0.20261110"></a> Version 1.55 (released 2026-11-10)
+
+- available on Sandbox: 2026-10-27
+- introduced version 1.55
+- added value `1.55` for _SpecVersion_
+- added new sub-container _PaymentMeans.Klarna_ to the following requests:
+    - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
+    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+- added _PaymentAccountReference_ under _Card_ to the following responses:
+    - [PaymentPage/Assert](LINK)
+    - [Transaction/Authorize](index.html#Payment_v1_Transaction_Initialize)
+    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
+    - [Transaction/AuthorizeReferenced](index.html#Payment_v1_Transaction_AuthorizeReferenced)
+    - [Transaction/Refund](index.html#Payment_v1_Transaction_Refund)
+    - [Transaction/RefundDirect](index.html#Payment_v1_Transaction_RefundDirect)
+    - [Transaction/Inquire](index.html#Payment_v1_Transaction_Inquire)
+    - [Transaction/AlternativePayment](index.html#Payment_v1_Transaction_QueryAlternativePayment)
+    - [Alias/AssertInsert](index.html#Payment_v1_Alias_AssertInsert)
+    - [Alias/InsertDirect](index.html#Payment_v1_Alias_InsertDirect)
+    - [Alias/Update](index.html#Payment_v1_Alias_Update)
+    - [Alias/Inquire](index.html#Payment_v1_Alias_Inquire)
+    - [OmniChannel/InsertAlias](index.html#Payment_v1_OmniChannel_InsertAlias)
+    - [OmniChannel/AcquireTransaction](index.html#Payment_v1_OmniChannel_AcquireTransaction)
+- removed _Payer_ container from [SingleUsePaymentLink](index.html#rest_customers_customerId_terminals_terminalId_spg-offers_offerid)
+
 ## <a name="v1.54.0.0.20260922"></a> Version 1.54 (released 2026-09-22)
 
 - available on Sandbox: 2026-09-08
@@ -68,7 +94,6 @@
 - changed Klarna Extra Merchant Data (EMD) from mandatory to optional
 - add shipping information fields for Klarna
 - various improvements to API field descriptions and examples
-
 
 ## <a name="v1.53.0.0.20260707"></a> Version 1.53 (released 2026-07-07)
 
