@@ -57,7 +57,7 @@
 
 ## <a name="v1.55.0.0.20261110"></a> Version 1.55 (released 2026-11-10)
 
-- available on Sandbox: 2026-11-03
+- available on Sandbox: 2026-10-27
 - introduced version 1.55
 - added value `1.55` for _SpecVersion_
 - added new sub-container _PaymentMeans.Klarna_ to the following requests:
