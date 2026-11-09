@@ -62,7 +62,6 @@
 - added value `1.55` for _SpecVersion_
 - added new sub-container _PaymentMeans.Klarna_ to the following requests:
     - [Transaction/Initialize](index.html#Payment_v1_Transaction_Initialize)
-    - [Transaction/AuthorizeDirect](index.html#Payment_v1_Transaction_AuthorizeDirect)
 - added _PaymentAccountReference_ under _Card_ to the following responses:
     - [PaymentPage/Assert](index.html#Payment_v1_PaymentPage_Assert)
     - [Transaction/Authorize](index.html#Payment_v1_Transaction_Initialize)
